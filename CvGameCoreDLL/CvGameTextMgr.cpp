@@ -1019,6 +1019,26 @@ void CvGameTextMgr::setUnitHelp(CvWStringBuffer &szString, const CvUnit* pUnit, 
 			}
 		}
 
+
+		// Aeons - Unity Strength
+		for (iI = 0; iI < GC.getNumUnitClassInfos(); ++iI)
+		{
+
+			if (pUnit->unityClass((UnitClassTypes)iI) != 0)
+			{
+				if (pUnit->getUnitClassType() == (UnitClassTypes)iI)
+				{
+					szString.append(NEWLINE);
+					szString.append(gDLL->getText("TXT_KEY_UNIT_UNITY_STRENGTH", pUnit->unityClass((UnitClassTypes)iI), pUnit->unityRequired()));
+				}
+				else
+				{
+					szString.append(NEWLINE);
+					szString.append(gDLL->getText("TXT_KEY_UNIT_UNITY_STRENGTH_COMBINE", pUnit->unityClass((UnitClassTypes)iI), GC.getUnitClassInfo((UnitClassTypes)iI).getTextKeyWide(), pUnit->unityRequired()));
+				}
+			}
+		}
+
 		// Leoreth
 		if (pUnit->riverAttackModifier() != 0)
 		{
@@ -3289,6 +3309,37 @@ It is fine for a human player mouse-over (which is what it is used for).
 						}
 					}
 
+					// Aeons - Heathen Strength
+					if (GET_PLAYER(pDefender->getOwner()).getStateReligion() != GET_PLAYER(pAttacker->getOwner()).getStateReligion())
+					{
+						iModifier = pDefender->heathenStrength();
+
+						if (iModifier != 0)
+						{
+							szString.append(NEWLINE);
+							szString.append(gDLL->getText("TXT_KEY_COMBAT_HEATHEN_STRENGTH", iModifier));
+						}
+					}
+
+					// Aeons - Unity
+					if (pDefender->unityStrength() > 0)
+					{
+						for (int iI = 0; iI < GC.getNumUnitClassInfos(); ++iI)
+						{
+							if (pDefender->plot()->isUnity((UnitClassTypes)iI, pDefender->unityRequired()))
+							{
+								iModifier = pDefender->unityClass((UnitClassTypes)iI);
+
+								if (iModifier != 0)
+								{
+									szString.append(NEWLINE);
+									szString.append(gDLL->getText("TXT_KEY_COMBAT_PLOT_UNITY_MOD", iModifier));
+								}
+							}
+						}
+					}
+
+
                     if (pPlot->getFeatureType() != NO_FEATURE)
                     {
                         iModifier = pDefender->featureDefenseModifier(pPlot->getFeatureType());
@@ -3299,8 +3350,7 @@ It is fine for a human player mouse-over (which is what it is used for).
                             szString.append(gDLL->getText("TXT_KEY_COMBAT_PLOT_UNIT_MOD", iModifier, GC.getFeatureInfo(pPlot->getFeatureType()).getTextKeyWide()));
                         }
                     }
-                    
-					if (pPlot->getFeatureType() == NO_FEATURE || GC.getFeatureInfo(pPlot->getFeatureType()).getDefenseModifier() == 0)
+                    if (pPlot->getFeatureType() == NO_FEATURE || GC.getFeatureInfo(pPlot->getFeatureType()).getDefenseModifier() == 0)
                     {
                         iModifier = pDefender->terrainDefenseModifier(pPlot->getTerrainType());
 
@@ -3382,6 +3432,36 @@ It is fine for a human player mouse-over (which is what it is used for).
 						}
 					}
 
+					// Aeons - Heathen Strength
+					if (GET_PLAYER(pDefender->getOwner()).getStateReligion() != GET_PLAYER(pAttacker->getOwner()).getStateReligion())
+					{
+						iModifier = pAttacker->heathenStrength();
+
+						if (iModifier != 0)
+						{
+							szString.append(NEWLINE);
+							szString.append(gDLL->getText("TXT_KEY_COMBAT_HEATHEN_STRENGTH", iModifier));
+						}
+					}
+
+					// Aeons - Unity
+					if (pAttacker->unityStrength() > 0)
+					{
+						for (int iI = 0; iI < GC.getNumUnitClassInfos(); ++iI)
+						{
+							if (pAttacker->plot()->isUnity((UnitClassTypes)iI, pAttacker->unityRequired()))
+							{
+								iModifier = pAttacker->unityClass((UnitClassTypes)iI);
+
+								if (iModifier != 0)
+								{
+									szString.append(NEWLINE);
+									szString.append(gDLL->getText("TXT_KEY_COMBAT_PLOT_UNITY_MOD", iModifier));
+								}
+							}
+						}
+					}
+
 					// Leoreth
 					if (!pPlot->isCity() && pPlot->isRiver() && pAttacker->plot()->isRiver())
 					{
@@ -3404,8 +3484,7 @@ It is fine for a human player mouse-over (which is what it is used for).
                             szString.append(gDLL->getText("TXT_KEY_COMBAT_PLOT_UNIT_MOD", -iModifier, GC.getFeatureInfo(pPlot->getFeatureType()).getTextKeyWide()));
                         }
                     }
-                    
-					if (pPlot->getFeatureType() == NO_FEATURE || GC.getFeatureInfo(pPlot->getFeatureType()).getDefenseModifier() == 0)
+                    if (pPlot->getFeatureType() == NO_FEATURE || GC.getFeatureInfo(pPlot->getFeatureType()).getDefenseModifier() == 0)
                     {
                         iModifier = pAttacker->terrainAttackModifier(pPlot->getTerrainType());
 
@@ -3482,7 +3561,6 @@ It is fine for a human player mouse-over (which is what it is used for).
 								szString.append(gDLL->getText("TXT_KEY_COMBAT_PLOT_UNIT_MOD", -iModifier, GC.getFeatureInfo(pAttacker->plot()->getFeatureType()).getTextKeyWide()));
 							}
 						}
-						
 						if (pAttacker->plot()->getFeatureType() == NO_FEATURE || GC.getFeatureInfo(pAttacker->plot()->getFeatureType()).getDefenseModifier() == 0)
 						{
 							iModifier = pAttacker->terrainDefenseModifier(pAttacker->plot()->getTerrainType());
@@ -3667,7 +3745,7 @@ It is fine for a human player mouse-over (which is what it is used for).
 					szString.append(gDLL->getText("TXT_KEY_COMBAT_PLOT_UNIT_MOD", iModifier, GC.getFeatureInfo(pPlot->getFeatureType()).getTextKeyWide()));
 				}
 			}
-			else
+			if (pPlot->getFeatureType() == NO_FEATURE || GC.getFeatureInfo(pPlot->getFeatureType()).getDefenseModifier() == 0)
 			{
 				iModifier = pAttacker->terrainAttackModifier(pPlot->getTerrainType());
 
@@ -3874,8 +3952,7 @@ It is fine for a human player mouse-over (which is what it is used for).
 					szString.append(gDLL->getText("TXT_KEY_COMBAT_PLOT_UNIT_MOD", iModifier, GC.getFeatureInfo(pPlot->getFeatureType()).getTextKeyWide()));
 				}
 			}
-			
-			if (pPlot->getFeatureType() == NO_FEATURE || GC.getFeatureInfo(pPlot->getFeatureType()).getDefenseModifier() == 0)
+			else
 			{
 				iModifier = pDefender->terrainDefenseModifier(pPlot->getTerrainType());
 
@@ -3955,8 +4032,8 @@ It is fine for a human player mouse-over (which is what it is used for).
 void createTestFontString(CvWStringBuffer& szString)
 {
 	int iI;
-	szString.assign(L"!\"#$%&'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[×]^_`abcdefghijklmnopqrstuvwxyz\n");
-	szString.append(L"{}~\\ßÀÁÂÃÄÅÆÇÈÉÊËÌÍÎÏÐÑÒÓÔÕÖØÙÚÛÜÝÞßàáâãäåæçèéêëìíîïðñòóôõö÷øùúûüýþÿ¿¡«»°©®£¢");
+	szString.assign(L"!\"#$%&'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[�]^_`abcdefghijklmnopqrstuvwxyz\n");
+	szString.append(L"{}~\\������������������������������ޟ�������������������������������������������������������");
 	for (iI=0;iI<NUM_YIELD_TYPES;++iI)
 		szString.append(CvWString::format(L"%c", GC.getYieldInfo((YieldTypes) iI).getChar()));
 
@@ -6228,7 +6305,7 @@ void CvGameTextMgr::parseCivInfos(CvWStringBuffer &szInfoText, CivilizationTypes
 			szText = GC.getCivilizationInfo(eCivilization).getDescription();
 
 			// Leoreth: if we set temporary values for sorting in the exe, restore the original values
-			if (szText.size() == 2)
+			if (szText.size() <= 3) // Aeons -> increase restore block size to 3 since we're over 100 civs.
 			{
 				for (int iI = 0; iI < GC.getNumCivilizationInfos(); iI++)
 				{
@@ -6561,6 +6638,7 @@ void CvGameTextMgr::parseCivInfos(CvWStringBuffer &szInfoText, CivilizationTypes
 //	return szInfoText;
 }
 
+
 // Leoreth
 CvWString CvGameTextMgr::createStars(int iNumStars)
 {
@@ -6604,7 +6682,7 @@ void CvGameTextMgr::parseSpecialistHelpActual(CvWStringBuffer &szHelpString, Spe
 			}
 			else
 			{
-				aiYields[iI] = GET_PLAYER((pCity != NULL) ? pCity->getOwnerINLINE() : GC.getGameINLINE().getActivePlayer()).specialistYield(eSpecialist, ((YieldTypes)iI));
+				aiYields[iI] = GET_PLAYER((pCity != NULL) ? pCity->getOwnerINLINE() : GC.getGameINLINE().getActivePlayer()).specialistYield(eSpecialist, (YieldTypes)iI);
 				//aiYields[iI] += pCity != NULL ? GC.getSpecialistInfo(eSpecialist).getCultureLevelYieldChange(pCity->getCultureLevel(), (YieldTypes)iI) : 0;
 			}
 		}
@@ -6627,6 +6705,11 @@ void CvGameTextMgr::parseSpecialistHelpActual(CvWStringBuffer &szHelpString, Spe
 		setCommerceChangeHelp(szHelpString, L"", L"", L"", aiCommerces);
 
 		int iHappinessChange = GC.getSpecialistInfo(eSpecialist).getHappiness();
+
+		if(pCity != NULL)
+		{
+			iHappinessChange += GET_PLAYER(pCity->getOwner()).getSpecialistExtraHappy(eSpecialist);
+		}
 
 		if (iHappinessChange != 0)
 		{
@@ -6711,7 +6794,7 @@ void CvGameTextMgr::parseFreeSpecialistHelp(CvWStringBuffer &szHelpString, const
 
 			for (int iI = 0; iI < NUM_YIELD_TYPES; ++iI)
 			{
-				aiYields[iI] = iNumSpecialists * GET_PLAYER(kCity.getOwnerINLINE()).specialistYield(eSpecialist, ((YieldTypes)iI));
+				aiYields[iI] = iNumSpecialists * (GET_PLAYER(kCity.getOwnerINLINE()).specialistYield(eSpecialist, ((YieldTypes)iI))); //+ kCity.getCoastalExtraSpecialistYield((YieldTypes)iI)
 			}
 
 			CvWStringBuffer szYield;
@@ -7913,6 +7996,7 @@ void CvGameTextMgr::parseCivicInfo(CvWStringBuffer &szHelpText, CivicTypes eCivi
 		}
 
 		iLast = 0;
+
 		for (iJ = 0; iJ < GC.getNumImprovementInfos(); iJ++)
 		{
 			if (GC.getCivicInfo(eCivic).getImprovementYieldChanges(iJ, iI) < 0)
@@ -8157,6 +8241,44 @@ void CvGameTextMgr::parseCivicInfo(CvWStringBuffer &szHelpText, CivicTypes eCivi
 	{
 		szHelpText.append(NEWLINE);
 		szHelpText.append(gDLL->getText("TXT_KEY_CIVIC_CAN_CAPTURE_SLAVES"));
+	}
+
+	// Aeons: Immigration
+	if (GC.getCivicInfo(eCivic).getImmigrationDesire()==1)
+	{
+		szHelpText.append(NEWLINE);
+		szHelpText.append(gDLL->getText("TXT_KEY_IMMIGRATION_SMALL"));
+	}
+	else if (GC.getCivicInfo(eCivic).getImmigrationDesire() == 2)
+	{
+		szHelpText.append(NEWLINE);
+		szHelpText.append(gDLL->getText("TXT_KEY_IMMIGRATION_MEDIUM"));
+	}
+	else if (GC.getCivicInfo(eCivic).getImmigrationDesire() == 3)
+	{
+		szHelpText.append(NEWLINE);
+		szHelpText.append(gDLL->getText("TXT_KEY_IMMIGRATION_LARGE"));
+	}
+	else if (GC.getCivicInfo(eCivic).getImmigrationDesire() == -1)
+	{
+		szHelpText.append(NEWLINE);
+		szHelpText.append(gDLL->getText("TXT_KEY_IMMIGRATION_SMALL_DOWN"));
+	}
+	else if (GC.getCivicInfo(eCivic).getImmigrationDesire() == -2)
+	{
+		szHelpText.append(NEWLINE);
+		szHelpText.append(gDLL->getText("TXT_KEY_IMMIGRATION_MEDIUM_DOWN"));
+	}
+	else if (GC.getCivicInfo(eCivic).getImmigrationDesire() == -3)
+	{
+		szHelpText.append(NEWLINE);
+		szHelpText.append(gDLL->getText("TXT_KEY_IMMIGRATION_LARGE_DOWN"));
+	}
+	
+	if (GC.getCivicInfo(eCivic).isNoExternalMigration())
+	{
+		szHelpText.append(NEWLINE);
+		szHelpText.append(gDLL->getText("TXT_KEY_IMMIGRATION_NONE_EXTERNAL"));
 	}
 
 	//Rhye - start stability
@@ -8601,13 +8723,6 @@ void CvGameTextMgr::setTechTradeHelp(CvWStringBuffer &szBuffer, TechTypes eTech,
 		}
 		else
 		{
-			int iTransmissionResearch = GET_PLAYER(GC.getGameINLINE().getActivePlayer()).calculateTransmissionResearch(eTech);
-			if (iTransmissionResearch != 0)
-			{
-				szBuffer.append(NEWLINE);
-				szBuffer.append(gDLL->getText("TXT_KEY_TECH_TRANSMISSION", iTransmissionResearch));
-			}
-
 			szBuffer.append(NEWLINE);
 			szBuffer.append(gDLL->getText("TXT_KEY_TECH_NUM_TURNS", GET_PLAYER(GC.getGameINLINE().getActivePlayer()).getResearchTurnsLeft(eTech, (gDLL->ctrlKey() || !(gDLL->shiftKey())))));
 
@@ -8638,6 +8753,7 @@ void CvGameTextMgr::setTechTradeHelp(CvWStringBuffer &szBuffer, TechTypes eTech,
 					szBuffer.append(szTempBuffer);
 				}
 
+				/*
 				if (GET_TEAM(GC.getGameINLINE().getActiveTeam()).getTechDifferenceModifier() != 0)
 				{
 					iCostChange = iCost * GET_TEAM(GC.getGameINLINE().getActiveTeam()).getTechDifferenceModifier();
@@ -8649,6 +8765,7 @@ void CvGameTextMgr::setTechTradeHelp(CvWStringBuffer &szBuffer, TechTypes eTech,
 					szTempBuffer.Format(L" %s%d %c", (iCostChange > 0) ? "+" : "", iCostChange, GC.getCommerceInfo(COMMERCE_RESEARCH).getChar());
 					szBuffer.append(szTempBuffer);
 				}
+				*/
 
 				/*if (GET_TEAM(GC.getGameINLINE().getActiveTeam()).getTechLeaderModifier() != 0)
 				{
@@ -8694,6 +8811,41 @@ void CvGameTextMgr::setTechTradeHelp(CvWStringBuffer &szBuffer, TechTypes eTech,
 					szBuffer.append(NEWLINE);
 					szBuffer.append(" ");
 					szBuffer.append(gDLL->getText("TXT_KEY_TECH_MODERNIZATION_MODIFIER"));
+					szTempBuffer.Format(L" %s%d %c", (iCostChange > 0) ? "+" : "", iCostChange, GC.getCommerceInfo(COMMERCE_RESEARCH).getChar());
+					szBuffer.append(szTempBuffer);
+				}
+
+				// Aeons - Subjects, Overlords, and other vassals discounts
+				if (GET_TEAM(GC.getGameINLINE().getActiveTeam()).getSubjectsResearchModifier(eTech) != 0)
+				{
+					iCostChange = iCost * GET_TEAM(GC.getGameINLINE().getActiveTeam()).getSubjectsResearchModifier(eTech);
+					iCostChange /= 100;
+
+					szBuffer.append(NEWLINE);
+					szBuffer.append(" ");
+					szBuffer.append(gDLL->getText("TXT_KEY_TECH_SUBJECTS_MODIFIER"));
+					szTempBuffer.Format(L" %s%d %c", (iCostChange > 0) ? "+" : "", iCostChange, GC.getCommerceInfo(COMMERCE_RESEARCH).getChar());
+					szBuffer.append(szTempBuffer);
+				}
+				if (GET_TEAM(GC.getGameINLINE().getActiveTeam()).getOverlordResearchModifier(eTech) != 0)
+				{
+					iCostChange = iCost * GET_TEAM(GC.getGameINLINE().getActiveTeam()).getOverlordResearchModifier(eTech);
+					iCostChange /= 100;
+
+					szBuffer.append(NEWLINE);
+					szBuffer.append(" ");
+					szBuffer.append(gDLL->getText("TXT_KEY_TECH_OVERLORD_MODIFIER"));
+					szTempBuffer.Format(L" %s%d %c", (iCostChange > 0) ? "+" : "", iCostChange, GC.getCommerceInfo(COMMERCE_RESEARCH).getChar());
+					szBuffer.append(szTempBuffer);
+				}
+				if (GET_TEAM(GC.getGameINLINE().getActiveTeam()).getFellowSubjectResearchModifier(eTech) != 0)
+				{
+					iCostChange = iCost * GET_TEAM(GC.getGameINLINE().getActiveTeam()).getFellowSubjectResearchModifier(eTech);
+					iCostChange /= 100;
+
+					szBuffer.append(NEWLINE);
+					szBuffer.append(" ");
+					szBuffer.append(gDLL->getText("TXT_KEY_TECH_FELLOW_SUBJECT_MODIFIER"));
 					szTempBuffer.Format(L" %s%d %c", (iCostChange > 0) ? "+" : "", iCostChange, GC.getCommerceInfo(COMMERCE_RESEARCH).getChar());
 					szBuffer.append(szTempBuffer);
 				}
@@ -9427,6 +9579,47 @@ void CvGameTextMgr::setBasicUnitHelpWithCity(CvWStringBuffer &szBuffer, UnitType
 			szBuffer.append(gDLL->getText("TXT_KEY_UNIT_PLAINS_DEFENSE", GC.getUnitInfo(eUnit).getPlainsDefenseModifier()));
 		}
 	}
+
+	// Aeons - Heathen Strength
+	if (GC.getUnitInfo(eUnit).getHeathenStrength() != 0)
+	{
+		szBuffer.append(NEWLINE);
+		szBuffer.append(gDLL->getText("TXT_KEY_UNIT_HEATHEN_STRENGTH", GC.getUnitInfo(eUnit).getHeathenStrength()));
+	}
+
+	// Aeons - Unity Strength
+	for (iI = 0; iI < GC.getNumUnitClassInfos(); ++iI)
+	{
+
+		if (GC.getUnitInfo(eUnit).getUnityClasses(iI) != 0)
+		{
+			if (GC.getUnitInfo(eUnit).getUnitClassType() == (UnitClassTypes)iI)
+			{
+				szBuffer.append(NEWLINE);
+				szBuffer.append(gDLL->getText("TXT_KEY_UNIT_UNITY_STRENGTH", GC.getUnitInfo(eUnit).getUnityClasses(iI), GC.getUnitInfo(eUnit).getUnityRequired()));
+			}
+			else
+			{
+				szBuffer.append(NEWLINE);
+				szBuffer.append(gDLL->getText("TXT_KEY_UNIT_UNITY_STRENGTH_COMBINE", GC.getUnitInfo(eUnit).getUnityClasses(iI), GC.getUnitClassInfo((UnitClassTypes)iI).getTextKeyWide(), GC.getUnitInfo(eUnit).getUnityRequired()));
+			}
+		}
+	}
+
+	//if (GC.getUnitInfo(eUnit).getUnityStrength() > 0)
+	//{
+	//	if (GC.getUnitInfo(eUnit).getUnityClass() == 0)
+	//	{
+	//		szBuffer.append(NEWLINE);
+	//		szBuffer.append(gDLL->getText("TXT_KEY_UNIT_UNITY_STRENGTH", GC.getUnitInfo(eUnit).getUnityStrength(), GC.getUnitInfo(eUnit).getUnityRequired()));
+	//	}
+	//	else
+	//	{
+	//		szBuffer.append(NEWLINE);
+	//		szBuffer.append(gDLL->getText("TXT_KEY_UNIT_UNITY_STRENGTH_COMBINE", GC.getUnitInfo(eUnit).getUnityStrength(), GC.getUnitClassInfo((UnitClassTypes)GC.getUnitInfo(eUnit).getUnityClass()).getTextKeyWide(), GC.getUnitInfo(eUnit).getUnityRequired()));
+	//	}
+	//
+	//}
 
 	for (iI = 0; iI < GC.getNumTerrainInfos(); ++iI)
 	{
@@ -10449,6 +10642,15 @@ void CvGameTextMgr::setBuildingHelpActual(CvWStringBuffer &szBuffer, BuildingTyp
 			szBuffer.append(szTempBuffer);
 		}
 
+		// Aeons - Immigration Desire
+		int iImmigrationDesire = 0;
+		iImmigrationDesire = GC.getBuildingInfo(eBuilding).getImmigrationDesireBuildings();
+		if(iImmigrationDesire != 0)
+		{
+			szTempBuffer.Format(L", +%d%c", iImmigrationDesire, gDLL->getSymbolID(IMMIGRATION_CHAR));
+			szBuffer.append(szTempBuffer);
+		}
+
 		int aiYields[NUM_YIELD_TYPES];
 		for (iI = 0; iI < NUM_YIELD_TYPES; ++iI)
 		{
@@ -11067,6 +11269,13 @@ void CvGameTextMgr::setBuildingHelpActual(CvWStringBuffer &szBuffer, BuildingTyp
 		szBuffer.append(gDLL->getText("TXT_KEY_BUILDING_FOREIGN_TRADE_ROUTE_MOD", kBuilding.getForeignTradeRouteModifier()));
 	}
 
+	// Aeons
+	if (kBuilding.getDifferentReligionTradeRouteModifier() != 0)
+	{
+		szBuffer.append(NEWLINE);
+		szBuffer.append(gDLL->getText("TXT_KEY_BUILDING_DIFFERENT_RELIGION_TRADE_ROUTE_MOD", kBuilding.getDifferentReligionTradeRouteModifier()));
+	}
+
 	if (kBuilding.getGlobalPopulationChange() != 0)
 	{
 		szBuffer.append(NEWLINE);
@@ -11177,6 +11386,8 @@ void CvGameTextMgr::setBuildingHelpActual(CvWStringBuffer &szBuffer, BuildingTyp
 	setCommerceChangeHelp(szBuffer, L"", L"", gDLL->getText(bCleanPower ? "TXT_KEY_BUILDING_WITH_CLEAN_POWER" : "TXT_KEY_BUILDING_WITH_POWER").c_str(), kBuilding.getPowerCommerceModifierArray(), true);
 
 	setCommerceChangeHelp(szBuffer, L"", L"", gDLL->getText("TXT_KEY_BUILDING_PER_CULTURE_LEVEL").c_str(), kBuilding.getCultureCommerceModifierArray(), true);
+
+	setYieldChangeHelp(szBuffer, L"", L"", gDLL->getText("TXT_KEY_BUILDING_PER_CULTURE_LEVEL").c_str(), kBuilding.getCultureYieldModifierArray(), true);
 
 	setYieldChangeHelp(szBuffer, L"", L"", gDLL->getText("TXT_KEY_BUILDING_ALL_CITIES_THIS_CONTINENT").c_str(), kBuilding.getAreaYieldModifierArray(), true);
 
@@ -12057,7 +12268,7 @@ void CvGameTextMgr::buildBuildingRequiresString(CvWStringBuffer& szBuffer, Build
 			{
 				CvWString szPaganReligionName = gDLL->getText("TXT_KEY_RELIGION_PAGANISM");
 				
-				if (NO_PLAYER != ePlayer && !GET_PLAYER(ePlayer).isMinorCiv() && !GET_PLAYER(ePlayer).isBarbarian())
+				if (NO_PLAYER != ePlayer)
 				{
 					szPaganReligionName = CvWString(GC.getPaganReligionInfo((PaganReligionTypes)GC.getCivilizationInfo(GET_PLAYER(ePlayer).getCivilizationType()).getPaganReligion()).getDescription());
 				}
@@ -12102,15 +12313,15 @@ void CvGameTextMgr::buildBuildingRequiresString(CvWStringBuffer& szBuffer, Build
 				szBuffer.append(NEWLINE);
 				szBuffer.append(gDLL->getText("TXT_KEY_BUILDING_REQUIRES_RIVER"));
 			}
+		}
 
-			// Leoreth: hydro power requires river crossing between hills or peaks in first ring
-			if (kBuilding.isPower())
+		// Leoreth: hydro power requires river crossing between hills or peaks in first ring
+		if (kBuilding.isPower())
+		{
+			if (NULL == pCity || NO_PLAYER == ePlayer || !pCity->isWaterPowerLocation())
 			{
-				if (NULL == pCity || NO_PLAYER == ePlayer || !pCity->isWaterPowerLocation())
-				{
-					szBuffer.append(NEWLINE);
-					szBuffer.append(gDLL->getText("TXT_KEY_BUILDING_REQUIRES_WATER_POWER"));
-				}
+				szBuffer.append(NEWLINE);
+				szBuffer.append(gDLL->getText("TXT_KEY_BUILDING_REQUIRES_WATER_POWER"));
 			}
 		}
 
@@ -12493,6 +12704,7 @@ void CvGameTextMgr::setProjectHelp(CvWStringBuffer &szBuffer, ProjectTypes eProj
 		szBuffer.append(gDLL->getText("TXT_KEY_PROJECT_PANAMA_CANAL_HELP"));
 	}
 
+	// Leoreth
 	if (eProject == PROJECT_GOLDEN_RECORD)
 	{
 		szBuffer.append(NEWLINE);
@@ -14265,6 +14477,7 @@ void CvGameTextMgr::setReligionHelpCity(CvWStringBuffer &szBuffer, ReligionTypes
 			szBuffer.append(gDLL->getText("TXT_KEY_RELIGION_BUILDING_PROD_MOD", iProductionModifier));
 			bHandled = true;
 		}
+
 
 		iProductionModifier = GET_PLAYER(pCity->getOwnerINLINE()).getStateReligionUnitProductionModifier();
 		if (iProductionModifier != 0)
@@ -16101,6 +16314,7 @@ void CvGameTextMgr::getAttitudeString(CvWStringBuffer& szBuffer, PlayerTypes ePl
 			szBuffer.append(szTempBuffer);
 		}
 
+
 		iAttitudeChange = GET_PLAYER(ePlayer).AI_getAttitudeExtra(eTargetPlayer);
 		if ((iPass == 0) ? (iAttitudeChange > 0) : (iAttitudeChange < 0))
 		{
@@ -16239,6 +16453,9 @@ void CvGameTextMgr::getTradeString(CvWStringBuffer& szBuffer, const TradeData& t
 		break;
 	case TRADE_CITIES:
 		szBuffer.assign(CvWString::format(L"%s", GET_PLAYER(ePlayer1).getCity(tradeData.m_iData)->getName().GetCString()));
+		break;
+	case TRADE_FULLANNEX:
+		szBuffer.append(gDLL->getText("TXT_KEY_MISC_INEGRATE"));
 		break;
 	case TRADE_PEACE:
 	case TRADE_WAR:
@@ -16823,6 +17040,7 @@ void CvGameTextMgr::buildStabilityParameterString(CvWStringBuffer& szBuffer, int
 	else if (iStabilityCategory == 2)
 	{
 		int iParameterHappiness = player.getStabilityParameter(PARAMETER_HAPPINESS);
+		int iParameterDecadence = player.getStabilityParameter(PARAMETER_DECADENCE); // Aeons
 		int iParameterCivicCombinations = player.getStabilityParameter(PARAMETER_CIVIC_COMBINATIONS);
 		int iParameterCivicsEraTech = player.getStabilityParameter(PARAMETER_CIVICS_ERA_TECH);
 		int iParameterReligion = player.getStabilityParameter(PARAMETER_RELIGION);
@@ -16869,6 +17087,13 @@ void CvGameTextMgr::buildStabilityParameterString(CvWStringBuffer& szBuffer, int
 		{
 			CvWString szTemp;
 			szTemp.Format(L"%d: %s", iParameterHappiness, gDLL->getText("TXT_KEY_STABILITY_UNHAPPINESS").GetCString());
+			szStabilityParameters += NEWLINE + szTemp;
+		}
+
+		if (iParameterDecadence < 0)
+		{
+			CvWString szTemp;
+			szTemp.Format(L"%d: %s", iParameterDecadence, gDLL->getText("TXT_KEY_STABILITY_DECADENCE").GetCString());
 			szStabilityParameters += NEWLINE + szTemp;
 		}
 
@@ -17107,6 +17332,7 @@ void CvGameTextMgr::setFoodHelp(CvWStringBuffer &szBuffer, CvCity& city)
 	for (i = 0; i < GC.getNumSpecialistInfos(); i++)
 	{
 		iSpecialistFood += GET_PLAYER(city.getOwnerINLINE()).specialistYield((SpecialistTypes)i, YIELD_FOOD) * (city.getSpecialistCount((SpecialistTypes)i) + city.getFreeSpecialistCount((SpecialistTypes)i));
+		iSpecialistFood += city.getCoastalExtraSpecialistYield(YIELD_FOOD) * (city.getSpecialistCount((SpecialistTypes)i) + city.getFreeSpecialistCount((SpecialistTypes)i));
 	}
 	if (iSpecialistFood != 0)
 	{
@@ -17168,10 +17394,8 @@ void CvGameTextMgr::setFoodHelp(CvWStringBuffer &szBuffer, CvCity& city)
 		int iBuildingProductionFood = city.getYieldRate(YIELD_PRODUCTION) * (100 + city.getProductionModifier(city.getProductionBuilding())) / 100 / 5;
 		if (iBuildingProductionFood != 0)
 		{
-			szBuffer.append(NEWLINE);
 			szBuffer.append(gDLL->getText("TXT_KEY_MISC_HELP_FOOD_FROM_BUILDING_PRODUCTION", iBuildingProductionFood, info.getChar()));
 			iBaseRate += iBuildingProductionFood;
-			bNeedSubtotal = true;
 		}
 	}
 
@@ -17274,6 +17498,63 @@ void CvGameTextMgr::setFoodHelp(CvWStringBuffer &szBuffer, CvCity& city)
 	{
 		setBuildingAdditionalYieldHelp(szBuffer, city, YIELD_FOOD, DOUBLE_SEPARATOR);
 	}
+
+
+	// Aeons - put immigration desire here for now, may move later.
+	//szBuffer.append(NEWLINE);
+	//szBuffer.append(gDLL->getText("TXT_KEY_MISC_IMMIGRATION_DESIRE", city.immigrationDesire(true)));
+	//szBuffer.append(NEWLINE);
+//
+	//if(GET_PLAYER(city.getOwnerINLINE()).getCivicImmigrationDesire() != 0)
+	//{
+	//	szBuffer.append(gDLL->getText("TXT_KEY_MISC_IMMIGRATION_DESIRE_CIVICS", GET_PLAYER(city.getOwnerINLINE()).getCivicImmigrationDesire()));
+	//	szBuffer.append(NEWLINE);
+	//}
+	//if(city.happyLevel() - city.unhappyLevel() != 0)
+	//{
+	//	szBuffer.append(gDLL->getText("TXT_KEY_MISC_IMMIGRATION_DESIRE_HAPPINESS", city.happyLevel() - city.unhappyLevel()));
+	//	szBuffer.append(NEWLINE);
+	//}
+	//if(city.foodDifference() != 0)
+	//{
+	//	szBuffer.append(gDLL->getText("TXT_KEY_MISC_IMMIGRATION_DESIRE_FOOD", city.foodDifference()*2));
+	//	szBuffer.append(NEWLINE);
+	//}
+	//if(city.goodHealth() - city.badHealth() != 0)
+	//{
+	//	szBuffer.append(gDLL->getText("TXT_KEY_MISC_IMMIGRATION_DESIRE_HEALTH", (city.goodHealth() - city.badHealth())));
+	//	szBuffer.append(NEWLINE);
+	//}
+	//if(city.isColony())
+	//{
+	//	szBuffer.append(gDLL->getText("TXT_KEY_MISC_IMMIGRATION_DESIRE_COLONY", city.isColony()*5));
+	//	szBuffer.append(NEWLINE);
+	//}
+	////szBuffer.append(gDLL->getText("TXT_KEY_MISC_IMMIGRATION_DESIRE_POPULATION", city.getPopulation()));
+	////szBuffer.append(NEWLINE);
+	//if(city.getCultureLevel() != 0)
+	//{
+	//	szBuffer.append(gDLL->getText("TXT_KEY_MISC_IMMIGRATION_DESIRE_CULTURE_LEVEL", city.getCultureLevel()*5));
+	//	szBuffer.append(NEWLINE);
+	//}
+
+	//szBuffer.append(NEWLINE);
+	//
+	//szBuffer.append(gDLL->getText("TXT_KEY_MISC_EMIGRATION_DESIRE", -city.immigrationDesire(false)*-1));
+	//szBuffer.append(NEWLINE);
+	//szBuffer.append(gDLL->getText("TXT_KEY_MISC_IMMIGRATION_DESIRE_CIVICS", -GET_PLAYER(city.getOwnerINLINE()).getCivicImmigrationDesire()));
+	//szBuffer.append(NEWLINE);
+	//szBuffer.append(gDLL->getText("TXT_KEY_MISC_IMMIGRATION_DESIRE_HAPPINESS", -city.happyLevel() - city.unhappyLevel()));
+	//szBuffer.append(NEWLINE);
+	//szBuffer.append(gDLL->getText("TXT_KEY_MISC_IMMIGRATION_DESIRE_FOOD", -city.foodDifference()*2));
+	//szBuffer.append(NEWLINE);
+	//szBuffer.append(gDLL->getText("TXT_KEY_MISC_IMMIGRATION_DESIRE_HEALTH", -(city.goodHealth() - city.badHealth())*4));
+	//szBuffer.append(NEWLINE);
+	//szBuffer.append(gDLL->getText("TXT_KEY_MISC_IMMIGRATION_DESIRE_POPULATION", city.getPopulation()));
+	//szBuffer.append(NEWLINE);
+	//szBuffer.append(gDLL->getText("TXT_KEY_MISC_IMMIGRATION_DESIRE_CULTURE_LEVEL", -city.getCultureLevel()*5));
+	//szBuffer.append(NEWLINE);
+
 // BUG - Building Additional Food - end
 }
 // BUG - Food Rate Hover - end
@@ -17487,6 +17768,14 @@ void CvGameTextMgr::setProductionHelp(CvWStringBuffer &szBuffer, CvCity& city)
 					}
 				}
 			}
+
+			// Leoreth: Statue of Zeus effect
+			/*if (GET_PLAYER(city.getOwnerINLINE()).isHasBuildingEffect((BuildingTypes)STATUE_OF_ZEUS) && city.isHasRealBuilding(getUniqueBuilding(city.getCivilizationType(), (BuildingTypes)PAGAN_TEMPLE)))
+			{
+				szBuffer.append(gDLL->getText("TXT_KEY_MISC_HELP_STATUE_OF_ZEUS_EFFECT", 25, GC.getBuildingInfo(getUniqueBuilding(city.getCivilizationType(), (BuildingTypes)PAGAN_TEMPLE)).getTextKeyWide()));
+				szBuffer.append(NEWLINE);
+				iBaseModifier += 25;
+			}*/
 		}
 
 		BuildingTypes eBuilding = city.getProductionBuilding();
@@ -17589,6 +17878,18 @@ void CvGameTextMgr::setProductionHelp(CvWStringBuffer &szBuffer, CvCity& city)
 				}
 			}
 
+
+			// Aeons - Adal UP: +100% production in cities for 10 turns after acquiring
+			if (city.getCivilizationType() == ADAL)
+			{
+				if (GC.getGame().getGameTurn() - city.getGameTurnAcquired() <= 1000 / GC.getGameSpeedInfo(GC.getGameINLINE().getGameSpeedType()).getBuildPercent())
+				{
+					szBuffer.append(gDLL->getText("TXT_KEY_MISC_HELP_PROD_ADAL", 100));
+					szBuffer.append(NEWLINE);
+					iBaseModifier += 100;
+				}
+			}
+
 			if (GET_PLAYER(city.getOwnerINLINE()).getCapitalCity() != NULL && GET_PLAYER(city.getOwnerINLINE()).getCapitalCity()->isHasRealBuilding(eBuilding))
 			{
 				int iCapitalBuildingMod = GET_PLAYER(city.getOwnerINLINE()).getCapitalBuildingProductionModifier();
@@ -17610,6 +17911,19 @@ void CvGameTextMgr::setProductionHelp(CvWStringBuffer &szBuffer, CvCity& city)
 						szBuffer.append(gDLL->getText("TXT_KEY_MISC_HELP_PROD_HOLY_ROME", 100));
 						szBuffer.append(NEWLINE);
 						iBaseModifier += 100;
+					}
+				}
+			}
+			// Leoreth: display Nubian UP
+			if (city.getCivilizationType() == NUBIA)
+			{
+				if (city.hasBonus((BonusTypes)BONUS_STONE))
+				{
+					if (GC.getBuildingInfo(eBuilding).getAdvisorType() == ADVISOR_GROWTH || GC.getBuildingInfo(eBuilding).getAdvisorType() == ADVISOR_MILITARY)
+					{
+						szBuffer.append(gDLL->getText("TXT_KEY_MISC_HELP_PROD_NUBIA", 50));
+						szBuffer.append(NEWLINE);
+						iBaseModifier += 50;
 					}
 				}
 			}
@@ -18316,6 +18630,17 @@ void CvGameTextMgr::setCommerceHelp(CvWStringBuffer &szBuffer, CvCity& city, Com
 		}
 	}
 
+	int iUniquePowerModifier = 0;
+	//Aeons - Kanem-Bornu UP, +5% commerce per desert tile
+	if (city.getCivilizationType() == KANEM_BORNU && city.plot()->nextToOasisLake())
+	{
+		iUniquePowerModifier = city.countNumDesertPlots() * 5;
+		szBuffer.append(SEPARATOR);
+		szBuffer.append(NEWLINE);
+		szBuffer.append(gDLL->getText("TXT_KEY_MISC_HELP_KANEM_BORNU_MODIFIER", iUniquePowerModifier, info.getChar()));
+	}
+	iFinalModYield *= (100+iUniquePowerModifier)/100;
+
 	CvWString szYield = CvWString::format(L"%d.%02d", iFinalModYield/100, iFinalModYield%100);
 	szBuffer.append(NEWLINE);
 	szBuffer.append(gDLL->getText("TXT_KEY_MISC_HELP_COMMERCE_FINAL_YIELD_FLOAT", info.getTextKeyWide(), szYield.GetCString(), info.getChar()));
@@ -18431,6 +18756,16 @@ void CvGameTextMgr::setYieldHelp(CvWStringBuffer &szBuffer, CvCity& city, YieldT
 			iBaseModifier += iBuildingMod;
 		}
 
+
+		// Aeons
+		int iCultureMod = city.getCultureLevel() * city.getCultureYieldRateModifier(eYieldType);
+		if (iCultureMod != 0)
+		{
+			szBuffer.append(gDLL->getText("TXT_KEY_MISC_HELP_YIELD_CULTURE", iCultureMod, info.getChar()));
+			szBuffer.append(NEWLINE);
+			iBaseModifier += iCultureMod;
+		}
+
 		// Power
 		if (city.isPower())
 		{
@@ -18450,6 +18785,36 @@ void CvGameTextMgr::setYieldHelp(CvWStringBuffer &szBuffer, CvCity& city, YieldT
 			szBuffer.append(gDLL->getText("TXT_KEY_MISC_HELP_YIELD_BONUS", iBonusMod, info.getChar()));
 			szBuffer.append(NEWLINE);
 			iBaseModifier += iBonusMod;
+		}
+
+		// Aeons - Katanga
+		if (city.getCivilizationType() == KATANGA && city.isCapital() && eYieldType == YIELD_FOOD)
+		{
+
+			int iBuildingsMod = 0; 
+			for (int iI = 0; iI < GC.getNumBuildingInfos(); iI++)
+			{
+				if (city.isHasRealBuilding((BuildingTypes)iI))
+				{
+					iBuildingsMod += 2;
+				}
+			}
+
+			int iOpenBorderCount = 0;
+			for (int iI = 0; iI < MAX_TEAMS; iI++)
+			{
+				if (GET_TEAM(city.getTeam()).isOpenBorders((TeamTypes)iI))
+				{
+					iOpenBorderCount++;
+				}
+			}
+
+			if (iOpenBorderCount == 0)
+			{
+				szBuffer.append(gDLL->getText("TXT_KEY_MISC_HELP_YIELD_KATANGA", iBuildingsMod, info.getChar()));
+				szBuffer.append(NEWLINE);
+				iBaseModifier += iBuildingsMod;
+			}
 		}
 
 		// Capital
@@ -19179,7 +19544,7 @@ void CvGameTextMgr::getCityBillboardProductionbarColors(CvCity* pCity, std::vect
 
 void CvGameTextMgr::setScoreHelp(CvWStringBuffer &szString, PlayerTypes ePlayer)
 {
-	if (NO_PLAYER != ePlayer)
+	if (NO_PLAYER != ePlayer && !GET_PLAYER(ePlayer).isMinorCiv() && !GET_PLAYER(ePlayer).isBarbarian())
 	{
 		CvPlayer& player = GET_PLAYER(ePlayer);
 
@@ -20167,6 +20532,18 @@ void CvGameTextMgr::setTradeRouteHelp(CvWStringBuffer &szBuffer, int iRoute, CvC
 						szBuffer.append(NEWLINE);
 						szBuffer.append(gDLL->getText("TXT_KEY_TRADE_ROUTE_MOD_FOREIGN", iNewMod));
 						iModifier += iNewMod;
+					}
+
+					// Aeons - Buildings with trade bonuses from other religions
+					iNewMod = pCity->getDifferentReligionTradeRouteModifier();
+					if (GET_PLAYER(pCity->getOwnerINLINE()).getStateReligion() != GET_PLAYER(pOtherCity->getOwnerINLINE()).getStateReligion())
+					{
+						if (0 != iNewMod)
+						{
+							szBuffer.append(NEWLINE);
+							szBuffer.append(gDLL->getText("TXT_KEY_TRADE_ROUTE_MOD_DIFFERENT_RELIGION", iNewMod));
+							iModifier += iNewMod;
+						}
 					}
 
 					iNewMod = pCity->getPeaceTradeModifier(pOtherCity->getTeam());
@@ -21341,9 +21718,7 @@ void CvGameTextMgr::assignFontIds(int iFirstSymbolCode, int iPadAmount)
 	//	++iCurSymbolID;
 	//}
 
-	// Corrected bonus indexing for resources
-	// Since there exist bonus resources that are graphical variants and don't have unique font IDs we can't increment for every resource.
-	// Instead, look through each resource to find the one with the highest font button index, and use that for the number of resource icons
+	// Aeons - correct bonus indexing for resources
 	int iMaxBonusIndex = 0;
 	for (int i = 0; i < GC.getNumBonusInfos(); i++)
 	{
@@ -21915,5 +22290,51 @@ void CvGameTextMgr::setWonderLimitHelp(CvWStringBuffer &szBuffer, CvCity& city, 
 			iWorldWondersLimit++;
 		}
 		szBuffer.append(gDLL->getText("INTERFACE_CITY_WORLD_WONDER_LIMIT_HELP", iWorldWonders, iWorldWondersLimit, GC.getCultureLevelInfo((CultureLevelTypes)iCultureLevel).getTextKeyWide()));
+	}
+}
+
+// Aeons
+void CvGameTextMgr::setImmigrationDesireHelp(CvWStringBuffer &szBuffer, CvCity& city)
+{
+	szBuffer.append(gDLL->getText("TXT_KEY_MISC_IMMIGRATION_DESIRE", city.immigrationDesire(true)));
+	szBuffer.append(NEWLINE);
+
+	if(GET_PLAYER(city.getOwnerINLINE()).getCivicImmigrationDesire() != 0)
+	{
+		szBuffer.append(gDLL->getText("TXT_KEY_MISC_IMMIGRATION_DESIRE_CIVICS", GET_PLAYER(city.getOwnerINLINE()).getCivicImmigrationDesire()));
+		szBuffer.append(NEWLINE);
+	}
+	if(city.happyLevel() - city.unhappyLevel() != 0)
+	{
+		szBuffer.append(gDLL->getText("TXT_KEY_MISC_IMMIGRATION_DESIRE_HAPPINESS", city.happyLevel() - city.unhappyLevel()));
+		szBuffer.append(NEWLINE);
+	}
+	if(city.foodDifference() != 0)
+	{
+		szBuffer.append(gDLL->getText("TXT_KEY_MISC_IMMIGRATION_DESIRE_FOOD", city.foodDifference()*2));
+		szBuffer.append(NEWLINE);
+	}
+	if(city.goodHealth() - city.badHealth() != 0)
+	{
+		szBuffer.append(gDLL->getText("TXT_KEY_MISC_IMMIGRATION_DESIRE_HEALTH", (city.goodHealth() - city.badHealth())));
+		szBuffer.append(NEWLINE);
+	}
+	if(city.isColony())
+	{
+		szBuffer.append(gDLL->getText("TXT_KEY_MISC_IMMIGRATION_DESIRE_COLONY", city.isColony()*5));
+		szBuffer.append(NEWLINE);
+	}
+	//szBuffer.append(gDLL->getText("TXT_KEY_MISC_IMMIGRATION_DESIRE_POPULATION", city.getPopulation()));
+	//szBuffer.append(NEWLINE);
+	if(city.getCultureLevel() != 0)
+	{
+		szBuffer.append(gDLL->getText("TXT_KEY_MISC_IMMIGRATION_DESIRE_CULTURE_LEVEL", city.getCultureLevel()*5));
+		szBuffer.append(NEWLINE);
+	}
+
+	if(city.getImmigrationDesireBuildings() != 0)
+	{
+		szBuffer.append(gDLL->getText("TXT_KEY_MISC_IMMIGRATION_DESIRE_BUILDINGS", city.getImmigrationDesireBuildings()));
+		szBuffer.append(NEWLINE);
 	}
 }

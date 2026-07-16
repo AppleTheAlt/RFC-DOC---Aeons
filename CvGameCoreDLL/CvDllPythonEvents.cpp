@@ -1390,6 +1390,23 @@ void CvDllPythonEvents::reportTradeMission(UnitTypes unitID, PlayerTypes ePlayer
 	}
 }
 
+// Aeons: diplomatic mission (great statesman)
+void CvDllPythonEvents::reportDiplomaticMission(UnitTypes unitID, PlayerTypes ePlayer, int iX, int iY)
+{
+	if (preEvent())
+	{
+		CyArgsList eventData;
+		eventData.add("diplomaticMission");
+
+		eventData.add((int)unitID);
+		eventData.add((int)ePlayer);
+		eventData.add((int)iX);
+		eventData.add((int)iY);
+
+		postEvent(eventData);
+	}
+}
+
 // Leoreth: slave trade (amount of gold received)
 void CvDllPythonEvents::reportPlayerSlaveTrade(PlayerTypes ePlayer, int iGold)
 {
@@ -1400,6 +1417,21 @@ void CvDllPythonEvents::reportPlayerSlaveTrade(PlayerTypes ePlayer, int iGold)
 
 		eventData.add((int)ePlayer);
 		eventData.add(iGold);
+
+		postEvent(eventData);
+	}
+}
+
+// Aeons - Integrate
+void CvDllPythonEvents::reportPlayerIntegrate(PlayerTypes ePlayer, PlayerTypes ePlayer2)
+{
+	if (preEvent())
+	{
+		CyArgsList eventData;
+		eventData.add("playerIntegrate");
+
+		eventData.add((int)ePlayer);
+		eventData.add((int)ePlayer2);
 
 		postEvent(eventData);
 	}
@@ -1560,6 +1592,19 @@ void CvDllPythonEvents::reportTribute(PlayerTypes eFrom, PlayerTypes eTo)
 	{
 		CyArgsList eventData;
 		eventData.add("tribute");
+		eventData.add((int)eFrom);
+		eventData.add((int)eTo);
+		postEvent(eventData);
+	}
+}
+
+// Aeons - For Adal UHV
+void CvDllPythonEvents::reportDefensivePact(PlayerTypes eFrom, PlayerTypes eTo)
+{
+	if (preEvent())
+	{
+		CyArgsList eventData;
+		eventData.add("defensivePact");
 		eventData.add((int)eFrom);
 		eventData.add((int)eTo);
 		postEvent(eventData);

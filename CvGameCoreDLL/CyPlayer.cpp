@@ -699,6 +699,11 @@ void CyPlayer::foundCorporation(int /*CorporationTypes*/ iIndex)
 		m_pPlayer->foundCorporation((CorporationTypes)iIndex);
 }
 
+bool CyPlayer::canExternalMigrate()
+{
+	return m_pPlayer->canExternalMigrate();
+}
+
 int CyPlayer::getCivicAnarchyLength(boost::python::list& /*CivicTypes**/ paeNewCivics)
 {
 	int* pCivics = NULL;

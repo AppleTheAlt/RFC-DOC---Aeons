@@ -870,6 +870,9 @@ public:
 	int getHillsDefenseModifier() const;			// Exposed to Python
 	int getPlainsAttackModifier() const; // Leoreth
 	int getPlainsDefenseModifier() const; // Leoreth
+	int getHeathenStrength() const; // Aeons
+	int getUnityStrength() const; // Aeons
+	int getUnityRequired() const; // Aeons
 	int getBombRate() const;									// Exposed to Python
 	int getBombardRate() const;								// Exposed to Python
 	int getSpecialCargo() const;							// Exposed to Python
@@ -895,6 +898,7 @@ public:
 	int getReligionType() const;							// Exposed to Python
 	int getStateReligion() const;							// Exposed to Python
 	int getPrereqReligion() const;						// Exposed to Python
+	int getPrereqStateReligion() const;						// Aeons
 	int getPrereqCivic() const; // edead/Leoreth
 	int getPrereqCorporation() const;						// Exposed to Python
 	int getPrereqBuilding() const;						// Exposed to Python
@@ -939,6 +943,7 @@ public:
 	bool isNukeImmune() const;				// Exposed to Python
 	bool isPrereqBonuses() const;				// Exposed to Python
 	bool isPrereqReligion() const;				// Exposed to Python
+	bool isPrereqStateReligion() const;				// Aeons
 	bool isMechUnit() const;							// Exposed to Python
 	bool isRenderBelowWater() const;			// Exposed to Python
 	bool isRenderAlways() const;			// Exposed to Python
@@ -974,6 +979,7 @@ public:
 	int getFeatureDefenseModifier(int i) const;				// Exposed to Python
 	int getUnitClassAttackModifier(int i) const;				// Exposed to Python
 	int getUnitClassDefenseModifier(int i) const;				// Exposed to Python
+	int getUnityClasses(int i) const;				// Aeons
 	int getUnitCombatModifier(int i) const;				// Exposed to Python
 	int getUnitCombatCollateralImmune(int i) const;				// Exposed to Python
 	int getDomainModifier(int i) const;				// Exposed to Python
@@ -1076,6 +1082,9 @@ protected:
 	int m_iHillsDefenseModifier;
 	int m_iPlainsAttackModifier; // Leoreth
 	int m_iPlainsDefenseModifier; // Leoreth
+	int m_iHeathenStrength; // Aeons
+	int m_iUnityStrength; // Aeons
+	int m_iUnityRequired; // Aeons
 	int m_iBombRate;
 	int m_iBombardRate;
 	int m_iSpecialCargo;
@@ -1099,6 +1108,7 @@ protected:
 	int m_iReligionType;
 	int m_iStateReligion;
 	int m_iPrereqReligion;
+	int m_iPrereqStateReligion; // Aeons
 	int m_iPrereqCivic; // edead/Leoreth
 	int m_iPrereqCorporation;
 	int m_iPrereqBuilding;
@@ -1142,6 +1152,7 @@ protected:
 	bool m_bNukeImmune;
 	bool m_bPrereqBonuses;
 	bool m_bPrereqReligion;
+	bool m_bPrereqStateReligion;
 	bool m_bMechanized;
 	bool m_bRenderBelowWater;
 	bool m_bRenderAlways;
@@ -1175,6 +1186,7 @@ protected:
 	int* m_piFeatureDefenseModifier;
 	int* m_piUnitClassAttackModifier;
 	int* m_piUnitClassDefenseModifier;
+	int* m_piUnityClasses;
 	int* m_piUnitCombatModifier;
 	int* m_piUnitCombatCollateralImmune;
 	int* m_piDomainModifier;
@@ -1364,6 +1376,7 @@ public:
 
 	int getCivicOptionType() const;				// Exposed to Python
 	int getAnarchyLength() const;				// Exposed to Python
+	int getImmigrationDesire() const;				// Exposed to Python
 	int getUpkeep() const;				// Exposed to Python
 	int getAIWeight() const;				// Exposed to Python
 	int getGreatPeopleRateModifier() const;				// Exposed to Python
@@ -1399,7 +1412,7 @@ public:
 	int getTechPrereq() const;				// Exposed to Python
 	int getCivicPercentAnger() const;				// Exposed to Python
 	int getMaxConscript() const;				// Exposed to Python
-	int getStateReligionHappiness() const;				// Exposed to Python
+	int getStateReligionHappiness() const;				// Exposed to Python			
 	int getNonStateReligionHappiness() const;				// Exposed to Python
 	int getStateReligionUnitProductionModifier() const;				// Exposed to Python
 	int getStateReligionBuildingProductionModifier() const;				// Exposed to Python
@@ -1414,6 +1427,7 @@ public:
 	int getOccupationTimeChange() const; // Leoreth
 
 	bool isMilitaryFoodProduction() const;				// Exposed to Python
+	bool isNoExternalMigration() const;				// Exposed to Python
 	bool isNoUnhealthyPopulation() const;				// Exposed to Python
 	bool isBuildingOnlyHealthy() const;				// Exposed to Python
 	bool isNoForeignTrade() const;				// Exposed to Python
@@ -1477,6 +1491,7 @@ protected:
 
 	int m_iCivicOptionType;
 	int m_iAnarchyLength;
+	int m_iImmigrationDesire;
 	int m_iUpkeep;
 	int m_iAIWeight;
 	int m_iGreatPeopleRateModifier;
@@ -1527,6 +1542,7 @@ protected:
 	int m_iOccupationTimeChange; // Leoreth
 
 	bool m_bMilitaryFoodProduction;
+	bool m_bNoExternalMigration; // Aeons
 	bool m_bNoUnhealthyPopulation;
 	bool m_bBuildingOnlyHealthy;
 	bool m_bNoForeignTrade;
@@ -1717,6 +1733,7 @@ public:
 	int getAreaHappiness() const;				// Exposed to Python
 	int getGlobalHappiness() const;				// Exposed to Python
 	int getStateReligionHappiness() const;				// Exposed to Python
+	int getImmigrationDesireBuildings() const;	
 	int getWorkerSpeedModifier() const;				// Exposed to Python
 	int getMilitaryProductionModifier() const;				// Exposed to Python
 	int getSpaceProductionModifier() const;				// Exposed to Python
@@ -1727,6 +1744,7 @@ public:
 	int getTradeRouteModifier() const;				// Exposed to Python
 	int getCultureTradeRouteModifier() const; // Leoreth
 	int getForeignTradeRouteModifier() const;				// Exposed to Python
+	int getDifferentReligionTradeRouteModifier() const;				// Aeons - Exposed to Python
 	int getAssetValue() const;				// Exposed to Python
 	int getPowerValue() const;				// Exposed to Python
 	int getSpecialBuildingType() const;				// Exposed to Python
@@ -1812,6 +1830,8 @@ public:
 	int* getAreaYieldModifierArray() const;
 	int getGlobalYieldModifier(int i) const;				// Exposed to Python
 	int* getGlobalYieldModifierArray() const;
+	int getCultureYieldModifier(int i) const; // Aeons
+	int* getCultureYieldModifierArray() const; // Aeons
 	int getSeaPlotYieldChange(int i) const;				// Exposed to Python
 	int* getSeaPlotYieldChangeArray() const;
 	int getRiverPlotYieldChange(int i) const;				// Exposed to Python
@@ -1862,6 +1882,7 @@ public:
 	bool isBuildingClassNeededInCity(int i) const;				// Exposed to Python
 
 	int getSpecialistYieldChange(int i, int j) const;			// Exposed to Python
+	int getSpecialistHappyChange(int i) const; // Aeons
 	int* getSpecialistYieldChangeArray(int i) const;
 
 	int getBonusYieldModifier(int i, int j) const;				// Exposed to Python
@@ -1951,6 +1972,7 @@ protected:
 	int m_iAreaHappiness;
 	int m_iGlobalHappiness;
 	int m_iStateReligionHappiness;
+	int m_iImmigrationDesireBuildings; // Aeons
 	int m_iWorkerSpeedModifier;
 	int m_iMilitaryProductionModifier;
 	int m_iSpaceProductionModifier;
@@ -1961,6 +1983,7 @@ protected:
 	int m_iTradeRouteModifier;
 	int m_iCultureTradeRouteModifier; // Leoreth
 	int m_iForeignTradeRouteModifier;
+	int m_iDifferentReligionTradeRouteModifier;
 	int m_iAssetValue;
 	int m_iPowerValue;
 	int m_iSpecialBuildingType;
@@ -2045,6 +2068,7 @@ protected:
 	int* m_piPowerYieldModifier;
 	int* m_piAreaYieldModifier;
 	int* m_piGlobalYieldModifier;
+	int* m_piCultureYieldModifier; // Aeons
 	int* m_piCommerceChange;
 	int* m_piObsoleteSafeCommerceChange;
 	int* m_piCommerceChangeDoubleTime;
@@ -2080,6 +2104,7 @@ protected:
 	bool* m_pbBuildingClassNeededInCity;
 
 	int** m_ppaiSpecialistYieldChange;
+	int* m_ppaiSpecialistHappyChange; // Aeons
 	int** m_ppaiBonusYieldModifier;
 
 	// Leoreth

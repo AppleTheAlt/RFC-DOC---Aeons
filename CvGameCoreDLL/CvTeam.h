@@ -99,9 +99,10 @@ public:
 	int getSpreadResearchModifier(TechTypes eTech) const;
 	int getTurnResearchModifier() const;
 	int getModernizationResearchModifier(TechTypes eTech) const;
-
-	int calculateTechDifferenceModifier() const;
-	void updateTechDifferenceModifier();
+	int getShrineResearchModifier() const;
+	int getSubjectsResearchModifier(TechTypes eTech) const; // Aeons
+	int getOverlordResearchModifier(TechTypes eTech) const; // Aeons
+	int getFellowSubjectResearchModifier(TechTypes eTech) const; // Aeons
 
 	bool hasHolyCity(ReligionTypes eReligion) const;																		// Exposed to Python
 	bool hasHeadquarters(CorporationTypes eCorporation) const;																		// Exposed to Python
@@ -450,7 +451,6 @@ protected:
 	int m_iTotalTechValue; // Leoreth
 	int m_iSatelliteInterceptCount; // Leoreth
 	int m_iSatelliteAttackCount; // Leoreth
-	int m_iTechDifferenceModifier; // Leoreth
 
 	bool m_bMapCentering;
 	bool m_bCapitulated;

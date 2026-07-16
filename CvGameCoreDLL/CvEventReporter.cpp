@@ -498,10 +498,22 @@ void CvEventReporter::tradeMission(UnitTypes unitID, PlayerTypes ePlayer, int iX
 	m_kPythonEventMgr.reportTradeMission(unitID, ePlayer, iX, iY, iGold);
 }
 
+// Aeons: diplomatic mission (great statesman)
+void CvEventReporter::diplomaticMission(UnitTypes unitID, PlayerTypes ePlayer, int iX, int iY)
+{
+	m_kPythonEventMgr.reportDiplomaticMission(unitID, ePlayer, iX, iY);
+}
+
 // Leoreth: slave trade (amount of gold received)
 void CvEventReporter::playerSlaveTrade(PlayerTypes ePlayer, int iGold)
 {
 	m_kPythonEventMgr.reportPlayerSlaveTrade(ePlayer, iGold);
+}
+
+// Aeons - Integrate
+void CvEventReporter::playerIntegrate(PlayerTypes ePlayer, PlayerTypes ePlayerReciever)
+{
+	m_kPythonEventMgr.reportPlayerIntegrate(ePlayer, ePlayerReciever);
 }
 
 // Leoreth: release player
@@ -574,6 +586,12 @@ void CvEventReporter::techTraded(PlayerTypes eFrom, PlayerTypes eTo, TechTypes e
 void CvEventReporter::tribute(PlayerTypes eFrom, PlayerTypes eTo)
 {
 	m_kPythonEventMgr.reportTribute(eFrom, eTo);
+}
+
+// Aeons
+void CvEventReporter::defensivePact(PlayerTypes eFrom, PlayerTypes eTo)
+{
+	m_kPythonEventMgr.reportDefensivePact(eFrom, eTo);
 }
 
 void CvEventReporter::globalWarming(int iGlobalWarmingValue, int iGlobalWarmingDefense)

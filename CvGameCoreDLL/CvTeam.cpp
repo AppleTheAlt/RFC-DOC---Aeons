@@ -1,3 +1,4 @@
+
 // team.cpp
 
 #include "CvGameCoreDLL.h"
@@ -181,7 +182,6 @@ void CvTeam::reset(TeamTypes eID, bool bConstructorCall)
 	m_iTotalTechValue = 0; // Leoreth
 	m_iSatelliteInterceptCount = 0; // Leoreth
 	m_iSatelliteAttackCount = 0; // Leoreth
-	m_iTechDifferenceModifier = 0; // Leoreth
 
 	m_bMapCentering = false;
 	m_bCapitulated = false;
@@ -979,8 +979,6 @@ void CvTeam::doTurn()
 
 	}
 
-	updateTechDifferenceModifier(); // Leoreth
-
 	doWarWeariness();
 
 	testCircumnavigated();
@@ -1091,7 +1089,10 @@ bool CvTeam::canChangeWarPeace(TeamTypes eTeam, bool bAllowVassal) const
 
 	if (isAVassal())
 	{
-		return false;
+		if(!isVassal(eTeam) || !isHuman()) // Aeons - Allow independence wars for human vassals
+		{
+			return false;
+		}
 	}
 
 	if (bAllowVassal)
@@ -1242,7 +1243,7 @@ void CvTeam::declareWar(TeamTypes eTeam, bool bNewDiplo, WarPlanTypes eWarPlan, 
 			if ((GET_PLAYER((PlayerTypes)iI).getTeam() == getID()) || (GET_PLAYER((PlayerTypes)iI).getTeam() == eTeam))
 			{
 				GET_PLAYER((PlayerTypes)iI).updatePlunder(1, false);
-				
+
 				// Leoreth: Manchu UP yields require peace
 				if (GET_PLAYER((PlayerTypes)iI).getCivilizationType() == MANCHU)
 				{
@@ -1681,12 +1682,12 @@ void CvTeam::makePeace(TeamTypes eTeam, bool bBumpUnits)
 			if ((GET_PLAYER((PlayerTypes)iI).getTeam() == getID()) || (GET_PLAYER((PlayerTypes)iI).getTeam() == eTeam))
 			{
 				GET_PLAYER((PlayerTypes)iI).updatePlunder(1, false);
+			}
 
-				// Leoreth: Manchu UP yields require peace
-				if (GET_PLAYER((PlayerTypes)iI).getCivilizationType() == MANCHU)
-				{
-					GET_PLAYER((PlayerTypes)iI).updateCityPlotYield();
-				}
+			// Leoreth: Manchu UP yields require peace
+			if (GET_PLAYER((PlayerTypes)iI).getCivilizationType() == MANCHU)
+			{
+				GET_PLAYER((PlayerTypes)iI).updateCityPlotYield();
 			}
 		}
 
@@ -2748,12 +2749,18 @@ int CvTeam::getResearchCost(TechTypes eTech, bool bModifiers) const
 	{
 		int iModifier = 100;
 
-		//iModifier += getPopulationResearchModifier();
+		iModifier += getPopulationResearchModifier();
 		//iModifier += getTechLeaderModifier();
-		iModifier += getTechDifferenceModifier();
+		//iModifier += getTechDifferenceModifier();		// Aeons: Remove tech divergence in favour of modernisation.
 		iModifier += getSpreadResearchModifier(eTech);
 		iModifier += getTurnResearchModifier();
-		iModifier += getModernizationResearchModifier(eTech); // Leoreth: Japanese UP (Modernization)
+		iModifier += getModernizationResearchModifier(eTech); // Leoreth: Japanese UP (Modernization) Aeons: Apply to whole world with Era-based strength
+		iModifier += getShrineResearchModifier(); // Buyid UP:
+		iModifier += getSubjectsResearchModifier(eTech); // Aeons - 20% tech discount if subject discovered
+		iModifier += getOverlordResearchModifier(eTech); // Aeons - 20% tech discount if overlord discovered
+		iModifier += getFellowSubjectResearchModifier(eTech); // Aeons - 20% tech discount if other vassal discovered
+
+		if (iModifier < 10) iModifier = 10; // Aeons: No insane modifier stacking, this is not EU4
 
 		iCost *= iModifier;
 		iCost /= 100;
@@ -2771,10 +2778,12 @@ int CvTeam::getCivilizationResearchModifier() const
 	// nerf late game China
 	if (GET_PLAYER(getLeaderID()).getCivilizationType() == CHINA)
 	{
-		if (GET_PLAYER(getLeaderID()).getCurrentEra() == ERA_MEDIEVAL) iCivModifier += 25;
-		if (GET_PLAYER(getLeaderID()).getCurrentEra() >= ERA_RENAISSANCE) iCivModifier += 40;
+		if (GET_PLAYER(getLeaderID()).getCurrentEra() == ERA_MEDIEVAL) iCivModifier += 20;
+		if (GET_PLAYER(getLeaderID()).getCurrentEra() >= ERA_RENAISSANCE) iCivModifier += 30;
 	}
 
+	//Aeons - I don't think we need this...
+	/*
 	// buff late game Japan
 	else if (GET_PLAYER(getLeaderID()).getCivilizationType() == JAPAN)
 	{
@@ -2783,6 +2792,7 @@ int CvTeam::getCivilizationResearchModifier() const
 			iCivModifier += isHuman() ? -20 : -40;
 		}
 	}
+	*/
 
 	return iCivModifier;
 }
@@ -2898,22 +2908,7 @@ int CvTeam::getTechLeaderModifier() const
 
 int CvTeam::getTechDifferenceModifier() const
 {
-	return m_iTechDifferenceModifier;
-}
-
-void CvTeam::updateTechDifferenceModifier()
-{
-	int iNewModifier = calculateTechDifferenceModifier();
-
-	if (m_iTechDifferenceModifier != iNewModifier)
-	{
-		m_iTechDifferenceModifier = range(iNewModifier, m_iTechDifferenceModifier - 10, m_iTechDifferenceModifier + 10);
-	}
-}
-
-int CvTeam::calculateTechDifferenceModifier() const
-{
-	if (GET_PLAYER(getLeaderID()).getCurrentEra() <= GET_PLAYER(getLeaderID()).getStartingEra())
+	if (GC.getGameINLINE().getGameTurn() <= GET_PLAYER(getLeaderID()).getInitialBirthTurn() + getTurns(20))
 	{
 		return 0;
 	}
@@ -2928,11 +2923,11 @@ int CvTeam::calculateTechDifferenceModifier() const
 		return 0;
 	}
 
+
 	if (countContacts() * 5 < GC.getGameINLINE().countCivTeamsAlive())
 	{
 		return 0;
 	}
-	
 
 	int iRelativeTechValue = 100 * getTotalTechValue() / GC.getGameINLINE().getMedianTechValue();
 	int iModifier = 0;
@@ -2942,15 +2937,15 @@ int CvTeam::calculateTechDifferenceModifier() const
 		iModifier += (iRelativeTechValue - 125) / 5;
 		iModifier *= 10;
 	}
-	else if (iRelativeTechValue < 75)
+	else if (iRelativeTechValue < 80)
 	{
 		iModifier += (iRelativeTechValue - 80) / 5;
-		iModifier *= 5;
+		iModifier *= 10;
 
-		iModifier = std::max(iModifier, -lTechBackwardsBonus[GET_PLAYER(getLeaderID()).getCurrentEra()]);
+		iModifier = std::max(iModifier, -50);
 	}
 
-	return iModifier;
+	return iModifier/3; // Aeons - Make tech divergence 3 times weaker to account for modernisation.
 }
 
 int CvTeam::getSpreadResearchModifier(TechTypes eTech) const
@@ -3005,10 +3000,14 @@ int CvTeam::getSpreadResearchModifier(TechTypes eTech) const
 
 int CvTeam::getModernizationResearchModifier(TechTypes eTech) const
 {
-	if (GET_PLAYER(getLeaderID()).getCivilizationType() != JAPAN) return 0;
+	// AEONS - Modernisation available for all civs, but Japan gets stronger modernisation...
+	//if (GET_PLAYER(getLeaderID()).getCivilizationType() != JAPAN) return 0;
 
-	bool bAllMedievalTechs = true;
+	//bool bAllMedievalTechs = true;
 
+	EraTypes techLeaderEra = NO_ERA; //Aeons - Highest era out of all contacted civs willing to trade techs.
+
+	/* Aeons: Modernisation can occur for ancient-medieval civs (eg. Congo or Zulu)
 	for (int iI = 0; iI < GC.getNumTechInfos(); iI++)
 	{
 		if (GC.getTechInfo((TechTypes)iI).getEra() <= ERA_MEDIEVAL && !isHasTech((TechTypes)iI))
@@ -3016,22 +3015,27 @@ int CvTeam::getModernizationResearchModifier(TechTypes eTech) const
 			return 0;
 		}
 	}
+	*/
 
 	int iCount = 0;
 
 	for (int iI = 0; iI < MAX_CIV_PLAYERS; iI++)
 	{
+
 		TeamTypes eTeam = GET_PLAYER((PlayerTypes)iI).getTeam();
+
 
 		if (GET_TEAM(eTeam).isMinorCiv())
 		{
 			continue;
 		}
 
+
 		if (GET_TEAM(eTeam).isHasTech(eTech) && (!isHuman() || canContact(eTeam)) && (GET_TEAM(eTeam).isHuman() || GET_TEAM(eTeam).AI_techTrade(eTech, getID(), true) == NO_DENIAL))
 		{
 			if (!isAtWar(eTeam))
 			{
+				if (GET_PLAYER((PlayerTypes)iI).getCurrentEra() > techLeaderEra) techLeaderEra = GET_PLAYER((PlayerTypes)iI).getCurrentEra();
 				iCount++;
 			}
 			else
@@ -3040,6 +3044,7 @@ int CvTeam::getModernizationResearchModifier(TechTypes eTech) const
 				int iTheirSuccess = GET_TEAM(eTeam).AI_getWarSuccess(getID());
 				if (iOurSuccess - iTheirSuccess > 20 + 10 * GET_PLAYER(getLeaderID()).getCurrentEra() + std::max(iOurSuccess, iTheirSuccess) / 10)
 				{
+					if (GET_PLAYER((PlayerTypes)iI).getCurrentEra() > techLeaderEra) techLeaderEra = GET_PLAYER((PlayerTypes)iI).getCurrentEra();
 					iCount++;
 				}
 			}
@@ -3048,17 +3053,223 @@ int CvTeam::getModernizationResearchModifier(TechTypes eTech) const
 
 	if (iCount >= 3)
 	{
+		/*
 		// account of the base modifier that Japan receives in the global era
-		if (GET_PLAYER(getLeaderID()).getCurrentEra() >= ERA_GLOBAL)
+		if (GET_PLAYER(getLeaderID()).getCurrentEra() >= ERA_GLOBAL && GET_PLAYER(getLeaderID()).getCivilizationType() == JAPAN)
 		{
 			return isHuman() ? -30 : -10;
 		}
+		*/
 
-		return -50;
+		EraTypes myEra = GET_PLAYER(getLeaderID()).getCurrentEra();
+
+		int returnModifier = 0;
+
+		//Aeons - Adjust modernisation to other civ era vs your era...
+		switch (myEra)
+		{
+		case ERA_ANCIENT:
+			switch (techLeaderEra)
+			{
+			case ERA_ANCIENT:
+				returnModifier = -10;
+				break;
+			case ERA_CLASSICAL:
+				returnModifier = -20;
+				break;
+			case ERA_MEDIEVAL:
+				returnModifier = -40;
+				break;
+			case ERA_RENAISSANCE:
+				returnModifier = -80;
+				break;
+			case ERA_INDUSTRIAL:
+				returnModifier = -80;
+				break;
+			case ERA_GLOBAL:
+				returnModifier = -90;
+				break;
+			case ERA_DIGITAL:
+				returnModifier = -90;
+				break;
+			}
+			break;
+		case ERA_CLASSICAL:
+			switch (techLeaderEra)
+			{
+			case ERA_CLASSICAL:
+				returnModifier = -10;
+				break;
+			case ERA_MEDIEVAL:
+				returnModifier = -20;
+				break;
+			case ERA_RENAISSANCE:
+				returnModifier = -60;
+				break;
+			case ERA_INDUSTRIAL:
+				returnModifier = -70;
+				break;
+			case ERA_GLOBAL:
+				returnModifier = -80;
+				break;
+			case ERA_DIGITAL:
+				returnModifier = -90;
+				break;
+			}
+			break;
+		case ERA_MEDIEVAL:
+			switch (techLeaderEra)
+			{
+			case ERA_MEDIEVAL:
+				returnModifier = -10;
+				break;
+			case ERA_RENAISSANCE:
+				returnModifier = -30;
+				break;
+			case ERA_INDUSTRIAL:
+				returnModifier = -65;
+				break;
+			case ERA_GLOBAL:
+				returnModifier = -75;
+				break;
+			case ERA_DIGITAL:
+				returnModifier = -90;
+				break;
+			}
+			break;
+		case ERA_RENAISSANCE:
+			switch (techLeaderEra)
+			{
+			case ERA_RENAISSANCE:
+				returnModifier = -10;
+				break;
+			case ERA_INDUSTRIAL:
+				returnModifier = -45;
+				break;
+			case ERA_GLOBAL:
+				returnModifier = -65;
+				break;
+			case ERA_DIGITAL:
+				returnModifier = -85;
+				break;
+			}
+			break;
+		case ERA_INDUSTRIAL:
+			switch (techLeaderEra)
+			{
+			case ERA_INDUSTRIAL:
+				returnModifier = -10; 
+				break;
+			case ERA_GLOBAL:
+				returnModifier = -40;
+				break;
+			case ERA_DIGITAL:
+				returnModifier = -80;
+				break;
+			}
+			break;
+		case ERA_GLOBAL:
+			switch (techLeaderEra)
+			{
+			case ERA_GLOBAL:
+				returnModifier = -20;
+				break;
+			case ERA_DIGITAL:
+				returnModifier = -40; // Tech diffusion still high due to internet
+				break;
+			}
+			break;
+		case ERA_DIGITAL:
+			switch (techLeaderEra)
+			{
+			case ERA_DIGITAL:
+				returnModifier = -25; // Tech diffusion still high due to internet
+				break;
+			}
+			break;
+		}
+
+
+		if (GET_PLAYER(getLeaderID()).getCivilizationType() == JAPAN) returnModifier -= 25;
+
+		if (returnModifier <= -90) returnModifier = -90; // Modifier locked at 90%
+
+		return returnModifier;
+
 	}
 
 	return 0;
 }
+
+int CvTeam::getShrineResearchModifier() const //Buyid UP: -5% tech cost for shrine.
+{
+	if (GET_PLAYER(getLeaderID()).getCivilizationType() != BUYIDS) return 0;
+
+	int shrineModifier = 0;
+
+	for (int religionInt = JUDAISM; religionInt != NUM_RELIGIONS; religionInt++)
+	{
+		ReligionTypes religion = static_cast<ReligionTypes>(religionInt);
+		if (GET_PLAYER(getLeaderID()).hasShrine(religion))
+		{
+			shrineModifier -= 5;
+		}
+	}
+	return shrineModifier;
+}
+
+// Aeons - Subjects grant 20% tech cost reduction for discovered tech to overlords
+int CvTeam::getSubjectsResearchModifier(TechTypes eTech) const 
+{
+	for (int iI = 0; iI < MAX_TEAMS; iI++)
+	{
+		CvTeam& kLoopTeam = GET_TEAM((TeamTypes)iI);
+		if (kLoopTeam.isAlive() && kLoopTeam.isVassal(getID()) && kLoopTeam.isHasTech(eTech))
+		{
+			// South African UP: Double tech cost reduction from techs already discovered by subjects, masters, and other vassals
+			if (GET_PLAYER(getLeaderID()).getCivilizationType() == SOUTH_AFRICA) return -40; 
+			else return -20;
+		}
+	}
+
+	return 0;
+}
+
+// Aeons - Overlords grant 20% tech cost reduction for discovered tech to subjects
+int CvTeam::getOverlordResearchModifier(TechTypes eTech) const 
+{
+	if(isAVassal())
+	{
+		if(GET_TEAM((TeamTypes)getMaster()).isHasTech(eTech))
+		{
+			// South African UP: Double tech cost reduction from techs already discovered by subjects, masters, and other vassals
+			if (GET_PLAYER(getLeaderID()).getCivilizationType() == SOUTH_AFRICA) return -40;
+			return -20;
+		}
+	}
+	return 0;
+}
+
+// Aeons - Fellow subjects grant 20% tech cost reduction if discovered
+int CvTeam::getFellowSubjectResearchModifier(TechTypes eTech) const 
+{
+	if(isAVassal())
+	{
+		if(getOverlordResearchModifier(eTech) == 0) // Can't stack with overlord bonus
+		{
+			if(GET_TEAM((TeamTypes)getMaster()).getSubjectsResearchModifier(eTech) > 0)
+			{
+				// South African UP: Double tech cost reduction from techs already discovered by subjects, masters, and other vassals
+				if (GET_PLAYER(getLeaderID()).getCivilizationType() == SOUTH_AFRICA) return -40;
+				return -20;
+			}
+		}
+	}
+
+	return 0;
+}
+
+
 
 int CvTeam::getResearchLeft(TechTypes eTech) const
 {
@@ -3597,6 +3808,7 @@ bool CvTeam::isOpenBordersTrading() const
 void CvTeam::changeOpenBordersTradingCount(int iChange)
 {
 	m_iOpenBordersTradingCount = (m_iOpenBordersTradingCount + iChange);
+
 	FAssert(getOpenBordersTradingCount() >= 0);
 }
 
@@ -4075,7 +4287,7 @@ void CvTeam::makeHasMet(TeamTypes eIndex, bool bNewDiplo)
 		}
 		else
 		{
-			if (GC.getGameINLINE().isFinalInitialized() && !(gDLL->GetWorldBuilderMode()) && getScenarioStartTurn() != GC.getGameINLINE().getGameTurn())
+			if (GC.getGameINLINE().isFinalInitialized() && !(gDLL->GetWorldBuilderMode()))
 			{
 				if (bNewDiplo)
 				{
@@ -4171,13 +4383,14 @@ bool CvTeam::isFreeTrade(TeamTypes eIndex) const
 	}
 
 	// Leoreth: Salsal Buddha effect
-	/*if (GET_PLAYER(getLeaderID()).isHasBuildingEffect(SALSAL_BUDDHA))
+	// Aeons : Former Salsal Buddha effect now belongs to Itchan Khala
+	if (GET_PLAYER(getLeaderID()).isHasBuildingEffect(ITCHAN_KHALA))
 	{
 		if (!GET_PLAYER(GET_TEAM(eIndex).getLeaderID()).isMinorCiv())
 		{
 			return true;
 		}
-	}*/
+	}
 	
 	if (isAtWar(eIndex))
 	{
@@ -4239,6 +4452,47 @@ void CvTeam::setOpenBorders(TeamTypes eIndex, bool bNewValue)
 			}
 		}
 	}
+
+	// Aeons - Update Katanga Capital
+	if (GET_PLAYER(getLeaderID()).getCivilizationType() == KATANGA)
+	{
+		int iOpenBorderCount = 0;
+		for (int iI = 0; iI < MAX_TEAMS; iI++)
+		{
+			if (isOpenBorders((TeamTypes)iI))
+			{
+				iOpenBorderCount++;
+			}
+		}
+
+
+		if (bNewValue && iOpenBorderCount == 1 && GET_PLAYER(getLeaderID()).getNumCities() > 0)
+		{
+			CvCity* pCity = GET_PLAYER(getLeaderID()).getCapitalCity();
+
+
+			for (int iI = 0; iI < GC.getNumBuildingInfos(); iI++)
+			{
+				if (pCity->isHasRealBuilding((BuildingTypes)iI))
+				{
+					pCity->changeYieldRateModifier(YIELD_FOOD, -2);
+				}
+			}
+		}
+		if (!bNewValue &&iOpenBorderCount == 0 && GET_PLAYER(getLeaderID()).getNumCities() > 0)
+		{
+			CvCity* pCity = GET_PLAYER(getLeaderID()).getCapitalCity();
+
+			for (int iI = 0; iI < GC.getNumBuildingInfos(); iI++)
+			{
+				if (pCity->isHasRealBuilding((BuildingTypes)iI))
+				{
+					pCity->changeYieldRateModifier(YIELD_FOOD, 2);
+				}
+			}
+		}
+	}
+
 }
 
 
@@ -4366,6 +4620,7 @@ void CvTeam::setVassal(TeamTypes eIndex, bool bNewValue, bool bCapitulated)
 	if (isMinorCiv() || isBarbarian())
 		return;
 	//Rhye - end
+
 
 	if (isVassal(eIndex) != bNewValue)
 	{
@@ -4556,7 +4811,7 @@ void CvTeam::setVassal(TeamTypes eIndex, bool bNewValue, bool bCapitulated)
 			setMasterPower(GET_TEAM(eIndex).getTotalLand());
 			setVassalPower(getTotalLand(false));
 
-			if (GC.getGameINLINE().isFinalInitialized() && !(gDLL->GetWorldBuilderMode()))
+			if (GC.getGameINLINE().isFinalInitialized() && !(gDLL->GetWorldBuilderMode()) && getScenarioStartTurn() != GC.getGameINLINE().getGameTurn())
 			{
 				CvWString szReplayMessage;
 				
@@ -5329,8 +5584,7 @@ void CvTeam::setResearchProgress(TechTypes eIndex, int iNewValue, PlayerTypes eP
 
 		if (getResearchProgress(eIndex) >= getResearchCost(eIndex))
 		{
-			//int iOverflow = (100 * (getResearchProgress(eIndex) - getResearchCost(eIndex))) / std::max(1, GET_PLAYER(ePlayer).calculateResearchModifier(eIndex));
-			int iOverflow = getResearchProgress(eIndex) - getResearchCost(eIndex);
+			int iOverflow = (100 * (getResearchProgress(eIndex) - getResearchCost(eIndex))) / std::max(1, GET_PLAYER(ePlayer).calculateResearchModifier(eIndex));
 			GET_PLAYER(ePlayer).changeOverflowResearch(iOverflow);
 			setHasTech(eIndex, true, ePlayer, true, true);
 			//Rhye
@@ -5884,7 +6138,15 @@ void CvTeam::setHasTech(TechTypes eIndex, bool bNewValue, PlayerTypes ePlayer, b
 				if (GET_PLAYER(ePlayer).getFreeTechChosen() != eIndex)
 				{
 					iFreeTechs += 1;
-					szBuffer = gDLL->getText("TXT_KEY_BABYLONIAN_UP");
+
+					if (GET_PLAYER(getLeaderID()).getCivilizationType() == FUNJ)
+					{
+						szBuffer = gDLL->getText("TXT_KEY_FUNJ_UP");
+					}
+					else
+					{
+						szBuffer = gDLL->getText("TXT_KEY_BABYLONIAN_UP");
+					}
 					GET_PLAYER(ePlayer).changeFreeTechsOnDiscovery(-1);
 				}
 			}
@@ -6899,7 +7161,6 @@ void CvTeam::read(FDataStreamBase* pStream)
 	pStream->Read(&m_iTotalTechValue); // Leoreth
 	pStream->Read(&m_iSatelliteInterceptCount); // Leoreth
 	pStream->Read(&m_iSatelliteAttackCount); // Leoreth
-	pStream->Read(&m_iTechDifferenceModifier); // Leoreth
 
 	pStream->Read(&m_bMapCentering);
 	pStream->Read(&m_bCapitulated);
@@ -7015,7 +7276,6 @@ void CvTeam::write(FDataStreamBase* pStream)
 	pStream->Write(m_iTotalTechValue); // Leoreth
 	pStream->Write(m_iSatelliteInterceptCount); // Leoreth
 	pStream->Write(m_iSatelliteAttackCount); // Leoreth
-	pStream->Write(m_iTechDifferenceModifier); // Leoreth
 
 	pStream->Write(m_bMapCentering);
 	pStream->Write(m_bCapitulated);

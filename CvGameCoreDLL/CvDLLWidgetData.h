@@ -1,3 +1,4 @@
+
 #pragma once
 
 #ifndef _CVDLLWIDGETDATA_H_
@@ -254,6 +255,7 @@ public:
 	void doPediaRouteJump(CvWidgetDataStruct &widgetDataStruct);
 
 	void parseWonderLimitHelp(CvWidgetDataStruct &widgetDataStruct, CvWStringBuffer &szBuffer);
+	void parseImmigrationDesireHelp(CvWidgetDataStruct &widgetDataStruct, CvWStringBuffer &szBuffer); // Aeons
 	void parseSatelliteLimitHelp(CvWidgetDataStruct& widgetDataStruct, CvWStringBuffer& szBuffer);
 	void parseFirstDiscoveredHelp(CvWidgetDataStruct& widgetDataStruct, CvWStringBuffer& szBuffer);
 

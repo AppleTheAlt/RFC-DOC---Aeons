@@ -109,6 +109,7 @@ void CvDeal::addTrades(CLinkList<TradeData>* pFirstList, CLinkList<TradeData>* p
 {
 	CLLNode<TradeData>* pNode;
 	bool bAlliance;
+	bool bDefensivePact; // Aeons
 	bool bSave;
 	int iValue;
 
@@ -281,8 +282,10 @@ void CvDeal::addTrades(CLinkList<TradeData>* pFirstList, CLinkList<TradeData>* p
 			case TRADE_CITIES:
 				bFirstTrade = true;
 				break;
+			default:
 			case TRADE_SURRENDER:
 				bFirstSurrender = true;
+				break;
 				break;
 			}
 		}
@@ -325,6 +328,7 @@ void CvDeal::addTrades(CLinkList<TradeData>* pFirstList, CLinkList<TradeData>* p
 			case TRADE_CITIES:
 				bSecondTrade = true;
 				break;
+			default:
 			case TRADE_SURRENDER:
 				bSecondSurrender = true;
 				break;
@@ -376,6 +380,25 @@ void CvDeal::addTrades(CLinkList<TradeData>* pFirstList, CLinkList<TradeData>* p
 		{
 			CvEventReporter::getInstance().tribute(getFirstPlayer(), getSecondPlayer());
 		}
+	}
+
+	// Aeons - Track Defensive pact for Adal UHV
+	bDefensivePact = false;
+
+	if (pFirstList != NULL)
+	{
+		for (pNode = pFirstList->head(); pNode; pNode = pFirstList->next(pNode))
+		{
+			if (pNode->m_data.m_eItemType == TRADE_DEFENSIVE_PACT)
+			{
+				bDefensivePact = true;
+			}
+		}
+	}
+
+	if (bDefensivePact)
+	{
+		CvEventReporter::getInstance().defensivePact(getSecondPlayer(), getFirstPlayer());
 	}
 
 	bAlliance = false;
@@ -1007,6 +1030,10 @@ bool CvDeal::startTrade(TradeData trade, PlayerTypes eFromPlayer, PlayerTypes eT
 		}
 		break;
 
+	case TRADE_FULLANNEX:
+		CvEventReporter::getInstance().playerIntegrate(eFromPlayer, eToPlayer);
+		break;
+
 	case TRADE_OPEN_BORDERS:
 		if (trade.m_iData == 0)
 		{
@@ -1066,6 +1093,7 @@ void CvDeal::endTrade(TradeData trade, PlayerTypes eFromPlayer, PlayerTypes eToP
 	case TRADE_CITIES:
 	case TRADE_GOLD:
 	case TRADE_SLAVE: // edead
+	case TRADE_FULLANNEX:
 		FAssert(false);
 		break;
 
@@ -1267,6 +1295,7 @@ bool CvDeal::isAnnual(TradeableItems eItem)
 	case TRADE_OPEN_BORDERS:
 	case TRADE_DEFENSIVE_PACT:
 	case TRADE_PERMANENT_ALLIANCE:
+	case TRADE_FULLANNEX:
 		return true;
 		break;
 	}

@@ -1255,6 +1255,7 @@ void CvPlot::verifyUnitValidPlot()
 				{
 					if (!(pLoopUnit->isCombat()))
 					{
+
 						if (pLoopUnit->getTeam() != getTeam() && (getTeam() == NO_TEAM || !GET_TEAM(getTeam()).isVassal(pLoopUnit->getTeam())))
 						{
 							if (isVisibleEnemyUnit(pLoopUnit))
@@ -1776,6 +1777,48 @@ bool CvPlot::isFreshWater() const
 	return false;
 }
 
+bool CvPlot::nextToOasisLake() const
+{
+	CvPlot* pLoopPlot;
+	int iDX, iDY;
+
+	if (isWater())
+	{
+		return false;
+	}
+
+	if (isImpassable())
+	{
+		return false;
+	}
+
+	for (iDX = -1; iDX <= 1; iDX++)
+	{
+		for (iDY = -1; iDY <= 1; iDY++)
+		{
+			pLoopPlot = plotXY(getX_INLINE(), getY_INLINE(), iDX, iDY);
+
+			if (pLoopPlot != NULL)
+			{
+				// Leoreth: salt lakes
+				if (pLoopPlot->isLake() && !GC.getTerrainInfo(pLoopPlot->getTerrainType()).isSaline())
+				{
+					return true;
+				}
+
+				if (pLoopPlot->getFeatureType() != NO_FEATURE)
+				{
+					if (GC.getFeatureInfo(pLoopPlot->getFeatureType()).isAddsFreshWater())
+					{
+						return true;
+					}
+				}
+			}
+		}
+	}
+
+	return false;
+}
 
 bool CvPlot::isPotentialIrrigation() const
 {
@@ -2694,22 +2737,29 @@ bool CvPlot::canBuild(BuildTypes eBuild, PlayerTypes ePlayer, bool bTestVisible)
 	RouteTypes eRoute;
 	bool bValid;
 
+	eImprovement = ((ImprovementTypes)(GC.getBuildInfo(eBuild).getImprovement()));
+
 	if(GC.getUSE_CAN_BUILD_CALLBACK())
 	{
-		CyArgsList argsList;
-		argsList.add(getX_INLINE());
-		argsList.add(getY_INLINE());
-		argsList.add((int)eBuild);
-		argsList.add((int)ePlayer);
-		long lResult=0;
-		gDLL->getPythonIFace()->callFunction(PYGameModule, "canBuild", argsList.makeFunctionArgs(), &lResult);
-		if (lResult >= 1)
+		// Aeons - Madagascar UP: No tech prereq for Nature Reserves
+		if (GET_PLAYER(getOwnerINLINE()).getCivilizationType() != MADAGASCAR || eImprovement != IMPROVEMENT_NATURE_RESERVE)
 		{
-			return true;
-		}
-		else if (lResult == 0)
-		{
-			return false;
+
+			CyArgsList argsList;
+			argsList.add(getX_INLINE());
+			argsList.add(getY_INLINE());
+			argsList.add((int)eBuild);
+			argsList.add((int)ePlayer);
+			long lResult = 0;
+			gDLL->getPythonIFace()->callFunction(PYGameModule, "canBuild", argsList.makeFunctionArgs(), &lResult);
+			if (lResult >= 1)
+			{
+				return true;
+			}
+			else if (lResult == 0)
+			{
+				return false;
+			}
 		}
 	}
 
@@ -2719,8 +2769,6 @@ bool CvPlot::canBuild(BuildTypes eBuild, PlayerTypes ePlayer, bool bTestVisible)
 	}
 
 	bValid = false;
-
-	eImprovement = ((ImprovementTypes)(GC.getBuildInfo(eBuild).getImprovement()));
 
 	if (eImprovement != NO_IMPROVEMENT)
 	{
@@ -2805,6 +2853,7 @@ bool CvPlot::canBuild(BuildTypes eBuild, PlayerTypes ePlayer, bool bTestVisible)
 
 	if (eRoute != NO_ROUTE)
 	{
+
 		// Leoreth: cannot build routes on Marsh
 		if (getFeatureType() == FEATURE_MARSH)
 		{
@@ -3255,6 +3304,7 @@ int CvPlot::movementCost(const CvUnit* pUnit, const CvPlot* pFromPlot) const
 			}
 		}
 	}
+
 
 	if (!isValidDomainForAction(*pUnit))
 	{
@@ -4226,7 +4276,7 @@ bool CvPlot::isTradeNetwork(TeamTypes eTeam) const
 		return false;
 	}
 
-	if (atWar(eTeam, getTeam()) /*&& !GET_PLAYER(GET_TEAM(eTeam).getLeaderID()).isHasBuildingEffect(SALSAL_BUDDHA) && (getOwner() == NO_PLAYER || !GET_PLAYER(getOwner()).isHasBuildingEffect((BuildingTypes)SALSAL_BUDDHA))*/)
+	if (atWar(eTeam, getTeam()) && !GET_PLAYER(GET_TEAM(eTeam).getLeaderID()).isHasBuildingEffect(ITCHAN_KHALA) && (getOwner() == NO_PLAYER || !GET_PLAYER(getOwner()).isHasBuildingEffect((BuildingTypes)ITCHAN_KHALA)))
 	{
 		return false;
 	}
@@ -4257,7 +4307,7 @@ bool CvPlot::isTradeNetworkConnected(const CvPlot* pPlot, TeamTypes eTeam) const
 {
 	FAssertMsg(eTeam != NO_TEAM, "eTeam is not assigned a valid value");
 
-	if ((atWar(eTeam, getTeam()) || atWar(eTeam, pPlot->getTeam())) /*&& !GET_PLAYER(GET_TEAM(eTeam).getLeaderID()).isHasBuildingEffect(SALSAL_BUDDHA) && (getOwner() == NO_PLAYER || !GET_PLAYER(getOwner()).isHasBuildingEffect((BuildingTypes)SALSAL_BUDDHA))*/)
+	if ((atWar(eTeam, getTeam()) || atWar(eTeam, pPlot->getTeam())) && !GET_PLAYER(GET_TEAM(eTeam).getLeaderID()).isHasBuildingEffect(ITCHAN_KHALA) && (getOwner() == NO_PLAYER || !GET_PLAYER(getOwner()).isHasBuildingEffect((BuildingTypes)ITCHAN_KHALA)))
 	{
 		return false;
 	}
@@ -5952,10 +6002,10 @@ int CvPlot::determineVariety(FeatureTypes eFeature) const
 			case REGION_POLAND:
 			case REGION_BALTICS:
 			case REGION_SCANDINAVIA:
-			case REGION_RUSSIA:
 			case REGION_RUTHENIA:
-			case REGION_VOLGA:
+			case REGION_RUSSIA:
 			case REGION_URALS:
+			case REGION_VOLGA:
 			case REGION_MANCHURIA:
 			case REGION_AMUR:
 			case REGION_SIBERIA:
@@ -6239,13 +6289,11 @@ void CvPlot::setBonusType(BonusTypes eNewValue)
 	}
 }
 
-
 // Leoreth
 BonusTypes CvPlot::getBaseBonusVarietyType() const
 {
 	return (BonusTypes)m_eBonusVarietyType;
 }
-
 
 // Leoreth
 BonusTypes CvPlot::getBonusVarietyType(TeamTypes eTeam) const
@@ -6266,6 +6314,7 @@ void CvPlot::setBonusVarietyType(BonusTypes eNewValue)
 	{
 		return;
 	}
+	
 
 	if (getBonusVarietyType() != eNewValue)
 	{
@@ -6882,6 +6931,35 @@ int CvPlot::calculateNatureYield(YieldTypes eYield, TeamTypes eTeam, bool bIgnor
 		iYield += ((bIgnoreFeature || (getFeatureType() == NO_FEATURE)) ? GC.getTerrainInfo(getTerrainType()).getHillsYieldChange(eYield) : GC.getFeatureInfo(getFeatureType()).getHillsYieldChange(eYield));
 	}
 
+	//Minoa UP : 1 production from water tiles.
+	if (getOwnerINLINE() != NO_PLAYER && GET_PLAYER(getOwnerINLINE()).getCivilizationType() == MINOA)
+	{
+		if (isWater())
+		{
+			if (eYield == YIELD_PRODUCTION)
+			{
+				iYield += 1;
+			}
+		}
+	}
+
+	//Somali UP : -1 food and commerce from water tiles.
+	if (getOwnerINLINE() != NO_PLAYER && GET_PLAYER(getOwnerINLINE()).getCivilizationType() == SOMALIA)
+	{
+		if (isWater())
+		{
+			if (eYield == YIELD_FOOD || eYield == YIELD_COMMERCE)
+			{
+				if (iYield > 0) // In case there's a water terrain that provides 0 food, which could make this crash??
+				{
+					iYield -= 1;
+				}
+			}
+		}
+	}
+
+
+
 	if (!bIgnoreFeature)
 	{
 		if (getFeatureType() != NO_FEATURE)
@@ -6899,6 +6977,52 @@ int CvPlot::calculateNatureYield(YieldTypes eYield, TeamTypes eTeam, bool bIgnor
 					case FEATURE_RAINFOREST:
 					case FEATURE_MARSH:
 						iYield += 1;
+						break;
+					}
+				}
+			}
+;
+
+			// Germanian UP: +1 production from forests when city population is less than 4.
+			if (getOwnerINLINE() != NO_PLAYER && GET_PLAYER(getOwnerINLINE()).getCivilizationType() == GERMANIA)
+			{
+				if (eYield == YIELD_PRODUCTION)
+				{
+					switch (getFeatureType())
+					{
+					case FEATURE_FOREST:
+						CvCity* pCity;
+						pCity = getWorkingCity();
+						if (pCity != NULL)
+						{
+							if (pCity->getPopulation() < 4)
+							{
+								iYield += 1;
+							}
+						}
+						break;
+					}
+				}
+			}
+
+			//// Prambanan effect: +1 production on islands
+			//if (eTeam != NO_TEAM && GET_PLAYER(GET_TEAM(eTeam).getLeaderID()).isHasBuildingEffect((BuildingTypes)PRAMBANAN))
+			//{
+			//	if (isWater() && eYield == YIELD_PRODUCTION && GC.getFeatureInfo(getFeatureType()).getYieldChange(eYield) > 0)
+			//	{
+			//		iYield += 1;
+			//	}
+			//}
+
+			// Aeons - Knossos Palace effect: +2 food on islands
+			if (eTeam != NO_TEAM && GET_PLAYER(GET_TEAM(eTeam).getLeaderID()).isHasBuildingEffect((BuildingTypes)KNOSSOS_PALACE))
+			{
+				if (eYield == YIELD_FOOD)
+				{
+					switch (getFeatureType())
+					{
+					case FEATURE_ISLANDS:
+						iYield += 2;
 						break;
 					}
 				}
@@ -7019,6 +7143,7 @@ int CvPlot::calculateImprovementYieldChange(ImprovementTypes eImprovement, Yield
 		}
 	}
 
+
 	// Leoreth: Moorish UP: +1 food from Orchards
 	if (ePlayer != NO_PLAYER && GET_PLAYER(ePlayer).getCivilizationType() == MOORS)
 	{
@@ -7027,6 +7152,20 @@ int CvPlot::calculateImprovementYieldChange(ImprovementTypes eImprovement, Yield
 			iYield += 1;
 		}
 	}
+
+	// Aeons: Madagascar UP: +1 food, +1 commerce from Nature Reserve
+	if (ePlayer != NO_PLAYER && GET_PLAYER(ePlayer).getCivilizationType() == MADAGASCAR)
+	{
+		if (eYield == YIELD_FOOD && eImprovement == IMPROVEMENT_NATURE_RESERVE)
+		{
+			iYield += 1;
+		}
+		if (eYield == YIELD_COMMERCE && eImprovement == IMPROVEMENT_NATURE_RESERVE)
+		{
+			iYield += 1;
+		}
+	}
+
 
 	// Leoreth: Javanese UP: double yield from food improvements on islands
 	if (ePlayer != NO_PLAYER && GET_PLAYER(ePlayer).getCivilizationType() == JAVA && !isWater() && area()->getNumTiles() <= 30)
@@ -7278,6 +7417,74 @@ int CvPlot::calculateYield(YieldTypes eYield, bool bDisplay) const
 			}
 		}
 
+		// Aeons: Royal Kraal Effect
+		if (GET_PLAYER(ePlayer).isHasBuildingEffect(ROYAL_KRAAL))
+		{
+			if (getTerrainType() == TERRAIN_PLAINS && (eYield == YIELD_FOOD))
+			{
+				iYield += 1;
+			}
+			if (getTerrainType() == TERRAIN_SAVANNA && (eYield == YIELD_PRODUCTION || eYield == YIELD_FOOD))
+			{
+				iYield += 1;
+			}
+		}
+
+		// Aeons: Ait Benhaddou effect
+		if (GET_PLAYER(ePlayer).isHasBuildingEffect(AIT_BENHADDOU))
+		{
+			if (isHills() && (getTerrainType() == TERRAIN_DESERT || getTerrainType() == TERRAIN_SEMIDESERT) && (eYield == YIELD_PRODUCTION || eYield == YIELD_FOOD))
+			{
+				iYield += 1;
+			}
+		}
+
+		// Aeons: Yemen UP: +1 food from desert and semidesert.
+		if (eCivilization == YEMEN)
+		{
+			if ((getTerrainType() == TERRAIN_DESERT || getTerrainType() == TERRAIN_SEMIDESERT) && eYield == YIELD_FOOD)
+			{
+				iYield += 1;
+			}
+		}
+
+		// Zimbabwe UP: Cities founded on resources provide primary resource yield onto neighbouring tiles.
+		if (eCivilization == ZIMBABWE && getWorkingCity() != NULL)
+		{
+			if (getWorkingCity()->plot()->getBonusType() != NO_BONUS && getWorkingCity()->plot()->getBonusType() != NULL)
+			{
+				int x = getX();
+				int y = getY();
+				int wX = getWorkingCity()->plot()->getX();
+				int wY = getWorkingCity()->plot()->getY();
+
+				if (!isCity() && x - wX<2 && x - wX>-2 && y - wY<2 && y - wY>-2) // First ring check - this is probably not how its meant to be done but idc
+				{
+					if (GC.getBonusInfo(getWorkingCity()->plot()->getBonusType()).getYieldChange(eYield) != NULL)
+					{
+						BonusTypes eBonus = getWorkingCity()->plot()->getBonusType();
+						if (GC.getBonusInfo(eBonus).getYieldChange(eYield) > 0)
+						{
+							iYield += GC.getBonusInfo(eBonus).getYieldChange(eYield);
+						}
+					}
+				}
+			}
+		}
+
+		// Aeons: Ghana UP: 200 year swings between +1 commerce and food from deserts/semideserts and no bonus
+		if (eCivilization == GHANA)
+		{
+			if (isRiver())
+			{
+				if (((getTurnYearForGame(GC.getGame().getGameTurn(), -3000, GC.getGame().getCalendar(), GC.getGame().getGameSpeedType()) + 100)/200) % 2 < 1)
+				{
+					if(eYield == YIELD_FOOD || eYield == YIELD_COMMERCE) iYield += 1;
+				}
+
+			}
+		}
+
 		// Leoreth: Ethiopian UP: +1 food on hill tiles that yield at least one food
 		if (eCivilization == ETHIOPIA)
 		{
@@ -7290,12 +7497,28 @@ int CvPlot::calculateYield(YieldTypes eYield, bool bDisplay) const
 			}
 		}
 
+
 		// Leoreth: Ruthenian UP: +1 commerce on unimproved land tiles in your trade network
 		if (eCivilization == RUS)
 		{
 			if (eYield == YIELD_COMMERCE)
 			{
 				if (!isWater() && !isCity() && !isImpassable() && getImprovementType() == NO_IMPROVEMENT)
+				{
+					if (getOwnerINLINE() == ePlayer && isBonusNetwork(getTeam()))
+					{
+						iYield += 1;
+					}
+				}
+			}
+		}
+
+		//  Parthian UP: +1 commerce from hills in your trade network.
+		if (eCivilization == PARTHIA)
+		{
+			if (eYield == YIELD_COMMERCE)
+			{
+				if (isHills())
 				{
 					if (getOwnerINLINE() == ePlayer && isBonusNetwork(getTeam()))
 					{
@@ -7891,6 +8114,9 @@ void CvPlot::updatePlotGroup()
 
 void CvPlot::updatePlotGroup(PlayerTypes ePlayer, bool bRecalculate)
 {
+	if (!GC.getGameINLINE().isUpdatePlotGroups())
+		return;
+
 	PROFILE("CvPlot::updatePlotGroup(Player)");
 
 	CvPlotGroup* pPlotGroup;
@@ -10883,6 +11109,8 @@ bool CvPlot::canTrigger(EventTriggerTypes eTrigger, PlayerTypes ePlayer) const
 		}
 	}
 
+
+
 	if (kTrigger.getNumFeaturesRequired() > 0)
 	{
 		bool bFoundValid = false;
@@ -11916,24 +12144,28 @@ bool CvPlot::canUseSlave(PlayerTypes ePlayer) const
 		return false;
 	}
 
-	if (!GET_PLAYER(ePlayer).canUseSlaves())
+	//Aeons - Sub-Saharan Africans can't use slaves so that they'll trade them. - Exception, Stonetown Fort.
+	if (!GET_PLAYER(ePlayer).isHasBuildingEffect((BuildingTypes)STONETOWN_FORT))
 	{
-		return false;
-	}
-
-	switch (getRegionGroup())
-	{
-	case REGION_GROUP_NORTH_AMERICA:
-	case REGION_GROUP_SOUTH_AMERICA:
-		return true;
-	case REGION_GROUP_SUB_SAHARAN_AFRICA:
-		if (GET_PLAYER(ePlayer).getCapitalCity()->getRegionGroup() != REGION_GROUP_SUB_SAHARAN_AFRICA)
+		switch (getRegionGroup())
 		{
-			return true;
+		case REGION_GROUP_SUB_SAHARAN_AFRICA:
+			return false;
 		}
 	}
 
-	return false;
+	return true;
+	//switch (getRegionGroup())
+	//{
+	//case REGION_GROUP_NORTH_AMERICA:
+	//case REGION_GROUP_SOUTH_AMERICA:
+	//	return true;
+	//case REGION_GROUP_SUB_SAHARAN_AFRICA:
+	//	if (GET_PLAYER(ePlayer).getCapitalCity()->getRegionGroup() != REGION_GROUP_SUB_SAHARAN_AFRICA)
+	//	{
+	//		return true;
+	//	}
+	//}
 }
 
 // Leoreth
@@ -11974,6 +12206,21 @@ bool CvPlot::canSpread(ReligionTypes eReligion) const
 bool CvPlot::isPlains() const
 {
 	return isFlatlands() && (getFeatureType() == NO_FEATURE || GC.getFeatureInfo(getFeatureType()).getDefenseModifier() <= 0) && !isCity(true);
+}
+
+//Aeons
+bool CvPlot::isUnity(UnitClassTypes unitClass, int iRequired) const
+{
+	int iCount = 0;
+	for (int iI = 0; iI < getNumUnits(); iI++)
+	{
+		if (getUnitByIndex(iI)->getUnitClassType() == unitClass)
+		{
+			iCount++;
+		}
+	}
+	if (iCount >= iRequired) return true;
+	else return false;
 }
 
 CivilizationTypes CvPlot::getCultureConversionCivilization() const
@@ -12191,9 +12438,9 @@ int CvPlot::getRegionGroupForRegion(int iRegion)
 	case REGION_SCANDINAVIA:
 	case REGION_RUSSIA:
 	case REGION_RUTHENIA:
-	case REGION_VOLGA:
 	case REGION_PONTIC_STEPPE:
 	case REGION_URALS:
+	case REGION_VOLGA:
 	case REGION_EUROPEAN_ARCTIC:
 		return REGION_GROUP_EUROPE;
 	case REGION_ANATOLIA:

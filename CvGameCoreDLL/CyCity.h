@@ -134,6 +134,7 @@ public:
 	int getLargestCityHappiness();
 	int unhappyLevel(int iExtra);
 	int happyLevel();
+	int immigrationDesire(bool immigration);		//Aeons
 	int angryPopulation(int iExtra);
 	int totalFreeSpecialists();
 	int extraPopulation();
@@ -303,6 +304,7 @@ public:
 	void changeExtraTradeRoutes(int iChange);
 	int getTradeRouteModifier();
 	int getForeignTradeRouteModifier();
+	int getDifferentReligionTradeRouteModifier();
 	int getBuildingDefense();
 // BUG - Building Additional Defense - start
 	int getAdditionalDefenseByBuilding(int /*BuildingTypes*/ eBuilding);
@@ -559,7 +561,6 @@ public:
 	bool AI_isEmphasize(int iEmphasizeType);
 	int AI_countBestBuilds(CyArea* pArea);
 	int AI_cityValue();
-	void AI_updateAssignWork(); // Leoreth
 
 	std::string getScriptData() const;
 	void setScriptData(std::string szNewValue);
@@ -612,6 +613,7 @@ public:
 	int getCorporationBadHappiness();
 	int getCorporationCount();
 	void doPlotCulture(bool bUpdate, int ePlayer, int iCultureRate, bool bOwned);
+	void AI_updateAssignWork();
 	int getHurryPercentAnger();
 	int getConscriptPercentAnger();
 	bool canBeSelected();

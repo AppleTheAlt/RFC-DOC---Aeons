@@ -93,6 +93,7 @@ public:
 
 	DllExport bool isLake() const;																															// Exposed to Python
 	bool isFreshWater() const;																												// Exposed to Python
+	bool nextToOasisLake() const;																												// Aeons - Exposed to Python??
 	bool isPotentialIrrigation() const;																													// Exposed to Python
 	bool canHavePotentialIrrigation() const;																										// Exposed to Python
 	DllExport bool isIrrigationAvailable(bool bIgnoreSelf = false) const;												// Exposed to Python
@@ -306,6 +307,7 @@ public:
 	void setPlotType(PlotTypes eNewValue, bool bRecalculate = true, bool bRebuildGraphics = true);			// Exposed to Python
 
 	bool isPlains() const; // Leoreth
+	bool isUnity(UnitClassTypes unitClass, int iRequired) const; // Aeons
 
 	DllExport TerrainTypes getTerrainType() const;																																	// Exposed to Python
 	void setTerrainType(TerrainTypes eNewValue, bool bRecalculate = true, bool bRebuildGraphics = true);	// Exposed to Python

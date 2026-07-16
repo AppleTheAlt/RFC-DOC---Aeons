@@ -83,6 +83,7 @@ public:
 // BUG - Project Started Event - end
 // BUG - Process Started Event - start
 	void cityBuildingProcess(CvCity* pCity, ProcessTypes eProcessType);
+	void goldGranted(PlayerTypes eFrom, PlayerTypes eTo, int iGold); // Leoreth
 // BUG - Process Started Event - end
 	void cityRename(CvCity* pCity);
 	void cityHurry(CvCity* pCity, HurryTypes eHurry);
@@ -146,7 +147,9 @@ public:
 	void vassalState(TeamTypes eMaster, TeamTypes eVassal, bool bVassal, bool bCapitulated);
 
 	void tradeMission(UnitTypes unitID, PlayerTypes ePlayer, int iX, int iY, int iGold); // Leoreth
+	void diplomaticMission(UnitTypes unitID, PlayerTypes ePlayer, int iX, int iY); // Aeons
 	void playerSlaveTrade(PlayerTypes ePlayer, int iGold); // Leoreth
+	void playerIntegrate(PlayerTypes ePlayer, PlayerTypes ePlayer2); // Aeons
 	void releasedCivilization(PlayerTypes ePlayer, CivilizationTypes eReleasedCivilization); // Leoreth
 	void blockade(PlayerTypes ePlayer, CvCity* pCity, int iGold); // Leoreth
 	void peaceBrokered(PlayerTypes eBroker, PlayerTypes ePlayer1, PlayerTypes ePlayer2); // Leoreth
@@ -159,10 +162,10 @@ public:
 	void playerSwitch(PlayerTypes eOldPlayer, PlayerTypes eNewPlayer); // Leoreth
 	void techTraded(PlayerTypes eFrom, PlayerTypes eTo, TechTypes eTech); // Leoreth
 	void tribute(PlayerTypes eFrom, PlayerTypes eTo); // Leoreth
+	void defensivePact(PlayerTypes eFrom, PlayerTypes eTo); // Aeons
 	void globalWarming(int iGlobalWarmingValue, int iGlobalWarmingDefense); // Leoreth
 	void globalWarmingEffect(CvPlot* pPlot, bool bChanged, TerrainTypes ePreviousTerrain, TerrainTypes eNewTerrain, FeatureTypes ePreviousFeature); // Leoreth
 	void buildingProcessed(CvCity* pCity, BuildingTypes eBuilding, int iChange); // Leoreth
-	void goldGranted(PlayerTypes eFrom, PlayerTypes eTo, int iGold); // Leoreth
 
 	DllExport void preSave();
 

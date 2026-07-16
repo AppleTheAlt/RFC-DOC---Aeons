@@ -62,6 +62,7 @@ public:
 	int countNumBonusPlots(BonusTypes eBonus = NO_BONUS) const; // 1SDAN																		// Exposed to Python
 	int countNumWaterPlots() const;																					// Exposed to Python
 	int countNumRiverPlots() const;																					// Exposed to Python
+	int countNumDesertPlots() const;																				// Aeons - Exposed to Python??																		
 
 	int findPopulationRank() const;																					// Exposed to Python
 	int findBaseYieldRateRank(YieldTypes eYield) const;											// Exposed to Python
@@ -197,7 +198,8 @@ public:
 	int getVassalHappiness() const;																		// Exposed to Python
 	int getVassalUnhappiness() const;																		// Exposed to Python
 	int unhappyLevel(int iExtra = 0) const;																	// Exposed to Python 
-	int happyLevel() const;																				// Exposed to Python				
+	int happyLevel() const;																				// Exposed to Python	
+	int immigrationDesire(bool immigration) const; //Aeons							// Exposed to Python
 	int angryPopulation(int iExtra = 0) const;										// Exposed to Python
 
 	int visiblePopulation() const;
@@ -528,6 +530,12 @@ public:
 	int getForeignTradeRouteModifier() const;																		// Exposed to Python
 	void changeForeignTradeRouteModifier(int iChange);
 
+	int getDifferentReligionTradeRouteModifier() const;																		// Exposed to Python
+	void changeDifferentReligionTradeRouteModifier(int iChange);
+
+	int getImmigrationDesireBuildings() const;	
+	void changeImmigrationDesireBuildings(int iChange);	
+
 	int getBuildingDefense() const;																				// Exposed to Python
 	void changeBuildingDefense(int iChange);
 // BUG - Building Additional Defense - start
@@ -719,9 +727,13 @@ public:
 // BUG - Trade Totals - end
 	void setTradeYield(YieldTypes eIndex, int iNewValue);
 
-	int getExtraSpecialistYield(YieldTypes eIndex) const;																				// Exposed to Python
-	int getExtraSpecialistYield(YieldTypes eIndex, SpecialistTypes eSpecialist) const;					// Exposed to Python
+	int getExtraSpecialistYield(YieldTypes eIndex) const;
+	int getExtraSpecialistHappy() const; // Aeons																			// Exposed to Python
+	int getCoastalExtraSpecialistYield(YieldTypes eIndex) const; // Aeons
+	int getExtraSpecialistYield(YieldTypes eIndex, SpecialistTypes eSpecialist) const;	// Exposed to Python
+	int getExtraSpecialistHappy(SpecialistTypes eSpecialist) const;	// Aeons
 	void updateExtraSpecialistYield(YieldTypes eYield);
+	void updateExtraSpecialistHappy(); // Aeons
 	void updateExtraSpecialistYield();
 
 	int getCommerceRate(CommerceTypes eIndex) const;									// Exposed to Python
@@ -795,6 +807,9 @@ public:
 	// Leoreth
 	int getCultureCommerceRateModifier(CommerceTypes eIndex) const;
 	void changeCultureCommerceRateModifier(CommerceTypes eIndex, int iChange);
+	// Aeons
+	int getCultureYieldRateModifier(YieldTypes eIndex) const;
+	void changeCultureYieldRateModifier(YieldTypes eIndex, int iChange);
 
 	int getCommerceHappinessPer(CommerceTypes eIndex) const;										// Exposed to Python
 	int getCommerceHappinessByType(CommerceTypes eIndex) const;									// Exposed to Python
@@ -1352,6 +1367,8 @@ protected:
 	int m_iExtraTradeRoutes;
 	int m_iTradeRouteModifier;
 	int m_iForeignTradeRouteModifier;
+	int m_iDifferentReligionTradeRouteModifier; // Aeons
+	int m_iImmigrationDesireBuildings; // Aeons
 	int m_iBuildingDefense;
 	int m_iBuildingBombardDefense;
 	int m_iFreeExperience;
@@ -1447,6 +1464,7 @@ protected:
 	int* m_aiTradeYield;
 	int* m_aiCorporationYield;
 	int* m_aiExtraSpecialistYield;
+	int m_aiExtraSpecialistHappy; // Aeons
 	int* m_aiHappinessYield; // Leoreth
 	int* m_aiCommerceRate;
 	int* m_aiProductionToCommerceModifier;
@@ -1457,6 +1475,7 @@ protected:
 	int* m_aiCommerceRateModifier;
 	int* m_aiPowerCommerceRateModifier; // Leoreth
 	int* m_aiCultureCommerceRateModifier; // Leoreth
+	int* m_aiCultureYieldRateModifier; // Aeons
 	int* m_aiCommerceHappinessPer;
 	int* m_aiDomainFreeExperience;
 	int* m_aiDomainProductionModifier;

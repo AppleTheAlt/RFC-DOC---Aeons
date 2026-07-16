@@ -121,6 +121,7 @@ public:
 	void updateFeatureHappiness();
 	void updateReligionHappiness();
 	void updateExtraSpecialistYield();
+	void updateExtraSpecialistHappy(); // Aeons
 	void updateCommerce(CommerceTypes eCommerce);
 	void updateCommerce();
 	void updateBuildingCommerce();
@@ -254,7 +255,6 @@ public:
 	int calculateBaseNetGold() const;
 	int calculateBaseNetResearch(TechTypes eTech = NO_TECH) const;   // Exposed to Python
 	int calculateResearchModifier(TechTypes eTech) const;   // Exposed to Python
-	int calculateTransmissionResearch(TechTypes eTech) const;
 	int calculateGoldRate() const;																																				// Exposed to Python
 	int calculateResearchRate(TechTypes eTech = NO_TECH) const;																						// Exposed to Python
 	int calculateTotalCommerce() const;
@@ -265,8 +265,8 @@ public:
 	DllExport TechTypes getCurrentResearch() const;																												// Exposed to Python
 	bool isCurrentResearchRepeat() const;																																	// Exposed to Python
 	bool isNoResearchAvailable() const;																																		// Exposed to Python
-	DllExport int getResearchTurnsLeft(TechTypes eTech, bool bOverflow) const;														// Exposed to Python
-	bool isTechAvailable(TechTypes eTech) const;
+	DllExport int getResearchTurnsLeft(TechTypes eTech, bool bOverflow) const;	
+	bool isTechAvailable(TechTypes eTech) const;													// Exposed to Python
 
 	bool isCivic(CivicTypes eCivic) const;																																// Exposed to Python
 	bool canDoCivics(CivicTypes eCivic) const;																														// Exposed to Python
@@ -287,6 +287,8 @@ public:
 	int countCorporations(CorporationTypes eCorporation) const;																																					// Exposed to Python
 	void foundCorporation(CorporationTypes eCorporation);																										// Exposed to Python
 
+	DllExport bool canExternalMigrate() const; //Aeons																	// Exposed to Python
+	DllExport int getCivicImmigrationDesire() const; //Aeons																	// Exposed to Python
 	DllExport int getCivicAnarchyLength(CivicTypes* paeNewCivics) const;																	// Exposed to Python
 	DllExport int getReligionAnarchyLength() const;																												// Exposed to Python
 
@@ -936,7 +938,9 @@ public:
 	void setCivics(CivicOptionTypes eIndex, CivicTypes eNewValue);															// Exposed to Python
 
 	int getSpecialistExtraYield(SpecialistTypes eIndex1, YieldTypes eIndex2) const;										// Exposed to Python
-	void changeSpecialistExtraYield(SpecialistTypes eIndex1, YieldTypes eIndex2, int iChange);
+	void changeSpecialistExtraYield(SpecialistTypes eIndex1, YieldTypes eIndex2, int iChange); // Exposed to Python
+	int getSpecialistExtraHappy(SpecialistTypes eIndex1) const;	// Aeons
+	void changeSpecialistExtraHappy(SpecialistTypes eIndex1, int iChange); // Aeons
 
 	// Leoreth
 	int getUnimprovedTileYield(YieldTypes eIndex) const;
@@ -1280,7 +1284,7 @@ public:
 
 	bool isTolerating(ReligionTypes eReligion) const;
 	bool isDistantSpread(const CvCity* pCity, ReligionTypes eReligion) const;
-	ReligionSpreadTypes getSpreadType(CvPlot* pPlot, ReligionTypes eReligion, bool bDistant = false, bool bRemove = false) const;
+	ReligionSpreadTypes getSpreadType(CvPlot* pPlot, ReligionTypes eReligion, bool bDistant = false) const;
 
 	int getStabilityParameter(ParameterTypes eParameter) const;
 	void setStabilityParameter(ParameterTypes eParameter, int iNewValue);
@@ -1617,6 +1621,7 @@ protected:
 	CivicTypes* m_paeCivics;
 
 	int** m_ppaaiSpecialistExtraYield;
+	int* m_ppaaiSpecialistExtraHappy; // Aeons
 	int** m_ppaaiImprovementYieldChange;
 
 	CLinkList<int> m_groupCycle;

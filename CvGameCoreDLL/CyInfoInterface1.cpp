@@ -514,6 +514,7 @@ void CyInfoPythonInterface1()
 		.def("getAreaHappiness", &CvBuildingInfo::getAreaHappiness, "int ()")
 		.def("getGlobalHappiness", &CvBuildingInfo::getGlobalHappiness, "int ()")
 		.def("getStateReligionHappiness", &CvBuildingInfo::getStateReligionHappiness, "int ()")
+		.def("getImmigrationDesireBuildings", &CvBuildingInfo::getImmigrationDesireBuildings, "int ()") // Aeons
 		.def("getWorkerSpeedModifier", &CvBuildingInfo::getWorkerSpeedModifier, "int ()")
 		.def("getMilitaryProductionModifier", &CvBuildingInfo::getMilitaryProductionModifier, "int ()")
 		.def("getSpaceProductionModifier", &CvBuildingInfo::getSpaceProductionModifier, "int ()")

@@ -49,8 +49,8 @@ public:
 	void reportCityAcquiredAndKept(PlayerTypes ePlayer, CvCity* pCity);
 	void reportCityLost(CvCity *pCity);
 	void reportCityGifted(CvCity* pCity); // Leoreth
-	void reportCityLiberated(CvCity* pCity); // Leoreth
 	void reportCultureExpansion(CvCity *pCity, PlayerTypes ePlayer);
+	void reportCityLiberated(CvCity* pCity); // Leoreth
 	void reportCityGrowth(CvCity *pCity, PlayerTypes ePlayer);
 	void reportCityProduction(CvCity *pCity, PlayerTypes ePlayer);
 	void reportCityBuildingUnit(CvCity *pCity, UnitTypes eUnitType);
@@ -116,7 +116,9 @@ public:
 	void reportRevolution(PlayerTypes ePlayerID); //edead
 
 	void reportTradeMission(UnitTypes unitID, PlayerTypes ePlayer, int iX, int iY, int iGold); //Leoreth
+	void reportDiplomaticMission(UnitTypes unitID, PlayerTypes ePlayer, int iX, int iY); //Aeons
 	void reportPlayerSlaveTrade(PlayerTypes ePlayer, int iGold); //Leoreth
+	void reportPlayerIntegrate(PlayerTypes ePlayer, PlayerTypes ePlayer2); //Leoreth
 	void reportReleasedCivilization(PlayerTypes ePlayer, CivilizationTypes eReleasedCivilization); //Leoreth
 	void reportBlockade(PlayerTypes ePlayer, CvCity* pCity, int iGold); // Leoreth
 	void reportPeaceBrokered(PlayerTypes eBroker, PlayerTypes ePlayer1, PlayerTypes ePlayer2); // Leoreth
@@ -129,6 +131,7 @@ public:
 	void reportPlayerSwitch(PlayerTypes eOldPlayer, PlayerTypes eNewPlayer); // Leoreth
 	void reportTechTraded(PlayerTypes eFrom, PlayerTypes eTo, TechTypes eTech); // Leoreth
 	void reportTribute(PlayerTypes eFrom, PlayerTypes eTo); // Leoreth
+	void reportDefensivePact(PlayerTypes eFrom, PlayerTypes eTo); // Aeons
 	void reportGlobalWarming(int iGlobalWarmingValue, int iGlobalWarmingDefense); // Leoreth
 	void reportGlobalWarmingEffect(CvPlot* pPlot, bool bChanged, TerrainTypes ePreviousTerrain, TerrainTypes eNewTerrain, FeatureTypes ePreviousFeature); // Leoreth
 	void reportBuildingProcessed(CvCity* pCity, BuildingTypes eBuilding, int iChange); // Leoreth

@@ -1397,7 +1397,7 @@ bool PUF_canDefend(const CvUnit* pUnit, int iData1, int iData2)
 bool PUF_canDefendAgainst(const CvUnit* pUnit, int iData1, int iData2)
 {
 	// Leoreth: Turkic UP
-	if (pUnit->isBarbarian() && GET_PLAYER((PlayerTypes)iData1).getCivilizationType() == TURKS && GET_TEAM(GET_PLAYER((PlayerTypes)iData1).getTeam()).isAtWarWithMajorPlayer())
+	if (pUnit->isBarbarian() && GET_PLAYER((PlayerTypes)iData1).getCivilizationType() == GOKTURKS && GET_TEAM(GET_PLAYER((PlayerTypes)iData1).getTeam()).isAtWarWithMajorPlayer())
 	{
 		if (pUnit->getUnitCombatType() == 2 || pUnit->getUnitCombatType() == 3)
 		{
@@ -2401,6 +2401,7 @@ int getScenarioStartYear(ScenarioTypes eScenario)
 
 	if (eScenario == SCENARIO_3000BC) return -3000;
 	else if (eScenario == SCENARIO_600AD) return 600;
+	else if (eScenario == SCENARIO_1100AD) return 1100;
 	else if (eScenario == SCENARIO_1500AD) return 1500;
 	else if (eScenario == SCENARIO_1700AD) return 1700;
 	else return 1815;
@@ -2604,6 +2605,7 @@ void getUnitAIString(CvWString& szString, UnitAITypes eUnitAI)
 	case UNITAI_MERCHANT: szString = L"merchant"; break;
 	case UNITAI_ENGINEER: szString = L"engineer"; break;
 	case UNITAI_SPY: szString = L"spy"; break;
+	case UNITAI_TREKKER: szString = L"trekker"; break;
 	case UNITAI_ICBM: szString = L"icbm"; break;
 	case UNITAI_WORKER_SEA: szString = L"worker sea"; break;
 	case UNITAI_ATTACK_SEA: szString = L"attack sea"; break;
@@ -2641,7 +2643,6 @@ int calculateExperience(int iLevel, PlayerTypes ePlayer)
 	int iExperienceNeeded = iLevel * iLevel + 1;
 
 	int iModifier = GET_PLAYER(ePlayer).getLevelExperienceModifier();
-
 	if (iModifier != 0)
 	{
 		iExperienceNeeded = (iExperienceNeeded * 100 + (iExperienceNeeded * iModifier + 99)) / 100; // round up
@@ -2698,6 +2699,7 @@ bool isPrecursor(ReligionTypes ePrecursor, ReligionTypes eReligion)
 	if (ePrecursor == HINDUISM && eReligion == BUDDHISM) return true;
 	if ((ePrecursor == CATHOLICISM || ePrecursor == ORTHODOXY) && eReligion == ISLAM) return true;
 	if (ePrecursor == JUDAISM && (eReligion == CATHOLICISM || eReligion == ORTHODOXY)) return true;
+	if (ePrecursor == ISLAM && eReligion == SHIA) return true;
 
 	return false;
 }

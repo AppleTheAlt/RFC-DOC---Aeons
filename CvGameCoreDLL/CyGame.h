@@ -1,3 +1,4 @@
+
 #pragma once
 
 #ifndef CyGame_h
@@ -336,6 +337,8 @@ public:
 	int getFirstDiscoveredTurn(int iTech);
 
 	int getMedianTechValue();
+
+	void setUpdatePlotGroups(bool bNewValue);
 
 protected:
 	CvGame* m_pGame;

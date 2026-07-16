@@ -24,7 +24,7 @@
 #define RANDPLOT_NOT_CITY				(0x00000040)
 
 #ifdef _USRDLL
-#define MAX_CIV_PLAYERS				(36)
+#define MAX_CIV_PLAYERS				(60) // Aeons - seems to cause issues when it goes over, so keeping this super-high is advisable
 #else
 #define MAX_CIV_PLAYERS				(CvGlobals::getInstance().getMaxCivPlayers())
 #endif

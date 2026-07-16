@@ -315,9 +315,7 @@ public:
 	void updateRevealedOwner(int eTeam);
 
 	int getContinentArea();
-
 	void setWorkingCity(CyCity* pCity);
-
 	void updatePlotGroup();
 
 private:

@@ -375,7 +375,7 @@ bool CvCityAI::AI_avoidGrowth()
 		return true;
 	}
 
-	if (isFoodProduction())
+	if (isFoodProduction() /*&& !GET_PLAYER(getOwnerINLINE()).isHasBuildingEffect((BuildingTypes)PYRAMIDS)*/)
 	{
 		return true;
 	}
@@ -519,14 +519,14 @@ int CvCityAI::AI_specialistValue(SpecialistTypes eSpecialist, bool bAvoidGrowth,
 			}
 		}
 
-        if (!isHuman() && (iCurrentEra <= ((iTotalEras * 2) / 3)) /* && getGreatPeopleRateModifier() > 0*/)
+         if (!isHuman() && (iCurrentEra <= ((iTotalEras * 2) / 3)) /* && getGreatPeopleRateModifier() > 0*/)
         {
             // try to spawn a prophet for any shrines we have yet to build
             bool bNeedProphet = false;
             int iBestSpreadValue = 0;
 
-			CvCivilizationInfo* pCivilizationInfo = &GC.getCivilizationInfo(getCivilizationType());
 
+			CvCivilizationInfo* pCivilizationInfo = &GC.getCivilizationInfo(getCivilizationType());
 			int iUnitClass = GC.getSpecialistInfo(eSpecialist).getGreatPeopleUnitClass();
 			if (iUnitClass != NO_UNITCLASS)
 			{
@@ -538,7 +538,7 @@ int CvCityAI::AI_specialistValue(SpecialistTypes eSpecialist, bool bAvoidGrowth,
 						ReligionTypes eReligion = (ReligionTypes)iJ;
 
 						if (GET_PLAYER(getOwnerINLINE()).hasHolyCity(eReligion) && !GET_PLAYER(getOwnerINLINE()).hasShrine(eReligion)
-							&& ((iCurrentEra < iTotalEras / 2) || GC.getGameINLINE().countReligionLevels(eReligion) >= 10))
+						&& ((iCurrentEra < iTotalEras / 2) || GC.getGameINLINE().countReligionLevels(eReligion) >= 10))
 						{
 							// note, for normal XML, this count will be one (there is only 1 shrine building for each religion)
 							int	shrineBuildingCount = GC.getGameINLINE().getShrineBuildingCount(eReligion);
@@ -893,6 +893,8 @@ void CvCityAI::AI_chooseProduction()
 		}
 	}
 
+
+
 	if (isBarbarian())
 	{
 		if (!AI_isDefended(plot()->plotCount(PUF_isUnitAIType, UNITAI_ATTACK, -1, getOwnerINLINE()))) // XXX check for other team's units?
@@ -1118,6 +1120,7 @@ void CvCityAI::AI_chooseProduction()
 			if (iAreaBestFoundValue == 0 || iWaterAreaBestFoundValue > iAreaBestFoundValue
     			|| (iWaterPercent > 60 && GC.getGameINLINE().getSorenRandNum(4, "AI Train Early Sea Explore or Settler") == 0))
 			{
+
 				// Leoreth: if stuck on an island, we need to settle elsewhere
 				if (iNumSettlers == 0 && iWaterAreaBestSettlerValue >= 10 && area()->getNumUnownedTiles() <= 1 && GET_PLAYER(getOwnerINLINE()).AI_getNumTrainAIUnits(UNITAI_SETTLE) == 0)
 				{
@@ -1422,6 +1425,12 @@ void CvCityAI::AI_chooseProduction()
 			{
 				iSettlerSeaNeeded = std::min(1, iSettlerSeaNeeded);
 			}
+
+			// Leoreth: more settlers for important overseas colonies
+			/*if (iWaterAreaBestSettlerValue >= 20)
+			{
+				iSettlerSeaNeeded += 1;
+			}*/
 
 			if (kPlayer.AI_totalWaterAreaUnitAIs(pWaterArea, UNITAI_SETTLER_SEA) < iSettlerSeaNeeded)
 			{
@@ -2425,16 +2434,29 @@ UnitTypes CvCityAI::AI_bestUnit(bool bAsync, AdvisorTypes eIgnoreAdvisor, UnitAI
 		if (GET_TEAM((TeamTypes)getOwnerINLINE()).isHasTech((TechTypes)FEUDALISM))
 			aiUnitAIVal[UNITAI_SETTLE] /= 3;
 		break;
+	case SUMERIA:
+		aiUnitAIVal[UNITAI_EXPLORE] /= 2;
+		aiUnitAIVal[UNITAI_EXPLORE_SEA] /= 3;
+		aiUnitAIVal[UNITAI_ATTACK] *= 2;
+		aiUnitAIVal[UNITAI_SETTLE] *= 2;
+		break;
 	case BABYLONIA:
 		aiUnitAIVal[UNITAI_EXPLORE] /= 2;
 		aiUnitAIVal[UNITAI_EXPLORE_SEA] /= 3;
 		aiUnitAIVal[UNITAI_ATTACK] *= 2;
-        aiUnitAIVal[UNITAI_SETTLE] /= 50;
 		break;
 	case HARAPPA:
 		aiUnitAIVal[UNITAI_SETTLE] *= 3;
 		aiUnitAIVal[UNITAI_WORKER] *= 2;
 		aiUnitAIVal[UNITAI_CITY_DEFENSE] /= 2;
+		break;
+	case MINOA:
+		aiUnitAIVal[UNITAI_SETTLER_SEA] *= 3;
+		aiUnitAIVal[UNITAI_WORKER] /= 3;
+		aiUnitAIVal[UNITAI_ATTACK_CITY] /= 2;
+		break;
+	case ELAM:
+		aiUnitAIVal[UNITAI_ATTACK_CITY] *= 2;
 		break;
 	case ASSYRIA:
 		aiUnitAIVal[UNITAI_CITY_DEFENSE] /= 2;
@@ -2445,8 +2467,12 @@ UnitTypes CvCityAI::AI_bestUnit(bool bAsync, AdvisorTypes eIgnoreAdvisor, UnitAI
 		aiUnitAIVal[UNITAI_CITY_DEFENSE] *= 3;
 		aiUnitAIVal[UNITAI_CITY_COUNTER] *= 2;
 		break;
+	case MYCENAE:
+		aiUnitAIVal[UNITAI_CITY_DEFENSE] /= 3;
+		break;
 	case GREECE:
-		aiUnitAIVal[UNITAI_SETTLE] *= 2;
+		aiUnitAIVal[UNITAI_SETTLE] *= 3;
+		aiUnitAIVal[UNITAI_SETTLER_SEA] *= 2;
 		aiUnitAIVal[UNITAI_EXPLORE] *= 2;
 		aiUnitAIVal[UNITAI_EXPLORE_SEA] *= 3;
 		aiUnitAIVal[UNITAI_EXPLORE_SEA] /= 2;
@@ -2458,8 +2484,8 @@ UnitTypes CvCityAI::AI_bestUnit(bool bAsync, AdvisorTypes eIgnoreAdvisor, UnitAI
 		aiUnitAIVal[UNITAI_ATTACK] *= 3;
 		aiUnitAIVal[UNITAI_SETTLE] *= 3;
 		aiUnitAIVal[UNITAI_SETTLE] /= 2;
-		aiUnitAIVal[UNITAI_WORKER] *= 2;
 		aiUnitAIVal[UNITAI_MISSIONARY] /= 5;
+		aiUnitAIVal[UNITAI_WORKER] *= 2;
 		break;
 	case INDIA:
 		aiUnitAIVal[UNITAI_EXPLORE] /= 2;
@@ -2472,7 +2498,11 @@ UnitTypes CvCityAI::AI_bestUnit(bool bAsync, AdvisorTypes eIgnoreAdvisor, UnitAI
 		aiUnitAIVal[UNITAI_EXPLORE_SEA] *= 3;
 		aiUnitAIVal[UNITAI_SETTLER_SEA] *= 3;
 		if (!GET_TEAM((TeamTypes)getOwnerINLINE()).isHasTech((TechTypes)OPTICS))
-				aiUnitAIVal[UNITAI_SETTLE] *= 2;
+				aiUnitAIVal[UNITAI_SETTLE] *= 4;
+		break;
+	case JUDAH:
+		aiUnitAIVal[UNITAI_ATTACK_CITY] *= 2;
+		aiUnitAIVal[UNITAI_CITY_DEFENSE] /= 2;
 		break;
 	case POLYNESIA:
 		aiUnitAIVal[UNITAI_SETTLER_SEA] *= 3;
@@ -2481,28 +2511,60 @@ UnitTypes CvCityAI::AI_bestUnit(bool bAsync, AdvisorTypes eIgnoreAdvisor, UnitAI
 	case PERSIA:
 		aiUnitAIVal[UNITAI_ATTACK] *= 2;
 		break;
+	case SPARTA:
+		aiUnitAIVal[UNITAI_ATTACK_CITY] *= 2;
+		break;
 	case CELTS:
-		aiUnitAIVal[UNITAI_SETTLE] *= 2;
+		aiUnitAIVal[UNITAI_SETTLE] *= 3;
 		aiUnitAIVal[UNITAI_ATTACK] *= 2;
 		aiUnitAIVal[UNITAI_PILLAGE] *= 3;
+		break;
+	case SCYTHIA:
+		aiUnitAIVal[UNITAI_SETTLE] *= 3;
+		aiUnitAIVal[UNITAI_ATTACK] *= 2;
 		break;
 	case ROME:      // leave unit AI unchanged so far
         aiUnitAIVal[UNITAI_ASSAULT_SEA] *= 2;
         //aiUnitAIVal[UNITAI_COUNTER] *= 2;
 		aiUnitAIVal[UNITAI_ATTACK_CITY] *= 2;
 		aiUnitAIVal[UNITAI_COLLATERAL] *= 2;
+		aiUnitAIVal[UNITAI_SETTLE] *= 2;
+		aiUnitAIVal[UNITAI_SETTLER_SEA] *= 3;
 		break;
 		/*aiUnitAIVal[UNITAI_EXPLORE] /= 2;
 		aiUnitAIVal[UNITAI_EXPLORE_SEA] /= 2;
 		aiUnitAIVal[UNITAI_SETTLE] *= 2;
 		aiUnitAIVal[UNITAI_SETTLE] /= 3;
 		break;*/
+	case MACEDON:
+		aiUnitAIVal[UNITAI_ATTACK] *= 3;
+		break;
+	case NUMIDIA:
+		aiUnitAIVal[UNITAI_ASSAULT_SEA] *= 2;
+		break;
+	case ARMENIA:
+		aiUnitAIVal[UNITAI_ATTACK_CITY] *= 2;
+		aiUnitAIVal[UNITAI_SETTLE] /= 50;
+		break;
 	case DRAVIDIA:
 		aiUnitAIVal[UNITAI_ASSAULT_SEA] *= 3;
 		aiUnitAIVal[UNITAI_SETTLER_SEA] *= 3;
 		break;
+	case GERMANIA:
+		aiUnitAIVal[UNITAI_SETTLE] *= 2;
+		aiUnitAIVal[UNITAI_ATTACK] *= 2;
+		aiUnitAIVal[UNITAI_PILLAGE] *= 3;
+		break;
 	case TOLTECS:
 		aiUnitAIVal[UNITAI_WORKER] *= 2;
+		break;
+	case VANDALS:
+		aiUnitAIVal[UNITAI_SETTLER_SEA] *= 2;
+		aiUnitAIVal[UNITAI_PILLAGE] *= 2;
+		aiUnitAIVal[UNITAI_ATTACK_CITY] *= 2;
+		break;
+	case PARTHIA:
+		aiUnitAIVal[UNITAI_ATTACK] *= 2;
 		break;
 	case KUSHANS:
 		aiUnitAIVal[UNITAI_MISSIONARY] *= 2;
@@ -2515,6 +2577,11 @@ UnitTypes CvCityAI::AI_bestUnit(bool bAsync, AdvisorTypes eIgnoreAdvisor, UnitAI
         aiUnitAIVal[UNITAI_SETTLE] /= 2;
         aiUnitAIVal[UNITAI_ASSAULT_SEA] *= 2;
         break;
+	case GOTHS:
+		aiUnitAIVal[UNITAI_SETTLE] *= 3;
+		aiUnitAIVal[UNITAI_ATTACK] *= 3;
+		aiUnitAIVal[UNITAI_PILLAGE] *= 2;
+		break;
 	case MAYA:
 		aiUnitAIVal[UNITAI_EXPLORE] /= 2;
 		break;
@@ -2526,6 +2593,8 @@ UnitTypes CvCityAI::AI_bestUnit(bool bAsync, AdvisorTypes eIgnoreAdvisor, UnitAI
 		aiUnitAIVal[UNITAI_COUNTER] *= 2;
         aiUnitAIVal[UNITAI_SETTLE] /= 3;
 		break;
+	case HUNS:
+		aiUnitAIVal[UNITAI_ATTACK] *= 3;
 	case MALAYS:
 		aiUnitAIVal[UNITAI_SETTLER_SEA] *= 3;
 		aiUnitAIVal[UNITAI_ESCORT_SEA] *= 2;
@@ -2554,6 +2623,11 @@ UnitTypes CvCityAI::AI_bestUnit(bool bAsync, AdvisorTypes eIgnoreAdvisor, UnitAI
 		aiUnitAIVal[UNITAI_COUNTER] *= 2;
 		break;
 	case TURKS:
+		aiUnitAIVal[UNITAI_ATTACK] *= 2;
+		aiUnitAIVal[UNITAI_ATTACK_CITY] *= 3;
+		break;
+	case GOKTURKS:
+		aiUnitAIVal[UNITAI_SETTLE] *= 2;
 		aiUnitAIVal[UNITAI_ATTACK] *= 2;
 		aiUnitAIVal[UNITAI_ATTACK_CITY] *= 3;
 		break;
@@ -2601,6 +2675,10 @@ UnitTypes CvCityAI::AI_bestUnit(bool bAsync, AdvisorTypes eIgnoreAdvisor, UnitAI
 		aiUnitAIVal[UNITAI_EXPLORE_SEA] *= 2;
 		//aiUnitAIVal[UNITAI_SETTLER_SEA] *= 2;
 		break;
+	case GEORGIA:
+		aiUnitAIVal[UNITAI_CITY_DEFENSE] *= 2;
+		aiUnitAIVal[UNITAI_MISSIONARY] *= 2;
+		break;
 	case ENGLAND:
 		aiUnitAIVal[UNITAI_EXPLORE_SEA] *= 5;
 		aiUnitAIVal[UNITAI_EXPLORE_SEA] /= 2;
@@ -2616,6 +2694,17 @@ UnitTypes CvCityAI::AI_bestUnit(bool bAsync, AdvisorTypes eIgnoreAdvisor, UnitAI
 		aiUnitAIVal[UNITAI_ASSAULT_SEA] /= 2;
 		aiUnitAIVal[UNITAI_DEFENSE_AIR] *= 3;
 		aiUnitAIVal[UNITAI_DEFENSE_AIR] /= 2;
+		break;
+	case YEMEN:
+		aiUnitAIVal[UNITAI_EXPLORE_SEA] *= 2;
+		aiUnitAIVal[UNITAI_CITY_DEFENSE] *= 2;
+		aiUnitAIVal[UNITAI_SETTLE] /= 2;
+		break;
+	case OMAN:
+		aiUnitAIVal[UNITAI_EXPLORE_SEA] *= 2;
+		aiUnitAIVal[UNITAI_ATTACK_SEA] *= 2;
+		aiUnitAIVal[UNITAI_ESCORT_SEA] *= 2;
+		aiUnitAIVal[UNITAI_SETTLE] /= 2;
 		break;
 	case HOLY_ROME:
 		aiUnitAIVal[UNITAI_COUNTER] *= 2;
@@ -2634,7 +2723,7 @@ UnitTypes CvCityAI::AI_bestUnit(bool bAsync, AdvisorTypes eIgnoreAdvisor, UnitAI
 		aiUnitAIVal[UNITAI_EXPLORE] /= 2;
 		aiUnitAIVal[UNITAI_EXPLORE_SEA] /= 2;
 		aiUnitAIVal[UNITAI_SETTLER_SEA] /= 2;
-		aiUnitAIVal[UNITAI_SETTLE] *= 2;
+		aiUnitAIVal[UNITAI_SETTLE] *= 3;
 		aiUnitAIVal[UNITAI_RESERVE] *= 2;
 		aiUnitAIVal[UNITAI_ICBM] *= 2;
 		break;
@@ -2647,24 +2736,112 @@ UnitTypes CvCityAI::AI_bestUnit(bool bAsync, AdvisorTypes eIgnoreAdvisor, UnitAI
 		aiUnitAIVal[UNITAI_CITY_COUNTER] *= 3;
 		aiUnitAIVal[UNITAI_COUNTER] *= 3;
 		break;
+	case MISR:
+		aiUnitAIVal[UNITAI_ATTACK] *= 2;
+		aiUnitAIVal[UNITAI_CITY_DEFENSE] *= 3;
+		aiUnitAIVal[UNITAI_CITY_DEFENSE] /= 2;
+		break;
+	case BUYIDS:
+		aiUnitAIVal[UNITAI_COUNTER] *= 2;
+		break;
+	case SAMANIDS:
+		aiUnitAIVal[UNITAI_COUNTER] /= 2;
+		break;
+	case BENIN:
+		aiUnitAIVal[UNITAI_CITY_DEFENSE] *= 2;
+		aiUnitAIVal[UNITAI_SETTLE] /= 4;
+		aiUnitAIVal[UNITAI_EXPLORE_SEA] /= 3;
+		break;
 	case SWAHILI:
 		aiUnitAIVal[UNITAI_ESCORT_SEA] *= 2;
 		aiUnitAIVal[UNITAI_EXPLORE_SEA] *= 3;
 		aiUnitAIVal[UNITAI_SETTLER_SEA] *= 2;
 		break;
+	case GHANA:
+		aiUnitAIVal[UNITAI_ATTACK_CITY] /= 2;
+		aiUnitAIVal[UNITAI_SETTLE] /= 2;
+		aiUnitAIVal[UNITAI_EXPLORE_SEA] /= 3;
+		break;
 	case MALI:
+		aiUnitAIVal[UNITAI_ATTACK_CITY] *= 3;
+		aiUnitAIVal[UNITAI_ATTACK_CITY] /= 2;
+		break;
+	case SONGHAI:
+		aiUnitAIVal[UNITAI_ATTACK_CITY] *= 2;
+		aiUnitAIVal[UNITAI_EXPLORE_SEA] /= 2;
+		break;
+	case KANEM_BORNU:
+		aiUnitAIVal[UNITAI_CITY_DEFENSE] *= 3;
+		aiUnitAIVal[UNITAI_CITY_DEFENSE] /= 2;
+		aiUnitAIVal[UNITAI_ATTACK_CITY] /= 3;
+		aiUnitAIVal[UNITAI_EXPLORE_SEA] /= 3;
+		break;
+	case ZULU:
+		aiUnitAIVal[UNITAI_ATTACK] *= 2;
+		aiUnitAIVal[UNITAI_COUNTER] *= 2;
+		break;
+	case BOERS:
+		aiUnitAIVal[UNITAI_WORKER] *= 2;
+		aiUnitAIVal[UNITAI_ICBM] *= 2;
+		break;
+	case SOUTH_AFRICA:
+		aiUnitAIVal[UNITAI_WORKER] *= 2;
+		aiUnitAIVal[UNITAI_SETTLE] *= 2;
+		aiUnitAIVal[UNITAI_ATTACK_AIR] *= 2;
+		aiUnitAIVal[UNITAI_ICBM] *= 2;
+		break;
+	case ZIMBABWE:
+		aiUnitAIVal[UNITAI_COUNTER] *= 2;
+		break;
+	case KATANGA:
+		aiUnitAIVal[UNITAI_PILLAGE] *= 2;
+		break;
+	case BUGANDA:
+		aiUnitAIVal[UNITAI_ATTACK] *= 3;
+		aiUnitAIVal[UNITAI_PILLAGE] *= 3;
+		break;
+	case FUNJ:
+		aiUnitAIVal[UNITAI_ATTACK] *= 2;
+		aiUnitAIVal[UNITAI_ATTACK_CITY] *= 2;
+		break;
+	case SOMALIA:
+		aiUnitAIVal[UNITAI_EXPLORE_SEA] *= 2;
+		aiUnitAIVal[UNITAI_ASSAULT_SEA] *= 2;
+		break;
+	case ADAL:
+		aiUnitAIVal[UNITAI_ATTACK_CITY] *= 3;
+		break;
+	case MADAGASCAR:
+		aiUnitAIVal[UNITAI_ASSAULT_SEA] *= 2;
 		break;
 	case POLAND:
 		aiUnitAIVal[UNITAI_ASSAULT_SEA] /= 3;
 		aiUnitAIVal[UNITAI_EXPLORE_SEA] /= 3;
 		aiUnitAIVal[UNITAI_SETTLER_SEA] /= 3;
 		break;
-	case MUGHALS:
+	case MOROCCO:
+		aiUnitAIVal[UNITAI_EXPLORE_SEA] /= 2;
+		aiUnitAIVal[UNITAI_PIRATE_SEA] *= 2;
+		aiUnitAIVal[UNITAI_CITY_DEFENSE] /= 2;
+		aiUnitAIVal[UNITAI_ATTACK_CITY] *= 2;
+		break;
+	case JERUSALEM:
+		aiUnitAIVal[UNITAI_ATTACK] *= 2;
+		aiUnitAIVal[UNITAI_CITY_DEFENSE] /= 2;
+		break;
+	case TIMURIDS:
+	case GHORIDS:
 		aiUnitAIVal[UNITAI_ASSAULT_SEA] /= 2;
 		aiUnitAIVal[UNITAI_EXPLORE_SEA] /= 2;
 		aiUnitAIVal[UNITAI_ATTACK_CITY] *= 2;
 		aiUnitAIVal[UNITAI_ASSAULT_SEA] /= 3;
 		aiUnitAIVal[UNITAI_EXPLORE_SEA] /= 3;
+		break;
+	case TUNIS:
+		aiUnitAIVal[UNITAI_EXPLORE_SEA] /= 2;
+		aiUnitAIVal[UNITAI_ASSAULT_SEA] *= 2;
+		aiUnitAIVal[UNITAI_SETTLER_SEA] *= 2;
+		aiUnitAIVal[UNITAI_PIRATE_SEA] *= 2;
 		break;
 	case OTTOMANS:
 		aiUnitAIVal[UNITAI_ATTACK_CITY] *= 2;
@@ -2685,7 +2862,6 @@ UnitTypes CvCityAI::AI_bestUnit(bool bAsync, AdvisorTypes eIgnoreAdvisor, UnitAI
 		aiUnitAIVal[UNITAI_WORKER_SEA] /= 2;
 		break;
 	case INCA:
-		aiUnitAIVal[UNITAI_EXPLORE] *= 2;
 		aiUnitAIVal[UNITAI_EXPLORE_SEA] /= 4;
 		aiUnitAIVal[UNITAI_ATTACK_SEA] /= 4;
 		aiUnitAIVal[UNITAI_ESCORT_SEA] /= 4;
@@ -2733,6 +2909,11 @@ UnitTypes CvCityAI::AI_bestUnit(bool bAsync, AdvisorTypes eIgnoreAdvisor, UnitAI
 		aiUnitAIVal[UNITAI_WORKER_SEA] /= 2;
 		aiUnitAIVal[UNITAI_ASSAULT_SEA] *= 3;
 		aiUnitAIVal[UNITAI_ASSAULT_SEA] /= 2;
+		break;
+	case ASHANTI:
+		aiUnitAIVal[UNITAI_CITY_DEFENSE] *= 2;
+		aiUnitAIVal[UNITAI_SETTLE] /= 4;
+		aiUnitAIVal[UNITAI_EXPLORE_SEA] /= 3;
 		break;
 	case GERMANY:
 		aiUnitAIVal[UNITAI_ATTACK_CITY] *= 2;
@@ -3725,6 +3906,8 @@ int CvCityAI::AI_buildingValueThreshold(BuildingTypes eBuilding, int iFocusFlags
 				if (bForeignTrade)
 				{
 					iTempValue += ((kBuilding.getForeignTradeRouteModifier() * getTradeYield(YIELD_COMMERCE)) / 12);
+					// Aeons -> we divide the evaluation of this a little because only other religions are accepted
+					iTempValue += ((kBuilding.getDifferentReligionTradeRouteModifier() * getTradeYield(YIELD_COMMERCE)) / 18);
 				}
 
 				if (bFinancialTrouble)
@@ -4063,6 +4246,8 @@ int CvCityAI::AI_buildingValueThreshold(BuildingTypes eBuilding, int iFocusFlags
 					if (bForeignTrade)
 					{
 						iValue += ((kBuilding.getForeignTradeRouteModifier() * getTradeYield((YieldTypes)iI)) / 12);
+						// Aeons -> we divide the evaluation of this a little because only other religions are accepted
+						iTempValue += ((kBuilding.getDifferentReligionTradeRouteModifier() * getTradeYield(YIELD_COMMERCE)) / 18);
 					}
 
 					if (iFoodDifference > 0)
@@ -4451,7 +4636,6 @@ int CvCityAI::AI_buildingValueThreshold(BuildingTypes eBuilding, int iFocusFlags
 						{
 							aiCommerceRank[iI] = findCommerceRateRank((CommerceTypes) iI);
 						}
-
 						if (bIsLimitedWonder && ((aiCommerceRank[iI] > (3 + iLimitedWonderLimit))) || (bCulturalVictory1 && (iI == COMMERCE_CULTURE) && (aiCommerceRank[iI] == 1)))
 						{
 							iTempValue *= -1;
@@ -8599,13 +8783,13 @@ void CvCityAI::AI_bestPlotBuild(CvPlot* pPlot, int* piBestValue, BuildTypes* peB
 					bValid = true;
 
 					// Leoreth: try to discourage workshops with low health
-					/*if (iFoodChange > 0 && !pPlot->isHills())
-					{
-						if (getImprovementHealthPercentChange(eImprovement) < 0)
-						{
-							bValid = false;
-						}
-					}*/
+					//if (iFoodChange > 0 && !pPlot->isHills())
+					//{
+					//	if (getImprovementHealthPercentChange(eImprovement) < 0)
+					//	{
+					//		bValid = false;
+					//	}
+					//}
 
 					if (pPlot->getFeatureType() != NO_FEATURE)
 					{
@@ -8673,14 +8857,13 @@ void CvCityAI::AI_bestPlotBuild(CvPlot* pPlot, int* piBestValue, BuildTypes* peB
 							{
 								iValue -= 100000;
 							}
-
-							/*if (eBestBuild != NO_BUILD)
-							{
-								if ((GC.getBuildInfo(eBestBuild).getImprovement() != NO_IMPROVEMENT) && (GC.getImprovementInfo((ImprovementTypes)GC.getBuildInfo(eBestBuild).getImprovement()).isImprovementBonusTrade(eNonObsoleteBonus)))
-								{
-									iValue -= 1000;
-								}
-							}*/
+							
+							//{
+							//	if ((GC.getBuildInfo(eBestBuild).getImprovement() != NO_IMPROVEMENT) && (GC.getImprovementInfo((ImprovementTypes)GC.getBuildInfo(eBestBuild).getImprovement()).isImprovementBonusTrade(eNonObsoleteBonus)))
+							//	{
+							//		iValue -= 1000;
+							//	}
+							//}
 						}
 					}
 				}
@@ -10510,6 +10693,27 @@ int CvCityAI::AI_buildingWeight(BuildingTypes eBuilding) const
 			return -MAX_INT;
 		}
 	}
+	else if (eBuilding == ROYAL_KRAAL)
+	{
+		int iPlainsCount = 0;
+		int iSavannaCount = 0;
+		for (int iI = 0; iI < NUM_CITY_PLOTS; iI++)
+		{
+			if (getCityIndexPlot(iI)->getTerrainType() == TERRAIN_PLAINS)
+			{
+				iPlainsCount += 1;
+			}
+			if (getCityIndexPlot(iI)->getTerrainType() == TERRAIN_SAVANNA)
+			{
+				iSavannaCount += 1;
+			}
+		}
+
+		if (iPlainsCount < 5 || iSavannaCount < 3)
+		{
+			return -MAX_INT;
+		}
+	}
 	else if (eBuilding == POTALA_PALACE)
 	{
 		int iHillCount = 0;
@@ -10522,6 +10726,22 @@ int CvCityAI::AI_buildingWeight(BuildingTypes eBuilding) const
 		}
 
 		if (iHillCount < 8)
+		{
+			return -MAX_INT;
+		}
+	}
+	else if (eBuilding == NURI)
+	{
+		int iFloodPlainsCount = 0;
+		for (int iI = 0; iI < NUM_CITY_PLOTS; iI++)
+		{
+			if (getCityIndexPlot(iI)->getFeatureType() == FEATURE_FLOOD_PLAINS)
+			{
+				iFloodPlainsCount += 1;
+			}
+		}
+
+		if (iFloodPlainsCount < 8)
 		{
 			return -MAX_INT;
 		}

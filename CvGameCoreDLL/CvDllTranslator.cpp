@@ -38,6 +38,7 @@ void CvDllTranslator::initializeTags(CvWString& szTagStartIcon, CvWString& szTag
 	aIconMap[L"[ICON_CLEAN_POWER]"] = std::wstring(1, (wchar)gDLL->getSymbolID(CLEAN_POWER_CHAR));
 	aIconMap[L"[ICON_SCALES]"] = std::wstring(1, (wchar)gDLL->getSymbolID(SCALES_CHAR));
 	aIconMap[L"[ICON_MILITARY]"] = std::wstring(1, (wchar)gDLL->getSymbolID(MILITARY_CHAR));
+	aIconMap[L"[ICON_IMMIGRATION]"] = std::wstring(1, (wchar)gDLL->getSymbolID(IMMIGRATION_CHAR)); // Aeons
 
 	aIconMap[L"[ICON_GOLD]"] = std::wstring(1, (wchar)GC.getCommerceInfo(COMMERCE_GOLD).getChar());
 	aIconMap[L"[ICON_RESEARCH]"] = std::wstring(1, (wchar)GC.getCommerceInfo(COMMERCE_RESEARCH).getChar());

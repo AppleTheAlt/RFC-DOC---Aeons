@@ -712,6 +712,11 @@ void CvDLLWidgetData::parseHelp(CvWStringBuffer &szBuffer, CvWidgetDataStruct &w
 		parseWonderLimitHelp(widgetDataStruct, szBuffer);
 		break;
 
+	// Aeons
+	case WIDGET_HELP_IMMIGRATION_DESIRE:
+		parseImmigrationDesireHelp(widgetDataStruct, szBuffer);
+		break;
+
 	// Leoreth
 	case WIDGET_HELP_SATELLITE_LIMIT:
 		parseSatelliteLimitHelp(widgetDataStruct, szBuffer);
@@ -5492,6 +5497,16 @@ void CvDLLWidgetData::parseWonderLimitHelp(CvWidgetDataStruct& widgetDataStruct,
 	if (NULL != pHeadSelectedCity)
 	{
 		GAMETEXT.setWonderLimitHelp(szBuffer, *pHeadSelectedCity, widgetDataStruct.m_iData1);
+	}
+}
+
+// Aeons
+void CvDLLWidgetData::parseImmigrationDesireHelp(CvWidgetDataStruct& widgetDataStruct, CvWStringBuffer& szBuffer)
+{
+	CvCity* pHeadSelectedCity = gDLL->getInterfaceIFace()->getHeadSelectedCity();
+	if (NULL != pHeadSelectedCity)
+	{
+		GAMETEXT.setImmigrationDesireHelp(szBuffer, *pHeadSelectedCity);
 	}
 }
 

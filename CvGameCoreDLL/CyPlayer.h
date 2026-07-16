@@ -181,6 +181,7 @@ public:
 	int countHeadquarters();
 	int countCorporations(int /*CorporationTypes*/ eCorporation);
 	void foundCorporation(int /*CorporationTypes*/ eCorporation);
+	bool canExternalMigrate();
 
 	int unitsRequiredForGoldenAge();
 	int unitsGoldenAgeCapable();
@@ -615,7 +616,7 @@ public:
 	void separateAttackCitySelectionGroups();
 	int getModifiedCommerceRate(CommerceTypes eCommerce);
 	bool canBuySlaves() const;
-	
+
 private:
 	CvPlayer* m_pPlayer;
 };

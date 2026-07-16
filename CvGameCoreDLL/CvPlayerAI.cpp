@@ -1497,6 +1497,7 @@ DomainTypes CvPlayerAI::AI_unitAIDomainType(UnitAITypes eUnitAI) const
 	case UNITAI_GENERAL:
 	case UNITAI_MERCHANT:
 	case UNITAI_ENGINEER:
+	case UNITAI_TREKKER:
 	case UNITAI_STATESMAN:
 	case UNITAI_SPY:
 	case UNITAI_ATTACK_CITY_LEMMING:
@@ -2982,29 +2983,38 @@ int CvPlayerAI::AI_targetCityValue(CvCity* pCity, bool bRandomize, bool bIgnoreA
 		}
 	}
 
+	// Europeans target African cities more
+	if (iWarMapValue > 0)
+	{
+		// Aeons - Encourage Portugal to take African cities in Renaissance period
+		if(getID() == PORTUGAL && ERA_RENAISSANCE)
+		{
+			if (pCity->plot()->getRegionGroup() == REGION_GROUP_SUB_SAHARAN_AFRICA)
+			{
+					iValue += 7;
+			}
+		}
+
+		if (getCivilizationType() == ENGLAND || getCivilizationType() == FRANCE || getCivilizationType() == GERMANY || getCivilizationType() == PORTUGAL || getCivilizationType() == NETHERLANDS || getCivilizationType() == ITALY || getCivilizationType() == BELGIUM)
+		{
+			if (getCurrentEra() == ERA_INDUSTRIAL) // Aeons - Consider if this should be extended to global?
+			{
+				if (pCity->plot()->getRegionGroup() == REGION_GROUP_SUB_SAHARAN_AFRICA)
+				{
+					iValue += 5;
+				}
+				else if (pCity->plot()->getRegionGroup() == REGION_GROUP_NORTH_AFRICA)
+				{
+					iValue += 3;
+				}
+			}
+		}
+	}
+
 	//Leoreth: take war maps into account here as well
 	if (pCity->plot()->getBirthProtected() != pCity->getOwner())
 	{
 		iValue += iWarMapValue;
-
-		// Europeans target African cities more
-		if (iWarMapValue > 0)
-		{
-			if (getCivilizationType() == ENGLAND || getCivilizationType() == FRANCE || getCivilizationType() == GERMANY || getCivilizationType() == PORTUGAL || getCivilizationType() == NETHERLANDS || getCivilizationType() == ITALY || getCivilizationType() == BELGIUM)
-			{
-				if (getCurrentEra() == ERA_INDUSTRIAL)
-				{
-					if (pCity->plot()->getRegionGroup() == REGION_GROUP_SUB_SAHARAN_AFRICA)
-					{
-						iValue += 5;
-					}
-					else if (pCity->plot()->getRegionGroup() == REGION_GROUP_NORTH_AFRICA)
-					{
-						iValue += 3;
-					}
-				}
-			}
-		}
 
 		if (iWarMapValue == 0)
 		{
@@ -3140,21 +3150,21 @@ int CvPlayerAI::AI_getPlotDanger(CvPlot* pPlot, int iRange, bool bTestMoves) con
 		int iDistance;
 		int iBorderDanger;
 		int iDX, iDY;
-		CvArea *pPlotArea = pPlot->area();
+		CvArea* pPlotArea = pPlot->area();
 
 		iCount = 0;
 		iBorderDanger = 0;
 
-			/*if (iRange == -1)
-		{
-			iRange = DANGER_RANGE;
-			}*/
+		/*if (iRange == -1)
+	{
+		iRange = DANGER_RANGE;
+		}*/
 
 		for (iDX = -(iRange); iDX <= iRange; iDX++)
 		{
 			for (iDY = -(iRange); iDY <= iRange; iDY++)
 			{
-				pLoopPlot	= plotXY(pPlot->getX_INLINE(), pPlot->getY_INLINE(), iDX, iDY);
+				pLoopPlot = plotXY(pPlot->getX_INLINE(), pPlot->getY_INLINE(), iDX, iDY);
 
 				if (pLoopPlot != NULL)
 				{
@@ -3196,23 +3206,22 @@ int CvPlayerAI::AI_getPlotDanger(CvPlot* pPlot, int iRange, bool bTestMoves) con
 									{
 										if (pLoopUnit->canMoveOrAttackInto(pPlot))
 										{
-												//if (!bTestMoves)
-												//{
-													//iCount++;
-												//}
-												//else
-												//{
-												int iDangerRange = pLoopUnit->baseMoves();
-												iDangerRange += ((pLoopPlot->isValidRoute(pLoopUnit)) ? 1 : 0);
-												if (iDangerRange >= iDistance)
-												{
-													iCount++;
-												}
-												//}
+											//if (!bTestMoves)
+											//{
+												//iCount++;
+											//}
+											//else
+											//{
+											int iDangerRange = pLoopUnit->baseMoves();
+											iDangerRange += ((pLoopPlot->isValidRoute(pLoopUnit)) ? 1 : 0);
+											if (iDangerRange >= iDistance)
+											{
+												iCount++;
+											}
+											//}
 										}
 									}
 								}
-
 								// Leoreth: count defenders because they may need to stay behind to protect the city
 								if (pLoopPlot->isCity() && pLoopUnit->getGroup()->AI_getMissionAIType() == MISSIONAI_GUARD_CITY && !pLoopUnit->isHuman())
 								{
@@ -3220,7 +3229,6 @@ int CvPlayerAI::AI_getPlotDanger(CvPlot* pPlot, int iRange, bool bTestMoves) con
 								}
 							}
 						}
-
 						// Leoreth: subtract defenders that need to defend the city - at most the minimum amount of defenders needed - at most 1 to ensure workers get alerted etc.
 						if (iCount > 1 && iDefenders > 0)
 						{
@@ -3260,7 +3268,7 @@ int CvPlayerAI::AI_getUnitDanger(CvUnit* pUnit, int iRange, bool bTestMoves, boo
 	int iBorderDanger;
 	int iDX, iDY;
 
-    CvPlot* pPlot = pUnit->plot();
+	CvPlot* pPlot = pUnit->plot();
 	iCount = 0;
 	iBorderDanger = 0;
 
@@ -3279,18 +3287,18 @@ int CvPlayerAI::AI_getUnitDanger(CvUnit* pUnit, int iRange, bool bTestMoves, boo
 			{
 				if (pLoopPlot->area() == pPlot->area())
 				{
-				    iDistance = stepDistance(pPlot->getX_INLINE(), pPlot->getY_INLINE(), pLoopPlot->getX_INLINE(), pLoopPlot->getY_INLINE());
-				    if (atWar(pLoopPlot->getTeam(), getTeam()))
-				    {
-				        if (iDistance == 1)
-				        {
-				            iBorderDanger++;
-				        }
-				        else if ((iDistance == 2) && (pLoopPlot->isRoute()))
-				        {
-				            iBorderDanger++;
-				        }
-				    }
+					iDistance = stepDistance(pPlot->getX_INLINE(), pPlot->getY_INLINE(), pLoopPlot->getX_INLINE(), pLoopPlot->getY_INLINE());
+					if (atWar(pLoopPlot->getTeam(), getTeam()))
+					{
+						if (iDistance == 1)
+						{
+							iBorderDanger++;
+						}
+						else if ((iDistance == 2) && (pLoopPlot->isRoute()))
+						{
+							iBorderDanger++;
+						}
+					}
 
 
 					pUnitNode = pLoopPlot->headUnitNode();
@@ -3306,22 +3314,22 @@ int CvPlayerAI::AI_getUnitDanger(CvUnit* pUnit, int iRange, bool bTestMoves, boo
 							{
 								if (!(pLoopUnit->isInvisible(getTeam(), false)))
 								{
-								    if (pLoopUnit->canMoveOrAttackInto(pPlot))
-								    {
-                                        if (!bTestMoves)
-                                        {
-                                            iCount++;
-                                        }
-                                        else
-                                        {
-                                            int iDangerRange = pLoopUnit->baseMoves();
-                                            iDangerRange += ((pLoopPlot->isValidRoute(pLoopUnit)) ? 1 : 0);
-                                            if (iDangerRange >= iDistance)
-                                            {
-                                                iCount++;
-                                            }
-                                        }
-								    }
+									if (pLoopUnit->canMoveOrAttackInto(pPlot))
+									{
+										if (!bTestMoves)
+										{
+											iCount++;
+										}
+										else
+										{
+											int iDangerRange = pLoopUnit->baseMoves();
+											iDangerRange += ((pLoopPlot->isValidRoute(pLoopUnit)) ? 1 : 0);
+											if (iDangerRange >= iDistance)
+											{
+												iCount++;
+											}
+										}
+									}
 								}
 							}
 						}
@@ -3333,14 +3341,15 @@ int CvPlayerAI::AI_getUnitDanger(CvUnit* pUnit, int iRange, bool bTestMoves, boo
 
 	if (iBorderDanger > 0)
 	{
-	    if (!isHuman() || pUnit->isAutomated())
-	    {
-            iCount += iBorderDanger;
-	    }
+		if (!isHuman() || pUnit->isAutomated())
+		{
+			iCount += iBorderDanger;
+		}
 	}
 
 	return iCount;
 }
+
 
 int CvPlayerAI::AI_getWaterDanger(CvPlot* pPlot, int iRange, bool bTestMoves) const
 {
@@ -3572,6 +3581,7 @@ TechTypes CvPlayerAI::AI_bestTech(int iMaxPathLength, bool bIgnoreCost, bool bAs
 	int iHasMetCount = kTeam.getHasMetCivCount(true);
 	int iCoastalCities = countNumCoastalCities();
 	int iConnectedForeignCities = countPotentialForeignTradeCitiesConnected();
+
 
 	int iCityCount = getNumCities();
 	int iTeamCityCount = kTeam.getNumCities();
@@ -5067,6 +5077,45 @@ int CvPlayerAI::AI_getAttitudeVal(PlayerTypes ePlayer, bool bForced) const
 	// Sanguo Mod Performance, end
 }
 
+int CvPlayerAI::AI_getCompetitorAttitude(PlayerTypes ePlayer) const
+{
+
+	int iPlayersAlive = GC.getGameINLINE().countCivPlayersAlive();
+	int iOurRank = GC.getGameINLINE().getPlayerRank(getID());
+	int iTheirRank = GC.getGameINLINE().getPlayerRank(ePlayer);
+
+	bool bCompetitor = std::abs(iOurRank - iTheirRank) < iPlayersAlive / 10 || (iOurRank < iPlayersAlive / 5 && iTheirRank < iPlayersAlive / 5);
+
+	if (!bCompetitor)
+	{
+		return 0;
+	}
+
+	int iAttitude = -1;
+
+	if (!isNeighbor(ePlayer))
+	{
+		return iAttitude;
+	}
+
+	if (iTheirRank < iPlayersAlive / 5)
+	{
+		iAttitude -= 1;
+	}
+
+	if (getCurrentEra() >= ERA_INDUSTRIAL)
+	{
+		iAttitude -= 1;
+	}
+
+	int iLeaderAttitude = std::abs(GC.getLeaderHeadInfo(getPersonalityType()).getWorseRankDifferenceAttitudeChange()) + std::abs(GC.getLeaderHeadInfo(getPersonalityType()).getBetterRankDifferenceAttitudeChange());
+	if (iLeaderAttitude >= 2)
+	{
+		iAttitude -= 1;
+	}
+
+	return iAttitude;
+}
 
 // BEGIN: Show Hidden Attitude Mod 01/22/2009
 bool isShowPersonalityModifiers()
@@ -5414,11 +5463,12 @@ int CvPlayerAI::AI_getDifferentReligionAttitude(PlayerTypes ePlayer) const
 
 	iAttitude = 0;
 
+
 	// Leoreth: Nubian UP
-	if (GET_PLAYER(ePlayer).getCivilizationType() == NUBIA)
-	{
-		return 0;
-	}
+	//if (GET_PLAYER(ePlayer).getCivilizationType() == NUBIA)
+	//{
+	//	return 0;
+	//}
 
 	// Leoreth: if state religion, even have negative relations with non-state religion civs
 	if ((GET_PLAYER(ePlayer).getStateReligion() != NO_RELIGION) && (getStateReligion() != GET_PLAYER(ePlayer).getStateReligion()))
@@ -5487,6 +5537,12 @@ int CvPlayerAI::AI_getDifferentReligionAttitude(PlayerTypes ePlayer) const
 	else if (getCurrentEra() == ERA_RENAISSANCE)
 	{
 		iAttitude *= 2;
+	}
+
+	// KHAZAR UP: no penalties for different religion
+	if (GET_PLAYER(ePlayer).getCivilizationType() == KHAZARS && iAttitude < 0)
+	{
+		iAttitude = 0;
 	}
 
 	return iAttitude;
@@ -5665,45 +5721,6 @@ int CvPlayerAI::AI_getColonyAttitude(PlayerTypes ePlayer) const
 	if (getParent() == ePlayer)
 	{
 		iAttitude += GC.getLeaderHeadInfo(getPersonalityType()).getFreedomAppreciation();
-	}
-
-	return iAttitude;
-}
-
-int CvPlayerAI::AI_getCompetitorAttitude(PlayerTypes ePlayer) const
-{
-	int iPlayersAlive = GC.getGameINLINE().countCivPlayersAlive();
-	int iOurRank = GC.getGameINLINE().getPlayerRank(getID());
-	int iTheirRank = GC.getGameINLINE().getPlayerRank(ePlayer);
-
-	bool bCompetitor = std::abs(iOurRank - iTheirRank) < iPlayersAlive / 10 || (iOurRank < iPlayersAlive / 5 && iTheirRank < iPlayersAlive / 5);
-
-	if (!bCompetitor)
-	{
-		return 0;
-	}
-
-	int iAttitude = -1;
-
-	if (!isNeighbor(ePlayer))
-	{
-		return iAttitude;
-	}
-
-	if (iTheirRank < iPlayersAlive / 5)
-	{
-		iAttitude -= 1;
-	}
-
-	if (getCurrentEra() >= ERA_INDUSTRIAL)
-	{
-		iAttitude -= 1;
-	}
-
-	int iLeaderAttitude = std::abs(GC.getLeaderHeadInfo(getPersonalityType()).getWorseRankDifferenceAttitudeChange()) + std::abs(GC.getLeaderHeadInfo(getPersonalityType()).getBetterRankDifferenceAttitudeChange());
-	if (iLeaderAttitude >= 2)
-	{
-		iAttitude -= 1;
 	}
 
 	return iAttitude;
@@ -6327,6 +6344,12 @@ int CvPlayerAI::AI_dealVal(PlayerTypes ePlayer, const CLinkList<TradeData>* pLis
 			}
 			break;
 		case TRADE_VASSAL:
+			if (!bIgnoreAnnual)
+			{
+				iValue += GET_TEAM(getTeam()).AI_vassalTradeVal(GET_PLAYER(ePlayer).getTeam());
+			}
+			break;
+		case TRADE_FULLANNEX:
 			if (!bIgnoreAnnual)
 			{
 				iValue += GET_TEAM(getTeam()).AI_vassalTradeVal(GET_PLAYER(ePlayer).getTeam());
@@ -7715,7 +7738,7 @@ int CvPlayerAI::AI_corporationBonusVal(BonusTypes eBonus, int iChange) const
 	{
 		return 0;
 	}
-	
+
 	int iValue = 0;
 	int iCityCount = getNumCities();
 	iCityCount += iCityCount / 6 + 1;
@@ -8780,6 +8803,7 @@ int CvPlayerAI::AI_unitValue(UnitTypes eUnit, UnitAITypes eUnitAI, CvArea* pArea
 		case UNITAI_GENERAL:
 		case UNITAI_MERCHANT:
 		case UNITAI_ENGINEER:
+		case UNITAI_TREKKER:
 		case UNITAI_STATESMAN:
 		case UNITAI_SPY:
 			break;
@@ -8970,6 +8994,11 @@ int CvPlayerAI::AI_unitValue(UnitTypes eUnit, UnitAITypes eUnitAI, CvArea* pArea
 	iValue += GC.getUnitInfo(eUnit).getAIWeight();
 
 	int iFastMoverMultiplier;
+
+	// Aeons - Weight units based on heathen strength
+	// I could probably make this weighted if at religious war
+	// But I feel like this part of the code might be performance critical so I don't want to risk that
+	iValue += ((GC.getUnitInfo(eUnit).getHeathenStrength() * 3) / 2);
 
 	switch (eUnitAI)
 	{
@@ -9210,6 +9239,7 @@ int CvPlayerAI::AI_unitValue(UnitTypes eUnit, UnitAITypes eUnitAI, CvArea* pArea
 	case UNITAI_MERCHANT:
 	case UNITAI_ENGINEER:
 	case UNITAI_STATESMAN:
+	case UNITAI_TREKKER:
 		break;
 
 	case UNITAI_SPY:
@@ -9850,7 +9880,6 @@ int CvPlayerAI::AI_missionaryValue(CvArea* pArea, ReligionTypes eReligion, Playe
 						int iCitiesCount = 0;
 						int iCitiesHave = 0;
 						int iMultiplier = AI_isDoStrategy(AI_STRATEGY_MISSIONARY) ? 60 : 25;
-
 						// Leoreth: account for spread chances to each city
 						int iLoop;
 						for (CvCity* pLoopCity = kLoopPlayer.firstCity(&iLoop); pLoopCity != NULL; pLoopCity = kLoopPlayer.nextCity(&iLoop))
@@ -10477,6 +10506,7 @@ int CvPlayerAI::AI_civicValue(CivicTypes eCivic) const
 
 	iTradeCommerceModifier = (AI_averageTradeMultiplier()) * std::max(AI_averageCommerceMultiplier(COMMERCE_GOLD), AI_averageCommerceMultiplier(COMMERCE_RESEARCH)) / 100;
 
+	//iValue += ((kCivic.getTradeRoutes() * std::max(0, iConnectedForeignCities - getNumCities() * 3) * 8) + (getNumCities() * 2));
 	iValue += kCivic.getTradeRoutes() * (std::max(0, iConnectedForeignCities - getNumCities() * 3) + getNumCities() * 2) * 2 * iTradeCommerceModifier / 100;
 	iValue += -((kCivic.isNoForeignTrade()) ? (iConnectedForeignCities * /*3*/ 4) : 0);
 	iValue -= kCivic.isNoForeignTradeModifier() ? (iConnectedForeignCities * 3 / 2) : 0; // Leoreth
@@ -10558,7 +10588,7 @@ int CvPlayerAI::AI_civicValue(CivicTypes eCivic) const
 /* orginal bts code
 		iValue += (getNumCities() * 9 * AI_getHappinessWeight(isCivic(eCivic) ? -iTempValue : iTempValue, 1)) / 100;
 */
-		iValue += (getNumCities() * 9 * AI_getHappinessWeight(iTempValue, 1, true)) / 100; // Rhye
+		iValue += (getNumCities() * 9 * AI_getHappinessWeight(iTempValue, 1)) / 100; // Rhye
 /************************************************************************************************/
 /* UNOFFICIAL_PATCH                        END                                                  */
 /************************************************************************************************/
@@ -10662,7 +10692,7 @@ int CvPlayerAI::AI_civicValue(CivicTypes eCivic) const
 		iTempValue = 0;
 
 		iTempValue += ((kCivic.getYieldModifier(iI) * getNumCities()) / 2);
-		iTempValue += ((kCivic.getCapitalYieldModifier(iI) * 3) / 8);
+		iTempValue += ((kCivic.getCapitalYieldModifier(iI) * 3) / 4);
 
 		if (pCapital)
 		{
@@ -10860,7 +10890,6 @@ int CvPlayerAI::AI_civicValue(CivicTypes eCivic) const
 					iTempValue += AI_yieldWeight(YIELD_PRODUCTION) * (GC.getHurryInfo((HurryTypes)iI).isUnits() && bWarPlan ? 2 : 1) * iGoldRate / GC.getHurryInfo((HurryTypes)iI).getGoldPerProduction() / 2;
 				}
 			}
-			//iTempValue += (GC.getHurryInfo((HurryTypes)iI).getProductionPerPopulation() * getNumCities() * (bWarPlan ? 2 : 1)) / 5;
 			iTempValue += (GC.getHurryInfo((HurryTypes)iI).getProductionPerPopulation() * getNumCities() * (bWarPlan ? 2 : 1)) / 3;
 			iValue += iTempValue;
 			
@@ -10887,7 +10916,6 @@ int CvPlayerAI::AI_civicValue(CivicTypes eCivic) const
 	}
 
 	// Leoreth: domain experience
-
 	iValue += kCivic.getDomainExperienceModifier(DOMAIN_LAND) * (2 * getNumCities() - iNumCoastalCities) * (bWarPlan ? 2 : 1) * iWarmongerPercent / 2 / 100;
 	iValue += kCivic.getDomainExperienceModifier(DOMAIN_SEA) * std::max(0, 2 * iNumCoastalCities - getNumCities()) * (bWarPlan ? 3 : 2) * iWarmongerPercent / 3 / 100;
 	iValue += kCivic.getDomainExperienceModifier(DOMAIN_AIR) * getNumCities() * (AI_isDoStrategy(AI_STRATEGY_AIR_BLITZ) ? 2 : 1) * (bWarPlan ? 3 : 2) * iWarmongerPercent / 5 / 100;
@@ -10987,6 +11015,31 @@ int CvPlayerAI::AI_civicValue(CivicTypes eCivic) const
 			iValue /= 2;
 		}
 	}
+	else if (eCivic == CIVIC_SLAVERY) // Aeons - Encourage slavery for early era civs
+	{
+		if (getCurrentEra() == ERA_CLASSICAL || getCurrentEra() == ERA_ANCIENT)
+		{
+			iValue *= 4;
+			iValue /= 3;
+		}
+
+		
+		// Aeons - Account for high native distribution in Sub-Saharan Africa.
+		if (pCapital != NULL)
+		{
+			if (pCapital->getRegionGroup() == REGION_GROUP_SUB_SAHARAN_AFRICA)
+			{
+				iValue *= 5;
+				iValue /= 3;
+			}
+
+			if (pCapital->getRegionGroup() == REGION_GROUP_MIDDLE_EAST)
+			{
+				iValue *= 6;
+				iValue /= 5;
+			}
+		}
+	}
 
 	// Leoreth: boost some modern civics as soon as available
 	switch (eCivic)
@@ -11057,6 +11110,13 @@ int CvPlayerAI::AI_civicValue(CivicTypes eCivic) const
 	if (kCivic.getColonyMaintenanceModifier() < 0 && countColonies() == 0)
 	{
 		iValue /= 3;
+	}
+
+	// Aeons - Encourage colonialism if many colonies
+	if (kCivic.getColonyMaintenanceModifier() < 0 && countColonies() >= 5)
+	{
+		iValue *= 3;
+		iValue /= 2;
 	}
 
 	if (AI_isDoStrategy(AI_STRATEGY_CULTURE2) && (GC.getCivicInfo(eCivic).isNoNonStateReligionSpread()))
@@ -13309,6 +13369,8 @@ void CvPlayerAI::AI_doDiplo()
 											if (!bOffered)
 											{
 												setTradeItem(&item, TRADE_VASSAL);
+
+												setTradeItem(&item, TRADE_FULLANNEX);
 
 												if (canTradeItem((PlayerTypes)iI, item, true))
 												{
@@ -15589,6 +15651,7 @@ bool CvPlayerAI::AI_disbandUnit(int iExpThreshold, bool bObsolete)
 							case UNITAI_GENERAL:
 							case UNITAI_MERCHANT:
 							case UNITAI_ENGINEER:
+							case UNITAI_TREKKER:
 								break;
 
 							case UNITAI_SPY:
@@ -17011,6 +17074,7 @@ int CvPlayerAI::AI_averageTradeMultiplier() const
 	}
 	return m_iAverageTradeMultiplier;
 }
+
 
 //"100 eCommerce is worth (return) raw YIELD_COMMERCE
 int CvPlayerAI::AI_averageCommerceExchange(CommerceTypes eCommerce) const
@@ -19333,7 +19397,7 @@ int CvPlayerAI::AI_getPlotCanalValue(CvPlot* pPlot) const
 //This returns a positive number equal approximately to the sum
 //of the percentage values of each unit (there is no need to scale the output by iHappy)
 //100 * iHappy means a high value.
-int CvPlayerAI::AI_getHappinessWeight(int iHappy, int iExtraPop, bool bClampToHalf) const
+int CvPlayerAI::AI_getHappinessWeight(int iHappy, int iExtraPop) const
 {
 	int iWorstHappy = 0;
 	int iBestHappy = 0;
@@ -19351,16 +19415,10 @@ int CvPlayerAI::AI_getHappinessWeight(int iHappy, int iExtraPop, bool bClampToHa
 	for (pLoopCity = firstCity(&iLoop); pLoopCity != NULL; pLoopCity = nextCity(&iLoop))
 	{
 		int iCityHappy = pLoopCity->happyLevel() - pLoopCity->unhappyLevel(iExtraPop);
-		int iCityHappyChange = iHappy;
-
-		if (bClampToHalf && iHappy > 0)
-		{
-			iCityHappyChange = std::min(iHappy, pLoopCity->getPopulation() / 2);
-		}
 
 		iCityHappy -= std::max(0, pLoopCity->getCommerceHappiness());
 		int iHappyNow = iCityHappy;
-		int iHappyThen = iCityHappy + iCityHappyChange;
+		int iHappyThen = iCityHappy + iHappy;
 
 		//Integration
 		int iTempValue = (((100 * iHappyThen - 10 * iHappyThen * iHappyThen)) - (100 * iHappyNow - 10 * iHappyNow * iHappyNow));
@@ -19588,11 +19646,22 @@ int CvPlayerAI::AI_slaveTradeVal(CvUnit* pUnit) const
 
 	int iRequiredSlaves = countRequiredSlaves();
 
+	CvCity* pCapitalCity = getCapitalCity();
+
 	if (getCivilizationType() != GC.getGame().getActiveCivilizationType())
 	{
-		if (getCivilizationType() == MALI || getCivilizationType() == CONGO || getCivilizationType() == ETHIOPIA || getCivilizationType() == SWAHILI)
+		if (pCapitalCity != NULL)
 		{
-			return 0;
+			// Aeons - Make Sub-Saharan Africans sell slaves (Previously, this only applied to Congo, Ethiopia, Mali)
+			if (pCapitalCity->getRegionGroup() == REGION_GROUP_SUB_SAHARAN_AFRICA)
+			{
+				return 0;
+			}
+			// Aeons - Make Middle East more likely to buy slaves.
+			if (pCapitalCity->getRegionGroup() == REGION_GROUP_MIDDLE_EAST)
+			{
+				iModifier += 1;
+			}
 		}
 
 		if (iRequiredSlaves <= 0)
@@ -19604,6 +19673,7 @@ int CvPlayerAI::AI_slaveTradeVal(CvUnit* pUnit) const
 	if (getID() == GC.getGame().getActivePlayer()) iModifier += 1;
 	if (bOwnerEuropean || bBuyerEuropean) iModifier += 1;
 	if (!bOwnerExploration && !bBuyerExploration) iModifier -= 1;
+
 
 	iValue = std::max(1, iModifier) * iValue;
 
@@ -19754,6 +19824,7 @@ int CvPlayerAI::AI_getUnitEnabledValue(UnitTypes eUnit,
 		case UNITAI_MERCHANT:
 		case UNITAI_ENGINEER:
 		case UNITAI_STATESMAN:
+		case UNITAI_TREKKER:
 			break;
 
 		case UNITAI_SPY:

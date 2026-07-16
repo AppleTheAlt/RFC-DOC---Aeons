@@ -36,6 +36,10 @@ struct DllExport CombatDetails					// Exposed to Python
 	int iHillsDefenseModifier;
 	int iPlainsAttackModifier; // Leoreth
 	int iPlainsDefenseModifier; // Leoreth
+	int iUnityStrength; // Aeons
+	int iHeathenStrength; // Aeons
+	int iUnityRequired; // Aeons
+	int iUnityModifier; // Aeons
 	int iFeatureAttackModifier;
 	int iFeatureDefenseModifier;
 	int iTerrainAttackModifier;
@@ -45,6 +49,7 @@ struct DllExport CombatDetails					// Exposed to Python
 	int iCityBarbarianDefenseModifier;
 	int iClassDefenseModifier;
 	int iClassAttackModifier;
+	int iUnityClasses;
 	int iCombatModifierT;
 	int iCombatModifierA;
 	int iDomainModifierA;
@@ -317,6 +322,7 @@ public:
 	int flavorValue(FlavorTypes eFlavor) const;														// Exposed to Python		
 
 	bool isBarbarian() const;																							// Exposed to Python
+	bool isNative() const;																							// Aeons - Exposed to Python
 	bool isHuman() const;																									// Exposed to Python
 
 	int visibilityRange() const;																					// Exposed to Python
@@ -432,6 +438,9 @@ public:
 	int hillsDefenseModifier() const;																				// Exposed to Python
 	int plainsAttackModifier() const; // Leoreth
 	int plainsDefenseModifier() const; // Leoreth
+	int unityStrength() const; // Aeons
+	int heathenStrength() const; // Aeons
+	int unityRequired() const; // Aeons
 	int riverAttackModifier() const; // Leoreth
 	int terrainAttackModifier(TerrainTypes eTerrain) const;								// Exposed to Python
 	int terrainDefenseModifier(TerrainTypes eTerrain) const;								// Exposed to Python
@@ -439,6 +448,7 @@ public:
 	int featureDefenseModifier(FeatureTypes eFeature) const;								// Exposed to Python
 	int unitClassAttackModifier(UnitClassTypes eUnitClass) const;						// Exposed to Python
 	int unitClassDefenseModifier(UnitClassTypes eUnitClass) const;					// Exposed to Python
+	int unityClass(UnitClassTypes eUnitClass) const;				
 	int unitCombatModifier(UnitCombatTypes eUnitCombat) const;							// Exposed to Python
 	int domainModifier(DomainTypes eDomain) const;													// Exposed to Python
 
@@ -932,6 +942,7 @@ protected:
 	UnitTypes m_eUnitType;
 	UnitTypes m_eLeaderUnitType;
 	CvUnitInfo *m_pUnitInfo;
+
 
 	IDInfo m_combatUnit;
 	IDInfo m_transportUnit;

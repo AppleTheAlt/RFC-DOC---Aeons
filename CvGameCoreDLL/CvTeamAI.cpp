@@ -1398,7 +1398,7 @@ DenialTypes CvTeamAI::AI_techTrade(TechTypes eTech, TeamTypes eTeam, bool bIgnor
 
 	//Rhye
 	//if (GC.getGameINLINE().isOption(GAMEOPTION_NO_TECH_BROKERING))
-	if (!bIgnoreProgress && GC.getGameINLINE().isOption(GAMEOPTION_NO_TECH_BROKERING) && !GET_TEAM(eTeam).isHasTech(GEOPOLITICS))
+	if (!bIgnoreProgress && GC.getGameINLINE().isOption(GAMEOPTION_NO_TECH_BROKERING) && !GET_TEAM(eTeam).isHasTech((TechTypes)GEOPOLITICS))
 	{
 		CvTeam& kTeam = GET_TEAM(eTeam);
 
@@ -1498,7 +1498,7 @@ DenialTypes CvTeamAI::AI_techTrade(TechTypes eTech, TeamTypes eTeam, bool bIgnor
 		// Leoreth: used to be /2 instead of *2/3
 		//if ((GC.getGameINLINE().getTeamRank(getID()) < (GC.getGameINLINE().countCivTeamsEverAlive() * 2 / 3)) ||
 		//	  (GC.getGameINLINE().getTeamRank(eTeam) < (GC.getGameINLINE().countCivTeamsEverAlive() * 2 / 3)))
-		
+
 		// Leoreth: use tech rank instead
 		if (GC.getGameINLINE().getTechRank(eTeam) < GC.getGameINLINE().countCivTeamsAlive() * 2 / 3)
 		{
@@ -1514,6 +1514,12 @@ DenialTypes CvTeamAI::AI_techTrade(TechTypes eTech, TeamTypes eTeam, bool bIgnor
 		}
 
 		iTechTradeKnownPercent = AI_techTradeKnownPercent();
+
+		// Leoreth: make AIs less willing to share lesser known techs across the board (exception: Japanese UP)
+		//if (GET_PLAYER(GET_TEAM(eTeam).getLeaderID()).getCivilizationType() != JAPAN)
+		//{
+		//	iTechTradeKnownPercent = std::min(iTechTradeKnownPercent + 10, 60);
+		//}
 
 		iTechTradeKnownPercent *= std::max(0, (GC.getHandicapInfo(GET_TEAM(eTeam).getHandicapType()).getTechTradeKnownModifier() + 100));
 		iTechTradeKnownPercent /= 100;
@@ -1769,6 +1775,7 @@ DenialTypes CvTeamAI::AI_vassalTrade(TeamTypes eTeam) const
 		return DENIAL_NO_GAIN;
 	}
 
+
 	return AI_surrenderTrade(eTeam);
 }
 
@@ -1971,6 +1978,12 @@ DenialTypes CvTeamAI::AI_surrenderTrade(TeamTypes eTeam, int iPowerMultiplier) c
 			iMasterPower /= 2;
 		}
 
+		// Aeons - Integrating is harder than vassalising.
+		if (isVassal(eTeam))
+		{
+			iMasterPower /= 2;
+		}
+
 		for (int iLoopTeam = 0; iLoopTeam < MAX_CIV_TEAMS; iLoopTeam++)
 		{
 			if (iLoopTeam != getID() && !GET_TEAM((TeamTypes)iLoopTeam).isIndependent())
@@ -2108,6 +2121,7 @@ DenialTypes CvTeamAI::AI_surrenderTrade(TeamTypes eTeam, int iPowerMultiplier) c
 				return DENIAL_TOO_FAR;
 			}
 			// edead: end
+
 		}
 
 		AttitudeTypes eAttitude = AI_getAttitude(eTeam, false);
@@ -2150,6 +2164,7 @@ DenialTypes CvTeamAI::AI_surrenderTrade(TeamTypes eTeam, int iPowerMultiplier) c
 	else
 	{
 		int iMinCitiesConquered = std::min(GET_PLAYER(getLeaderID()).getNumCities(), 4);
+
 		if (AI_getWarSuccess(eTeam) + iMinCitiesConquered * GC.getDefineINT("WAR_SUCCESS_CITY_CAPTURING") > GET_TEAM(eTeam).AI_getWarSuccess(getID()))
 		{
 			return DENIAL_JOKING;
@@ -2570,12 +2585,12 @@ DenialTypes CvTeamAI::AI_openBordersTrade(TeamTypes eTeam) const
 	eAttitude = AI_getAttitude(eTeam);
 
 	for (std::vector<PlayerTypes>::const_iterator iter = m_aePlayerMembers.begin(); iter != m_aePlayerMembers.end(); ++iter)
-	{
+			{
 		if (eAttitude <= GC.getLeaderHeadInfo(GET_PLAYER(*iter).getPersonalityType()).getOpenBordersRefuseAttitudeThreshold())
-		{
-			return DENIAL_ATTITUDE;
-		}
-	}
+				{
+					return DENIAL_ATTITUDE;
+				}
+			}
 	// Sanguo Mod Performance, end
 
 	return NO_DENIAL;
@@ -2584,11 +2599,15 @@ DenialTypes CvTeamAI::AI_openBordersTrade(TeamTypes eTeam) const
 
 int CvTeamAI::AI_defensivePactTradeVal(TeamTypes eTeam) const
 {
-	int iModifier = 200;
-	if (isHasTech(ELECTRICITY))
-		iModifier += 60;
-	if (isHasTech(GEOPOLITICS))
-		iModifier += 40;
+	int iModifier = 280;
+	if (isHasTech(ELECTRICITY)) 
+	{ 
+		iModifier = 200;
+	}
+	if (isHasTech(GEOPOLITICS)) 
+	{
+		iModifier = 160;
+	}
 
 	//discount if in a chain of alliances but not directly allied yet
 	for (int iI = 0; iI < MAX_CIV_PLAYERS; iI++)
@@ -2629,7 +2648,7 @@ int CvTeamAI::AI_defensivePactTradeVal(TeamTypes eTeam) const
 		}
 	}
 
-	return iNumCities * iModifier / 100;
+	return iNumCities * std::max(iModifier, 10) / 100;
 }
 
 
@@ -4526,6 +4545,7 @@ int CvTeamAI::AI_getTechMonopolyValue(TechTypes eTech, TeamTypes eTeam) const
 					case UNITAI_GENERAL:
 					case UNITAI_MERCHANT:
 					case UNITAI_ENGINEER:
+					case UNITAI_TREKKER:
 					case UNITAI_STATESMAN:
 						break;
 

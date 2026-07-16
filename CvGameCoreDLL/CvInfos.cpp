@@ -3329,6 +3329,9 @@ m_iHillsAttackModifier(0),
 m_iHillsDefenseModifier(0),
 m_iPlainsAttackModifier(0), // Leoreth
 m_iPlainsDefenseModifier(0), // Leoreth
+m_iHeathenStrength(0), // Aeons
+m_iUnityStrength(0), // Aeons
+m_iUnityRequired(0), // Aeons
 m_iBombRate(0),
 m_iBombardRate(0),
 m_iSpecialCargo(0),
@@ -3436,6 +3439,7 @@ m_piFeatureAttackModifier(NULL),
 m_piFeatureDefenseModifier(NULL),
 m_piUnitClassAttackModifier(NULL),
 m_piUnitClassDefenseModifier(NULL),
+m_piUnityClasses(NULL), // Aeons
 m_piUnitCombatModifier(NULL),
 m_piUnitCombatCollateralImmune(NULL),
 m_piDomainModifier(NULL),
@@ -3488,6 +3492,7 @@ CvUnitInfo::~CvUnitInfo()
 	SAFE_DELETE_ARRAY(m_piFeatureDefenseModifier);
 	SAFE_DELETE_ARRAY(m_piUnitClassAttackModifier);
 	SAFE_DELETE_ARRAY(m_piUnitClassDefenseModifier);
+	SAFE_DELETE_ARRAY(m_piUnityClasses); // Aeons
 	SAFE_DELETE_ARRAY(m_piUnitCombatModifier);
 	SAFE_DELETE_ARRAY(m_piUnitCombatCollateralImmune);
 	SAFE_DELETE_ARRAY(m_piDomainModifier);
@@ -3712,6 +3717,24 @@ int CvUnitInfo::getPlainsAttackModifier() const
 int CvUnitInfo::getPlainsDefenseModifier() const
 {
 	return m_iPlainsDefenseModifier;
+}
+
+// Aeons
+int CvUnitInfo::getHeathenStrength() const
+{
+	return m_iHeathenStrength;
+}
+
+// Aeons
+int CvUnitInfo::getUnityStrength() const
+{
+	return m_iUnityStrength;
+}
+
+// Aeons
+int CvUnitInfo::getUnityRequired() const
+{
+	return m_iUnityRequired;
 }
 
 int CvUnitInfo::getBombRate() const
@@ -4233,6 +4256,13 @@ int CvUnitInfo::getUnitClassDefenseModifier(int i) const
 	return m_piUnitClassDefenseModifier ? m_piUnitClassDefenseModifier[i] : -1;
 }
 
+int CvUnitInfo::getUnityClasses(int i) const
+{
+	FAssertMsg(i < GC.getNumUnitClassInfos(), "Index out of bounds");
+	FAssertMsg(i > -1, "Index out of bounds");
+	return m_piUnityClasses ? m_piUnityClasses[i] : -1;
+}
+
 int CvUnitInfo::getUnitCombatModifier(int i) const
 {
 	FAssertMsg(i < GC.getNumUnitCombatInfos(), "Index out of bounds");
@@ -4623,6 +4653,9 @@ void CvUnitInfo::read(FDataStreamBase* stream)
 	stream->Read(&m_iHillsDefenseModifier);
 	stream->Read(&m_iPlainsAttackModifier); // Leoreth
 	stream->Read(&m_iPlainsDefenseModifier); // Leoreth
+	stream->Read(&m_iHeathenStrength); // Aeons
+	stream->Read(&m_iUnityStrength); // Aeons
+	stream->Read(&m_iUnityRequired); // Aeons
 	stream->Read(&m_iBombRate);
 	stream->Read(&m_iBombardRate);
 	stream->Read(&m_iSpecialCargo);
@@ -4767,6 +4800,10 @@ void CvUnitInfo::read(FDataStreamBase* stream)
 	SAFE_DELETE_ARRAY(m_piUnitClassDefenseModifier);
 	m_piUnitClassDefenseModifier = new int[GC.getNumUnitClassInfos()];
 	stream->Read(GC.getNumUnitClassInfos(), m_piUnitClassDefenseModifier);
+
+	SAFE_DELETE_ARRAY(m_piUnityClasses); // Aeons
+	m_piUnityClasses = new int[GC.getNumUnitClassInfos()];
+	stream->Read(GC.getNumUnitClassInfos(), m_piUnityClasses);
 
 	SAFE_DELETE_ARRAY(m_piUnitCombatModifier);
 	m_piUnitCombatModifier = new int[GC.getNumUnitCombatInfos()];
@@ -4944,6 +4981,9 @@ void CvUnitInfo::write(FDataStreamBase* stream)
 	stream->Write(m_iHillsDefenseModifier);
 	stream->Write(m_iPlainsAttackModifier); // Leoreth
 	stream->Write(m_iPlainsDefenseModifier); // Leoreth
+	stream->Write(m_iHeathenStrength); // Aeons
+	stream->Write(m_iUnityStrength); // Aeons
+	stream->Write(m_iUnityRequired); // Aeons
 	stream->Write(m_iBombRate);
 	stream->Write(m_iBombardRate);
 	stream->Write(m_iSpecialCargo);
@@ -5053,6 +5093,7 @@ void CvUnitInfo::write(FDataStreamBase* stream)
 	stream->Write(GC.getNumFeatureInfos(), m_piFeatureDefenseModifier);
 	stream->Write(GC.getNumUnitClassInfos(), m_piUnitClassAttackModifier);
 	stream->Write(GC.getNumUnitClassInfos(), m_piUnitClassDefenseModifier);
+	stream->Write(GC.getNumUnitClassInfos(), m_piUnityClasses); // Aeons
 	stream->Write(GC.getNumUnitCombatInfos(), m_piUnitCombatModifier);
 	stream->Write(GC.getNumUnitCombatInfos(), m_piUnitCombatCollateralImmune);
 	stream->Write(NUM_DOMAIN_TYPES, m_piDomainModifier);
@@ -5360,6 +5401,9 @@ bool CvUnitInfo::read(CvXMLLoadUtility* pXML)
 	pXML->GetChildXmlValByName(&m_iHillsDefenseModifier, "iHillsDefense");
 	pXML->GetChildXmlValByName(&m_iPlainsAttackModifier, "iPlainsAttack"); // Leoreth
 	pXML->GetChildXmlValByName(&m_iPlainsDefenseModifier, "iPlainsDefense"); // Leoreth
+	pXML->GetChildXmlValByName(&m_iHeathenStrength, "iHeathenStrength"); // Aeons
+	pXML->GetChildXmlValByName(&m_iUnityStrength, "iUnityStrength"); // Aeons
+	pXML->GetChildXmlValByName(&m_iUnityRequired, "iUnityRequired"); // Aeons
 
 	pXML->SetVariableListTagPair(&m_pbTerrainNative, "TerrainNatives", sizeof(GC.getTerrainInfo((TerrainTypes)0)), GC.getNumTerrainInfos());
 	pXML->SetVariableListTagPair(&m_pbFeatureNative, "FeatureNatives", sizeof(GC.getFeatureInfo((FeatureTypes)0)), GC.getNumFeatureInfos());
@@ -5371,6 +5415,7 @@ bool CvUnitInfo::read(CvXMLLoadUtility* pXML)
 
 	pXML->SetVariableListTagPair(&m_piUnitClassAttackModifier, "UnitClassAttackMods", sizeof(GC.getUnitClassInfo((UnitClassTypes)0)), GC.getNumUnitClassInfos());
 	pXML->SetVariableListTagPair(&m_piUnitClassDefenseModifier, "UnitClassDefenseMods", sizeof(GC.getUnitClassInfo((UnitClassTypes)0)), GC.getNumUnitClassInfos());
+	pXML->SetVariableListTagPair(&m_piUnityClasses, "UnityClasses", sizeof(GC.getUnitClassInfo((UnitClassTypes)0)), GC.getNumUnitClassInfos()); // Aeons
 
 	pXML->SetVariableListTagPair(&m_piUnitCombatModifier, "UnitCombatMods", sizeof(GC.getUnitCombatInfo((UnitCombatTypes)0)), GC.getNumUnitCombatInfos());
 	pXML->SetVariableListTagPair(&m_piUnitCombatCollateralImmune, "UnitCombatCollateralImmunes", sizeof(GC.getUnitCombatInfo((UnitCombatTypes)0)), GC.getNumUnitCombatInfos());
@@ -5738,6 +5783,7 @@ bool CvCivicOptionInfo::read(CvXMLLoadUtility* pXML)
 CvCivicInfo::CvCivicInfo() :
 m_iCivicOptionType(NO_CIVICOPTION),
 m_iAnarchyLength(0),
+m_iImmigrationDesire(0),	// Aeons
 m_iUpkeep(0),
 m_iAIWeight(0),
 m_iGreatPeopleRateModifier(0),
@@ -5787,6 +5833,7 @@ m_iCapitalBuildingProductionModifier(0), // Leoreth
 m_iShrineIncomeLimitChange(0), // Leoreth
 m_iOccupationTimeChange(0), // Leoreth
 m_bMilitaryFoodProduction(false),
+m_bNoExternalMigration(false),
 m_bNoUnhealthyPopulation(false),
 m_bBuildingOnlyHealthy(false),
 m_bNoForeignTrade(false),
@@ -5881,6 +5928,11 @@ int CvCivicInfo::getCivicOptionType() const
 int CvCivicInfo::getAnarchyLength() const
 {
 	return m_iAnarchyLength;
+}
+
+int CvCivicInfo::getImmigrationDesire() const
+{
+	return m_iImmigrationDesire;
 }
 
 int CvCivicInfo::getUpkeep() const
@@ -6103,6 +6155,11 @@ int CvCivicInfo::getLevelExperienceModifier() const
 bool CvCivicInfo::isMilitaryFoodProduction() const
 {
 	return m_bMilitaryFoodProduction;
+}
+
+bool CvCivicInfo::isNoExternalMigration() const
+{
+	return m_bNoExternalMigration;
 }
 
 bool CvCivicInfo::isNoUnhealthyPopulation() const
@@ -6422,6 +6479,7 @@ void CvCivicInfo::read(FDataStreamBase* stream)
 
 	stream->Read(&m_iCivicOptionType);
 	stream->Read(&m_iAnarchyLength);
+	stream->Read(&m_iImmigrationDesire);
 	stream->Read(&m_iUpkeep);
 	stream->Read(&m_iAIWeight);
 	stream->Read(&m_iGreatPeopleRateModifier);
@@ -6471,6 +6529,7 @@ void CvCivicInfo::read(FDataStreamBase* stream)
 	stream->Read(&m_iOccupationTimeChange); // Leoreth
 
 	stream->Read(&m_bMilitaryFoodProduction);
+	stream->Read(&m_bNoExternalMigration);
 	stream->Read(&m_bNoUnhealthyPopulation);
 	stream->Read(&m_bBuildingOnlyHealthy);
 	stream->Read(&m_bNoForeignTrade);
@@ -6608,6 +6667,7 @@ void CvCivicInfo::write(FDataStreamBase* stream)
 
 	stream->Write(m_iCivicOptionType);
 	stream->Write(m_iAnarchyLength);
+	stream->Write(m_iImmigrationDesire);
 	stream->Write(m_iUpkeep);
 	stream->Write(m_iAIWeight);
 	stream->Write(m_iGreatPeopleRateModifier);
@@ -6658,6 +6718,7 @@ void CvCivicInfo::write(FDataStreamBase* stream)
 	stream->Write(m_iOccupationTimeChange); // Leoreth
 
 	stream->Write(m_bMilitaryFoodProduction);
+	stream->Write(m_bNoExternalMigration);
 	stream->Write(m_bNoUnhealthyPopulation);
 	stream->Write(m_bBuildingOnlyHealthy);
 	stream->Write(m_bNoForeignTrade);
@@ -6726,6 +6787,7 @@ bool CvCivicInfo::read(CvXMLLoadUtility* pXML)
 	m_iTechPrereq = pXML->FindInInfoClass(szTextVal);
 
 	pXML->GetChildXmlValByName(&m_iAnarchyLength, "iAnarchyLength");
+	pXML->GetChildXmlValByName(&m_iImmigrationDesire, "iImmigrationDesire");
 
 	pXML->GetChildXmlValByName(szTextVal, "Upkeep");
 	m_iUpkeep = pXML->FindInInfoClass(szTextVal);
@@ -6756,6 +6818,7 @@ bool CvCivicInfo::read(CvXMLLoadUtility* pXML)
 	pXML->GetChildXmlValByName(&m_iGoldPerMilitaryUnit, "iGoldPerMilitaryUnit");
 	pXML->GetChildXmlValByName(&m_iHappyPerMilitaryUnit, "iHappyPerMilitaryUnit");
 	pXML->GetChildXmlValByName(&m_bMilitaryFoodProduction, "bMilitaryFoodProduction");
+	pXML->GetChildXmlValByName(&m_bNoExternalMigration, "bNoExternalMigration");
 	pXML->GetChildXmlValByName(&m_iMaxConscript, "iMaxConscript");
 	pXML->GetChildXmlValByName(&m_bNoUnhealthyPopulation, "bNoUnhealthyPopulation");
 	pXML->GetChildXmlValByName(&m_bBuildingOnlyHealthy, "bBuildingOnlyHealthy");
@@ -6898,6 +6961,7 @@ bool CvCivicInfo::read(CvXMLLoadUtility* pXML)
 
 	// Leoreth
 	pXML->SetVariableListTagPair(&m_paiSpecialistCounts, "SpecialistCounts", sizeof(GC.getSpecialistInfo((SpecialistTypes)0)), GC.getNumSpecialistInfos());
+
 
 	// Leoreth
 	pXML->SetVariableListTagPair(&m_paiDomainExperienceModifiers, "DomainExperienceModifiers", sizeof(GC.getDomainInfo((DomainTypes)0)), NUM_DOMAIN_TYPES);
@@ -7331,6 +7395,7 @@ m_iCultureHappiness(0), // Leoreth
 m_iAreaHappiness(0),
 m_iGlobalHappiness(0),
 m_iStateReligionHappiness(0),
+m_iImmigrationDesireBuildings(0), // Aeons
 m_iWorkerSpeedModifier(0),
 m_iMilitaryProductionModifier(0),
 m_iSpaceProductionModifier(0),
@@ -7341,6 +7406,7 @@ m_iGlobalTradeRoutes(0),
 m_iTradeRouteModifier(0),
 m_iCultureTradeRouteModifier(0), // Leoreth
 m_iForeignTradeRouteModifier(0),
+m_iDifferentReligionTradeRouteModifier(0),
 m_iAssetValue(0),
 m_iPowerValue(0),
 m_iSpecialBuildingType(NO_SPECIALBUILDING),
@@ -7416,6 +7482,7 @@ m_piYieldModifier(NULL),
 m_piPowerYieldModifier(NULL),
 m_piAreaYieldModifier(NULL),
 m_piGlobalYieldModifier(NULL),
+m_piCultureYieldModifier(NULL), // Aeons
 m_piCommerceChange(NULL),
 m_piObsoleteSafeCommerceChange(NULL),
 m_piCommerceChangeDoubleTime(NULL),
@@ -7447,6 +7514,7 @@ m_pbCommerceFlexible(NULL),
 m_pbCommerceChangeOriginalOwner(NULL),
 m_pbBuildingClassNeededInCity(NULL),
 m_ppaiSpecialistYieldChange(NULL),
+m_ppaiSpecialistHappyChange(NULL), // Aeons
 m_ppaiBonusYieldModifier(NULL),
 m_ppaiBonusCommerceModifier(NULL), //Leoreth
 m_ppaiBonusYieldChange(NULL) //Leoreth
@@ -7474,6 +7542,7 @@ CvBuildingInfo::~CvBuildingInfo()
 	SAFE_DELETE_ARRAY(m_piPowerYieldModifier);
 	SAFE_DELETE_ARRAY(m_piAreaYieldModifier);
 	SAFE_DELETE_ARRAY(m_piGlobalYieldModifier);
+	SAFE_DELETE_ARRAY(m_piCultureYieldModifier); // Aeons
 	SAFE_DELETE_ARRAY(m_piCommerceChange);
 	SAFE_DELETE_ARRAY(m_piObsoleteSafeCommerceChange);
 	SAFE_DELETE_ARRAY(m_piCommerceChangeDoubleTime);
@@ -7512,6 +7581,12 @@ CvBuildingInfo::~CvBuildingInfo()
 			SAFE_DELETE_ARRAY(m_ppaiSpecialistYieldChange[i]);
 		}
 		SAFE_DELETE_ARRAY(m_ppaiSpecialistYieldChange);
+	}
+
+	// Aeons
+	if (m_ppaiSpecialistHappyChange != NULL)
+	{
+		SAFE_DELETE_ARRAY(m_ppaiSpecialistHappyChange);
 	}
 
 	if (m_ppaiBonusYieldModifier != NULL)
@@ -7802,6 +7877,11 @@ int CvBuildingInfo::getStateReligionHappiness() const
 	return m_iStateReligionHappiness;
 }
 
+int CvBuildingInfo::getImmigrationDesireBuildings() const
+{
+	return m_iImmigrationDesireBuildings;
+}
+
 int CvBuildingInfo::getWorkerSpeedModifier() const
 {
 	return m_iWorkerSpeedModifier;
@@ -7851,6 +7931,11 @@ int CvBuildingInfo::getCultureTradeRouteModifier() const
 int CvBuildingInfo::getForeignTradeRouteModifier() const
 {
 	return m_iForeignTradeRouteModifier;
+}
+
+int CvBuildingInfo::getDifferentReligionTradeRouteModifier() const
+{
+	return m_iDifferentReligionTradeRouteModifier;
 }
 
 int CvBuildingInfo::getAssetValue() const
@@ -8262,6 +8347,18 @@ int* CvBuildingInfo::getGlobalYieldModifierArray() const
 	return m_piGlobalYieldModifier;
 }
 
+int CvBuildingInfo::getCultureYieldModifier(int i) const
+{
+	FAssertMsg(i < NUM_YIELD_TYPES, "Index out of bounds");
+	FAssertMsg(i > -1, "Index out of bounds");
+	return m_piCultureYieldModifier ? m_piCultureYieldModifier[i] : -1;
+}
+
+int* CvBuildingInfo::getCultureYieldModifierArray() const
+{
+	return m_piCultureYieldModifier;
+}
+
 int CvBuildingInfo::getSeaPlotYieldChange(int i) const
 {
 	FAssertMsg(i < NUM_YIELD_TYPES, "Index out of bounds");
@@ -8581,6 +8678,14 @@ int CvBuildingInfo::getSpecialistYieldChange(int i, int j) const
 	return m_ppaiSpecialistYieldChange ? m_ppaiSpecialistYieldChange[i][j] : -1;
 }
 
+// Aeons
+int CvBuildingInfo::getSpecialistHappyChange(int i) const
+{
+	FAssertMsg(i < GC.getNumSpecialistInfos(), "Index out of bounds");
+	FAssertMsg(i > -1, "Index out of bounds");
+	return m_ppaiSpecialistHappyChange ? m_ppaiSpecialistHappyChange[i] : 0;
+}
+
 int* CvBuildingInfo::getSpecialistYieldChangeArray(int i) const
 {
 	FAssertMsg(i < GC.getNumSpecialistInfos(), "Index out of bounds");
@@ -8778,6 +8883,7 @@ void CvBuildingInfo::read(FDataStreamBase* stream)
 	stream->Read(&m_iAreaHappiness);
 	stream->Read(&m_iGlobalHappiness);
 	stream->Read(&m_iStateReligionHappiness);
+	stream->Read(&m_iImmigrationDesireBuildings); // Aeons
 	stream->Read(&m_iWorkerSpeedModifier);
 	stream->Read(&m_iMilitaryProductionModifier);
 	stream->Read(&m_iSpaceProductionModifier);
@@ -8788,6 +8894,7 @@ void CvBuildingInfo::read(FDataStreamBase* stream)
 	stream->Read(&m_iTradeRouteModifier);
 	stream->Read(&m_iCultureTradeRouteModifier); // Leoreth
 	stream->Read(&m_iForeignTradeRouteModifier);
+	stream->Read(&m_iDifferentReligionTradeRouteModifier);
 	stream->Read(&m_iAssetValue);
 	stream->Read(&m_iPowerValue);
 	stream->Read(&m_iSpecialBuildingType);
@@ -8909,6 +9016,10 @@ void CvBuildingInfo::read(FDataStreamBase* stream)
 	SAFE_DELETE_ARRAY(m_piGlobalYieldModifier);
 	m_piGlobalYieldModifier = new int[NUM_YIELD_TYPES];
 	stream->Read(NUM_YIELD_TYPES, m_piGlobalYieldModifier);
+
+	SAFE_DELETE_ARRAY(m_piCultureYieldModifier);
+	m_piCultureYieldModifier = new int[NUM_YIELD_TYPES];
+	stream->Read(NUM_YIELD_TYPES, m_piCultureYieldModifier);
 
 	SAFE_DELETE_ARRAY(m_piCommerceChange);
 	m_piCommerceChange = new int[NUM_COMMERCE_TYPES];
@@ -9049,6 +9160,15 @@ void CvBuildingInfo::read(FDataStreamBase* stream)
 		stream->Read(NUM_YIELD_TYPES, m_ppaiSpecialistYieldChange[i]);
 	}
 
+	// Aeons
+	if (m_ppaiSpecialistHappyChange != NULL)
+	{
+		SAFE_DELETE_ARRAY(m_ppaiSpecialistHappyChange);
+	}
+
+	m_ppaiSpecialistHappyChange = new int[GC.getNumSpecialistInfos()];
+	stream->Read(GC.getNumSpecialistInfos(), m_ppaiSpecialistHappyChange);
+
 	if (m_ppaiBonusYieldModifier != NULL)
 	{
 		for(i=0;i<GC.getNumBonusInfos();i++)
@@ -9160,6 +9280,7 @@ void CvBuildingInfo::write(FDataStreamBase* stream)
 	stream->Write(m_iAreaHappiness);
 	stream->Write(m_iGlobalHappiness);
 	stream->Write(m_iStateReligionHappiness);
+	stream->Write(m_iImmigrationDesireBuildings); // Aenos
 	stream->Write(m_iWorkerSpeedModifier);
 	stream->Write(m_iMilitaryProductionModifier);
 	stream->Write(m_iSpaceProductionModifier);
@@ -9170,6 +9291,7 @@ void CvBuildingInfo::write(FDataStreamBase* stream)
 	stream->Write(m_iTradeRouteModifier);
 	stream->Write(m_iCultureTradeRouteModifier); // Leoreth
 	stream->Write(m_iForeignTradeRouteModifier);
+	stream->Write(m_iDifferentReligionTradeRouteModifier);
 	stream->Write(m_iAssetValue);
 	stream->Write(m_iPowerValue);
 	stream->Write(m_iSpecialBuildingType);
@@ -9252,6 +9374,7 @@ void CvBuildingInfo::write(FDataStreamBase* stream)
 	stream->Write(NUM_YIELD_TYPES, m_piPowerYieldModifier);
 	stream->Write(NUM_YIELD_TYPES, m_piAreaYieldModifier);
 	stream->Write(NUM_YIELD_TYPES, m_piGlobalYieldModifier);
+	stream->Write(NUM_YIELD_TYPES, m_piCultureYieldModifier); // Aeons
 	stream->Write(NUM_COMMERCE_TYPES, m_piCommerceChange);
 	stream->Write(NUM_COMMERCE_TYPES, m_piObsoleteSafeCommerceChange);
 	stream->Write(NUM_COMMERCE_TYPES, m_piCommerceChangeDoubleTime);
@@ -9289,6 +9412,9 @@ void CvBuildingInfo::write(FDataStreamBase* stream)
 	{
 		stream->Write(NUM_YIELD_TYPES, m_ppaiSpecialistYieldChange[i]);
 	}
+
+	// Aeons
+	stream->Write(GC.getNumSpecialistInfos(), m_ppaiSpecialistHappyChange);
 
 	for(i=0;i<GC.getNumBonusInfos();i++)
 	{
@@ -9564,6 +9690,7 @@ bool CvBuildingInfo::read(CvXMLLoadUtility* pXML)
 	pXML->GetChildXmlValByName(&m_iAreaHappiness, "iAreaHappiness");
 	pXML->GetChildXmlValByName(&m_iGlobalHappiness, "iGlobalHappiness");
 	pXML->GetChildXmlValByName(&m_iStateReligionHappiness, "iStateReligionHappiness");
+	pXML->GetChildXmlValByName(&m_iImmigrationDesireBuildings, "iImmigrationDesire");
 	pXML->GetChildXmlValByName(&m_iWorkerSpeedModifier, "iWorkerSpeedModifier");
 	pXML->GetChildXmlValByName(&m_iMilitaryProductionModifier, "iMilitaryProductionModifier");
 	pXML->GetChildXmlValByName(&m_iSpaceProductionModifier, "iSpaceProductionModifier");
@@ -9574,6 +9701,7 @@ bool CvBuildingInfo::read(CvXMLLoadUtility* pXML)
 	pXML->GetChildXmlValByName(&m_iTradeRouteModifier, "iTradeRouteModifier");
 	pXML->GetChildXmlValByName(&m_iCultureTradeRouteModifier, "iCultureTradeRouteModifier");
 	pXML->GetChildXmlValByName(&m_iForeignTradeRouteModifier, "iForeignTradeRouteModifier");
+	pXML->GetChildXmlValByName(&m_iDifferentReligionTradeRouteModifier, "iDifferentReligionTradeRouteModifier");
 	pXML->GetChildXmlValByName(&m_iGlobalPopulationChange, "iGlobalPopulationChange");
 	pXML->GetChildXmlValByName(&m_iFreeTechs, "iFreeTechs");
 	pXML->GetChildXmlValByName(&m_iDefenseModifier, "iDefense");
@@ -9690,6 +9818,17 @@ bool CvBuildingInfo::read(CvXMLLoadUtility* pXML)
 	else
 	{
 		pXML->InitList(&m_piGlobalYieldModifier, NUM_YIELD_TYPES);
+	}
+
+	// Aeons - Should this be here?
+	if (gDLL->getXMLIFace()->SetToChildByTagName(pXML->GetXML(), "CultureYieldModifiers"))
+	{
+		pXML->SetYields(&m_piCultureYieldModifier);
+		gDLL->getXMLIFace()->SetToParent(pXML->GetXML());
+	}
+	else
+	{
+		pXML->InitList(&m_piCultureYieldModifier, NUM_YIELD_TYPES);
 	}
 
 	// Leoreth
@@ -9883,6 +10022,29 @@ bool CvBuildingInfo::read(CvXMLLoadUtility* pXML)
 			gDLL->getXMLIFace()->SetToParent(pXML->GetXML());
 		}
 
+		// set the current xml node to it's parent node
+		gDLL->getXMLIFace()->SetToParent(pXML->GetXML());
+	}
+
+	// Aeons
+	pXML->InitList(&m_ppaiSpecialistHappyChange, GC.getNumSpecialistInfos());
+	if (gDLL->getXMLIFace()->SetToChildByTagName(pXML->GetXML(),"SpecialistHappyChange"))
+	{
+		iNumChildren = gDLL->getXMLIFace()->GetNumChildren(pXML->GetXML());
+		for(j=0;j<iNumChildren;j++)
+		{
+			pXML->GetChildXmlValByName(szTextVal, "SpecialistType");
+			k = pXML->FindInInfoClass(szTextVal);
+			if (k > -1)
+			{
+			    m_ppaiSpecialistHappyChange[k] = 0;
+			    pXML->GetChildXmlValByName(&m_ppaiSpecialistHappyChange[k], "iHappiness");
+			}
+			if (!gDLL->getXMLIFace()->NextSibling(pXML->GetXML()))
+			{
+				break;
+			}
+		}
 		// set the current xml node to it's parent node
 		gDLL->getXMLIFace()->SetToParent(pXML->GetXML());
 	}

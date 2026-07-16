@@ -96,6 +96,7 @@ BOOL APIENTRY DllMain(HANDLE hModule,
 
 // BUG - EXE/DLL Paths - start
 		dllModule = hModule;
+
 // BUG - EXE/DLL Paths - end
 
 		// The DLL is being loaded into the virtual address space of the current process as a result of the process starting up 

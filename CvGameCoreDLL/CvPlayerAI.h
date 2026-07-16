@@ -403,6 +403,7 @@ protected:
 	
 	mutable int m_iAverageGreatPeopleMultiplier;
 	mutable int m_iAverageTradeMultiplier;
+
 	
 	mutable int *m_aiAverageYieldMultiplier;
 	mutable int *m_aiAverageCommerceMultiplier;
@@ -458,7 +459,7 @@ protected:
 	int AI_getStrategyHash() const;
 	void AI_calculateAverages() const;
 	
-	int AI_getHappinessWeight(int iHappy, int iExtraPop, bool bClampToHalf = false) const;
+	int AI_getHappinessWeight(int iHappy, int iExtraPop) const;
 	int AI_getHealthWeight(int iHealth, int iExtraPop) const;
 	
 	void AI_convertUnitAITypesForCrush();

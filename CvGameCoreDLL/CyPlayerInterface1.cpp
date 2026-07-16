@@ -168,6 +168,7 @@ void CyPlayerPythonInterface1(python::class_<CyPlayer>& x)
 		.def("countHeadquarters", &CyPlayer::countHeadquarters, "int () - Counts the # of headquarters this player has")
 		.def("countCorporations", &CyPlayer::countCorporations, "int (CorporationTypes) - Counts the # of corporations this player has")
 		.def("foundCorporation", &CyPlayer::foundCorporation, "void (int /*CorporationTypes*/ eCorporation)")
+		.def("canExternalMigrate", &CyPlayer::canExternalMigrate, "bool ()")
 
 		.def("getCivicAnarchyLength", &CyPlayer::getCivicAnarchyLength, "int (int (CivicTypes*) paeNewCivics)")
 		.def("getReligionAnarchyLength", &CyPlayer::getReligionAnarchyLength, "int ()")

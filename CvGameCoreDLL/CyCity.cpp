@@ -532,6 +532,12 @@ int CyCity::happyLevel()
 	return m_pCity ? m_pCity->happyLevel() : -1;
 }
 
+int CyCity::immigrationDesire(bool immigration)
+{
+	return m_pCity ? m_pCity->immigrationDesire(immigration) : -1;
+}
+
+
 int CyCity::angryPopulation(int iExtra)
 {
 	return m_pCity ? m_pCity->angryPopulation(iExtra) : -1;
@@ -1400,6 +1406,11 @@ int CyCity::getTradeRouteModifier()
 int CyCity::getForeignTradeRouteModifier()															
 {
 	return m_pCity ? m_pCity->getForeignTradeRouteModifier() : -1;
+}
+
+int CyCity::getDifferentReligionTradeRouteModifier()															
+{
+	return m_pCity ? m_pCity->getDifferentReligionTradeRouteModifier() : -1;
 }
 
 int CyCity::getBuildingDefense()

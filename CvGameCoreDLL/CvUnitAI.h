@@ -80,6 +80,7 @@ protected:
 	void AI_scientistMove();
 	void AI_generalMove();
 	void AI_merchantMove();
+	void AI_trekkerMove(); // Aeons
 	void AI_engineerMove();
 	void AI_spyMove();
 	void AI_statesmanMove(); // Leoreth

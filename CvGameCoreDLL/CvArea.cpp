@@ -988,7 +988,7 @@ int CvArea::getClosestAreaSize(int iSize) const
 					{
 						continue;
 					}
-
+					
 					iCurrentDistance = stepDistance(pCurrentPlot->getX(), pCurrentPlot->getY(), pLoopPlot->getX(), pLoopPlot->getY());
 
 					if (iCurrentDistance < iClosestDistance)
@@ -1003,7 +1003,6 @@ int CvArea::getClosestAreaSize(int iSize) const
 
 	return iClosestArea;
 }
-
 
 int CvArea::getEnemyPower(PlayerTypes ePlayer, bool bIncludeMinors) const
 {

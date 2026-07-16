@@ -1,3 +1,4 @@
+
 // game.cpp
 
 #include "CvGameCoreDLL.h"
@@ -534,6 +535,9 @@ void CvGame::reset(HandicapTypes eHandicap, bool bConstructorCall)
 	m_bHotPbemBetweenTurns = false;
 	m_bPlayerOptionsSent = false;
 	m_bNukesValid = false;
+
+	// Leoreth
+	m_bUpdatePlotGroups = true;
 
 	m_eHandicap = eHandicap;
 	m_ePausePlayer = NO_PLAYER;
@@ -2323,7 +2327,7 @@ void CvGame::updateTechRanks()
 	{
 		setTechRank(iIndex++, *it);
 
-		if (iIndex == countCivTeamsAlive() / 3)
+		if (iIndex == countCivTeamsAlive() / 2)
 		{
 			setMedianTechValue(GET_TEAM(*it).getTotalTechValue());
 		}
@@ -2339,6 +2343,7 @@ int CvGame::getTechRank(TeamTypes eTeam) const
 {
 	return m_aiTechRankTeam[(int)eTeam];
 }
+
 
 void CvGame::setMedianTechValue(int iValue)
 {
@@ -8188,7 +8193,6 @@ void CvGame::processVote(const VoteTriggeredData& kData, int iChange)
 
 			setVoteOutcome(kData, NO_PLAYER_VOTE);
 		}
-
 		if (kVote.isDecolonize())
 		{
 			CvCity* pCity = GET_PLAYER(kData.kVoteOption.ePlayer).getCity(kData.kVoteOption.iCityId);
@@ -10935,4 +10939,14 @@ void CvGame::changePowerConsumedCount(int iChange)
 	{
 		setPowerConsumedCount(getPowerConsumedCount() + iChange);
 	}
+}
+
+bool CvGame::isUpdatePlotGroups() const
+{
+	return m_bUpdatePlotGroups;
+}
+
+void CvGame::setUpdatePlotGroups(bool bNewValue)
+{
+	m_bUpdatePlotGroups = bNewValue;
 }

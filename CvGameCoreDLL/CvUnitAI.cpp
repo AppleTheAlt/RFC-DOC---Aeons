@@ -308,6 +308,11 @@ bool CvUnitAI::AI_update()
 			AI_merchantMove();
 			break;
 
+		// Aeons
+		case UNITAI_TREKKER:
+			AI_trekkerMove();
+			break;
+
 		case UNITAI_ENGINEER:
 			AI_engineerMove();
 			break;
@@ -666,6 +671,7 @@ int CvUnitAI::AI_groupFirstVal()
 	case UNITAI_GENERAL:
 	case UNITAI_MERCHANT:
 	case UNITAI_ENGINEER:
+	case UNITAI_TREKKER:
 		return 11;
 		break;
 
@@ -1321,6 +1327,12 @@ void CvUnitAI::AI_workerMove()
 
 	bCanRoute = canBuildRoute();
 	bNextCity = false;
+
+	// Aeons - Benin UP: hurry with slaves
+	if (m_pUnitInfo->isSlave() && AI_hurry() && getCivilizationType() == BENIN)
+	{
+		return;
+	}
 
 	// XXX could be trouble...
 	if (plot()->getOwnerINLINE() != getOwnerINLINE())
@@ -3912,6 +3924,92 @@ void CvUnitAI::AI_merchantMove()
 	return;
 }
 
+// Aeons
+void CvUnitAI::AI_trekkerMove()
+{
+	PROFILE_FUNC();
+
+	if (AI_construct())
+	{
+		return;
+	}
+
+	if (AI_discover(true, true))
+	{
+		return;
+	}
+
+	int iGoldenAgeValue = (GET_PLAYER(getOwnerINLINE()).AI_calculateGoldenAgeValue() / (GET_PLAYER(getOwnerINLINE()).unitsRequiredForGoldenAge()));
+	int iDiscoverValue = std::max(1, getDiscoverResearch(NO_TECH));
+
+	if (AI_trade(iGoldenAgeValue * 2))
+	{
+	    return;
+	}
+
+	if (((iGoldenAgeValue * 100) / iDiscoverValue) > 60)
+	{
+        if (AI_goldenAge())
+        {
+            return;
+        }
+
+        if (AI_trade(iGoldenAgeValue))
+        {
+            return;
+        }
+
+        if (iDiscoverValue > iGoldenAgeValue)
+        {
+            if (AI_discover())
+            {
+                return;
+            }
+            if (GET_PLAYER(getOwnerINLINE()).getUnitClassCount(getUnitClassType()) > 1)
+            {
+                if (AI_join())
+                {
+                    return;
+                }
+            }
+        }
+	}
+	else
+	{
+		if (AI_discover())
+		{
+			return;
+		}
+
+		if (AI_join())
+		{
+			return;
+		}
+	}
+
+	if ((GET_PLAYER(getOwnerINLINE()).AI_getPlotDanger(plot(), 2) > 0) ||
+		  (getGameTurnCreated() < (GC.getGameINLINE().getGameTurn() - 25)))
+	{
+		if (AI_discover())
+		{
+			return;
+		}
+	}
+
+	if (AI_retreatToCity())
+	{
+		return;
+	}
+
+	if (AI_safety())
+	{
+		return;
+	}
+
+	getGroup()->pushMission(MISSION_SKIP);
+	return;
+}
+
 
 void CvUnitAI::AI_engineerMove()
 {
@@ -5444,6 +5542,7 @@ void CvUnitAI::AI_settlerSeaMove()
 			}
 		}
 	}
+
 
 	if (AI_pickup(UNITAI_WORKER))
 	{
@@ -7532,7 +7631,7 @@ bool CvUnitAI::AI_load(UnitAITypes eUnitAI, MissionAITypes eMissionAI, UnitAITyp
 										{
 											if ((iMaxCargoOurUnitAI == -1) || (pLoopUnit->getUnitAICargo(AI_getUnitAIType()) <= iMaxCargoOurUnitAI))
 											{
-												if (getGroup()->getHeadUnitAI() != UNITAI_CITY_DEFENSE || !plot()->isCity() || (plot()->getTeam() != getTeam()) || plot()->getPlotCity()->AI_isDefended(-1))
+												if (getGroup()->getHeadUnitAI() != UNITAI_CITY_DEFENSE || !plot()->isCity() || (plot()->getTeam() != getTeam()) /* || plot()->getPlotCity()->AI_isDefended(-1)*/) // Aeons - The last part may be causing Mediterranean to be unsettled...
 												{
 													if (!(pLoopUnit->plot()->isVisibleEnemyUnit(this)))
 													{
@@ -8241,7 +8340,8 @@ int CvUnitAI::AI_getPlotDefendersNeeded(CvPlot* pPlot, int iExtra)
 				if ((pLoopPlot->getTeam() != getTeam()) || pLoopPlot->isCoastalLand())
 				{
 				    iNumPlots++;
-                    if (isEnemy(pLoopPlot->getTeam()))
+                    // Leoreth: don't choke different domain or independents
+				    if (pLoopPlot->isWater() != plot()->isWater() && pLoopPlot->isOwned() && !GET_PLAYER(pLoopPlot->getOwner()).isMinorCiv() && isEnemy(pLoopPlot->getTeam()))
                     {
                         iNumPlots += 4;
                     }
@@ -9268,7 +9368,7 @@ std::pair<CvPlot*, CvPlot*> CvUnitAI::AI_spreadTarget(ReligionTypes eReligion, b
 												if (plot()->getOwnerINLINE() == pLoopCity->getOwnerINLINE())
 												{
 													iValue *= 10;
-													if (pLoopCity->isRevealed(getTeam(), false))
+													if (pLoopCity->isRevealed(getTeam(), false) && AI_isTargetableCity(pLoopCity))
 													{
 														bForceMove = true;
 													}
@@ -9993,7 +10093,6 @@ bool CvUnitAI::AI_construct(int iMaxCount, int iMaxSingleBuildingCount, int iThr
 								{
 									bDoesBuild = true;
 								}
-
 								if (bDoesBuild && (pLoopCity->getNumBuilding(eBuilding) > 0))
 								{
 									iCount++;
@@ -11764,7 +11863,7 @@ bool CvUnitAI::AI_targetMinorCity(int iMinorCiv, bool bTarget)
 	{
 		if (AI_plotValid(pLoopCity->plot()))
 		{
-			if (pLoopCity->isRevealed(getTeam(), false) && AI_isTargetableCity(pLoopCity))
+			if (pLoopCity->isRevealed(getTeam(), false))
 			{
 				if (bTarget || pLoopCity->plot()->getExpansion() == getOwnerINLINE())
 				{
@@ -11850,7 +11949,6 @@ bool CvUnitAI::AI_targetMinorCity(int iMinorCiv, bool bTarget)
 	return false;
 }
 //Rhye - end
-
 
 bool CvUnitAI::AI_isTargetableCity(CvCity* pCity)
 {
@@ -13397,6 +13495,7 @@ bool CvUnitAI::AI_assaultSeaTransport(bool bBarbarian)
 	{
 		FAssert(!(pBestPlot->isImpassable()));
 
+
 		if ((pBestPlot == pBestAssaultPlot) || (stepDistance(pBestPlot->getX_INLINE(), pBestPlot->getY_INLINE(), pBestAssaultPlot->getX_INLINE(), pBestAssaultPlot->getY_INLINE()) == 1))
 		{
 			if (atPlot(pBestAssaultPlot))
@@ -13657,7 +13756,12 @@ bool CvUnitAI::AI_settlerSeaTransport()
 	{
 		FAssert(!(pBestPlot->isImpassable()));
 
-		if (pBestFoundPlot->area()->getNumTiles() > 1)
+		if (getUnitAICargo(UNITAI_CITY_DEFENSE) == 0 && pBestFoundPlot->area()->getNumOwnedTiles() > 0)
+		{
+			return false;
+		}
+
+		if (getUnitAICargo(UNITAI_WORKER) == 0 && pBestFoundPlot->area()->getNumAIUnits(getOwnerINLINE(), UNITAI_WORKER) < pBestFoundPlot->area()->getCitiesPerPlayer(getOwnerINLINE()))
 		{
 			if ((getUnitAICargo(UNITAI_CITY_DEFENSE) == 0 || getUnitAICargo(UNITAI_WORKER) == 0) && getCivilizationType() != AMERICA)
 			{
@@ -15903,6 +16007,7 @@ bool CvUnitAI::AI_pickup(UnitAITypes eUnitAI)
 	{
 		if (AI_plotValid(pLoopCity->plot()))
 		{
+
 			if ((AI_getUnitAIType() != UNITAI_ASSAULT_SEA) || pLoopCity->AI_isDefended(-1))
 			{
 				int iCount = pLoopCity->plot()->plotCount(PUF_isUnitAIType, eUnitAI, -1, getOwnerINLINE(), NO_TEAM, PUF_isFiniteRange);
@@ -18203,8 +18308,7 @@ bool CvUnitAI::AI_choke(int iRange)
 			CvPlot* pLoopPlot = plotXY(getX_INLINE(), getY_INLINE(), iX, iY);
 			if (pLoopPlot != NULL)
 			{
-				// Leoreth: don't choke different domain or independents
-				if (pLoopPlot->isWater() != plot()->isWater() && pLoopPlot->isOwned() && !GET_PLAYER(pLoopPlot->getOwner()).isMinorCiv() && isEnemy(pLoopPlot->getTeam()))
+				if (isEnemy(pLoopPlot->getTeam()))
 				{
 					CvCity* pWorkingCity = pLoopPlot->getWorkingCity();
 					if ((pWorkingCity != NULL) && (pWorkingCity->getTeam() == pLoopPlot->getTeam()))
