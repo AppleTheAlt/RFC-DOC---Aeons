@@ -5,7 +5,7 @@ BeginGame
 	Option=GAMEOPTION_AGGRESSIVE_AI
 	Option=GAMEOPTION_NO_TECH_BROKERING
 	Description=TXT_KEY_RHYES_WB_DESC
-	ModPath=Mods\RFC Dawn of Civilization
+	ModPath=Mods\RFC Aeons
 EndGame
 
 BeginMap
@@ -27,18 +27,18 @@ BeginPlot
 	EndUnit
 EndPlot
 BeginPlot
-	x=89,y=47
+	x=90,y=45
 	BeginUnit
-		UnitType=UNIT_MILITIA
-		UnitOwner=CIVILIZATION_BABYLONIA
+		UnitType=UNIT_SUMERIAN_VULTURE
+		UnitOwner=CIVILIZATION_SUMERIA
 	EndUnit
 	BeginUnit
 		UnitType=UNIT_WORKER
-		UnitOwner=CIVILIZATION_BABYLONIA
+		UnitOwner=CIVILIZATION_SUMERIA
 	EndUnit
 	BeginUnit
 		UnitType=UNIT_SETTLER
-		UnitOwner=CIVILIZATION_BABYLONIA
+		UnitOwner=CIVILIZATION_SUMERIA
 	EndUnit
 EndPlot
 BeginPlot

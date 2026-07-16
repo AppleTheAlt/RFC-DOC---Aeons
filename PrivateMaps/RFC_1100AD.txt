@@ -1,0 +1,8302 @@
+Platy Builder
+Version=11
+
+BeginGame
+	Calendar=CALENDAR_DEFAULT
+	Option=GAMEOPTION_AGGRESSIVE_AI
+	Option=GAMEOPTION_NO_TECH_BROKERING
+	Description=TXT_KEY_RHYES_WB_DESC
+	ModPath=Mods\RFC Aeons
+EndGame
+
+BeginMap
+EndMap
+
+
+### Plot Info ###
+BeginPlot
+	x=15,y=42
+	ImprovementType=IMPROVEMENT_QUARRY
+EndPlot
+BeginPlot
+	x=15,y=44
+	RouteType=ROUTE_ROAD
+	BeginUnit
+		UnitType=UNIT_ARCHER
+		UnitOwner=CIVILIZATION_NATIVE
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_TOLTEC_ATLATL
+		UnitOwner=CIVILIZATION_NATIVE
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_ARCHER
+		UnitOwner=CIVILIZATION_NATIVE
+	EndUnit
+	BeginCity
+		CityOwner=CIVILIZATION_NATIVE
+		CityName=Ts'intsuntsani
+		CityPopulation=4
+		BuildingType=BUILDING_GRANARY
+		BeginCulture
+			Civilization=CIVILIZATION_NATIVE, Culture=20
+		EndCulture
+		YearFounded=1100
+		YearAcquired=1100
+	EndCity
+EndPlot
+BeginPlot
+	x=16,y=42
+	ImprovementType=IMPROVEMENT_MINE
+EndPlot
+BeginPlot
+	x=16,y=44
+	ImprovementType=IMPROVEMENT_MINE
+	RouteType=ROUTE_ROAD
+EndPlot
+BeginPlot
+	x=17,y=43
+	RouteType=ROUTE_ROAD
+	BeginUnit
+		UnitType=UNIT_TOLTEC_ATLATL
+		UnitOwner=CIVILIZATION_NATIVE
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_TOLTEC_ATLATL
+		UnitOwner=CIVILIZATION_NATIVE
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_ARCHER
+		UnitOwner=CIVILIZATION_NATIVE
+	EndUnit
+	BeginCity
+		CityOwner=CIVILIZATION_NATIVE
+		CityName=Tollan
+		CityPopulation=4
+		BuildingType=BUILDING_GRANARY
+		BuildingType=BUILDING_TANNERY
+		BuildingType=BUILDING_MONUMENT
+		BuildingType=BUILDING_LIBRARY
+		BuildingType=BUILDING_AQUEDUCT
+		BuildingType=BUILDING_MARKET
+		BuildingType=BUILDING_PYRAMID_OF_THE_SUN
+		BeginCulture
+			Civilization=CIVILIZATION_NATIVE, Culture=50
+		EndCulture
+		YearFounded=-200
+		YearAcquired=1050
+		PreviousOwner=CIVILIZATION_TOLTECS
+	EndCity
+EndPlot
+BeginPlot
+	x=17,y=44
+	ImprovementType=IMPROVEMENT_MINE
+EndPlot
+BeginPlot
+	x=17,y=45
+	RouteType=ROUTE_ROAD
+EndPlot
+BeginPlot
+	x=18,y=42
+	ImprovementType=IMPROVEMENT_FARM
+	RouteType=ROUTE_ROAD
+EndPlot
+BeginPlot
+	x=18,y=45
+	ImprovementType=IMPROVEMENT_ORCHARD
+EndPlot
+BeginPlot
+	x=19,y=41
+	RouteType=ROUTE_ROAD
+	BeginUnit
+		UnitType=UNIT_MAYAN_HOLKAN
+		UnitOwner=CIVILIZATION_NATIVE
+	EndUnit
+	BeginCity
+		CityOwner=CIVILIZATION_NATIVE
+		CityName=Danibaan
+		CityPopulation=3
+		BuildingType=BUILDING_GRANARY
+		BuildingType=BUILDING_TANNERY
+		BuildingType=BUILDING_HARBOR
+		BeginCulture
+			Civilization=CIVILIZATION_NATIVE, Culture=20
+		EndCulture
+		YearFounded=-500
+		YearAcquired=-500
+		PreviousOwner=CIVILIZATION_MAYA
+	EndCity
+EndPlot
+
+BeginPlot
+	x=19,y=43
+	RouteType=ROUTE_ROAD
+EndPlot
+BeginPlot
+	x=20,y=41
+	ImprovementType=IMPROVEMENT_PLANTATION
+EndPlot
+BeginPlot
+	x=20,y=42
+	RouteType=ROUTE_ROAD
+EndPlot
+BeginPlot
+	x=21,y=42
+	ImprovementType=IMPROVEMENT_FARM
+	RouteType=ROUTE_ROAD
+EndPlot
+BeginPlot
+	x=21,y=43
+	ImprovementType=IMPROVEMENT_FISHING_BOATS
+EndPlot
+BeginPlot
+	x=22,y=41
+	RouteType=ROUTE_ROAD
+	BeginUnit
+		UnitType=UNIT_MAYAN_HOLKAN
+		UnitOwner=CIVILIZATION_MAYA
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_MAYAN_HOLKAN
+		UnitOwner=CIVILIZATION_MAYA
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_ARCHER
+		UnitOwner=CIVILIZATION_MAYA
+	EndUnit
+	BeginCity
+		CityOwner=CIVILIZATION_MAYA
+		CityName=Yax Mutal
+		CityPopulation=4
+		BuildingType=BUILDING_GRANARY
+		BuildingType=BUILDING_MONUMENT
+		BuildingType=BUILDING_LIBRARY
+		BeginCulture
+			Civilization=CIVILIZATION_MAYA, Culture=50
+		EndCulture
+		YearFounded=-300
+	EndCity
+EndPlot
+BeginPlot
+	x=22,y=43
+	ImprovementType=IMPROVEMENT_PLANTATION
+	RouteType=ROUTE_ROAD
+EndPlot
+BeginPlot
+	x=22,y=44
+	RouteType=ROUTE_ROAD
+	BeginUnit
+		UnitType=UNIT_MAYAN_HOLKAN
+		UnitOwner=CIVILIZATION_MAYA
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_MAYAN_HOLKAN
+		UnitOwner=CIVILIZATION_MAYA
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_ARCHER
+		UnitOwner=CIVILIZATION_MAYA
+	EndUnit
+	BeginCity
+		CityOwner=CIVILIZATION_MAYA
+		CityName=Chichen Itza
+		CityPopulation=2
+		BuildingType=BUILDING_PALACE
+		BuildingType=BUILDING_GRANARY
+		BuildingType=BUILDING_HARBOR
+		BeginCulture
+			Civilization=CIVILIZATION_MAYA, Culture=50
+		EndCulture
+		YearFounded=1220
+	EndCity
+EndPlot
+BeginPlot
+	x=23,y=43
+	ImprovementType=IMPROVEMENT_PLANTATION
+EndPlot
+BeginPlot
+	x=23,y=44
+	ImprovementType=IMPROVEMENT_FARM
+EndPlot
+BeginPlot
+	x=27,y=28
+	RouteType=ROUTE_ROAD
+	BeginUnit
+		UnitType=UNIT_ARCHER
+		UnitOwner=CIVILIZATION_NATIVE
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_WARRIOR
+		UnitOwner=CIVILIZATION_NATIVE
+	EndUnit
+	BeginCity
+		CityOwner=CIVILIZATION_NATIVE
+		CityName=Túcume
+		CityPopulation=3
+		BuildingType=BUILDING_MONUMENT
+		BeginCulture
+			Civilization=CIVILIZATION_NATIVE, Culture=10
+		EndCulture
+		YearFounded=850
+		YearAcquired=850
+		PreviousOwner=CIVILIZATION_NATIVE
+	EndCity
+EndPlot
+BeginPlot
+	x=28,y=25
+	RouteType=ROUTE_ROAD
+	BeginUnit
+		UnitType=UNIT_ARCHER
+		UnitOwner=CIVILIZATION_NATIVE
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_ARCHER
+		UnitOwner=CIVILIZATION_NATIVE
+	EndUnit
+	BeginCity
+		CityOwner=CIVILIZATION_NATIVE
+		CityName=Chan Chan
+		CityPopulation=5
+		BuildingType=BUILDING_GRANARY
+		BuildingType=BUILDING_BARRACKS
+		BuildingType=BUILDING_MONUMENT
+		BuildingType=BUILDING_HARBOR
+		BeginCulture
+			Civilization=CIVILIZATION_NATIVE, Culture=50
+		EndCulture
+		YearFounded=900
+		YearAcquired=900
+	EndCity
+EndPlot
+BeginPlot
+	x=29,y=23
+	ImprovementType=IMPROVEMENT_FARM
+	RouteType=ROUTE_ROAD
+EndPlot
+BeginPlot
+	x=29,y=24
+	ImprovementType=IMPROVEMENT_MINE
+EndPlot
+BeginPlot
+	x=29,y=34
+	ImprovementType=IMPROVEMENT_MINE
+	RouteType=ROUTE_ROAD
+EndPlot
+BeginPlot
+	x=30,y=34
+	RouteType=ROUTE_ROAD
+	BeginUnit
+		UnitType=UNIT_ARCHER
+		UnitOwner=CIVILIZATION_NATIVE
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_ARCHER
+		UnitOwner=CIVILIZATION_NATIVE
+	EndUnit
+	BeginCity
+		CityOwner=CIVILIZATION_NATIVE
+		CityName=Bakata
+		CityPopulation=2
+		BuildingType=BUILDING_GRANARY
+		BeginCulture
+			Civilization=CIVILIZATION_NATIVE, Culture=20
+		EndCulture
+		YearFounded=800
+		YearAcquired=800
+	EndCity
+EndPlot
+BeginPlot
+	x=34,y=21
+	RouteType=ROUTE_ROAD
+EndPlot
+BeginPlot
+	x=34,y=22
+	RouteType=ROUTE_ROAD
+	BeginUnit
+		UnitType=UNIT_ARCHER
+		UnitOwner=CIVILIZATION_NATIVE
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_ARCHER
+		UnitOwner=CIVILIZATION_NATIVE
+	EndUnit
+	BeginCity
+		CityOwner=CIVILIZATION_NATIVE
+		CityName=Tiwanaku
+		CityPopulation=2
+		BuildingType=BUILDING_GRANARY
+		BuildingType=BUILDING_TANNERY
+		BuildingType=BUILDING_MONUMENT
+		BeginCulture
+			Civilization=CIVILIZATION_NATIVE, Culture=30
+		EndCulture
+		YearFounded=1550
+		YearAcquired=1550
+	EndCity
+EndPlot
+BeginPlot
+	x=35,y=21
+	ImprovementType=IMPROVEMENT_MINE
+	RouteType=ROUTE_ROAD
+EndPlot
+BeginPlot
+	x=51,y=75
+	RouteType=ROUTE_ROAD
+	BeginUnit
+		UnitType=UNIT_NORSE_HUSCARL
+		UnitOwner=CIVILIZATION_NORSE
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_NORSE_HUSCARL
+		UnitOwner=CIVILIZATION_NORSE
+	EndUnit
+	BeginCity
+		CityOwner=CIVILIZATION_NORSE
+		CityName=Reykjavik
+		CityPopulation=2
+		BuildingType=BUILDING_HARBOR
+		BuildingType=BUILDING_NORSE_TRADING_POST
+		BeginCulture
+			Civilization=CIVILIZATION_NORSE, Culture=30
+		EndCulture
+		YearFounded=870
+	EndCity
+EndPlot
+BeginPlot
+	x=53,y=51
+	ImprovementType=IMPROVEMENT_FISHING_BOATS
+EndPlot
+BeginPlot
+	x=53,y=64
+	ImprovementType=IMPROVEMENT_COTTAGE
+EndPlot
+BeginPlot
+	x=53,y=65
+	ImprovementType=IMPROVEMENT_PASTURE
+EndPlot
+BeginPlot
+	x=53,y=67
+	ImprovementType=IMPROVEMENT_MINE
+EndPlot
+BeginPlot
+	x=54,y=49
+	ImprovementType=IMPROVEMENT_QUARRY
+EndPlot
+BeginPlot
+	x=54,y=52
+	ImprovementType=IMPROVEMENT_COTTAGE
+EndPlot
+BeginPlot
+	x=54,y=53
+	RouteType=ROUTE_ROAD
+	BeginUnit
+		UnitType=UNIT_CROSSBOWMAN
+		UnitOwner=CIVILIZATION_SPAIN
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_CROSSBOWMAN
+		UnitOwner=CIVILIZATION_SPAIN
+	EndUnit
+	BeginCity
+		CityOwner=CIVILIZATION_SPAIN
+		CityName=Santiago de Compostela
+		CityPopulation=3
+		BuildingType=BUILDING_GRANARY
+		BuildingType=BUILDING_HARBOR
+		BuildingType=BUILDING_SPANISH_CITADEL
+		BuildingType=BUILDING_CATHOLIC_TEMPLE
+		ReligionType=RELIGION_CATHOLICISM
+		BeginCulture
+			Civilization=CIVILIZATION_SPAIN, Culture=50
+		EndCulture
+		YearFounded=820
+	EndCity
+EndPlot
+BeginPlot
+	x=54,y=54
+	ImprovementType=IMPROVEMENT_COTTAGE
+EndPlot
+BeginPlot
+	x=54,y=65
+	RouteType=ROUTE_ROAD
+	BeginUnit
+		UnitType=UNIT_CELTIC_GALLOWGLASS
+		UnitOwner=CIVILIZATION_CELT
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_CELTIC_GALLOWGLASS
+		UnitOwner=CIVILIZATION_CELT
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_CELTIC_GALLOWGLASS
+		UnitOwner=CIVILIZATION_CELT
+	EndUnit
+	BeginCity
+		CityOwner=CIVILIZATION_CELT
+		CityName=Baile Átha Cliath
+		CityPopulation=2
+		BuildingType=BUILDING_GRANARY
+		BuildingType=BUILDING_TANNERY
+		BuildingType=BUILDING_LIBRARY
+		BuildingType=BUILDING_HARBOR
+		BuildingType=BUILDING_LIGHTHOUSE
+		BuildingType=BUILDING_PALACE
+		BuildingType=BUILDING_CATHOLIC_TEMPLE
+		ReligionType=RELIGION_CATHOLICISM
+		BeginCulture
+			Civilization=CIVILIZATION_CELT, Culture=100
+		EndCulture
+		YearFounded=840
+		YearAcquired=840
+		PreviousOwner=CIVILIZATION_NORSE
+	EndCity
+EndPlot
+BeginPlot
+	x=54,y=66
+	ImprovementType=IMPROVEMENT_PASTURE
+EndPlot
+BeginPlot
+	x=54,y=67
+	ImprovementType=IMPROVEMENT_COTTAGE
+EndPlot
+BeginPlot
+	x=55,y=45
+	ImprovementType=IMPROVEMENT_FISHING_BOATS
+EndPlot
+BeginPlot
+	x=55,y=48
+	ImprovementType=IMPROVEMENT_FISHING_BOATS
+EndPlot
+BeginPlot
+	x=55,y=49
+	ImprovementType=IMPROVEMENT_ORCHARD
+EndPlot
+BeginPlot
+	x=55,y=51
+	ImprovementType=IMPROVEMENT_PASTURE
+EndPlot
+BeginPlot
+	x=55,y=52
+	ImprovementType=IMPROVEMENT_MINE
+EndPlot
+BeginPlot
+	x=55,y=53
+	RouteType=ROUTE_ROAD
+EndPlot
+BeginPlot
+	x=55,y=54
+	ImprovementType=IMPROVEMENT_MINE
+EndPlot
+BeginPlot
+	x=55,y=55
+	ImprovementType=IMPROVEMENT_FISHING_BOATS
+EndPlot
+BeginPlot
+	x=56,y=44
+	ImprovementType=IMPROVEMENT_ORCHARD
+EndPlot
+BeginPlot
+	x=56,y=48
+	ImprovementType=IMPROVEMENT_ORCHARD
+EndPlot
+BeginPlot
+	x=56,y=50
+	ImprovementType=IMPROVEMENT_MINE
+EndPlot
+BeginPlot
+	x=56,y=51
+	ImprovementType=IMPROVEMENT_WINDMILL
+EndPlot
+BeginPlot
+	x=56,y=52
+	ImprovementType=IMPROVEMENT_FARM
+	RouteType=ROUTE_ROAD
+EndPlot
+BeginPlot
+	x=56,y=53
+	RouteType=ROUTE_ROAD
+	BeginUnit
+		UnitType=UNIT_LANCER
+		UnitOwner=CIVILIZATION_SPAIN
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_LANCER
+		UnitOwner=CIVILIZATION_SPAIN
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_JERUSALEMITE_CRUSADER
+		UnitOwner=CIVILIZATION_SPAIN
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_CROSSBOWMAN
+		UnitOwner=CIVILIZATION_SPAIN
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_CROSSBOWMAN
+		UnitOwner=CIVILIZATION_SPAIN
+	EndUnit
+	BeginCity
+		CityOwner=CIVILIZATION_SPAIN
+		CityName=Léon
+		CityPopulation=6
+		BuildingType=BUILDING_PALACE
+		BuildingType=BUILDING_BARRACKS
+		BuildingType=BUILDING_GRANARY
+		BuildingType=BUILDING_TANNERY
+		BuildingType=BUILDING_LIBRARY
+		BuildingType=BUILDING_HARBOR
+		BuildingType=BUILDING_LIGHTHOUSE
+		BuildingType=BUILDING_MARKET
+		BuildingType=BUILDING_FORGE
+		BuildingType=BUILDING_SPANISH_CITADEL
+		BuildingType=BUILDING_CATHOLIC_TEMPLE
+		BuildingType=BUILDING_CATHOLIC_MONASTERY
+		ReligionType=RELIGION_CATHOLICISM
+		BeginCulture
+			Civilization=CIVILIZATION_SPAIN, Culture=200
+		EndCulture
+		YearFounded=-300
+		YearAcquired=900
+		PreviousOwner=CIVILIZATION_ROME
+	EndCity
+EndPlot
+BeginPlot
+	x=56,y=54
+	ImprovementType=IMPROVEMENT_QUARRY
+EndPlot
+BeginPlot
+	x=56,y=59
+	ImprovementType=IMPROVEMENT_FISHING_BOATS
+EndPlot
+BeginPlot
+	x=56,y=60
+	ImprovementType=IMPROVEMENT_COTTAGE
+EndPlot
+BeginPlot
+	x=56,y=63
+	ImprovementType=IMPROVEMENT_VILLAGE
+EndPlot
+BeginPlot
+	x=56,y=64
+	ImprovementType=IMPROVEMENT_MINE
+EndPlot
+BeginPlot
+	x=56,y=65
+	ImprovementType=IMPROVEMENT_QUARRY
+EndPlot
+BeginPlot
+	x=56,y=68
+	ImprovementType=IMPROVEMENT_HAMLET
+EndPlot
+BeginPlot
+	x=56,y=70
+	ImprovementType=IMPROVEMENT_PASTURE
+EndPlot
+BeginPlot
+	x=56,y=71
+	ImprovementType=IMPROVEMENT_COTTAGE
+EndPlot
+BeginPlot
+	x=57,y=44
+	RouteType=ROUTE_ROAD
+	BeginUnit
+		UnitType=UNIT_SHORTBOWMAN
+		UnitOwner=CIVILIZATION_MOROCCO
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_SHORTBOWMAN
+		UnitOwner=CIVILIZATION_MOROCCO
+	EndUnit
+	BeginCity
+		CityOwner=CIVILIZATION_MOROCCO
+		CityName=Marrakec
+		CityPopulation=5
+		BuildingType=BUILDING_GRANARY
+		BuildingType=BUILDING_TANNERY
+		BuildingType=BUILDING_LIBRARY
+		BuildingType=BUILDING_HARBOR
+		BuildingType=BUILDING_LIGHTHOUSE
+		BuildingType=BUILDING_SCHOOL
+		BuildingType=BUILDING_ISLAMIC_TEMPLE
+		ReligionType=RELIGION_ISLAM
+		BuildingType=BUILDING_AIT_BENHADDOU
+		BuildingType=BUILDING_PALACE
+		BeginCulture
+			Civilization=CIVILIZATION_MOROCCO, Culture=100
+		EndCulture
+		YearFounded=1060
+		YearAcquired=1659
+	EndCity
+EndPlot
+BeginPlot
+	x=57,y=46
+	ImprovementType=IMPROVEMENT_ORCHARD
+EndPlot
+BeginPlot
+	x=57,y=48
+	ImprovementType=IMPROVEMENT_ORCHARD
+EndPlot
+BeginPlot
+	x=57,y=49
+	RouteType=ROUTE_ROAD
+	BeginUnit
+		UnitType=UNIT_HEAVY_SWORDSMAN
+		UnitOwner=CIVILIZATION_MOROCCO
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_HEAVY_SWORDSMAN
+		UnitOwner=CIVILIZATION_MOROCCO
+	EndUnit
+	BeginCity
+		CityOwner=CIVILIZATION_MOROCCO
+		CityName=Córdoba
+		CityPopulation=10
+		BuildingType=BUILDING_GRANARY
+		BuildingType=BUILDING_TANNERY
+		BuildingType=BUILDING_LIBRARY
+		BuildingType=BUILDING_HARBOR
+		BuildingType=BUILDING_AQUEDUCT
+		BuildingType=BUILDING_LIGHTHOUSE
+		BuildingType=BUILDING_MARKET
+		BuildingType=BUILDING_JAIL
+		BuildingType=BUILDING_FORGE
+		BuildingType=BUILDING_PHARMACY
+		BuildingType=BUILDING_INN
+		BuildingType=BUILDING_GUILD_HALL
+		BuildingType=BUILDING_ALHAMBRA
+		BuildingType=BUILDING_LA_MEZQUITA
+		ReligionType=RELIGION_ISLAM
+		BeginCulture
+			Civilization=CIVILIZATION_MOROCCO, Culture=1000
+		EndCulture
+		YearFounded=-795
+		YearAcquired=720
+		PreviousOwner=CIVILIZATION_PHOENICIA
+		PreviousOwner=CIVILIZATION_ROME
+	EndCity
+EndPlot
+BeginPlot
+	x=57,y=50
+	RouteType=ROUTE_ROAD
+EndPlot
+BeginPlot
+	x=57,y=51
+	RouteType=ROUTE_ROAD
+	BeginUnit
+		UnitType=UNIT_SHORTBOWMAN
+		UnitOwner=CIVILIZATION_MOROCCO
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_SHORTBOWMAN
+		UnitOwner=CIVILIZATION_MOROCCO
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_SHORTBOWMAN
+		UnitOwner=CIVILIZATION_MOROCCO
+	EndUnit
+	BeginCity
+		CityOwner=CIVILIZATION_MOROCCO
+		CityName=Tole
+		CityPopulation=5
+		BuildingType=BUILDING_BARRACKS
+		BuildingType=BUILDING_GRANARY
+		BuildingType=BUILDING_TANNERY
+		BuildingType=BUILDING_MONUMENT
+		BuildingType=BUILDING_LIBRARY
+		BuildingType=BUILDING_AQUEDUCT
+		BuildingType=BUILDING_MARKET
+		ReligionType=RELIGION_ISLAM
+		BeginCulture
+			Civilization=CIVILIZATION_MOROCCO, Culture=100
+		EndCulture
+		YearFounded=850
+		YearAcquired=850
+	EndCity
+EndPlot
+BeginPlot
+	x=57,y=52
+	ImprovementType=IMPROVEMENT_MINE
+	RouteType=ROUTE_ROAD
+EndPlot
+BeginPlot
+	x=57,y=53
+	ImprovementType=IMPROVEMENT_PASTURE
+	RouteType=ROUTE_ROAD
+EndPlot
+BeginPlot
+	x=57,y=54
+	ImprovementType=IMPROVEMENT_MINE
+EndPlot
+BeginPlot
+	x=57,y=60
+	ImprovementType=IMPROVEMENT_COTTAGE
+EndPlot
+BeginPlot
+	x=57,y=64
+	ImprovementType=IMPROVEMENT_PASTURE
+EndPlot
+BeginPlot
+	x=57,y=65
+	ImprovementType=IMPROVEMENT_QUARRY
+EndPlot
+BeginPlot
+	x=57,y=66
+	ImprovementType=IMPROVEMENT_HAMLET
+	RouteType=ROUTE_ROAD
+EndPlot
+BeginPlot
+	x=57,y=67
+	ImprovementType=IMPROVEMENT_MINE
+	RouteType=ROUTE_ROAD
+EndPlot
+BeginPlot
+	x=57,y=68
+	ImprovementType=IMPROVEMENT_PASTURE
+	RouteType=ROUTE_ROAD
+EndPlot
+BeginPlot
+	x=57,y=69
+	RouteType=ROUTE_ROAD
+	BeginUnit
+		UnitType=UNIT_CELTIC_GALLOWGLASS
+		UnitOwner=CIVILIZATION_INDEPENDENT
+	EndUnit	
+	BeginUnit
+		UnitType=UNIT_CELTIC_GALLOWGLASS
+		UnitOwner=CIVILIZATION_INDEPENDENT
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_ARCHER
+		UnitOwner=CIVILIZATION_INDEPENDENT
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_ARCHER
+		UnitOwner=CIVILIZATION_INDEPENDENT
+	EndUnit
+	BeginCity
+		CityOwner=CIVILIZATION_INDEPENDENT
+		CityName=Edinburgh
+		CityPopulation=4
+		BuildingType=BUILDING_BARRACKS
+		BuildingType=BUILDING_GRANARY
+		BuildingType=BUILDING_TANNERY
+		BuildingType=BUILDING_WEAVER
+		BuildingType=BUILDING_MONUMENT
+		BuildingType=BUILDING_LIBRARY
+		ReligionType=RELIGION_CATHOLICISM
+		BeginCulture
+			Civilization=CIVILIZATION_INDEPENDENT, Culture=50
+		EndCulture
+		YearFounded=100
+		YearAcquired=100
+	EndCity
+EndPlot
+BeginPlot
+	x=57,y=70
+	ImprovementType=IMPROVEMENT_HAMLET
+EndPlot
+BeginPlot
+	x=58,y=37
+	RouteType=ROUTE_ROAD
+	BeginUnit
+		UnitType=UNIT_ARCHER
+		UnitOwner=CIVILIZATION_GHANA
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_ARCHER
+		UnitOwner=CIVILIZATION_GHANA
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_GHANAIAN_JONOW
+		UnitOwner=CIVILIZATION_GHANA
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_GHANAIAN_JONOW
+		UnitOwner=CIVILIZATION_GHANA
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_GHANAIAN_JONOW
+		UnitOwner=CIVILIZATION_GHANA
+	EndUnit
+	BeginCity
+		CityOwner=CIVILIZATION_GHANA
+		CityName=Kumbi Saleh
+		CityPopulation=4
+		BuildingType=BUILDING_PALACE
+		BuildingType=BUILDING_GRANARY
+		BuildingType=BUILDING_TANNERY
+		BuildingType=BUILDING_ISLAMIC_TEMPLE
+		BuildingType=BUILDING_OUADANE_KSOUR
+		ReligionType=RELIGION_ISLAM
+		BeginCulture
+			Civilization=CIVILIZATION_GHANA, Culture=100
+		EndCulture
+		YearFounded=-200
+		YearAcquired=-200
+	EndCity
+EndPlot
+BeginPlot
+	x=58,y=44
+	ImprovementType=IMPROVEMENT_ORCHARD
+EndPlot
+BeginPlot
+	x=58,y=45
+	RouteType=ROUTE_ROAD
+EndPlot
+BeginPlot
+	x=58,y=48
+	ImprovementType=IMPROVEMENT_MINE
+EndPlot
+BeginPlot
+	x=58,y=49
+	ImprovementType=IMPROVEMENT_QUARRY
+EndPlot
+BeginPlot
+	x=58,y=50
+	ImprovementType=IMPROVEMENT_PASTURE
+EndPlot
+BeginPlot
+	x=58,y=52
+	ImprovementType=IMPROVEMENT_FARM
+	RouteType=ROUTE_ROAD
+EndPlot
+BeginPlot
+	x=58,y=53
+	ImprovementType=IMPROVEMENT_MINE
+EndPlot
+BeginPlot
+	x=58,y=59
+	RouteType=ROUTE_ROAD
+	BeginUnit
+		UnitType=UNIT_CROSSBOWMAN
+		UnitOwner=CIVILIZATION_FRANCE
+	EndUnit
+	BeginCity
+		CityOwner=CIVILIZATION_FRANCE
+		CityName=Nantes
+		CityPopulation=4
+		BuildingType=BUILDING_GRANARY
+		BuildingType=BUILDING_LIBRARY
+		BuildingType=BUILDING_HARBOR
+		BuildingType=BUILDING_AQUEDUCT
+		BuildingType=BUILDING_LIGHTHOUSE
+		BuildingType=BUILDING_MARKET
+		ReligionType=RELIGION_CATHOLICISM
+		BeginCulture
+			Civilization=CIVILIZATION_FRANCE, Culture=100
+		EndCulture
+		YearFounded=-250
+		YearAcquired=1000
+		PreviousOwner=CIVILIZATION_ROME
+		PreviousOwner=CIVILIZATION_CELT
+	EndCity
+EndPlot
+BeginPlot
+	x=58,y=60
+	ImprovementType=IMPROVEMENT_HAMLET
+EndPlot
+BeginPlot
+	x=58,y=61
+	ImprovementType=IMPROVEMENT_COTTAGE
+EndPlot
+BeginPlot
+	x=58,y=63
+	ImprovementType=IMPROVEMENT_VILLAGE
+EndPlot
+BeginPlot
+	x=58,y=64
+	RouteType=ROUTE_ROAD
+	BeginUnit
+		UnitType=UNIT_CROSSBOWMAN
+		UnitOwner=CIVILIZATION_ENGLAND
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_CROSSBOWMAN
+		UnitOwner=CIVILIZATION_ENGLAND
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_CROSSBOWMAN
+		UnitOwner=CIVILIZATION_ENGLAND
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_TREBUCHET
+		UnitOwner=CIVILIZATION_ENGLAND
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_TREBUCHET
+		UnitOwner=CIVILIZATION_ENGLAND
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_LONGBOWMAN
+		UnitOwner=CIVILIZATION_ENGLAND
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_LONGBOWMAN
+		UnitOwner=CIVILIZATION_ENGLAND
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_HEAVY_SWORDSMAN
+		UnitOwner=CIVILIZATION_ENGLAND
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_HEAVY_SWORDSMAN
+		UnitOwner=CIVILIZATION_ENGLAND
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_WORKER
+		UnitOwner=CIVILIZATION_ENGLAND
+	EndUnit
+	BeginCity
+		CityOwner=CIVILIZATION_ENGLAND
+		CityName=London
+		CityPopulation=8
+		BuildingType=BUILDING_PALACE
+		BuildingType=BUILDING_BARRACKS
+		BuildingType=BUILDING_GRANARY
+		BuildingType=BUILDING_TANNERY
+		BuildingType=BUILDING_WEAVER
+		BuildingType=BUILDING_MONUMENT
+		BuildingType=BUILDING_LIBRARY
+		BuildingType=BUILDING_HARBOR
+		BuildingType=BUILDING_AQUEDUCT
+		BuildingType=BUILDING_THEATRE
+		BuildingType=BUILDING_LIGHTHOUSE
+		BuildingType=BUILDING_FORGE
+		BuildingType=BUILDING_CASTLE
+		BuildingType=BUILDING_PHARMACY
+		ReligionType=RELIGION_CATHOLICISM
+		FreeSpecialistType=SPECIALIST_GREAT_MERCHANT
+		BeginCulture
+			Civilization=CIVILIZATION_ENGLAND, Culture=125
+		EndCulture
+		YearFounded=40
+		YearAcquired=500
+		PreviousOwner=CIVILIZATION_ROME
+	EndCity
+EndPlot
+BeginPlot
+	x=58,y=65
+	ImprovementType=IMPROVEMENT_PASTURE
+	RouteType=ROUTE_ROAD
+EndPlot
+BeginPlot
+	x=58,y=66
+	ImprovementType=IMPROVEMENT_COTTAGE
+EndPlot
+BeginPlot
+	x=59,y=34
+	ImprovementType=IMPROVEMENT_PASTURE
+EndPlot
+BeginPlot
+	x=59,y=36
+	RouteType=ROUTE_ROAD
+EndPlot
+BeginPlot
+	x=59,y=37
+	ImprovementType=IMPROVEMENT_PASTURE
+	RouteType=ROUTE_ROAD
+EndPlot
+BeginPlot
+	x=59,y=39
+	RouteType=ROUTE_ROAD
+EndPlot
+BeginPlot
+	x=59,y=40
+	ImprovementType=IMPROVEMENT_QUARRY
+	RouteType=ROUTE_ROAD
+EndPlot
+BeginPlot
+	x=59,y=46
+	RouteType=ROUTE_ROAD
+EndPlot
+BeginPlot
+	x=59,y=50
+	ImprovementType=IMPROVEMENT_ORCHARD
+EndPlot
+BeginPlot
+	x=59,y=52
+	ImprovementType=IMPROVEMENT_WINDMILL
+EndPlot
+BeginPlot
+	x=59,y=53
+	ImprovementType=IMPROVEMENT_WINDMILL
+	RouteType=ROUTE_ROAD
+EndPlot
+BeginPlot
+	x=59,y=55
+	ImprovementType=IMPROVEMENT_COTTAGE
+	RouteType=ROUTE_ROAD
+EndPlot
+BeginPlot
+	x=59,y=56
+	RouteType=ROUTE_ROAD
+	BeginUnit
+		UnitType=UNIT_SHORTBOWMAN
+		UnitOwner=CIVILIZATION_FRANCE
+	EndUnit
+	BeginCity
+		CityOwner=CIVILIZATION_FRANCE
+		CityName=Bordeaux
+		CityPopulation=6
+		BuildingType=BUILDING_BARRACKS
+		BuildingType=BUILDING_GRANARY
+		BuildingType=BUILDING_TANNERY
+		BuildingType=BUILDING_LIBRARY
+		BuildingType=BUILDING_HARBOR
+		BuildingType=BUILDING_AQUEDUCT
+		BuildingType=BUILDING_LIGHTHOUSE
+		BuildingType=BUILDING_MARKET
+		BuildingType=BUILDING_JAIL
+		BuildingType=BUILDING_FORGE
+		BuildingType=BUILDING_CASTLE
+		BuildingType=BUILDING_POST_OFFICE
+		BuildingType=BUILDING_WHARF
+		BuildingType=BUILDING_FRENCH_SALON
+		BuildingType=BUILDING_CUSTOMS_HOUSE
+		BuildingType=BUILDING_SCHOOL
+		BuildingType=BUILDING_STAR_FORT
+		BuildingType=BUILDING_ESTATE
+		BuildingType=BUILDING_CATHOLIC_TEMPLE
+		ReligionType=RELIGION_CATHOLICISM
+		BeginCulture
+			Civilization=CIVILIZATION_FRANCE, Culture=100
+		EndCulture
+		YearFounded=-300
+		YearAcquired=770
+		PreviousOwner=CIVILIZATION_CELT
+		PreviousOwner=CIVILIZATION_ROME
+		PreviousOwner=CIVILIZATION_BARBARIAN
+	EndCity
+EndPlot
+BeginPlot
+	x=59,y=57
+	ImprovementType=IMPROVEMENT_COTTAGE
+EndPlot
+BeginPlot
+	x=59,y=58
+	ImprovementType=IMPROVEMENT_QUARRY
+EndPlot
+BeginPlot
+	x=59,y=59
+	ImprovementType=IMPROVEMENT_VILLAGE
+	RouteType=ROUTE_ROAD
+EndPlot
+BeginPlot
+	x=59,y=60
+	ImprovementType=IMPROVEMENT_HAMLET
+EndPlot
+BeginPlot
+	x=59,y=61
+	RouteType=ROUTE_ROAD
+	BeginUnit
+		UnitType=UNIT_CROSSBOWMAN
+		UnitOwner=CIVILIZATION_ENGLAND
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_CROSSBOWMAN
+		UnitOwner=CIVILIZATION_ENGLAND
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_HEAVY_SWORDSMAN
+		UnitOwner=CIVILIZATION_ENGLAND
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_HEAVY_SWORDSMAN
+		UnitOwner=CIVILIZATION_ENGLAND
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_COG
+		UnitOwner=CIVILIZATION_ENGLAND
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_TREBUCHET
+		UnitOwner=CIVILIZATION_ENGLAND
+	EndUnit
+	BeginCity
+		CityOwner=CIVILIZATION_ENGLAND
+		CityName=Caen
+		CityPopulation=4
+		BuildingType=BUILDING_GRANARY
+		BuildingType=BUILDING_LIBRARY
+		BuildingType=BUILDING_HARBOR
+		BuildingType=BUILDING_AQUEDUCT
+		BuildingType=BUILDING_LIGHTHOUSE
+		BuildingType=BUILDING_MARKET
+		ReligionType=RELIGION_CATHOLICISM
+		BeginCulture
+			Civilization=CIVILIZATION_ENGLAND, Culture=250
+			Civilization=CIVILIZATION_FRANCE, Culture=25
+		EndCulture
+		YearFounded=-250
+		YearAcquired=1000
+		PreviousOwner=CIVILIZATION_CELT
+		PreviousOwner=CIVILIZATION_ROME
+		PreviousOwner=CIVILIZATION_FRANCE
+	EndCity
+EndPlot
+BeginPlot
+	x=59,y=64
+	ImprovementType=IMPROVEMENT_COTTAGE
+EndPlot
+BeginPlot
+	x=59,y=68
+	ImprovementType=IMPROVEMENT_FISHING_BOATS
+EndPlot
+BeginPlot
+	x=60,y=46
+	ImprovementType=IMPROVEMENT_ORCHARD
+	RouteType=ROUTE_ROAD
+EndPlot
+BeginPlot
+	x=60,y=47
+	RouteType=ROUTE_ROAD
+	BeginUnit
+		UnitType=UNIT_HEAVY_SWORDSMAN
+		UnitOwner=CIVILIZATION_MOROCCO
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_SHORTBOWMAN
+		UnitOwner=CIVILIZATION_MOROCCO
+	EndUnit
+	BeginCity
+		CityOwner=CIVILIZATION_MOROCCO
+		CityName=Wahran
+		CityPopulation=3
+		BuildingType=BUILDING_GRANARY
+		BuildingType=BUILDING_TANNERY
+		BuildingType=BUILDING_HARBOR
+		BuildingType=BUILDING_ISLAMIC_TEMPLE
+		ReligionType=RELIGION_ISLAM
+		BeginCulture
+			Civilization=CIVILIZATION_MOROCCO, Culture=50
+		EndCulture
+		YearFounded=900
+		PreviousOwner=CIVILIZATION_BYZANTIUM
+	EndCity
+EndPlot
+BeginPlot
+	x=60,y=51
+	ImprovementType=IMPROVEMENT_ORCHARD
+EndPlot
+BeginPlot
+	x=60,y=52
+	ImprovementType=IMPROVEMENT_WINDMILL
+	RouteType=ROUTE_ROAD
+EndPlot
+BeginPlot
+	x=60,y=53
+	ImprovementType=IMPROVEMENT_PASTURE
+EndPlot
+BeginPlot
+	x=60,y=56
+	ImprovementType=IMPROVEMENT_ORCHARD
+EndPlot
+BeginPlot
+	x=60,y=57
+	ImprovementType=IMPROVEMENT_PASTURE
+	RouteType=ROUTE_ROAD
+EndPlot
+BeginPlot
+	x=60,y=58
+	ImprovementType=IMPROVEMENT_FARM
+	RouteType=ROUTE_ROAD
+EndPlot
+BeginPlot
+	x=60,y=59
+	ImprovementType=IMPROVEMENT_COTTAGE
+	RouteType=ROUTE_ROAD
+EndPlot
+BeginPlot
+	x=60,y=65
+	ImprovementType=IMPROVEMENT_FISHING_BOATS
+EndPlot
+BeginPlot
+	x=61,y=47
+	RouteType=ROUTE_ROAD
+EndPlot
+BeginPlot
+	x=61,y=52
+	RouteType=ROUTE_ROAD
+	BeginUnit
+		UnitType=UNIT_CROSSBOWMAN
+		UnitOwner=CIVILIZATION_SPAIN
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_CROSSBOWMAN
+		UnitOwner=CIVILIZATION_SPAIN
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_HORSE_ARCHER
+		UnitOwner=CIVILIZATION_SPAIN
+	EndUnit
+	BeginCity
+		CityOwner=CIVILIZATION_SPAIN
+		CityName=Barcelona
+		CityPopulation=5
+		BuildingType=BUILDING_GRANARY
+		BuildingType=BUILDING_TANNERY
+		BuildingType=BUILDING_LIBRARY
+		BuildingType=BUILDING_HARBOR
+		BuildingType=BUILDING_AQUEDUCT
+		BuildingType=BUILDING_LIGHTHOUSE
+		BuildingType=BUILDING_MARKET
+		BuildingType=BUILDING_FORGE
+		BuildingType=BUILDING_SPANISH_CITADEL
+		BuildingType=BUILDING_CATHOLIC_TEMPLE
+		BuildingType=BUILDING_CATHOLIC_MONASTERY
+		ReligionType=RELIGION_CATHOLICISM
+		BeginCulture
+			Civilization=CIVILIZATION_SPAIN, Culture=75
+		EndCulture
+		YearFounded=-300
+		YearAcquired=1100
+		PreviousOwner=CIVILIZATION_PHOENICIA
+		PreviousOwner=CIVILIZATION_ROME
+	EndCity
+EndPlot
+BeginPlot
+	x=61,y=53
+	ImprovementType=IMPROVEMENT_COTTAGE
+EndPlot
+BeginPlot
+	x=61,y=55
+	ImprovementType=IMPROVEMENT_COTTAGE
+EndPlot
+BeginPlot
+	x=61,y=56
+	ImprovementType=IMPROVEMENT_COTTAGE
+EndPlot
+BeginPlot
+	x=61,y=59
+	ImprovementType=IMPROVEMENT_HAMLET
+	RouteType=ROUTE_ROAD
+EndPlot
+BeginPlot
+	x=61,y=60
+	RouteType=ROUTE_ROAD
+	BeginUnit
+		UnitType=UNIT_CROSSBOWMAN
+		UnitOwner=CIVILIZATION_FRANCE
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_CROSSBOWMAN
+		UnitOwner=CIVILIZATION_FRANCE
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_HEAVY_SWORDSMAN
+		UnitOwner=CIVILIZATION_FRANCE
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_HEAVY_SWORDSMAN
+		UnitOwner=CIVILIZATION_FRANCE
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_WORKER
+		UnitOwner=CIVILIZATION_FRANCE
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_WORKER
+		UnitOwner=CIVILIZATION_FRANCE
+	EndUnit
+	BeginCity
+		CityOwner=CIVILIZATION_FRANCE
+		CityName=Paris
+		CityPopulation=8
+		BuildingType=BUILDING_PALACE
+		BuildingType=BUILDING_BARRACKS
+		BuildingType=BUILDING_GRANARY
+		BuildingType=BUILDING_TANNERY
+		BuildingType=BUILDING_MONUMENT
+		BuildingType=BUILDING_LIBRARY
+		BuildingType=BUILDING_AQUEDUCT
+		BuildingType=BUILDING_ARENA
+		BuildingType=BUILDING_MARKET
+		BuildingType=BUILDING_JAIL
+		BuildingType=BUILDING_BATH
+		BuildingType=BUILDING_FORGE
+		BuildingType=BUILDING_CASTLE
+		ReligionType=RELIGION_JUDAISM
+		ReligionType=RELIGION_CATHOLICISM
+		BeginCulture
+			Civilization=CIVILIZATION_FRANCE, Culture=300
+		EndCulture
+		YearFounded=-50
+		YearAcquired=510
+		PreviousOwner=CIVILIZATION_ROME
+	EndCity
+EndPlot
+BeginPlot
+	x=61,y=61
+	ImprovementType=IMPROVEMENT_FARM
+EndPlot
+BeginPlot
+	x=62,y=47
+	ImprovementType=IMPROVEMENT_QUARRY
+	RouteType=ROUTE_ROAD
+EndPlot
+BeginPlot
+	x=62,y=48
+	ImprovementType=IMPROVEMENT_ORCHARD
+	RouteType=ROUTE_ROAD
+EndPlot
+BeginPlot
+	x=62,y=53
+	ImprovementType=IMPROVEMENT_COTTAGE
+	RouteType=ROUTE_ROAD
+EndPlot
+BeginPlot
+	x=62,y=54
+	ImprovementType=IMPROVEMENT_COTTAGE
+	RouteType=ROUTE_ROAD
+EndPlot
+BeginPlot
+	x=62,y=55
+	ImprovementType=IMPROVEMENT_PASTURE
+EndPlot
+BeginPlot
+	x=62,y=56
+	ImprovementType=IMPROVEMENT_MINE
+EndPlot
+BeginPlot
+	x=62,y=58
+	ImprovementType=IMPROVEMENT_COTTAGE
+	RouteType=ROUTE_ROAD
+EndPlot
+BeginPlot
+	x=62,y=59
+	ImprovementType=IMPROVEMENT_VILLAGE
+EndPlot
+BeginPlot
+	x=62,y=60
+	ImprovementType=IMPROVEMENT_VILLAGE
+EndPlot
+BeginPlot
+	x=62,y=61
+	ImprovementType=IMPROVEMENT_VILLAGE
+	RouteType=ROUTE_ROAD
+EndPlot
+BeginPlot
+	x=62,y=62
+	ImprovementType=IMPROVEMENT_VILLAGE
+	RouteType=ROUTE_ROAD
+EndPlot
+BeginPlot
+	x=62,y=63
+	ImprovementType=IMPROVEMENT_COTTAGE
+EndPlot
+BeginPlot
+	x=62,y=64
+	RouteType=ROUTE_ROAD
+	BeginUnit
+		UnitType=UNIT_CROSSBOWMAN
+		UnitOwner=CIVILIZATION_HOLY_ROMAN
+	EndUnit
+	BeginCity
+		CityOwner=CIVILIZATION_HOLY_ROMAN
+		CityName=Amestelledamme
+		CityPopulation=4
+		BuildingType=BUILDING_BARRACKS
+		BuildingType=BUILDING_GRANARY
+		BuildingType=BUILDING_TANNERY
+		BuildingType=BUILDING_WEAVER
+		BuildingType=BUILDING_LIBRARY
+		BuildingType=BUILDING_HARBOR
+		BuildingType=BUILDING_AQUEDUCT
+		BuildingType=BUILDING_THEATRE
+		BuildingType=BUILDING_LIGHTHOUSE
+		BuildingType=BUILDING_MARKET
+		BuildingType=BUILDING_JAIL
+		BuildingType=BUILDING_BATH
+		BuildingType=BUILDING_FORGE
+		ReligionType=RELIGION_JUDAISM
+		ReligionType=RELIGION_CATHOLICISM
+		BeginCulture
+			Civilization=CIVILIZATION_HOLY_ROMAN, Culture=50
+			Civilization=CIVILIZATION_FRANCE, Culture=25
+		EndCulture
+		YearFounded=1000
+		YearAcquired=1000
+	EndCity
+EndPlot
+BeginPlot
+	x=63,y=36
+	RouteType=ROUTE_ROAD
+	BeginUnit
+		UnitType=UNIT_ARCHER
+		UnitOwner=CIVILIZATION_NATIVE
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_ARCHER
+		UnitOwner=CIVILIZATION_NATIVE
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_ARCHER
+		UnitOwner=CIVILIZATION_NATIVE
+	EndUnit
+	BeginCity
+		CityOwner=CIVILIZATION_NATIVE
+		CityName=Gawgaw
+		CityPopulation=3
+		BuildingType=BUILDING_GRANARY	
+		BuildingType=BUILDING_WALLS
+		BuildingType=BUILDING_ISLAMIC_TEMPLE
+		ReligionType=RELIGION_ISLAM
+		BeginCulture
+			Civilization=CIVILIZATION_NATIVE, Culture=25
+		EndCulture
+		YearFounded=900
+		YearAcquired=900
+	EndCity
+EndPlot
+BeginPlot
+	x=63,y=48
+	RouteType=ROUTE_ROAD
+	BeginUnit
+		UnitType=UNIT_SHORTBOWMAN
+		UnitOwner=CIVILIZATION_MOROCCO
+	EndUnit
+	BeginCity
+		CityOwner=CIVILIZATION_MOROCCO
+		CityName=Bejaia
+		CityPopulation=5
+		BuildingType=BUILDING_GRANARY
+		BuildingType=BUILDING_TANNERY
+		BuildingType=BUILDING_HARBOR
+		BuildingType=BUILDING_JAIL
+		BuildingType=BUILDING_ISLAMIC_TEMPLE
+		ReligionType=RELIGION_ISLAM
+		BeginCulture
+			Civilization=CIVILIZATION_MOROCCO, Culture=50
+		EndCulture
+		YearFounded=940
+		YearAcquired=940
+	EndCity
+EndPlot
+BeginPlot
+	x=63,y=49
+	ImprovementType=IMPROVEMENT_FISHING_BOATS
+EndPlot
+BeginPlot
+	x=63,y=52
+	ImprovementType=IMPROVEMENT_FISHING_BOATS
+EndPlot
+BeginPlot
+	x=63,y=55
+	ImprovementType=IMPROVEMENT_ORCHARD
+	RouteType=ROUTE_ROAD
+EndPlot
+BeginPlot
+	x=63,y=56
+	RouteType=ROUTE_ROAD
+EndPlot
+BeginPlot
+	x=63,y=57
+	RouteType=ROUTE_ROAD
+	BeginUnit
+		UnitType=UNIT_CROSSBOWMAN
+		UnitOwner=CIVILIZATION_FRANCE
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_HEAVY_SPEARMAN
+		UnitOwner=CIVILIZATION_FRANCE
+	EndUnit
+	BeginCity
+		CityOwner=CIVILIZATION_FRANCE
+		CityName=Lyon
+		CityPopulation=4
+		BuildingType=BUILDING_GRANARY
+		BuildingType=BUILDING_LIBRARY
+		BuildingType=BUILDING_AQUEDUCT
+		BuildingType=BUILDING_MARKET
+		BuildingType=BUILDING_BATH
+		BuildingType=BUILDING_CASTLE
+		ReligionType=RELIGION_JUDAISM
+		ReligionType=RELIGION_CATHOLICISM
+		BeginCulture
+			Civilization=CIVILIZATION_FRANCE, Culture=100
+		EndCulture
+		YearFounded=-40
+		YearAcquired=950
+		PreviousOwner=CIVILIZATION_CELT
+		PreviousOwner=CIVILIZATION_HOLY_ROMAN
+		PreviousOwner=CIVILIZATION_ROME
+	EndCity
+EndPlot
+BeginPlot
+	x=63,y=58
+	ImprovementType=IMPROVEMENT_COTTAGE
+	RouteType=ROUTE_ROAD
+EndPlot
+BeginPlot
+	x=63,y=59
+	ImprovementType=IMPROVEMENT_ORCHARD
+EndPlot
+BeginPlot
+	x=63,y=60
+	ImprovementType=IMPROVEMENT_COTTAGE
+EndPlot
+BeginPlot
+	x=63,y=61
+	ImprovementType=IMPROVEMENT_MINE
+	RouteType=ROUTE_ROAD
+EndPlot
+BeginPlot
+	x=63,y=62
+	ImprovementType=IMPROVEMENT_COTTAGE
+EndPlot
+BeginPlot
+	x=63,y=63
+	ImprovementType=IMPROVEMENT_VILLAGE
+	RouteType=ROUTE_ROAD
+EndPlot
+BeginPlot
+	x=63,y=64
+	ImprovementType=IMPROVEMENT_FARM
+EndPlot
+BeginPlot
+	x=63,y=65
+	ImprovementType=IMPROVEMENT_PASTURE
+EndPlot
+BeginPlot
+	x=63,y=72
+	ImprovementType=IMPROVEMENT_WHALING_BOATS
+EndPlot
+BeginPlot
+	x=64,y=35
+	ImprovementType=IMPROVEMENT_FARM
+EndPlot
+BeginPlot
+	x=64,y=47
+	ImprovementType=IMPROVEMENT_MINE
+EndPlot
+BeginPlot
+	x=64,y=48
+	RouteType=ROUTE_ROAD
+EndPlot
+BeginPlot
+	x=64,y=55
+	RouteType=ROUTE_ROAD
+	BeginUnit
+		UnitType=UNIT_CROSSBOWMAN
+		UnitOwner=CIVILIZATION_HOLY_ROMAN
+	EndUnit
+	BeginCity
+		CityOwner=CIVILIZATION_HOLY_ROMAN
+		CityName=Massalia
+		CityPopulation=5
+		BuildingType=BUILDING_GRANARY
+		BuildingType=BUILDING_TANNERY
+		BuildingType=BUILDING_LIBRARY
+		BuildingType=BUILDING_HARBOR
+		BuildingType=BUILDING_AQUEDUCT
+		BuildingType=BUILDING_LIGHTHOUSE
+		BuildingType=BUILDING_MARKET
+		ReligionType=RELIGION_CATHOLICISM
+		BeginCulture
+			Civilization=CIVILIZATION_HOLY_ROMAN, Culture=50
+		EndCulture
+		YearFounded=-600
+		YearAcquired=1050
+		PreviousOwner=CIVILIZATION_GREECE
+		PreviousOwner=CIVILIZATION_ROME
+		PreviousOwner=CIVILIZATION_INDEPENDENT
+	EndCity
+EndPlot
+BeginPlot
+	x=64,y=59
+	ImprovementType=IMPROVEMENT_MINE
+	RouteType=ROUTE_ROAD
+EndPlot
+BeginPlot
+	x=64,y=60
+	ImprovementType=IMPROVEMENT_COTTAGE
+EndPlot
+BeginPlot
+	x=64,y=61
+	ImprovementType=IMPROVEMENT_PASTURE
+EndPlot
+BeginPlot
+	x=64,y=62
+	ImprovementType=IMPROVEMENT_COTTAGE
+	RouteType=ROUTE_ROAD
+EndPlot
+BeginPlot
+ 	x=66,y=32
+ 	RouteType=ROUTE_ROAD
+ 	BeginUnit
+ 		UnitType=UNIT_BENINESE_IYOBA_REGIMENT
+ 		UnitOwner=CIVILIZATION_BENIN
+ 	EndUnit
+ 	BeginUnit
+ 		UnitType=UNIT_BENINESE_IYOBA_REGIMENT
+ 		UnitOwner=CIVILIZATION_BENIN
+ 	EndUnit
+	BeginUnit
+ 		UnitType=UNIT_WORKER
+ 		UnitOwner=CIVILIZATION_BENIN
+ 	EndUnit
+	BeginUnit
+ 		UnitType=UNIT_BENINESE_SLAVE
+ 		UnitOwner=CIVILIZATION_BENIN
+ 	EndUnit
+ 	BeginCity
+ 		CityOwner=CIVILIZATION_BENIN
+ 		CityName=Edo
+ 		CityPopulation=3
+ 		BuildingType=BUILDING_GRANARY
+		BuildingType=BUILDING_WEAVER
+ 		BuildingType=BUILDING_TANNERY
+ 		BuildingType=BUILDING_HARBOR
+ 		BuildingType=BUILDING_WALLS
+		BuildingType=BUILDING_PALACE
+ 		BeginCulture
+ 			Civilization=CIVILIZATION_BENIN, Culture=100
+ 		EndCulture
+ 		YearFounded=900
+ 	EndCity
+EndPlot
+BeginPlot
+	x=65,y=48
+	RouteType=ROUTE_ROAD
+EndPlot
+BeginPlot
+	x=65,y=56
+	ImprovementType=IMPROVEMENT_COTTAGE
+	RouteType=ROUTE_ROAD
+EndPlot
+BeginPlot
+	x=65,y=57
+	ImprovementType=IMPROVEMENT_COTTAGE
+EndPlot
+BeginPlot
+	x=65,y=60
+	ImprovementType=IMPROVEMENT_ORCHARD
+	RouteType=ROUTE_ROAD
+EndPlot
+BeginPlot
+	x=65,y=61
+	ImprovementType=IMPROVEMENT_MINE
+	RouteType=ROUTE_ROAD
+EndPlot
+BeginPlot
+	x=65,y=62
+	RouteType=ROUTE_ROAD
+	BeginUnit
+		UnitType=UNIT_CROSSBOWMAN
+		UnitOwner=CIVILIZATION_HOLY_ROMAN
+	EndUnit
+	BeginCity
+		CityOwner=CIVILIZATION_HOLY_ROMAN
+		CityName=Aachen
+		CityPopulation=5
+		BuildingType=BUILDING_PALACE
+		BuildingType=BUILDING_GRANARY
+		BuildingType=BUILDING_TANNERY
+		BuildingType=BUILDING_WEAVER
+		BuildingType=BUILDING_LIBRARY
+		BuildingType=BUILDING_AQUEDUCT
+		BuildingType=BUILDING_MARKET
+		BuildingType=BUILDING_CATHOLIC_TEMPLE
+		BuildingType=BUILDING_CATHOLIC_MONASTERY
+		ReligionType=RELIGION_JUDAISM
+		ReligionType=RELIGION_CATHOLICISM
+		BeginCulture
+			Civilization=CIVILIZATION_HOLY_ROMAN, Culture=100
+		EndCulture
+		YearFounded=50
+		YearAcquired=850
+	EndCity
+EndPlot
+BeginPlot
+	x=65,y=63
+	ImprovementType=IMPROVEMENT_COTTAGE
+EndPlot
+BeginPlot
+	x=65,y=64
+	ImprovementType=IMPROVEMENT_COTTAGE
+EndPlot
+BeginPlot
+	x=65,y=66
+	ImprovementType=IMPROVEMENT_FISHING_BOATS
+EndPlot
+BeginPlot
+	x=65,y=71
+	ImprovementType=IMPROVEMENT_COTTAGE
+EndPlot
+BeginPlot
+	x=65,y=72
+	RouteType=ROUTE_ROAD
+	BeginUnit
+		UnitType=UNIT_SHORTBOWMAN
+		UnitOwner=CIVILIZATION_NORSE
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_SHORTBOWMAN
+		UnitOwner=CIVILIZATION_NORSE
+	EndUnit
+	BeginCity
+		CityOwner=CIVILIZATION_NORSE
+		CityName=Bergen
+		CityPopulation=3
+		BuildingType=BUILDING_GRANARY
+		BuildingType=BUILDING_TANNERY
+		BuildingType=BUILDING_LIBRARY
+		BuildingType=BUILDING_HARBOR
+		BuildingType=BUILDING_NORSE_TRADING_POST
+		ReligionType=RELIGION_CATHOLICISM
+		BeginCulture
+			Civilization=CIVILIZATION_NORSE, Culture=100
+		EndCulture
+		YearFounded=1020
+	EndCity
+EndPlot
+BeginPlot
+	x=66,y=47
+	ImprovementType=IMPROVEMENT_MINE
+EndPlot
+BeginPlot
+	x=66,y=48
+	ImprovementType=IMPROVEMENT_ORCHARD
+	RouteType=ROUTE_ROAD
+EndPlot
+BeginPlot
+	x=66,y=52
+	ImprovementType=IMPROVEMENT_PASTURE
+	RouteType=ROUTE_ROAD
+EndPlot
+BeginPlot
+	x=66,y=56
+	ImprovementType=IMPROVEMENT_MINE
+EndPlot
+BeginPlot
+	x=66,y=57
+	RouteType=ROUTE_ROAD
+	BeginUnit
+		UnitType=UNIT_SHORTBOWMAN
+		UnitOwner=CIVILIZATION_HOLY_ROMAN
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_SHORTBOWMAN
+		UnitOwner=CIVILIZATION_HOLY_ROMAN
+	EndUnit
+	BeginCity
+		CityOwner=CIVILIZATION_HOLY_ROMAN
+		CityName=Mailand
+		CityPopulation=6
+		BuildingType=BUILDING_BARRACKS
+		BuildingType=BUILDING_GRANARY
+		BuildingType=BUILDING_TANNERY
+		BuildingType=BUILDING_WEAVER
+		BuildingType=BUILDING_MONUMENT
+		BuildingType=BUILDING_LIBRARY
+		BuildingType=BUILDING_AQUEDUCT
+		BuildingType=BUILDING_THEATRE
+		BuildingType=BUILDING_MARKET
+		BuildingType=BUILDING_JAIL
+		BuildingType=BUILDING_FORGE
+		BuildingType=BUILDING_CATHOLIC_TEMPLE
+		BuildingType=BUILDING_CATHOLIC_MONASTERY
+		ReligionType=RELIGION_CATHOLICISM
+		BeginCulture
+			Civilization=CIVILIZATION_HOLY_ROMAN, Culture=0
+		EndCulture
+		YearFounded=-600
+		PreviousOwner=CIVILIZATION_CELT
+		PreviousOwner=CIVILIZATION_FRANCE
+		PreviousOwner=CIVILIZATION_ROME
+		PreviousOwner=CIVILIZATION_BARBARIAN
+	EndCity
+EndPlot
+BeginPlot
+	x=66,y=59
+	ImprovementType=IMPROVEMENT_QUARRY
+EndPlot
+BeginPlot
+	x=66,y=60
+	ImprovementType=IMPROVEMENT_FARM
+EndPlot
+BeginPlot
+	x=66,y=61
+	ImprovementType=IMPROVEMENT_VILLAGE
+	RouteType=ROUTE_ROAD
+EndPlot
+BeginPlot
+	x=66,y=63
+	RouteType=ROUTE_ROAD
+EndPlot
+BeginPlot
+	x=66,y=64
+	ImprovementType=IMPROVEMENT_PASTURE
+	RouteType=ROUTE_ROAD
+EndPlot
+BeginPlot
+	x=66,y=65
+	RouteType=ROUTE_ROAD
+	BeginUnit
+		UnitType=UNIT_HEAVY_GALLEY
+		UnitOwner=CIVILIZATION_HOLY_ROMAN
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_SHORTBOWMAN
+		UnitOwner=CIVILIZATION_HOLY_ROMAN
+	EndUnit
+	BeginCity
+		CityOwner=CIVILIZATION_HOLY_ROMAN
+		CityName=Hamburg
+		CityPopulation=5
+		BuildingType=BUILDING_GRANARY
+		BuildingType=BUILDING_TANNERY
+		BuildingType=BUILDING_LIBRARY
+		BuildingType=BUILDING_HARBOR
+		BuildingType=BUILDING_AQUEDUCT
+		BuildingType=BUILDING_LIGHTHOUSE
+		BuildingType=BUILDING_MARKET
+		BuildingType=BUILDING_WHARF
+		ReligionType=RELIGION_CATHOLICISM
+		BeginCulture
+			Civilization=CIVILIZATION_HOLY_ROMAN, Culture=100
+		EndCulture
+		YearFounded=840
+		YearAcquired=840
+	EndCity
+EndPlot
+BeginPlot
+	x=66,y=66
+	ImprovementType=IMPROVEMENT_COTTAGE
+	RouteType=ROUTE_ROAD
+EndPlot
+BeginPlot
+	x=66,y=67
+	ImprovementType=IMPROVEMENT_PASTURE
+	RouteType=ROUTE_ROAD
+EndPlot
+BeginPlot
+	x=66,y=74
+	ImprovementType=IMPROVEMENT_MINE
+EndPlot
+BeginPlot
+	x=66,y=34
+	RouteType=ROUTE_ROAD
+	BeginUnit
+		UnitType=UNIT_SWORDSMAN
+		UnitOwner=CIVILIZATION_HAUSA
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_SWORDSMAN
+		UnitOwner=CIVILIZATION_HAUSA
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_HAUSAN_YAN_LIFIDA
+		UnitOwner=CIVILIZATION_HAUSA
+	EndUnit
+	BeginCity
+		CityOwner=CIVILIZATION_HAUSA
+		CityName=Zazzau
+		CityPopulation=3
+		BuildingType=BUILDING_GRANARY
+		BuildingType=BUILDING_TANNERY
+		BuildingType=BUILDING_MARKET
+		BuildingType=BUILDING_WEAVER
+		BuildingType=BUILDING_LIBRARY
+		BuildingType=BUILDING_WALLS	
+		BeginCulture
+			Civilization=CIVILIZATION_HAUSA, Culture=50
+		EndCulture
+		YearFounded=850
+		YearAcquired=1000
+	EndCity
+EndPlot
+BeginPlot
+	x=66,y=36
+	RouteType=ROUTE_ROAD
+	BeginUnit
+		UnitType=UNIT_SWORDSMAN
+		UnitOwner=CIVILIZATION_HAUSA
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_SWORDSMAN
+		UnitOwner=CIVILIZATION_HAUSA
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_HAUSAN_YAN_LIFIDA
+		UnitOwner=CIVILIZATION_HAUSA
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_WORKER
+		UnitOwner=CIVILIZATION_HAUSA
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_WORKER
+		UnitOwner=CIVILIZATION_HAUSA
+	EndUnit
+	BeginCity
+		CityOwner=CIVILIZATION_HAUSA
+		CityName=Katsina
+		CityPopulation=2
+		BuildingType=BUILDING_GRANARY
+		BuildingType=BUILDING_TANNERY
+		BuildingType=BUILDING_MARKET
+		BuildingType=BUILDING_WEAVER
+		BuildingType=BUILDING_LIBRARY
+		BuildingType=BUILDING_WALLS
+		BuildingType=BUILDING_PALACE
+		BuildingType=BUILDING_ISLAMIC_MONASTERY
+		BuildingType=BUILDING_ISLAMIC_TEMPLE
+		ReligionType=RELIGION_ISLAM
+		BeginCulture
+			Civilization=CIVILIZATION_HAUSA, Culture=300
+		EndCulture
+		YearFounded=850
+		YearAcquired=850
+	EndCity
+EndPlot
+BeginPlot
+	x=67,y=46
+	ImprovementType=IMPROVEMENT_COTTAGE
+	RouteType=ROUTE_ROAD
+EndPlot
+BeginPlot
+	x=67,y=47
+	ImprovementType=IMPROVEMENT_PASTURE
+	RouteType=ROUTE_ROAD
+EndPlot
+BeginPlot
+	x=67,y=48
+	RouteType=ROUTE_ROAD
+	BeginUnit
+		UnitType=UNIT_SHORTBOWMAN
+		UnitOwner=CIVILIZATION_INDEPENDENT2
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_SHORTBOWMAN
+		UnitOwner=CIVILIZATION_INDEPENDENT2
+	EndUnit
+	BeginCity
+		CityOwner=CIVILIZATION_INDEPENDENT2
+		CityName=Tunus
+		CityPopulation=3
+		BuildingType=BUILDING_GRANARY
+		BuildingType=BUILDING_TANNERY
+		BuildingType=BUILDING_HARBOR
+		BuildingType=BUILDING_LIGHTHOUSE
+		BuildingType=BUILDING_ISLAMIC_TEMPLE
+		ReligionType=RELIGION_ISLAM
+		BeginCulture
+			Civilization=CIVILIZATION_INDEPENDENT2, Culture=50
+		EndCulture
+		YearFounded=-400
+		YearAcquired=1050
+		PreviousOwner=CIVILIZATION_PHOENICIA
+		PreviousOwner=CIVILIZATION_ARABIA
+		PreviousOwner=CIVILIZATION_BYZANTIUM
+		PreviousOwner=CIVILIZATION_MOROCCO
+		PreviousOwner=CIVILIZATION_ROME
+		PreviousOwner=CIVILIZATION_SPAIN
+	EndCity
+EndPlot
+BeginPlot
+	x=67,y=52
+	ImprovementType=IMPROVEMENT_FISHING_BOATS
+EndPlot
+BeginPlot
+	x=67,y=54
+	ImprovementType=IMPROVEMENT_COTTAGE
+	RouteType=ROUTE_ROAD
+EndPlot
+BeginPlot
+	x=67,y=55
+	ImprovementType=IMPROVEMENT_COTTAGE
+EndPlot
+BeginPlot
+	x=67,y=56
+	ImprovementType=IMPROVEMENT_QUARRY
+	RouteType=ROUTE_ROAD
+EndPlot
+BeginPlot
+	x=67,y=57
+	ImprovementType=IMPROVEMENT_FARM
+EndPlot
+BeginPlot
+	x=67,y=59
+	ImprovementType=IMPROVEMENT_PASTURE
+EndPlot
+BeginPlot
+	x=67,y=60
+	ImprovementType=IMPROVEMENT_VILLAGE
+	RouteType=ROUTE_ROAD
+EndPlot
+BeginPlot
+	x=67,y=61
+	ImprovementType=IMPROVEMENT_MINE
+EndPlot
+BeginPlot
+	x=67,y=62
+	ImprovementType=IMPROVEMENT_LUMBERMILL
+EndPlot
+BeginPlot
+	x=67,y=63
+	ImprovementType=IMPROVEMENT_HAMLET
+	RouteType=ROUTE_ROAD
+EndPlot
+BeginPlot
+	x=67,y=64
+	ImprovementType=IMPROVEMENT_QUARRY
+EndPlot
+BeginPlot
+	x=67,y=68
+	ImprovementType=IMPROVEMENT_COTTAGE
+	RouteType=ROUTE_ROAD
+EndPlot
+BeginPlot
+	x=67,y=69
+	ImprovementType=IMPROVEMENT_COTTAGE
+EndPlot
+BeginPlot
+	x=67,y=72
+	ImprovementType=IMPROVEMENT_MINE
+	RouteType=ROUTE_ROAD
+EndPlot
+BeginPlot
+	x=67,y=74
+	ImprovementType=IMPROVEMENT_CAMP
+	RouteType=ROUTE_ROAD
+EndPlot
+BeginPlot
+	x=68,y=37
+	ImprovementType=IMPROVEMENT_QUARRY
+	RouteType=ROUTE_ROAD
+EndPlot
+BeginPlot
+	x=68,y=45
+	ImprovementType=IMPROVEMENT_FARM
+	RouteType=ROUTE_ROAD
+EndPlot
+BeginPlot
+	x=68,y=49
+	ImprovementType=IMPROVEMENT_FISHING_BOATS
+EndPlot
+BeginPlot
+	x=68,y=53
+	RouteType=ROUTE_ROAD
+	BeginUnit
+		UnitType=UNIT_CROSSBOWMAN
+		UnitOwner=CIVILIZATION_INDEPENDENT2
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_CROSSBOWMAN
+		UnitOwner=CIVILIZATION_INDEPENDENT2
+	EndUnit
+	BeginCity
+		CityOwner=CIVILIZATION_INDEPENDENT2
+		CityName=Roma
+		CityPopulation=7
+		BuildingType=BUILDING_BARRACKS
+		BuildingType=BUILDING_GRANARY
+		BuildingType=BUILDING_TANNERY
+		BuildingType=BUILDING_WALLS
+		BuildingType=BUILDING_LIBRARY
+		BuildingType=BUILDING_HARBOR
+		BuildingType=BUILDING_AQUEDUCT
+		BuildingType=BUILDING_LIGHTHOUSE
+		BuildingType=BUILDING_MARKET
+		BuildingType=BUILDING_JAIL
+		BuildingType=BUILDING_FORGE
+		BuildingType=BUILDING_CATHOLIC_TEMPLE
+		BuildingType=BUILDING_CATHOLIC_CATHEDRAL
+		BuildingType=BUILDING_CATHOLIC_MONASTERY
+		BuildingType=BUILDING_CATHOLIC_SHRINE
+		BuildingType=BUILDING_FLAVIAN_AMPHITHEATRE
+		BuildingType=BUILDING_TRAJANS_COLUMN
+		BuildingType=BUILDING_CIRCUS_MAXIMUS
+		ReligionType=RELIGION_JUDAISM
+		ReligionType=RELIGION_CATHOLICISM
+		HolyCityReligionType=RELIGION_CATHOLICISM
+		FreeSpecialistType=SPECIALIST_GREAT_PRIEST
+		BeginCulture
+			Civilization=CIVILIZATION_INDEPENDENT2, Culture=250
+		EndCulture
+		YearFounded=-750
+		YearAcquired=1250
+		PreviousOwner=CIVILIZATION_ROME
+		PreviousOwner=CIVILIZATION_HOLY_ROMAN
+		PreviousOwner=CIVILIZATION_INDEPENDENT
+		PreviousOwner=CIVILIZATION_BARBARIAN
+	EndCity
+EndPlot
+BeginPlot
+	x=68,y=54
+	ImprovementType=IMPROVEMENT_PASTURE
+EndPlot
+BeginPlot
+	x=68,y=55
+	ImprovementType=IMPROVEMENT_QUARRY
+	RouteType=ROUTE_ROAD
+EndPlot
+BeginPlot
+	x=68,y=56
+	ImprovementType=IMPROVEMENT_ORCHARD
+	RouteType=ROUTE_ROAD
+EndPlot
+BeginPlot
+	x=68,y=59
+	RouteType=ROUTE_ROAD
+	BeginUnit
+		UnitType=UNIT_CROSSBOWMAN
+		UnitOwner=CIVILIZATION_HOLY_ROMAN
+	EndUnit
+	BeginCity
+		CityOwner=CIVILIZATION_HOLY_ROMAN
+		CityName=München
+		CityPopulation=4
+		BuildingType=BUILDING_GRANARY
+		BuildingType=BUILDING_WEAVER
+		BuildingType=BUILDING_LIBRARY
+		BuildingType=BUILDING_AQUEDUCT
+		BuildingType=BUILDING_CATHOLIC_TEMPLE
+		BuildingType=BUILDING_CATHOLIC_MONASTERY
+		ReligionType=RELIGION_JUDAISM
+		ReligionType=RELIGION_CATHOLICISM
+		BeginCulture
+			Civilization=CIVILIZATION_HOLY_ROMAN, Culture=100
+		EndCulture
+		YearFounded=800
+		PreviousOwner=CIVILIZATION_HOLY_ROMAN
+	EndCity
+EndPlot
+BeginPlot
+	x=68,y=60
+	ImprovementType=IMPROVEMENT_MINE
+EndPlot
+BeginPlot
+	x=68,y=61
+	ImprovementType=IMPROVEMENT_MINE
+EndPlot
+BeginPlot
+	x=68,y=62
+	ImprovementType=IMPROVEMENT_CAMP
+EndPlot
+BeginPlot
+	x=68,y=63
+	RouteType=ROUTE_ROAD
+EndPlot
+BeginPlot
+	x=68,y=64
+	ImprovementType=IMPROVEMENT_COTTAGE
+EndPlot
+BeginPlot
+	x=68,y=65
+	ImprovementType=IMPROVEMENT_COTTAGE
+EndPlot
+BeginPlot
+	x=68,y=67
+	RouteType=ROUTE_ROAD
+	BeginUnit
+		UnitType=UNIT_HEAVY_SWORDSMAN
+		UnitOwner=CIVILIZATION_NORSE
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_HEAVY_SWORDSMAN
+		UnitOwner=CIVILIZATION_NORSE
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_CROSSBOWMAN
+		UnitOwner=CIVILIZATION_NORSE
+	EndUnit
+	BeginCity
+		CityOwner=CIVILIZATION_NORSE
+		CityName=København
+		CityPopulation=4
+		BuildingType=BUILDING_PALACE
+		BuildingType=BUILDING_BARRACKS
+		BuildingType=BUILDING_GRANARY
+		BuildingType=BUILDING_TANNERY
+		BuildingType=BUILDING_LIBRARY
+		BuildingType=BUILDING_HARBOR
+		BuildingType=BUILDING_NORSE_TRADING_POST
+		BuildingType=BUILDING_MARKET
+		BuildingType=BUILDING_CATHOLIC_TEMPLE
+		ReligionType=RELIGION_CATHOLICISM
+		BeginCulture
+			Civilization=CIVILIZATION_NORSE, Culture=100
+		EndCulture
+		YearFounded=1000
+	EndCity
+EndPlot
+BeginPlot
+	x=68,y=68
+	ImprovementType=IMPROVEMENT_HARVEST_BOATS
+EndPlot
+BeginPlot
+	x=68,y=71
+	ImprovementType=IMPROVEMENT_FISHING_BOATS
+EndPlot
+BeginPlot
+	x=68,y=72
+	RouteType=ROUTE_ROAD
+	BeginUnit
+		UnitType=UNIT_SHORTBOWMAN
+		UnitOwner=CIVILIZATION_NORSE
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_SHORTBOWMAN
+		UnitOwner=CIVILIZATION_NORSE
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_SHORTBOWMAN
+		UnitOwner=CIVILIZATION_NORSE
+	EndUnit
+	BeginCity
+		CityOwner=CIVILIZATION_NORSE
+		CityName=Oslo
+		CityPopulation=3
+		BuildingType=BUILDING_BARRACKS
+		BuildingType=BUILDING_GRANARY
+		BuildingType=BUILDING_TANNERY
+		BuildingType=BUILDING_LIBRARY
+		BuildingType=BUILDING_HARBOR
+		BuildingType=BUILDING_CATHOLIC_TEMPLE
+		ReligionType=RELIGION_CATHOLICISM
+		BeginCulture
+			Civilization=CIVILIZATION_NORSE, Culture=50
+		EndCulture
+		YearFounded=1040
+	EndCity
+EndPlot
+BeginPlot
+	x=68,y=73
+	RouteType=ROUTE_ROAD
+EndPlot
+BeginPlot
+	x=68,y=75
+	RouteType=ROUTE_ROAD
+	BeginUnit
+		UnitType=UNIT_SHORTBOWMAN
+		UnitOwner=CIVILIZATION_NORSE
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_SHORTBOWMAN
+		UnitOwner=CIVILIZATION_NORSE
+	EndUnit
+	BeginCity
+		CityOwner=CIVILIZATION_NORSE
+		CityName=Trondheim
+		CityPopulation=1
+		BuildingType=BUILDING_GRANARY
+		BuildingType=BUILDING_TANNERY
+		BuildingType=BUILDING_LIBRARY
+		BuildingType=BUILDING_HARBOR
+		BuildingType=BUILDING_NORSE_TRADING_POST
+		BeginCulture
+			Civilization=CIVILIZATION_NORSE, Culture=100
+		EndCulture
+		YearFounded=1000
+	EndCity
+EndPlot
+BeginPlot
+	x=69,y=36
+	RouteType=ROUTE_ROAD
+EndPlot
+BeginPlot
+	x=69,y=49
+	RouteType=ROUTE_ROAD
+	BonusType=NONE
+	BeginUnit
+		UnitType=UNIT_CROSSBOWMAN
+		UnitOwner=CIVILIZATION_INDEPENDENT
+	EndUnit	
+	BeginUnit
+		UnitType=UNIT_CROSSBOWMAN
+		UnitOwner=CIVILIZATION_INDEPENDENT
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_LONGBOWMAN
+		UnitOwner=CIVILIZATION_INDEPENDENT
+	EndUnit
+	BeginCity
+		CityOwner=CIVILIZATION_INDEPENDENT
+		CityName=Palermo
+		CityPopulation=5
+		BuildingType=BUILDING_GRANARY
+		BuildingType=BUILDING_TANNERY
+		BuildingType=BUILDING_WEAVER
+		BuildingType=BUILDING_LIBRARY
+		BuildingType=BUILDING_HARBOR
+		BuildingType=BUILDING_CATHOLIC_TEMPLE
+		BuildingType=BUILDING_CATHOLIC_MONASTERY
+		ReligionType=RELIGION_CATHOLICISM
+		BeginCulture
+			Civilization=CIVILIZATION_INDEPENDENT, Culture=50
+		EndCulture
+		YearFounded=-795
+		PreviousOwner=CIVILIZATION_PHOENICIA
+		PreviousOwner=CIVILIZATION_ARABIA
+		PreviousOwner=CIVILIZATION_HOLY_ROMAN
+		PreviousOwner=CIVILIZATION_ROME
+		PreviousOwner=CIVILIZATION_SPAIN
+	EndCity
+EndPlot
+BeginPlot
+	x=69,y=51
+	ImprovementType=IMPROVEMENT_FISHING_BOATS
+EndPlot
+BeginPlot
+	x=69,y=52
+	ImprovementType=IMPROVEMENT_COTTAGE
+	RouteType=ROUTE_ROAD
+EndPlot
+BeginPlot
+	x=69,y=54
+	ImprovementType=IMPROVEMENT_MINE
+EndPlot
+BeginPlot
+	x=69,y=56
+	RouteType=ROUTE_ROAD
+	BeginUnit
+		UnitType=UNIT_SHORTBOWMAN
+		UnitOwner=CIVILIZATION_INDEPENDENT2
+	EndUnit
+	BeginCity
+		CityOwner=CIVILIZATION_INDEPENDENT2
+		CityName=Venedig
+		CityPopulation=6
+		BuildingType=BUILDING_GRANARY
+		BuildingType=BUILDING_TANNERY
+		BuildingType=BUILDING_WEAVER
+		BuildingType=BUILDING_LIBRARY
+		BuildingType=BUILDING_HARBOR
+		BuildingType=BUILDING_AQUEDUCT
+		BuildingType=BUILDING_THEATRE
+		BuildingType=BUILDING_ARENA
+		BuildingType=BUILDING_LIGHTHOUSE
+		BuildingType=BUILDING_MARKET
+		BuildingType=BUILDING_BATH
+		BuildingType=BUILDING_FORGE
+		BuildingType=BUILDING_CASTLE
+		BuildingType=BUILDING_POST_OFFICE
+		BuildingType=BUILDING_CATHOLIC_TEMPLE
+		BuildingType=BUILDING_SAN_MARCO_BASILICA
+		ReligionType=RELIGION_CATHOLICISM
+		BeginCulture
+			Civilization=CIVILIZATION_INDEPENDENT2, Culture=300
+		EndCulture
+		YearFounded=420
+	EndCity
+EndPlot
+BeginPlot
+	x=69,y=57
+	ImprovementType=IMPROVEMENT_VILLAGE
+	RouteType=ROUTE_ROAD
+EndPlot
+BeginPlot
+	x=69,y=59
+	ImprovementType=IMPROVEMENT_MINE
+	RouteType=ROUTE_ROAD
+EndPlot
+BeginPlot
+	x=69,y=60
+	ImprovementType=IMPROVEMENT_COTTAGE
+EndPlot
+BeginPlot
+	x=69,y=61
+	ImprovementType=IMPROVEMENT_COTTAGE
+EndPlot
+BeginPlot
+	x=69,y=62
+	ImprovementType=IMPROVEMENT_FARM
+EndPlot
+BeginPlot
+	x=69,y=63
+	RouteType=ROUTE_ROAD
+	BeginUnit
+		UnitType=UNIT_CUIRASSIER
+		UnitOwner=CIVILIZATION_GERMANY
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_CUIRASSIER
+		UnitOwner=CIVILIZATION_GERMANY
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_SHORTBOWMAN
+		UnitOwner=CIVILIZATION_GERMANY
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_SHORTBOWMAN
+		UnitOwner=CIVILIZATION_GERMANY
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_SHORTBOWMAN
+		UnitOwner=CIVILIZATION_GERMANY
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_SHORTBOWMAN
+		UnitOwner=CIVILIZATION_GERMANY
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_SHORTBOWMAN
+		UnitOwner=CIVILIZATION_GERMANY
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_SHORTBOWMAN
+		UnitOwner=CIVILIZATION_GERMANY
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_SHORTBOWMAN
+		UnitOwner=CIVILIZATION_GERMANY
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_SHORTBOWMAN
+		UnitOwner=CIVILIZATION_GERMANY
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_BOMBARD
+		UnitOwner=CIVILIZATION_GERMANY
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_BOMBARD
+		UnitOwner=CIVILIZATION_GERMANY
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_BOMBARD
+		UnitOwner=CIVILIZATION_GERMANY
+	EndUnit
+	BeginCity
+		CityOwner=CIVILIZATION_GERMANY
+		CityName=Brandenburg
+		CityPopulation=3
+		BuildingType=BUILDING_BARRACKS
+		BuildingType=BUILDING_GRANARY
+		BuildingType=BUILDING_LIBRARY
+		ReligionType=RELIGION_JUDAISM
+		ReligionType=RELIGION_CATHOLICISM
+		BeginCulture
+			Civilization=CIVILIZATION_GERMANY, Culture=250
+		EndCulture
+		YearFounded=970
+		PreviousOwner=CIVILIZATION_HOLY_ROMAN
+	EndCity
+EndPlot
+BeginPlot
+	x=69,y=70
+	ImprovementType=IMPROVEMENT_COTTAGE
+EndPlot
+BeginPlot
+	x=69,y=71
+	RouteType=ROUTE_ROAD
+EndPlot
+BeginPlot
+	x=70,y=22
+	ImprovementType=IMPROVEMENT_FISHING_BOATS
+EndPlot
+BeginPlot
+	x=70,y=37
+	ImprovementType=IMPROVEMENT_PASTURE
+	RouteType=ROUTE_ROAD
+EndPlot
+BeginPlot
+	x=70,y=45
+	ImprovementType=IMPROVEMENT_ORCHARD
+	RouteType=ROUTE_ROAD
+EndPlot
+BeginPlot
+	x=70,y=48
+	ImprovementType=IMPROVEMENT_ORCHARD
+EndPlot
+BeginPlot
+	x=70,y=49
+	BonusType=BONUS_WHEAT
+	ImprovementType=IMPROVEMENT_FARM
+	RouteType=ROUTE_ROAD
+EndPlot
+BeginPlot
+	x=70,y=52
+	RouteType=ROUTE_ROAD
+	BeginUnit
+		UnitType=UNIT_SHORTBOWMAN
+		UnitOwner=CIVILIZATION_INDEPENDENT
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_SHORTBOWMAN
+		UnitOwner=CIVILIZATION_INDEPENDENT
+	EndUnit
+	BeginCity
+		CityOwner=CIVILIZATION_INDEPENDENT
+		CityName=Napoli
+		CityPopulation=5
+		BuildingType=BUILDING_GRANARY
+		BuildingType=BUILDING_TANNERY
+		BuildingType=BUILDING_LIBRARY
+		BuildingType=BUILDING_HARBOR
+		BuildingType=BUILDING_AQUEDUCT
+		BuildingType=BUILDING_LIGHTHOUSE
+		BuildingType=BUILDING_MARKET
+		BuildingType=BUILDING_JAIL
+		BuildingType=BUILDING_CATHOLIC_TEMPLE
+		BuildingType=BUILDING_CATHOLIC_MONASTERY
+		ReligionType=RELIGION_JUDAISM
+		ReligionType=RELIGION_CATHOLICISM
+		BeginCulture
+			Civilization=CIVILIZATION_INDEPENDENT, Culture=100
+		EndCulture
+		YearFounded=-600
+		PreviousOwner=CIVILIZATION_GREECE
+		PreviousOwner=CIVILIZATION_ARABIA
+		PreviousOwner=CIVILIZATION_BYZANTIUM
+		PreviousOwner=CIVILIZATION_HOLY_ROMAN
+		PreviousOwner=CIVILIZATION_ROME
+	EndCity
+EndPlot
+BeginPlot
+	x=70,y=53
+	ImprovementType=IMPROVEMENT_HAMLET
+EndPlot
+BeginPlot
+	x=70,y=56
+	ImprovementType=IMPROVEMENT_FISHING_BOATS
+EndPlot
+BeginPlot
+	x=70,y=57
+	ImprovementType=IMPROVEMENT_MINE
+EndPlot
+BeginPlot
+	x=70,y=58
+	ImprovementType=IMPROVEMENT_MINE
+	RouteType=ROUTE_ROAD
+EndPlot
+BeginPlot
+	x=70,y=59
+	ImprovementType=IMPROVEMENT_MINE
+	RouteType=ROUTE_ROAD
+EndPlot
+BeginPlot
+	x=70,y=60
+	ImprovementType=IMPROVEMENT_QUARRY
+EndPlot
+BeginPlot
+	x=70,y=61
+	ImprovementType=IMPROVEMENT_COTTAGE
+EndPlot
+BeginPlot
+	x=70,y=62
+	ImprovementType=IMPROVEMENT_COTTAGE
+EndPlot
+BeginPlot
+	x=70,y=63
+	ImprovementType=IMPROVEMENT_COTTAGE
+	RouteType=ROUTE_ROAD
+EndPlot
+BeginPlot
+	x=70,y=64
+	ImprovementType=IMPROVEMENT_COTTAGE
+EndPlot
+BeginPlot
+	x=70,y=65
+	ImprovementType=IMPROVEMENT_COTTAGE
+EndPlot
+BeginPlot
+	x=71,y=36
+	RouteType=ROUTE_ROAD
+	BeginUnit
+		UnitType=UNIT_SHORTBOWMAN
+		UnitOwner=CIVILIZATION_KANEM_BORNU
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_SHORTBOWMAN
+		UnitOwner=CIVILIZATION_KANEM_BORNU
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_CAMEL_ARCHER
+		UnitOwner=CIVILIZATION_KANEM_BORNU
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_CAMEL_ARCHER
+		UnitOwner=CIVILIZATION_KANEM_BORNU
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_KANEM_BORNUAN_CARAVAN
+		UnitOwner=CIVILIZATION_KANEM_BORNU
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_KANEM_BORNUAN_CARAVAN
+		UnitOwner=CIVILIZATION_KANEM_BORNU
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_WORKER
+		UnitOwner=CIVILIZATION_KANEM_BORNU
+	EndUnit
+	BeginCity
+		CityOwner=CIVILIZATION_KANEM_BORNU
+		CityName=Njimi
+		CityPopulation=3
+		BuildingType=BUILDING_GRANARY
+		BuildingType=BUILDING_TANNERY
+		BuildingType=BUILDING_MARKET
+		BuildingType=BUILDING_WEAVER
+		BuildingType=BUILDING_LIBRARY
+		BuildingType=BUILDING_PALACE
+		BuildingType=BUILDING_ISLAMIC_MONASTERY
+		BuildingType=BUILDING_ISLAMIC_TEMPLE
+		ReligionType=RELIGION_ISLAM
+		BeginCulture
+			Civilization=CIVILIZATION_KANEM_BORNU, Culture=200
+		EndCulture
+		YearFounded=700
+		YearAcquired=700
+	EndCity
+EndPlot
+BeginPlot
+	x=71,y=50
+	RouteType=ROUTE_ROAD
+EndPlot
+BeginPlot
+	x=71,y=51
+	RouteType=ROUTE_ROAD
+EndPlot
+BeginPlot
+	x=71,y=52
+	ImprovementType=IMPROVEMENT_ORCHARD
+EndPlot
+BeginPlot
+	x=71,y=56
+	ImprovementType=IMPROVEMENT_MINE
+EndPlot
+BeginPlot
+	x=71,y=58
+	ImprovementType=IMPROVEMENT_COTTAGE
+EndPlot
+BeginPlot
+	x=71,y=59
+	RouteType=ROUTE_ROAD
+	BeginUnit
+		UnitType=UNIT_CROSSBOWMAN
+		UnitOwner=CIVILIZATION_HOLY_ROMAN
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_CROSSBOWMAN
+		UnitOwner=CIVILIZATION_HOLY_ROMAN
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_HOLY_ROMAN_LANDSKNECHT
+		UnitOwner=CIVILIZATION_HOLY_ROMAN
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_HOLY_ROMAN_LANDSKNECHT
+		UnitOwner=CIVILIZATION_HOLY_ROMAN
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_HOLY_ROMAN_LANDSKNECHT
+		UnitOwner=CIVILIZATION_HOLY_ROMAN
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_HOLY_ROMAN_LANDSKNECHT
+		UnitOwner=CIVILIZATION_HOLY_ROMAN
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_WORKER
+		UnitOwner=CIVILIZATION_HOLY_ROMAN
+	EndUnit
+	BeginCity
+		CityOwner=CIVILIZATION_HOLY_ROMAN
+		CityName=Wien
+		CityPopulation=6
+		BuildingType=BUILDING_BARRACKS
+		BuildingType=BUILDING_GRANARY
+		BuildingType=BUILDING_TANNERY
+		BuildingType=BUILDING_WEAVER
+		BuildingType=BUILDING_LIBRARY
+		BuildingType=BUILDING_AQUEDUCT
+		BuildingType=BUILDING_THEATRE
+		BuildingType=BUILDING_FORGE
+		BuildingType=BUILDING_CASTLE
+		ReligionType=RELIGION_JUDAISM
+		ReligionType=RELIGION_CATHOLICISM
+		BeginCulture
+			Civilization=CIVILIZATION_HOLY_ROMAN, Culture=100
+		EndCulture
+		YearFounded=-450
+		YearAcquired=840
+		PreviousOwner=CIVILIZATION_CELT
+		PreviousOwner=CIVILIZATION_FRANCE
+		PreviousOwner=CIVILIZATION_ROME
+		PreviousOwner=CIVILIZATION_BARBARIAN
+	EndCity
+EndPlot
+BeginPlot
+	x=71,y=60
+	ImprovementType=IMPROVEMENT_FARM
+	RouteType=ROUTE_ROAD
+EndPlot
+BeginPlot
+	x=71,y=61
+	ImprovementType=IMPROVEMENT_MINE
+	RouteType=ROUTE_ROAD
+EndPlot
+BeginPlot
+	x=71,y=62
+	ImprovementType=IMPROVEMENT_MINE
+	RouteType=ROUTE_ROAD
+EndPlot
+BeginPlot
+	x=71,y=64
+	ImprovementType=IMPROVEMENT_LUMBERMILL
+EndPlot
+BeginPlot
+	x=71,y=68
+	ImprovementType=IMPROVEMENT_HAMLET
+EndPlot
+BeginPlot
+	x=71,y=69
+	RouteType=ROUTE_ROAD
+EndPlot
+BeginPlot
+	x=72,y=52
+	ImprovementType=IMPROVEMENT_ORCHARD
+EndPlot
+BeginPlot
+	x=72,y=53
+	ImprovementType=IMPROVEMENT_FISHING_BOATS
+EndPlot
+BeginPlot
+	x=72,y=57
+	ImprovementType=IMPROVEMENT_COTTAGE
+EndPlot
+BeginPlot
+	x=72,y=58
+	ImprovementType=IMPROVEMENT_PASTURE
+	RouteType=ROUTE_ROAD
+EndPlot
+BeginPlot
+	x=72,y=59
+	ImprovementType=IMPROVEMENT_ORCHARD
+	RouteType=ROUTE_ROAD
+EndPlot
+BeginPlot
+	x=72,y=60
+	ImprovementType=IMPROVEMENT_COTTAGE
+EndPlot
+BeginPlot
+	x=72,y=62
+	RouteType=ROUTE_ROAD
+	BeginUnit
+		UnitType=UNIT_CROSSBOWMAN
+		UnitOwner=CIVILIZATION_POLAND
+	EndUnit
+	BeginCity
+		CityOwner=CIVILIZATION_POLAND
+		CityName=Breslau
+		CityPopulation=3
+		BuildingType=BUILDING_GRANARY
+		BuildingType=BUILDING_TANNERY
+		BuildingType=BUILDING_WEAVER
+		BuildingType=BUILDING_LIBRARY
+		BuildingType=BUILDING_CATHOLIC_TEMPLE
+		ReligionType=RELIGION_JUDAISM
+		ReligionType=RELIGION_CATHOLICISM
+		BeginCulture
+			Civilization=CIVILIZATION_POLAND, Culture=50
+			Civilization=CIVILIZATION_HOLY_ROMAN, Culture=20
+		EndCulture
+		YearFounded=1000
+		YearAcquired=1000
+	EndCity
+EndPlot
+BeginPlot
+	x=72,y=63
+	ImprovementType=IMPROVEMENT_MINE
+EndPlot
+BeginPlot
+	x=73,y=58
+	ImprovementType=IMPROVEMENT_COTTAGE
+EndPlot
+BeginPlot
+	x=73,y=62
+	ImprovementType=IMPROVEMENT_MINE
+EndPlot
+BeginPlot
+	x=73,y=63
+	ImprovementType=IMPROVEMENT_PASTURE
+	RouteType=ROUTE_ROAD
+EndPlot
+BeginPlot
+	x=73,y=64
+	ImprovementType=IMPROVEMENT_LUMBERMILL
+	RouteType=ROUTE_ROAD
+EndPlot
+BeginPlot
+	x=73,y=65
+	RouteType=ROUTE_ROAD
+	BeginUnit
+		UnitType=UNIT_SHORTBOWMAN
+		UnitOwner=CIVILIZATION_POLAND
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_SHORTBOWMAN
+		UnitOwner=CIVILIZATION_POLAND
+	EndUnit
+	BeginCity
+		CityOwner=CIVILIZATION_POLAND
+		CityName=Gdansk
+		CityPopulation=3
+		BuildingType=BUILDING_GRANARY
+		BuildingType=BUILDING_TANNERY
+		BuildingType=BUILDING_HARBOR
+		BuildingType=BUILDING_AQUEDUCT
+		BuildingType=BUILDING_CATHOLIC_TEMPLE
+		BuildingType=BUILDING_CATHOLIC_MONASTERY
+		ReligionType=RELIGION_JUDAISM
+		ReligionType=RELIGION_CATHOLICISM
+		BeginCulture
+			Civilization=CIVILIZATION_POLAND, Culture=50
+		EndCulture
+		YearFounded=1000
+	EndCity
+EndPlot
+BeginPlot
+	x=74,y=50
+	ImprovementType=IMPROVEMENT_MINE
+EndPlot
+BeginPlot
+	x=74,y=52
+	ImprovementType=IMPROVEMENT_ORCHARD
+	RouteType=ROUTE_ROAD
+EndPlot
+BeginPlot
+	x=74,y=53
+	RouteType=ROUTE_ROAD
+EndPlot
+BeginPlot
+	x=74,y=56
+	RouteType=ROUTE_ROAD
+	BeginUnit
+		UnitType=UNIT_SHORTBOWMAN
+		UnitOwner=CIVILIZATION_BYZANTIUM
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_BYZANTINE_CATAPHRACT
+		UnitOwner=CIVILIZATION_BYZANTIUM
+	EndUnit
+	BeginCity
+		CityOwner=CIVILIZATION_BYZANTIUM
+		CityName=Belgrad
+		CityPopulation=2
+		BuildingType=BUILDING_BARRACKS
+		BuildingType=BUILDING_GRANARY
+		BuildingType=BUILDING_TANNERY
+		BuildingType=BUILDING_ORTHODOX_TEMPLE
+		BuildingType=BUILDING_ORTHODOX_MONASTERY
+		ReligionType=RELIGION_ORTHODOXY
+		BeginCulture
+			Civilization=CIVILIZATION_BYZANTIUM, Culture=100
+		EndCulture
+		YearFounded=-280
+		YearAcquired=1020
+		PreviousOwner=CIVILIZATION_CELT
+		PreviousOwner=CIVILIZATION_ROME
+		PreviousOwner=CIVILIZATION_BARBARIAN
+	EndCity
+EndPlot
+BeginPlot
+	x=74,y=57
+	RouteType=ROUTE_ROAD
+EndPlot
+BeginPlot
+	x=74,y=58
+	ImprovementType=IMPROVEMENT_PASTURE
+	RouteType=ROUTE_ROAD
+EndPlot
+BeginPlot
+	x=74,y=59
+	RouteType=ROUTE_ROAD
+	BeginUnit
+		UnitType=UNIT_SHORTBOWMAN
+		UnitOwner=CIVILIZATION_INDEPENDENT
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_SHORTBOWMAN
+		UnitOwner=CIVILIZATION_INDEPENDENT
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_LANCER
+		UnitOwner=CIVILIZATION_INDEPENDENT
+	EndUnit
+	BeginCity
+		CityOwner=CIVILIZATION_INDEPENDENT
+		CityName=Pest
+		CityPopulation=5
+		BuildingType=BUILDING_BARRACKS
+		BuildingType=BUILDING_GRANARY
+		BuildingType=BUILDING_TANNERY
+		BuildingType=BUILDING_LIBRARY
+		BuildingType=BUILDING_AQUEDUCT
+		BuildingType=BUILDING_MARKET
+		BuildingType=BUILDING_CATHOLIC_TEMPLE
+		BuildingType=BUILDING_CATHOLIC_MONASTERY
+		ReligionType=RELIGION_JUDAISM
+		ReligionType=RELIGION_CATHOLICISM
+		BeginCulture
+			Civilization=CIVILIZATION_INDEPENDENT, Culture=50
+		EndCulture	
+		YearFounded=750
+		YearAcquired=750
+		PreviousOwner=CIVILIZATION_CELT
+		PreviousOwner=CIVILIZATION_ROME
+		PreviousOwner=CIVILIZATION_BARBARIAN
+	EndCity
+EndPlot
+BeginPlot
+	x=74,y=61
+	RouteType=ROUTE_ROAD
+	BeginUnit
+		UnitType=UNIT_SHORTBOWMAN
+		UnitOwner=CIVILIZATION_POLAND
+	EndUnit
+	BeginCity
+		CityOwner=CIVILIZATION_POLAND
+		CityName=Kraków
+		CityPopulation=5
+		BuildingType=BUILDING_PALACE
+		BuildingType=BUILDING_GRANARY
+		BuildingType=BUILDING_TANNERY
+		BuildingType=BUILDING_LIBRARY
+		BuildingType=BUILDING_CATHOLIC_TEMPLE
+		BuildingType=BUILDING_CATHOLIC_CATHEDRAL
+		BuildingType=BUILDING_CATHOLIC_MONASTERY
+		ReligionType=RELIGION_JUDAISM
+		ReligionType=RELIGION_CATHOLICISM
+		BeginCulture
+			Civilization=CIVILIZATION_POLAND, Culture=50
+		EndCulture
+		YearFounded=960
+	EndCity
+EndPlot
+BeginPlot
+	x=74,y=62
+	RouteType=ROUTE_ROAD
+EndPlot
+BeginPlot
+	x=74,y=63
+	ImprovementType=IMPROVEMENT_FARM
+	RouteType=ROUTE_ROAD
+EndPlot
+BeginPlot
+	x=74,y=64
+	ImprovementType=IMPROVEMENT_FARM
+EndPlot
+BeginPlot
+	x=74,y=66
+	ImprovementType=IMPROVEMENT_HARVEST_BOATS
+EndPlot
+BeginPlot
+	x=74,y=67
+	ImprovementType=IMPROVEMENT_FISHING_BOATS
+EndPlot
+BeginPlot
+	x=74,y=69
+	ImprovementType=IMPROVEMENT_QUARRY
+	RouteType=ROUTE_ROAD
+EndPlot
+BeginPlot
+	x=75,y=45
+	ImprovementType=IMPROVEMENT_MINE
+EndPlot
+BeginPlot
+	x=75,y=49
+	ImprovementType=IMPROVEMENT_COTTAGE
+EndPlot
+BeginPlot
+	x=75,y=50
+	ImprovementType=IMPROVEMENT_ORCHARD
+EndPlot
+BeginPlot
+	x=75,y=52
+	ImprovementType=IMPROVEMENT_QUARRY
+	RouteType=ROUTE_ROAD
+EndPlot
+BeginPlot
+	x=75,y=54
+	ImprovementType=IMPROVEMENT_PASTURE
+	RouteType=ROUTE_ROAD
+EndPlot
+BeginPlot
+	x=75,y=55
+	ImprovementType=IMPROVEMENT_MINE
+	RouteType=ROUTE_ROAD
+EndPlot
+BeginPlot
+	x=75,y=59
+	RouteType=ROUTE_ROAD
+EndPlot
+BeginPlot
+	x=75,y=61
+	ImprovementType=IMPROVEMENT_MINE
+EndPlot
+BeginPlot
+	x=75,y=62
+	ImprovementType=IMPROVEMENT_FARM
+EndPlot
+BeginPlot
+	x=75,y=63
+	ImprovementType=IMPROVEMENT_FARM
+	RouteType=ROUTE_ROAD
+EndPlot
+BeginPlot
+	x=76,y=44
+	ImprovementType=IMPROVEMENT_ORCHARD
+EndPlot
+BeginPlot
+	x=76,y=45
+	ImprovementType=IMPROVEMENT_FISHING_BOATS
+EndPlot
+BeginPlot
+	x=76,y=49
+	ImprovementType=IMPROVEMENT_FISHING_BOATS
+EndPlot
+BeginPlot
+	x=76,y=51
+	RouteType=ROUTE_ROAD
+	BeginUnit
+		UnitType=UNIT_BYZANTINE_CATAPHRACT
+		UnitOwner=CIVILIZATION_BYZANTIUM
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_SHORTBOWMAN
+		UnitOwner=CIVILIZATION_BYZANTIUM
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_BYZANTINE_DROMON
+		UnitOwner=CIVILIZATION_BYZANTIUM
+	EndUnit
+	BeginCity
+		CityOwner=CIVILIZATION_BYZANTIUM
+		CityName=Athenai
+		CityPopulation=6
+		BuildingType=BUILDING_GRANARY
+		BuildingType=BUILDING_TANNERY
+		BuildingType=BUILDING_HARBOR
+		BuildingType=BUILDING_ARENA
+		BuildingType=BUILDING_ORTHODOX_TEMPLE
+		BuildingType=BUILDING_ORTHODOX_MONASTERY
+		BuildingType=BUILDING_PARTHENON
+		ReligionType=RELIGION_JUDAISM
+		ReligionType=RELIGION_ORTHODOXY
+		BeginCulture
+			Civilization=CIVILIZATION_BYZANTIUM, Culture=200
+		EndCulture
+		YearFounded=-1095
+		YearAcquired=350
+		PreviousOwner=CIVILIZATION_GREECE
+		PreviousOwner=CIVILIZATION_BYZANTIUM
+		PreviousOwner=CIVILIZATION_ROME
+	EndCity
+EndPlot
+BeginPlot
+	x=76,y=54
+	RouteType=ROUTE_ROAD
+	BeginUnit
+		UnitType=UNIT_SHORTBOWMAN
+		UnitOwner=CIVILIZATION_BYZANTIUM
+	EndUnit
+	BeginCity
+		CityOwner=CIVILIZATION_BYZANTIUM
+		CityName=Sofia
+		CityPopulation=3
+		BuildingType=BUILDING_GRANARY
+		BuildingType=BUILDING_WEAVER
+		BuildingType=BUILDING_LIBRARY
+		BuildingType=BUILDING_HARBOR
+		BuildingType=BUILDING_AQUEDUCT
+		BuildingType=BUILDING_ARENA
+		BuildingType=BUILDING_MARKET
+		BuildingType=BUILDING_GROCER
+		BuildingType=BUILDING_ORTHODOX_TEMPLE
+		BuildingType=BUILDING_ORTHODOX_MONASTERY
+		BuildingType=BUILDING_MOUNT_ATHOS
+		ReligionType=RELIGION_ORTHODOXY
+		BeginCulture
+			Civilization=CIVILIZATION_BYZANTIUM, Culture=100
+		EndCulture
+		YearFounded=-320
+		YearAcquired=1430
+		PreviousOwner=CIVILIZATION_GREECE
+		PreviousOwner=CIVILIZATION_BYZANTIUM
+		PreviousOwner=CIVILIZATION_ROME
+	EndCity
+EndPlot
+BeginPlot
+	x=76,y=58
+	ImprovementType=IMPROVEMENT_CAMP
+	RouteType=ROUTE_ROAD
+EndPlot
+BeginPlot
+	x=76,y=59
+	ImprovementType=IMPROVEMENT_COTTAGE
+EndPlot
+BeginPlot
+	x=76,y=61
+	ImprovementType=IMPROVEMENT_QUARRY
+EndPlot
+BeginPlot
+	x=77,y=43
+	ImprovementType=IMPROVEMENT_QUARRY
+EndPlot
+BeginPlot
+	x=77,y=44
+	RouteType=ROUTE_ROAD
+	BeginUnit
+		UnitType=UNIT_MASRYEEN_MAMLUK
+		UnitOwner=CIVILIZATION_MISR
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_MASRYEEN_MAMLUK
+		UnitOwner=CIVILIZATION_MISR
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_SHORTBOWMAN
+		UnitOwner=CIVILIZATION_MISR
+	EndUnit
+	BeginCity
+		CityOwner=CIVILIZATION_MISR
+		CityName=Al-Iskandariya
+		CityPopulation=7
+		BuildingType=BUILDING_GRANARY
+		BuildingType=BUILDING_TANNERY
+		BuildingType=BUILDING_LIBRARY
+		BuildingType=BUILDING_HARBOR
+		BuildingType=BUILDING_AQUEDUCT
+		BuildingType=BUILDING_LIGHTHOUSE
+		BuildingType=BUILDING_MASRYEEN_SOUK
+		BuildingType=BUILDING_JAIL
+		BuildingType=BUILDING_FORGE
+		BuildingType=BUILDING_ORTHODOX_TEMPLE
+		BuildingType=BUILDING_ISLAMIC_TEMPLE
+		BuildingType=BUILDING_ISLAMIC_MONASTERY
+		ReligionType=RELIGION_JUDAISM
+		ReligionType=RELIGION_ORTHODOXY
+		ReligionType=RELIGION_ISLAM
+		ReligionType=RELIGION_SHIA
+		BeginCulture
+			Civilization=CIVILIZATION_MISR, Culture=200
+		EndCulture
+		YearFounded=-330
+		YearAcquired=973
+		PreviousOwner=CIVILIZATION_GREECE
+		PreviousOwner=CIVILIZATION_ARABIA
+		PreviousOwner=CIVILIZATION_BYZANTIUM
+		PreviousOwner=CIVILIZATION_ROME
+	EndCity
+EndPlot
+BeginPlot
+	x=77,y=48
+	ImprovementType=IMPROVEMENT_ORCHARD
+	RouteType=ROUTE_ROAD
+EndPlot
+BeginPlot
+	x=77,y=54
+	ImprovementType=IMPROVEMENT_ORCHARD
+	RouteType=ROUTE_ROAD
+EndPlot
+BeginPlot
+	x=77,y=56
+	ImprovementType=IMPROVEMENT_MINE
+EndPlot
+BeginPlot
+	x=78,y=40
+	ImprovementType=IMPROVEMENT_COTTAGE
+EndPlot
+BeginPlot
+	x=78,y=41
+	ImprovementType=IMPROVEMENT_PLANTATION
+EndPlot
+BeginPlot
+	x=78,y=43
+	ImprovementType=IMPROVEMENT_QUARRY
+	RouteType=ROUTE_ROAD
+EndPlot
+BeginPlot
+	x=78,y=44
+	ImprovementType=IMPROVEMENT_PLANTATION
+EndPlot
+BeginPlot
+	x=78,y=54
+	ImprovementType=IMPROVEMENT_FISHING_BOATS
+EndPlot
+BeginPlot
+	x=78,y=55
+	ImprovementType=IMPROVEMENT_PLANTATION
+	RouteType=ROUTE_ROAD
+EndPlot
+BeginPlot
+	x=78,y=56
+	ImprovementType=IMPROVEMENT_COTTAGE
+	RouteType=ROUTE_ROAD
+EndPlot
+BeginPlot
+	x=78,y=57
+	ImprovementType=IMPROVEMENT_FARM
+	RouteType=ROUTE_ROAD
+EndPlot
+BeginPlot
+	x=78,y=58
+	ImprovementType=IMPROVEMENT_ORCHARD
+	RouteType=ROUTE_ROAD
+EndPlot
+BeginPlot
+	x=79,y=39
+	ImprovementType=IMPROVEMENT_COTTAGE
+EndPlot
+BeginPlot
+	x=79,y=40
+	ImprovementType=IMPROVEMENT_QUARRY
+EndPlot
+BeginPlot
+	x=79,y=41
+	ImprovementType=IMPROVEMENT_COTTAGE
+EndPlot
+BeginPlot
+	x=79,y=42
+	ImprovementType=IMPROVEMENT_PLANTATION
+	RouteType=ROUTE_ROAD
+EndPlot
+BeginPlot
+	x=79,y=43
+	RouteType=ROUTE_ROAD
+	BeginUnit
+		UnitType=UNIT_MASRYEEN_MAMLUK
+		UnitOwner=CIVILIZATION_MISR
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_MASRYEEN_MAMLUK
+		UnitOwner=CIVILIZATION_MISR
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_TREBUCHET
+		UnitOwner=CIVILIZATION_MISR
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_SHORTBOWMAN
+		UnitOwner=CIVILIZATION_MISR
+	EndUnit
+	BeginCity
+		CityOwner=CIVILIZATION_MISR
+		CityName=Al-Kahirah
+		CityPopulation=4
+		BuildingType=BUILDING_PALACE
+		BuildingType=BUILDING_BARRACKS
+		BuildingType=BUILDING_GRANARY
+		BuildingType=BUILDING_TANNERY
+		BuildingType=BUILDING_LIBRARY
+		BuildingType=BUILDING_AQUEDUCT
+		BuildingType=BUILDING_MASRYEEN_SOUK
+		BuildingType=BUILDING_JAIL
+		BuildingType=BUILDING_FORGE
+		BuildingType=BUILDING_ISLAMIC_TEMPLE
+		BuildingType=BUILDING_ISLAMIC_MONASTERY
+		BuildingType=BUILDING_AL_AZHAR
+		BuildingType=BUILDING_GREAT_SPHINX
+		BuildingType=BUILDING_PYRAMIDS
+		ReligionType=RELIGION_JUDAISM
+		ReligionType=RELIGION_ORTHODOXY
+		ReligionType=RELIGION_ISLAM
+		ReligionType=RELIGION_SHIA
+		BeginCulture
+			Civilization=CIVILIZATION_MISR, Culture=200
+		EndCulture
+		YearFounded=-3000
+		YearAcquired=937
+		PreviousOwner=CIVILIZATION_EGYPT
+		PreviousOwner=CIVILIZATION_ARABIA
+		PreviousOwner=CIVILIZATION_BYZANTIUM
+		PreviousOwner=CIVILIZATION_GREECE
+		PreviousOwner=CIVILIZATION_PERSIA
+		PreviousOwner=CIVILIZATION_ROME
+	EndCity
+EndPlot
+BeginPlot
+	x=79,y=44
+	ImprovementType=IMPROVEMENT_FARM
+EndPlot
+BeginPlot
+	x=79,y=52
+	RouteType=ROUTE_ROAD
+	BeginUnit
+		UnitType=UNIT_SHORTBOWMAN
+		UnitOwner=CIVILIZATION_BYZANTIUM
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_SHORTBOWMAN
+		UnitOwner=CIVILIZATION_BYZANTIUM
+	EndUnit
+	BeginCity
+		CityOwner=CIVILIZATION_BYZANTIUM
+		CityName=Smyrna
+		CityPopulation=5
+		BuildingType=BUILDING_GRANARY
+		BuildingType=BUILDING_WEAVER
+		BuildingType=BUILDING_LIBRARY
+		BuildingType=BUILDING_HARBOR
+		BuildingType=BUILDING_AQUEDUCT
+		BuildingType=BUILDING_ORTHODOX_TEMPLE
+		ReligionType=RELIGION_ORTHODOXY
+		BeginCulture
+			Civilization=CIVILIZATION_BYZANTIUM, Culture=100
+			Civilization=CIVILIZATION_TURKS, Culture=25
+		EndCulture
+		YearFounded=-720
+		YearAcquired=1415
+		PreviousOwner=CIVILIZATION_GREECE
+		PreviousOwner=CIVILIZATION_BYZANTIUM
+		PreviousOwner=CIVILIZATION_PERSIA
+		PreviousOwner=CIVILIZATION_ROME
+	EndCity
+EndPlot
+BeginPlot
+	x=79,y=55
+	RouteType=ROUTE_ROAD
+	BeginUnit
+		UnitType=UNIT_SHORTBOWMAN
+		UnitOwner=CIVILIZATION_BYZANTIUM
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_SHORTBOWMAN
+		UnitOwner=CIVILIZATION_BYZANTIUM
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_BYZANTINE_CATAPHRACT
+		UnitOwner=CIVILIZATION_BYZANTIUM
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_BYZANTINE_CATAPHRACT
+		UnitOwner=CIVILIZATION_BYZANTIUM
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_WORKER
+		UnitOwner=CIVILIZATION_BYZANTIUM
+	EndUnit
+	BeginCity
+		CityOwner=CIVILIZATION_BYZANTIUM
+		CityName=Konstantinoupolis
+		CityPopulation=10
+		BuildingType=BUILDING_PALACE
+		BuildingType=BUILDING_BARRACKS
+		BuildingType=BUILDING_GRANARY
+		BuildingType=BUILDING_TANNERY
+		BuildingType=BUILDING_LIBRARY
+		BuildingType=BUILDING_HARBOR
+		BuildingType=BUILDING_AQUEDUCT
+		BuildingType=BUILDING_THEATRE
+		BuildingType=BUILDING_ARENA
+		BuildingType=BUILDING_LIGHTHOUSE
+		BuildingType=BUILDING_MARKET
+		BuildingType=BUILDING_JAIL
+		BuildingType=BUILDING_FORGE
+		BuildingType=BUILDING_ORTHODOX_TEMPLE
+		BuildingType=BUILDING_THEODOSIAN_WALLS
+		BuildingType=BUILDING_HAGIA_SOPHIA
+		ReligionType=RELIGION_ORTHODOXY
+		BeginCulture
+			Civilization=CIVILIZATION_BYZANTIUM, Culture=500
+		EndCulture
+		YearFounded=-705
+		YearAcquired=330
+		PreviousOwner=CIVILIZATION_GREECE
+		PreviousOwner=CIVILIZATION_ROME
+	EndCity
+EndPlot
+BeginPlot
+	x=79,y=59
+	RouteType=ROUTE_ROAD
+EndPlot
+BeginPlot
+	x=79,y=62
+	RouteType=ROUTE_ROAD
+EndPlot
+BeginPlot
+	x=79,y=65
+	ImprovementType=IMPROVEMENT_PASTURE
+	RouteType=ROUTE_ROAD
+EndPlot
+BeginPlot
+	x=79,y=66
+	ImprovementType=IMPROVEMENT_LUMBERMILL
+	RouteType=ROUTE_ROAD
+EndPlot
+BeginPlot
+	x=79,y=67
+	ImprovementType=IMPROVEMENT_COTTAGE
+EndPlot
+BeginPlot
+	x=79,y=68
+	ImprovementType=IMPROVEMENT_LUMBERMILL
+	RouteType=ROUTE_ROAD
+EndPlot
+BeginPlot
+	x=79,y=69
+	ImprovementType=IMPROVEMENT_PASTURE
+	RouteType=ROUTE_ROAD
+EndPlot
+BeginPlot
+	x=79,y=70
+	ImprovementType=IMPROVEMENT_FISHING_BOATS
+EndPlot
+BeginPlot
+	x=79,y=71
+	RouteType=ROUTE_ROAD
+EndPlot
+BeginPlot
+	x=79,y=72
+	ImprovementType=IMPROVEMENT_MINE
+EndPlot
+BeginPlot
+	x=80,y=28
+	ImprovementType=IMPROVEMENT_FISHING_BOATS
+EndPlot
+BeginPlot
+	x=80,y=29
+	RouteType=ROUTE_ROAD
+	BeginUnit
+		UnitType=UNIT_ARCHER
+		UnitOwner=CIVILIZATION_BUGANDA
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_ARCHER
+		UnitOwner=CIVILIZATION_BUGANDA
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_SPEARMAN
+		UnitOwner=CIVILIZATION_BUGANDA
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_SPEARMAN
+		UnitOwner=CIVILIZATION_BUGANDA
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_WORKER
+		UnitOwner=CIVILIZATION_BUGANDA
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_WORKER
+		UnitOwner=CIVILIZATION_BUGANDA
+	EndUnit
+	BeginCity
+		CityOwner=CIVILIZATION_BUGANDA
+		CityName=Lubaga
+		CityPopulation=4
+		BuildingType=BUILDING_GRANARY
+		BuildingType=BUILDING_TANNERY
+		BuildingType=BUILDING_MONUMENT
+		BuildingType=BUILDING_PALACE
+		BeginCulture
+			Civilization=CIVILIZATION_BUGANDA, Culture=100
+		EndCulture
+		YearFounded=1000
+		YearAcquired=1000
+	EndCity
+EndPlot
+BeginPlot
+	x=80,y=30
+	ImprovementType=IMPROVEMENT_MINE
+EndPlot
+BeginPlot
+	x=80,y=39
+	ImprovementType=IMPROVEMENT_COTTAGE
+EndPlot
+BeginPlot
+	x=80,y=40
+	ImprovementType=IMPROVEMENT_FARM
+EndPlot
+BeginPlot
+	x=80,y=41
+	RouteType=ROUTE_ROAD
+	BeginUnit
+		UnitType=UNIT_SHORTBOWMAN
+		UnitOwner=CIVILIZATION_MISR
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_SHORTBOWMAN
+		UnitOwner=CIVILIZATION_MISR
+	EndUnit
+	BeginCity
+		CityOwner=CIVILIZATION_MISR
+		CityName=El-Uqsur
+		CityPopulation=2
+		BuildingType=BUILDING_GRANARY
+		BuildingType=BUILDING_TANNERY
+		BuildingType=BUILDING_LIBRARY
+		BuildingType=BUILDING_FORGE
+		BuildingType=BUILDING_ISLAMIC_TEMPLE
+		ReligionType=RELIGION_ISLAM
+		BeginCulture
+			Civilization=CIVILIZATION_MISR, Culture=100
+		EndCulture
+		YearFounded=-3000
+		YearAcquired=1515
+		PreviousOwner=CIVILIZATION_EGYPT
+		PreviousOwner=CIVILIZATION_ARABIA
+		PreviousOwner=CIVILIZATION_BYZANTIUM
+		PreviousOwner=CIVILIZATION_GREECE
+		PreviousOwner=CIVILIZATION_PERSIA
+		PreviousOwner=CIVILIZATION_ROME
+	EndCity
+EndPlot
+BeginPlot
+	x=80,y=42
+	ImprovementType=IMPROVEMENT_PASTURE
+EndPlot
+BeginPlot
+	x=80,y=44
+	RouteType=ROUTE_ROAD
+EndPlot
+BeginPlot
+	x=80,y=50
+	ImprovementType=IMPROVEMENT_FISHING_BOATS
+EndPlot
+BeginPlot
+	x=80,y=51
+	ImprovementType=IMPROVEMENT_QUARRY
+EndPlot
+BeginPlot
+	x=80,y=53
+	ImprovementType=IMPROVEMENT_ORCHARD
+	RouteType=ROUTE_ROAD
+EndPlot
+BeginPlot
+	x=80,y=54
+	ImprovementType=IMPROVEMENT_QUARRY
+	RouteType=ROUTE_ROAD
+EndPlot
+BeginPlot
+	x=80,y=62
+	ImprovementType=IMPROVEMENT_MINE
+EndPlot
+BeginPlot
+	x=80,y=63
+	ImprovementType=IMPROVEMENT_HAMLET
+	RouteType=ROUTE_ROAD
+EndPlot
+BeginPlot
+	x=80,y=65
+	RouteType=ROUTE_ROAD
+	BeginUnit
+		UnitType=UNIT_SHORTBOWMAN
+		UnitOwner=CIVILIZATION_RUS
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_SHORTBOWMAN
+		UnitOwner=CIVILIZATION_RUS
+	EndUnit
+	BeginCity
+		CityOwner=CIVILIZATION_RUS
+		CityName=Minsk
+		CityPopulation=5
+		BuildingType=BUILDING_BARRACKS
+		BuildingType=BUILDING_GRANARY
+		BeginCulture
+			Civilization=CIVILIZATION_RUS, Culture=100
+		EndCulture
+		YearFounded=900
+		YearAcquired=900
+	EndCity
+EndPlot
+BeginPlot
+	x=81,y=44
+	RouteType=ROUTE_ROAD
+EndPlot
+BeginPlot
+	x=81,y=52
+	ImprovementType=IMPROVEMENT_PLANTATION
+EndPlot
+BeginPlot
+	x=81,y=53
+	ImprovementType=IMPROVEMENT_MINE
+	RouteType=ROUTE_ROAD
+EndPlot
+BeginPlot
+	x=81,y=54
+	ImprovementType=IMPROVEMENT_MINE
+EndPlot
+BeginPlot
+	x=81,y=60
+	RouteType=ROUTE_ROAD
+EndPlot
+BeginPlot
+	x=81,y=61
+	ImprovementType=IMPROVEMENT_FARM
+	RouteType=ROUTE_ROAD
+EndPlot
+BeginPlot
+	x=81,y=62
+	RouteType=ROUTE_ROAD
+	BeginUnit
+		UnitType=UNIT_RUS_DRUZHINA
+		UnitOwner=CIVILIZATION_RUS
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_RUS_DRUZHINA
+		UnitOwner=CIVILIZATION_RUS
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_WORKER
+		UnitOwner=CIVILIZATION_RUS
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_SHORTBOWMAN
+		UnitOwner=CIVILIZATION_RUS
+	EndUnit
+	BeginCity
+		CityOwner=CIVILIZATION_RUS
+		CityName=Kiev
+		CityPopulation=8
+		BuildingType=BUILDING_PALACE
+		BuildingType=BUILDING_BARRACKS
+		BuildingType=BUILDING_GRANARY
+		BuildingType=BUILDING_TANNERY
+		BuildingType=BUILDING_LIBRARY
+		BuildingType=BUILDING_AQUEDUCT
+		BuildingType=BUILDING_MARKET
+		BuildingType=BUILDING_ORTHODOX_TEMPLE
+		BuildingType=BUILDING_ORTHODOX_CATHEDRAL
+		BuildingType=BUILDING_ORTHODOX_MONASTERY
+		BuildingType=BUILDING_SAINT_SOPHIA
+		ReligionType=RELIGION_ORTHODOXY
+		BeginCulture
+			Civilization=CIVILIZATION_RUS, Culture=100
+		EndCulture
+		YearFounded=600
+		YearAcquired=860
+	EndCity
+EndPlot
+BeginPlot
+	x=81,y=64
+	ImprovementType=IMPROVEMENT_QUARRY
+EndPlot
+BeginPlot
+	x=81,y=71
+	ImprovementType=IMPROVEMENT_CAMP
+EndPlot
+BeginPlot
+	x=81,y=72
+	ImprovementType=IMPROVEMENT_QUARRY
+EndPlot
+BeginPlot
+	x=82,y=40
+	ImprovementType=IMPROVEMENT_MINE
+EndPlot
+BeginPlot
+	x=82,y=44
+	RouteType=ROUTE_ROAD
+EndPlot
+BeginPlot
+	x=82,y=52
+	RouteType=ROUTE_ROAD
+EndPlot
+BeginPlot
+	x=82,y=54
+	RouteType=ROUTE_ROAD
+	BeginUnit
+		UnitType=UNIT_TURKIC_OGHUZ
+		UnitOwner=CIVILIZATION_TURKS
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_TURKIC_OGHUZ
+		UnitOwner=CIVILIZATION_TURKS
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_SHORTBOWMAN
+		UnitOwner=CIVILIZATION_TURKS
+	EndUnit
+	BeginCity
+		CityOwner=CIVILIZATION_TURKS
+		CityName=Ankara
+		CityPopulation=3
+		BuildingType=BUILDING_BARRACKS
+		BuildingType=BUILDING_GRANARY
+		BuildingType=BUILDING_TANNERY
+		BuildingType=BUILDING_HARBOR
+		BuildingType=BUILDING_ORTHODOX_TEMPLE
+		BuildingType=BUILDING_ISLAMIC_TEMPLE
+		ReligionType=RELIGION_ORTHODOXY
+		ReligionType=RELIGION_ISLAM
+		BeginCulture
+			Civilization=CIVILIZATION_TURKS, Culture=100
+			Civilization=CIVILIZATION_BYZANTIUM, Culture=50
+		EndCulture
+		YearFounded=-2000
+		YearAcquired=1090
+		PreviousOwner=CIVILIZATION_INDEPENDENT
+		PreviousOwner=CIVILIZATION_BYZANTIUM
+		PreviousOwner=CIVILIZATION_CELT
+		PreviousOwner=CIVILIZATION_GREECE
+		PreviousOwner=CIVILIZATION_PERSIA
+		PreviousOwner=CIVILIZATION_ROME
+	EndCity
+EndPlot
+BeginPlot
+	x=82,y=64
+	ImprovementType=IMPROVEMENT_CAMP
+EndPlot
+BeginPlot
+	x=82,y=66
+	ImprovementType=IMPROVEMENT_MINE
+EndPlot
+BeginPlot
+	x=82,y=68
+	RouteType=ROUTE_ROAD
+	BeginUnit
+		UnitType=UNIT_RUS_DRUZHINA
+		UnitOwner=CIVILIZATION_RUS
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_SHORTBOWMAN
+		UnitOwner=CIVILIZATION_RUS
+	EndUnit
+	BeginCity
+		CityOwner=CIVILIZATION_RUS
+		CityName=Novgorod
+		CityPopulation=4
+		BuildingType=BUILDING_GRANARY
+		BuildingType=BUILDING_TANNERY
+		BuildingType=BUILDING_LIBRARY
+		BuildingType=BUILDING_HARBOR
+		BuildingType=BUILDING_AQUEDUCT
+		BuildingType=BUILDING_THEATRE
+		BuildingType=BUILDING_LIGHTHOUSE
+		BuildingType=BUILDING_ORTHODOX_TEMPLE
+		BuildingType=BUILDING_ORTHODOX_MONASTERY
+		ReligionType=RELIGION_ORTHODOXY
+		BeginCulture
+			Civilization=CIVILIZATION_RUS, Culture=100
+		EndCulture
+		YearFounded=870
+	EndCity
+EndPlot
+BeginPlot
+	x=82,y=72
+	ImprovementType=IMPROVEMENT_QUARRY
+EndPlot
+BeginPlot
+	x=83,y=35
+	RouteType=ROUTE_ROAD
+	BeginUnit
+		UnitType=UNIT_ETHIOPIAN_SHOTELAI
+		UnitOwner=CIVILIZATION_ETHIOPIA
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_ETHIOPIAN_SHOTELAI
+		UnitOwner=CIVILIZATION_ETHIOPIA
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_ARCHER
+		UnitOwner=CIVILIZATION_ETHIOPIA
+	EndUnit
+	BeginCity
+		CityOwner=CIVILIZATION_ETHIOPIA
+		CityName=Adefa
+		CityPopulation=4
+		BuildingType=BUILDING_PALACE
+		BuildingType=BUILDING_GRANARY
+		BuildingType=BUILDING_TANNERY
+		BuildingType=BUILDING_HARBOR
+		BuildingType=BUILDING_MARKET
+		BuildingType=BUILDING_FORGE
+		BuildingType=BUILDING_ORTHODOX_TEMPLE
+		BuildingType=BUILDING_MONOLITHIC_CHURCH
+		ReligionType=RELIGION_ORTHODOXY
+		ReligionType=RELIGION_JUDAISM
+		BeginCulture
+			Civilization=CIVILIZATION_ETHIOPIA, Culture=100
+		EndCulture
+		YearFounded=1000
+		YearAcquired=1000
+		PreviousOwner=CIVILIZATION_ETHIOPIA
+	EndCity
+EndPlot
+BeginPlot
+	x=83,y=45
+	ImprovementType=IMPROVEMENT_ORCHARD
+	RouteType=ROUTE_ROAD
+EndPlot
+BeginPlot
+	x=83,y=52
+	ImprovementType=IMPROVEMENT_QUARRY
+	RouteType=ROUTE_ROAD
+EndPlot
+BeginPlot
+	x=83,y=53
+	ImprovementType=IMPROVEMENT_FARM
+EndPlot
+BeginPlot
+	x=83,y=54
+	RouteType=ROUTE_ROAD
+EndPlot
+BeginPlot
+	x=83,y=55
+	ImprovementType=IMPROVEMENT_ORCHARD
+EndPlot
+BeginPlot
+	x=83,y=66
+	ImprovementType=IMPROVEMENT_MINE
+EndPlot
+BeginPlot
+	x=83,y=70
+	ImprovementType=IMPROVEMENT_MINE
+EndPlot
+BeginPlot
+	x=84,y=23
+	RouteType=ROUTE_ROAD
+	BeginUnit
+		UnitType=UNIT_SWORDSMAN
+		UnitOwner=CIVILIZATION_SWAHILI
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_SHORTBOWMAN
+		UnitOwner=CIVILIZATION_SWAHILI
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_SHORTBOWMAN
+		UnitOwner=CIVILIZATION_SWAHILI
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_SETTLER
+		UnitOwner=CIVILIZATION_SWAHILI
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_WORKER
+		UnitOwner=CIVILIZATION_SWAHILI
+	EndUnit
+	BeginCity
+		CityOwner=CIVILIZATION_SWAHILI
+		CityName=Kilwa
+		CityPopulation=3
+		BuildingType=BUILDING_GRANARY
+		BuildingType=BUILDING_HARBOR
+		BuildingType=BUILDING_LIGHTHOUSE
+		BuildingType=BUILDING_SHIA_TEMPLE
+		ReligionType=RELIGION_SHIA
+		BeginCulture
+			Civilization=CIVILIZATION_SWAHILI, Culture=50
+		EndCulture
+		YearFounded=800
+		YearAcquired=800
+	EndCity
+EndPlot
+BeginPlot
+	x=84,y=24
+	ImprovementType=IMPROVEMENT_FISHING_BOATS
+EndPlot
+BeginPlot
+	x=84,y=27
+	RouteType=ROUTE_ROAD
+EndPlot
+BeginPlot
+	x=84,y=36
+	ImprovementType=IMPROVEMENT_MINE
+EndPlot
+BeginPlot
+	x=84,y=45
+	RouteType=ROUTE_ROAD
+	BeginUnit
+		UnitType=UNIT_JERUSALEMITE_HOSPITALLER
+		UnitOwner=CIVILIZATION_JERUSALEM
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_JERUSALEMITE_HOSPITALLER
+		UnitOwner=CIVILIZATION_JERUSALEM
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_JERUSALEMITE_HOSPITALLER
+		UnitOwner=CIVILIZATION_JERUSALEM
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_JERUSALEMITE_HOSPITALLER
+		UnitOwner=CIVILIZATION_JERUSALEM
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_CROSSBOWMAN
+		UnitOwner=CIVILIZATION_JERUSALEM
+	EndUnit
+	BeginCity
+		CityOwner=CIVILIZATION_JERUSALEM
+		CityName=Hierousalem
+		CityPopulation=4
+		BuildingType=BUILDING_PALACE
+		BuildingType=BUILDING_GRANARY
+		BuildingType=BUILDING_TANNERY
+		BuildingType=BUILDING_HARBOR
+		BuildingType=BUILDING_AQUEDUCT
+		BuildingType=BUILDING_JEWISH_TEMPLE
+		BuildingType=BUILDING_JEWISH_SHRINE
+		BuildingType=BUILDING_ORTHODOX_TEMPLE
+		BuildingType=BUILDING_ORTHODOX_SHRINE
+		BuildingType=BUILDING_CATHOLIC_TEMPLE
+		BuildingType=BUILDING_ISLAMIC_TEMPLE
+		BuildingType=BUILDING_DOME_OF_THE_ROCK
+		ReligionType=RELIGION_JUDAISM
+		HolyCityReligionType=RELIGION_JUDAISM
+		ReligionType=RELIGION_ORTHODOXY
+		HolyCityReligionType=RELIGION_ORTHODOXY
+		ReligionType=RELIGION_CATHOLICISM
+		ReligionType=RELIGION_ISLAM
+		BeginCulture
+			Civilization=CIVILIZATION_JERUSALEM, Culture=100
+		EndCulture
+		YearFounded=-3000
+		YearAcquired=1099
+		PreviousOwner=CIVILIZATION_ARABIA
+		PreviousOwner=CIVILIZATION_BABYLONIA
+		PreviousOwner=CIVILIZATION_BYZANTIUM
+		PreviousOwner=CIVILIZATION_EGYPT
+		PreviousOwner=CIVILIZATION_GREECE
+		PreviousOwner=CIVILIZATION_PERSIA
+		PreviousOwner=CIVILIZATION_ROME
+		PreviousOwner=CIVILIZATION_TURKS
+	EndCity
+EndPlot
+BeginPlot
+	x=84,y=46
+	RouteType=ROUTE_ROAD
+EndPlot
+BeginPlot
+	x=84,y=51
+	RouteType=ROUTE_ROAD
+	BeginUnit
+		UnitType=UNIT_TURKIC_OGHUZ
+		UnitOwner=CIVILIZATION_TURKS
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_TURKIC_OGHUZ
+		UnitOwner=CIVILIZATION_TURKS
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_SHORTBOWMAN
+		UnitOwner=CIVILIZATION_TURKS
+	EndUnit
+	BeginCity
+		CityOwner=CIVILIZATION_TURKS
+		CityName=Adana
+		CityPopulation=3
+		BuildingType=BUILDING_BARRACKS
+		BuildingType=BUILDING_GRANARY
+		BuildingType=BUILDING_WEAVER
+		BuildingType=BUILDING_LIBRARY
+		BuildingType=BUILDING_HARBOR
+		BuildingType=BUILDING_MARKET
+		BuildingType=BUILDING_ISLAMIC_TEMPLE
+		ReligionType=RELIGION_ISLAM
+		ReligionType=RELIGION_SHIA
+		BeginCulture
+			Civilization=CIVILIZATION_TURKS, Culture=100
+		EndCulture
+		YearFounded=-310
+		YearAcquired=1090
+		PreviousOwner=CIVILIZATION_GREECE
+		PreviousOwner=CIVILIZATION_ARABIA
+		PreviousOwner=CIVILIZATION_BYZANTIUM
+		PreviousOwner=CIVILIZATION_ROME
+		PreviousOwner=CIVILIZATION_TURKS
+	EndCity
+EndPlot
+BeginPlot
+	x=84,y=53
+	ImprovementType=IMPROVEMENT_PASTURE
+	RouteType=ROUTE_ROAD
+EndPlot
+BeginPlot
+	x=84,y=55
+	ImprovementType=IMPROVEMENT_COTTAGE
+EndPlot
+BeginPlot
+	x=84,y=58
+	ImprovementType=IMPROVEMENT_MINE
+EndPlot
+BeginPlot
+	x=84,y=65
+	ImprovementType=IMPROVEMENT_MINE
+	RouteType=ROUTE_ROAD
+EndPlot
+BeginPlot
+	x=84,y=66
+	ImprovementType=IMPROVEMENT_MINE
+EndPlot
+BeginPlot
+	x=84,y=67
+	ImprovementType=IMPROVEMENT_MINE
+	RouteType=ROUTE_ROAD
+EndPlot
+BeginPlot
+	x=85,y=43
+	RouteType=ROUTE_ROAD
+EndPlot
+BeginPlot
+	x=85,y=44
+	ImprovementType=IMPROVEMENT_QUARRY
+	RouteType=ROUTE_ROAD
+EndPlot
+BeginPlot
+	x=85,y=45
+	ImprovementType=IMPROVEMENT_QUARRY
+EndPlot
+BeginPlot
+	x=85,y=46
+	ImprovementType=IMPROVEMENT_PASTURE
+EndPlot
+BeginPlot
+	x=85,y=47
+	RouteType=ROUTE_ROAD
+	BeginUnit
+		UnitType=UNIT_HEAVY_SWORDSMAN
+		UnitOwner=CIVILIZATION_JERUSALEM
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_HEAVY_SWORDSMAN
+		UnitOwner=CIVILIZATION_JERUSALEM
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_CROSSBOWMAN
+		UnitOwner=CIVILIZATION_JERUSALEM
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_CROSSBOWMAN
+		UnitOwner=CIVILIZATION_JERUSALEM
+	EndUnit
+	BeginCity
+		CityOwner=CIVILIZATION_JERUSALEM
+		CityName=Damascus
+		CityPopulation=3
+		BuildingType=BUILDING_GRANARY
+		BuildingType=BUILDING_TANNERY
+		BuildingType=BUILDING_AQUEDUCT
+		BuildingType=BUILDING_ISLAMIC_TEMPLE
+		ReligionType=RELIGION_JUDAISM
+		ReligionType=RELIGION_ISLAM
+		ReligionType=RELIGION_CATHOLICISM
+		BeginCulture
+			Civilization=CIVILIZATION_JERUSALEM, Culture=50
+		EndCulture
+		YearFounded=-2000
+		YearAcquired=1099
+		PreviousOwner=CIVILIZATION_ARABIA
+		PreviousOwner=CIVILIZATION_BABYLONIA
+		PreviousOwner=CIVILIZATION_BYZANTIUM
+		PreviousOwner=CIVILIZATION_EGYPT
+		PreviousOwner=CIVILIZATION_GREECE
+		PreviousOwner=CIVILIZATION_PERSIA
+		PreviousOwner=CIVILIZATION_ROME
+		PreviousOwner=CIVILIZATION_TURKS
+	EndCity
+EndPlot
+BeginPlot
+	x=85,y=48
+	ImprovementType=IMPROVEMENT_PLANTATION
+	RouteType=ROUTE_ROAD
+EndPlot
+BeginPlot
+	x=85,y=49
+	ImprovementType=IMPROVEMENT_ORCHARD
+	RouteType=ROUTE_ROAD
+EndPlot
+BeginPlot
+	x=85,y=50
+	RouteType=ROUTE_ROAD
+EndPlot
+BeginPlot
+	x=85,y=51
+	ImprovementType=IMPROVEMENT_ORCHARD
+EndPlot
+BeginPlot
+	x=85,y=53
+	RouteType=ROUTE_ROAD
+EndPlot
+BeginPlot
+	x=86,y=31
+	ImprovementType=IMPROVEMENT_PLANTATION
+EndPlot
+BeginPlot
+	x=86,y=40
+	RouteType=ROUTE_ROAD
+EndPlot
+BeginPlot
+	x=86,y=41
+	ImprovementType=IMPROVEMENT_PASTURE
+	RouteType=ROUTE_ROAD
+EndPlot
+BeginPlot
+	x=86,y=42
+	RouteType=ROUTE_ROAD
+	BeginUnit
+		UnitType=UNIT_SHORTBOWMAN
+		UnitOwner=CIVILIZATION_ARABIA
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_SHORTBOWMAN
+		UnitOwner=CIVILIZATION_ARABIA
+	EndUnit
+	BeginCity
+		CityOwner=CIVILIZATION_ARABIA
+		CityName=Madinah
+		CityPopulation=3
+		BuildingType=BUILDING_GRANARY
+		BuildingType=BUILDING_TANNERY
+		BuildingType=BUILDING_LIBRARY
+		BuildingType=BUILDING_AQUEDUCT
+		BuildingType=BUILDING_MARKET
+		BuildingType=BUILDING_ISLAMIC_MONASTERY
+		ReligionType=RELIGION_ISLAM
+		BeginCulture
+			Civilization=CIVILIZATION_ARABIA, Culture=50
+		EndCulture
+		YearFounded=-900
+		YearAcquired=1100
+		PreviousOwner=CIVILIZATION_ARABIA
+	EndCity
+EndPlot
+BeginPlot
+	x=86,y=47
+	ImprovementType=IMPROVEMENT_MINE
+EndPlot
+BeginPlot
+	x=86,y=49
+	ImprovementType=IMPROVEMENT_FARM
+EndPlot
+BeginPlot
+	x=86,y=50
+	RouteType=ROUTE_ROAD
+EndPlot
+BeginPlot
+	x=86,y=54
+	RouteType=ROUTE_ROAD
+	BeginUnit
+		UnitType=UNIT_SHORTBOWMAN
+		UnitOwner=CIVILIZATION_BYZANTIUM
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_HEAVY_SWORDSMAN
+		UnitOwner=CIVILIZATION_BYZANTIUM
+	EndUnit
+	BeginCity
+		CityOwner=CIVILIZATION_BYZANTIUM
+		CityName=Trabzon
+		CityPopulation=3
+		BuildingType=BUILDING_BARRACKS
+		BuildingType=BUILDING_GRANARY
+		BuildingType=BUILDING_TANNERY
+		BuildingType=BUILDING_HARBOR
+		BuildingType=BUILDING_AQUEDUCT
+		BuildingType=BUILDING_JAIL
+		BuildingType=BUILDING_ORTHODOX_TEMPLE
+		BuildingType=BUILDING_NAREKAVANK
+		ReligionType=RELIGION_ORTHODOXY
+		BeginCulture
+			Civilization=CIVILIZATION_BYZANTIUM, Culture=50
+		EndCulture
+		YearFounded=-750
+		YearAcquired=1460
+		PreviousOwner=CIVILIZATION_GREECE
+		PreviousOwner=CIVILIZATION_PERSIA
+		PreviousOwner=CIVILIZATION_ROME
+		PreviousOwner=CIVILIZATION_BARBARIAN
+	EndCity
+EndPlot
+BeginPlot
+	x=86,y=55
+	ImprovementType=IMPROVEMENT_FISHING_BOATS
+EndPlot
+BeginPlot
+	x=87,y=29
+	RouteType=ROUTE_ROAD
+	BeginUnit
+		UnitType=UNIT_SHORTBOWMAN
+		UnitOwner=CIVILIZATION_SOMALIA
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_SHORTBOWMAN
+		UnitOwner=CIVILIZATION_SOMALIA
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_LEVYMAN
+		UnitOwner=CIVILIZATION_SOMALIA
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_LEVYMAN
+		UnitOwner=CIVILIZATION_SOMALIA
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_WAR_GALLEY
+		UnitOwner=CIVILIZATION_SOMALIA
+	EndUnit	
+	BeginUnit
+		UnitType=UNIT_WAR_GALLEY
+		UnitOwner=CIVILIZATION_SOMALIA
+	EndUnit
+	BeginCity
+		CityOwner=CIVILIZATION_SOMALIA
+		CityName=Muqdisho
+		CityPopulation=5
+		BuildingType=BUILDING_GRANARY
+		BuildingType=BUILDING_TANNERY
+		BuildingType=BUILDING_HARBOR
+		BuildingType=BUILDING_LIGHTHOUSE
+		BuildingType=BUILDING_MARKET
+		BuildingType=BUILDING_JAIL
+		BuildingType=BUILDING_FORGE
+		BuildingType=BUILDING_ISLAMIC_TEMPLE
+		ReligionType=RELIGION_ISLAM
+		BeginCulture
+			Civilization=CIVILIZATION_SOMALIA, Culture=100
+		EndCulture
+		YearFounded=950
+		YearAcquired=950
+	EndCity
+EndPlot
+BeginPlot
+	x=87,y=37
+	RouteType=ROUTE_ROAD
+EndPlot
+BeginPlot
+	x=87,y=38
+	RouteType=ROUTE_ROAD
+EndPlot
+BeginPlot
+	x=87,y=39
+	RouteType=ROUTE_ROAD
+	BeginUnit
+		UnitType=UNIT_ARABIAN_GHAZI
+		UnitOwner=CIVILIZATION_ARABIA
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_ARABIAN_GHAZI
+		UnitOwner=CIVILIZATION_ARABIA
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_SHORTBOWMAN
+		UnitOwner=CIVILIZATION_ARABIA
+	EndUnit
+	BeginCity
+		CityOwner=CIVILIZATION_ARABIA
+		CityName=Mekke
+		CityPopulation=5
+		BuildingType=BUILDING_PALACE
+		BuildingType=BUILDING_GRANARY
+		BuildingType=BUILDING_TANNERY
+		BuildingType=BUILDING_HARBOR
+		BuildingType=BUILDING_AQUEDUCT
+		BuildingType=BUILDING_LIGHTHOUSE
+		BuildingType=BUILDING_MARKET
+		BuildingType=BUILDING_JAIL
+		BuildingType=BUILDING_ISLAMIC_MONASTERY
+		BuildingType=BUILDING_ISLAMIC_SHRINE
+		BuildingType=BUILDING_PROPHETS_MOSQUE
+		ReligionType=RELIGION_ISLAM
+		HolyCityReligionType=RELIGION_ISLAM
+		FreeSpecialistType=SPECIALIST_GREAT_PRIEST
+		BeginCulture
+			Civilization=CIVILIZATION_ARABIA, Culture=100
+		EndCulture
+		YearFounded=520
+		YearAcquired=1050
+		PreviousOwner=CIVILIZATION_EGYPT
+	EndCity
+EndPlot
+BeginPlot
+	x=87,y=41
+	ImprovementType=IMPROVEMENT_ORCHARD
+	RouteType=ROUTE_ROAD
+EndPlot
+BeginPlot
+	x=87,y=50
+	RouteType=ROUTE_ROAD
+EndPlot
+BeginPlot
+	x=87,y=54
+	ImprovementType=IMPROVEMENT_MINE
+	RouteType=ROUTE_ROAD
+EndPlot
+BeginPlot
+	x=88,y=29
+	ImprovementType=IMPROVEMENT_FISHING_BOATS
+EndPlot
+BeginPlot
+	x=87,y=59
+	RouteType=ROUTE_ROAD
+EndPlot
+BeginPlot
+	x=88,y=47
+	ImprovementType=IMPROVEMENT_COTTAGE
+EndPlot
+BeginPlot
+	x=88,y=48
+	ImprovementType=IMPROVEMENT_PASTURE
+	RouteType=ROUTE_ROAD
+EndPlot
+BeginPlot
+	x=88,y=49
+	RouteType=ROUTE_ROAD
+EndPlot
+BeginPlot
+	x=88,y=50
+	RouteType=ROUTE_ROAD
+	BeginUnit
+		UnitType=UNIT_TURKIC_OGHUZ
+		UnitOwner=CIVILIZATION_TURKS
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_TURKIC_OGHUZ
+		UnitOwner=CIVILIZATION_TURKS
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_SHORTBOWMAN
+		UnitOwner=CIVILIZATION_TURKS
+	EndUnit
+	BeginCity
+		CityOwner=CIVILIZATION_TURKS
+		CityName=Mosul
+		CityPopulation=5
+		BuildingType=BUILDING_BARRACKS
+		BuildingType=BUILDING_GRANARY
+		BuildingType=BUILDING_TANNERY
+		BuildingType=BUILDING_WEAVER
+		BuildingType=BUILDING_WALLS
+		BuildingType=BUILDING_MARKET
+		BuildingType=BUILDING_ISLAMIC_TEMPLE
+		BuildingType=BUILDING_ISLAMIC_MONASTERY
+		BuildingType=BUILDING_SPIRAL_MINARET
+		ReligionType=RELIGION_ORTHODOXY
+		ReligionType=RELIGION_ISLAM
+		ReligionType=RELIGION_SHIA
+		BeginCulture
+			Civilization=CIVILIZATION_TURKS, Culture=100
+		EndCulture
+		YearFounded=-615
+		YearAcquired=1060
+		PreviousOwner=CIVILIZATION_ASSYRIA
+		PreviousOwner=CIVILIZATION_ARABIA
+		PreviousOwner=CIVILIZATION_GREECE
+		PreviousOwner=CIVILIZATION_PERSIA
+		PreviousOwner=CIVILIZATION_TURKS
+	EndCity
+EndPlot
+BeginPlot
+	x=88,y=53
+	ImprovementType=IMPROVEMENT_MINE
+	RouteType=ROUTE_ROAD
+EndPlot
+BeginPlot
+	x=88,y=55
+	RouteType=ROUTE_ROAD
+EndPlot
+BeginPlot
+	x=89,y=37
+	RouteType=ROUTE_ROAD
+	BeginUnit
+		UnitType=UNIT_SHORTBOWMAN
+		UnitOwner=CIVILIZATION_YEMEN
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_SHORTBOWMAN
+		UnitOwner=CIVILIZATION_YEMEN
+	EndUnit
+	BeginCity
+		CityOwner=CIVILIZATION_YEMEN
+		CityName=Sana'a
+		CityPopulation=4
+		BuildingType=BUILDING_PALACE
+		BuildingType=BUILDING_GRANARY
+		BuildingType=BUILDING_TANNERY
+		BuildingType=BUILDING_HARBOR
+		BuildingType=BUILDING_FORGE
+		BuildingType=BUILDING_YEMENI_TOWER_HOUSE
+		ReligionType=RELIGION_ISLAM
+		ReligionType=RELIGION_SHIA
+		BeginCulture
+			Civilization=CIVILIZATION_YEMEN, Culture=100
+		EndCulture
+		YearFounded=-500
+		YearAcquired=900
+		PreviousOwner=CIVILIZATION_ARABIA
+	EndCity
+EndPlot
+BeginPlot
+	x=89,y=46
+	ImprovementType=IMPROVEMENT_PLANTATION
+EndPlot
+BeginPlot
+	x=89,y=47
+	RouteType=ROUTE_ROAD
+	BeginUnit
+		UnitType=UNIT_SHORTBOWMAN
+		UnitOwner=CIVILIZATION_TURKS
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_SHORTBOWMAN
+		UnitOwner=CIVILIZATION_TURKS
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_SHORTBOWMAN
+		UnitOwner=CIVILIZATION_TURKS
+	EndUnit
+	BeginCity
+		CityOwner=CIVILIZATION_TURKS
+		CityName=Bagdat
+		CityPopulation=8
+		BuildingType=BUILDING_GRANARY
+		BuildingType=BUILDING_TANNERY
+		BuildingType=BUILDING_LIBRARY
+		BuildingType=BUILDING_AQUEDUCT
+		BuildingType=BUILDING_MARKET
+		BuildingType=BUILDING_JAIL
+		BuildingType=BUILDING_FORGE
+		BuildingType=BUILDING_PHARMACY
+		BuildingType=BUILDING_ISLAMIC_TEMPLE
+		BuildingType=BUILDING_ISLAMIC_MONASTERY
+		BuildingType=BUILDING_HOUSE_OF_WISDOM
+		BuildingType=BUILDING_SHIA_SHRINE
+		ReligionType=RELIGION_JUDAISM
+		ReligionType=RELIGION_ISLAM
+		HolyCityReligionType=RELIGION_SHIA
+		FreeSpecialistType=SPECIALIST_GREAT_PRIEST
+		BeginCulture
+			Civilization=CIVILIZATION_TURKS, Culture=150
+		EndCulture
+		YearFounded=760
+		YearAcquired=1535
+		PreviousOwner=CIVILIZATION_ARABIA
+		PreviousOwner=CIVILIZATION_TURKS
+	EndCity
+EndPlot
+BeginPlot
+	x=89,y=48
+	ImprovementType=IMPROVEMENT_COTTAGE
+EndPlot
+BeginPlot
+	x=89,y=50
+	RouteType=ROUTE_ROAD
+EndPlot
+BeginPlot
+	x=89,y=51
+	ImprovementType=IMPROVEMENT_MINE
+EndPlot
+BeginPlot
+	x=89,y=55
+	RouteType=ROUTE_ROAD
+	BeginUnit
+		UnitType=UNIT_GEORGIAN_MONASPA
+		UnitOwner=CIVILIZATION_GEORGIA
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_GEORGIAN_MONASPA
+		UnitOwner=CIVILIZATION_GEORGIA
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_HEAVY_SWORDSMAN
+		UnitOwner=CIVILIZATION_GEORGIA
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_HEAVY_SWORDSMAN
+		UnitOwner=CIVILIZATION_GEORGIA
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_SHORTBOWMAN
+		UnitOwner=CIVILIZATION_GEORGIA
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_SHORTBOWMAN
+		UnitOwner=CIVILIZATION_GEORGIA
+	EndUnit
+	BeginCity
+		CityOwner=CIVILIZATION_GEORGIA
+		CityName=Tbilisi
+		CityPopulation=3
+		BuildingType=BUILDING_PALACE
+		BuildingType=BUILDING_BARRACKS
+		BuildingType=BUILDING_GRANARY
+		BuildingType=BUILDING_WALLS
+		BuildingType=BUILDING_LIBRARY
+		BuildingType=BUILDING_AQUEDUCT
+		BuildingType=BUILDING_MARKET
+		BuildingType=BUILDING_FORGE
+		BuildingType=BUILDING_ORTHODOX_TEMPLE
+		BuildingType=BUILDING_ORTHODOX_MONASTERY
+		ReligionType=RELIGION_ORTHODOXY
+		BeginCulture
+			Civilization=CIVILIZATION_GEORGIA, Culture=200
+		EndCulture
+		YearFounded=450
+		YearAcquired=1000
+		PreviousOwner=CIVILIZATION_ARABIA
+	EndCity
+EndPlot
+BeginPlot
+	x=90,y=36
+	ImprovementType=IMPROVEMENT_FARM
+EndPlot
+BeginPlot
+	x=90,y=37
+	ImprovementType=IMPROVEMENT_PLANTATION
+EndPlot
+BeginPlot
+	x=90,y=45
+	ImprovementType=IMPROVEMENT_COTTAGE
+EndPlot
+BeginPlot
+	x=90,y=46
+	ImprovementType=IMPROVEMENT_COTTAGE
+EndPlot
+BeginPlot
+	x=90,y=47
+	ImprovementType=IMPROVEMENT_QUARRY
+	RouteType=ROUTE_ROAD
+EndPlot
+BeginPlot
+	x=90,y=48
+	ImprovementType=IMPROVEMENT_FARM
+EndPlot
+BeginPlot
+	x=90,y=49
+	ImprovementType=IMPROVEMENT_QUARRY
+EndPlot
+BeginPlot
+	x=90,y=50
+	ImprovementType=IMPROVEMENT_PLANTATION
+	RouteType=ROUTE_ROAD
+EndPlot
+BeginPlot
+	x=90,y=52
+	RouteType=ROUTE_ROAD
+	BeginUnit
+		UnitType=UNIT_TURKIC_OGHUZ
+		UnitOwner=CIVILIZATION_TURKS
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_SHORTBOWMAN
+		UnitOwner=CIVILIZATION_TURKS
+	EndUnit
+	BeginCity
+		CityOwner=CIVILIZATION_TURKS
+		CityName=Tabriz
+		CityPopulation=7
+		BuildingType=BUILDING_BARRACKS
+		BuildingType=BUILDING_GRANARY
+		BuildingType=BUILDING_TANNERY
+		BuildingType=BUILDING_WEAVER
+		BuildingType=BUILDING_MONUMENT
+		BuildingType=BUILDING_LIBRARY
+		BuildingType=BUILDING_HARBOR
+		BuildingType=BUILDING_AQUEDUCT
+		BuildingType=BUILDING_MARKET
+		BuildingType=BUILDING_JAIL
+		BuildingType=BUILDING_SHIA_TEMPLE
+		BuildingType=BUILDING_SHIA_MONASTERY
+		ReligionType=RELIGION_SHIA
+		BeginCulture
+			Civilization=CIVILIZATION_TURKS, Culture=100
+		EndCulture
+		YearFounded=-720
+		YearAcquired=1500
+		PreviousOwner=CIVILIZATION_PERSIA
+		PreviousOwner=CIVILIZATION_ARABIA
+	EndCity
+EndPlot
+BeginPlot
+	x=90,y=54
+	RouteType=ROUTE_ROAD
+EndPlot
+BeginPlot
+	x=91,y=47
+	RouteType=ROUTE_ROAD
+EndPlot
+BeginPlot
+	x=91,y=53
+	ImprovementType=IMPROVEMENT_ORCHARD
+	RouteType=ROUTE_ROAD
+EndPlot
+BeginPlot
+	x=92,y=46
+	RouteType=ROUTE_ROAD
+EndPlot
+BeginPlot
+	x=92,y=47
+	ImprovementType=IMPROVEMENT_ORCHARD
+EndPlot
+BeginPlot
+	x=92,y=49
+	ImprovementType=IMPROVEMENT_WINDMILL
+	RouteType=ROUTE_ROAD
+EndPlot
+BeginPlot
+	x=92,y=50
+	ImprovementType=IMPROVEMENT_WINDMILL
+EndPlot
+BeginPlot
+	x=92,y=52
+	ImprovementType=IMPROVEMENT_CAMP
+	RouteType=ROUTE_ROAD
+EndPlot
+BeginPlot
+	x=92,y=60
+	ImprovementType=IMPROVEMENT_COTTAGE
+EndPlot
+BeginPlot
+	x=92,y=66
+	RouteType=ROUTE_ROAD
+	BeginUnit
+		UnitType=UNIT_SHORTBOWMAN
+		UnitOwner=CIVILIZATION_INDEPENDENT
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_SHORTBOWMAN
+		UnitOwner=CIVILIZATION_INDEPENDENT
+	EndUnit
+	BeginCity
+		CityOwner=CIVILIZATION_INDEPENDENT
+		CityName=Qazan
+		CityPopulation=5
+		BuildingType=BUILDING_BARRACKS
+		BuildingType=BUILDING_ISLAMIC_TEMPLE
+		ReligionType=RELIGION_ISLAM
+		BeginCulture
+			Civilization=CIVILIZATION_INDEPENDENT, Culture=50
+		EndCulture
+		YearFounded=1000
+		YearAcquired=1000
+	EndCity
+EndPlot
+BeginPlot
+	x=93,y=44
+	ImprovementType=IMPROVEMENT_ORCHARD
+	RouteType=ROUTE_ROAD
+EndPlot
+BeginPlot
+	x=93,y=45
+	ImprovementType=IMPROVEMENT_MINE
+	RouteType=ROUTE_ROAD
+EndPlot
+BeginPlot
+	x=93,y=47
+	ImprovementType=IMPROVEMENT_PASTURE
+	RouteType=ROUTE_ROAD
+EndPlot
+BeginPlot
+	x=93,y=48
+	RouteType=ROUTE_ROAD
+	BeginUnit
+		UnitType=UNIT_TURKIC_OGHUZ
+		UnitOwner=CIVILIZATION_TURKS
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_TURKIC_OGHUZ
+		UnitOwner=CIVILIZATION_TURKS
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_TURKIC_OGHUZ
+		UnitOwner=CIVILIZATION_TURKS
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_TURKIC_OGHUZ
+		UnitOwner=CIVILIZATION_TURKS
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_TREBUCHET
+		UnitOwner=CIVILIZATION_TURKS
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_TREBUCHET
+		UnitOwner=CIVILIZATION_TURKS
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_WORKER
+		UnitOwner=CIVILIZATION_TURKS
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_WORKER
+		UnitOwner=CIVILIZATION_TURKS
+	EndUnit
+	BeginCity
+		CityOwner=CIVILIZATION_TURKS
+		CityName=Isfahan
+		CityPopulation=8
+		BuildingType=BUILDING_PALACE
+		BuildingType=BUILDING_GRANARY
+		BuildingType=BUILDING_TANNERY
+		BuildingType=BUILDING_WEAVER
+		BuildingType=BUILDING_MONUMENT
+		BuildingType=BUILDING_LIBRARY
+		BuildingType=BUILDING_THEATRE
+		BuildingType=BUILDING_MARKET
+		BuildingType=BUILDING_JAIL
+		BuildingType=BUILDING_FORGE
+		BuildingType=BUILDING_PHARMACY
+		ReligionType=RELIGION_ISLAM
+		ReligionType=RELIGION_SHIA
+		BeginCulture
+			Civilization=CIVILIZATION_TURKS, Culture=250
+		EndCulture
+		YearFounded=-1050
+		YearAcquired=1050
+		PreviousOwner=CIVILIZATION_INDEPENDENT
+		PreviousOwner=CIVILIZATION_ARABIA
+		PreviousOwner=CIVILIZATION_PERSIA
+	EndCity
+EndPlot
+BeginPlot
+	x=93,y=50
+	RouteType=ROUTE_ROAD
+EndPlot
+BeginPlot
+	x=93,y=51
+	RouteType=ROUTE_ROAD
+	BeginUnit
+		UnitType=UNIT_SHORTBOWMAN
+		UnitOwner=CIVILIZATION_TURKS
+	EndUnit
+	BeginCity
+		CityOwner=CIVILIZATION_TURKS
+		CityName=Tehran
+		CityPopulation=8
+		BuildingType=BUILDING_GRANARY
+		BuildingType=BUILDING_MONUMENT
+		BuildingType=BUILDING_WALLS
+		BuildingType=BUILDING_LIBRARY
+		BuildingType=BUILDING_AQUEDUCT
+		BuildingType=BUILDING_MARKET
+		BuildingType=BUILDING_JAIL
+		BuildingType=BUILDING_BATH
+		BuildingType=BUILDING_FORGE
+		BuildingType=BUILDING_SHIA_TEMPLE
+		BuildingType=BUILDING_SHIA_MONASTERY
+		ReligionType=RELIGION_SHIA
+		ReligionType=RELIGION_ISLAM
+		ReligionType=RELIGION_ZOROASTRIANISM
+		BeginCulture
+			Civilization=CIVILIZATION_TURKS, Culture=100
+		EndCulture
+		YearFounded=-795
+		YearAcquired=1500
+		PreviousOwner=CIVILIZATION_PERSIA
+		PreviousOwner=CIVILIZATION_ARABIA
+		PreviousOwner=CIVILIZATION_GREECE
+	EndCity
+EndPlot
+BeginPlot
+	x=93,y=64
+	RouteType=ROUTE_ROAD
+	BeginUnit
+		UnitType=UNIT_SHORTBOWMAN
+		UnitOwner=CIVILIZATION_INDEPENDENT2
+	EndUnit	
+	BeginUnit
+		UnitType=UNIT_SHORTBOWMAN
+		UnitOwner=CIVILIZATION_INDEPENDENT2
+	EndUnit
+	BeginCity
+		CityOwner=CIVILIZATION_INDEPENDENT2
+		CityName=Samara
+		CityPopulation=2
+		BuildingType=BUILDING_GRANARY
+		BuildingType=BUILDING_TANNERY
+		BeginCulture
+			Civilization=CIVILIZATION_INDEPENDENT2, Culture=50
+		EndCulture
+		YearFounded=900
+		YearAcquired=900
+	EndCity
+EndPlot
+BeginPlot
+	x=94,y=39
+	RouteType=ROUTE_ROAD
+EndPlot
+BeginPlot
+	x=94,y=44
+	ImprovementType=IMPROVEMENT_ORCHARD
+	RouteType=ROUTE_ROAD
+EndPlot
+BeginPlot
+	x=94,y=45
+	RouteType=ROUTE_ROAD
+	BeginUnit
+		UnitType=UNIT_SHORTBOWMAN
+		UnitOwner=CIVILIZATION_TURKS
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_TURKIC_OGHUZ
+		UnitOwner=CIVILIZATION_TURKS
+	EndUnit
+	BeginCity
+		CityOwner=CIVILIZATION_TURKS
+		CityName=Shiraz
+		CityPopulation=5
+		BuildingType=BUILDING_GRANARY
+		BuildingType=BUILDING_TANNERY
+		BuildingType=BUILDING_LIBRARY
+		BuildingType=BUILDING_AQUEDUCT
+		BuildingType=BUILDING_LIGHTHOUSE
+		BuildingType=BUILDING_SHIA_TEMPLE
+		BuildingType=BUILDING_SHIA_MONASTERY
+		BuildingType=BUILDING_ZOROASTRIAN_TEMPLE
+		BuildingType=BUILDING_ZOROASTRIAN_SHRINE
+		ReligionType=RELIGION_SHIA
+		ReligionType=RELIGION_ZOROASTRIANISM
+		HolyCityReligionType=RELIGION_ZOROASTRIANISM
+		BeginCulture
+			Civilization=CIVILIZATION_TURKS, Culture=100
+		EndCulture
+		YearFounded=-2000
+		YearAcquired=1500
+		PreviousOwner=CIVILIZATION_INDEPENDENT
+		PreviousOwner=CIVILIZATION_ARABIA
+		PreviousOwner=CIVILIZATION_PERSIA
+	EndCity
+EndPlot
+BeginPlot
+	x=94,y=46
+	ImprovementType=IMPROVEMENT_MINE
+	RouteType=ROUTE_ROAD
+EndPlot
+BeginPlot
+	x=94,y=47
+	ImprovementType=IMPROVEMENT_PLANTATION
+	RouteType=ROUTE_ROAD
+EndPlot
+BeginPlot
+	x=94,y=48
+	ImprovementType=IMPROVEMENT_PASTURE
+	RouteType=ROUTE_ROAD
+EndPlot
+BeginPlot
+	x=94,y=49
+	ImprovementType=IMPROVEMENT_ORCHARD
+EndPlot
+BeginPlot
+	x=94,y=51
+	ImprovementType=IMPROVEMENT_FARM
+	RouteType=ROUTE_ROAD
+EndPlot
+BeginPlot
+	x=94,y=63
+	ImprovementType=IMPROVEMENT_PASTURE
+EndPlot
+BeginPlot
+	x=94,y=65
+	ImprovementType=IMPROVEMENT_PASTURE
+EndPlot
+BeginPlot
+	x=94,y=66
+	ImprovementType=IMPROVEMENT_COTTAGE
+	RouteType=ROUTE_ROAD
+EndPlot
+BeginPlot
+	x=95,y=40
+	RouteType=ROUTE_ROAD
+EndPlot
+BeginPlot
+	x=95,y=46
+	ImprovementType=IMPROVEMENT_ORCHARD
+	RouteType=ROUTE_ROAD
+EndPlot
+BeginPlot
+	x=95,y=50
+	ImprovementType=IMPROVEMENT_PASTURE
+	RouteType=ROUTE_ROAD
+EndPlot
+BeginPlot
+	x=95,y=51
+	RouteType=ROUTE_ROAD
+EndPlot
+BeginPlot
+	x=95,y=55
+	ImprovementType=IMPROVEMENT_QUARRY
+EndPlot
+BeginPlot
+	x=96,y=39
+	ImprovementType=IMPROVEMENT_PLANTATION
+	RouteType=ROUTE_ROAD
+EndPlot
+BeginPlot
+	x=96,y=40
+	RouteType=ROUTE_ROAD
+	BeginUnit
+		UnitType=UNIT_SHORTBOWMAN
+		UnitOwner=CIVILIZATION_TURKS
+	EndUnit
+	BeginCity
+		CityOwner=CIVILIZATION_TURKS
+		CityName=Masqat
+		CityPopulation=4
+		BuildingType=BUILDING_BARRACKS
+		BuildingType=BUILDING_GRANARY
+		BuildingType=BUILDING_TANNERY
+		BuildingType=BUILDING_HARBOR
+		BuildingType=BUILDING_LIGHTHOUSE
+		ReligionType=RELIGION_ISLAM
+		BeginCulture
+			Civilization=CIVILIZATION_TURKS, Culture=100
+		EndCulture
+		YearFounded=-550
+		YearAcquired=1650
+		PreviousOwner=CIVILIZATION_ARABIA
+		PreviousOwner=CIVILIZATION_PERSIA
+	EndCity
+EndPlot
+BeginPlot
+	x=96,y=50
+	ImprovementType=IMPROVEMENT_PASTURE
+EndPlot
+BeginPlot
+	x=96,y=51
+	ImprovementType=IMPROVEMENT_WINDMILL
+	RouteType=ROUTE_ROAD
+EndPlot
+BeginPlot
+	x=96,y=52
+	ImprovementType=IMPROVEMENT_MINE
+	RouteType=ROUTE_ROAD
+EndPlot
+BeginPlot
+	x=96,y=55
+	ImprovementType=IMPROVEMENT_PLANTATION
+EndPlot
+BeginPlot
+	x=96,y=56
+	RouteType=ROUTE_ROAD
+	BeginUnit
+		UnitType=UNIT_TURKIC_OGHUZ
+		UnitOwner=CIVILIZATION_TURKS
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_TURKIC_OGHUZ
+		UnitOwner=CIVILIZATION_TURKS
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_TURKIC_OGHUZ
+		UnitOwner=CIVILIZATION_TURKS
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_SHORTBOWMAN
+		UnitOwner=CIVILIZATION_TURKS
+	EndUnit
+	BeginCity
+		CityOwner=CIVILIZATION_TURKS
+		CityName=Khiva
+		CityPopulation=4
+		BuildingType=BUILDING_GRANARY
+		BuildingType=BUILDING_TANNERY
+		BuildingType=BUILDING_MONUMENT
+		BuildingType=BUILDING_STABLE
+		BuildingType=BUILDING_MARKET
+		BuildingType=BUILDING_ISLAMIC_TEMPLE
+		BuildingType=BUILDING_ISLAMIC_MONASTERY
+		ReligionType=RELIGION_ISLAM
+		BeginCulture
+			Civilization=CIVILIZATION_TURKS, Culture=50
+		EndCulture
+	EndCity
+EndPlot
+BeginPlot
+	x=97,y=48
+	ImprovementType=IMPROVEMENT_ORCHARD
+	RouteType=ROUTE_ROAD
+EndPlot
+BeginPlot
+	x=97,y=49
+	RouteType=ROUTE_ROAD
+EndPlot
+BeginPlot
+	x=97,y=50
+	RouteType=ROUTE_ROAD
+	BeginUnit
+		UnitType=UNIT_SHORTBOWMAN
+		UnitOwner=CIVILIZATION_TURKS
+	EndUnit
+	BeginCity
+		CityOwner=CIVILIZATION_TURKS
+		CityName=Herat
+		CityPopulation=5
+		BuildingType=BUILDING_BARRACKS
+		BuildingType=BUILDING_GRANARY
+		BuildingType=BUILDING_TANNERY
+		BuildingType=BUILDING_LIBRARY
+		BuildingType=BUILDING_AQUEDUCT
+		BuildingType=BUILDING_MARKET
+		BuildingType=BUILDING_FORGE
+		BuildingType=BUILDING_PHARMACY
+		BuildingType=BUILDING_SALSAL_BUDDHA
+		ReligionType=RELIGION_ISLAM
+		BeginCulture
+			Civilization=CIVILIZATION_TURKS, Culture=100
+		EndCulture
+		YearFounded=-550
+		YearAcquired=1060
+		PreviousOwner=CIVILIZATION_PERSIA
+		PreviousOwner=CIVILIZATION_ARABIA
+		PreviousOwner=CIVILIZATION_GREECE
+	EndCity
+EndPlot
+BeginPlot
+	x=97,y=51
+	ImprovementType=IMPROVEMENT_PLANTATION
+EndPlot
+BeginPlot
+	x=97,y=52
+	ImprovementType=IMPROVEMENT_ORCHARD
+	RouteType=ROUTE_ROAD
+EndPlot
+BeginPlot
+	x=97,y=55
+	ImprovementType=IMPROVEMENT_COTTAGE
+	RouteType=ROUTE_ROAD
+EndPlot
+BeginPlot
+	x=97,y=57
+	ImprovementType=IMPROVEMENT_COTTAGE
+EndPlot
+BeginPlot
+	x=98,y=42
+	ImprovementType=IMPROVEMENT_FISHING_BOATS
+EndPlot
+BeginPlot
+	x=99,y=49
+	RouteType=ROUTE_ROAD
+	BeginUnit
+		UnitType=UNIT_GHURID_VETERAN_SPEARS
+		UnitOwner=CIVILIZATION_GHORIDS
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_GHURID_VETERAN_SPEARS
+		UnitOwner=CIVILIZATION_GHORIDS
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_GHURID_VETERAN_SPEARS
+		UnitOwner=CIVILIZATION_GHORIDS
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_GHURID_VETERAN_SPEARS
+		UnitOwner=CIVILIZATION_GHORIDS
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_HAUSAN_MUJAHID
+		UnitOwner=CIVILIZATION_GHORIDS
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_HAUSAN_MUJAHID
+		UnitOwner=CIVILIZATION_GHORIDS
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_SHORTBOWMAN
+		UnitOwner=CIVILIZATION_GHORIDS
+	EndUnit
+	BeginCity
+		CityOwner=CIVILIZATION_GHORIDS
+		CityName=Ghazni
+		CityPopulation=4
+		BuildingType=BUILDING_PALACE
+		BuildingType=BUILDING_GRANARY
+		BuildingType=BUILDING_TANNERY
+		BuildingType=BUILDING_HARBOR
+		BuildingType=BUILDING_LIGHTHOUSE
+		BuildingType=BUILDING_ISLAMIC_TEMPLE
+		BuildingType=BUILDING_ISLAMIC_MONASTERY
+		ReligionType=RELIGION_ISLAM
+		ReligionType=RELIGION_SHIA
+		BeginCulture
+			Civilization=CIVILIZATION_GHORIDS, Culture=50
+		EndCulture
+		YearFounded=-300
+		YearAcquired=1590
+		PreviousOwner=CIVILIZATION_INDIA
+		PreviousOwner=CIVILIZATION_ARABIA
+	EndCity
+EndPlot
+
+BeginPlot
+	x=98,y=51
+	ImprovementType=IMPROVEMENT_PLANTATION
+	RouteType=ROUTE_ROAD
+EndPlot
+BeginPlot
+	x=98,y=53
+	RouteType=ROUTE_ROAD
+EndPlot
+BeginPlot
+	x=98,y=54
+	RouteType=ROUTE_ROAD
+	BeginUnit
+		UnitType=UNIT_TURKIC_OGHUZ
+		UnitOwner=CIVILIZATION_TURKS
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_TURKIC_OGHUZ
+		UnitOwner=CIVILIZATION_TURKS
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_TURKIC_OGHUZ
+		UnitOwner=CIVILIZATION_TURKS
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_SHORTBOWMAN
+		UnitOwner=CIVILIZATION_TURKS
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_SHORTBOWMAN
+		UnitOwner=CIVILIZATION_TURKS
+	EndUnit
+	BeginCity
+		CityOwner=CIVILIZATION_TURKS
+		CityName=Bukhara
+		CityPopulation=4
+		BuildingType=BUILDING_BARRACKS
+		BuildingType=BUILDING_GRANARY
+		BuildingType=BUILDING_TANNERY
+		BuildingType=BUILDING_STABLE
+		BuildingType=BUILDING_LIBRARY
+		BuildingType=BUILDING_AQUEDUCT
+		BuildingType=BUILDING_BATH
+		ReligionType=RELIGION_ISLAM
+		ReligionType=RELIGION_SHIA
+		BeginCulture
+			Civilization=CIVILIZATION_TURKS, Culture=100
+		EndCulture
+		YearFounded=-500
+		YearAcquired=1090
+		PreviousOwner=CIVILIZATION_INDEPENDENT
+	EndCity
+EndPlot
+BeginPlot
+	x=98,y=57
+	ImprovementType=IMPROVEMENT_QUARRY
+EndPlot
+BeginPlot
+	x=99,y=43
+	RouteType=ROUTE_ROAD
+	BeginUnit
+		UnitType=UNIT_GHURID_VETERAN_SPEARS
+		UnitOwner=CIVILIZATION_GHORIDS
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_GHURID_VETERAN_SPEARS
+		UnitOwner=CIVILIZATION_GHORIDS
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_GHURID_VETERAN_SPEARS
+		UnitOwner=CIVILIZATION_GHORIDS
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_GHURID_VETERAN_SPEARS
+		UnitOwner=CIVILIZATION_GHORIDS
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_HEAVY_SWORDSMAN
+		UnitOwner=CIVILIZATION_GHORIDS
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_HEAVY_SWORDSMAN
+		UnitOwner=CIVILIZATION_GHORIDS
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_SHORTBOWMAN
+		UnitOwner=CIVILIZATION_GHORIDS
+	EndUnit
+	BeginCity
+		CityOwner=CIVILIZATION_GHORIDS
+		CityName=Thatta
+		CityPopulation=6
+		BuildingType=BUILDING_GRANARY
+		BuildingType=BUILDING_TANNERY
+		BuildingType=BUILDING_HARBOR
+		BuildingType=BUILDING_LIGHTHOUSE
+		BuildingType=BUILDING_ISLAMIC_TEMPLE
+		BuildingType=BUILDING_ISLAMIC_MONASTERY
+		ReligionType=RELIGION_ISLAM
+		ReligionType=RELIGION_SHIA
+		BeginCulture
+			Civilization=CIVILIZATION_GHORIDS, Culture=50
+		EndCulture
+		YearFounded=-300
+		YearAcquired=1590
+		PreviousOwner=CIVILIZATION_INDIA
+		PreviousOwner=CIVILIZATION_ARABIA
+	EndCity
+EndPlot
+BeginPlot
+	x=99,y=44
+	ImprovementType=IMPROVEMENT_ORCHARD
+EndPlot
+BeginPlot
+	x=99,y=51
+	RouteType=ROUTE_ROAD
+EndPlot
+BeginPlot
+	x=99,y=53
+	ImprovementType=IMPROVEMENT_PASTURE
+EndPlot
+BeginPlot
+	x=99,y=54
+	ImprovementType=IMPROVEMENT_PLANTATION
+	RouteType=ROUTE_ROAD
+EndPlot
+BeginPlot
+	x=99,y=55
+	ImprovementType=IMPROVEMENT_PASTURE
+EndPlot
+BeginPlot
+	x=100,y=43
+	ImprovementType=IMPROVEMENT_COTTAGE
+EndPlot
+BeginPlot
+	x=100,y=44
+	ImprovementType=IMPROVEMENT_COTTAGE
+	RouteType=ROUTE_ROAD
+EndPlot
+BeginPlot
+	x=100,y=45
+	RouteType=ROUTE_ROAD
+EndPlot
+BeginPlot
+	x=100,y=48
+	ImprovementType=IMPROVEMENT_PLANTATION
+EndPlot
+BeginPlot
+	x=100,y=50
+	RouteType=ROUTE_ROAD
+EndPlot
+BeginPlot
+	x=100,y=55
+	RouteType=ROUTE_ROAD
+EndPlot
+BeginPlot
+	x=100,y=56
+	ImprovementType=IMPROVEMENT_PLANTATION
+EndPlot
+BeginPlot
+	x=100,y=57
+	ImprovementType=IMPROVEMENT_PASTURE
+EndPlot
+BeginPlot
+	x=101,y=41
+	ImprovementType=IMPROVEMENT_FISHING_BOATS
+EndPlot
+BeginPlot
+	x=101,y=42
+	ImprovementType=IMPROVEMENT_PLANTATION
+EndPlot
+BeginPlot
+	x=101,y=43
+	ImprovementType=IMPROVEMENT_QUARRY
+EndPlot
+BeginPlot
+	x=101,y=46
+	RouteType=ROUTE_ROAD
+EndPlot
+BeginPlot
+	x=101,y=48
+	ImprovementType=IMPROVEMENT_FARM
+	RouteType=ROUTE_ROAD
+EndPlot
+BeginPlot
+	x=101,y=49
+	ImprovementType=IMPROVEMENT_QUARRY
+	RouteType=ROUTE_ROAD
+EndPlot
+BeginPlot
+	x=101,y=50
+	RouteType=ROUTE_ROAD
+	BeginUnit
+		UnitType=UNIT_SHORTBOWMAN
+		UnitOwner=CIVILIZATION_GHORIDS
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_SHORTBOWMAN
+		UnitOwner=CIVILIZATION_GHORIDS
+	EndUnit
+	BeginCity
+		CityOwner=CIVILIZATION_GHORIDS
+		CityName=Peshawar
+		CityPopulation=6
+		BuildingType=BUILDING_BARRACKS
+		BuildingType=BUILDING_GRANARY
+		BuildingType=BUILDING_ISLAMIC_TEMPLE
+		BuildingType=BUILDING_HINDU_TEMPLE
+		ReligionType=RELIGION_ISLAM
+		ReligionType=RELIGION_HINDUISM
+		BeginCulture
+			Civilization=CIVILIZATION_GHORIDS, Culture=50
+		EndCulture
+		YearFounded=100
+		YearAcquired=1525
+		PreviousOwner=CIVILIZATION_INDIA
+		PreviousOwner=CIVILIZATION_GREECE
+		PreviousOwner=CIVILIZATION_KUSHANS
+	EndCity
+EndPlot
+BeginPlot
+	x=101,y=55
+	ImprovementType=IMPROVEMENT_PASTURE
+EndPlot
+BeginPlot
+	x=101,y=56
+	RouteType=ROUTE_ROAD
+	BeginUnit
+		UnitType=UNIT_TURKIC_OGHUZ
+		UnitOwner=CIVILIZATION_TURKS
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_SHORTBOWMAN
+		UnitOwner=CIVILIZATION_TURKS
+	EndUnit
+	BeginCity
+		CityOwner=CIVILIZATION_TURKS
+		CityName=Tashkent
+		CityPopulation=3
+		BuildingType=BUILDING_GRANARY
+		BuildingType=BUILDING_TANNERY
+		BuildingType=BUILDING_MONUMENT
+		ReligionType=RELIGION_ISLAM
+		BeginCulture
+			Civilization=CIVILIZATION_TURKS, Culture=50
+		EndCulture
+		YearFounded=-300
+		YearAcquired=1600
+		PreviousOwner=CIVILIZATION_KUSHANS
+		PreviousOwner=CIVILIZATION_ARABIA
+	EndCity
+EndPlot
+BeginPlot
+	x=102,y=37
+	ImprovementType=IMPROVEMENT_FISHING_BOATS
+EndPlot
+BeginPlot
+	x=102,y=41
+	ImprovementType=IMPROVEMENT_PLANTATION
+EndPlot
+BeginPlot
+	x=102,y=45
+	ImprovementType=IMPROVEMENT_PASTURE
+EndPlot
+BeginPlot
+	x=102,y=47
+	RouteType=ROUTE_ROAD
+	BeginUnit
+		UnitType=UNIT_HAUSAN_MUJAHID
+		UnitOwner=CIVILIZATION_GHORIDS
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_WAR_ELEPHANT
+		UnitOwner=CIVILIZATION_GHORIDS
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_TREBUCHET
+		UnitOwner=CIVILIZATION_GHORIDS
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_SHORTBOWMAN
+		UnitOwner=CIVILIZATION_GHORIDS
+	EndUnit
+	BeginCity
+		CityOwner=CIVILIZATION_GHORIDS
+		CityName=Lahore
+		CityPopulation=8
+		BuildingType=BUILDING_GRANARY
+		BuildingType=BUILDING_TANNERY
+		BuildingType=BUILDING_LIBRARY
+		BuildingType=BUILDING_AQUEDUCT
+		BuildingType=BUILDING_MARKET
+		BuildingType=BUILDING_JAIL
+		BuildingType=BUILDING_FORGE
+		BuildingType=BUILDING_ISLAMIC_TEMPLE
+		BuildingType=BUILDING_ISLAMIC_MONASTERY
+		ReligionType=RELIGION_ISLAM
+		ReligionType=RELIGION_HINDUISM
+		BeginCulture
+			Civilization=CIVILIZATION_GHORIDS, Culture=100
+		EndCulture
+		YearFounded=980
+		PreviousOwner=CIVILIZATION_INDIA
+	EndCity
+EndPlot
+BeginPlot
+	x=102,y=48
+	ImprovementType=IMPROVEMENT_PLANTATION
+EndPlot
+BeginPlot
+	x=102,y=50
+	ImprovementType=IMPROVEMENT_PLANTATION
+EndPlot
+BeginPlot
+	x=102,y=55
+	ImprovementType=IMPROVEMENT_FARM
+	RouteType=ROUTE_ROAD
+EndPlot
+BeginPlot
+	x=103,y=37
+	ImprovementType=IMPROVEMENT_PLANTATION
+EndPlot
+BeginPlot
+	x=103,y=38
+	ImprovementType=IMPROVEMENT_PLANTATION
+EndPlot
+BeginPlot
+	x=103,y=39
+	RouteType=ROUTE_ROAD
+	BeginUnit
+		UnitType=UNIT_INDIAN_PATIYODHA
+		UnitOwner=CIVILIZATION_INDEPENDENT
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_INDIAN_PATIYODHA
+		UnitOwner=CIVILIZATION_INDEPENDENT
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_SHORTBOWMAN
+		UnitOwner=CIVILIZATION_INDEPENDENT
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_SHORTBOWMAN
+		UnitOwner=CIVILIZATION_INDEPENDENT
+	EndUnit
+	BeginCity
+		CityOwner=CIVILIZATION_INDEPENDENT
+		CityName=Mumbai
+		CityPopulation=5
+		BuildingType=BUILDING_PALACE
+		BuildingType=BUILDING_BARRACKS
+		BuildingType=BUILDING_GRANARY
+		BuildingType=BUILDING_TANNERY
+		BuildingType=BUILDING_HINDU_TEMPLE
+		BuildingType=BUILDING_HINDU_MONASTERY
+		ReligionType=RELIGION_HINDUISM
+		BeginCulture
+			Civilization=CIVILIZATION_INDEPENDENT, Culture=75
+		EndCulture
+		YearFounded=1100
+	EndCity
+EndPlot
+BeginPlot
+	x=103,y=40
+	ImprovementType=IMPROVEMENT_COTTAGE
+EndPlot
+BeginPlot
+	x=103,y=41
+	ImprovementType=IMPROVEMENT_COTTAGE
+EndPlot
+BeginPlot
+	x=103,y=42
+	ImprovementType=IMPROVEMENT_PASTURE
+EndPlot
+BeginPlot
+	x=103,y=46
+	RouteType=ROUTE_ROAD
+EndPlot
+BeginPlot
+	x=103,y=47
+	ImprovementType=IMPROVEMENT_PASTURE
+EndPlot
+BeginPlot
+	x=103,y=48
+	ImprovementType=IMPROVEMENT_COTTAGE
+EndPlot
+BeginPlot
+	x=103,y=49
+	ImprovementType=IMPROVEMENT_QUARRY
+EndPlot
+BeginPlot
+	x=103,y=51
+	ImprovementType=IMPROVEMENT_PASTURE
+EndPlot
+BeginPlot
+	x=103,y=55
+	RouteType=ROUTE_ROAD
+EndPlot
+BeginPlot
+	x=104,y=33
+	ImprovementType=IMPROVEMENT_FISHING_BOATS
+EndPlot
+BeginPlot
+	x=104,y=35
+	ImprovementType=IMPROVEMENT_COTTAGE
+EndPlot
+BeginPlot
+	x=104,y=36
+	ImprovementType=IMPROVEMENT_ORCHARD
+EndPlot
+BeginPlot
+	x=104,y=37
+	ImprovementType=IMPROVEMENT_PLANTATION
+EndPlot
+BeginPlot
+	x=104,y=38
+	ImprovementType=IMPROVEMENT_MINE
+EndPlot
+BeginPlot
+	x=104,y=39
+	ImprovementType=IMPROVEMENT_MINE
+EndPlot
+BeginPlot
+	x=104,y=40
+	ImprovementType=IMPROVEMENT_PASTURE
+	RouteType=ROUTE_ROAD
+EndPlot
+BeginPlot
+	x=104,y=41
+	ImprovementType=IMPROVEMENT_FARM
+	RouteType=ROUTE_ROAD
+EndPlot
+BeginPlot
+	x=104,y=42
+	RouteType=ROUTE_ROAD
+	BeginUnit
+		UnitType=UNIT_SHORTBOWMAN
+		UnitOwner=CIVILIZATION_INDEPENDENT2
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_INDIAN_PATIYODHA
+		UnitOwner=CIVILIZATION_INDEPENDENT2
+	EndUnit
+	BeginCity
+		CityOwner=CIVILIZATION_INDEPENDENT2
+		CityName=Indore
+		CityPopulation=3
+		BuildingType=BUILDING_BARRACKS
+		BuildingType=BUILDING_GRANARY
+		BuildingType=BUILDING_WEAVER
+		ReligionType=RELIGION_ISLAM
+		ReligionType=RELIGION_HINDUISM
+		BeginCulture
+			Civilization=CIVILIZATION_INDEPENDENT2, Culture=100
+		EndCulture
+		YearFounded=460
+		YearAcquired=460
+		PreviousOwner=CIVILIZATION_INDIA
+	EndCity
+EndPlot
+BeginPlot
+	x=104,y=43
+	ImprovementType=IMPROVEMENT_FARM
+EndPlot
+BeginPlot
+	x=104,y=44
+	ImprovementType=IMPROVEMENT_QUARRY
+EndPlot
+BeginPlot
+	x=104,y=45
+	ImprovementType=IMPROVEMENT_MINE
+EndPlot
+BeginPlot
+	x=104,y=46
+	ImprovementType=IMPROVEMENT_COTTAGE
+	RouteType=ROUTE_ROAD
+EndPlot
+BeginPlot
+	x=104,y=47
+	ImprovementType=IMPROVEMENT_COTTAGE
+EndPlot
+BeginPlot
+	x=104,y=48
+	ImprovementType=IMPROVEMENT_COTTAGE
+EndPlot
+BeginPlot
+	x=104,y=56
+	RouteType=ROUTE_ROAD
+EndPlot
+BeginPlot
+	x=105,y=33
+	ImprovementType=IMPROVEMENT_MINE
+EndPlot
+BeginPlot
+	x=105,y=34
+	ImprovementType=IMPROVEMENT_MINE
+EndPlot
+BeginPlot
+	x=105,y=35
+	RouteType=ROUTE_ROAD
+	BeginUnit
+		UnitType=UNIT_SHORTBOWMAN
+		UnitOwner=CIVILIZATION_DRAVIDIA
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_SHORTBOWMAN
+		UnitOwner=CIVILIZATION_DRAVIDIA
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_WAR_ELEPHANT
+		UnitOwner=CIVILIZATION_DRAVIDIA
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_WAR_ELEPHANT
+		UnitOwner=CIVILIZATION_DRAVIDIA
+	EndUnit
+
+	BeginUnit
+		UnitType=UNIT_HEAVY_SWORDSMAN
+		UnitOwner=CIVILIZATION_DRAVIDIA
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_WORKER
+		UnitOwner=CIVILIZATION_DRAVIDIA
+	EndUnit
+	BeginCity
+		CityOwner=CIVILIZATION_DRAVIDIA
+		CityName=Mahishuru
+		CityPopulation=7
+		BuildingType=BUILDING_PALACE
+		BuildingType=BUILDING_BARRACKS
+		BuildingType=BUILDING_GRANARY
+		BuildingType=BUILDING_TANNERY
+		BuildingType=BUILDING_WEAVER
+		BuildingType=BUILDING_MONUMENT
+		BuildingType=BUILDING_WALLS
+		BuildingType=BUILDING_LIBRARY
+		BuildingType=BUILDING_HARBOR
+		BuildingType=BUILDING_AQUEDUCT
+		BuildingType=BUILDING_JAIL
+		BuildingType=BUILDING_FORGE
+		BuildingType=BUILDING_HINDU_TEMPLE
+		BuildingType=BUILDING_HINDU_MONASTERY
+		ReligionType=RELIGION_HINDUISM
+		BeginCulture
+			Civilization=CIVILIZATION_DRAVIDIA, Culture=50
+		EndCulture
+		YearFounded=1100
+		YearAcquired=1100
+	EndCity
+EndPlot
+BeginPlot
+	x=105,y=36
+	ImprovementType=IMPROVEMENT_FARM
+	RouteType=ROUTE_ROAD
+EndPlot
+BeginPlot
+	x=105,y=37
+	RouteType=ROUTE_ROAD
+EndPlot
+BeginPlot
+	x=105,y=38
+	ImprovementType=IMPROVEMENT_CAMP
+EndPlot
+BeginPlot
+	x=105,y=39
+	ImprovementType=IMPROVEMENT_PADDY_FIELD
+	RouteType=ROUTE_ROAD
+EndPlot
+BeginPlot
+	x=105,y=40
+	ImprovementType=IMPROVEMENT_MINE
+EndPlot
+BeginPlot
+	x=105,y=41
+	ImprovementType=IMPROVEMENT_COTTAGE
+	RouteType=ROUTE_ROAD
+EndPlot
+BeginPlot
+	x=105,y=43
+	ImprovementType=IMPROVEMENT_PLANTATION
+	RouteType=ROUTE_ROAD
+EndPlot
+BeginPlot
+	x=105,y=45
+	ImprovementType=IMPROVEMENT_COTTAGE
+EndPlot
+BeginPlot
+	x=105,y=46
+	RouteType=ROUTE_ROAD
+	BeginUnit
+		UnitType=UNIT_SHORTBOWMAN
+		UnitOwner=CIVILIZATION_INDEPENDENT
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_INDIAN_PATIYODHA
+		UnitOwner=CIVILIZATION_INDEPENDENT
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_INDIAN_PATIYODHA
+		UnitOwner=CIVILIZATION_INDEPENDENT
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_SHORTBOWMAN
+		UnitOwner=CIVILIZATION_INDEPENDENT
+	EndUnit
+	BeginCity
+		CityOwner=CIVILIZATION_INDEPENDENT
+		CityName=Delhi
+		CityPopulation=8
+		BuildingType=BUILDING_GRANARY
+		BuildingType=BUILDING_TANNERY
+		BuildingType=BUILDING_LIBRARY
+		BuildingType=BUILDING_AQUEDUCT
+		BuildingType=BUILDING_MARKET
+		BuildingType=BUILDING_JAIL
+		BuildingType=BUILDING_IRON_PILLAR
+		ReligionType=RELIGION_HINDUISM
+		BeginCulture
+			Civilization=CIVILIZATION_INDEPENDENT, Culture=250
+		EndCulture
+		YearFounded=-400
+		YearAcquired=-400
+		PreviousOwner=CIVILIZATION_INDIA
+	EndCity
+EndPlot
+BeginPlot
+	x=105,y=47
+	ImprovementType=IMPROVEMENT_CAMP
+EndPlot
+BeginPlot
+	x=105,y=48
+	ImprovementType=IMPROVEMENT_MINE
+EndPlot
+BeginPlot
+	x=105,y=54
+	ImprovementType=IMPROVEMENT_QUARRY
+EndPlot
+BeginPlot
+	x=105,y=55
+	RouteType=ROUTE_ROAD
+	BeginUnit
+		UnitType=UNIT_SHORTBOWMAN
+		UnitOwner=CIVILIZATION_INDEPENDENT
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_SHORTBOWMAN
+		UnitOwner=CIVILIZATION_INDEPENDENT
+	EndUnit
+	BeginCity
+		CityOwner=CIVILIZATION_INDEPENDENT
+		CityName=Kashgar
+		CityPopulation=4
+		BuildingType=BUILDING_GRANARY
+		BuildingType=BUILDING_TANNERY
+		BuildingType=BUILDING_WALLS
+		BuildingType=BUILDING_STABLE
+		BuildingType=BUILDING_MARKET
+		BuildingType=BUILDING_ISLAMIC_TEMPLE
+		ReligionType=RELIGION_ISLAM
+		BeginCulture
+			Civilization=CIVILIZATION_INDEPENDENT, Culture=200
+		EndCulture
+		YearFounded=-100
+		YearAcquired=1570
+		PreviousOwner=CIVILIZATION_CHINA
+	EndCity
+EndPlot
+BeginPlot
+	x=106,y=32
+	ImprovementType=IMPROVEMENT_MINE
+EndPlot
+BeginPlot
+	x=106,y=33
+	ImprovementType=IMPROVEMENT_PADDY_FIELD
+EndPlot
+BeginPlot
+	x=106,y=34
+	RouteType=ROUTE_ROAD
+EndPlot
+BeginPlot
+	x=106,y=35
+	ImprovementType=IMPROVEMENT_MINE
+EndPlot
+BeginPlot
+	x=106,y=36
+	ImprovementType=IMPROVEMENT_ORCHARD
+EndPlot
+BeginPlot
+	x=106,y=37
+	ImprovementType=IMPROVEMENT_MINE
+EndPlot
+BeginPlot
+	x=106,y=38
+	RouteType=ROUTE_ROAD
+	BeginUnit
+		UnitType=UNIT_SHORTBOWMAN
+		UnitOwner=CIVILIZATION_INDEPENDENT2
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_SHORTBOWMAN
+		UnitOwner=CIVILIZATION_INDEPENDENT2
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_INDIAN_PATIYODHA
+		UnitOwner=CIVILIZATION_INDEPENDENT2
+	EndUnit
+	BeginCity
+		CityOwner=CIVILIZATION_INDEPENDENT2
+		CityName=Warangal
+		CityPopulation=6
+		BuildingType=BUILDING_BARRACKS
+		BuildingType=BUILDING_GRANARY
+		BuildingType=BUILDING_TANNERY
+		BuildingType=BUILDING_WALLS
+		BuildingType=BUILDING_LIBRARY
+		BuildingType=BUILDING_FORGE
+		ReligionType=RELIGION_HINDUISM
+		BeginCulture
+			Civilization=CIVILIZATION_INDEPENDENT2, Culture=200
+		EndCulture
+		YearFounded=500
+		YearAcquired=500
+	EndCity
+EndPlot
+BeginPlot
+	x=106,y=40
+	RouteType=ROUTE_ROAD
+EndPlot
+BeginPlot
+	x=106,y=42
+	ImprovementType=IMPROVEMENT_PLANTATION
+EndPlot
+BeginPlot
+	x=106,y=43
+	RouteType=ROUTE_ROAD
+EndPlot
+BeginPlot
+	x=106,y=45
+	ImprovementType=IMPROVEMENT_COTTAGE
+	RouteType=ROUTE_ROAD
+EndPlot
+BeginPlot
+	x=106,y=46
+	ImprovementType=IMPROVEMENT_FARM
+EndPlot
+BeginPlot
+	x=106,y=47
+	ImprovementType=IMPROVEMENT_PLANTATION
+EndPlot
+BeginPlot
+	x=106,y=48
+	ImprovementType=IMPROVEMENT_MINE
+EndPlot
+BeginPlot
+	x=106,y=53
+	ImprovementType=IMPROVEMENT_ORCHARD
+EndPlot
+BeginPlot
+	x=106,y=55
+	RouteType=ROUTE_ROAD
+EndPlot
+BeginPlot
+	x=107,y=31
+	ImprovementType=IMPROVEMENT_FISHING_BOATS
+EndPlot
+BeginPlot
+	x=107,y=34
+	RouteType=ROUTE_ROAD
+	BeginUnit
+		UnitType=UNIT_WAR_ELEPHANT
+		UnitOwner=CIVILIZATION_DRAVIDIA
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_WAR_ELEPHANT
+		UnitOwner=CIVILIZATION_DRAVIDIA
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_SHORTBOWMAN
+		UnitOwner=CIVILIZATION_DRAVIDIA
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_SHORTBOWMAN
+		UnitOwner=CIVILIZATION_DRAVIDIA
+	EndUnit
+	BeginCity
+		CityOwner=CIVILIZATION_DRAVIDIA
+		CityName=Madurai
+		CityPopulation=8
+		BuildingType=BUILDING_GRANARY
+		BuildingType=BUILDING_TANNERY
+		BuildingType=BUILDING_WALLS
+		BuildingType=BUILDING_HARBOR
+		BuildingType=BUILDING_THEATRE
+		BuildingType=BUILDING_FORGE
+		BuildingType=BUILDING_HINDU_TEMPLE
+		BuildingType=BUILDING_HINDU_MONASTERY
+		ReligionType=RELIGION_HINDUISM
+		BeginCulture
+			Civilization=CIVILIZATION_DRAVIDIA, Culture=250
+		EndCulture
+		YearFounded=1645
+		YearAcquired=1645
+		PreviousOwner=CIVILIZATION_DRAVIDIA
+	EndCity
+EndPlot
+BeginPlot
+	x=107,y=35
+	ImprovementType=IMPROVEMENT_PLANTATION
+EndPlot
+BeginPlot
+	x=107,y=37
+	ImprovementType=IMPROVEMENT_PASTURE
+EndPlot
+BeginPlot
+	x=107,y=39
+	ImprovementType=IMPROVEMENT_PLANTATION
+EndPlot
+BeginPlot
+	x=107,y=40
+	ImprovementType=IMPROVEMENT_MINE
+EndPlot
+BeginPlot
+	x=107,y=41
+	ImprovementType=IMPROVEMENT_MINE
+	RouteType=ROUTE_ROAD
+EndPlot
+BeginPlot
+	x=107,y=43
+	ImprovementType=IMPROVEMENT_MINE
+EndPlot
+BeginPlot
+	x=107,y=44
+	ImprovementType=IMPROVEMENT_HAMLET
+	RouteType=ROUTE_ROAD
+EndPlot
+BeginPlot
+	x=107,y=45
+	ImprovementType=IMPROVEMENT_PLANTATION
+EndPlot
+BeginPlot
+	x=107,y=46
+	ImprovementType=IMPROVEMENT_COTTAGE
+EndPlot
+BeginPlot
+	x=107,y=47
+	ImprovementType=IMPROVEMENT_PASTURE
+EndPlot
+BeginPlot
+	x=107,y=56
+	ImprovementType=IMPROVEMENT_PASTURE
+	RouteType=ROUTE_ROAD
+EndPlot
+BeginPlot
+	x=108,y=30
+	ImprovementType=IMPROVEMENT_MINE
+EndPlot
+BeginPlot
+	x=108,y=31
+	RouteType=ROUTE_ROAD
+	BeginUnit
+		UnitType=UNIT_SHORTBOWMAN
+		UnitOwner=CIVILIZATION_INDEPENDENT
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_SHORTBOWMAN
+		UnitOwner=CIVILIZATION_INDEPENDENT
+	EndUnit
+	BeginCity
+		CityOwner=CIVILIZATION_INDEPENDENT
+		CityName=Anuratapuram
+		CityPopulation=6
+		BuildingType=BUILDING_GRANARY
+		BuildingType=BUILDING_TANNERY
+		BuildingType=BUILDING_HARBOR
+		BuildingType=BUILDING_AQUEDUCT
+		BuildingType=BUILDING_LIGHTHOUSE
+		BuildingType=BUILDING_MARKET
+		BuildingType=BUILDING_JAIL
+		BuildingType=BUILDING_FORGE
+		BuildingType=BUILDING_HINDU_TEMPLE
+		BuildingType=BUILDING_JETAVANARAMAYA
+		ReligionType=RELIGION_HINDUISM
+		ReligionType=RELIGION_BUDDHISM
+		BeginCulture
+			Civilization=CIVILIZATION_INDEPENDENT, Culture=50
+		EndCulture
+		YearFounded=700
+		YearAcquired=700
+	EndCity
+EndPlot
+BeginPlot
+	x=108,y=32
+	ImprovementType=IMPROVEMENT_ORCHARD
+EndPlot
+BeginPlot
+	x=108,y=37
+	ImprovementType=IMPROVEMENT_MINE
+EndPlot
+BeginPlot
+	x=108,y=38
+	ImprovementType=IMPROVEMENT_MINE
+EndPlot
+BeginPlot
+	x=108,y=40
+	RouteType=ROUTE_ROAD
+	BeginUnit
+		UnitType=UNIT_SHORTBOWMAN
+		UnitOwner=CIVILIZATION_INDEPENDENT2
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_SHORTBOWMAN
+		UnitOwner=CIVILIZATION_INDEPENDENT2
+	EndUnit
+	BeginCity
+		CityOwner=CIVILIZATION_INDEPENDENT2
+		CityName=Nagpur
+		CityPopulation=2
+		BuildingType=BUILDING_GRANARY
+		BuildingType=BUILDING_WALLS
+		BuildingType=BUILDING_LIBRARY
+		BuildingType=BUILDING_AQUEDUCT
+		BuildingType=BUILDING_JEWELLER
+		BuildingType=BUILDING_HINDU_TEMPLE
+		ReligionType=RELIGION_ISLAM
+		ReligionType=RELIGION_HINDUISM
+		BeginCulture
+			Civilization=CIVILIZATION_INDEPENDENT2, Culture=100
+		EndCulture
+		YearFounded=-795
+	EndCity
+EndPlot
+BeginPlot
+	x=108,y=41
+	ImprovementType=IMPROVEMENT_ORCHARD
+EndPlot
+BeginPlot
+	x=108,y=42
+	ImprovementType=IMPROVEMENT_MINE
+EndPlot
+BeginPlot
+	x=108,y=43
+	ImprovementType=IMPROVEMENT_CAMP
+EndPlot
+BeginPlot
+	x=108,y=44
+	RouteType=ROUTE_ROAD
+	BeginUnit
+		UnitType=UNIT_SHORTBOWMAN
+		UnitOwner=CIVILIZATION_INDEPENDENT
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_SHORTBOWMAN
+		UnitOwner=CIVILIZATION_INDEPENDENT
+	EndUnit
+	BeginCity
+		CityOwner=CIVILIZATION_INDEPENDENT
+		CityName=Varanasi
+		CityPopulation=6
+		BuildingType=BUILDING_GRANARY
+		BuildingType=BUILDING_WEAVER
+		BuildingType=BUILDING_LIBRARY
+		BuildingType=BUILDING_AQUEDUCT
+		BuildingType=BUILDING_BATH
+		BuildingType=BUILDING_HINDU_TEMPLE
+		BuildingType=BUILDING_HINDU_CATHEDRAL
+		BuildingType=BUILDING_HINDU_MONASTERY
+		BuildingType=BUILDING_HINDU_SHRINE
+		BuildingType=BUILDING_BUDDHIST_TEMPLE
+		BuildingType=BUILDING_KHAJURAHO
+		ReligionType=RELIGION_HINDUISM
+		HolyCityReligionType=RELIGION_HINDUISM
+		ReligionType=RELIGION_BUDDHISM
+		BeginCulture
+			Civilization=CIVILIZATION_INDEPENDENT, Culture=100
+		EndCulture
+		YearFounded=-795
+		YearAcquired=1000
+		PreviousOwner=CIVILIZATION_INDIA
+	EndCity
+EndPlot
+BeginPlot
+	x=108,y=45
+	ImprovementType=IMPROVEMENT_COTTAGE
+EndPlot
+BeginPlot
+	x=108,y=56
+	RouteType=ROUTE_ROAD
+EndPlot
+BeginPlot
+	x=109,y=30
+	ImprovementType=IMPROVEMENT_MINE
+EndPlot
+BeginPlot
+	x=109,y=31
+	ImprovementType=IMPROVEMENT_COTTAGE
+EndPlot
+BeginPlot
+	x=109,y=35
+	ImprovementType=IMPROVEMENT_FISHING_BOATS
+EndPlot
+BeginPlot
+	x=109,y=39
+	ImprovementType=IMPROVEMENT_MINE
+EndPlot
+BeginPlot
+	x=109,y=40
+	ImprovementType=IMPROVEMENT_PLANTATION
+EndPlot
+BeginPlot
+	x=109,y=45
+	ImprovementType=IMPROVEMENT_PLANTATION
+	RouteType=ROUTE_ROAD
+EndPlot
+BeginPlot
+	x=109,y=46
+	ImprovementType=IMPROVEMENT_MINE
+EndPlot
+BeginPlot
+	x=109,y=56
+	RouteType=ROUTE_ROAD
+EndPlot
+BeginPlot
+	x=110,y=32
+	ImprovementType=IMPROVEMENT_FISHING_BOATS
+EndPlot
+BeginPlot
+	x=110,y=37
+	ImprovementType=IMPROVEMENT_FISHING_BOATS
+EndPlot
+BeginPlot
+	x=110,y=39
+	RouteType=ROUTE_ROAD
+	BeginUnit
+		UnitType=UNIT_SHORTBOWMAN
+		UnitOwner=CIVILIZATION_DRAVIDIA
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_SHORTBOWMAN
+		UnitOwner=CIVILIZATION_DRAVIDIA
+	EndUnit
+	BeginCity
+		CityOwner=CIVILIZATION_DRAVIDIA
+		CityName=Visakhapatnam
+		CityPopulation=3
+		BuildingType=BUILDING_GRANARY
+		BuildingType=BUILDING_WEAVER
+		BuildingType=BUILDING_HARBOR
+		BuildingType=BUILDING_AQUEDUCT
+		BuildingType=BUILDING_LIGHTHOUSE
+		BuildingType=BUILDING_HINDU_TEMPLE
+		BuildingType=BUILDING_HINDU_MONASTERY
+		ReligionType=RELIGION_HINDUISM
+		BeginCulture
+			Civilization=CIVILIZATION_DRAVIDIA, Culture=50
+		EndCulture
+		YearFounded=1100
+		YearAcquired=1600
+		PreviousOwner=CIVILIZATION_DRAVIDIA
+	EndCity
+EndPlot
+BeginPlot
+	x=110,y=41
+	ImprovementType=IMPROVEMENT_PLANTATION
+	RouteType=ROUTE_ROAD
+EndPlot
+BeginPlot
+	x=110,y=43
+	ImprovementType=IMPROVEMENT_MINE
+EndPlot
+BeginPlot
+	x=110,y=44
+	ImprovementType=IMPROVEMENT_HAMLET
+EndPlot
+BeginPlot
+	x=110,y=45
+	RouteType=ROUTE_ROAD
+	BeginUnit
+		UnitType=UNIT_SHORTBOWMAN
+		UnitOwner=CIVILIZATION_INDEPENDENT2
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_SHORTBOWMAN
+		UnitOwner=CIVILIZATION_INDEPENDENT2
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_INDIAN_PATIYODHA
+		UnitOwner=CIVILIZATION_INDEPENDENT2
+	EndUnit
+	BeginCity
+		CityOwner=CIVILIZATION_INDEPENDENT2
+		CityName=Patliputra
+		CityPopulation=7
+		BuildingType=BUILDING_GRANARY
+		BuildingType=BUILDING_TANNERY
+		BuildingType=BUILDING_STABLE
+		BuildingType=BUILDING_AQUEDUCT
+		BuildingType=BUILDING_JAIL
+		BuildingType=BUILDING_FORGE
+		BuildingType=BUILDING_ISLAMIC_TEMPLE
+		BuildingType=BUILDING_ISLAMIC_CATHEDRAL
+		BuildingType=BUILDING_ISLAMIC_MONASTERY
+		BuildingType=BUILDING_BUDDHIST_SHRINE
+		BuildingType=BUILDING_NALANDA
+		ReligionType=RELIGION_ISLAM
+		ReligionType=RELIGION_BUDDHISM
+		HolyCityReligionType=RELIGION_BUDDHISM
+		FreeSpecialistType=SPECIALIST_GREAT_PRIEST
+		FreeSpecialistType=SPECIALIST_GREAT_PRIEST
+		BeginCulture
+			Civilization=CIVILIZATION_INDEPENDENT2, Culture=200
+		EndCulture
+		YearFounded=-490
+		YearAcquired=600
+		PreviousOwner=CIVILIZATION_INDIA
+	EndCity
+EndPlot
+BeginPlot
+	x=110,y=46
+	ImprovementType=IMPROVEMENT_MINE
+EndPlot
+BeginPlot
+	x=110,y=56
+	RouteType=ROUTE_ROAD
+EndPlot
+BeginPlot
+	x=111,y=40
+	RouteType=ROUTE_ROAD
+EndPlot
+BeginPlot
+	x=111,y=41
+	ImprovementType=IMPROVEMENT_PLANTATION
+EndPlot
+BeginPlot
+	x=111,y=43
+	ImprovementType=IMPROVEMENT_COTTAGE
+EndPlot
+BeginPlot
+	x=111,y=44
+	ImprovementType=IMPROVEMENT_HAMLET
+EndPlot
+BeginPlot
+	x=111,y=45
+	ImprovementType=IMPROVEMENT_PADDY_FIELD
+	RouteType=ROUTE_ROAD
+EndPlot
+BeginPlot
+	x=111,y=48
+	ImprovementType=IMPROVEMENT_PLANTATION
+EndPlot
+BeginPlot
+	x=111,y=57
+	ImprovementType=IMPROVEMENT_HAMLET
+	RouteType=ROUTE_ROAD
+EndPlot
+BeginPlot
+	x=111,y=59
+	ImprovementType=IMPROVEMENT_PLANTATION
+EndPlot
+BeginPlot
+	x=112,y=40
+	ImprovementType=IMPROVEMENT_FISHING_BOATS
+EndPlot
+BeginPlot
+	x=112,y=42
+	ImprovementType=IMPROVEMENT_PADDY_FIELD
+EndPlot
+BeginPlot
+	x=112,y=43
+	ImprovementType=IMPROVEMENT_PLANTATION
+	RouteType=ROUTE_ROAD
+EndPlot
+BeginPlot
+	x=112,y=44
+	ImprovementType=IMPROVEMENT_HAMLET
+	RouteType=ROUTE_ROAD
+EndPlot
+BeginPlot
+	x=112,y=45
+	ImprovementType=IMPROVEMENT_PLANTATION
+EndPlot
+BeginPlot
+	x=112,y=47
+	ImprovementType=IMPROVEMENT_PASTURE
+EndPlot
+BeginPlot
+	x=112,y=57
+	RouteType=ROUTE_ROAD
+	BeginUnit
+		UnitType=UNIT_LANCER
+		UnitOwner=CIVILIZATION_INDEPENDENT
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_SHORTBOWMAN
+		UnitOwner=CIVILIZATION_INDEPENDENT
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_SHORTBOWMAN
+		UnitOwner=CIVILIZATION_INDEPENDENT
+	EndUnit
+	BeginCity
+		CityOwner=CIVILIZATION_INDEPENDENT
+		CityName=Turfan
+		CityPopulation=3
+		BuildingType=BUILDING_GRANARY
+		BuildingType=BUILDING_TANNERY
+		BuildingType=BUILDING_MARKET
+		BuildingType=BUILDING_FORGE
+		BuildingType=BUILDING_ISLAMIC_TEMPLE
+		ReligionType=RELIGION_ISLAM
+		BeginCulture
+			Civilization=CIVILIZATION_INDEPENDENT, Culture=200
+		EndCulture
+		YearFounded=200
+		YearAcquired=1000
+		PreviousOwner=CIVILIZATION_CHINA
+		PreviousOwner=CIVILIZATION_TURKS
+	EndCity
+EndPlot
+BeginPlot
+	x=113,y=43
+	RouteType=ROUTE_ROAD
+	BeginUnit
+		UnitType=UNIT_SHORTBOWMAN
+		UnitOwner=CIVILIZATION_INDEPENDENT
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_SHORTBOWMAN
+		UnitOwner=CIVILIZATION_INDEPENDENT
+	EndUnit
+	BeginCity
+		CityOwner=CIVILIZATION_INDEPENDENT
+		CityName=Gauda
+		CityPopulation=7
+		BuildingType=BUILDING_GRANARY
+		BuildingType=BUILDING_TANNERY
+		BuildingType=BUILDING_WEAVER
+		BuildingType=BUILDING_LIBRARY
+		BuildingType=BUILDING_HARBOR
+		BuildingType=BUILDING_ISLAMIC_TEMPLE
+		BuildingType=BUILDING_ISLAMIC_MONASTERY
+		ReligionType=RELIGION_ISLAM
+		BeginCulture
+			Civilization=CIVILIZATION_INDEPENDENT, Culture=50
+		EndCulture
+		YearFounded=400
+	EndCity
+EndPlot
+BeginPlot
+	x=113,y=44
+	ImprovementType=IMPROVEMENT_PLANTATION
+EndPlot
+BeginPlot
+	x=113,y=45
+	ImprovementType=IMPROVEMENT_PLANTATION
+EndPlot
+BeginPlot
+	x=113,y=48
+	RouteType=ROUTE_ROAD
+	BeginUnit
+		UnitType=UNIT_SHORTBOWMAN
+		UnitOwner=CIVILIZATION_INDEPENDENT2
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_SHORTBOWMAN
+		UnitOwner=CIVILIZATION_INDEPENDENT2
+	EndUnit
+	BeginCity
+		CityOwner=CIVILIZATION_INDEPENDENT2
+		CityName=Lasa
+		CityPopulation=4
+		BuildingType=BUILDING_GRANARY
+		BuildingType=BUILDING_TANNERY
+		BuildingType=BUILDING_BUDDHIST_TEMPLE
+		BuildingType=BUILDING_BUDDHIST_MONASTERY
+		ReligionType=RELIGION_BUDDHISM
+		FreeSpecialistType=SPECIALIST_GREAT_PRIEST
+		BeginCulture
+			Civilization=CIVILIZATION_INDEPENDENT2, Culture=100
+		EndCulture
+		YearFounded=630
+		PreviousOwner=CIVILIZATION_TIBET
+	EndCity
+EndPlot
+BeginPlot
+	x=113,y=49
+	ImprovementType=IMPROVEMENT_QUARRY
+EndPlot
+BeginPlot
+	x=113,y=56
+	ImprovementType=IMPROVEMENT_ORCHARD
+	RouteType=ROUTE_ROAD
+EndPlot
+BeginPlot
+	x=113,y=58
+	ImprovementType=IMPROVEMENT_PASTURE
+EndPlot
+BeginPlot
+	x=114,y=43
+	RouteType=ROUTE_ROAD
+EndPlot
+BeginPlot
+	x=114,y=44
+	ImprovementType=IMPROVEMENT_ORCHARD
+EndPlot
+BeginPlot
+	x=114,y=45
+	ImprovementType=IMPROVEMENT_PLANTATION
+EndPlot
+BeginPlot
+	x=114,y=48
+	ImprovementType=IMPROVEMENT_PLANTATION
+EndPlot
+BeginPlot
+	x=114,y=49
+	ImprovementType=IMPROVEMENT_PASTURE
+EndPlot
+BeginPlot
+	x=114,y=56
+	RouteType=ROUTE_ROAD
+EndPlot
+BeginPlot
+	x=115,y=44
+	ImprovementType=IMPROVEMENT_PASTURE
+	RouteType=ROUTE_ROAD
+EndPlot
+BeginPlot
+	x=115,y=56
+	RouteType=ROUTE_ROAD
+EndPlot
+BeginPlot
+	x=116,y=31
+	RouteType=ROUTE_ROAD
+EndPlot
+BeginPlot
+	x=116,y=40
+	ImprovementType=IMPROVEMENT_PLANTATION
+EndPlot
+BeginPlot
+	x=116,y=41
+	ImprovementType=IMPROVEMENT_MINE
+EndPlot
+BeginPlot
+	x=116,y=42
+	ImprovementType=IMPROVEMENT_PLANTATION
+EndPlot
+BeginPlot
+	x=116,y=43
+	ImprovementType=IMPROVEMENT_QUARRY
+	RouteType=ROUTE_ROAD
+EndPlot
+BeginPlot
+	x=116,y=56
+	RouteType=ROUTE_ROAD
+EndPlot
+BeginPlot
+	x=117,y=28
+	RouteType=ROUTE_ROAD
+	BeginUnit
+		UnitType=UNIT_ARCHER
+		UnitOwner=CIVILIZATION_MALAYS
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_ARCHER
+		UnitOwner=CIVILIZATION_MALAYS
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_ARCHER
+		UnitOwner=CIVILIZATION_MALAYS
+	EndUnit
+	BeginCity
+		CityOwner=CIVILIZATION_MALAYS
+		CityName=Pagaruyyung
+		CityPopulation=2
+		BuildingType=BUILDING_GRANARY
+		BuildingType=BUILDING_HARBOR
+		BuildingType=BUILDING_AQUEDUCT
+		BuildingType=BUILDING_BUDDHIST_TEMPLE
+		ReligionType=RELIGION_BUDDHISM
+		BeginCulture
+			Civilization=CIVILIZATION_MALAYS, Culture=50
+		EndCulture
+		YearFounded=1050
+		YearAcquired=1050
+	EndCity
+EndPlot
+BeginPlot
+	x=117,y=29
+	ImprovementType=IMPROVEMENT_MINE
+	RouteType=ROUTE_ROAD
+EndPlot
+BeginPlot
+	x=117,y=30
+	RouteType=ROUTE_ROAD
+EndPlot
+BeginPlot
+	x=117,y=31
+	ImprovementType=IMPROVEMENT_FISHING_BOATS
+EndPlot
+BeginPlot
+	x=117,y=37
+	ImprovementType=IMPROVEMENT_FISHING_BOATS
+EndPlot
+BeginPlot
+	x=117,y=39
+	RouteType=ROUTE_ROAD
+	BeginUnit
+		UnitType=UNIT_SHORTBOWMAN
+		UnitOwner=CIVILIZATION_BURMA
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_SHORTBOWMAN
+		UnitOwner=CIVILIZATION_BURMA
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_SHORTBOWMAN
+		UnitOwner=CIVILIZATION_BURMA
+	EndUnit
+	BeginCity
+		CityOwner=CIVILIZATION_BURMA
+		CityName=Dagon
+		CityPopulation=5
+		BuildingType=BUILDING_GRANARY
+		BuildingType=BUILDING_TANNERY
+		BuildingType=BUILDING_BURMESE_KYAUNG
+		BuildingType=BUILDING_HARBOR
+		BuildingType=BUILDING_LIGHTHOUSE
+		BuildingType=BUILDING_BUDDHIST_TEMPLE
+		BuildingType=BUILDING_BUDDHIST_MONASTERY
+		ReligionType=RELIGION_BUDDHISM
+		BeginCulture
+			Civilization=CIVILIZATION_BURMA, Culture=100
+		EndCulture
+		YearFounded=1030
+		YearAcquired=1030
+	EndCity
+EndPlot
+BeginPlot
+	x=117,y=40
+	ImprovementType=IMPROVEMENT_ORCHARD
+	RouteType=ROUTE_ROAD
+EndPlot
+BeginPlot
+	x=117,y=41
+	ImprovementType=IMPROVEMENT_CAMP
+	RouteType=ROUTE_ROAD
+EndPlot
+BeginPlot
+	x=117,y=42
+	RouteType=ROUTE_ROAD
+	BeginUnit
+		UnitType=UNIT_WORKER
+		UnitOwner=CIVILIZATION_BURMA
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_TREBUCHET
+		UnitOwner=CIVILIZATION_BURMA
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_TREBUCHET
+		UnitOwner=CIVILIZATION_BURMA
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_SHORTBOWMAN
+		UnitOwner=CIVILIZATION_BURMA
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_SHORTBOWMAN
+		UnitOwner=CIVILIZATION_BURMA
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_SHORTBOWMAN
+		UnitOwner=CIVILIZATION_BURMA
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_SHORTBOWMAN
+		UnitOwner=CIVILIZATION_BURMA
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_SHORTBOWMAN
+		UnitOwner=CIVILIZATION_BURMA
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_SHORTBOWMAN
+		UnitOwner=CIVILIZATION_BURMA
+	EndUnit
+	BeginCity
+		CityOwner=CIVILIZATION_BURMA
+		CityName=Bagan
+		CityPopulation=4
+		BuildingType=BUILDING_PALACE
+		BuildingType=BUILDING_BARRACKS
+		BuildingType=BUILDING_GRANARY
+		BuildingType=BUILDING_TANNERY
+		BuildingType=BUILDING_WEAVER
+		BuildingType=BUILDING_STABLE
+		BuildingType=BUILDING_BURMESE_KYAUNG
+		BuildingType=BUILDING_AQUEDUCT
+		BuildingType=BUILDING_JEWELLER
+		BuildingType=BUILDING_MARKET
+		BuildingType=BUILDING_BATH
+		BuildingType=BUILDING_FORGE
+		BuildingType=BUILDING_POST_OFFICE
+		BuildingType=BUILDING_BUDDHIST_TEMPLE
+		BuildingType=BUILDING_BUDDHIST_MONASTERY
+		ReligionType=RELIGION_BUDDHISM
+		BeginCulture
+			Civilization=CIVILIZATION_BURMA, Culture=100
+		EndCulture
+		YearFounded=600
+	EndCity
+EndPlot
+BeginPlot
+	x=117,y=43
+	ImprovementType=IMPROVEMENT_PADDY_FIELD
+EndPlot
+BeginPlot
+	x=117,y=44
+	ImprovementType=IMPROVEMENT_MINE
+EndPlot
+BeginPlot
+	x=117,y=48
+	ImprovementType=IMPROVEMENT_PADDY_FIELD
+	RouteType=ROUTE_ROAD
+EndPlot
+BeginPlot
+	x=117,y=50
+	ImprovementType=IMPROVEMENT_MINE
+EndPlot
+BeginPlot
+	x=117,y=55
+	RouteType=ROUTE_ROAD
+EndPlot
+BeginPlot
+	x=118,y=28
+	RouteType=ROUTE_ROAD
+EndPlot
+BeginPlot
+	x=118,y=34
+	RouteType=ROUTE_ROAD
+EndPlot
+BeginPlot
+	x=118,y=35
+	ImprovementType=IMPROVEMENT_ORCHARD
+	RouteType=ROUTE_ROAD
+EndPlot
+BeginPlot
+	x=118,y=36
+	ImprovementType=IMPROVEMENT_HAMLET
+	RouteType=ROUTE_ROAD
+EndPlot
+BeginPlot
+	x=118,y=37
+	ImprovementType=IMPROVEMENT_ORCHARD
+EndPlot
+BeginPlot
+	x=118,y=38
+	ImprovementType=IMPROVEMENT_MINE
+EndPlot
+BeginPlot
+	x=118,y=40
+	ImprovementType=IMPROVEMENT_MINE
+EndPlot
+BeginPlot
+	x=118,y=42
+	ImprovementType=IMPROVEMENT_QUARRY
+EndPlot
+BeginPlot
+	x=118,y=43
+	ImprovementType=IMPROVEMENT_MINE
+	RouteType=ROUTE_ROAD
+EndPlot
+BeginPlot
+	x=118,y=44
+	ImprovementType=IMPROVEMENT_PASTURE
+EndPlot
+BeginPlot
+	x=118,y=45
+	ImprovementType=IMPROVEMENT_PLANTATION
+EndPlot
+BeginPlot
+	x=118,y=48
+	ImprovementType=IMPROVEMENT_MINE
+EndPlot
+BeginPlot
+	x=118,y=49
+	RouteType=ROUTE_ROAD
+	BeginUnit
+		UnitType=UNIT_CHINESE_FIRELANCER
+		UnitOwner=CIVILIZATION_CHINA
+	EndUnit
+	BeginCity
+		CityOwner=CIVILIZATION_CHINA
+		CityName=Chengdu
+		CityPopulation=6
+		BuildingType=BUILDING_GRANARY
+		BuildingType=BUILDING_TANNERY
+		BuildingType=BUILDING_CHINESE_TAIXUE
+		BuildingType=BUILDING_CONFUCIAN_TEMPLE
+		BuildingType=BUILDING_DUJIANGYAN
+		ReligionType=RELIGION_CONFUCIANISM
+		BeginCulture
+			Civilization=CIVILIZATION_CHINA, Culture=100
+		EndCulture
+		YearFounded=-400
+		YearAcquired=-400
+	EndCity
+EndPlot
+BeginPlot
+	x=118,y=54
+	RouteType=ROUTE_ROAD
+EndPlot
+BeginPlot
+	x=119,y=27
+	RouteType=ROUTE_ROAD
+EndPlot
+BeginPlot
+	x=119,y=33
+	ImprovementType=IMPROVEMENT_MINE
+	RouteType=ROUTE_ROAD
+EndPlot
+BeginPlot
+	x=119,y=35
+	ImprovementType=IMPROVEMENT_FISHING_BOATS
+EndPlot
+BeginPlot
+	x=119,y=41
+	ImprovementType=IMPROVEMENT_PLANTATION
+EndPlot
+BeginPlot
+	x=119,y=43
+	ImprovementType=IMPROVEMENT_QUARRY
+EndPlot
+BeginPlot
+	x=119,y=44
+	RouteType=ROUTE_ROAD
+	BeginUnit
+		UnitType=UNIT_SHORTBOWMAN
+		UnitOwner=CIVILIZATION_INDEPENDENT
+	EndUnit
+	BeginCity
+		CityOwner=CIVILIZATION_INDEPENDENT
+		CityName=Kunming
+		CityPopulation=3
+		BuildingType=BUILDING_GRANARY
+		BuildingType=BUILDING_TANNERY
+		BuildingType=BUILDING_MARKET
+		BuildingType=BUILDING_CONFUCIAN_TEMPLE
+		ReligionType=RELIGION_CONFUCIANISM
+		BeginCulture
+			Civilization=CIVILIZATION_INDEPENDENT, Culture=50
+		EndCulture
+		YearFounded=-280
+		YearAcquired=-280
+	EndCity
+EndPlot
+BeginPlot
+	x=119,y=46
+	ImprovementType=IMPROVEMENT_PADDY_FIELD
+EndPlot
+BeginPlot
+	x=119,y=48
+	ImprovementType=IMPROVEMENT_COTTAGE
+	RouteType=ROUTE_ROAD
+EndPlot
+BeginPlot
+	x=119,y=49
+	ImprovementType=IMPROVEMENT_PASTURE
+EndPlot
+BeginPlot
+	x=119,y=52
+	ImprovementType=IMPROVEMENT_MINE
+	RouteType=ROUTE_ROAD
+EndPlot
+BeginPlot
+	x=119,y=54
+	RouteType=ROUTE_ROAD
+EndPlot
+BeginPlot
+	x=119,y=62
+	ImprovementType=IMPROVEMENT_PASTURE
+EndPlot
+BeginPlot
+	x=120,y=27
+	RouteType=ROUTE_ROAD
+	BeginUnit
+		UnitType=UNIT_ARCHER
+		UnitOwner=CIVILIZATION_MALAYS
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_ARCHER
+		UnitOwner=CIVILIZATION_MALAYS
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_ARCHER
+		UnitOwner=CIVILIZATION_MALAYS
+	EndUnit
+	BeginCity
+		CityOwner=CIVILIZATION_MALAYS
+		CityName=Palembang
+		CityPopulation=8
+		BuildingType=BUILDING_PALACE
+		BuildingType=BUILDING_GRANARY
+		BuildingType=BUILDING_TANNERY
+		BuildingType=BUILDING_LIBRARY
+		BuildingType=BUILDING_HARBOR
+		BuildingType=BUILDING_MALAY_GUDANG
+		ReligionType=RELIGION_HINDUISM
+		BeginCulture
+			Civilization=CIVILIZATION_MALAYS, Culture=100
+		EndCulture
+		YearFounded=680
+		YearAcquired=680
+		PreviousOwner=CIVILIZATION_MALAYS
+	EndCity
+EndPlot
+BeginPlot
+	x=120,y=31
+	ImprovementType=IMPROVEMENT_PLANTATION
+EndPlot
+BeginPlot
+	x=120,y=32
+	ImprovementType=IMPROVEMENT_CAMP
+	RouteType=ROUTE_ROAD
+EndPlot
+BeginPlot
+	x=120,y=36
+	ImprovementType=IMPROVEMENT_MINE
+	RouteType=ROUTE_ROAD
+EndPlot
+BeginPlot
+	x=120,y=37
+	ImprovementType=IMPROVEMENT_CAMP
+EndPlot
+BeginPlot
+	x=120,y=38
+	ImprovementType=IMPROVEMENT_QUARRY
+EndPlot
+BeginPlot
+	x=120,y=39
+	ImprovementType=IMPROVEMENT_MINE
+EndPlot
+BeginPlot
+	x=120,y=43
+	ImprovementType=IMPROVEMENT_MINE
+EndPlot
+BeginPlot
+	x=120,y=45
+	ImprovementType=IMPROVEMENT_MINE
+	RouteType=ROUTE_ROAD
+EndPlot
+BeginPlot
+	x=120,y=46
+	ImprovementType=IMPROVEMENT_WINDMILL
+	RouteType=ROUTE_ROAD
+EndPlot
+BeginPlot
+	x=120,y=47
+	RouteType=ROUTE_ROAD
+	BeginUnit
+		UnitType=UNIT_CHINESE_FIRELANCER
+		UnitOwner=CIVILIZATION_CHINA
+	EndUnit
+	BeginCity
+		CityOwner=CIVILIZATION_CHINA
+		CityName=Chongqing
+		CityPopulation=7
+		BuildingType=BUILDING_GRANARY
+		BuildingType=BUILDING_TANNERY
+		BuildingType=BUILDING_CHINESE_TAIXUE
+		BuildingType=BUILDING_CONFUCIAN_TEMPLE
+		ReligionType=RELIGION_CONFUCIANISM
+		BeginCulture
+			Civilization=CIVILIZATION_CHINA, Culture=100
+		EndCulture
+		YearFounded=-1095
+		YearAcquired=-320
+		PreviousOwner=CIVILIZATION_INDEPENDENT
+	EndCity
+EndPlot
+BeginPlot
+	x=120,y=48
+	ImprovementType=IMPROVEMENT_FARM
+EndPlot
+BeginPlot
+	x=120,y=49
+	ImprovementType=IMPROVEMENT_PLANTATION
+EndPlot
+BeginPlot
+	x=120,y=51
+	ImprovementType=IMPROVEMENT_MINE
+EndPlot
+BeginPlot
+	x=120,y=53
+	ImprovementType=IMPROVEMENT_MINE
+	RouteType=ROUTE_ROAD
+EndPlot
+BeginPlot
+	x=120,y=63
+	ImprovementType=IMPROVEMENT_PASTURE
+EndPlot
+BeginPlot
+	x=121,y=34
+	ImprovementType=IMPROVEMENT_FISHING_BOATS
+EndPlot
+BeginPlot
+	x=121,y=35
+	ImprovementType=IMPROVEMENT_PLANTATION
+EndPlot
+BeginPlot
+	x=121,y=37
+	RouteType=ROUTE_ROAD
+	BeginUnit
+		UnitType=UNIT_SHORTBOWMAN
+		UnitOwner=CIVILIZATION_KHMER
+	EndUnit
+	BeginUnit
+ 		UnitType=UNIT_SHORTBOWMAN
+ 		UnitOwner=CIVILIZATION_KHMER
+ 	EndUnit
+ 	BeginUnit
+ 		UnitType=UNIT_SHORTBOWMAN
+ 		UnitOwner=CIVILIZATION_KHMER
+ 	EndUnit
+ 	BeginUnit
+ 		UnitType=UNIT_SHORTBOWMAN
+ 		UnitOwner=CIVILIZATION_KHMER
+ 	EndUnit
+	BeginUnit
+ 		UnitType=UNIT_TREBUCHET
+ 		UnitOwner=CIVILIZATION_KHMER
+ 	EndUnit
+	BeginUnit
+ 		UnitType=UNIT_KHMER_BALLISTA_ELEPHANT
+ 		UnitOwner=CIVILIZATION_KHMER
+ 	EndUnit
+	BeginUnit
+ 		UnitType=UNIT_KHMER_BALLISTA_ELEPHANT
+ 		UnitOwner=CIVILIZATION_KHMER
+ 	EndUnit
+	BeginUnit
+ 		UnitType=UNIT_HEAVY_SWORDSMAN
+ 		UnitOwner=CIVILIZATION_KHMER
+ 	EndUnit
+	BeginUnit
+ 		UnitType=UNIT_HEAVY_SWORDSMAN
+ 		UnitOwner=CIVILIZATION_KHMER
+ 	EndUnit
+	BeginCity
+		CityOwner=CIVILIZATION_KHMER
+		CityName=Phnom Penh
+		CityPopulation=10
+		BuildingType=BUILDING_PALACE
+		BuildingType=BUILDING_GRANARY
+		BuildingType=BUILDING_BARRACKS
+		BuildingType=BUILDING_LIBRARY
+		BuildingType=BUILDING_AQUEDUCT
+		BuildingType=BUILDING_MARKET
+		BuildingType=BUILDING_WALLS
+		BuildingType=BUILDING_CASTLE
+		BuildingType=BUILDING_BUDDHIST_TEMPLE
+		ReligionType=RELIGION_HINDUISM
+		ReligionType=RELIGION_BUDDHISM
+		BeginCulture
+			Civilization=CIVILIZATION_KHMER, Culture=500
+		EndCulture
+		YearFounded=500
+		YearAcquired=500
+	EndCity
+EndPlot
+BeginPlot
+	x=121,y=38
+	ImprovementType=IMPROVEMENT_PADDY_FIELD
+EndPlot
+BeginPlot
+	x=121,y=40
+	ImprovementType=IMPROVEMENT_PASTURE
+EndPlot
+BeginPlot
+	x=121,y=41
+	ImprovementType=IMPROVEMENT_MINE
+	RouteType=ROUTE_ROAD
+EndPlot
+BeginPlot
+	x=121,y=42
+	RouteType=ROUTE_ROAD
+	BeginUnit
+		UnitType=UNIT_SHORTBOWMAN
+		UnitOwner=CIVILIZATION_VIETNAM
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_SHORTBOWMAN
+		UnitOwner=CIVILIZATION_VIETNAM
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_SHORTBOWMAN
+		UnitOwner=CIVILIZATION_VIETNAM
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_TREBUCHET
+		UnitOwner=CIVILIZATION_VIETNAM
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_TREBUCHET
+		UnitOwner=CIVILIZATION_VIETNAM
+	EndUnit
+	BeginCity
+		CityOwner=CIVILIZATION_VIETNAM
+		CityName=Dong Kinh
+		CityPopulation=7
+		BuildingType=BUILDING_PALACE
+		BuildingType=BUILDING_GRANARY
+		BuildingType=BUILDING_TANNERY
+		BuildingType=BUILDING_LIBRARY
+		BuildingType=BUILDING_HARBOR
+		BuildingType=BUILDING_AQUEDUCT
+		BuildingType=BUILDING_BUDDHIST_TEMPLE
+		BuildingType=BUILDING_CONFUCIAN_TEMPLE
+		ReligionType=RELIGION_CONFUCIANISM
+		ReligionType=RELIGION_BUDDHISM
+		BeginCulture
+			Civilization=CIVILIZATION_VIETNAM, Culture=100
+		EndCulture
+		YearFounded=-300
+		YearAcquired=1010
+		PreviousOwner=CIVILIZATION_CHINA
+	EndCity
+EndPlot
+BeginPlot
+	x=121,y=43
+	ImprovementType=IMPROVEMENT_PLANTATION
+EndPlot
+BeginPlot
+	x=121,y=45
+	ImprovementType=IMPROVEMENT_WINDMILL
+EndPlot
+BeginPlot
+	x=121,y=47
+	ImprovementType=IMPROVEMENT_PLANTATION
+	RouteType=ROUTE_ROAD
+EndPlot
+BeginPlot
+	x=121,y=48
+	ImprovementType=IMPROVEMENT_QUARRY
+	RouteType=ROUTE_ROAD
+EndPlot
+BeginPlot
+	x=121,y=51
+	ImprovementType=IMPROVEMENT_FARM
+EndPlot
+BeginPlot
+	x=121,y=52
+	RouteType=ROUTE_ROAD
+	BeginUnit
+		UnitType=UNIT_CHINESE_FIRELANCER
+		UnitOwner=CIVILIZATION_CHINA
+	EndUnit
+	BeginCity
+		CityOwner=CIVILIZATION_CHINA
+		CityName=Xi'an
+		CityPopulation=7
+		BuildingType=BUILDING_BARRACKS
+		BuildingType=BUILDING_GRANARY
+		BuildingType=BUILDING_TANNERY
+		BuildingType=BUILDING_WEAVER
+		BuildingType=BUILDING_CHINESE_TAIXUE
+		BuildingType=BUILDING_AQUEDUCT
+		BuildingType=BUILDING_THEATRE
+		BuildingType=BUILDING_MARKET
+		BuildingType=BUILDING_JAIL
+		BuildingType=BUILDING_CONFUCIAN_TEMPLE
+		BuildingType=BUILDING_CONFUCIAN_MONASTERY
+		BuildingType=BUILDING_TAOIST_TEMPLE
+		BuildingType=BUILDING_TERRACOTTA_ARMY
+		ReligionType=RELIGION_CONFUCIANISM
+		ReligionType=RELIGION_TAOISM
+		BeginCulture
+			Civilization=CIVILIZATION_CHINA, Culture=300
+		EndCulture
+		YearFounded=-1095
+		YearAcquired=-1095
+	EndCity
+EndPlot
+BeginPlot
+	x=121,y=54
+	ImprovementType=IMPROVEMENT_MINE
+EndPlot
+BeginPlot
+	x=122,y=24
+	ImprovementType=IMPROVEMENT_PLANTATION
+EndPlot
+BeginPlot
+	x=122,y=34
+	ImprovementType=IMPROVEMENT_COTTAGE
+EndPlot
+BeginPlot
+	x=122,y=35
+	ImprovementType=IMPROVEMENT_PADDY_FIELD
+EndPlot
+BeginPlot
+	x=122,y=36
+	ImprovementType=IMPROVEMENT_QUARRY
+	RouteType=ROUTE_ROAD
+EndPlot
+BeginPlot
+	x=122,y=40
+	ImprovementType=IMPROVEMENT_MINE
+	RouteType=ROUTE_ROAD
+EndPlot
+BeginPlot
+	x=122,y=41
+	ImprovementType=IMPROVEMENT_FISHING_BOATS
+EndPlot
+BeginPlot
+	x=122,y=42
+	ImprovementType=IMPROVEMENT_COTTAGE
+EndPlot
+BeginPlot
+	x=122,y=43
+	ImprovementType=IMPROVEMENT_ORCHARD
+	RouteType=ROUTE_ROAD
+EndPlot
+BeginPlot
+	x=122,y=44
+	ImprovementType=IMPROVEMENT_COTTAGE
+	RouteType=ROUTE_ROAD
+EndPlot
+BeginPlot
+	x=122,y=45
+	RouteType=ROUTE_ROAD
+	BeginUnit
+		UnitType=UNIT_CHINESE_FIRELANCER
+		UnitOwner=CIVILIZATION_CHINA
+	EndUnit
+	BeginCity
+		CityOwner=CIVILIZATION_CHINA
+		CityName=Guiyang
+		CityPopulation=4
+		BuildingType=BUILDING_GRANARY
+		BuildingType=BUILDING_WEAVER
+		BuildingType=BUILDING_CHINESE_TAIXUE
+		BuildingType=BUILDING_MARKET
+		BuildingType=BUILDING_CONFUCIAN_TEMPLE
+		BuildingType=BUILDING_CONFUCIAN_MONASTERY
+		ReligionType=RELIGION_CONFUCIANISM
+		BeginCulture
+			Civilization=CIVILIZATION_CHINA, Culture=50
+		EndCulture
+		YearFounded=700
+		YearAcquired=700
+	EndCity
+EndPlot
+BeginPlot
+	x=122,y=46
+	RouteType=ROUTE_ROAD
+EndPlot
+BeginPlot
+	x=122,y=47
+	ImprovementType=IMPROVEMENT_MINE
+EndPlot
+BeginPlot
+	x=122,y=49
+	ImprovementType=IMPROVEMENT_WINDMILL
+	RouteType=ROUTE_ROAD
+EndPlot
+BeginPlot
+	x=122,y=50
+	ImprovementType=IMPROVEMENT_QUARRY
+	RouteType=ROUTE_ROAD
+EndPlot
+BeginPlot
+	x=122,y=51
+	ImprovementType=IMPROVEMENT_MINE
+	RouteType=ROUTE_ROAD
+EndPlot
+BeginPlot
+	x=122,y=52
+	ImprovementType=IMPROVEMENT_MINE
+EndPlot
+BeginPlot
+	x=122,y=53
+	ImprovementType=IMPROVEMENT_PASTURE
+EndPlot
+BeginPlot
+	x=123,y=24
+	ImprovementType=IMPROVEMENT_PLANTATION
+EndPlot
+BeginPlot
+	x=123,y=25
+	RouteType=ROUTE_ROAD
+	BeginUnit
+		UnitType=UNIT_SHORTBOWMAN
+		UnitOwner=CIVILIZATION_JAVA
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_SHORTBOWMAN
+		UnitOwner=CIVILIZATION_JAVA
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_JAVANESE_PENDEKAR
+		UnitOwner=CIVILIZATION_JAVA
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_JAVANESE_PENDEKAR
+		UnitOwner=CIVILIZATION_JAVA
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_JAVANESE_PENDEKAR
+		UnitOwner=CIVILIZATION_JAVA
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_JAVANESE_PENDEKAR
+		UnitOwner=CIVILIZATION_JAVA
+	EndUnit
+	BeginCity
+		CityOwner=CIVILIZATION_JAVA
+		CityName=Sunda Kelapa
+		CityPopulation=12
+		BuildingType=BUILDING_PALACE
+		BuildingType=BUILDING_GRANARY
+		BuildingType=BUILDING_TANNERY
+		BuildingType=BUILDING_HARBOR
+		BuildingType=BUILDING_AQUEDUCT
+		BuildingType=BUILDING_LIGHTHOUSE
+		BuildingType=BUILDING_JAIL
+		BuildingType=BUILDING_FORGE
+		BuildingType=BUILDING_BOROBUDUR
+		BuildingType=BUILDING_PRAMBANAN
+		ReligionType=RELIGION_BUDDHISM
+		BeginCulture
+			Civilization=CIVILIZATION_JAVA, Culture=50
+		EndCulture
+		YearFounded=400
+		YearAcquired=400
+		PreviousOwner=CIVILIZATION_JAVA
+	EndCity
+EndPlot
+BeginPlot
+	x=123,y=26
+	ImprovementType=IMPROVEMENT_FISHING_BOATS
+EndPlot
+BeginPlot
+	x=123,y=37
+	ImprovementType=IMPROVEMENT_PLANTATION
+	RouteType=ROUTE_ROAD
+EndPlot
+BeginPlot
+	x=123,y=38
+	ImprovementType=IMPROVEMENT_PLANTATION
+EndPlot
+BeginPlot
+	x=123,y=39
+	RouteType=ROUTE_ROAD
+	BeginUnit
+		UnitType=UNIT_SHORTBOWMAN
+		UnitOwner=CIVILIZATION_VIETNAM
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_SHORTBOWMAN
+		UnitOwner=CIVILIZATION_VIETNAM
+	EndUnit
+	BeginCity
+		CityOwner=CIVILIZATION_VIETNAM
+		CityName=Cua Han
+		CityPopulation=3
+		BuildingType=BUILDING_GRANARY
+		BuildingType=BUILDING_TANNERY
+		BuildingType=BUILDING_HARBOR
+		BuildingType=BUILDING_CONFUCIAN_TEMPLE
+		ReligionType=RELIGION_BUDDHISM
+		ReligionType=RELIGION_CONFUCIANISM
+		BeginCulture
+			Civilization=CIVILIZATION_VIETNAM, Culture=50
+		EndCulture
+		YearFounded=190
+		YearAcquired=1100
+		PreviousOwner=CIVILIZATION_INDEPENDENT
+	EndCity
+EndPlot
+BeginPlot
+	x=123,y=43
+	RouteType=ROUTE_ROAD
+EndPlot
+BeginPlot
+	x=123,y=46
+	ImprovementType=IMPROVEMENT_PLANTATION
+EndPlot
+BeginPlot
+	x=123,y=47
+	RouteType=ROUTE_ROAD
+EndPlot
+BeginPlot
+	x=123,y=48
+	ImprovementType=IMPROVEMENT_PADDY_FIELD
+EndPlot
+BeginPlot
+	x=123,y=50
+	ImprovementType=IMPROVEMENT_PLANTATION
+EndPlot
+BeginPlot
+	x=123,y=51
+	ImprovementType=IMPROVEMENT_COTTAGE
+	RouteType=ROUTE_ROAD
+EndPlot
+BeginPlot
+	x=123,y=52
+	ImprovementType=IMPROVEMENT_HAMLET
+EndPlot
+BeginPlot
+	x=123,y=53
+	ImprovementType=IMPROVEMENT_WATERMILL
+EndPlot
+BeginPlot
+	x=123,y=55
+	ImprovementType=IMPROVEMENT_PLANTATION
+	RouteType=ROUTE_ROAD
+EndPlot
+BeginPlot
+	x=123,y=56
+	ImprovementType=IMPROVEMENT_PASTURE
+EndPlot
+BeginPlot
+	x=123,y=57
+	ImprovementType=IMPROVEMENT_MINE
+EndPlot
+BeginPlot
+	x=124,y=25
+	ImprovementType=IMPROVEMENT_PADDY_FIELD
+	RouteType=ROUTE_ROAD
+EndPlot
+BeginPlot
+	x=124,y=35
+	ImprovementType=IMPROVEMENT_FISHING_BOATS
+EndPlot
+BeginPlot
+	x=124,y=36
+	RouteType=ROUTE_ROAD
+EndPlot
+BeginPlot
+	x=124,y=37
+	RouteType=ROUTE_ROAD
+	BeginUnit
+		UnitType=UNIT_SHORTBOWMAN
+		UnitOwner=CIVILIZATION_INDEPENDENT
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_SHORTBOWMAN
+		UnitOwner=CIVILIZATION_INDEPENDENT
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_SHORTBOWMAN
+		UnitOwner=CIVILIZATION_INDEPENDENT
+	EndUnit
+	BeginCity
+		CityOwner=CIVILIZATION_INDEPENDENT
+		CityName=Vijaya
+		CityPopulation=5
+		BuildingType=BUILDING_GRANARY
+		BuildingType=BUILDING_TANNERY
+		BuildingType=BUILDING_LIBRARY
+		BuildingType=BUILDING_HARBOR
+		BuildingType=BUILDING_AQUEDUCT
+		BuildingType=BUILDING_BUDDHIST_TEMPLE
+		ReligionType=RELIGION_BUDDHISM
+		BeginCulture
+			Civilization=CIVILIZATION_INDEPENDENT, Culture=50
+		EndCulture
+		YearFounded=400
+		YearAcquired=1100
+		PreviousOwner=CIVILIZATION_KHMER
+	EndCity
+EndPlot
+BeginPlot
+	x=124,y=38
+	ImprovementType=IMPROVEMENT_MINE
+	RouteType=ROUTE_ROAD
+EndPlot
+BeginPlot
+	x=124,y=43
+	ImprovementType=IMPROVEMENT_PLANTATION
+	RouteType=ROUTE_ROAD
+EndPlot
+BeginPlot
+	x=124,y=44
+	ImprovementType=IMPROVEMENT_MINE
+EndPlot
+BeginPlot
+	x=124,y=46
+	ImprovementType=IMPROVEMENT_PLANTATION
+EndPlot
+BeginPlot
+	x=124,y=47
+	RouteType=ROUTE_ROAD
+	BeginUnit
+		UnitType=UNIT_CHINESE_FIRELANCER
+		UnitOwner=CIVILIZATION_CHINA
+	EndUnit
+	BeginCity
+		CityOwner=CIVILIZATION_CHINA
+		CityName=Changsha
+		CityPopulation=5
+		BuildingType=BUILDING_GRANARY
+		BuildingType=BUILDING_WEAVER
+		BuildingType=BUILDING_CHINESE_TAIXUE
+		BuildingType=BUILDING_CONFUCIAN_TEMPLE
+		ReligionType=RELIGION_CONFUCIANISM
+		ReligionType=RELIGION_TAOISM
+		BeginCulture
+			Civilization=CIVILIZATION_CHINA, Culture=50
+		EndCulture
+		YearFounded=-500
+		YearAcquired=1100
+	EndCity
+EndPlot
+BeginPlot
+	x=124,y=50
+	ImprovementType=IMPROVEMENT_CAMP
+EndPlot
+BeginPlot
+	RouteType=ROUTE_ROAD
+EndPlot
+BeginPlot
+	x=124,y=53
+	RouteType=ROUTE_ROAD
+EndPlot
+BeginPlot
+	x=124,y=54
+	RouteType=ROUTE_ROAD
+EndPlot
+BeginPlot
+	x=124,y=55
+	ImprovementType=IMPROVEMENT_COTTAGE
+EndPlot
+BeginPlot
+	x=124,y=56
+	ImprovementType=IMPROVEMENT_COTTAGE
+EndPlot
+BeginPlot
+	x=124,y=58
+	ImprovementType=IMPROVEMENT_MINE
+EndPlot
+BeginPlot
+	x=125,y=24
+	ImprovementType=IMPROVEMENT_ORCHARD
+EndPlot
+BeginPlot
+	x=125,y=25
+	ImprovementType=IMPROVEMENT_PLANTATION
+	RouteType=ROUTE_ROAD
+EndPlot
+BeginPlot
+	x=125,y=39
+	ImprovementType=IMPROVEMENT_FISHING_BOATS
+EndPlot
+BeginPlot
+	x=125,y=41
+	ImprovementType=IMPROVEMENT_FISHING_BOATS
+EndPlot
+BeginPlot
+	x=125,y=43
+	RouteType=ROUTE_ROAD
+	BeginUnit
+		UnitType=UNIT_CHINESE_FIRELANCER
+		UnitOwner=CIVILIZATION_CHINA
+	EndUnit
+	BeginCity
+		CityOwner=CIVILIZATION_CHINA
+		CityName=Guangzhou
+		CityPopulation=7
+		BuildingType=BUILDING_GRANARY
+		BuildingType=BUILDING_TANNERY
+		BuildingType=BUILDING_WEAVER
+		BuildingType=BUILDING_HARBOR
+		BuildingType=BUILDING_THEATRE
+		BuildingType=BUILDING_LIGHTHOUSE
+		BuildingType=BUILDING_MARKET
+		BuildingType=BUILDING_CONFUCIAN_TEMPLE
+		ReligionType=RELIGION_BUDDHISM
+		ReligionType=RELIGION_CONFUCIANISM
+		BeginCulture
+			Civilization=CIVILIZATION_CHINA, Culture=100
+		EndCulture
+		YearFounded=-210
+		YearAcquired=-210
+		PreviousOwner=CIVILIZATION_INDEPENDENT
+	EndCity
+EndPlot
+BeginPlot
+	x=125,y=44
+	ImprovementType=IMPROVEMENT_PLANTATION
+	RouteType=ROUTE_ROAD
+EndPlot
+BeginPlot
+	x=125,y=45
+	ImprovementType=IMPROVEMENT_ORCHARD
+EndPlot
+BeginPlot
+	x=125,y=46
+	ImprovementType=IMPROVEMENT_PADDY_FIELD
+	RouteType=ROUTE_ROAD
+EndPlot
+BeginPlot
+	x=125,y=49
+	ImprovementType=IMPROVEMENT_COTTAGE
+EndPlot
+BeginPlot
+	x=125,y=50
+	ImprovementType=IMPROVEMENT_MINE
+EndPlot
+BeginPlot
+	x=125,y=51
+	ImprovementType=IMPROVEMENT_COTTAGE
+EndPlot
+BeginPlot
+	x=125,y=52
+	RouteType=ROUTE_ROAD
+	BeginUnit
+		UnitType=UNIT_CHINESE_FIRELANCER
+		UnitOwner=CIVILIZATION_CHINA
+	EndUnit
+	BeginCity
+		CityOwner=CIVILIZATION_CHINA
+		CityName=Kaifeng
+		CityPopulation=12
+		BuildingType=BUILDING_PALACE
+		BuildingType=BUILDING_GRANARY
+		BuildingType=BUILDING_TANNERY
+		BuildingType=BUILDING_WEAVER
+		BuildingType=BUILDING_CHINESE_TAIXUE
+		BuildingType=BUILDING_MARKET
+		BuildingType=BUILDING_JAIL
+		BuildingType=BUILDING_FORGE
+		BuildingType=BUILDING_CONFUCIAN_TEMPLE
+		BuildingType=BUILDING_CONFUCIAN_MONASTERY
+		BuildingType=BUILDING_CONFUCIAN_SHRINE
+		BuildingType=BUILDING_TAOIST_TEMPLE
+		BuildingType=BUILDING_TAOIST_MONASTERY
+		BuildingType=BUILDING_GRAND_CANAL
+		ReligionType=RELIGION_BUDDHISM
+		ReligionType=RELIGION_CONFUCIANISM
+		HolyCityReligionType=RELIGION_CONFUCIANISM
+		ReligionType=RELIGION_TAOISM
+		BeginCulture
+			Civilization=CIVILIZATION_CHINA, Culture=100
+		EndCulture
+		YearFounded=-360
+		YearAcquired=360
+	EndCity
+EndPlot
+BeginPlot
+	x=125,y=53
+	ImprovementType=IMPROVEMENT_MINE
+EndPlot
+BeginPlot
+	x=125,y=54
+	ImprovementType=IMPROVEMENT_FARM
+EndPlot
+BeginPlot
+	x=125,y=55
+	RouteType=ROUTE_ROAD
+EndPlot
+BeginPlot
+	x=125,y=56
+	RouteType=ROUTE_ROAD
+	BeginUnit
+		UnitType=UNIT_CHINESE_FIRELANCER
+		UnitOwner=CIVILIZATION_CHINA
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_CHINESE_FIRELANCER
+		UnitOwner=CIVILIZATION_CHINA
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_CHINESE_FIRELANCER
+		UnitOwner=CIVILIZATION_CHINA
+	EndUnit
+	BeginCity
+		CityOwner=CIVILIZATION_CHINA
+		CityName=Beijing
+		CityPopulation=9
+		BuildingType=BUILDING_PALACE
+		BuildingType=BUILDING_BARRACKS
+		BuildingType=BUILDING_GRANARY
+		BuildingType=BUILDING_TANNERY
+		BuildingType=BUILDING_WEAVER
+		BuildingType=BUILDING_STABLE
+		BuildingType=BUILDING_POST_OFFICE
+		BuildingType=BUILDING_CONFUCIAN_TEMPLE
+		BuildingType=BUILDING_CONFUCIAN_MONASTERY
+		BuildingType=BUILDING_TAOIST_TEMPLE
+		BuildingType=BUILDING_GREAT_WALL
+		ReligionType=RELIGION_CONFUCIANISM
+		ReligionType=RELIGION_TAOISM
+		HolyCityReligionType=RELIGION_TAOISM
+		BeginCulture
+			Civilization=CIVILIZATION_CHINA, Culture=50
+		EndCulture
+		YearFounded=-1050
+		YearAcquired=-1050
+	EndCity
+EndPlot
+BeginPlot
+	x=125,y=57
+	ImprovementType=IMPROVEMENT_PASTURE
+	RouteType=ROUTE_ROAD
+EndPlot
+BeginPlot
+	x=125,y=58
+	ImprovementType=IMPROVEMENT_QUARRY
+	RouteType=ROUTE_ROAD
+EndPlot
+BeginPlot
+	x=126,y=24
+	ImprovementType=IMPROVEMENT_QUARRY
+EndPlot
+BeginPlot
+	x=126,y=25
+	RouteType=ROUTE_ROAD
+	BeginUnit
+		UnitType=UNIT_SHORTBOWMAN
+		UnitOwner=CIVILIZATION_JAVA
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_SHORTBOWMAN
+		UnitOwner=CIVILIZATION_JAVA
+	EndUnit
+	BeginCity
+		CityOwner=CIVILIZATION_JAVA
+		CityName=Kahuripan
+		CityPopulation=6
+		BuildingType=BUILDING_GRANARY
+		BuildingType=BUILDING_WEAVER
+		BuildingType=BUILDING_LIBRARY
+		BuildingType=BUILDING_HARBOR
+		BuildingType=BUILDING_LIGHTHOUSE
+		BuildingType=BUILDING_MARKET
+		ReligionType=RELIGION_HINDUISM
+		ReligionType=RELIGION_BUDDHISM
+		BeginCulture
+			Civilization=CIVILIZATION_JAVA, Culture=50
+		EndCulture
+		YearFounded=1000
+		YearAcquired=1000
+	EndCity
+EndPlot
+BeginPlot
+	x=126,y=44
+	ImprovementType=IMPROVEMENT_QUARRY
+	RouteType=ROUTE_ROAD
+EndPlot
+BeginPlot
+	x=126,y=46
+	RouteType=ROUTE_ROAD
+EndPlot
+BeginPlot
+	x=126,y=51
+	ImprovementType=IMPROVEMENT_PASTURE
+	RouteType=ROUTE_ROAD
+EndPlot
+BeginPlot
+	x=126,y=52
+	ImprovementType=IMPROVEMENT_FARM
+EndPlot
+BeginPlot
+	x=126,y=53
+	ImprovementType=IMPROVEMENT_MINE
+EndPlot
+BeginPlot
+	x=126,y=54
+	ImprovementType=IMPROVEMENT_PLANTATION
+EndPlot
+BeginPlot
+	x=126,y=56
+	ImprovementType=IMPROVEMENT_QUARRY
+	RouteType=ROUTE_ROAD
+EndPlot
+BeginPlot
+	x=126,y=57
+	ImprovementType=IMPROVEMENT_COTTAGE
+	RouteType=ROUTE_ROAD
+EndPlot
+BeginPlot
+	x=127,y=24
+	ImprovementType=IMPROVEMENT_PADDY_FIELD
+	RouteType=ROUTE_ROAD
+EndPlot
+BeginPlot
+	x=127,y=42
+	ImprovementType=IMPROVEMENT_FISHING_BOATS
+EndPlot
+BeginPlot
+	x=127,y=44
+	ImprovementType=IMPROVEMENT_PADDY_FIELD
+	RouteType=ROUTE_ROAD
+EndPlot
+BeginPlot
+	x=127,y=45
+	RouteType=ROUTE_ROAD
+EndPlot
+BeginPlot
+	x=127,y=46
+	ImprovementType=IMPROVEMENT_PLANTATION
+EndPlot
+BeginPlot
+	x=127,y=48
+	ImprovementType=IMPROVEMENT_PLANTATION
+EndPlot
+BeginPlot
+	x=127,y=49
+	ImprovementType=IMPROVEMENT_PADDY_FIELD
+EndPlot
+BeginPlot
+	x=127,y=50
+	RouteType=ROUTE_ROAD
+EndPlot
+BeginPlot
+	x=127,y=52
+	ImprovementType=IMPROVEMENT_QUARRY
+EndPlot
+BeginPlot
+	x=127,y=55
+	ImprovementType=IMPROVEMENT_FISHING_BOATS
+EndPlot
+BeginPlot
+	x=127,y=57
+	ImprovementType=IMPROVEMENT_COTTAGE
+EndPlot
+BeginPlot
+	x=127,y=58
+	ImprovementType=IMPROVEMENT_FARM
+	RouteType=ROUTE_ROAD
+EndPlot
+BeginPlot
+	x=128,y=45
+	ImprovementType=IMPROVEMENT_MINE
+EndPlot
+BeginPlot
+	x=128,y=46
+	RouteType=ROUTE_ROAD
+	BeginUnit
+		UnitType=UNIT_CHINESE_FIRELANCER
+		UnitOwner=CIVILIZATION_CHINA
+	EndUnit
+	BeginCity
+		CityOwner=CIVILIZATION_CHINA
+		CityName=Fuzhou
+		CityPopulation=8
+		BuildingType=BUILDING_GRANARY
+		BuildingType=BUILDING_TANNERY
+		BuildingType=BUILDING_HARBOR
+		BuildingType=BUILDING_LIGHTHOUSE
+		BuildingType=BUILDING_CONFUCIAN_TEMPLE
+		BuildingType=BUILDING_CONFUCIAN_MONASTERY
+		ReligionType=RELIGION_BUDDHISM
+		ReligionType=RELIGION_CONFUCIANISM
+		BeginCulture
+			Civilization=CIVILIZATION_CHINA, Culture=100
+		EndCulture
+		YearFounded=-200
+		YearAcquired=-200
+	EndCity
+EndPlot
+BeginPlot
+	x=128,y=49
+	ImprovementType=IMPROVEMENT_COTTAGE
+	RouteType=ROUTE_ROAD
+EndPlot
+BeginPlot
+	x=128,y=50
+	ImprovementType=IMPROVEMENT_FISHING_BOATS
+EndPlot
+BeginPlot
+	x=128,y=51
+	ImprovementType=IMPROVEMENT_QUARRY
+EndPlot
+BeginPlot
+	x=128,y=52
+	ImprovementType=IMPROVEMENT_COTTAGE
+EndPlot
+BeginPlot
+	x=128,y=56
+	ImprovementType=IMPROVEMENT_COTTAGE
+EndPlot
+BeginPlot
+	x=128,y=57
+	ImprovementType=IMPROVEMENT_COTTAGE
+EndPlot
+BeginPlot
+	x=128,y=58
+	RouteType=ROUTE_ROAD
+	BeginUnit
+		UnitType=UNIT_CHINESE_FIRELANCER
+		UnitOwner=CIVILIZATION_CHINA
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_CHINESE_FIRELANCER
+		UnitOwner=CIVILIZATION_CHINA
+	EndUnit
+	BeginCity
+		CityOwner=CIVILIZATION_CHINA
+		CityName=Shenyang
+		CityPopulation=6
+		BuildingType=BUILDING_BARRACKS
+		BuildingType=BUILDING_CONFUCIAN_TEMPLE
+		ReligionType=RELIGION_CONFUCIANISM
+		BeginCulture
+			Civilization=CIVILIZATION_CHINA, Culture=80
+		EndCulture
+		YearFounded=-300
+		YearAcquired=900
+		PreviousOwner=CIVILIZATION_BARBARIAN
+		PreviousOwner=CIVILIZATION_KOREA
+	EndCity
+EndPlot
+BeginPlot
+	x=128,y=59
+	ImprovementType=IMPROVEMENT_PASTURE
+	RouteType=ROUTE_ROAD
+EndPlot
+BeginPlot
+	x=129,y=39
+	ImprovementType=IMPROVEMENT_FISHING_BOATS
+EndPlot
+BeginPlot
+	x=129,y=45
+	ImprovementType=IMPROVEMENT_FISHING_BOATS
+EndPlot
+BeginPlot
+	x=129,y=47
+	ImprovementType=IMPROVEMENT_ORCHARD
+	RouteType=ROUTE_ROAD
+EndPlot
+BeginPlot
+	x=129,y=48
+	RouteType=ROUTE_ROAD
+EndPlot
+BeginPlot
+	x=129,y=50
+	RouteType=ROUTE_ROAD
+	BeginUnit
+		UnitType=UNIT_CHINESE_FIRELANCER
+		UnitOwner=CIVILIZATION_CHINA
+	EndUnit
+	BeginCity
+		CityOwner=CIVILIZATION_CHINA
+		CityName=Shanghai
+		CityPopulation=9
+		BuildingType=BUILDING_GRANARY
+		BuildingType=BUILDING_TANNERY
+		BuildingType=BUILDING_CHINESE_TAIXUE
+		BuildingType=BUILDING_HARBOR
+		BuildingType=BUILDING_LIGHTHOUSE
+		BuildingType=BUILDING_MARKET
+		BuildingType=BUILDING_FORGE
+		BuildingType=BUILDING_CONFUCIAN_TEMPLE
+		BuildingType=BUILDING_CONFUCIAN_MONASTERY
+		BuildingType=BUILDING_TAOIST_TEMPLE
+		ReligionType=RELIGION_CONFUCIANISM
+		ReligionType=RELIGION_TAOISM
+		BeginCulture
+			Civilization=CIVILIZATION_CHINA, Culture=100
+		EndCulture
+		YearFounded=500
+		YearAcquired=500
+	EndCity
+EndPlot
+BeginPlot
+	x=129,y=51
+	ImprovementType=IMPROVEMENT_FISHING_BOATS
+EndPlot
+BeginPlot
+	x=129,y=57
+	ImprovementType=IMPROVEMENT_COTTAGE
+	RouteType=ROUTE_ROAD
+EndPlot
+BeginPlot
+	x=129,y=58
+	ImprovementType=IMPROVEMENT_COTTAGE
+EndPlot
+BeginPlot
+	x=129,y=60
+	ImprovementType=IMPROVEMENT_FARM
+	RouteType=ROUTE_ROAD
+EndPlot
+BeginPlot
+	x=129,y=61
+	RouteType=ROUTE_ROAD
+EndPlot
+BeginPlot
+	x=129,y=62
+	RouteType=ROUTE_ROAD
+	BeginUnit
+		UnitType=UNIT_CHINESE_FIRELANCER
+		UnitOwner=CIVILIZATION_INDEPENDENT
+	EndUnit
+	BeginCity
+		CityOwner=CIVILIZATION_INDEPENDENT
+		CityName=Qiqihar
+		CityPopulation=3
+		BuildingType=BUILDING_GRANARY
+		BuildingType=BUILDING_TANNERY
+		BuildingType=BUILDING_CONFUCIAN_TEMPLE
+		ReligionType=RELIGION_CONFUCIANISM
+		BeginCulture
+			Civilization=CIVILIZATION_INDEPENDENT, Culture=50
+		EndCulture
+		YearFounded=1100
+		YearAcquired=1100
+		PreviousOwner=CIVILIZATION_BARBARIAN
+	EndCity
+EndPlot
+BeginPlot
+	x=129,y=63
+	ImprovementType=IMPROVEMENT_PASTURE
+	RouteType=ROUTE_ROAD
+EndPlot
+BeginPlot
+	x=130,y=44
+	ImprovementType=IMPROVEMENT_PLANTATION
+	RouteType=ROUTE_ROAD
+EndPlot
+BeginPlot
+	x=130,y=48
+	ImprovementType=IMPROVEMENT_FISHING_BOATS
+EndPlot
+BeginPlot
+	x=130,y=50
+	ImprovementType=IMPROVEMENT_FISHING_BOATS
+EndPlot
+BeginPlot
+	x=130,y=53
+	ImprovementType=IMPROVEMENT_FISHING_BOATS
+EndPlot
+BeginPlot
+	x=130,y=55
+	ImprovementType=IMPROVEMENT_PASTURE
+	RouteType=ROUTE_ROAD
+EndPlot
+BeginPlot
+	x=130,y=56
+	RouteType=ROUTE_ROAD
+	BeginUnit
+		UnitType=UNIT_SHORTBOWMAN
+		UnitOwner=CIVILIZATION_KOREA
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_SHORTBOWMAN
+		UnitOwner=CIVILIZATION_KOREA
+	EndUnit
+	BeginCity
+		CityOwner=CIVILIZATION_KOREA
+		CityName=Pyongyang
+		CityPopulation=5
+		BuildingType=BUILDING_GRANARY
+		BuildingType=BUILDING_TANNERY
+		BuildingType=BUILDING_WEAVER
+		BuildingType=BUILDING_LIBRARY
+		BuildingType=BUILDING_HARBOR
+		BuildingType=BUILDING_AQUEDUCT
+		BuildingType=BUILDING_LIGHTHOUSE
+		BuildingType=BUILDING_BUDDHIST_TEMPLE
+		BuildingType=BUILDING_BUDDHIST_MONASTERY
+		BuildingType=BUILDING_CONFUCIAN_TEMPLE
+		BuildingType=BUILDING_CONFUCIAN_MONASTERY
+		ReligionType=RELIGION_BUDDHISM
+		ReligionType=RELIGION_CONFUCIANISM
+		BeginCulture
+			Civilization=CIVILIZATION_KOREA, Culture=80
+		EndCulture
+		YearFounded=-1100
+		YearAcquired=1100
+	EndCity
+EndPlot
+BeginPlot
+	x=130,y=57
+	ImprovementType=IMPROVEMENT_ORCHARD
+EndPlot
+BeginPlot
+	x=130,y=58
+	ImprovementType=IMPROVEMENT_CAMP
+EndPlot
+BeginPlot
+	x=131,y=38
+	ImprovementType=IMPROVEMENT_MINE
+	RouteType=ROUTE_ROAD
+EndPlot
+BeginPlot
+	x=131,y=39
+	ImprovementType=IMPROVEMENT_PLANTATION
+	RouteType=ROUTE_ROAD
+EndPlot
+BeginPlot
+	x=131,y=52
+	ImprovementType=IMPROVEMENT_PLANTATION
+	RouteType=ROUTE_ROAD
+EndPlot
+BeginPlot
+	x=131,y=53
+	ImprovementType=IMPROVEMENT_VILLAGE
+EndPlot
+BeginPlot
+	x=131,y=54
+	RouteType=ROUTE_ROAD
+	BeginUnit
+		UnitType=UNIT_SHORTBOWMAN
+		UnitOwner=CIVILIZATION_KOREA
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_SHORTBOWMAN
+		UnitOwner=CIVILIZATION_KOREA
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_SHORTBOWMAN
+		UnitOwner=CIVILIZATION_KOREA
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_SHORTBOWMAN
+		UnitOwner=CIVILIZATION_KOREA
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_SHORTBOWMAN
+		UnitOwner=CIVILIZATION_KOREA
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_SHORTBOWMAN
+		UnitOwner=CIVILIZATION_KOREA
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_KOREAN_HWACHA
+		UnitOwner=CIVILIZATION_KOREA
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_WARRIOR_MONK
+		UnitOwner=CIVILIZATION_JAPAN
+	EndUnit
+	BeginCity
+		CityOwner=CIVILIZATION_KOREA
+		CityName=Hanseong
+		CityPopulation=12
+		BuildingType=BUILDING_PALACE
+		BuildingType=BUILDING_GRANARY
+		BuildingType=BUILDING_TANNERY
+		BuildingType=BUILDING_WEAVER
+		BuildingType=BUILDING_MONUMENT
+		BuildingType=BUILDING_LIBRARY
+		BuildingType=BUILDING_HARBOR
+		BuildingType=BUILDING_AQUEDUCT
+		BuildingType=BUILDING_LIGHTHOUSE
+		BuildingType=BUILDING_MARKET
+		BuildingType=BUILDING_BATH
+		BuildingType=BUILDING_FORGE
+		BuildingType=BUILDING_BUDDHIST_TEMPLE
+		BuildingType=BUILDING_BUDDHIST_MONASTERY
+		BuildingType=BUILDING_CONFUCIAN_TEMPLE
+		BuildingType=BUILDING_CONFUCIAN_CATHEDRAL
+		BuildingType=BUILDING_CONFUCIAN_MONASTERY
+		BuildingType=BUILDING_CHEOMSEONGDAE
+		ReligionType=RELIGION_BUDDHISM
+		ReligionType=RELIGION_CONFUCIANISM
+		BeginCulture
+			Civilization=CIVILIZATION_KOREA, Culture=250
+		EndCulture
+		YearFounded=-20
+		YearAcquired=-20
+	EndCity
+EndPlot
+BeginPlot
+	x=131,y=56
+	ImprovementType=IMPROVEMENT_MINE
+EndPlot
+BeginPlot
+	x=131,y=57
+	ImprovementType=IMPROVEMENT_MINE
+	RouteType=ROUTE_ROAD
+EndPlot
+BeginPlot
+	x=132,y=37
+	ImprovementType=IMPROVEMENT_PLANTATION
+	RouteType=ROUTE_ROAD
+EndPlot
+BeginPlot
+	x=132,y=53
+	ImprovementType=IMPROVEMENT_PADDY_FIELD
+	RouteType=ROUTE_ROAD
+EndPlot
+BeginPlot
+	x=132,y=54
+	ImprovementType=IMPROVEMENT_HAMLET
+EndPlot
+BeginPlot
+	x=132,y=55
+	ImprovementType=IMPROVEMENT_MINE
+	RouteType=ROUTE_ROAD
+EndPlot
+BeginPlot
+	x=133,y=49
+	ImprovementType=IMPROVEMENT_FISHING_BOATS
+EndPlot
+BeginPlot
+	x=133,y=54
+	ImprovementType=IMPROVEMENT_PLANTATION
+	RouteType=ROUTE_ROAD
+EndPlot
+BeginPlot
+	x=134,y=50
+	ImprovementType=IMPROVEMENT_HAMLET
+EndPlot
+BeginPlot
+	x=134,y=51
+	RouteType=ROUTE_ROAD
+EndPlot
+BeginPlot
+	x=135,y=49
+	RouteType=ROUTE_ROAD
+	BeginUnit
+		UnitType=UNIT_WARRIOR_MONK
+		UnitOwner=CIVILIZATION_JAPAN
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_SHORTBOWMAN
+		UnitOwner=CIVILIZATION_JAPAN
+	EndUnit
+	BeginCity
+		CityOwner=CIVILIZATION_JAPAN
+		CityName=Kagoshima
+		CityPopulation=5
+		BuildingType=BUILDING_GRANARY
+		BuildingType=BUILDING_TANNERY
+		BuildingType=BUILDING_LIBRARY
+		BuildingType=BUILDING_HARBOR
+		BuildingType=BUILDING_AQUEDUCT
+		BuildingType=BUILDING_LIGHTHOUSE
+		BuildingType=BUILDING_JAIL
+		BuildingType=BUILDING_BUDDHIST_TEMPLE
+		BuildingType=BUILDING_BUDDHIST_MONASTERY
+		ReligionType=RELIGION_BUDDHISM
+		BeginCulture
+			Civilization=CIVILIZATION_JAPAN, Culture=100
+		EndCulture
+		YearFounded=1050
+		YearAcquired=1050
+	EndCity
+EndPlot
+BeginPlot
+	x=135,y=50
+	ImprovementType=IMPROVEMENT_MINE
+	RouteType=ROUTE_ROAD
+EndPlot
+BeginPlot
+	x=135,y=52
+	ImprovementType=IMPROVEMENT_MINE
+	RouteType=ROUTE_ROAD
+EndPlot
+BeginPlot
+	x=136,y=48
+	ImprovementType=IMPROVEMENT_WHALING_BOATS
+EndPlot
+BeginPlot
+	x=136,y=51
+	ImprovementType=IMPROVEMENT_MINE
+	RouteType=ROUTE_ROAD
+EndPlot
+BeginPlot
+	x=136,y=52
+	ImprovementType=IMPROVEMENT_FISHING_BOATS
+EndPlot
+BeginPlot
+	x=137,y=53
+	RouteType=ROUTE_ROAD
+	BeginUnit
+		UnitType=UNIT_SHORTBOWMAN
+		UnitOwner=CIVILIZATION_JAPAN
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_SHORTBOWMAN
+		UnitOwner=CIVILIZATION_JAPAN
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_SHORTBOWMAN
+		UnitOwner=CIVILIZATION_JAPAN
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_SHORTBOWMAN
+		UnitOwner=CIVILIZATION_JAPAN
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_SHORTBOWMAN
+		UnitOwner=CIVILIZATION_JAPAN
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_SHORTBOWMAN
+		UnitOwner=CIVILIZATION_JAPAN
+	EndUnit
+	BeginCity
+		CityOwner=CIVILIZATION_JAPAN
+		CityName=Kyouto
+		CityPopulation=9
+		BuildingType=BUILDING_PALACE
+		BuildingType=BUILDING_BARRACKS
+		BuildingType=BUILDING_GRANARY
+		BuildingType=BUILDING_TANNERY
+		BuildingType=BUILDING_WEAVER
+		BuildingType=BUILDING_MONUMENT
+		BuildingType=BUILDING_LIBRARY
+		BuildingType=BUILDING_HARBOR
+		BuildingType=BUILDING_AQUEDUCT
+		BuildingType=BUILDING_THEATRE
+		BuildingType=BUILDING_LIGHTHOUSE
+		BuildingType=BUILDING_FORGE
+		BuildingType=BUILDING_BUDDHIST_TEMPLE
+		BuildingType=BUILDING_BUDDHIST_CATHEDRAL
+		BuildingType=BUILDING_BUDDHIST_MONASTERY
+		ReligionType=RELIGION_BUDDHISM
+		FreeSpecialistType=SPECIALIST_GREAT_MERCHANT
+		BeginCulture
+			Civilization=CIVILIZATION_JAPAN, Culture=250
+		EndCulture
+		YearFounded=520
+		YearAcquired=520
+	EndCity
+EndPlot
+BeginPlot
+	x=137,y=54
+	ImprovementType=IMPROVEMENT_MINE
+EndPlot
+BeginPlot
+	x=138,y=52
+	ImprovementType=IMPROVEMENT_PLANTATION
+	RouteType=ROUTE_ROAD
+EndPlot
+BeginPlot
+	x=138,y=53
+	ImprovementType=IMPROVEMENT_VILLAGE
+EndPlot
+BeginPlot
+	x=138,y=55
+	ImprovementType=IMPROVEMENT_MINE
+EndPlot
+BeginPlot
+	x=139,y=52
+	ImprovementType=IMPROVEMENT_FISHING_BOATS
+EndPlot
+BeginPlot
+	x=139,y=53
+	ImprovementType=IMPROVEMENT_QUARRY
+	RouteType=ROUTE_ROAD
+EndPlot
+BeginPlot
+	x=139,y=55
+	ImprovementType=IMPROVEMENT_PLANTATION
+EndPlot
+BeginPlot
+	x=139,y=56
+	ImprovementType=IMPROVEMENT_MINE
+	RouteType=ROUTE_ROAD
+EndPlot
+BeginPlot
+	x=140,y=54
+	RouteType=ROUTE_ROAD
+	BeginUnit
+		UnitType=UNIT_SHORTBOWMAN
+		UnitOwner=CIVILIZATION_JAPAN
+	EndUnit
+	BeginCity
+		CityOwner=CIVILIZATION_JAPAN
+		CityName=Edo
+		CityPopulation=9
+		BuildingType=BUILDING_GRANARY
+		BuildingType=BUILDING_TANNERY
+		BuildingType=BUILDING_WEAVER
+		BuildingType=BUILDING_MONUMENT
+		BuildingType=BUILDING_LIBRARY
+		BuildingType=BUILDING_HARBOR
+		BuildingType=BUILDING_BUDDHIST_TEMPLE
+		BuildingType=BUILDING_BUDDHIST_MONASTERY
+		ReligionType=RELIGION_BUDDHISM
+		BeginCulture
+			Civilization=CIVILIZATION_JAPAN, Culture=100
+		EndCulture
+		YearFounded=520
+		YearAcquired=520
+	EndCity
+EndPlot
+BeginPlot
+	x=140,y=55
+	ImprovementType=IMPROVEMENT_PADDY_FIELD
+	RouteType=ROUTE_ROAD
+EndPlot
+BeginPlot
+	x=140,y=56
+	RouteType=ROUTE_ROAD
+EndPlot
+BeginPlot
+	x=141,y=55
+	ImprovementType=IMPROVEMENT_FISHING_BOATS
+EndPlot

@@ -8,7 +8,7 @@ BeginGame
 	GameTurn=0
 	StartYear=-3000
 	Description=TXT_KEY_RHYES_WB_DESC
-	ModPath=Mods\RFC Dawn of Civilization
+	ModPath=Mods\RFC Aeons
 EndGame
 
 BeginMap
@@ -598,6 +598,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=1,y=27
+	BonusType=BONUS_FERTILIZER
 	FeatureType=FEATURE_RAINFOREST, FeatureVariety=0
 	TerrainType=TERRAIN_ATOLL
 	PlotType=2
@@ -5489,6 +5490,7 @@ BeginPlot
 	isNOfRiver
 	RiverWEDirection=3
 	isWOfRiver
+	BonusType=BONUS_FERTILIZER
 	TerrainType=TERRAIN_DESERT
 	PlotType=1
 EndPlot
@@ -5930,7 +5932,7 @@ BeginPlot
 	x=13,y=52
 	FeatureType=FEATURE_FOREST, FeatureVariety=1
 	TerrainType=TERRAIN_SEMIDESERT
-	PlotType=1
+	PlotType=0
 EndPlot
 BeginPlot
 	x=13,y=53
@@ -5963,7 +5965,7 @@ EndPlot
 BeginPlot
 	x=13,y=57
 	TerrainType=TERRAIN_PLAINS
-	PlotType=1
+	PlotType=0
 EndPlot
 BeginPlot
 	x=13,y=58
@@ -9041,6 +9043,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=20,y=49
+	BonusType=BONUS_FERTILIZER
 	FeatureType=FEATURE_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
@@ -10029,7 +10032,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=22,y=63
-	BonusType=BONUS_COPPER
+	BonusType=BONUS_WHALE
 	FeatureType=FEATURE_FOREST, FeatureVariety=1
 	TerrainType=TERRAIN_MOORLAND
 	PlotType=2
@@ -12062,6 +12065,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=27,y=29
+	BonusType=BONUS_FERTILIZER
 	TerrainType=TERRAIN_PLAINS
 	PlotType=1
 EndPlot
@@ -12493,6 +12497,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=28,y=27
+	BonusType=BONUS_FERTILIZER
 	TerrainType=TERRAIN_SAVANNA
 	PlotType=1
 EndPlot
@@ -13051,6 +13056,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=29,y=44
+	BonusType=BONUS_FERTILIZER
 	FeatureType=FEATURE_JUNGLE, FeatureVariety=0
 	TerrainType=TERRAIN_SAVANNA
 	PlotType=1
@@ -13373,6 +13379,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=30,y=22
+	BonusType=BONUS_FERTILIZER
 	TerrainType=TERRAIN_PLAINS
 	PlotType=2
 EndPlot
@@ -14409,6 +14416,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=32,y=38
+	BonusType=BONUS_FERTILIZER
 	TerrainType=TERRAIN_PLAINS
 	PlotType=1
 EndPlot
@@ -14746,7 +14754,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=33,y=17
-	BonusType=BONUS_COPPER
+	BonusType=BONUS_FERTILIZER
 	TerrainType=TERRAIN_DESERT
 	PlotType=2
 EndPlot
@@ -25023,7 +25031,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=56,y=48
-	BonusType=BONUS_WINE
 	TerrainType=TERRAIN_PLAINS
 	PlotType=2
 EndPlot
@@ -25062,7 +25069,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=56,y=54
-	BonusType=BONUS_MARBLE
 	TerrainType=TERRAIN_GRASS
 	PlotType=1
 EndPlot
@@ -25386,13 +25392,13 @@ BeginPlot
 	x=57,y=34
 	RiverNSDirection=0
 	isWOfRiver
-	BonusType=BONUS_GOLD
 	FeatureType=FEATURE_SAVANNA, FeatureVariety=0
 	TerrainType=TERRAIN_SAVANNA
 	PlotType=1
 EndPlot
 BeginPlot
 	x=57,y=35
+	BonusType=BONUS_GOLD
 	TerrainType=TERRAIN_SEMIDESERT
 	PlotType=2
 EndPlot
@@ -25502,6 +25508,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=57,y=54
+	BonusType=BONUS_MARBLE
 	FeatureType=FEATURE_FOREST, FeatureVariety=4
 	TerrainType=TERRAIN_GRASS
 	PlotType=1
@@ -25914,6 +25921,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=58,y=48
+	BonusType=BONUS_WINE
 	TerrainType=TERRAIN_PLAINS
 	PlotType=1
 EndPlot
@@ -25993,7 +26001,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=58,y=61
-	FeatureType=FEATURE_FOREST, FeatureVariety=4
+	BonusType=BONUS_COW
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
@@ -26446,7 +26454,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=59,y=61
-	BonusType=BONUS_COW
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
@@ -28958,6 +28965,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=65,y=36
+	BonusType=BONUS_SHEEP
 	TerrainType=TERRAIN_SEMIDESERT
 	PlotType=2
 EndPlot
@@ -29402,7 +29410,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=66,y=36
-	BonusType=BONUS_SHEEP
 	TerrainType=TERRAIN_SEMIDESERT
 	PlotType=2
 EndPlot
@@ -29488,7 +29495,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=66,y=51
-	BonusType=BONUS_COAL
+	BonusType=BONUS_FERTILIZER
 	TerrainType=TERRAIN_PLAINS
 	PlotType=2
 EndPlot
@@ -30854,6 +30861,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=69,y=54
+	BonusType=BONUS_COAL
 	FeatureType=FEATURE_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=1
@@ -31726,7 +31734,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=71,y=44
-	TerrainType=TERRAIN_DESERT
+	TerrainType=TERRAIN_SEMIDESERT
 	PlotType=2
 EndPlot
 BeginPlot
@@ -32019,6 +32027,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=72,y=15
+	BonusType=BONUS_FERTILIZER
 	TerrainType=TERRAIN_DESERT
 	PlotType=1
 EndPlot
@@ -32202,7 +32211,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=72,y=43
-	TerrainType=TERRAIN_DESERT
+	TerrainType=TERRAIN_SEMIDESERT
 	PlotType=2
 EndPlot
 BeginPlot
@@ -33209,7 +33218,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=74,y=55
-	BonusType=BONUS_ALUMINUM
+	BonusType=BONUS_HORSE
 	FeatureType=FEATURE_FOREST, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=1
@@ -33418,6 +33427,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=75,y=11
+	BonusType=BONUS_FERTILIZER
 	FeatureType=FEATURE_FOREST, FeatureVariety=4
 	TerrainType=TERRAIN_GRASS
 	PlotType=1
@@ -33916,6 +33926,7 @@ BeginPlot
 	x=76,y=13
 	isNOfRiver
 	RiverWEDirection=3
+	BonusType=BONUS_URANIUM
 	TerrainType=TERRAIN_PLAINS
 	PlotType=2
 EndPlot
@@ -33931,8 +33942,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=76,y=15
-	BonusType=BONUS_COW
-	BonusVarietyType=BONUS_COW_BROWN
 	TerrainType=TERRAIN_PLAINS
 	PlotType=2
 EndPlot
@@ -33985,7 +33994,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=76,y=24
-	BonusType=BONUS_COAL
 	FeatureType=FEATURE_RAINFOREST, FeatureVariety=0
 	TerrainType=TERRAIN_PLAINS
 	PlotType=1
@@ -34395,7 +34403,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=77,y=14
-	BonusType=BONUS_URANIUM
 	FeatureType=FEATURE_FOREST, FeatureVariety=5
 	TerrainType=TERRAIN_PLAINS
 	PlotType=2
@@ -34479,6 +34486,7 @@ BeginPlot
 	x=77,y=25
 	isNOfRiver
 	RiverWEDirection=1
+	BonusType=BONUS_COAL
 	TerrainType=TERRAIN_GRASS
 	PlotType=1
 EndPlot
@@ -34652,6 +34660,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=77,y=55
+	BonusType=BONUS_GOLD
 	TerrainType=TERRAIN_PLAINS
 	PlotType=1
 EndPlot
@@ -34909,7 +34918,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=78,y=18
-	BonusType=BONUS_STONE
 	FeatureType=FEATURE_FOREST, FeatureVariety=5
 	TerrainType=TERRAIN_PLAINS
 	PlotType=2
@@ -35110,6 +35118,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=78,y=48
+	BonusType=BONUS_STONE
 	TerrainType=TERRAIN_PLAINS
 	PlotType=2
 EndPlot
@@ -35403,6 +35412,7 @@ BeginPlot
 	x=79,y=17
 	isNOfRiver
 	RiverWEDirection=1
+	BonusType=BONUS_STONE
 	FeatureType=FEATURE_FOREST, FeatureVariety=5
 	TerrainType=TERRAIN_PLAINS
 	PlotType=2
@@ -35619,6 +35629,7 @@ EndPlot
 BeginPlot
 	x=79,y=48
 	TerrainType=TERRAIN_COAST
+	BonusType=BONUS_FISH
 	PlotType=3
 EndPlot
 BeginPlot
@@ -35881,6 +35892,8 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=80,y=14
+	BonusType=BONUS_COW
+	BonusVarietyType=BONUS_COW_BROWN
 	FeatureType=FEATURE_FOREST, FeatureVariety=5
 	TerrainType=TERRAIN_SAVANNA
 	PlotType=2
@@ -35980,7 +35993,6 @@ BeginPlot
 	x=80,y=30
 	isNOfRiver
 	RiverWEDirection=3
-	BonusType=BONUS_IRON
 	FeatureType=FEATURE_JUNGLE, FeatureVariety=0
 	TerrainType=TERRAIN_SAVANNA
 	PlotType=1
@@ -35989,8 +36001,9 @@ BeginPlot
 	x=80,y=31
 	isNOfRiver
 	RiverWEDirection=3
+	BonusType=BONUS_IRON
 	TerrainType=TERRAIN_PLAINS
-	PlotType=2
+	PlotType=1
 EndPlot
 BeginPlot
 	x=80,y=32
@@ -36540,12 +36553,13 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=81,y=43
+	BonusType=BONUS_FERTILIZER
 	TerrainType=TERRAIN_DESERT
 	PlotType=1
 EndPlot
 BeginPlot
 	x=81,y=44
-	TerrainType=TERRAIN_DESERT
+	TerrainType=TERRAIN_SEMIDESERT
 	PlotType=2
 EndPlot
 BeginPlot
@@ -38319,6 +38333,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=85,y=34
+	BonusType=BONUS_SALT
 	TerrainType=TERRAIN_SEMIDESERT
 	PlotType=2
 EndPlot
@@ -38337,6 +38352,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=85,y=37
+	BonusType=BONUS_FISH
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
@@ -38784,8 +38800,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=86,y=34
-	BonusType=BONUS_SALT
-	TerrainType=TERRAIN_SEMIDESERT
+	TerrainType=TERRAIN_PLAINS
 	PlotType=2
 EndPlot
 BeginPlot
@@ -39146,6 +39161,8 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=87,y=17
+	BonusType=BONUS_GEMS
+	BonusVarietyType=BONUS_GEMS_TURQUOISE
 	TerrainType=TERRAIN_SEMIDESERT
 	PlotType=2
 EndPlot
@@ -39590,17 +39607,21 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=88,y=14
+	BonusType=BONUS_CRAB
+	BonusVarietyType=BONUS_CRAB_SHRIMP
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
 BeginPlot
 	x=88,y=15
-	TerrainType=TERRAIN_SEMIDESERT
+	TerrainType=TERRAIN_PLAINS
 	PlotType=2
 EndPlot
 BeginPlot
 	x=88,y=16
 	FeatureType=FEATURE_SAVANNA, FeatureVariety=0
+	BonusType=BONUS_COW
+	BonusVarietyType=BONUS_COW_BROWN
 	TerrainType=TERRAIN_PLAINS
 	PlotType=2
 EndPlot
@@ -39679,6 +39700,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=88,y=30
+	BonusType=BONUS_CAMEL
 	TerrainType=TERRAIN_DESERT
 	PlotType=2
 EndPlot
@@ -39853,12 +39875,12 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=88,y=59
+	BonusType=BONUS_SHEEP
 	TerrainType=TERRAIN_STEPPE
 	PlotType=2
 EndPlot
 BeginPlot
 	x=88,y=60
-	BonusType=BONUS_SHEEP
 	TerrainType=TERRAIN_STEPPE
 	PlotType=2
 EndPlot
@@ -40227,6 +40249,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=89,y=45
+	BonusType=BONUS_CAMEL
 	FeatureType=FEATURE_FLOOD_PLAINS, FeatureVariety=0
 	TerrainType=TERRAIN_DESERT
 	PlotType=2
@@ -40235,6 +40258,7 @@ BeginPlot
 	x=89,y=46
 	isNOfRiver
 	RiverWEDirection=1
+	BonusType=BONUS_COPPER
 	FeatureType=FEATURE_FLOOD_PLAINS, FeatureVariety=0
 	TerrainType=TERRAIN_DESERT
 	PlotType=2
@@ -40312,6 +40336,7 @@ BeginPlot
 	RiverWEDirection=1
 	isWOfRiver
 	FeatureType=FEATURE_FOREST, FeatureVariety=0
+	BonusType=BONUS_HORSE
 	TerrainType=TERRAIN_PLAINS
 	PlotType=1
 EndPlot
@@ -40548,7 +40573,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=90,y=18
-	FeatureType=FEATURE_JUNGLE, FeatureVariety=0
+	FeatureType=FEATURE_RAINFOREST, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
@@ -40755,6 +40780,7 @@ BeginPlot
 	x=90,y=54
 	RiverNSDirection=2
 	isWOfRiver
+	BonusType=BONUS_IRON
 	TerrainType=TERRAIN_PLAINS
 	PlotType=1
 EndPlot
@@ -41105,6 +41131,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=91,y=36
+	BonusType=BONUS_CAMEL
 	TerrainType=TERRAIN_SEMIDESERT
 	PlotType=2
 EndPlot
@@ -41142,6 +41169,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=91,y=43
+	BonusType=BONUS_FISH
 	TerrainType=TERRAIN_COAST
 	PlotType=3
 EndPlot
@@ -43380,12 +43408,12 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=96,y=47
-	BonusType=BONUS_RARE_EARTHS
 	TerrainType=TERRAIN_DESERT
 	PlotType=1
 EndPlot
 BeginPlot
 	x=96,y=48
+	BonusType=BONUS_RARE_EARTHS
 	TerrainType=TERRAIN_SEMIDESERT
 	PlotType=1
 EndPlot
@@ -43820,8 +43848,6 @@ BeginPlot
 	isNOfRiver
 	RiverWEDirection=3
 	isWOfRiver
-	BonusType=BONUS_OPIUM
-	FeatureType=FEATURE_FLOOD_PLAINS, FeatureVariety=0
 	TerrainType=TERRAIN_DESERT
 	PlotType=2
 EndPlot
@@ -43954,14 +43980,14 @@ EndPlot
 BeginPlot
 	x=97,y=68
 	RiverNSDirection=2
-	isWOfRiver
+ 	isWOfRiver
 	TerrainType=TERRAIN_PLAINS
 	PlotType=2
 EndPlot
 BeginPlot
 	x=97,y=69
 	isNOfRiver
-	RiverWEDirection=1
+ 	RiverWEDirection=1
 	FeatureType=FEATURE_FOREST, FeatureVariety=1
 	TerrainType=TERRAIN_MOORLAND
 	PlotType=2
@@ -44269,6 +44295,8 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=98,y=47
+	BonusType=BONUS_OPIUM
+	FeatureType=FEATURE_FLOOD_PLAINS, FeatureVariety=0
 	TerrainType=TERRAIN_DESERT
 	PlotType=2
 EndPlot
@@ -44394,7 +44422,7 @@ EndPlot
 BeginPlot
 	x=98,y=67
 	RiverNSDirection=2
-	isWOfRiver
+ 	isWOfRiver
 	FeatureType=FEATURE_FOREST, FeatureVariety=4
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
@@ -44402,7 +44430,7 @@ EndPlot
 BeginPlot
 	x=98,y=68
 	isNOfRiver
-	RiverWEDirection=1
+ 	RiverWEDirection=1
 	FeatureType=FEATURE_FOREST, FeatureVariety=1
 	TerrainType=TERRAIN_MOORLAND
 	PlotType=2
@@ -44830,7 +44858,7 @@ BeginPlot
 	RiverNSDirection=0
 	isNOfRiver
 	RiverWEDirection=1
-	isWOfRiver
+ 	isWOfRiver
 	FeatureType=FEATURE_FOREST, FeatureVariety=1
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
@@ -44838,7 +44866,7 @@ EndPlot
 BeginPlot
 	x=99,y=67
 	isNOfRiver
-	RiverWEDirection=1
+ 	RiverWEDirection=1
 	FeatureType=FEATURE_FOREST, FeatureVariety=1
 	TerrainType=TERRAIN_MOORLAND
 	PlotType=2
@@ -45300,7 +45328,7 @@ BeginPlot
 	x=100,y=67
 	RiverNSDirection=0
 	isNOfRiver
-	RiverWEDirection=1
+ 	RiverWEDirection=1
 	isWOfRiver
 	TerrainType=TERRAIN_MOORLAND
 	PlotType=2
@@ -48344,13 +48372,11 @@ BeginPlot
 	x=107,y=39
 	isNOfRiver
 	RiverWEDirection=1
-	FeatureType=FEATURE_RAINFOREST, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=2
 EndPlot
 BeginPlot
 	x=107,y=40
-	FeatureType=FEATURE_SAVANNA, FeatureVariety=0
 	TerrainType=TERRAIN_SAVANNA
 	PlotType=2
 EndPlot
@@ -52050,6 +52076,7 @@ BeginPlot
 	BonusType=BONUS_SALT
 	TerrainType=TERRAIN_SALTFLAT
 	PlotType=2
+	PlotType=1
 EndPlot
 BeginPlot
 	x=115,y=54
@@ -53453,7 +53480,7 @@ BeginPlot
 	isNOfRiver
 	RiverWEDirection=1
 	isWOfRiver
-	FeatureType=FEATURE_FOREST, FeatureVariety=1
+	BonusType=BONUS_SHEEP
 	TerrainType=TERRAIN_STEPPE
 	PlotType=1
 EndPlot
@@ -53936,6 +53963,7 @@ BeginPlot
 	isNOfRiver
 	RiverWEDirection=1
 	isWOfRiver
+	FeatureType=FEATURE_FOREST, FeatureVariety=1
 	TerrainType=TERRAIN_STEPPE
 	PlotType=1
 EndPlot
@@ -53982,7 +54010,6 @@ BeginPlot
 	isNOfRiver
 	RiverWEDirection=1
 	isWOfRiver
-	BonusType=BONUS_SHEEP
 	TerrainType=TERRAIN_STEPPE
 	PlotType=2
 EndPlot
@@ -57562,6 +57589,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=127,y=31
+	BonusType=BONUS_FERTILIZER
 	FeatureType=FEATURE_RAINFOREST, FeatureVariety=0
 	TerrainType=TERRAIN_GRASS
 	PlotType=1
@@ -61106,6 +61134,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=135,y=12
+	BonusType=BONUS_FERTILIZER
 	TerrainType=TERRAIN_DESERT
 	PlotType=2
 EndPlot
@@ -62951,7 +62980,6 @@ EndPlot
 BeginPlot
 	x=139,y=26
 	FeatureType=FEATURE_JUNGLE, FeatureVariety=0
-	TerrainType=TERRAIN_SAVANNA
 	PlotType=2
 EndPlot
 BeginPlot
@@ -66810,6 +66838,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=148,y=34
+	BonusType=BONUS_FERTILIZER
 	FeatureType=FEATURE_RAINFOREST, FeatureVariety=0
 	TerrainType=TERRAIN_ATOLL
 	PlotType=2

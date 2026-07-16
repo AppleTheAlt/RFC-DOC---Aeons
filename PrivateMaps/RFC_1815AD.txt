@@ -319,6 +319,10 @@ BeginPlot
 		BuildingType=BUILDING_ESTATE
 		BuildingType=BUILDING_OBSERVATORY
 		BuildingType=BUILDING_COURTHOUSE
+		BuildingType=BUILDING_SCHOOL
+		BuildingType=BUILDING_MANOR
+		BuildingType=BUILDING_FAIRGROUND
+		BuildingType=BUILDING_COUNCIL
 		BuildingType=BUILDING_CATHOLIC_TEMPLE
 		BuildingType=BUILDING_CATHOLIC_CATHEDRAL
 		BuildingType=BUILDING_CATHOLIC_MONASTERY
@@ -1272,6 +1276,9 @@ BeginPlot
 		BuildingType=BUILDING_COFFEEHOUSE
 		BuildingType=BUILDING_UNIVERSITY
 		BuildingType=BUILDING_COURTHOUSE
+		BuildingType=BUILDING_MANOR
+		BuildingType=BUILDING_SCHOOL
+		BuildingType=BUILDING_COUNCIL
 		BuildingType=BUILDING_PROTESTANT_TEMPLE
 		ReligionType=RELIGION_PROTESTANTISM
 		FreeSpecialistType=SPECIALIST_GREAT_STATESMAN
@@ -1384,6 +1391,9 @@ BeginPlot
 		BuildingType=BUILDING_GROCER
 		BuildingType=BUILDING_POST_OFFICE
 		BuildingType=BUILDING_UNIVERSITY
+		BuildingType=BUILDING_SCHOOL
+		BuildingType=BUILDING_MANOR
+		BuildingType=BUILDING_FAIRGROUND
 		BuildingType=BUILDING_COLOMBIAN_HACIENDA
 		BuildingType=BUILDING_CATHOLIC_TEMPLE
 		ReligionType=RELIGION_CATHOLICISM
@@ -1620,6 +1630,10 @@ BeginPlot
 		BuildingType=BUILDING_WAREHOUSE
 		BuildingType=BUILDING_COURTHOUSE
 		BuildingType=BUILDING_FACTORY
+		BuildingType=BUILDING_FAIRGROUND
+		BuildingType=BUILDING_MANOR
+		BuildingType=BUILDING_SCHOOL
+		BuildingType=BUILDING_COUNCIL
 		BuildingType=BUILDING_PROTESTANT_TEMPLE
 		BuildingType=BUILDING_PROTESTANT_CATHEDRAL
 		ReligionType=RELIGION_PROTESTANTISM
@@ -1685,6 +1699,7 @@ BeginPlot
 		BuildingType=BUILDING_COFFEEHOUSE
 		BuildingType=BUILDING_BANK
 		BuildingType=BUILDING_UNIVERSITY
+		BuildingType=BUILDING_SCHOOL
 		BuildingType=BUILDING_ENGLISH_EXCHEQUER
 		BuildingType=BUILDING_CATHOLIC_TEMPLE
 		ReligionType=RELIGION_CATHOLICISM
@@ -1699,6 +1714,10 @@ EndPlot
 BeginPlot
 	x=31,y=63
 	ImprovementType=IMPROVEMENT_MINE
+EndPlot
+BeginPlot
+	x=32,y=9
+	ImprovementType=IMPROVEMENT_CAMP
 EndPlot
 BeginPlot
 	x=32,y=10
@@ -1816,6 +1835,9 @@ BeginPlot
 		BuildingType=BUILDING_OBSERVATORY
 		BuildingType=BUILDING_WAREHOUSE
 		BuildingType=BUILDING_COURTHOUSE
+		BuildingType=BUILDING_FAIRGROUND
+		BuildingType=BUILDING_MANOR
+		BuildingType=BUILDING_SCHOOL
 		BuildingType=BUILDING_PROTESTANT_TEMPLE
 		ReligionType=RELIGION_PROTESTANTISM
 		FreeSpecialistType=SPECIALIST_GREAT_SCIENTIST
@@ -2383,6 +2405,10 @@ BeginPlot
 		BuildingType=BUILDING_STAR_FORT
 		BuildingType=BUILDING_LEVEE
 		BuildingType=BUILDING_WAREHOUSE
+		BuildingType=BUILDING_SCHOOL
+		BuildingType=BUILDING_MANOR
+		BuildingType=BUILDING_FAIRGROUND
+		BuildingType=BUILDING_COUNCIL
 		BuildingType=BUILDING_CATHOLIC_TEMPLE
 		ReligionType=RELIGION_CATHOLICISM
 		BeginCulture
@@ -2910,6 +2936,9 @@ BeginPlot
 		BuildingType=BUILDING_JAIL
 		BuildingType=BUILDING_FORGE
 		BuildingType=BUILDING_WHARF
+		BuildingType=BUILDING_SCHOOL
+		BuildingType=BUILDING_MANOR
+		BuildingType=BUILDING_FAIRGROUND
 		BuildingType=BUILDING_PORTUGUESE_FEITORIA
 		BuildingType=BUILDING_CATHOLIC_TEMPLE
 		BuildingType=BUILDING_ADMINISTRATIVE_CENTER
@@ -3376,6 +3405,11 @@ BeginPlot
 		BuildingType=BUILDING_ESTATE
 		BuildingType=BUILDING_WAREHOUSE
 		BuildingType=BUILDING_COURTHOUSE
+		BuildingType=BUILDING_FAIRGROUND
+		BuildingType=BUILDING_MANOR
+		BuildingType=BUILDING_SCHOOL
+		BuildingType=BUILDING_RELIQUARY
+		BuildingType=BUILDING_COUNCIL
 		BuildingType=BUILDING_CATHOLIC_TEMPLE
 		BuildingType=BUILDING_CATHOLIC_CATHEDRAL
 		BuildingType=BUILDING_CATHOLIC_MONASTERY
@@ -3476,6 +3510,9 @@ BeginPlot
 		BuildingType=BUILDING_BANK
 		BuildingType=BUILDING_UNIVERSITY
 		BuildingType=BUILDING_STAR_FORT
+		BuildingType=BUILDING_FAIRGROUND
+		BuildingType=BUILDING_MANOR
+		BuildingType=BUILDING_SCHOOL
 		BuildingType=BUILDING_ENGLISH_EXCHEQUER
 		BuildingType=BUILDING_CATHOLIC_TEMPLE
 		ReligionType=RELIGION_CATHOLICISM
@@ -3608,6 +3645,7 @@ BeginPlot
 		BuildingType=BUILDING_CATHOLIC_CATHEDRAL
 		BuildingType=BUILDING_CATHOLIC_MONASTERY
 		BuildingType=BUILDING_IBERIAN_TRADING_COMPANY
+		BuildingType=BUILDING_ALHAMBRA
 		BuildingType=BUILDING_LA_MEZQUITA
 		ReligionType=RELIGION_CATHOLICISM
 		BeginCulture
@@ -3678,16 +3716,25 @@ BeginPlot
 	RouteType=ROUTE_ROAD
 	BeginUnit
 		UnitType=UNIT_ARQUEBUSIER
-		UnitOwner=CIVILIZATION_INDEPENDENT
+		UnitOwner=CIVILIZATION_MOROCCO
 	EndUnit
 	BeginUnit
 		UnitType=UNIT_ARQUEBUSIER
-		UnitOwner=CIVILIZATION_INDEPENDENT
+		UnitOwner=CIVILIZATION_MOROCCO
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_ARQUEBUSIER
+		UnitOwner=CIVILIZATION_MOROCCO
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_ARQUEBUSIER
+		UnitOwner=CIVILIZATION_MOROCCO
 	EndUnit
 	BeginCity
-		CityOwner=CIVILIZATION_INDEPENDENT
+		CityOwner=CIVILIZATION_MOROCCO
 		CityName=Murrakush
-		CityPopulation=5
+		CityPopulation=7
+		BuildingType=BUILDING_PALACE
 		BuildingType=BUILDING_GRANARY
 		BuildingType=BUILDING_TANNERY
 		BuildingType=BUILDING_WEAVER
@@ -3705,10 +3752,14 @@ BeginPlot
 		BuildingType=BUILDING_COFFEEHOUSE
 		BuildingType=BUILDING_UNIVERSITY
 		BuildingType=BUILDING_ESTATE
+		BuildingType=BUILDING_SCHOOL
+		BuildingType=BUILDING_MANOR
+		BuildingType=BUILDING_FAIRGROUND
+		BuildingType=BUILDING_AIT_BENHADDOU
 		BuildingType=BUILDING_ISLAMIC_TEMPLE
 		ReligionType=RELIGION_ISLAM
 		BeginCulture
-			Civilization=CIVILIZATION_INDEPENDENT, Culture=500
+			Civilization=CIVILIZATION_MOROCCO, Culture=500
 		EndCulture
 		YearFounded=1060
 		YearAcquired=1659
@@ -3829,6 +3880,11 @@ BeginPlot
 		BuildingType=BUILDING_STAR_FORT
 		BuildingType=BUILDING_ESTATE
 		BuildingType=BUILDING_OBSERVATORY
+		BuildingType=BUILDING_FAIRGROUND
+		BuildingType=BUILDING_MANOR
+		BuildingType=BUILDING_SCHOOL
+		BuildingType=BUILDING_RELIQUARY
+		BuildingType=BUILDING_COUNCIL
 		BuildingType=BUILDING_CATHOLIC_TEMPLE
 		BuildingType=BUILDING_CATHOLIC_CATHEDRAL
 		BuildingType=BUILDING_CATHOLIC_MONASTERY
@@ -3925,6 +3981,9 @@ BeginPlot
 		BuildingType=BUILDING_ESTATE
 		BuildingType=BUILDING_OBSERVATORY
 		BuildingType=BUILDING_WAREHOUSE
+		BuildingType=BUILDING_FAIRGROUND
+		BuildingType=BUILDING_MANOR
+		BuildingType=BUILDING_SCHOOL
 		BuildingType=BUILDING_ENGLISH_EXCHEQUER
 		BuildingType=BUILDING_PROTESTANT_TEMPLE
 		BuildingType=BUILDING_PROTESTANT_CATHEDRAL
@@ -4072,6 +4131,10 @@ BeginPlot
 		BuildingType=BUILDING_OBSERVATORY
 		BuildingType=BUILDING_WAREHOUSE
 		BuildingType=BUILDING_COURTHOUSE
+		BuildingType=BUILDING_FAIRGROUND
+		BuildingType=BUILDING_MANOR
+		BuildingType=BUILDING_SCHOOL
+		BuildingType=BUILDING_RELIQUARY
 		BuildingType=BUILDING_CATHOLIC_TEMPLE
 		BuildingType=BUILDING_CATHOLIC_MONASTERY
 		ReligionType=RELIGION_CATHOLICISM
@@ -4173,6 +4236,11 @@ BeginPlot
 		BuildingType=BUILDING_WAREHOUSE
 		BuildingType=BUILDING_ENGLISH_EXCHEQUER
 		BuildingType=BUILDING_FACTORY
+		BuildingType=BUILDING_FAIRGROUND
+		BuildingType=BUILDING_MANOR
+		BuildingType=BUILDING_SCHOOL
+		BuildingType=BUILDING_RELIQUARY
+		BuildingType=BUILDING_COUNCIL
 		BuildingType=BUILDING_PROTESTANT_TEMPLE
 		BuildingType=BUILDING_PROTESTANT_CATHEDRAL
 		BuildingType=BUILDING_PROTESTANT_MONASTERY
@@ -4214,15 +4282,15 @@ BeginPlot
 	x=59,y=35
 	RouteType=ROUTE_ROAD
 	BeginUnit
-		UnitType=UNIT_ARQUEBUSIER
-		UnitOwner=CIVILIZATION_INDEPENDENT
+		UnitType=UNIT_HAUSAN_MUJAHID
+		UnitOwner=CIVILIZATION_HAUSA
 	EndUnit
 	BeginUnit
 		UnitType=UNIT_ARQUEBUSIER
-		UnitOwner=CIVILIZATION_INDEPENDENT
+		UnitOwner=CIVILIZATION_HAUSA
 	EndUnit
 	BeginCity
-		CityOwner=CIVILIZATION_INDEPENDENT
+		CityOwner=CIVILIZATION_HAUSA
 		CityName=Djoboro
 		CityPopulation=2
 		BuildingType=BUILDING_GRANARY
@@ -4235,11 +4303,12 @@ BeginPlot
 		BuildingType=BUILDING_GREAT_ADOBE_MOSQUE
 		ReligionType=RELIGION_ISLAM
 		BeginCulture
-			Civilization=CIVILIZATION_INDEPENDENT, Culture=100
+			Civilization=CIVILIZATION_HAUSA, Culture=50
 		EndCulture
 		YearFounded=-200
 		YearAcquired=1590
 		PreviousOwner=CIVILIZATION_MALI
+		PreviousOwner=CIVILIZATION_SONGHAI
 	EndCity
 EndPlot
 BeginPlot
@@ -4324,6 +4393,9 @@ BeginPlot
 		BuildingType=BUILDING_ESTATE
 		BuildingType=BUILDING_DRYDOCK
 		BuildingType=BUILDING_COURTHOUSE
+		BuildingType=BUILDING_FAIRGROUND
+		BuildingType=BUILDING_MANOR
+		BuildingType=BUILDING_SCHOOL
 		BuildingType=BUILDING_CATHOLIC_TEMPLE
 		BuildingType=BUILDING_CATHOLIC_MONASTERY
 		ReligionType=RELIGION_CATHOLICISM
@@ -4446,21 +4518,21 @@ BeginPlot
 	x=60,y=38
 	RouteType=ROUTE_ROAD
 	BeginUnit
-		UnitType=UNIT_ARQUEBUSIER
-		UnitOwner=CIVILIZATION_INDEPENDENT
+		UnitType=UNIT_HAUSAN_MUJAHID
+		UnitOwner=CIVILIZATION_HAUSA
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_HAUSAN_MUJAHID
+		UnitOwner=CIVILIZATION_HAUSA
 	EndUnit
 	BeginUnit
 		UnitType=UNIT_ARQUEBUSIER
-		UnitOwner=CIVILIZATION_INDEPENDENT
-	EndUnit
-	BeginUnit
-		UnitType=UNIT_ARQUEBUSIER
-		UnitOwner=CIVILIZATION_INDEPENDENT
+		UnitOwner=CIVILIZATION_HAUSA
 	EndUnit
 	BeginCity
-		CityOwner=CIVILIZATION_INDEPENDENT
+		CityOwner=CIVILIZATION_HAUSA
 		CityName=Tumbutu
-		CityPopulation=2
+		CityPopulation=3
 		BuildingType=BUILDING_GRANARY
 		BuildingType=BUILDING_TANNERY
 		BuildingType=BUILDING_WEAVER
@@ -4469,13 +4541,15 @@ BeginPlot
 		BuildingType=BUILDING_MARKET
 		BuildingType=BUILDING_MANDE_WANGARA
 		BuildingType=BUILDING_FORGE
+		BuildingType=BUILDING_SCHOOL
 		BuildingType=BUILDING_ISLAMIC_TEMPLE
 		BuildingType=BUILDING_ISLAMIC_CATHEDRAL
 		BuildingType=BUILDING_UNIVERSITY_OF_SANKORE
+		BuildingType=BUILDING_TOMB_OF_ASKIA
 		ReligionType=RELIGION_ISLAM
 		FreeSpecialistType=SPECIALIST_GREAT_PRIEST
 		BeginCulture
-			Civilization=CIVILIZATION_INDEPENDENT, Culture=100
+			Civilization=CIVILIZATION_HAUSA, Culture=100
 		EndCulture
 		YearFounded=1100
 		YearAcquired=1300
@@ -4575,16 +4649,44 @@ BeginPlot
 	ImprovementType=IMPROVEMENT_FISHING_BOATS
 EndPlot
 BeginPlot
-	x=61,y=31
+	x=61,y=32
 	RouteType=ROUTE_ROAD
 	BeginUnit
-		UnitType=UNIT_MUSKETEER
-		UnitOwner=CIVILIZATION_NETHERLANDS
+		UnitType=UNIT_ASHANTI_TWAFO
+		UnitOwner=CIVILIZATION_ASHANTI
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_ASHANTI_TWAFO
+		UnitOwner=CIVILIZATION_ASHANTI
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_WORKER
+		UnitOwner=CIVILIZATION_ASHANTI
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_WORKER
+		UnitOwner=CIVILIZATION_ASHANTI
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_ASHANTI_TWAFO
+		UnitOwner=CIVILIZATION_ASHANTI
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_ASHANTI_TWAFO
+		UnitOwner=CIVILIZATION_ASHANTI
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_ASHANTI_TWAFO
+		UnitOwner=CIVILIZATION_ASHANTI
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_ASHANTI_TWAFO
+		UnitOwner=CIVILIZATION_ASHANTI
 	EndUnit
 	BeginCity
-		CityOwner=CIVILIZATION_NETHERLANDS
-		CityName=Elmina
-		CityPopulation=4
+		CityOwner=CIVILIZATION_ASHANTI
+		CityName=Kumasi
+		CityPopulation=5
 		BuildingType=BUILDING_GRANARY
 		BuildingType=BUILDING_TANNERY
 		BuildingType=BUILDING_WEAVER
@@ -4598,17 +4700,13 @@ BeginPlot
 		BuildingType=BUILDING_FORGE
 		BuildingType=BUILDING_GROCER
 		BuildingType=BUILDING_POST_OFFICE
-		BuildingType=BUILDING_WHARF
-		BuildingType=BUILDING_STAR_FORT
-		BuildingType=BUILDING_PROTESTANT_TEMPLE
 		ReligionType=RELIGION_CATHOLICISM
 		ReligionType=RELIGION_PROTESTANTISM
+		ReligionType=RELIGION_ISLAM
 		BeginCulture
-			Civilization=CIVILIZATION_NETHERLANDS, Culture=100
+			Civilization=CIVILIZATION_ASHANTI, Culture=100
 		EndCulture
-		YearFounded=1480
-		PreviousOwner=CIVILIZATION_PORTUGAL
-		PreviousOwner=CIVILIZATION_ENGLAND
+		YearFounded=1700
 	EndCity
 EndPlot
 BeginPlot
@@ -4659,6 +4757,11 @@ BeginPlot
 		BuildingType=BUILDING_WHARF
 		BuildingType=BUILDING_CUSTOMS_HOUSE
 		BuildingType=BUILDING_UNIVERSITY
+		BuildingType=BUILDING_FAIRGROUND
+		BuildingType=BUILDING_MANOR
+		BuildingType=BUILDING_SCHOOL
+		BuildingType=BUILDING_RELIQUARY
+		BuildingType=BUILDING_COUNCIL
 		BuildingType=BUILDING_STAR_FORT
 		BuildingType=BUILDING_CATHOLIC_TEMPLE
 		BuildingType=BUILDING_CATHOLIC_MONASTERY
@@ -4841,6 +4944,11 @@ BeginPlot
 		BuildingType=BUILDING_COURTHOUSE
 		BuildingType=BUILDING_FACTORY
 		BuildingType=BUILDING_PARK
+		BuildingType=BUILDING_FAIRGROUND
+		BuildingType=BUILDING_MANOR
+		BuildingType=BUILDING_SCHOOL
+		BuildingType=BUILDING_RELIQUARY
+		BuildingType=BUILDING_COUNCIL
 		BuildingType=BUILDING_CATHOLIC_TEMPLE
 		BuildingType=BUILDING_CATHOLIC_CATHEDRAL
 		BuildingType=BUILDING_CATHOLIC_MONASTERY
@@ -5065,6 +5173,11 @@ BeginPlot
 		BuildingType=BUILDING_OBSERVATORY
 		BuildingType=BUILDING_WAREHOUSE
 		BuildingType=BUILDING_COURTHOUSE
+		BuildingType=BUILDING_FAIRGROUND
+		BuildingType=BUILDING_MANOR
+		BuildingType=BUILDING_SCHOOL
+		BuildingType=BUILDING_RELIQUARY
+		BuildingType=BUILDING_COUNCIL
 		BuildingType=BUILDING_JEWISH_TEMPLE
 		BuildingType=BUILDING_CATHOLIC_TEMPLE
 		BuildingType=BUILDING_PROTESTANT_TEMPLE
@@ -5194,6 +5307,9 @@ BeginPlot
 		BuildingType=BUILDING_FRENCH_SALON
 		BuildingType=BUILDING_BANK
 		BuildingType=BUILDING_UNIVERSITY
+		BuildingType=BUILDING_FAIRGROUND
+		BuildingType=BUILDING_MANOR
+		BuildingType=BUILDING_SCHOOL
 		BuildingType=BUILDING_STAR_FORT
 		BuildingType=BUILDING_ESTATE
 		BuildingType=BUILDING_LEVEE
@@ -5322,6 +5438,10 @@ BeginPlot
 		BuildingType=BUILDING_STAR_FORT
 		BuildingType=BUILDING_DRYDOCK
 		BuildingType=BUILDING_COURTHOUSE
+		BuildingType=BUILDING_FAIRGROUND
+		BuildingType=BUILDING_MANOR
+		BuildingType=BUILDING_SCHOOL
+		BuildingType=BUILDING_RELIQUARY
 		BuildingType=BUILDING_CATHOLIC_TEMPLE
 		BuildingType=BUILDING_CATHOLIC_MONASTERY
 		ReligionType=RELIGION_CATHOLICISM
@@ -5376,46 +5496,8 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=65,y=36
+	ImprovementType=IMPROVEMENT_PASTURE
 	RouteType=ROUTE_ROAD
-	BeginUnit
-		UnitType=UNIT_ARQUEBUSIER
-		UnitOwner=CIVILIZATION_INDEPENDENT2
-	EndUnit
-	BeginUnit
-		UnitType=UNIT_ARQUEBUSIER
-		UnitOwner=CIVILIZATION_INDEPENDENT2
-	EndUnit
-	BeginUnit
-		UnitType=UNIT_ARQUEBUSIER
-		UnitOwner=CIVILIZATION_INDEPENDENT2
-	EndUnit
-	BeginUnit
-		UnitType=UNIT_ARQUEBUSIER
-		UnitOwner=CIVILIZATION_INDEPENDENT2
-	EndUnit
-	BeginCity
-		CityOwner=CIVILIZATION_INDEPENDENT2
-		CityName=Sakkwato
-		CityPopulation=6
-		BuildingType=BUILDING_BARRACKS
-		BuildingType=BUILDING_GRANARY
-		BuildingType=BUILDING_TANNERY
-		BuildingType=BUILDING_WEAVER
-		BuildingType=BUILDING_MONUMENT
-		BuildingType=BUILDING_WALLS
-		BuildingType=BUILDING_STABLE
-		BuildingType=BUILDING_LIBRARY
-		BuildingType=BUILDING_AQUEDUCT
-		BuildingType=BUILDING_MARKET
-		BuildingType=BUILDING_JAIL
-		BuildingType=BUILDING_FORGE
-		BuildingType=BUILDING_ISLAMIC_TEMPLE
-		ReligionType=RELIGION_ISLAM
-		BeginCulture
-			Civilization=CIVILIZATION_INDEPENDENT2, Culture=250
-		EndCulture
-		YearFounded=1804
-	EndCity
 EndPlot
 BeginPlot
 	x=65,y=48
@@ -5497,6 +5579,10 @@ BeginPlot
 		BuildingType=BUILDING_STAR_FORT
 		BuildingType=BUILDING_LEVEE
 		BuildingType=BUILDING_COURTHOUSE
+		BuildingType=BUILDING_FAIRGROUND
+		BuildingType=BUILDING_MANOR
+		BuildingType=BUILDING_SCHOOL
+		BuildingType=BUILDING_RELIQUARY
 		BuildingType=BUILDING_GERMAN_ASSEMBLY_PLANT
 		BuildingType=BUILDING_CATHOLIC_TEMPLE
 		BuildingType=BUILDING_CATHOLIC_CATHEDRAL
@@ -5577,19 +5663,27 @@ BeginPlot
 	x=66,y=32
 	RouteType=ROUTE_ROAD
 	BeginUnit
-		UnitType=UNIT_ARQUEBUSIER
-		UnitOwner=CIVILIZATION_INDEPENDENT
+		UnitType=UNIT_BENINESE_IYOBA_REGIMENT
+		UnitOwner=CIVILIZATION_BENIN
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_BENINESE_IYOBA_REGIMENT
+		UnitOwner=CIVILIZATION_BENIN
 	EndUnit
 	BeginUnit
 		UnitType=UNIT_ARQUEBUSIER
-		UnitOwner=CIVILIZATION_INDEPENDENT
+		UnitOwner=CIVILIZATION_BENIN
 	EndUnit
 	BeginUnit
 		UnitType=UNIT_ARQUEBUSIER
-		UnitOwner=CIVILIZATION_INDEPENDENT
+		UnitOwner=CIVILIZATION_BENIN
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_WORKER
+		UnitOwner=CIVILIZATION_BENIN
 	EndUnit
 	BeginCity
-		CityOwner=CIVILIZATION_INDEPENDENT
+		CityOwner=CIVILIZATION_BENIN
 		CityName=Benin
 		CityPopulation=5
 		BuildingType=BUILDING_GRANARY
@@ -5604,9 +5698,11 @@ BeginPlot
 		BuildingType=BUILDING_MARKET
 		BuildingType=BUILDING_JAIL
 		BuildingType=BUILDING_FORGE
-		BuildingType=BUILDING_ESTATE
+		BuildingType=BUILDING_SCHOOL
+		BuildingType=BUILDING_IYANUWO
+		BuildingType=BUILDING_PALACE
 		BeginCulture
-			Civilization=CIVILIZATION_INDEPENDENT, Culture=250
+			Civilization=CIVILIZATION_BENIN, Culture=250
 		EndCulture
 		YearFounded=1300
 	EndCity
@@ -5614,6 +5710,119 @@ EndPlot
 BeginPlot
 	x=66,y=33
 	ImprovementType=IMPROVEMENT_MINE
+EndPlot
+BeginPlot
+	x=66,y=34
+	RouteType=ROUTE_ROAD
+	BeginUnit
+		UnitType=UNIT_HAUSAN_MUJAHID
+		UnitOwner=CIVILIZATION_HAUSA
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_HAUSAN_MUJAHID
+		UnitOwner=CIVILIZATION_HAUSA
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_HAUSAN_MUJAHID
+		UnitOwner=CIVILIZATION_HAUSA
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_HAUSAN_MUJAHID
+		UnitOwner=CIVILIZATION_HAUSA
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_ARQUEBUSIER
+		UnitOwner=CIVILIZATION_HAUSA
+	EndUnit
+	BeginCity
+		CityOwner=CIVILIZATION_HAUSA
+		CityName=Zazzau
+		CityPopulation=5
+		BuildingType=BUILDING_GRANARY
+		BuildingType=BUILDING_TANNERY
+		BuildingType=BUILDING_WEAVER
+		BuildingType=BUILDING_MONUMENT
+		BuildingType=BUILDING_WALLS
+		BuildingType=BUILDING_LIBRARY
+		BuildingType=BUILDING_AQUEDUCT
+		BuildingType=BUILDING_MARKET
+		BuildingType=BUILDING_JAIL
+		BuildingType=BUILDING_FORGE
+		BuildingType=BUILDING_OSUN_OSOGBO
+		BuildingType=BUILDING_ISLAMIC_TEMPLE
+		BuildingType=BUILDING_ISLAMIC_MONASTERY
+		ReligionType=RELIGION_ISLAM
+		BeginCulture
+			Civilization=CIVILIZATION_HAUSA, Culture=100
+		EndCulture
+		YearFounded=999
+	EndCity
+EndPlot
+BeginPlot
+	x=66,y=36
+	RouteType=ROUTE_ROAD
+	BeginUnit
+		UnitType=UNIT_HAUSAN_MUJAHID
+		UnitOwner=CIVILIZATION_HAUSA
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_HAUSAN_MUJAHID
+		UnitOwner=CIVILIZATION_HAUSA
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_HAUSAN_MUJAHID
+		UnitOwner=CIVILIZATION_HAUSA
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_HAUSAN_YAN_LIFIDA
+		UnitOwner=CIVILIZATION_HAUSA
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_HAUSAN_YAN_LIFIDA
+		UnitOwner=CIVILIZATION_HAUSA
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_ARQUEBUSIER
+		UnitOwner=CIVILIZATION_HAUSA
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_ARQUEBUSIER
+		UnitOwner=CIVILIZATION_HAUSA
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_WORKER
+		UnitOwner=CIVILIZATION_HAUSA
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_WORKER
+		UnitOwner=CIVILIZATION_HAUSA
+	EndUnit
+	BeginCity
+		CityOwner=CIVILIZATION_HAUSA
+		CityName=Sakkwato
+		CityPopulation=6
+		BuildingType=BUILDING_GRANARY
+		BuildingType=BUILDING_TANNERY
+		BuildingType=BUILDING_MARKET
+		BuildingType=BUILDING_WEAVER
+		BuildingType=BUILDING_LIBRARY
+		BuildingType=BUILDING_SCHOOL
+		BuildingType=BUILDING_RELIQUARY
+		BuildingType=BUILDING_WALLS
+		BuildingType=BUILDING_JAIL
+		BuildingType=BUILDING_FORGE
+		BuildingType=BUILDING_MANOR
+		BuildingType=BUILDING_FAIRGROUND
+		BuildingType=BUILDING_PALACE
+		BuildingType=BUILDING_ISLAMIC_MONASTERY
+		BuildingType=BUILDING_ISLAMIC_TEMPLE
+		ReligionType=RELIGION_ISLAM
+		BeginCulture
+			Civilization=CIVILIZATION_HAUSA, Culture=400
+		EndCulture
+		YearFounded=850
+		YearAcquired=850
+	EndCity
 EndPlot
 BeginPlot
 	x=66,y=36
@@ -5713,6 +5922,10 @@ BeginPlot
 		BuildingType=BUILDING_ESTATE
 		BuildingType=BUILDING_OBSERVATORY
 		BuildingType=BUILDING_WAREHOUSE
+		BuildingType=BUILDING_FAIRGROUND
+		BuildingType=BUILDING_MANOR
+		BuildingType=BUILDING_SCHOOL
+		BuildingType=BUILDING_RELIQUARY
 		BuildingType=BUILDING_CATHOLIC_TEMPLE
 		BuildingType=BUILDING_CATHOLIC_MONASTERY
 		BuildingType=BUILDING_SANTA_MARIA_DEL_FIORE
@@ -5796,6 +6009,8 @@ BeginPlot
 		BuildingType=BUILDING_DRYDOCK
 		BuildingType=BUILDING_WAREHOUSE
 		BuildingType=BUILDING_COURTHOUSE
+		BuildingType=BUILDING_FAIRGROUND
+		BuildingType=BUILDING_SCHOOL
 		BuildingType=BUILDING_PROTESTANT_TEMPLE
 		BuildingType=BUILDING_PROTESTANT_MONASTERY
 		ReligionType=RELIGION_CATHOLICISM
@@ -5833,51 +6048,6 @@ BeginPlot
 	ImprovementType=IMPROVEMENT_MINE
 EndPlot
 BeginPlot
-	x=67,y=35
-	RouteType=ROUTE_ROAD
-	BeginUnit
-		UnitType=UNIT_ARQUEBUSIER
-		UnitOwner=CIVILIZATION_INDEPENDENT2
-	EndUnit
-	BeginUnit
-		UnitType=UNIT_ARQUEBUSIER
-		UnitOwner=CIVILIZATION_INDEPENDENT2
-	EndUnit
-	BeginUnit
-		UnitType=UNIT_ARQUEBUSIER
-		UnitOwner=CIVILIZATION_INDEPENDENT2
-	EndUnit
-	BeginUnit
-		UnitType=UNIT_ARQUEBUSIER
-		UnitOwner=CIVILIZATION_INDEPENDENT2
-	EndUnit
-	BeginUnit
-		UnitType=UNIT_ARQUEBUSIER
-		UnitOwner=CIVILIZATION_INDEPENDENT2
-	EndUnit
-	BeginCity
-		CityOwner=CIVILIZATION_INDEPENDENT2
-		CityName=Kano
-		CityPopulation=3
-		BuildingType=BUILDING_GRANARY
-		BuildingType=BUILDING_TANNERY
-		BuildingType=BUILDING_WEAVER
-		BuildingType=BUILDING_MONUMENT
-		BuildingType=BUILDING_WALLS
-		BuildingType=BUILDING_LIBRARY
-		BuildingType=BUILDING_AQUEDUCT
-		BuildingType=BUILDING_MARKET
-		BuildingType=BUILDING_JAIL
-		BuildingType=BUILDING_FORGE
-		BuildingType=BUILDING_ISLAMIC_TEMPLE
-		ReligionType=RELIGION_ISLAM
-		BeginCulture
-			Civilization=CIVILIZATION_INDEPENDENT2, Culture=100
-		EndCulture
-		YearFounded=999
-	EndCity
-EndPlot
-BeginPlot
 	x=67,y=36
 	RouteType=ROUTE_ROAD
 EndPlot
@@ -5895,13 +6065,26 @@ BeginPlot
 	x=67,y=48
 	RouteType=ROUTE_ROAD
 	BeginUnit
-		UnitType=UNIT_ARQUEBUSIER
-		UnitOwner=CIVILIZATION_INDEPENDENT
+		UnitType=UNIT_MUSKETEER
+		UnitOwner=CIVILIZATION_TUNIS
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_MUSKETEER
+		UnitOwner=CIVILIZATION_TUNIS
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_MUSKETEER
+		UnitOwner=CIVILIZATION_TUNIS
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_WORKER
+		UnitOwner=CIVILIZATION_TUNIS
 	EndUnit
 	BeginCity
-		CityOwner=CIVILIZATION_INDEPENDENT
+		CityOwner=CIVILIZATION_TUNIS
 		CityName=Tunus
-		CityPopulation=5
+		CityPopulation=7
+		BuildingType=BUILDING_PALACE
 		BuildingType=BUILDING_GRANARY
 		BuildingType=BUILDING_TANNERY
 		BuildingType=BUILDING_WEAVER
@@ -5915,10 +6098,14 @@ BeginPlot
 		BuildingType=BUILDING_POST_OFFICE
 		BuildingType=BUILDING_WHARF
 		BuildingType=BUILDING_ESTATE
+		BuildingType=BUILDING_SCHOOL
+		BuildingType=BUILDING_MANOR
+		BuildingType=BUILDING_FAIRGROUND
 		BuildingType=BUILDING_ISLAMIC_TEMPLE
+		BuildingType=BUILDING_ISLAMIC_MONASTERY
 		ReligionType=RELIGION_ISLAM
 		BeginCulture
-			Civilization=CIVILIZATION_INDEPENDENT, Culture=250
+			Civilization=CIVILIZATION_TUNIS, Culture=250
 		EndCulture
 		YearFounded=-400
 		YearAcquired=1705
@@ -6035,6 +6222,39 @@ BeginPlot
 	RouteType=ROUTE_ROAD
 EndPlot
 BeginPlot
+	x=69,y=35
+	RouteType=ROUTE_ROAD
+	BeginUnit
+		UnitType=UNIT_KANEM_BORNUAN_IRONHELM
+		UnitOwner=CIVILIZATION_KANEM_BORNU
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_KANEM_BORNUAN_IRONHELM
+		UnitOwner=CIVILIZATION_KANEM_BORNU
+	EndUnitt
+	BeginUnit
+		UnitType=UNIT_KANEM_BORNUAN_CARAVAN
+		UnitOwner=CIVILIZATION_KANEM_BORNU
+	EndUnit
+	BeginCity
+		CityOwner=CIVILIZATION_KANEM_BORNU
+		CityName=Kafela
+		CityPopulation=2
+		BuildingType=BUILDING_GRANARY
+		BuildingType=BUILDING_TANNERY
+		BuildingType=BUILDING_LIBRARY
+		BuildingType=BUILDING_PALACE
+		BuildingType=BUILDING_ISLAMIC_MONASTERY
+		BuildingType=BUILDING_ISLAMIC_TEMPLE
+		ReligionType=RELIGION_ISLAM
+		BeginCulture
+			Civilization=CIVILIZATION_KANEM_BORNU, Culture=300
+			Civilization=CIVILIZATION_HAUSA, Culture=150
+		EndCulture
+		YearFounded=1813
+	EndCity
+EndPlot
+BeginPlot
 	x=68,y=49
 	ImprovementType=IMPROVEMENT_FISHING_BOATS
 EndPlot
@@ -6084,11 +6304,18 @@ BeginPlot
 		BuildingType=BUILDING_UNIVERSITY
 		BuildingType=BUILDING_STAR_FORT
 		BuildingType=BUILDING_ESTATE
+		BuildingType=BUILDING_FAIRGROUND
+		BuildingType=BUILDING_MANOR
+		BuildingType=BUILDING_SCHOOL
+		BuildingType=BUILDING_RELIQUARY
+		BuildingType=BUILDING_COUNCIL
 		BuildingType=BUILDING_CATHOLIC_TEMPLE
 		BuildingType=BUILDING_CATHOLIC_CATHEDRAL
 		BuildingType=BUILDING_CATHOLIC_MONASTERY
 		BuildingType=BUILDING_CATHOLIC_SHRINE
 		BuildingType=BUILDING_FLAVIAN_AMPHITHEATRE
+		BuildingType=BUILDING_TRAJANS_COLUMN
+		BuildingType=BUILDING_CIRCUS_MAXIMUS
 		BuildingType=BUILDING_PANTHEON
 		BuildingType=BUILDING_SISTINE_CHAPEL
 		ReligionType=RELIGION_JUDAISM
@@ -6157,6 +6384,9 @@ BeginPlot
 		BuildingType=BUILDING_ESTATE
 		BuildingType=BUILDING_LEVEE
 		BuildingType=BUILDING_COURTHOUSE
+		BuildingType=BUILDING_FAIRGROUND
+		BuildingType=BUILDING_MANOR
+		BuildingType=BUILDING_SCHOOL
 		BuildingType=BUILDING_CATHOLIC_TEMPLE
 		BuildingType=BUILDING_CATHOLIC_MONASTERY
 		ReligionType=RELIGION_JUDAISM
@@ -6273,6 +6503,9 @@ BeginPlot
 		BuildingType=BUILDING_DRYDOCK
 		BuildingType=BUILDING_OBSERVATORY
 		BuildingType=BUILDING_WAREHOUSE
+		BuildingType=BUILDING_FAIRGROUND
+		BuildingType=BUILDING_MANOR
+		BuildingType=BUILDING_SCHOOL
 		BuildingType=BUILDING_PROTESTANT_TEMPLE
 		BuildingType=BUILDING_PROTESTANT_MONASTERY
 		ReligionType=RELIGION_PROTESTANTISM
@@ -6320,6 +6553,8 @@ BeginPlot
 		BuildingType=BUILDING_BANK
 		BuildingType=BUILDING_UNIVERSITY
 		BuildingType=BUILDING_STAR_FORT
+		BuildingType=BUILDING_FAIRGROUND
+		BuildingType=BUILDING_SCHOOL
 		BuildingType=BUILDING_PROTESTANT_TEMPLE
 		BuildingType=BUILDING_PROTESTANT_MONASTERY
 		ReligionType=RELIGION_PROTESTANTISM
@@ -6657,6 +6892,11 @@ BeginPlot
 		BuildingType=BUILDING_ESTATE
 		BuildingType=BUILDING_OBSERVATORY
 		BuildingType=BUILDING_COURTHOUSE
+		BuildingType=BUILDING_FAIRGROUND
+		BuildingType=BUILDING_MANOR
+		BuildingType=BUILDING_SCHOOL
+		BuildingType=BUILDING_RELIQUARY
+		BuildingType=BUILDING_COUNCIL
 		BuildingType=BUILDING_JEWISH_TEMPLE
 		BuildingType=BUILDING_PROTESTANT_TEMPLE
 		BuildingType=BUILDING_PROTESTANT_MONASTERY
@@ -6779,6 +7019,10 @@ BeginPlot
 		BuildingType=BUILDING_STAR_FORT
 		BuildingType=BUILDING_ESTATE
 		BuildingType=BUILDING_OBSERVATORY
+		BuildingType=BUILDING_FAIRGROUND
+		BuildingType=BUILDING_MANOR
+		BuildingType=BUILDING_SCHOOL
+		BuildingType=BUILDING_RELIQUARY
 		BuildingType=BUILDING_JEWISH_TEMPLE
 		BuildingType=BUILDING_CATHOLIC_TEMPLE
 		BuildingType=BUILDING_CATHOLIC_MONASTERY
@@ -7034,6 +7278,11 @@ BeginPlot
 		BuildingType=BUILDING_ESTATE
 		BuildingType=BUILDING_OBSERVATORY
 		BuildingType=BUILDING_PARK
+		BuildingType=BUILDING_FAIRGROUND
+		BuildingType=BUILDING_MANOR
+		BuildingType=BUILDING_SCHOOL
+		BuildingType=BUILDING_RELIQUARY
+		BuildingType=BUILDING_COUNCIL
 		BuildingType=BUILDING_JEWISH_TEMPLE
 		BuildingType=BUILDING_CATHOLIC_TEMPLE
 		BuildingType=BUILDING_CATHOLIC_CATHEDRAL
@@ -7107,6 +7356,18 @@ BeginPlot
 		UnitOwner=CIVILIZATION_ENGLAND
 	EndUnit
 	BeginUnit
+		UnitType=UNIT_ENGLISH_REDCOAT
+		UnitOwner=CIVILIZATION_ENGLAND
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_ENGLISH_REDCOAT
+		UnitOwner=CIVILIZATION_ENGLAND
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_ENGLISH_REDCOAT
+		UnitOwner=CIVILIZATION_ENGLAND
+	EndUnit
+	BeginUnit
 		UnitType=UNIT_EXPLORER
 		UnitOwner=CIVILIZATION_ENGLAND
 	EndUnit
@@ -7128,6 +7389,8 @@ BeginPlot
 		BuildingType=BUILDING_POST_OFFICE
 		BuildingType=BUILDING_WHARF
 		BuildingType=BUILDING_CUSTOMS_HOUSE
+		BuildingType=BUILDING_SCHOOL
+		BuildingType=BUILDING_COUNCIL
 		BuildingType=BUILDING_PROTESTANT_TEMPLE
 		ReligionType=RELIGION_PROTESTANTISM
 		BeginCulture
@@ -7195,8 +7458,12 @@ BeginPlot
 		BuildingType=BUILDING_MARKET
 		BuildingType=BUILDING_JAIL
 		BuildingType=BUILDING_FORGE
+		BuildingType=BUILDING_SCHOOL
+		BuildingType=BUILDING_MANOR
+		BuildingType=BUILDING_FAIRGROUND
 		BuildingType=BUILDING_CATHOLIC_TEMPLE
 		BuildingType=BUILDING_CATHOLIC_MONASTERY
+		BuildingType=BUILDING_KULUMBIMBI
 		ReligionType=RELIGION_CATHOLICISM
 		BeginCulture
 			Civilization=CIVILIZATION_CONGO, Culture=500
@@ -7531,6 +7798,10 @@ BeginPlot
 		BuildingType=BUILDING_ESTATE
 		BuildingType=BUILDING_WAREHOUSE
 		BuildingType=BUILDING_COURTHOUSE
+		BuildingType=BUILDING_FAIRGROUND
+		BuildingType=BUILDING_MANOR
+		BuildingType=BUILDING_SCHOOL
+		BuildingType=BUILDING_COUNCIL
 		BuildingType=BUILDING_PROTESTANT_TEMPLE
 		BuildingType=BUILDING_PROTESTANT_CATHEDRAL
 		BuildingType=BUILDING_PROTESTANT_MONASTERY
@@ -7554,6 +7825,35 @@ EndPlot
 BeginPlot
 	x=74,y=25
 	RouteType=ROUTE_ROAD
+EndPlot
+BeginPlot
+	x=74,y=36
+	RouteType=ROUTE_ROAD
+	BeginUnit
+		UnitType=UNIT_ARQUEBUSIER
+		UnitOwner=CIVILIZATION_INDEPENDENT2
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_ARQUEBUSIER
+		UnitOwner=CIVILIZATION_INDEPENDENT2
+	EndUnit
+	BeginCity
+		CityOwner=CIVILIZATION_INDEPENDENT2
+		CityName=Ouara
+		CityPopulation=2
+		BuildingType=BUILDING_GRANARY
+		BuildingType=BUILDING_TANNERY
+		BuildingType=BUILDING_WEAVER
+		BuildingType=BUILDING_LIBRARY
+		BuildingType=BUILDING_WALLS
+		BuildingType=BUILDING_AQUEDUCT
+		BuildingType=BUILDING_ISLAMIC_TEMPLE
+		ReligionType=RELIGION_ISLAM
+		BeginCulture
+			Civilization=CIVILIZATION_INDEPENDENT2, Culture=120
+		EndCulture
+		YearFounded=1490
+	EndCity
 EndPlot
 BeginPlot
 	x=74,y=43
@@ -7703,6 +8003,10 @@ BeginPlot
 		BuildingType=BUILDING_HOLY_ROMAN_RATHAUS
 		BuildingType=BUILDING_STAR_FORT
 		BuildingType=BUILDING_ESTATE
+		BuildingType=BUILDING_FAIRGROUND
+		BuildingType=BUILDING_MANOR
+		BuildingType=BUILDING_SCHOOL
+		BuildingType=BUILDING_COUNCIL
 		BuildingType=BUILDING_CATHOLIC_TEMPLE
 		BuildingType=BUILDING_CATHOLIC_MONASTERY
 		ReligionType=RELIGION_JUDAISM
@@ -7752,6 +8056,8 @@ BeginPlot
 		BuildingType=BUILDING_GROCER
 		BuildingType=BUILDING_POST_OFFICE
 		BuildingType=BUILDING_UNIVERSITY
+		BuildingType=BUILDING_FAIRGROUND
+		BuildingType=BUILDING_MANOR
 		BuildingType=BUILDING_HOLY_ROMAN_RATHAUS
 		BuildingType=BUILDING_OBSERVATORY
 		BuildingType=BUILDING_CATHOLIC_TEMPLE
@@ -7822,32 +8128,6 @@ EndPlot
 BeginPlot
 	x=75,y=25
 	ImprovementType=IMPROVEMENT_MINE
-EndPlot
-BeginPlot
-	x=75,y=26
-	RouteType=ROUTE_ROAD
-	BeginUnit
-		UnitType=UNIT_ARQUEBUSIER
-		UnitOwner=CIVILIZATION_CONGO
-	EndUnit
-	BeginUnit
-		UnitType=UNIT_ARQUEBUSIER
-		UnitOwner=CIVILIZATION_CONGO
-	EndUnit
-	BeginCity
-		CityOwner=CIVILIZATION_CONGO
-		CityName=Nsheng
-		CityPopulation=4
-		BuildingType=BUILDING_GRANARY
-		BuildingType=BUILDING_TANNERY
-		BuildingType=BUILDING_CONGOLESE_MBWADI
-		BuildingType=BUILDING_MONUMENT
-		BuildingType=BUILDING_AQUEDUCT
-		BuildingType=BUILDING_FORGE
-		BeginCulture
-			Civilization=CIVILIZATION_CONGO, Culture=50
-		EndCulture
-	EndCity
 EndPlot
 BeginPlot
 	x=75,y=28
@@ -7969,6 +8249,18 @@ BeginPlot
 		UnitType=UNIT_ENGLISH_REDCOAT
 		UnitOwner=CIVILIZATION_ENGLAND
 	EndUnit
+	BeginUnit
+		UnitType=UNIT_ENGLISH_REDCOAT
+		UnitOwner=CIVILIZATION_ENGLAND
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_ENGLISH_REDCOAT
+		UnitOwner=CIVILIZATION_ENGLAND
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_ENGLISH_REDCOAT
+		UnitOwner=CIVILIZATION_ENGLAND
+	EndUnit
 	BeginCity
 		CityOwner=CIVILIZATION_ENGLAND
 		CityName=Port Elizabeth
@@ -7988,6 +8280,60 @@ BeginPlot
 		BeginCulture
 			Civilization=CIVILIZATION_ENGLAND, Culture=100
 		EndCulture
+	EndCity
+EndPlot
+BeginPlot
+	x=77,y=16
+	ImprovementType=IMPROVEMENT_PASTURE
+	RouteType=ROUTE_ROAD
+EndPlot
+BeginPlot
+	x=76,y=24
+	RouteType=ROUTE_ROAD
+	BeginUnit
+		UnitType=UNIT_KATANGESE_KALAKA
+		UnitOwner=CIVILIZATION_KATANGA
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_KATANGESE_KALAKA
+		UnitOwner=CIVILIZATION_KATANGA
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_KATANGESE_KALAKA
+		UnitOwner=CIVILIZATION_KATANGA
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_ARQUEBUSIER
+		UnitOwner=CIVILIZATION_KATANGA
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_ARCHER
+		UnitOwner=CIVILIZATION_KATANGA
+	EndUnit	
+	BeginUnit
+		UnitType=UNIT_WORKER
+		UnitOwner=CIVILIZATION_KATANGA
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_WORKER
+		UnitOwner=CIVILIZATION_KATANGA
+	EndUnit
+	BeginCity
+		CityOwner=CIVILIZATION_KATANGA
+		CityName=Mwimbele
+		CityPopulation=5
+		BuildingType=BUILDING_GRANARY
+		BuildingType=BUILDING_TANNERY
+		BuildingType=BUILDING_HARBOR
+		BuildingType=BUILDING_BARRACKS
+		BuildingType=BUILDING_WALLS
+		BuildingType=BUILDING_FORGE
+		BuildingType=BUILDING_MARKET	
+		BuildingType=BUILDING_PALACE
+		BeginCulture
+			Civilization=CIVILIZATION_KATANGA, Culture=150
+		EndCulture
+		YearFounded=1580
 	EndCity
 EndPlot
 BeginPlot
@@ -8146,6 +8492,9 @@ BeginPlot
 		BuildingType=BUILDING_UNIVERSITY
 		BuildingType=BUILDING_CIVIC_SQUARE
 		BuildingType=BUILDING_STAR_FORT
+		BuildingType=BUILDING_FAIRGROUND
+		BuildingType=BUILDING_MANOR
+		BuildingType=BUILDING_SCHOOL
 		BuildingType=BUILDING_JEWISH_TEMPLE
 		BuildingType=BUILDING_JEWISH_MONASTERY
 		BuildingType=BUILDING_CATHOLIC_TEMPLE
@@ -8202,6 +8551,9 @@ BeginPlot
 		BuildingType=BUILDING_ESTATE
 		BuildingType=BUILDING_OBSERVATORY
 		BuildingType=BUILDING_COURTHOUSE
+		BuildingType=BUILDING_FAIRGROUND
+		BuildingType=BUILDING_MANOR
+		BuildingType=BUILDING_SCHOOL
 		BuildingType=BUILDING_PROTESTANT_TEMPLE
 		BuildingType=BUILDING_PROTESTANT_MONASTERY
 		ReligionType=RELIGION_PROTESTANTISM
@@ -8244,6 +8596,11 @@ BeginPlot
 	ImprovementType=IMPROVEMENT_WHALING_BOATS
 EndPlot
 BeginPlot
+	x=77,y=16
+	ImprovementType=IMPROVEMENT_FARM
+	RouteType=ROUTE_ROAD
+EndPlot
+BeginPlot
 	x=77,y=35
 	RouteType=ROUTE_ROAD
 	BeginUnit
@@ -8271,7 +8628,7 @@ BeginPlot
 		BeginCulture
 			Civilization=CIVILIZATION_INDEPENDENT2, Culture=100
 		EndCulture
-		YearFounded=1800
+		YearFounded=1490
 	EndCity
 EndPlot
 BeginPlot
@@ -8427,6 +8784,95 @@ BeginPlot
 	ImprovementType=IMPROVEMENT_MINE
 EndPlot
 BeginPlot
+	x=78,y=15
+	RouteType=ROUTE_ROAD
+	BeginUnit
+		UnitType=UNIT_MUSKETEER
+		UnitOwner=CIVILIZATION_BOERS
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_MUSKETEER
+		UnitOwner=CIVILIZATION_BOERS
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_MUSKETEER
+		UnitOwner=CIVILIZATION_BOERS
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_MUSKETEER
+		UnitOwner=CIVILIZATION_BOERS
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_MUSKETEER
+		UnitOwner=CIVILIZATION_BOERS
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_MUSKETEER
+		UnitOwner=CIVILIZATION_BOERS
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_MUSKETEER
+		UnitOwner=CIVILIZATION_BOERS
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_CUIRASSIER
+		UnitOwner=CIVILIZATION_BOERS
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_CUIRASSIER
+		UnitOwner=CIVILIZATION_BOERS
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_CUIRASSIER
+		UnitOwner=CIVILIZATION_BOERS
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_ARTILLERY
+		UnitOwner=CIVILIZATION_BOERS
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_ARTILLERY
+		UnitOwner=CIVILIZATION_BOERS
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_ARTILLERY
+		UnitOwner=CIVILIZATION_BOERS
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_WORKER
+		UnitOwner=CIVILIZATION_BOERS
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_WORKER
+		UnitOwner=CIVILIZATION_BOERS
+	EndUnit
+	BeginCity
+		CityOwner=CIVILIZATION_BOERS
+		CityName=Pretoria
+		CityPopulation=6
+		BuildingType=BUILDING_PALACE
+		BuildingType=BUILDING_HARBOR
+		BuildingType=BUILDING_GRANARY
+		BuildingType=BUILDING_TANNERY
+		BuildingType=BUILDING_WEAVER
+		BuildingType=BUILDING_LIBRARY
+		BuildingType=BUILDING_AQUEDUCT
+		BuildingType=BUILDING_MARKET
+		BuildingType=BUILDING_JAIL
+		BuildingType=BUILDING_FORGE
+		BuildingType=BUILDING_SCHOOL
+		BuildingType=BUILDING_MANOR
+		BuildingType=BUILDING_FAIRGROUND
+		BuildingType=BUILDING_BANK
+		BuildingType=BUILDING_PROTESTANT_TEMPLE
+		ReligionType=RELIGION_PROTESTANTISM
+		BeginCulture
+			Civilization=CIVILIZATION_BOERS, Culture=50
+		EndCulture
+		YearFounded=1790
+	EndCity
+EndPlot
+BeginPlot
 	x=78,y=34
 	ImprovementType=IMPROVEMENT_PASTURE
 EndPlot
@@ -8525,6 +8971,8 @@ BeginPlot
 		BuildingType=BUILDING_WHARF
 		BuildingType=BUILDING_UNIVERSITY
 		BuildingType=BUILDING_STAR_FORT
+		BuildingType=BUILDING_MANOR
+		BuildingType=BUILDING_SCHOOL
 		BuildingType=BUILDING_PROTESTANT_TEMPLE
 		BuildingType=BUILDING_PROTESTANT_MONASTERY
 		ReligionType=RELIGION_ORTHODOXY
@@ -8549,6 +8997,119 @@ BeginPlot
 	x=78,y=71
 	ImprovementType=IMPROVEMENT_LUMBERMILL
 	RouteType=ROUTE_ROAD
+EndPlot
+BeginPlot
+	x=79,y=13
+	RouteType=ROUTE_ROAD
+	BeginUnit
+		UnitType=UNIT_ZULU_IMPI
+		UnitOwner=CIVILIZATION_ZULU
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_ZULU_IMPI
+		UnitOwner=CIVILIZATION_ZULU
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_ZULU_IMPI
+		UnitOwner=CIVILIZATION_ZULU
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_ZULU_IMPI
+		UnitOwner=CIVILIZATION_ZULU
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_ZULU_IMPI
+		UnitOwner=CIVILIZATION_ZULU
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_ZULU_IMPI
+		UnitOwner=CIVILIZATION_ZULU
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_ZULU_IMPI
+		UnitOwner=CIVILIZATION_ZULU
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_WORKER
+		UnitOwner=CIVILIZATION_ZULU
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_WORKER
+		UnitOwner=CIVILIZATION_ZULU
+	EndUnit
+	BeginCity
+		CityOwner=CIVILIZATION_ZULU
+		CityName=kwaBulawayo
+		CityPopulation=3
+		BuildingType=BUILDING_PALACE
+		BuildingType=BUILDING_GRANARY
+		BuildingType=BUILDING_TANNERY
+		BuildingType=BUILDING_ZULU_IKHANDA
+		BuildingType=BUILDING_WEAVER
+		BeginCulture
+			Civilization=CIVILIZATION_ZULU, Culture=50
+		EndCulture
+		YearFounded=1780
+	EndCity
+EndPlot
+BeginPlot
+	x=79,y=17
+	RouteType=ROUTE_ROAD
+	BeginUnit
+		UnitType=UNIT_ZIMBABWEAN_ROZWI_WARRIOR
+		UnitOwner=CIVILIZATION_ZIMBABWE
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_ZIMBABWEAN_ROZWI_WARRIOR
+		UnitOwner=CIVILIZATION_ZIMBABWE
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_ZIMBABWEAN_ROZWI_WARRIOR
+		UnitOwner=CIVILIZATION_ZIMBABWE
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_ZIMBABWEAN_ROZWI_WARRIOR
+		UnitOwner=CIVILIZATION_ZIMBABWE
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_ZIMBABWEAN_ASSEGAI_WIELDER
+		UnitOwner=CIVILIZATION_ZIMBABWE
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_ZIMBABWEAN_ASSEGAI_WIELDER
+		UnitOwner=CIVILIZATION_ZIMBABWE
+	EndUnit
+    BeginUnit
+		UnitType=UNIT_ARQUEBUSIER
+		UnitOwner=CIVILIZATION_ZIMBABWE
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_WORKER
+		UnitOwner=CIVILIZATION_ZIMBABWE
+	EndUnit	
+	BeginUnit
+		UnitType=UNIT_WORKER
+		UnitOwner=CIVILIZATION_ZIMBABWE
+	EndUnit
+	BeginCity
+		CityOwner=CIVILIZATION_ZIMBABWE
+		CityName=Dananmombe
+		CityPopulation=6
+		BuildingType=BUILDING_GRANARY
+		BuildingType=BUILDING_TANNERY
+		BuildingType=BUILDING_MARKET
+		BuildingType=BUILDING_FORGE
+		BuildingType=BUILDING_ZIMBABWEAN_ZIMBABWE
+		BuildingType=BUILDING_LIBRARY
+		BuildingType=BUILDING_ARENA
+		BuildingType=BUILDING_SCHOOL
+		BuildingType=BUILDING_GREAT_ENCLOSURE
+		BuildingType=BUILDING_PALACE
+		BeginCulture
+			Civilization=CIVILIZATION_ZIMBABWE, Culture=150
+		EndCulture
+		YearFounded=1220
+	EndCity
 EndPlot
 BeginPlot
 	x=79,y=35
@@ -8665,9 +9226,13 @@ BeginPlot
 		BuildingType=BUILDING_PHARMACY
 		BuildingType=BUILDING_UNIVERSITY
 		BuildingType=BUILDING_ESTATE
+		BuildingType=BUILDING_MANOR
+		BuildingType=BUILDING_SCHOOL
+		BuildingType=BUILDING_COUNCIL
 		BuildingType=BUILDING_ORTHODOX_TEMPLE
 		BuildingType=BUILDING_ISLAMIC_TEMPLE
 		BuildingType=BUILDING_ISLAMIC_MONASTERY
+		BuildingType=BUILDING_AL_AZHAR
 		BuildingType=BUILDING_GREAT_SPHINX
 		BuildingType=BUILDING_PYRAMIDS
 		ReligionType=RELIGION_JUDAISM
@@ -8818,6 +9383,11 @@ BeginPlot
 		BuildingType=BUILDING_BANK
 		BuildingType=BUILDING_UNIVERSITY
 		BuildingType=BUILDING_ESTATE
+		BuildingType=BUILDING_FAIRGROUND
+		BuildingType=BUILDING_MANOR
+		BuildingType=BUILDING_SCHOOL
+		BuildingType=BUILDING_RELIQUARY
+		BuildingType=BUILDING_COUNCIL
 		BuildingType=BUILDING_ORTHODOX_TEMPLE
 		BuildingType=BUILDING_ISLAMIC_TEMPLE
 		BuildingType=BUILDING_ISLAMIC_CATHEDRAL
@@ -8899,66 +9469,140 @@ EndPlot
 BeginPlot
 	x=80,y=14
 	RouteType=ROUTE_ROAD
-	BeginUnit
-		UnitType=UNIT_MUSKETEER
-		UnitOwner=CIVILIZATION_PORTUGAL
-	EndUnit
-	BeginCity
-		CityOwner=CIVILIZATION_PORTUGAL
-		CityName=Lourenço Marques
-		CityPopulation=2
-		BuildingType=BUILDING_GRANARY
-		BuildingType=BUILDING_TANNERY
-		BuildingType=BUILDING_WEAVER
-		BuildingType=BUILDING_LIBRARY
-		BuildingType=BUILDING_HARBOR
-		BuildingType=BUILDING_AQUEDUCT
-		BuildingType=BUILDING_JAIL
-		BuildingType=BUILDING_FORGE
-		BuildingType=BUILDING_WHARF
-		BuildingType=BUILDING_CATHOLIC_TEMPLE
-		ReligionType=RELIGION_CATHOLICISM
-		BeginCulture
-			Civilization=CIVILIZATION_PORTUGAL, Culture=50
-		EndCulture
-		YearFounded=1787
-	EndCity
+	ImprovementType=IMPROVEMENT_PASTURE
 EndPlot
 BeginPlot
 	x=80,y=19
 	ImprovementType=IMPROVEMENT_FARM
 EndPlot
 BeginPlot
-	x=80,y=30
-	ImprovementType=IMPROVEMENT_MINE
-EndPlot
-BeginPlot
-	x=80,y=35
+	x=80,y=29
 	RouteType=ROUTE_ROAD
 	BeginUnit
-		UnitType=UNIT_MUSKETEER
-		UnitOwner=CIVILIZATION_MISR
+		UnitType=UNIT_SHORTBOWMAN
+		UnitOwner=CIVILIZATION_BUGANDA
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_SHORTBOWMAN
+		UnitOwner=CIVILIZATION_BUGANDA
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_BUGANDAN_ABAMBOWA
+		UnitOwner=CIVILIZATION_BUGANDA
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_BUGANDAN_ABAMBOWA
+		UnitOwner=CIVILIZATION_BUGANDA
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_BUGANDAN_ABAMBOWA
+		UnitOwner=CIVILIZATION_BUGANDA
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_BUGANDAN_ABAMBOWA
+		UnitOwner=CIVILIZATION_BUGANDA
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_WAR_GALLEY
+		UnitOwner=CIVILIZATION_BUGANDA
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_WAR_GALLEY
+		UnitOwner=CIVILIZATION_BUGANDA
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_WORKER
+		UnitOwner=CIVILIZATION_BUGANDA
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_WORKER
+		UnitOwner=CIVILIZATION_BUGANDA
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_WORKER
+		UnitOwner=CIVILIZATION_BUGANDA
 	EndUnit
 	BeginCity
-		CityOwner=CIVILIZATION_MISR
-		CityName=El-Hartum
-		CityPopulation=3
+		CityOwner=CIVILIZATION_BUGANDA
+		CityName=Lubaga
+		CityPopulation=7
 		BuildingType=BUILDING_GRANARY
 		BuildingType=BUILDING_TANNERY
-		BuildingType=BUILDING_WEAVER
-		BuildingType=BUILDING_LIBRARY
-		BuildingType=BUILDING_AQUEDUCT
+		BuildingType=BUILDING_MONUMENT
 		BuildingType=BUILDING_MARKET
-		BuildingType=BUILDING_JAIL
-		BuildingType=BUILDING_BATH
+		BuildingType=BUILDING_LIBRARY
+		BuildingType=BUILDING_ARENA
+		BuildingType=BUILDING_HARBOR
+		BuildingType=BUILDING_SCHOOL
+		BuildingType=BUILDING_BUGANDAN_ROYAL_FORGE
+		BuildingType=BUILDING_PALACE
+		BeginCulture
+			Civilization=CIVILIZATION_BUGANDA, Culture=300
+		EndCulture
+		YearFounded=1000
+		YearAcquired=1000
+	EndCity
+EndPlot
+BeginPlot
+	x=80,y=30
+	ImprovementType=IMPROVEMENT_MINE
+	RouteType=ROUTE_ROAD
+EndPlot
+BeginPlot
+	x=80,y=34
+	RouteType=ROUTE_ROAD
+	BeginUnit
+		UnitType=UNIT_FUNJ_SHUKURI
+		UnitOwner=CIVILIZATION_FUNJ
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_FUNJ_SHUKURI
+		UnitOwner=CIVILIZATION_FUNJ
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_ARQUEBUSIER
+		UnitOwner=CIVILIZATION_FUNJ
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_ARQUEBUSIER
+		UnitOwner=CIVILIZATION_FUNJ
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_WORKER
+		UnitOwner=CIVILIZATION_FUNJ
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_WORKER
+		UnitOwner=CIVILIZATION_FUNJ
+	EndUnit
+	BeginCity
+		CityOwner=CIVILIZATION_FUNJ
+		CityName=Sinar
+		CityPopulation=6
+		BuildingType=BUILDING_GRANARY
+		BuildingType=BUILDING_TANNERY
+		BuildingType=BUILDING_MONUMENT
+		BuildingType=BUILDING_FUNJ_ARABIC_SCHOOL
+		BuildingType=BUILDING_MARKET
+		BuildingType=BUILDING_ARENA
 		BuildingType=BUILDING_FORGE
-		BuildingType=BUILDING_POST_OFFICE
+		BuildingType=BUILDING_JAIL
+		BuildingType=BUILDING_RELIQUARY
+		BuildingType=BUILDING_MANOR
+		BuildingType=BUILDING_FAIRGROUND
+		BuildingType=BUILDING_PALACE
 		BuildingType=BUILDING_ISLAMIC_TEMPLE
 		ReligionType=RELIGION_ISLAM
 		BeginCulture
-			Civilization=CIVILIZATION_MISR, Culture=250
+			Civilization=CIVILIZATION_FUNJ, Culture=300
 		EndCulture
+		YearFounded=1000
+		YearAcquired=1000
 	EndCity
+EndPlot
+BeginPlot
+	x=80,y=30
+	ImprovementType=IMPROVEMENT_MINE
 EndPlot
 BeginPlot
 	x=80,y=36
@@ -9076,7 +9720,6 @@ BeginPlot
 		BuildingType=BUILDING_CASTLE
 		BuildingType=BUILDING_WHARF
 		BuildingType=BUILDING_ORTHODOX_TEMPLE
-		BuildingType=BUILDING_ISLAMIC_TEMPLE
 		ReligionType=RELIGION_ORTHODOXY
 		BeginCulture
 			Civilization=CIVILIZATION_RUSSIA, Culture=250
@@ -9253,6 +9896,41 @@ EndPlot
 BeginPlot
 	x=81,y=37
 	RouteType=ROUTE_ROAD
+	BeginUnit
+		UnitType=UNIT_ARQUEBUSIER
+		UnitOwner=CIVILIZATION_FUNJ
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_ARQUEBUSIER
+		UnitOwner=CIVILIZATION_FUNJ
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_FUNJ_SHUKURI
+		UnitOwner=CIVILIZATION_FUNJ
+	EndUnit
+	BeginCity
+		CityOwner=CIVILIZATION_FUNJ
+		CityName=Shendi
+		CityPopulation=3
+		BuildingType=BUILDING_GRANARY
+		BuildingType=BUILDING_TANNERY
+		BuildingType=BUILDING_WEAVER
+		BuildingType=BUILDING_WALLS
+		BuildingType=BUILDING_MARKET
+		BuildingType=BUILDING_JAIL
+		BuildingType=BUILDING_LIBRARY
+		BuildingType=BUILDING_AQUEDUCT
+		BuildingType=BUILDING_NURI
+		BuildingType=BUILDING_ISLAMIC_MONASTERY
+		BuildingType=BUILDING_ISLAMIC_TEMPLE
+		ReligionType=RELIGION_ISLAM
+		BeginCulture
+			Civilization=CIVILIZATION_FUNJ, Culture=100
+		EndCulture
+		PreviousOwner=CIVILIZATION_EGYPT
+		PreviousOwner=CIVILIZATION_NUBIA
+		YearFounded=1390
+	EndCity
 EndPlot
 BeginPlot
 	x=81,y=38
@@ -9325,6 +10003,9 @@ BeginPlot
 		BuildingType=BUILDING_GROCER
 		BuildingType=BUILDING_POST_OFFICE
 		BuildingType=BUILDING_UNIVERSITY
+		BuildingType=BUILDING_FAIRGROUND
+		BuildingType=BUILDING_MANOR
+		BuildingType=BUILDING_SCHOOL
 		BuildingType=BUILDING_ORTHODOX_TEMPLE
 		BuildingType=BUILDING_ORTHODOX_CATHEDRAL
 		BuildingType=BUILDING_ORTHODOX_MONASTERY
@@ -9473,6 +10154,11 @@ BeginPlot
 		BuildingType=BUILDING_ESTATE
 		BuildingType=BUILDING_OBSERVATORY
 		BuildingType=BUILDING_WAREHOUSE
+		BuildingType=BUILDING_FAIRGROUND
+		BuildingType=BUILDING_MANOR
+		BuildingType=BUILDING_SCHOOL
+		BuildingType=BUILDING_RELIQUARY
+		BuildingType=BUILDING_COUNCIL
 		BuildingType=BUILDING_JEWISH_TEMPLE
 		BuildingType=BUILDING_ORTHODOX_TEMPLE
 		BuildingType=BUILDING_ORTHODOX_CATHEDRAL
@@ -9644,13 +10330,21 @@ BeginPlot
 	x=83,y=26
 	RouteType=ROUTE_ROAD
 	BeginUnit
-		UnitType=UNIT_ARQUEBUSIER
-		UnitOwner=CIVILIZATION_INDEPENDENT
+		UnitType=UNIT_OMANI_SLAVER
+		UnitOwner=CIVILIZATION_OMAN
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_OMANI_SLAVER
+		UnitOwner=CIVILIZATION_OMAN
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_OMANI_BAGHLAH
+		UnitOwner=CIVILIZATION_OMAN
 	EndUnit
 	BeginCity
-		CityOwner=CIVILIZATION_INDEPENDENT
+		CityOwner=CIVILIZATION_OMAN
 		CityName=Mombasa
-		CityPopulation=3
+		CityPopulation=4
 		BuildingType=BUILDING_GRANARY
 		BuildingType=BUILDING_TANNERY
 		BuildingType=BUILDING_WEAVER
@@ -9662,11 +10356,12 @@ BeginPlot
 		BuildingType=BUILDING_ISLAMIC_TEMPLE
 		ReligionType=RELIGION_ISLAM
 		BeginCulture
-			Civilization=CIVILIZATION_INDEPENDENT, Culture=50
+			Civilization=CIVILIZATION_OMAN, Culture=75
 		EndCulture
 		YearFounded=900
-		YearAcquired=1480
+		YearAcquired=1698
 		PreviousOwner=CIVILIZATION_SWAHILI
+		PreviousOwner=CIVILIZATION_PORTUGAL
 	EndCity
 EndPlot
 BeginPlot
@@ -9699,10 +10394,13 @@ BeginPlot
 		BuildingType=BUILDING_COFFEEHOUSE
 		BuildingType=BUILDING_ORTHODOX_TEMPLE
 		BuildingType=BUILDING_MONOLITHIC_CHURCH
+		BuildingType=BUILDING_HARAR_GATES
 		ReligionType=RELIGION_ORTHODOXY
+		ReligionType=RELIGION_JUDAISM
 		BeginCulture
 			Civilization=CIVILIZATION_INDEPENDENT, Culture=500
 		EndCulture
+		PreviousOwner=CIVILIZATION_ADAL
 		YearFounded=1635
 		PreviousOwner=CIVILIZATION_ETHIOPIA
 	EndCity
@@ -9967,6 +10665,7 @@ BeginPlot
 		BuildingType=BUILDING_POST_OFFICE
 		BuildingType=BUILDING_ISLAMIC_TEMPLE
 		ReligionType=RELIGION_ISLAM
+		ReligionType=RELIGION_SHIA
 		BeginCulture
 			Civilization=CIVILIZATION_OTTOMAN, Culture=250
 		EndCulture
@@ -10018,26 +10717,31 @@ BeginPlot
 	x=85,y=25
 	RouteType=ROUTE_ROAD
 	BeginUnit
-		UnitType=UNIT_ARQUEBUSIER
-		UnitOwner=CIVILIZATION_INDEPENDENT
+		UnitType=UNIT_OMANI_SLAVER
+		UnitOwner=CIVILIZATION_OMAN
 	EndUnit
 	BeginUnit
-		UnitType=UNIT_ARQUEBUSIER
-		UnitOwner=CIVILIZATION_INDEPENDENT
+		UnitType=UNIT_OMANI_SLAVER
+		UnitOwner=CIVILIZATION_OMAN
 	EndUnit
 	BeginUnit
-		UnitType=UNIT_ARQUEBUSIER
-		UnitOwner=CIVILIZATION_INDEPENDENT
+		UnitType=UNIT_OMANI_SLAVER
+		UnitOwner=CIVILIZATION_OMAN
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_OMANI_BAGHLAH
+		UnitOwner=CIVILIZATION_OMAN
 	EndUnit
 	BeginCity
-		CityOwner=CIVILIZATION_INDEPENDENT
+		CityOwner=CIVILIZATION_OMAN
 		CityName=Zanjibar
-		CityPopulation=3
+		CityPopulation=4
 		BuildingType=BUILDING_GRANARY
 		BuildingType=BUILDING_TANNERY
 		BuildingType=BUILDING_WEAVER
 		BuildingType=BUILDING_LIBRARY
 		BuildingType=BUILDING_HARBOR
+		BuildingType=BUILDING_OMANI_COASTAL_OUTPOST
 		BuildingType=BUILDING_AQUEDUCT
 		BuildingType=BUILDING_JAIL
 		BuildingType=BUILDING_FORGE
@@ -10045,10 +10749,12 @@ BeginPlot
 		BuildingType=BUILDING_WHARF
 		BuildingType=BUILDING_COFFEEHOUSE
 		BuildingType=BUILDING_CUSTOMS_HOUSE
+		BuildingType=BUILDING_MARKET
 		BuildingType=BUILDING_ISLAMIC_TEMPLE
+		BuildingType=BUILDING_STONETOWN_FORT
 		ReligionType=RELIGION_ISLAM
 		BeginCulture
-			Civilization=CIVILIZATION_INDEPENDENT, Culture=100
+			Civilization=CIVILIZATION_OMAN, Culture=100
 		EndCulture
 		YearFounded=1700
 	EndCity
@@ -10169,6 +10875,14 @@ BeginPlot
 		UnitType=UNIT_MUSKETEER
 		UnitOwner=CIVILIZATION_RUSSIA
 	EndUnit
+	BeginUnit
+		UnitType=UNIT_SETTLER
+		UnitOwner=CIVILIZATION_RUSSIA
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_SETTLER
+		UnitOwner=CIVILIZATION_RUSSIA
+	EndUnit
 	BeginCity
 		CityOwner=CIVILIZATION_RUSSIA
 		CityName=Moskva
@@ -10188,6 +10902,10 @@ BeginPlot
 		BuildingType=BUILDING_BANK
 		BuildingType=BUILDING_UNIVERSITY
 		BuildingType=BUILDING_STAR_FORT
+		BuildingType=BUILDING_FAIRGROUND
+		BuildingType=BUILDING_MANOR
+		BuildingType=BUILDING_SCHOOL
+		BuildingType=BUILDING_RELIQUARY
 		BuildingType=BUILDING_ORTHODOX_TEMPLE
 		BuildingType=BUILDING_ORTHODOX_CATHEDRAL
 		BuildingType=BUILDING_ORTHODOX_MONASTERY
@@ -10299,6 +11017,7 @@ BeginPlot
 		BuildingType=BUILDING_ORTHODOX_TEMPLE
 		BuildingType=BUILDING_ISLAMIC_TEMPLE
 		BuildingType=BUILDING_ISLAMIC_MONASTERY
+		BuildingType=BUILDING_NAREKAVANK
 		ReligionType=RELIGION_ORTHODOXY
 		ReligionType=RELIGION_ISLAM
 		BeginCulture
@@ -10456,6 +11175,7 @@ BeginPlot
 		BuildingType=BUILDING_ISLAMIC_TEMPLE
 		BuildingType=BUILDING_ISLAMIC_MONASTERY
 		BuildingType=BUILDING_ISLAMIC_SHRINE
+		BuildingType=BUILDING_PROPHETS_MOSQUE
 		ReligionType=RELIGION_ISLAM
 		HolyCityReligionType=RELIGION_ISLAM
 		FreeSpecialistType=SPECIALIST_GREAT_PRIEST
@@ -10594,6 +11314,42 @@ BeginPlot
 	EndCity
 EndPlot
 BeginPlot
+	x=88,y=15
+	RouteType=ROUTE_ROAD
+	BeginUnit
+		UnitType=UNIT_ARQUEBUSIER
+		UnitOwner=CIVILIZATION_MADAGASCAR
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_ARQUEBUSIER
+		UnitOwner=CIVILIZATION_MADAGASCAR
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_MALAGASY_PIROGUE
+		UnitOwner=CIVILIZATION_MADAGASCAR
+	EndUnit		
+	BeginUnit
+		UnitType=UNIT_MALAGASY_PIROGUE
+		UnitOwner=CIVILIZATION_MADAGASCAR
+	EndUnit	
+	BeginCity
+		CityOwner=CIVILIZATION_MADAGASCAR
+		CityName=Fort Dauphin
+		CityPopulation=2
+		BuildingType=BUILDING_GRANARY
+		BuildingType=BUILDING_WALLS
+		BuildingType=BUILDING_HARBOR
+		BuildingType=BUILDING_LIBRARY	
+		BeginCulture
+			Civilization=CIVILIZATION_MADAGASCAR, Culture=30
+		EndCulture
+		PreviousOwner=CIVILIZATION_FRANCE
+		PreviousOwner=CIVILIZATION_PORTUGAL
+		YearFounded=1540
+		YearAcquired=1540
+	EndCity
+EndPlot
+BeginPlot
 	x=88,y=29
 	ImprovementType=IMPROVEMENT_FISHING_BOATS
 EndPlot
@@ -10729,20 +11485,87 @@ BeginPlot
 	ImprovementType=IMPROVEMENT_PASTURE
 EndPlot
 BeginPlot
+	x=89,y=18
+	RouteType=ROUTE_ROAD
+	BeginUnit
+		UnitType=UNIT_ARQUEBUSIER
+		UnitOwner=CIVILIZATION_MADAGASCAR
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_ARQUEBUSIER
+		UnitOwner=CIVILIZATION_MADAGASCAR
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_MALAGASY_PIROGUE
+		UnitOwner=CIVILIZATION_MADAGASCAR
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_MALAGASY_PIROGUE
+		UnitOwner=CIVILIZATION_MADAGASCAR
+	EndUnit		
+	BeginUnit
+		UnitType=UNIT_MALAGASY_PIROGUE
+		UnitOwner=CIVILIZATION_MADAGASCAR
+	EndUnit	
+	BeginUnit
+		UnitType=UNIT_WORKER
+		UnitOwner=CIVILIZATION_MADAGASCAR
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_WORKER
+		UnitOwner=CIVILIZATION_MADAGASCAR
+	EndUnit
+	BeginCity
+		CityOwner=CIVILIZATION_MADAGASCAR
+		CityName=Antananarivo
+		CityPopulation=5
+		BuildingType=BUILDING_GRANARY
+		BuildingType=BUILDING_TANNERY
+		BuildingType=BUILDING_LIBRARY
+		BuildingType=BUILDING_HARBOR
+		BuildingType=BUILDING_MARKET
+		BuildingType=BUILDING_JAIL
+		BuildingType=BUILDING_WALLS
+		BuildingType=BUILDING_SCHOOL
+		BuildingType=BUILDING_MANOR
+		BuildingType=BUILDING_FAIRGROUND	
+		BuildingType=BUILDING_ROYAL_ROVA
+		BuildingType=BUILDING_PALACE
+		BeginCulture
+			Civilization=CIVILIZATION_MADAGASCAR, Culture=150
+		EndCulture
+		YearFounded=1540
+		YearAcquired=1540
+	EndCity
+EndPlot
+BeginPlot
 	x=89,y=37
 	RouteType=ROUTE_ROAD
 	BeginUnit
 		UnitType=UNIT_ARQUEBUSIER
-		UnitOwner=CIVILIZATION_INDEPENDENT2
+		UnitOwner=CIVILIZATION_YEMEN
 	EndUnit
 	BeginUnit
 		UnitType=UNIT_ARQUEBUSIER
-		UnitOwner=CIVILIZATION_INDEPENDENT2
+		UnitOwner=CIVILIZATION_YEMEN
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_FUNJ_YEMENI_HAJANA
+		UnitOwner=CIVILIZATION_YEMEN
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_FUNJ_YEMENI_HAJANA
+		UnitOwner=CIVILIZATION_YEMEN
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_WORKER
+		UnitOwner=CIVILIZATION_ASHANTI
 	EndUnit
 	BeginCity
-		CityOwner=CIVILIZATION_INDEPENDENT2
+		CityOwner=CIVILIZATION_YEMEN
 		CityName=Sanaa
-		CityPopulation=3
+		CityPopulation=4
+		BuildingType=BUILDING_PALACE
 		BuildingType=BUILDING_GRANARY
 		BuildingType=BUILDING_TANNERY
 		BuildingType=BUILDING_WEAVER
@@ -10752,10 +11575,16 @@ BeginPlot
 		BuildingType=BUILDING_MARKET
 		BuildingType=BUILDING_JAIL
 		BuildingType=BUILDING_FORGE
+		BuildingType=BUILDING_YEMENI_TOWER_HOUSE
+		BuildingType=BUILDING_CASTLE
+		BuildingType=BUILDING_SCHOOL
+		BuildingType=BUILDING_MANOR
+		BuildingType=BUILDING_FAIRGROUND
 		BuildingType=BUILDING_ISLAMIC_TEMPLE
 		ReligionType=RELIGION_ISLAM
+		ReligionType=RELIGION_SHIA
 		BeginCulture
-			Civilization=CIVILIZATION_INDEPENDENT2, Culture=500
+			Civilization=CIVILIZATION_YEMEN, Culture=500
 		EndCulture
 		YearFounded=-500
 		YearAcquired=900
@@ -10813,6 +11642,8 @@ BeginPlot
 		BuildingType=BUILDING_LIBRARY
 		BuildingType=BUILDING_AQUEDUCT
 		BuildingType=BUILDING_MARKET
+		BuildingType=BUILDING_SCHOOL
+		BuildingType=BUILDING_MANOR
 		BuildingType=BUILDING_ISLAMIC_TEMPLE
 		ReligionType=RELIGION_ISLAM
 		BeginCulture
@@ -10854,8 +11685,13 @@ BeginPlot
 		BuildingType=BUILDING_ISLAMIC_TEMPLE
 		BuildingType=BUILDING_ISLAMIC_MONASTERY
 		BuildingType=BUILDING_HOUSE_OF_WISDOM
+		BuildingType=BUILDING_SHIA_TEMPLE
+		BuildingType=BUILDING_SHIA_MONASTERY
+		BuildingType=BUILDING_SHIA_SHRINE
 		ReligionType=RELIGION_JUDAISM
 		ReligionType=RELIGION_ISLAM
+		ReligionType=RELIGION_SHIA
+		HolyCityReligionType=RELIGION_ISLAM
 		FreeSpecialistType=SPECIALIST_GREAT_PRIEST
 		BeginCulture
 			Civilization=CIVILIZATION_OTTOMAN, Culture=250
@@ -11064,10 +11900,13 @@ BeginPlot
 		BuildingType=BUILDING_UNIVERSITY
 		BuildingType=BUILDING_STAR_FORT
 		BuildingType=BUILDING_ESTATE
+		BuildingType=BUILDING_FAIRGROUND
+		BuildingType=BUILDING_MANOR
+		BuildingType=BUILDING_SCHOOL
 		BuildingType=BUILDING_IRANIAN_BAGH
-		BuildingType=BUILDING_ISLAMIC_TEMPLE
-		BuildingType=BUILDING_ISLAMIC_MONASTERY
-		ReligionType=RELIGION_ISLAM
+		BuildingType=BUILDING_SHIA_TEMPLE
+		BuildingType=BUILDING_SHIA_MONASTERY
+		ReligionType=RELIGION_SHIA
 		BeginCulture
 			Civilization=CIVILIZATION_IRAN, Culture=500
 		EndCulture
@@ -11340,12 +12179,15 @@ BeginPlot
 		BuildingType=BUILDING_CIVIC_SQUARE
 		BuildingType=BUILDING_STAR_FORT
 		BuildingType=BUILDING_ESTATE
+		BuildingType=BUILDING_FAIRGROUND
+		BuildingType=BUILDING_MANOR
+		BuildingType=BUILDING_SCHOOL
 		BuildingType=BUILDING_IRANIAN_BAGH
-		BuildingType=BUILDING_ISLAMIC_TEMPLE
-		BuildingType=BUILDING_ISLAMIC_CATHEDRAL
-		BuildingType=BUILDING_ISLAMIC_MONASTERY
+		BuildingType=BUILDING_SHIA_TEMPLE
+		BuildingType=BUILDING_SHIA_CATHEDRAL
+		BuildingType=BUILDING_SHIA_MONASTERY
 		BuildingType=BUILDING_IMAGE_OF_THE_WORLD_SQUARE
-		ReligionType=RELIGION_ISLAM
+		ReligionType=RELIGION_SHIA
 		FreeSpecialistType=SPECIALIST_GREAT_PRIEST
 		FreeSpecialistType=SPECIALIST_GREAT_ARTIST
 		BeginCulture
@@ -11436,9 +12278,12 @@ BeginPlot
 		BuildingType=BUILDING_POST_OFFICE
 		BuildingType=BUILDING_CIVIC_SQUARE
 		BuildingType=BUILDING_IRANIAN_BAGH
-		BuildingType=BUILDING_ISLAMIC_TEMPLE
-		BuildingType=BUILDING_ISLAMIC_MONASTERY
-		ReligionType=RELIGION_ISLAM
+		BuildingType=BUILDING_SCHOOL
+		BuildingType=BUILDING_MANOR
+		BuildingType=BUILDING_SHIA_TEMPLE
+		BuildingType=BUILDING_SHIA_MONASTERY
+		BuildingType=BUILDING_ROSE_GARDEN_PALACE
+		ReligionType=RELIGION_SHIA
 		BeginCulture
 			Civilization=CIVILIZATION_IRAN, Culture=500
 		EndCulture
@@ -11570,11 +12415,13 @@ BeginPlot
 		BuildingType=BUILDING_UNIVERSITY
 		BuildingType=BUILDING_ESTATE
 		BuildingType=BUILDING_IRANIAN_BAGH
-		BuildingType=BUILDING_ISLAMIC_TEMPLE
-		BuildingType=BUILDING_ISLAMIC_MONASTERY
+		BuildingType=BUILDING_MANOR
+		BuildingType=BUILDING_SCHOOL
+		BuildingType=BUILDING_SHIA_TEMPLE
+		BuildingType=BUILDING_SHIA_MONASTERY
 		BuildingType=BUILDING_ZOROASTRIAN_TEMPLE
 		BuildingType=BUILDING_ZOROASTRIAN_SHRINE
-		ReligionType=RELIGION_ISLAM
+		ReligionType=RELIGION_SHIA
 		ReligionType=RELIGION_ZOROASTRIANISM
 		HolyCityReligionType=RELIGION_ZOROASTRIANISM
 		BeginCulture
@@ -11681,21 +12528,37 @@ BeginPlot
 	x=96,y=40
 	RouteType=ROUTE_ROAD
 	BeginUnit
-		UnitType=UNIT_ARQUEBUSIER
-		UnitOwner=CIVILIZATION_INDEPENDENT
+		UnitType=UNIT_OMANI_SLAVER
+		UnitOwner=CIVILIZATION_OMAN
 	EndUnit
 	BeginUnit
-		UnitType=UNIT_ARQUEBUSIER
-		UnitOwner=CIVILIZATION_INDEPENDENT
+		UnitType=UNIT_OMANI_SLAVER
+		UnitOwner=CIVILIZATION_OMAN
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_OMANI_SLAVER
+		UnitOwner=CIVILIZATION_OMAN
 	EndUnit
 	BeginUnit
 		UnitType=UNIT_BOMBARD
-		UnitOwner=CIVILIZATION_INDEPENDENT
+		UnitOwner=CIVILIZATION_OMAN
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_BOMBARD
+		UnitOwner=CIVILIZATION_OMAN
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_OMANI_BAGHLAH
+		UnitOwner=CIVILIZATION_OMAN
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_OMANI_BAGHLAH
+		UnitOwner=CIVILIZATION_OMAN
 	EndUnit
 	BeginCity
-		CityOwner=CIVILIZATION_INDEPENDENT
+		CityOwner=CIVILIZATION_OMAN
 		CityName=Masqat
-		CityPopulation=4
+		CityPopulation=6
 		BuildingType=BUILDING_BARRACKS
 		BuildingType=BUILDING_GRANARY
 		BuildingType=BUILDING_TANNERY
@@ -11703,7 +12566,7 @@ BeginPlot
 		BuildingType=BUILDING_LIBRARY
 		BuildingType=BUILDING_HARBOR
 		BuildingType=BUILDING_AQUEDUCT
-		BuildingType=BUILDING_LIGHTHOUSE
+		BuildingType=BUILDING_OMANI_COASTAL_OUTPOST
 		BuildingType=BUILDING_MARKET
 		BuildingType=BUILDING_JAIL
 		BuildingType=BUILDING_FORGE
@@ -11711,13 +12574,18 @@ BeginPlot
 		BuildingType=BUILDING_WHARF
 		BuildingType=BUILDING_COFFEEHOUSE
 		BuildingType=BUILDING_CUSTOMS_HOUSE
+		BuildingType=BUILDING_SCHOOL
+		BuildingType=BUILDING_MANOR
+		BuildingType=BUILDING_FAIRGROUND
+		BuildingType=BUILDING_RELIQUARY
+		BuildingType=BUILDING_PALACE
 		BuildingType=BUILDING_ISLAMIC_TEMPLE
 		ReligionType=RELIGION_ISLAM
 		BeginCulture
-			Civilization=CIVILIZATION_INDEPENDENT, Culture=250
+			Civilization=CIVILIZATION_OMAN, Culture=500
 		EndCulture
 		YearFounded=-550
-		YearAcquired=1650
+		YearAcquired=1696
 		PreviousOwner=CIVILIZATION_ARABIA
 		PreviousOwner=CIVILIZATION_OTTOMAN
 		PreviousOwner=CIVILIZATION_PERSIA
@@ -12058,8 +12926,12 @@ BeginPlot
 		BuildingType=BUILDING_CASTLE
 		BuildingType=BUILDING_PHARMACY
 		BuildingType=BUILDING_STAR_FORT
+		BuildingType=BUILDING_SCHOOL
+		BuildingType=BUILDING_MANOR
+		BuildingType=BUILDING_FAIRGROUND
 		BuildingType=BUILDING_ISLAMIC_TEMPLE
 		BuildingType=BUILDING_ISLAMIC_CATHEDRAL
+		BuildingType=BUILDING_ITCHAN_KHALA
 		BuildingType=BUILDING_GUR_E_AMIR
 		ReligionType=RELIGION_ISLAM
 		BeginCulture
@@ -12183,7 +13055,7 @@ BeginPlot
 		YearAcquired=1590
 		PreviousOwner=CIVILIZATION_INDIA
 		PreviousOwner=CIVILIZATION_ARABIA
-		PreviousOwner=CIVILIZATION_MUGHALS
+		PreviousOwner=CIVILIZATION_TIMURIDS
 	EndCity
 EndPlot
 BeginPlot
@@ -12253,7 +13125,7 @@ BeginPlot
 		PreviousOwner=CIVILIZATION_ARABIA
 		PreviousOwner=CIVILIZATION_GREECE
 		PreviousOwner=CIVILIZATION_KUSHANS
-		PreviousOwner=CIVILIZATION_MUGHALS
+		PreviousOwner=CIVILIZATION_TIMURIDS
 		PreviousOwner=CIVILIZATION_PERSIA
 		PreviousOwner=CIVILIZATION_TURKS
 	EndCity
@@ -12493,7 +13365,7 @@ BeginPlot
 		EndCulture
 		YearFounded=980
 		YearAcquired=1799
-		PreviousOwner=CIVILIZATION_MUGHALS
+		PreviousOwner=CIVILIZATION_TIMURIDS
 		PreviousOwner=CIVILIZATION_INDIA
 		PreviousOwner=CIVILIZATION_IRAN
 	EndCity
@@ -12664,7 +13536,7 @@ BeginPlot
 		EndCulture
 		YearFounded=600
 		PreviousOwner=CIVILIZATION_INDIA
-		PreviousOwner=CIVILIZATION_MUGHALS
+		PreviousOwner=CIVILIZATION_TIMURIDS
 	EndCity
 EndPlot
 BeginPlot
@@ -12814,6 +13686,9 @@ BeginPlot
 		BuildingType=BUILDING_BATH
 		BuildingType=BUILDING_FORGE
 		BuildingType=BUILDING_GROCER
+		BuildingType=BUILDING_SCHOOL
+		BuildingType=BUILDING_MANOR
+		BuildingType=BUILDING_FAIRGROUND
 		BuildingType=BUILDING_HINDU_TEMPLE
 		BuildingType=BUILDING_HINDU_MONASTERY
 		BuildingType=BUILDING_VIJAYA_STAMBHA
@@ -12823,7 +13698,7 @@ BeginPlot
 		EndCulture
 		YearFounded=460
 		YearAcquired=1716
-		PreviousOwner=CIVILIZATION_MUGHALS
+		PreviousOwner=CIVILIZATION_TIMURIDS
 	EndCity
 EndPlot
 BeginPlot
@@ -12980,7 +13855,7 @@ BeginPlot
 		YearFounded=-400
 		YearAcquired=1803
 		PreviousOwner=CIVILIZATION_INDIA
-		PreviousOwner=CIVILIZATION_MUGHALS
+		PreviousOwner=CIVILIZATION_TIMURIDS
 	EndCity
 EndPlot
 BeginPlot
@@ -13023,6 +13898,7 @@ BeginPlot
 		BuildingType=BUILDING_JAIL
 		BuildingType=BUILDING_FORGE
 		BuildingType=BUILDING_POST_OFFICE
+		BuildingType=BUILDING_SCHOOL
 		BuildingType=BUILDING_ISLAMIC_TEMPLE
 		ReligionType=RELIGION_ISLAM
 		ReligionType=RELIGION_CONFUCIANISM
@@ -13095,7 +13971,7 @@ BeginPlot
 		EndCulture
 		YearFounded=1590
 		YearAcquired=1798
-		PreviousOwner=CIVILIZATION_MUGHALS
+		PreviousOwner=CIVILIZATION_TIMURIDS
 	EndCity
 EndPlot
 BeginPlot
@@ -13242,7 +14118,7 @@ BeginPlot
 			Civilization=CIVILIZATION_INDIA, Culture=500
 		EndCulture
 		YearFounded=-795
-		PreviousOwner=CIVILIZATION_MUGHALS
+		PreviousOwner=CIVILIZATION_TIMURIDS
 	EndCity
 EndPlot
 BeginPlot
@@ -13381,7 +14257,6 @@ BeginPlot
 		BuildingType=BUILDING_HINDU_CATHEDRAL
 		BuildingType=BUILDING_HINDU_MONASTERY
 		BuildingType=BUILDING_HINDU_SHRINE
-		BuildingType=BUILDING_BUDDHIST_TEMPLE
 		BuildingType=BUILDING_KHAJURAHO
 		ReligionType=RELIGION_ISLAM
 		ReligionType=RELIGION_HINDUISM
@@ -13392,7 +14267,7 @@ BeginPlot
 		YearFounded=-795
 		YearAcquired=1764
 		PreviousOwner=CIVILIZATION_INDIA
-		PreviousOwner=CIVILIZATION_MUGHALS
+		PreviousOwner=CIVILIZATION_TIMURIDS
 	EndCity
 EndPlot
 BeginPlot
@@ -13569,7 +14444,7 @@ BeginPlot
 		YearFounded=-490
 		YearAcquired=1793
 		PreviousOwner=CIVILIZATION_INDIA
-		PreviousOwner=CIVILIZATION_MUGHALS
+		PreviousOwner=CIVILIZATION_TIMURIDS
 	EndCity
 EndPlot
 BeginPlot
@@ -13708,6 +14583,7 @@ BeginPlot
 		BuildingType=BUILDING_AQUEDUCT
 		BuildingType=BUILDING_JAIL
 		BuildingType=BUILDING_FORGE
+		BuildingType=BUILDING_SCHOOL
 		BuildingType=BUILDING_ISLAMIC_TEMPLE
 		ReligionType=RELIGION_ISLAM
 		ReligionType=RELIGION_CONFUCIANISM
@@ -13750,6 +14626,8 @@ BeginPlot
 		BuildingType=BUILDING_JAIL
 		BuildingType=BUILDING_FORGE
 		BuildingType=BUILDING_POST_OFFICE
+		BuildingType=BUILDING_MANOR
+		BuildingType=BUILDING_SCHOOL
 		BuildingType=BUILDING_ISLAMIC_TEMPLE
 		ReligionType=RELIGION_ISLAM
 		ReligionType=RELIGION_CONFUCIANISM
@@ -13908,7 +14786,7 @@ BeginPlot
 		EndCulture
 		YearFounded=1605
 		YearAcquired=1699
-		PreviousOwner=CIVILIZATION_MUGHALS
+		PreviousOwner=CIVILIZATION_TIMURIDS
 	EndCity
 EndPlot
 BeginPlot
@@ -13943,6 +14821,8 @@ BeginPlot
 		BuildingType=BUILDING_AQUEDUCT
 		BuildingType=BUILDING_JAIL
 		BuildingType=BUILDING_FORGE
+		BuildingType=BUILDING_SCHOOL
+		BuildingType=BUILDING_RELIQUARY
 		BuildingType=BUILDING_BUDDHIST_TEMPLE
 		BuildingType=BUILDING_BUDDHIST_MONASTERY
 		BuildingType=BUILDING_POTALA_PALACE
@@ -14376,6 +15256,9 @@ BeginPlot
 		BuildingType=BUILDING_FORGE
 		BuildingType=BUILDING_POST_OFFICE
 		BuildingType=BUILDING_ESTATE
+		BuildingType=BUILDING_SCHOOL
+		BuildingType=BUILDING_MANOR
+		BuildingType=BUILDING_FAIRGROUND
 		BuildingType=BUILDING_BUDDHIST_TEMPLE
 		BuildingType=BUILDING_BUDDHIST_MONASTERY
 		ReligionType=RELIGION_BUDDHISM
@@ -14589,6 +15472,9 @@ BeginPlot
 		BuildingType=BUILDING_MANCHU_PIAOHAO
 		BuildingType=BUILDING_UNIVERSITY
 		BuildingType=BUILDING_ESTATE
+		BuildingType=BUILDING_MANOR
+		BuildingType=BUILDING_SCHOOL
+		BuildingType=BUILDING_RELIQUARY
 		BuildingType=BUILDING_CONFUCIAN_TEMPLE
 		BuildingType=BUILDING_TAOIST_TEMPLE
 		BuildingType=BUILDING_DUJIANGYAN
@@ -14763,6 +15649,10 @@ BeginPlot
 		BuildingType=BUILDING_CUSTOMS_HOUSE
 		BuildingType=BUILDING_UNIVERSITY
 		BuildingType=BUILDING_ESTATE
+		BuildingType=BUILDING_FAIRGROUND
+		BuildingType=BUILDING_MANOR
+		BuildingType=BUILDING_SCHOOL
+		BuildingType=BUILDING_RELIQUARY
 		BuildingType=BUILDING_BUDDHIST_TEMPLE
 		BuildingType=BUILDING_BUDDHIST_CATHEDRAL
 		BuildingType=BUILDING_BUDDHIST_MONASTERY
@@ -14820,6 +15710,9 @@ BeginPlot
 		BuildingType=BUILDING_FORGE
 		BuildingType=BUILDING_GROCER
 		BuildingType=BUILDING_POST_OFFICE
+		BuildingType=BUILDING_FAIRGROUND
+		BuildingType=BUILDING_MANOR
+		BuildingType=BUILDING_SCHOOL
 		BuildingType=BUILDING_CONFUCIAN_TEMPLE
 		BuildingType=BUILDING_TAOIST_TEMPLE
 		ReligionType=RELIGION_CONFUCIANISM
@@ -15064,6 +15957,9 @@ BeginPlot
 		BuildingType=BUILDING_JAIL
 		BuildingType=BUILDING_BATH
 		BuildingType=BUILDING_FORGE
+		BuildingType=BUILDING_FAIRGROUND
+		BuildingType=BUILDING_MANOR
+		BuildingType=BUILDING_SCHOOL
 		BuildingType=BUILDING_MANCHU_PIAOHAO
 		BuildingType=BUILDING_CONFUCIAN_TEMPLE
 		ReligionType=RELIGION_CONFUCIANISM
@@ -15225,7 +16121,9 @@ BeginPlot
 		BuildingType=BUILDING_WHARF
 		BuildingType=BUILDING_BANK
 		BuildingType=BUILDING_UNIVERSITY
-		BuildingType=BUILDING_BUDDHIST_TEMPLE
+		BuildingType=BUILDING_FAIRGROUND
+		BuildingType=BUILDING_SCHOOL
+		BuildingType=BUILDING_RELIQUARY
 		BuildingType=BUILDING_CONFUCIAN_TEMPLE
 		BuildingType=BUILDING_CONFUCIAN_MONASTERY
 		ReligionType=RELIGION_CONFUCIANISM
@@ -15295,6 +16193,11 @@ BeginPlot
 		BuildingType=BUILDING_POST_OFFICE
 		BuildingType=BUILDING_MANCHU_PIAOHAO
 		BuildingType=BUILDING_ESTATE
+		BuildingType=BUILDING_FAIRGROUND
+		BuildingType=BUILDING_MANOR
+		BuildingType=BUILDING_SCHOOL
+		BuildingType=BUILDING_RELIQUARY
+		BuildingType=BUILDING_COUNCIL
 		BuildingType=BUILDING_CONFUCIAN_TEMPLE
 		BuildingType=BUILDING_CONFUCIAN_CATHEDRAL
 		BuildingType=BUILDING_CONFUCIAN_MONASTERY
@@ -15345,6 +16248,7 @@ BeginPlot
 		BuildingType=BUILDING_MARKET
 		BuildingType=BUILDING_JAIL
 		BuildingType=BUILDING_FORGE
+		BuildingType=BUILDING_SCHOOL
 		BuildingType=BUILDING_BUDDHIST_TEMPLE
 		ReligionType=RELIGION_BUDDHISM
 		BeginCulture
@@ -15439,6 +16343,7 @@ BeginPlot
 		BuildingType=BUILDING_MARKET
 		BuildingType=BUILDING_FORGE
 		BuildingType=BUILDING_POST_OFFICE
+		BuildingType=BUILDING_SCHOOL
 		BuildingType=BUILDING_CONFUCIAN_TEMPLE
 		BuildingType=BUILDING_CONFUCIAN_MONASTERY
 		ReligionType=RELIGION_CONFUCIANISM
@@ -15718,6 +16623,9 @@ BeginPlot
 		BuildingType=BUILDING_VIETNAMESE_WATER_PUPPET_THEATRE
 		BuildingType=BUILDING_MARKET
 		BuildingType=BUILDING_FORGE
+		BuildingType=BUILDING_SCHOOL
+		BuildingType=BUILDING_MANOR
+		BuildingType=BUILDING_FAIRGROUND
 		BuildingType=BUILDING_BUDDHIST_TEMPLE
 		BuildingType=BUILDING_CONFUCIAN_TEMPLE
 		ReligionType=RELIGION_CATHOLICISM
@@ -15818,7 +16726,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=124,y=28
-	ImprovementType=IMPROVEMENT_ORCHARD
+	ImprovementType=IMPROVEMENT_PLANTATION
 EndPlot
 BeginPlot
 	x=124,y=30
@@ -15882,6 +16790,8 @@ BeginPlot
 		BuildingType=BUILDING_POST_OFFICE
 		BuildingType=BUILDING_MANCHU_PIAOHAO
 		BuildingType=BUILDING_ESTATE
+		BuildingType=BUILDING_MANOR
+		BuildingType=BUILDING_SCHOOL
 		BuildingType=BUILDING_CONFUCIAN_TEMPLE
 		BuildingType=BUILDING_TAOIST_TEMPLE
 		ReligionType=RELIGION_CONFUCIANISM
@@ -16017,6 +16927,11 @@ BeginPlot
 		BuildingType=BUILDING_POST_OFFICE
 		BuildingType=BUILDING_WHARF
 		BuildingType=BUILDING_COFFEEHOUSE
+		BuildingType=BUILDING_FAIRGROUND
+		BuildingType=BUILDING_MANOR
+		BuildingType=BUILDING_SCHOOL
+		BuildingType=BUILDING_RELIQUARY
+		BuildingType=BUILDING_COUNCIL
 		BuildingType=BUILDING_CONFUCIAN_TEMPLE
 		BuildingType=BUILDING_CONFUCIAN_CATHEDRAL
 		BuildingType=BUILDING_ADMINISTRATIVE_CENTER
@@ -16081,6 +16996,9 @@ BeginPlot
 		BuildingType=BUILDING_POST_OFFICE
 		BuildingType=BUILDING_MANCHU_PIAOHAO
 		BuildingType=BUILDING_ESTATE
+		BuildingType=BUILDING_FAIRGROUND
+		BuildingType=BUILDING_MANOR
+		BuildingType=BUILDING_SCHOOL
 		BuildingType=BUILDING_CONFUCIAN_TEMPLE
 		BuildingType=BUILDING_CONFUCIAN_MONASTERY
 		BuildingType=BUILDING_CONFUCIAN_SHRINE
@@ -16215,6 +17133,11 @@ BeginPlot
 		BuildingType=BUILDING_CUSTOMS_HOUSE
 		BuildingType=BUILDING_SEWER
 		BuildingType=BUILDING_ESTATE
+		BuildingType=BUILDING_FAIRGROUND
+		BuildingType=BUILDING_MANOR
+		BuildingType=BUILDING_SCHOOL
+		BuildingType=BUILDING_RELIQUARY
+		BuildingType=BUILDING_COUNCIL
 		BuildingType=BUILDING_CONFUCIAN_TEMPLE
 		BuildingType=BUILDING_CONFUCIAN_CATHEDRAL
 		BuildingType=BUILDING_CONFUCIAN_MONASTERY
@@ -16523,6 +17446,10 @@ BeginPlot
 		BuildingType=BUILDING_BATH
 		BuildingType=BUILDING_FORGE
 		BuildingType=BUILDING_PHARMACY
+		BuildingType=BUILDING_FAIRGROUND
+		BuildingType=BUILDING_MANOR
+		BuildingType=BUILDING_SCHOOL
+		BuildingType=BUILDING_RELIQUARY
 		BuildingType=BUILDING_CONFUCIAN_TEMPLE
 		BuildingType=BUILDING_CONFUCIAN_CATHEDRAL
 		BuildingType=BUILDING_PORCELAIN_TOWER
@@ -16581,6 +17508,7 @@ BeginPlot
 		BuildingType=BUILDING_MARKET
 		BuildingType=BUILDING_JAIL
 		BuildingType=BUILDING_FORGE
+		BuildingType=BUILDING_SCHOOL
 		ReligionType=RELIGION_CONFUCIANISM
 		BeginCulture
 			Civilization=CIVILIZATION_MANCHU, Culture=100
@@ -16672,6 +17600,8 @@ BeginPlot
 		BuildingType=BUILDING_GROCER
 		BuildingType=BUILDING_MANCHU_PIAOHAO
 		BuildingType=BUILDING_ESTATE
+		BuildingType=BUILDING_MANOR
+		BuildingType=BUILDING_SCHOOL
 		BuildingType=BUILDING_CONFUCIAN_TEMPLE
 		BuildingType=BUILDING_CONFUCIAN_MONASTERY
 		ReligionType=RELIGION_CONFUCIANISM
@@ -16744,6 +17674,8 @@ BeginPlot
 		BuildingType=BUILDING_FORGE
 		BuildingType=BUILDING_POST_OFFICE
 		BuildingType=BUILDING_MANCHU_PIAOHAO
+		BuildingType=BUILDING_MANOR
+		BuildingType=BUILDING_SCHOOL
 		BuildingType=BUILDING_CONFUCIAN_TEMPLE
 		BuildingType=BUILDING_TAOIST_TEMPLE
 		ReligionType=RELIGION_CONFUCIANISM
@@ -16883,6 +17815,10 @@ BeginPlot
 		BuildingType=BUILDING_POST_OFFICE
 		BuildingType=BUILDING_WHARF
 		BuildingType=BUILDING_CUSTOMS_HOUSE
+		BuildingType=BUILDING_FAIRGROUND
+		BuildingType=BUILDING_MANOR
+		BuildingType=BUILDING_SCHOOL
+		BuildingType=BUILDING_RELIQUARY
 		BuildingType=BUILDING_CONFUCIAN_TEMPLE
 		BuildingType=BUILDING_CONFUCIAN_MONASTERY
 		BuildingType=BUILDING_TAOIST_TEMPLE
@@ -17062,8 +17998,6 @@ BeginPlot
 		BuildingType=BUILDING_KOREAN_SEOWON
 		BuildingType=BUILDING_STAR_FORT
 		BuildingType=BUILDING_ESTATE
-		BuildingType=BUILDING_BUDDHIST_TEMPLE
-		BuildingType=BUILDING_BUDDHIST_MONASTERY
 		BuildingType=BUILDING_CONFUCIAN_TEMPLE
 		BuildingType=BUILDING_CONFUCIAN_MONASTERY
 		ReligionType=RELIGION_CONFUCIANISM
@@ -17103,6 +18037,7 @@ BeginPlot
 		BuildingType=BUILDING_MARKET
 		BuildingType=BUILDING_JAIL
 		BuildingType=BUILDING_FORGE
+		BuildingType=BUILDING_SCHOOL
 		BuildingType=BUILDING_CONFUCIAN_TEMPLE
 		ReligionType=RELIGION_CONFUCIANISM
 		BeginCulture
@@ -17201,6 +18136,7 @@ BeginPlot
 		BuildingType=BUILDING_LIGHTHOUSE
 		BuildingType=BUILDING_MARKET
 		BuildingType=BUILDING_FORGE
+		BuildingType=BUILDING_SCHOOL
 		BuildingType=BUILDING_CONFUCIAN_TEMPLE
 		ReligionType=RELIGION_CONFUCIANISM
 		BeginCulture
@@ -17298,8 +18234,9 @@ BeginPlot
 		BuildingType=BUILDING_SEWER
 		BuildingType=BUILDING_STAR_FORT
 		BuildingType=BUILDING_ESTATE
-		BuildingType=BUILDING_BUDDHIST_TEMPLE
-		BuildingType=BUILDING_BUDDHIST_MONASTERY
+		BuildingType=BUILDING_SCHOOL
+		BuildingType=BUILDING_MANOR
+		BuildingType=BUILDING_FAIRGROUND
 		BuildingType=BUILDING_CONFUCIAN_TEMPLE
 		BuildingType=BUILDING_CONFUCIAN_CATHEDRAL
 		BuildingType=BUILDING_CONFUCIAN_MONASTERY
@@ -17734,6 +18671,11 @@ BeginPlot
 		BuildingType=BUILDING_CIVIC_SQUARE
 		BuildingType=BUILDING_STAR_FORT
 		BuildingType=BUILDING_ESTATE
+		BuildingType=BUILDING_FAIRGROUND
+		BuildingType=BUILDING_MANOR
+		BuildingType=BUILDING_SCHOOL
+		BuildingType=BUILDING_RELIQUARY
+		BuildingType=BUILDING_COUNCIL
 		BuildingType=BUILDING_BUDDHIST_TEMPLE
 		BuildingType=BUILDING_BUDDHIST_CATHEDRAL
 		BuildingType=BUILDING_BUDDHIST_MONASTERY
@@ -17994,6 +18936,11 @@ BeginPlot
 		BuildingType=BUILDING_UNIVERSITY
 		BuildingType=BUILDING_CIVIC_SQUARE
 		BuildingType=BUILDING_ESTATE
+		BuildingType=BUILDING_FAIRGROUND
+		BuildingType=BUILDING_MANOR
+		BuildingType=BUILDING_SCHOOL
+		BuildingType=BUILDING_RELIQUARY
+		BuildingType=BUILDING_COUNCIL
 		BuildingType=BUILDING_BUDDHIST_TEMPLE
 		BuildingType=BUILDING_BUDDHIST_MONASTERY
 		ReligionType=RELIGION_BUDDHISM

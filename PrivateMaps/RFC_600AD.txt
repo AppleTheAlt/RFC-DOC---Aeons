@@ -6,7 +6,7 @@ BeginGame
 	Option=GAMEOPTION_AGGRESSIVE_AI
 	Option=GAMEOPTION_NO_TECH_BROKERING
 	Description=TXT_KEY_RHYES_WB_DESC
-	ModPath=Mods\RFC Dawn of Civilization
+	ModPath=Mods\RFC Aeons
 EndGame
 
 BeginMap
@@ -120,14 +120,14 @@ BeginPlot
 	EndCity
 EndPlot
 BeginPlot
-	x=54,y=65
+	x=54,y=66
 	RouteType=ROUTE_ROAD
 	BeginUnit
-		UnitType=UNIT_SWORDSMAN
+		UnitType=UNIT_CELTIC_GALLOWGLASS
 		UnitOwner=CIVILIZATION_CELT
 	EndUnit
 	BeginUnit
-		UnitType=UNIT_SWORDSMAN
+		UnitType=UNIT_CELTIC_GALLOWGLASS
 		UnitOwner=CIVILIZATION_CELT
 	EndUnit
 	BeginUnit
@@ -160,10 +160,35 @@ BeginPlot
 	EndCity
 EndPlot
 BeginPlot
+	x=56,y=60
+	RouteType=ROUTE_ROAD
+	BeginUnit
+		UnitType=UNIT_SWORDSMAN
+		UnitOwner=CIVILIZATION_INDEPENDENT
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_ARCHER
+		UnitOwner=CIVILIZATION_INDEPENDENT
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_ARCHER
+		UnitOwner=CIVILIZATION_INDEPENDENT
+	EndUnit
+	BeginCity
+		CityOwner=CIVILIZATION_INDEPENDENT
+		CityName=Brest
+		CityPopulation=1
+		BuildingType=BUILDING_GRANARY
+		ReligionType=RELIGION_CATHOLICISM
+		YearFounded=400
+	EndCity
+EndPlot
+
+BeginPlot
 	x=57,y=44
 	RouteType=ROUTE_ROAD
 	BeginUnit
-		UnitType=UNIT_CROSSBOWMAN
+		UnitType=UNIT_ARCHER
 		UnitOwner=CIVILIZATION_INDEPENDENT
 	EndUnit
 	BeginCity
@@ -178,43 +203,148 @@ BeginPlot
 	EndCity
 EndPlot
 BeginPlot
-	x=58,y=35
+	x=57,y=49
 	RouteType=ROUTE_ROAD
 	BeginUnit
-		UnitType=UNIT_MANDE_KELEBOLO
-		UnitOwner=CIVILIZATION_MALI
+		UnitType=UNIT_ARCHER
+		UnitOwner=CIVILIZATION_GOTHS
 	EndUnit
 	BeginUnit
-		UnitType=UNIT_MANDE_KELEBOLO
-		UnitOwner=CIVILIZATION_MALI
-	EndUnit
-	BeginUnit
-		UnitType=UNIT_WORKER
-		UnitOwner=CIVILIZATION_MALI
-	EndUnit
-	BeginUnit
-		UnitType=UNIT_WORKER
-		UnitOwner=CIVILIZATION_MALI
+		UnitType=UNIT_ARCHER
+		UnitOwner=CIVILIZATION_GOTHS
 	EndUnit
 	BeginCity
-		CityOwner=CIVILIZATION_MALI
-		CityName=Djoboro
+		CityOwner=CIVILIZATION_GOTHS
+		CityName=Cordoba
+		CityPopulation=2
+		BuildingType=BUILDING_GRANARY
+		ReligionType=RELIGION_CATHOLICISM
+		BeginCulture
+			Civilization=CIVILIZATION_GOTHS, Culture=20
+		EndCulture
+		YearFounded=-300
+		YearAcquired=400
+		PreviousOwner=CIVILIZATION_PHOENICIA
+		PreviousOwner=CIVILIZATION_ROME
+		PreviousOwner=CIVILIZATION_BARBARIAN
+	EndCity
+EndPlot
+
+BeginPlot
+	x=57,y=51
+	RouteType=ROUTE_ROAD
+	BeginUnit
+		UnitType=UNIT_ARCHER
+		UnitOwner=CIVILIZATION_GOTHS
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_ARCHER
+		UnitOwner=CIVILIZATION_GOTHS
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_GOTHIC_KONTOS_CAVALRY
+		UnitOwner=CIVILIZATION_GOTHS
+	EndUnit
+	BeginCity
+		CityOwner=CIVILIZATION_GOTHS
+		CityName=Toledo
+		CityPopulation=5
+		BuildingType=BUILDING_GRANARY
+		BuildingType=BUILDING_GOTHIC_STONE_HERMITAGE
+		BuildingType=BUILDING_BARRACKS
+		BuildingType=BUILDING_WALLS
+		BuildingType=BUILDING_WEAVER
+		BuildingType=BUILDING_PALACE
+		ReligionType=RELIGION_CATHOLICISM
+		BeginCulture
+			Civilization=CIVILIZATION_GOTHS, Culture=125
+		EndCulture
+		YearFounded=-300
+		YearAcquired=400
+		PreviousOwner=CIVILIZATION_PHOENICIA
+		PreviousOwner=CIVILIZATION_ROME
+		PreviousOwner=CIVILIZATION_BARBARIAN
+	EndCity
+EndPlot
+BeginPlot
+	x=58,y=52
+	RouteType=ROUTE_ROAD
+	ImprovementType=IMPROVEMENT_PASTURE
+EndPlot
+BeginPlot
+	x=58,y=37
+	RouteType=ROUTE_ROAD
+	BeginUnit
+		UnitType=UNIT_SPEARMAN
+		UnitOwner=CIVILIZATION_GHANA
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_ARCHER
+		UnitOwner=CIVILIZATION_GHANA
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_WORKER
+		UnitOwner=CIVILIZATION_GHANA
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_WORKER
+		UnitOwner=CIVILIZATION_GHANA
+	EndUnit
+	BeginCity
+		CityOwner=CIVILIZATION_GHANA
+		CityName=Koumbi Saleh
 		CityPopulation=2
 		BuildingType=BUILDING_PALACE
 		BuildingType=BUILDING_GRANARY
 		BuildingType=BUILDING_MANDE_WANGARA
 		BuildingType=BUILDING_BIDAIST_TEMPLE
 		BeginCulture
-			Civilization=CIVILIZATION_MALI, Culture=10
+			Civilization=CIVILIZATION_GHANA, Culture=10
 		EndCulture
 		YearFounded=300
 	EndCity
 EndPlot
 BeginPlot
+	x=58,y=64
+	RouteType=ROUTE_ROAD
+	BeginUnit
+		UnitType=UNIT_GERMANIC_WARRIOR
+		UnitOwner=CIVILIZATION_GERMANIA
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_GERMANIC_WARRIOR
+		UnitOwner=CIVILIZATION_GERMANIA
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_ARCHER
+		UnitOwner=CIVILIZATION_GERMANIA
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_GALLEY
+		UnitOwner=CIVILIZATION_GERMANIA
+	EndUnit
+	BeginCity
+		CityOwner=CIVILIZATION_GERMANIA
+		CityName=London
+		CityPopulation=4
+		BuildingType=BUILDING_GRANARY
+		BuildingType=BUILDING_BATH
+		BuildingType=BUILDING_GERMANIC_RUNESTONE
+		ReligionType=RELIGION_CATHOLICISM
+		BeginCulture
+			Civilization=CIVILIZATION_GERMANIA, Culture=30
+		EndCulture
+		YearFounded=50
+		YearAcquired=470
+		PreviousOwner=CIVILIZATION_BARBARIAN
+	EndCity
+EndPlot
+
+BeginPlot
 	x=59,y=56
 	RouteType=ROUTE_ROAD
 	BeginUnit
-		UnitType=UNIT_CROSSBOWMAN
+		UnitType=UNIT_ARCHER
 		UnitOwner=CIVILIZATION_FRANCE
 	EndUnit
 	BeginCity
@@ -235,41 +365,36 @@ BeginPlot
 	EndCity
 EndPlot
 BeginPlot
-	x=60,y=38
+	x=60,y=53
 	RouteType=ROUTE_ROAD
-	BeginUnit
-		UnitType=UNIT_MANDE_KELEBOLO
-		UnitOwner=CIVILIZATION_MALI
-	EndUnit
-	BeginCity
-		CityOwner=CIVILIZATION_MALI
-		CityName=Tumbutu
-		CityPopulation=3
-		BuildingType=BUILDING_GRANARY
-		BuildingType=BUILDING_BIDAIST_TEMPLE
-		BeginCulture
-			Civilization=CIVILIZATION_MALI, Culture=10
-		EndCulture
-		YearFounded=400
-	EndCity
+	ImprovementType=IMPROVEMENT_PASTURE
 EndPlot
 BeginPlot
 	x=61,y=52
 	RouteType=ROUTE_ROAD
 	BeginUnit
-		UnitType=UNIT_CROSSBOWMAN
-		UnitOwner=CIVILIZATION_INDEPENDENT2
+		UnitType=UNIT_ARCHER
+		UnitOwner=CIVILIZATION_GOTHS
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_ARCHER
+		UnitOwner=CIVILIZATION_GOTHS
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_GOTHIC_KONTOS_CAVALRY
+		UnitOwner=CIVILIZATION_GOTHS
 	EndUnit
 	BeginCity
-		CityOwner=CIVILIZATION_INDEPENDENT2
+		CityOwner=CIVILIZATION_GOTHS
 		CityName=Barcelona
-		CityPopulation=2
+		CityPopulation=3
 		BuildingType=BUILDING_GRANARY
+		BuildingType=BUILDING_GOTHIC_STONE_HERMITAGE
 		BuildingType=BUILDING_HARBOR
 		ReligionType=RELIGION_JUDAISM
 		ReligionType=RELIGION_CATHOLICISM
 		BeginCulture
-			Civilization=CIVILIZATION_INDEPENDENT2, Culture=10
+			Civilization=CIVILIZATION_GOTHS, Culture=50
 		EndCulture
 		YearFounded=-300
 		YearAcquired=400
@@ -282,11 +407,11 @@ BeginPlot
 	x=61,y=60
 	RouteType=ROUTE_ROAD
 	BeginUnit
-		UnitType=UNIT_CROSSBOWMAN
+		UnitType=UNIT_ARCHER
 		UnitOwner=CIVILIZATION_FRANCE
 	EndUnit
 	BeginUnit
-		UnitType=UNIT_CROSSBOWMAN
+		UnitType=UNIT_ARCHER
 		UnitOwner=CIVILIZATION_FRANCE
 	EndUnit
 	BeginUnit
@@ -325,7 +450,7 @@ BeginPlot
 	x=63,y=57
 	RouteType=ROUTE_ROAD
 	BeginUnit
-		UnitType=UNIT_CROSSBOWMAN
+		UnitType=UNIT_ARCHER
 		UnitOwner=CIVILIZATION_FRANCE
 	EndUnit
 	BeginCity
@@ -348,7 +473,7 @@ BeginPlot
 	x=64,y=55
 	RouteType=ROUTE_ROAD
 	BeginUnit
-		UnitType=UNIT_CROSSBOWMAN
+		UnitType=UNIT_ARCHER
 		UnitOwner=CIVILIZATION_FRANCE
 	EndUnit
 	BeginCity
@@ -370,6 +495,35 @@ BeginPlot
 	EndCity
 EndPlot
 BeginPlot
+	x=64,y=62
+	RouteType=ROUTE_ROAD
+	BeginUnit
+		UnitType=UNIT_ARCHER
+		UnitOwner=CIVILIZATION_INDEPENDENT2
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_ARCHER
+		UnitOwner=CIVILIZATION_INDEPENDENT2
+	EndUnit
+	BeginCity
+		CityOwner=CIVILIZATION_INDEPENDENT2
+		CityName=Aachen
+		CityPopulation=4
+		BuildingType=BUILDING_GRANARY
+		BuildingType=BUILDING_MONUMENT
+		ReligionType=RELIGION_JUDAISM
+		ReligionType=RELIGION_CATHOLICISM
+		BeginCulture
+			Civilization=CIVILIZATION_INDEPENDENT2, Culture=5
+		EndCulture
+		YearFounded=100
+		YearAcquired=400
+		PreviousOwner=CIVILIZATION_ROME
+		PreviousOwner=CIVILIZATION_BARBARIAN
+	EndCity
+EndPlot
+
+BeginPlot
 	x=66,y=52
 	ImprovementType=IMPROVEMENT_PASTURE
 	RouteType=ROUTE_ROAD
@@ -378,7 +532,7 @@ BeginPlot
 	x=66,y=57
 	RouteType=ROUTE_ROMAN_ROAD
 	BeginUnit
-		UnitType=UNIT_CROSSBOWMAN
+		UnitType=UNIT_ARCHER
 		UnitOwner=CIVILIZATION_INDEPENDENT2
 	EndUnit
 	BeginCity
@@ -400,32 +554,67 @@ BeginPlot
 	EndCity
 EndPlot
 BeginPlot
-	x=67,y=48
+	x=66,y=65
 	RouteType=ROUTE_ROAD
 	BeginUnit
-		UnitType=UNIT_SPEARMAN
-		UnitOwner=CIVILIZATION_INDEPENDENT
+		UnitType=UNIT_GERMANIC_WARRIOR
+		UnitOwner=CIVILIZATION_GERMANIA
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_GERMANIC_WARRIOR
+		UnitOwner=CIVILIZATION_GERMANIA
 	EndUnit
 	BeginUnit
 		UnitType=UNIT_ARCHER
-		UnitOwner=CIVILIZATION_INDEPENDENT
+		UnitOwner=CIVILIZATION_GERMANIA
 	EndUnit
 	BeginCity
-		CityOwner=CIVILIZATION_INDEPENDENT
+		CityOwner=CIVILIZATION_GERMANIA
+		CityName=Hamburg
+		CityPopulation=4
+		BuildingType=BUILDING_PALACE
+		BuildingType=BUILDING_WALLS
+		BuildingType=BUILDING_GERMANIC_RUNESTONE
+		ReligionType=RELIGION_CATHOLICISM
+		ReligionType=RELIGION_ORTHODOXY
+		BeginCulture
+			Civilization=CIVILIZATION_GERMANIA, Culture=50
+		EndCulture
+		YearFounded=-300
+		YearAcquired=400
+		PreviousOwner=CIVILIZATION_BARBARIAN
+	EndCity
+EndPlot
+BeginPlot
+	x=67,y=48
+	RouteType=ROUTE_ROAD
+	BeginUnit
+		UnitType=UNIT_SHORTBOWMAN
+		UnitOwner=CIVILIZATION_BYZANTIUM
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_SHORTBOWMAN
+		UnitOwner=CIVILIZATION_BYZANTIUM
+	EndUnit
+	BeginCity
+		CityOwner=CIVILIZATION_BYZANTIUM
 		CityName=Carthago
 		CityPopulation=2
+		BuildingType=BUILDING_BARRACKS
 		BuildingType=BUILDING_GRANARY
-		BuildingType=BUILDING_HARBOR
+ 		BuildingType=BUILDING_HARBOR
 		ReligionType=RELIGION_CATHOLICISM
 		BeginCulture
-			Civilization=CIVILIZATION_INDEPENDENT, Culture=10
+			Civilization=CIVILIZATION_BYZANTIUM, Culture=10
 		EndCulture
 		YearFounded=-900
 		PreviousOwner=CIVILIZATION_PHOENICIA
 		PreviousOwner=CIVILIZATION_BYZANTIUM
 		PreviousOwner=CIVILIZATION_ROME
+		PreviousOwner=CIVILIZATION_VANDALS
 	EndCity
 EndPlot
+
 BeginPlot
 	x=67,y=54
 	RouteType=ROUTE_ROMAN_ROAD
@@ -442,43 +631,14 @@ BeginPlot
 	x=68,y=53
 	RouteType=ROUTE_ROMAN_ROAD
 	BeginUnit
-		UnitType=UNIT_CROSSBOWMAN
-		UnitOwner=CIVILIZATION_INDEPENDENT2
+		UnitType=UNIT_ARCHER
+		UnitOwner=CIVILIZATION_BYZANTIUM
 		Level=3, Experience=5
 		PromotionType=PROMOTION_CITY_GARRISON1
 		PromotionType=PROMOTION_CITY_GARRISON2
-	EndUnit
-	BeginUnit
-		UnitType=UNIT_CROSSBOWMAN
-		UnitOwner=CIVILIZATION_INDEPENDENT2
-		Level=3, Experience=5
-		PromotionType=PROMOTION_CITY_GARRISON1
-		PromotionType=PROMOTION_CITY_GARRISON2
-	EndUnit
-	BeginUnit
-		UnitType=UNIT_HEAVY_SPEARMAN
-		UnitOwner=CIVILIZATION_INDEPENDENT2
-		Level=3, Experience=5
-		PromotionType=PROMOTION_CITY_GARRISON1
-		PromotionType=PROMOTION_CITY_GARRISON2
-	EndUnit
-	BeginUnit
-		UnitType=UNIT_HEAVY_SPEARMAN
-		UnitOwner=CIVILIZATION_INDEPENDENT2
-		Level=3, Experience=5
-		PromotionType=PROMOTION_CITY_GARRISON1
-		PromotionType=PROMOTION_CITY_GARRISON2
-	EndUnit
-	BeginUnit
-		UnitType=UNIT_CATHOLIC_MISSIONARY
-		UnitOwner=CIVILIZATION_INDEPENDENT2
-	EndUnit
-	BeginUnit
-		UnitType=UNIT_WORKER
-		UnitOwner=CIVILIZATION_INDEPENDENT2
 	EndUnit
 	BeginCity
-		CityOwner=CIVILIZATION_INDEPENDENT2
+		CityOwner=CIVILIZATION_BYZANTIUM
 		CityName=Roma
 		CityPopulation=4
 		BuildingType=BUILDING_BARRACKS
@@ -491,23 +651,53 @@ BeginPlot
 		BuildingType=BUILDING_CATHOLIC_MONASTERY
 		BuildingType=BUILDING_CATHOLIC_SHRINE
 		BuildingType=BUILDING_FLAVIAN_AMPHITHEATRE
-		BuildingType=BUILDING_AQUA_APPIA
 		BuildingType=BUILDING_PANTHEON
+		BuildingType=BUILDING_AQUA_APPIA
+		BuildingType=BUILDING_TRAJANS_COLUMN
+		BuildingType=BUILDING_CIRCUS_MAXIMUS
 		ReligionType=RELIGION_JUDAISM
 		ReligionType=RELIGION_CATHOLICISM
 		HolyCityReligionType=RELIGION_CATHOLICISM
 		BeginCulture
-			Civilization=CIVILIZATION_INDEPENDENT2, Culture=250
+			Civilization=CIVILIZATION_BYZANTIUM, Culture=250
 		EndCulture
 		YearFounded=-750
-		YearAcquired=480
+		YearAcquired=560
 		PreviousOwner=CIVILIZATION_ROME
 		PreviousOwner=CIVILIZATION_BARBARIAN
+		PreviousOwner=CIVILIZATION_GOTHS
 	EndCity
 EndPlot
 BeginPlot
 	x=68,y=56
 	RouteType=ROUTE_ROMAN_ROAD
+EndPlot
+BeginPlot
+	x=68,y=60
+	RouteType=ROUTE_ROAD
+	BeginUnit
+		UnitType=UNIT_GERMANIC_WARRIOR
+		UnitOwner=CIVILIZATION_GERMANIA
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_ARCHER
+		UnitOwner=CIVILIZATION_GERMANIA
+	EndUnit
+	BeginCity
+		CityOwner=CIVILIZATION_GERMANIA
+		CityName=Regensburg
+		CityPopulation=4
+		BuildingType=BUILDING_WALLS
+		BuildingType=BUILDING_GERMANIC_RUNESTONE
+		BuildingType=BUILDING_GRANARY
+		ReligionType=RELIGION_ORTHODOXY
+		BeginCulture
+			Civilization=CIVILIZATION_GERMANIA, Culture=50
+		EndCulture
+		YearFounded=-300
+		YearAcquired=400
+		PreviousOwner=CIVILIZATION_BARBARIAN
+	EndCity
 EndPlot
 BeginPlot
 	x=68,y=67
@@ -516,7 +706,7 @@ BeginPlot
 		UnitType=UNIT_ARCHER
 		UnitOwner=CIVILIZATION_NORSE
 	EndUnit
-	BeginUnit
+		BeginUnit
 		UnitType=UNIT_WORK_BOAT
 		UnitOwner=CIVILIZATION_NORSE
 	EndUnit
@@ -545,11 +735,11 @@ BeginPlot
 	x=68,y=75
 	RouteType=ROUTE_ROAD
 	BeginUnit
-		UnitType=UNIT_CROSSBOWMAN
+		UnitType=UNIT_ARCHER
 		UnitOwner=CIVILIZATION_NORSE
 	EndUnit
 	BeginUnit
-		UnitType=UNIT_CROSSBOWMAN
+		UnitType=UNIT_ARCHER
 		UnitOwner=CIVILIZATION_NORSE
 	EndUnit
 	BeginCity
@@ -565,20 +755,20 @@ BeginPlot
 	RouteType=ROUTE_ROAD
 	BeginUnit
 		UnitType=UNIT_SPEARMAN
-		UnitOwner=CIVILIZATION_INDEPENDENT
+		UnitOwner=CIVILIZATION_BYZANTIUM
 	EndUnit
 	BeginUnit
-		UnitType=UNIT_ARCHER
-		UnitOwner=CIVILIZATION_INDEPENDENT
+		UnitType=UNIT_SHORTBOWMAN
+		UnitOwner=CIVILIZATION_BYZANTIUM
 	EndUnit
 	BeginCity
-		CityOwner=CIVILIZATION_INDEPENDENT
+		CityOwner=CIVILIZATION_BYZANTIUM
 		CityName=Tripolis
 		CityPopulation=2
 		BuildingType=BUILDING_GRANARY
 		ReligionType=RELIGION_CATHOLICISM
 		BeginCulture
-			Civilization=CIVILIZATION_INDEPENDENT, Culture=10
+			Civilization=CIVILIZATION_BYZANTIUM, Culture=10
 		EndCulture
 		YearFounded=-705
 		PreviousOwner=CIVILIZATION_PHOENICIA
@@ -643,7 +833,7 @@ BeginPlot
 	x=70,y=49
 	RouteType=ROUTE_ROMAN_ROAD
 	BeginUnit
-		UnitType=UNIT_ARCHER
+		UnitType=UNIT_SHORTBOWMAN
 		UnitOwner=CIVILIZATION_BYZANTIUM
 	EndUnit
 	BeginCity
@@ -669,11 +859,11 @@ BeginPlot
 	x=70,y=52
 	RouteType=ROUTE_ROMAN_ROAD
 	BeginUnit
-		UnitType=UNIT_CROSSBOWMAN
-		UnitOwner=CIVILIZATION_INDEPENDENT2
+		UnitType=UNIT_SHORTBOWMAN
+		UnitOwner=CIVILIZATION_BYZANTIUM
 	EndUnit
 	BeginCity
-		CityOwner=CIVILIZATION_INDEPENDENT2
+		CityOwner=CIVILIZATION_BYZANTIUM
 		CityName=Neapolis
 		CityPopulation=3
 		BuildingType=BUILDING_GRANARY
@@ -682,12 +872,13 @@ BeginPlot
 		BuildingType=BUILDING_CATHOLIC_TEMPLE
 		ReligionType=RELIGION_CATHOLICISM
 		BeginCulture
-			Civilization=CIVILIZATION_INDEPENDENT2, Culture=50
+			Civilization=CIVILIZATION_BYZANTIUM, Culture=50
 		EndCulture
 		YearFounded=-600
 		YearAcquired=540
 		PreviousOwner=CIVILIZATION_GREECE
 		PreviousOwner=CIVILIZATION_ROME
+		PreviousOwner=CIVILIZATION_GOTHS
 	EndCity
 EndPlot
 BeginPlot
@@ -703,20 +894,19 @@ BeginPlot
 	RouteType=ROUTE_ROAD
 	BeginUnit
 		UnitType=UNIT_SPEARMAN
-		UnitOwner=CIVILIZATION_INDEPENDENT
+		UnitOwner=CIVILIZATION_BYZANTIUM
 	EndUnit
 	BeginCity
-		CityOwner=CIVILIZATION_INDEPENDENT
+		CityOwner=CIVILIZATION_BYZANTIUM
 		CityName=Euesperides
 		CityPopulation=2
 		BuildingType=BUILDING_GRANARY
 		ReligionType=RELIGION_ORTHODOXY
 		BeginCulture
-			Civilization=CIVILIZATION_INDEPENDENT, Culture=10
+			Civilization=CIVILIZATION_BYZANTIUM, Culture=10
 		EndCulture
 		YearFounded=-530
 		PreviousOwner=CIVILIZATION_GREECE
-		PreviousOwner=CIVILIZATION_BYZANTIUM
 		PreviousOwner=CIVILIZATION_ROME
 	EndCity
 EndPlot
@@ -749,7 +939,15 @@ BeginPlot
 		UnitOwner=CIVILIZATION_BYZANTIUM
 	EndUnit
 	BeginUnit
-		UnitType=UNIT_ARCHER
+		UnitType=UNIT_SHORTBOWMAN
+		UnitOwner=CIVILIZATION_BYZANTIUM
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_SHORTBOWMAN
+		UnitOwner=CIVILIZATION_BYZANTIUM
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_SHORTBOWMAN
 		UnitOwner=CIVILIZATION_BYZANTIUM
 	EndUnit
 	BeginUnit
@@ -784,7 +982,11 @@ BeginPlot
 		UnitOwner=CIVILIZATION_BYZANTIUM
 	EndUnit
 	BeginUnit
-		UnitType=UNIT_ARCHER
+		UnitType=UNIT_SHORTBOWMAN
+		UnitOwner=CIVILIZATION_BYZANTIUM
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_SHORTBOWMAN
 		UnitOwner=CIVILIZATION_BYZANTIUM
 	EndUnit
 	BeginCity
@@ -885,10 +1087,12 @@ BeginPlot
 	BeginCity
 		CityOwner=CIVILIZATION_NUBIA
 		CityName=Tungul
-		CityPopulation=1
+		CityPopulation=3
 		BuildingType=BUILDING_PALACE
 		BuildingType=BUILDING_BARRACKS
 		BuildingType=BUILDING_GRANARY
+		BuildingType=BUILDING_TEMPLE_OF_AMUN
+		BuildingType=BUILDING_NURI
 		ReligionType=RELIGION_ORTHODOXY
 		BeginCulture
 			Civilization=CIVILIZATION_NUBIA, Culture=10
@@ -908,7 +1112,7 @@ BeginPlot
 		UnitOwner=CIVILIZATION_BYZANTIUM
 	EndUnit
 	BeginUnit
-		UnitType=UNIT_ARCHER
+		UnitType=UNIT_SHORTBOWMAN
 		UnitOwner=CIVILIZATION_BYZANTIUM
 	EndUnit
 	BeginCity
@@ -944,7 +1148,15 @@ BeginPlot
 		UnitOwner=CIVILIZATION_BYZANTIUM
 	EndUnit
 	BeginUnit
-		UnitType=UNIT_SPEARMAN
+		UnitType=UNIT_BYZANTINE_CATAPHRACT
+		UnitOwner=CIVILIZATION_BYZANTIUM
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_BYZANTINE_CATAPHRACT
+		UnitOwner=CIVILIZATION_BYZANTIUM
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_BYZANTINE_CATAPHRACT
 		UnitOwner=CIVILIZATION_BYZANTIUM
 	EndUnit
 	BeginUnit
@@ -952,15 +1164,27 @@ BeginPlot
 		UnitOwner=CIVILIZATION_BYZANTIUM
 	EndUnit
 	BeginUnit
-		UnitType=UNIT_ARCHER
+		UnitType=UNIT_SPEARMAN
 		UnitOwner=CIVILIZATION_BYZANTIUM
 	EndUnit
 	BeginUnit
-		UnitType=UNIT_ARCHER
+		UnitType=UNIT_SHORTBOWMAN
 		UnitOwner=CIVILIZATION_BYZANTIUM
 	EndUnit
 	BeginUnit
-		UnitType=UNIT_ARCHER
+		UnitType=UNIT_SHORTBOWMAN
+		UnitOwner=CIVILIZATION_BYZANTIUM
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_SHORTBOWMAN
+		UnitOwner=CIVILIZATION_BYZANTIUM
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_SHORTBOWMAN
+		UnitOwner=CIVILIZATION_BYZANTIUM
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_SHORTBOWMAN
 		UnitOwner=CIVILIZATION_BYZANTIUM
 	EndUnit
 	BeginUnit
@@ -1014,8 +1238,10 @@ BeginPlot
 	BeginCity
 		CityOwner=CIVILIZATION_NUBIA
 		CityName=Pape
-		CityPopulation=3
+		CityPopulation=4
 		BuildingType=BUILDING_GRANARY
+		BuildingType=BUILDING_LIBRARY
+		BuildingType=BUILDING_WALLS
 		BuildingType=BUILDING_ORTHODOX_MONASTERY
 		ReligionType=RELIGION_JUDAISM
 		ReligionType=RELIGION_ORTHODOXY
@@ -1070,7 +1296,11 @@ BeginPlot
 	x=82,y=52
 	RouteType=ROUTE_ROMAN_ROAD
 	BeginUnit
-		UnitType=UNIT_ARCHER
+		UnitType=UNIT_SHORTBOWMAN
+		UnitOwner=CIVILIZATION_BYZANTIUM
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_SHORTBOWMAN
 		UnitOwner=CIVILIZATION_BYZANTIUM
 	EndUnit
 	BeginCity
@@ -1115,7 +1345,7 @@ BeginPlot
 	BonusType=NONE
 	RouteType=ROUTE_ROMAN_ROAD
 	BeginUnit
-		UnitType=UNIT_ARCHER
+		UnitType=UNIT_SHORTBOWMAN
 		UnitOwner=CIVILIZATION_BYZANTIUM
 	EndUnit
 	BeginCity
@@ -1162,7 +1392,15 @@ BeginPlot
 	x=84,y=45
 	RouteType=ROUTE_ROAD
 	BeginUnit
-		UnitType=UNIT_ARCHER
+		UnitType=UNIT_SHORTBOWMAN
+		UnitOwner=CIVILIZATION_BYZANTIUM
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_SHORTBOWMAN
+		UnitOwner=CIVILIZATION_BYZANTIUM
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_SHORTBOWMAN
 		UnitOwner=CIVILIZATION_BYZANTIUM
 	EndUnit
 	BeginCity
@@ -1224,7 +1462,7 @@ BeginPlot
 	x=85,y=47
 	RouteType=ROUTE_ROAD
 	BeginUnit
-		UnitType=UNIT_ARCHER
+		UnitType=UNIT_SHORTBOWMAN
 		UnitOwner=CIVILIZATION_BYZANTIUM
 	EndUnit
 	BeginCity
@@ -1261,7 +1499,11 @@ BeginPlot
 	x=85,y=50
 	RouteType=ROUTE_ROAD
 	BeginUnit
-		UnitType=UNIT_ARCHER
+		UnitType=UNIT_SHORTBOWMAN
+		UnitOwner=CIVILIZATION_BYZANTIUM
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_SHORTBOWMAN
 		UnitOwner=CIVILIZATION_BYZANTIUM
 	EndUnit
 	BeginCity
@@ -1294,7 +1536,19 @@ BeginPlot
 	x=86,y=54
 	RouteType=ROUTE_ROMAN_ROAD
 	BeginUnit
-		UnitType=UNIT_ARCHER
+		UnitType=UNIT_SHORTBOWMAN
+		UnitOwner=CIVILIZATION_BYZANTIUM
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_SHORTBOWMAN
+		UnitOwner=CIVILIZATION_BYZANTIUM
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_SHORTBOWMAN
+		UnitOwner=CIVILIZATION_BYZANTIUM
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_SHORTBOWMAN
 		UnitOwner=CIVILIZATION_BYZANTIUM
 	EndUnit
 	BeginCity
@@ -1327,22 +1581,22 @@ BeginPlot
 	x=88,y=50
 	RouteType=ROUTE_ROAD
 	BeginUnit
-		UnitType=UNIT_CROSSBOWMAN
-		UnitOwner=CIVILIZATION_INDEPENDENT
+		UnitType=UNIT_ARCHER
+		UnitOwner=CIVILIZATION_PARTHIA
 	EndUnit
 	BeginUnit
-		UnitType=UNIT_CROSSBOWMAN
-		UnitOwner=CIVILIZATION_INDEPENDENT
+		UnitType=UNIT_PERSIAN_SAVARAN
+		UnitOwner=CIVILIZATION_PARTHIA
 	EndUnit
 	BeginCity
-		CityOwner=CIVILIZATION_INDEPENDENT
+		CityOwner=CIVILIZATION_PARTHIA
 		CityName=Mepsila
 		CityPopulation=2
 		BuildingType=BUILDING_BARRACKS
 		BuildingType=BUILDING_GRANARY
 		ReligionType=RELIGION_ORTHODOXY
 		BeginCulture
-			Civilization=CIVILIZATION_INDEPENDENT, Culture=50
+			Civilization=CIVILIZATION_PARTHIA, Culture=50
 		EndCulture
 		YearFounded=-2490
 		YearAcquired=220
@@ -1356,21 +1610,21 @@ BeginPlot
 	RouteType=ROUTE_ROAD
 	BeginUnit
 		UnitType=UNIT_ARCHER
-		UnitOwner=CIVILIZATION_INDEPENDENT2
+		UnitOwner=CIVILIZATION_INDEPENDENT
 	EndUnit
 	BeginUnit
 		UnitType=UNIT_ARCHER
-		UnitOwner=CIVILIZATION_INDEPENDENT2
+		UnitOwner=CIVILIZATION_INDEPENDENT
 	EndUnit
 	BeginCity
-		CityOwner=CIVILIZATION_INDEPENDENT2
+		CityOwner=CIVILIZATION_INDEPENDENT
 		CityName=Sanaa
 		CityPopulation=2
 		BuildingType=BUILDING_GRANARY
 		BuildingType=BUILDING_JEWISH_TEMPLE
 		ReligionType=RELIGION_JUDAISM
 		BeginCulture
-			Civilization=CIVILIZATION_INDEPENDENT2, Culture=25
+			Civilization=CIVILIZATION_INDEPENDENT, Culture=25
 		EndCulture
 		YearFounded=-500
 	EndCity
@@ -1379,25 +1633,28 @@ BeginPlot
 	x=89,y=47
 	RouteType=ROUTE_ROAD
 	BeginUnit
-		UnitType=UNIT_CROSSBOWMAN
-		UnitOwner=CIVILIZATION_INDEPENDENT2
+		UnitType=UNIT_ARCHER
+		UnitOwner=CIVILIZATION_PARTHIA
 	EndUnit
 	BeginUnit
-		UnitType=UNIT_CROSSBOWMAN
-		UnitOwner=CIVILIZATION_INDEPENDENT2
+		UnitType=UNIT_PERSIAN_SAVARAN
+		UnitOwner=CIVILIZATION_PARTHIA
 	EndUnit
 	BeginCity
-		CityOwner=CIVILIZATION_INDEPENDENT2
+		CityOwner=CIVILIZATION_PARTHIA
 		CityName=Tysfwn
-		CityPopulation=4
+		CityPopulation=7
 		BuildingType=BUILDING_GRANARY
+		BuildingType=BUILDING_PALACE
 		BuildingType=BUILDING_LIBRARY
-		BuildingType=BUILDING_MARKET
+		BuildingType=BUILDING_PARTHIAN_CARAVANSERAI
+		BuildingType=BUILDING_MONUMENT
+		BuildingType=BUILDING_AQUEDUCT
 		BuildingType=BUILDING_ORTHODOX_TEMPLE
 		ReligionType=RELIGION_ORTHODOXY
 		ReligionType=RELIGION_ZOROASTRIANISM
 		BeginCulture
-			Civilization=CIVILIZATION_INDEPENDENT2, Culture=100
+			Civilization=CIVILIZATION_PARTHIA, Culture=300
 		EndCulture
 		YearFounded=-120
 		PreviousOwner=CIVILIZATION_PERSIA
@@ -1416,15 +1673,15 @@ BeginPlot
 	x=89,y=53
 	RouteType=ROUTE_ROAD
 	BeginUnit
-		UnitType=UNIT_CROSSBOWMAN
-		UnitOwner=CIVILIZATION_INDEPENDENT
+		UnitType=UNIT_ARCHER
+		UnitOwner=CIVILIZATION_PARTHIA
 	EndUnit
 	BeginUnit
-		UnitType=UNIT_CROSSBOWMAN
-		UnitOwner=CIVILIZATION_INDEPENDENT
+		UnitType=UNIT_ARCHER
+		UnitOwner=CIVILIZATION_PARTHIA
 	EndUnit
 	BeginCity
-		CityOwner=CIVILIZATION_INDEPENDENT
+		CityOwner=CIVILIZATION_PARTHIA
 		CityName=Artashat
 		CityPopulation=2
 		BuildingType=BUILDING_BARRACKS
@@ -1432,7 +1689,7 @@ BeginPlot
 		BuildingType=BUILDING_ORTHODOX_TEMPLE
 		ReligionType=RELIGION_ORTHODOXY
 		BeginCulture
-			Civilization=CIVILIZATION_INDEPENDENT, Culture=100
+			Civilization=CIVILIZATION_PARTHIA, Culture=100
 		EndCulture
 		YearFounded=-180
 		YearAcquired=500
@@ -1440,6 +1697,7 @@ BeginPlot
 		PreviousOwner=CIVILIZATION_BYZANTIUM
 		PreviousOwner=CIVILIZATION_GREECE
 		PreviousOwner=CIVILIZATION_PERSIA
+		PreviousOwner=CIVILIZATION_ARMENIA
 		PreviousOwner=CIVILIZATION_ROME
 	EndCity
 EndPlot
@@ -1468,24 +1726,35 @@ BeginPlot
 	x=93,y=48
 	RouteType=ROUTE_ROAD
 	BeginUnit
-		UnitType=UNIT_CROSSBOWMAN
-		UnitOwner=CIVILIZATION_INDEPENDENT
+		UnitType=UNIT_ARCHER
+		UnitOwner=CIVILIZATION_PARTHIA
 	EndUnit
 	BeginUnit
-		UnitType=UNIT_CROSSBOWMAN
-		UnitOwner=CIVILIZATION_INDEPENDENT
+		UnitType=UNIT_WORKER
+		UnitOwner=CIVILIZATION_PARTHIA
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_WORKER
+		UnitOwner=CIVILIZATION_PARTHIA
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_WORKER
+		UnitOwner=CIVILIZATION_PARTHIA
 	EndUnit
 	BeginCity
-		CityOwner=CIVILIZATION_INDEPENDENT
+		CityOwner=CIVILIZATION_PARTHIA
 		CityName=Spahan
-		CityPopulation=2
+		CityPopulation=4
 		BuildingType=BUILDING_BARRACKS
+		BuildingType=BUILDING_MONUMENT
+		BuildingType=BUILDING_BATH
+		BuildingType=BUILDING_AQUEDUCT
 		BuildingType=BUILDING_GRANARY
 		BuildingType=BUILDING_WALLS
 		BuildingType=BUILDING_ZOROASTRIAN_TEMPLE
 		ReligionType=RELIGION_ZOROASTRIANISM
 		BeginCulture
-			Civilization=CIVILIZATION_INDEPENDENT, Culture=10
+			Civilization=CIVILIZATION_PARTHIA, Culture=100
 		EndCulture
 		YearFounded=-2000
 		PreviousOwner=CIVILIZATION_PERSIA
@@ -1500,24 +1769,24 @@ BeginPlot
 	x=93,y=51
 	RouteType=ROUTE_ROAD
 	BeginUnit
-		UnitType=UNIT_CROSSBOWMAN
+		UnitType=UNIT_ARCHER
 		UnitOwner=CIVILIZATION_INDEPENDENT
 	EndUnit
 	BeginUnit
-		UnitType=UNIT_CROSSBOWMAN
+		UnitType=UNIT_ARCHER
 		UnitOwner=CIVILIZATION_INDEPENDENT
 	EndUnit
 	BeginCity
-		CityOwner=CIVILIZATION_INDEPENDENT
+		CityOwner=CIVILIZATION_PARTHIA
 		CityName=Raga
 		CityPopulation=3
 		BuildingType=BUILDING_GRANARY
 		BuildingType=BUILDING_WALLS
-		BuildingType=BUILDING_MARKET
+		BuildingType=BUILDING_PARTHIAN_CARAVANSERAI
 		BuildingType=BUILDING_ZOROASTRIAN_TEMPLE
 		ReligionType=RELIGION_ZOROASTRIANISM
 		BeginCulture
-			Civilization=CIVILIZATION_INDEPENDENT, Culture=10
+			Civilization=CIVILIZATION_PARTHIA, Culture=50
 		EndCulture
 		YearFounded=-3000
 		PreviousOwner=CIVILIZATION_PERSIA
@@ -1528,31 +1797,38 @@ BeginPlot
 	x=94,y=45
 	RouteType=ROUTE_ROAD
 	BeginUnit
-		UnitType=UNIT_CROSSBOWMAN
-		UnitOwner=CIVILIZATION_INDEPENDENT2
+		UnitType=UNIT_ARCHER
+		UnitOwner=CIVILIZATION_PARTHIA
 	EndUnit
 	BeginUnit
-		UnitType=UNIT_CROSSBOWMAN
-		UnitOwner=CIVILIZATION_INDEPENDENT2
+		UnitType=UNIT_ARCHER
+		UnitOwner=CIVILIZATION_PARTHIA
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_PERSIAN_SAVARAN
+		UnitOwner=CIVILIZATION_PARTHIA
 	EndUnit
 	BeginUnit
 		UnitType=UNIT_SPEARMAN
-		UnitOwner=CIVILIZATION_INDEPENDENT2
+		UnitOwner=CIVILIZATION_PARTHIA
 	EndUnit
 	BeginCity
-		CityOwner=CIVILIZATION_INDEPENDENT2
+		CityOwner=CIVILIZATION_PARTHIA
 		CityName=Estakhr
-		CityPopulation=2
+		CityPopulation=5
 		BuildingType=BUILDING_GRANARY
+		BuildingType=BUILDING_AQUEDUCT
+		BuildingType=BUILDING_BATH
+		BuildingType=BUILDING_MONUMENT
 		BuildingType=BUILDING_WALLS
-		BuildingType=BUILDING_MARKET
+		BuildingType=BUILDING_PARTHIAN_CARAVANSERAI
 		BuildingType=BUILDING_ZOROASTRIAN_TEMPLE
 		BuildingType=BUILDING_ZOROASTRIAN_SHRINE
 		BuildingType=BUILDING_GONDESHAPUR
 		ReligionType=RELIGION_ZOROASTRIANISM
 		HolyCityReligionType=RELIGION_ZOROASTRIANISM
 		BeginCulture
-			Civilization=CIVILIZATION_INDEPENDENT2, Culture=20
+			Civilization=CIVILIZATION_PARTHIA, Culture=100
 		EndCulture
 		YearFounded=-2000
 		YearAcquired=-550
@@ -1564,24 +1840,45 @@ BeginPlot
 	RouteType=ROUTE_ROAD
 EndPlot
 BeginPlot
+	x=96,y=40
+	RouteType=ROUTE_ROAD
+	BeginUnit
+		UnitType=UNIT_ARCHER
+		UnitOwner=CIVILIZATION_PARTHIA
+	EndUnit
+	BeginCity
+		CityOwner=CIVILIZATION_PARTHIA
+		CityName=Masqat
+		CityPopulation=2
+		BuildingType=BUILDING_GRANARY
+		BuildingType=BUILDING_PARTHIAN_CARAVANSERAI
+		BeginCulture
+			Civilization=CIVILIZATION_PARTHIA, Culture=10
+		EndCulture
+		YearFounded=-2000
+		YearAcquired=-550
+		PreviousOwner=CIVILIZATION_PERSIA
+	EndCity
+EndPlot
+BeginPlot
 	x=97,y=50
 	RouteType=ROUTE_ROAD
 	BeginUnit
-		UnitType=UNIT_CROSSBOWMAN
-		UnitOwner=CIVILIZATION_INDEPENDENT2
+		UnitType=UNIT_ARCHER
+		UnitOwner=CIVILIZATION_PARTHIA
 	EndUnit
 	BeginUnit
-		UnitType=UNIT_CROSSBOWMAN
-		UnitOwner=CIVILIZATION_INDEPENDENT2
+		UnitType=UNIT_PERSIAN_SAVARAN
+		UnitOwner=CIVILIZATION_PARTHIA
 	EndUnit
 	BeginUnit
 		UnitType=UNIT_SPEARMAN
-		UnitOwner=CIVILIZATION_INDEPENDENT2
+		UnitOwner=CIVILIZATION_PARTHIA
 	EndUnit
 	BeginCity
-		CityOwner=CIVILIZATION_INDEPENDENT2
+		CityOwner=CIVILIZATION_PARTHIA
 		CityName=Artacoana
-		CityPopulation=2
+		CityPopulation=4
 		BuildingType=BUILDING_GRANARY
 		BuildingType=BUILDING_WALLS
 		BuildingType=BUILDING_BUDDHIST_TEMPLE
@@ -1589,7 +1886,7 @@ BeginPlot
 		ReligionType=RELIGION_BUDDHISM
 		ReligionType=RELIGION_ZOROASTRIANISM
 		BeginCulture
-			Civilization=CIVILIZATION_INDEPENDENT2, Culture=10
+			Civilization=CIVILIZATION_PARTHIA, Culture=50
 		EndCulture
 		YearFounded=-550
 		PreviousOwner=CIVILIZATION_PERSIA
@@ -1605,17 +1902,17 @@ BeginPlot
 	RouteType=ROUTE_ROAD
 	BeginUnit
 		UnitType=UNIT_ARCHER
-		UnitOwner=CIVILIZATION_TURKS
+		UnitOwner=CIVILIZATION_INDEPENDENT
 	EndUnit
 	BeginCity
-		CityOwner=CIVILIZATION_TURKS
+		CityOwner=CIVILIZATION_INDEPENDENT
 		CityName=Margu
 		CityPopulation=2
 		BuildingType=BUILDING_GRANARY
 		BuildingType=BUILDING_STABLE
 		ReligionType=RELIGION_ZOROASTRIANISM
 		BeginCulture
-			Civilization=CIVILIZATION_TURKS, Culture=10
+			Civilization=CIVILIZATION_INDEPENDENT, Culture=10
 		EndCulture
 		YearFounded=-600
 		YearAcquired=550
@@ -1678,10 +1975,10 @@ BeginPlot
 	RouteType=ROUTE_ROAD
 	BeginUnit
 		UnitType=UNIT_ARCHER
-		UnitOwner=CIVILIZATION_TURKS
+		UnitOwner=CIVILIZATION_INDEPENDENT
 	EndUnit
 	BeginCity
-		CityOwner=CIVILIZATION_TURKS
+		CityOwner=CIVILIZATION_INDEPENDENT
 		CityName=Samarqand
 		CityPopulation=3
 		BuildingType=BUILDING_GRANARY
@@ -1689,7 +1986,7 @@ BeginPlot
 		ReligionType=RELIGION_BUDDHISM
 		ReligionType=RELIGION_ZOROASTRIANISM
 		BeginCulture
-			Civilization=CIVILIZATION_TURKS, Culture=10
+			Civilization=CIVILIZATION_INDEPENDENT, Culture=10
 		EndCulture
 		YearFounded=-795
 		YearAcquired=550
@@ -1814,72 +2111,23 @@ BeginPlot
 	RouteType=ROUTE_ROAD
 EndPlot
 BeginPlot
-	x=104,y=55
+	x=104,y=56
 	RouteType=ROUTE_ROAD
 EndPlot
 BeginPlot
 	x=104,y=58
 	RouteType=ROUTE_ROAD
 	BeginUnit
-		UnitType=UNIT_TURKIC_OGHUZ
-		UnitOwner=CIVILIZATION_TURKS
-	EndUnit
-	BeginUnit
-		UnitType=UNIT_TURKIC_OGHUZ
-		UnitOwner=CIVILIZATION_TURKS
-	EndUnit
-	BeginUnit
-		UnitType=UNIT_TURKIC_OGHUZ
-		UnitOwner=CIVILIZATION_TURKS
-	EndUnit
-	BeginUnit
-		UnitType=UNIT_TURKIC_OGHUZ
-		UnitOwner=CIVILIZATION_TURKS
-	EndUnit
-	BeginUnit
-		UnitType=UNIT_TURKIC_OGHUZ
-		UnitOwner=CIVILIZATION_TURKS
-	EndUnit
-	BeginUnit
-		UnitType=UNIT_TURKIC_OGHUZ
-		UnitOwner=CIVILIZATION_TURKS
-	EndUnit
-	BeginUnit
 		UnitType=UNIT_ARCHER
-		UnitOwner=CIVILIZATION_TURKS
-	EndUnit
-	BeginUnit
-		UnitType=UNIT_SCOUT
-		UnitOwner=CIVILIZATION_TURKS
-	EndUnit
-	BeginUnit
-		UnitType=UNIT_WORKER
-		UnitOwner=CIVILIZATION_TURKS
-	EndUnit
-	BeginUnit
-		UnitType=UNIT_WORKER
-		UnitOwner=CIVILIZATION_TURKS
-	EndUnit
-	BeginUnit
-		UnitType=UNIT_WORKER
-		UnitOwner=CIVILIZATION_TURKS
-	EndUnit
-	BeginUnit
-		UnitType=UNIT_SETTLER
-		UnitOwner=CIVILIZATION_TURKS
-	EndUnit
-	BeginUnit
-		UnitType=UNIT_SETTLER
-		UnitOwner=CIVILIZATION_TURKS
+		UnitOwner=CIVILIZATION_GOKTURKS
 	EndUnit
 	BeginCity
-		CityOwner=CIVILIZATION_TURKS
-		CityName=Orduqent
+		CityOwner=CIVILIZATION_GOKTURKS
+		CityName=Orduquent
 		CityPopulation=2
-		BuildingType=BUILDING_PALACE
 		BuildingType=BUILDING_GRANARY
 		BeginCulture
-			Civilization=CIVILIZATION_TURKS, Culture=10
+			Civilization=CIVILIZATION_GOKTURKS, Culture=30
 		EndCulture
 		YearFounded=550
 		YearAcquired=550
@@ -1939,10 +2187,10 @@ BeginPlot
 	RouteType=ROUTE_ROAD
 	BeginUnit
 		UnitType=UNIT_ARCHER
-		UnitOwner=CIVILIZATION_TURKS
+		UnitOwner=CIVILIZATION_GOKTURKS
 	EndUnit
 	BeginCity
-		CityOwner=CIVILIZATION_TURKS
+		CityOwner=CIVILIZATION_GOKTURKS
 		CityName=Qeshqer
 		CityPopulation=2
 		BuildingType=BUILDING_GRANARY
@@ -1950,7 +2198,7 @@ BeginPlot
 		BuildingType=BUILDING_BUDDHIST_TEMPLE
 		ReligionType=RELIGION_BUDDHISM
 		BeginCulture
-			Civilization=CIVILIZATION_TURKS, Culture=25
+			Civilization=CIVILIZATION_GOKTURKS, Culture=25
 		EndCulture
 		YearFounded=-100
 		YearAcquired=550
@@ -2141,7 +2389,23 @@ EndPlot
 BeginPlot
 	x=109,y=56
 	RouteType=ROUTE_ROAD
+	BeginUnit
+		UnitType=UNIT_ARCHER
+		UnitOwner=CIVILIZATION_GOKTURKS
+	EndUnit
+	BeginCity
+		CityOwner=CIVILIZATION_GOKTURKS
+		CityName=Kuchar
+		CityPopulation=2
+		BuildingType=BUILDING_GRANARY
+		ReligionType=RELIGION_BUDDHISM
+		BeginCulture
+			Civilization=CIVILIZATION_GOKTURKS, Culture=20
+		EndCulture
+		YearFounded=330
+	EndCity
 EndPlot
+
 BeginPlot
 	x=110,y=43
 	RouteType=ROUTE_ROAD
@@ -2210,10 +2474,6 @@ BeginPlot
 		EndCulture
 		YearFounded=-490
 	EndCity
-EndPlot
-BeginPlot
-	x=110,y=56
-	RouteType=ROUTE_ROAD
 EndPlot
 BeginPlot
 	x=111,y=42
@@ -2291,17 +2551,17 @@ BeginPlot
 	RouteType=ROUTE_ROAD
 	BeginUnit
 		UnitType=UNIT_ARCHER
-		UnitOwner=CIVILIZATION_TURKS
+		UnitOwner=CIVILIZATION_GOKTURKS
 	EndUnit
 	BeginCity
-		CityOwner=CIVILIZATION_TURKS
+		CityOwner=CIVILIZATION_GOKTURKS
 		CityName=Turfan
 		CityPopulation=2
 		BuildingType=BUILDING_GRANARY
 		BuildingType=BUILDING_WEAVER
 		ReligionType=RELIGION_BUDDHISM
 		BeginCulture
-			Civilization=CIVILIZATION_TURKS, Culture=20
+			Civilization=CIVILIZATION_GOKTURKS, Culture=20
 		EndCulture
 		YearFounded=-1005
 	EndCity
@@ -2319,16 +2579,16 @@ BeginPlot
 	RouteType=ROUTE_ROAD
 	BeginUnit
 		UnitType=UNIT_ARCHER
-		UnitOwner=CIVILIZATION_TURKS
+		UnitOwner=CIVILIZATION_GOKTURKS
 	EndUnit
 	BeginCity
-		CityOwner=CIVILIZATION_TURKS
+		CityOwner=CIVILIZATION_GOKTURKS
 		CityName=Dukhan
 		CityPopulation=2
 		BuildingType=BUILDING_GRANARY
 		ReligionType=RELIGION_BUDDHISM
 		BeginCulture
-			Civilization=CIVILIZATION_TURKS, Culture=20
+			Civilization=CIVILIZATION_GOKTURKS, Culture=20
 		EndCulture
 		YearFounded=-300
 		YearAcquired=550
@@ -2382,6 +2642,74 @@ EndPlot
 BeginPlot
 	x=119,y=54
 	RouteType=ROUTE_ROAD
+EndPlot
+BeginPlot
+	x=119,y=61
+	RouteType=ROUTE_ROAD
+	BeginUnit
+		UnitType=UNIT_GOKTURK_ASHINA
+		UnitOwner=CIVILIZATION_GOKTURKS
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_GOKTURK_ASHINA
+		UnitOwner=CIVILIZATION_GOKTURKS
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_GOKTURK_ASHINA
+		UnitOwner=CIVILIZATION_GOKTURKS
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_GOKTURK_ASHINA
+		UnitOwner=CIVILIZATION_GOKTURKS
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_GOKTURK_ASHINA
+		UnitOwner=CIVILIZATION_GOKTURKS
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_GOKTURK_ASHINA
+		UnitOwner=CIVILIZATION_GOKTURKS
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_GOKTURK_ASHINA
+		UnitOwner=CIVILIZATION_GOKTURKS
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_SCOUT
+		UnitOwner=CIVILIZATION_GOKTURKS
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_WORKER
+		UnitOwner=CIVILIZATION_GOKTURKS
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_WORKER
+		UnitOwner=CIVILIZATION_GOKTURKS
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_WORKER
+		UnitOwner=CIVILIZATION_GOKTURKS
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_SETTLER
+		UnitOwner=CIVILIZATION_GOKTURKS
+	EndUnit
+	BeginUnit
+		UnitType=UNIT_SETTLER
+		UnitOwner=CIVILIZATION_GOKTURKS
+	EndUnit	
+	BeginCity
+		CityOwner=CIVILIZATION_GOKTURKS
+		CityName=Otuken
+		CityPopulation=3
+		BuildingType=BUILDING_GRANARY
+		BuildingType=BUILDING_PALACE
+		BeginCulture
+			Civilization=CIVILIZATION_GOKTURKS, Culture=20
+		EndCulture
+		YearFounded=550
+		YearAcquired=550
+	EndCity
 EndPlot
 BeginPlot
 	x=120,y=27
@@ -2485,15 +2813,15 @@ BeginPlot
 	x=121,y=42
 	RouteType=ROUTE_ROAD
 	BeginUnit
-		UnitType=UNIT_CROSSBOWMAN
+		UnitType=UNIT_ARCHER
 		UnitOwner=CIVILIZATION_INDEPENDENT
 	EndUnit
 	BeginUnit
-		UnitType=UNIT_CROSSBOWMAN
+		UnitType=UNIT_ARCHER
 		UnitOwner=CIVILIZATION_INDEPENDENT
 	EndUnit
 	BeginUnit
-		UnitType=UNIT_CROSSBOWMAN
+		UnitType=UNIT_ARCHER
 		UnitOwner=CIVILIZATION_INDEPENDENT
 	EndUnit
 	BeginCity
@@ -2504,7 +2832,6 @@ BeginPlot
 		BuildingType=BUILDING_WALLS
 		BuildingType=BUILDING_HARBOR
 		BuildingType=BUILDING_THEATRE
-		BuildingType=BUILDING_CONFUCIAN_TEMPLE
 		ReligionType=RELIGION_HINDUISM
 		ReligionType=RELIGION_BUDDHISM
 		BeginCulture
@@ -2570,6 +2897,28 @@ BeginPlot
 			Civilization=CIVILIZATION_CHINA, Culture=250
 		EndCulture
 		YearFounded=-1095
+	EndCity
+EndPlot
+BeginPlot
+	x=120,y=56
+	RouteType=ROUTE_ROAD
+	BeginUnit
+		UnitType=UNIT_ARCHER
+		UnitOwner=CIVILIZATION_GOKTURKS
+	EndUnit
+	BeginCity
+		CityOwner=CIVILIZATION_GOKTURKS
+		CityName=Bayannur
+		CityPopulation=2
+		BuildingType=BUILDING_GRANARY
+		BuildingType=BUILDING_BUDDHIST_TEMPLE
+		ReligionType=RELIGION_BUDDHISM
+		BeginCulture
+			Civilization=CIVILIZATION_GOKTURKS, Culture=25
+		EndCulture
+		YearFounded=-100
+		YearAcquired=550
+		PreviousOwner=CIVILIZATION_INDEPENDENT
 	EndCity
 EndPlot
 BeginPlot
@@ -2861,7 +3210,7 @@ BeginPlot
 	x=130,y=56
 	RouteType=ROUTE_ROAD
 	BeginUnit
-		UnitType=UNIT_CROSSBOWMAN
+		UnitType=UNIT_ARCHER
 		UnitOwner=CIVILIZATION_KOREA
 	EndUnit
 	BeginCity
@@ -2890,7 +3239,7 @@ BeginPlot
 		UnitOwner=CIVILIZATION_KOREA
 	EndUnit
 	BeginUnit
-		UnitType=UNIT_CROSSBOWMAN
+		UnitType=UNIT_ARCHER
 		UnitOwner=CIVILIZATION_KOREA
 	EndUnit
 	BeginUnit
