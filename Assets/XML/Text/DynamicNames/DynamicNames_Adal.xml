@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Minoa -->
+<Civ4GameText xmlns="http://www.firaxis.com">
+	<TEXT>
+		<Tag>TXT_KEY_CIV_ADAL_DESC</Tag>
+		<English>The Adalites</English>
+		<French>The Adalites</French>
+		<German>The Adalites</German>
+		<Italian>The Adalites</Italian>
+		<Spanish>The Adalites</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_ADAL_PEOPLES</Tag>
+		<English>Shewa Peoples</English>
+		<French>Shewa Peoples</French>
+		<German>Shewa Peoples</German>
+		<Italian>Shewa Peoples</Italian>
+		<Spanish>Shewa Peoples</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_ADAL_ADJECTIVE</Tag>
+		<English>Adalite</English>
+		<French>Adalite</French>
+		<German>Adalite</German>
+		<Italian>Adalite</Italian>
+		<Spanish>Adalite</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_ADAL_SHORT_DESC</Tag>
+		<English>Adal</English>
+		<French>Adal</French>
+		<German>Adal</German>
+		<Italian>Adal</Italian>
+		<Spanish>Adal</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_ADAL_DEFAULT</Tag>
+		<English>%s1 Sultanate</English>
+		<French>%s1 Sultanate</French>
+		<German>%s1 Sultanate</German>
+		<Italian>%s1 Sultanate</Italian>
+		<Spanish>%s1 Sultanate</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_ADAL_IFAT</Tag>
+		<English>Ifat</English>
+		<French>Ifat</French>
+		<German>Ifat</German>
+		<Italian>Ifat</Italian>
+		<Spanish>Ifat</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_ADAL_HARAR</Tag>
+		<English>Harar</English>
+		<French>Harar</French>
+		<German>Harar</German>
+		<Italian>Harar</Italian>
+		<Spanish>Harar</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_ADAL_HARARI</Tag>
+		<English>Harari</English>
+		<French>Harari</French>
+		<German>Harari</German>
+		<Italian>Harari</Italian>
+		<Spanish>Harari</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_ADAL_SOMALILAND</Tag>
+		<English>Somaliland</English>
+		<French>Somaliland</French>
+		<German>Somaliland</German>
+		<Italian>Somaliland</Italian>
+		<Spanish>Somaliland</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_ADAL_SOMALI</Tag>
+		<English>Somali</English>
+		<French>Somali</French>
+		<German>Somali</German>
+		<Italian>Somali</Italian>
+		<Spanish>Somali</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_ADAL_REPUBLIC</Tag>
+		<English>Republic of %s1</English>
+		<English>Republic of %s1</English>
+		<French>Republic of %s1</French>
+		<German>Republic of %s1</German>
+		<Italian>Republic of %s1</Italian>
+		<Spanish>Republic of %s1</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_ADAL_COMMUNIST</Tag>
+		<English>Peoples' Republic of %s1</English>
+		<English>Peoples' Republic of %s1</English>
+		<French>Peoples' Republic of %s1</French>
+		<German>Peoples' Republic of %s1</German>
+		<Italian>Peoples' Republic of %s1</Italian>
+		<Spanish>Peoples' Republic of %s1</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_ADAL_FASCIST</Tag>
+		<English>Pan-%s2 State</English>
+		<English>Pan-%s2 State</English>
+		<French>Pan-%s2 State</French>
+		<German>Pan-%s2 State</German>
+		<Italian>Pan-%s2 State</Italian>
+		<Spanish>Pan-%s2 State</Spanish>
+	</TEXT>
+</Civ4GameText>

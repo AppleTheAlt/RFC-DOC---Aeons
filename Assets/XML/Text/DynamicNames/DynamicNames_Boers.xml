@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Minoa -->
+<Civ4GameText xmlns="http://www.firaxis.com">
+	<TEXT>
+		<Tag>TXT_KEY_CIV_BOERS_DESC</Tag>
+		<English>The Boers</English>
+		<French>The Boers</French>
+		<German>The Boers</German>
+		<Italian>The Boers</Italian>
+		<Spanish>The Boers</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_BOERS_PEOPLES</Tag>
+		<English>Afrikaner Peoples</English>
+		<French>Afrikaner Peoples</French>
+		<German>Afrikaner Peoples</German>
+		<Italian>Afrikaner Peoples</Italian>
+		<Spanish>Afrikaner Peoples</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_BOERS_ADJECTIVE</Tag>
+		<English>Boer</English>
+		<French>Boer</French>
+		<German>Boer</German>
+		<Italian>Boer</Italian>
+		<Spanish>Boer</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_BOERS_SHORT_DESC</Tag>
+		<English>Boers</English>
+		<French>Boers</French>
+		<German>Boers</German>
+		<Italian>Boers</Italian>
+		<Spanish>Boers</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_BOERS_DEFAULT</Tag>
+		<English>%s2 Republics</English>
+		<French>%s2 Republics</French>
+		<German>%s2 Republics</German>
+		<Italian>%s2 Republics</Italian>
+		<Spanish>%s2 Republics</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_BOERS_SWELLENDAM</Tag>
+		<English>Republic of Swellendam</English>
+		<French>Republic of Swellendam</French>
+		<German>Republic of Swellendam</German>
+		<Italian>Republic of Swellendam</Italian>
+		<Spanish>Republic of Swellendam</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_BOERS_TRANSVAAL</Tag>
+		<English>Transvaal Republic</English>
+		<French>Transvaal Republic</French>
+		<German>Transvaal Republic</German>
+		<Italian>Transvaal Republic</Italian>
+		<Spanish>Transvaal Republic</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_BOERS_ORANGE</Tag>
+		<English>Orange Free State</English>
+		<French>Orange Free State</French>
+		<German>Orange Free State</German>
+		<Italian>Orange Free State</Italian>
+		<Spanish>Orange Free State</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_BOERS_SOUTH_AFRICA</Tag>
+		<English>South African Republic</English>
+		<French>South African Republic</French>
+		<German>South African Republic</German>
+		<Italian>South African Republic</Italian>
+		<Spanish>South African Republic</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_BOERS_EMPIRE</Tag>
+		<English>United %s2 Republics</English>
+		<French>United %s2 Republics</French>
+		<German>United %s2 Republics</German>
+		<Italian>United %s2 Republics</Italian>
+		<Spanish>United %s2 Republics</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_BOERS_KINGDOM</Tag>
+		<English>Kingdom of the %s1</English>
+		<English>Kingdom of the %s1</English>
+		<French>Kingdom of the %s1</French>
+		<German>Kingdom of the %s1</German>
+		<Italian>Kingdom of the %s1</Italian>
+		<Spanish>Kingdom of the %s1</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_BOERS_REPUBLIC</Tag>
+		<English>%s2 Republics</English>
+		<English>%s2 Republics</English>
+		<French>%s2 Republics</French>
+		<German>%s2 Republics</German>
+		<Italian>%s2 Republics</Italian>
+		<Spanish>%s2 Republics</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_BOERS_COMMUNIST</Tag>
+		<English>Socialist %s2 States</English>
+		<English>Socialist %s2 States</English>
+		<French>Socialist %s2 States</French>
+		<German>Socialist %s2 States</German>
+		<Italian>Socialist %s2 States</Italian>
+		<Spanish>Socialist %s2 States</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_BOERS_FASCIST</Tag>
+		<English>Afrikaner Union of South Africa</English>
+		<English>Afrikaner Union of South Africa</English>
+		<French>Afrikaner Union of South Africa</French>
+		<German>Afrikaner Union of South Africa</German>
+		<Italian>Afrikaner Union of South Africa</Italian>
+		<Spanish>Afrikaner Union of South Africa</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_ENGLISH_BOERS</Tag>
+		<English>Orange River Colony</English>
+		<English>Orange River Colony</English>
+		<French>Orange River Colony</French>
+		<German>Orange River Colony</German>
+		<Italian>Orange River Colony</Italian>
+		<Spanish>Orange River Colony</Spanish>
+	</TEXT>
+</Civ4GameText>

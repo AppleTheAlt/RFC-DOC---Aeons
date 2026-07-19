@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Minoa -->
+<Civ4GameText xmlns="http://www.firaxis.com">
+	<TEXT>
+		<Tag>TXT_KEY_CIV_KATANGA_DESC</Tag>
+		<English>The Katangese</English>
+		<French>The Katangese</French>
+		<German>The Katangese</German>
+		<Italian>The Katangese</Italian>
+		<Spanish>The Katangese</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_KATANGA_PEOPLES</Tag>
+		<English>Upemba Peoples</English>
+		<French>Upemba Peoples</French>
+		<German>Upemba Peoples</German>
+		<Italian>Upemba Peoples</Italian>
+		<Spanish>Upemba Peoples</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_KATANGA_ADJECTIVE</Tag>
+		<English>Katangese</English>
+		<French>Katangese</French>
+		<German>Katangese</German>
+		<Italian>Katangese</Italian>
+		<Spanish>Katangese</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_KATANGA_SHORT_DESC</Tag>
+		<English>Katanga</English>
+		<French>Katanga</French>
+		<German>Katanga</German>
+		<Italian>Katanga</Italian>
+		<Spanish>Katanga</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_KATANGA_DEFAULT</Tag>
+		<English>%s1 Empire</English>
+		<French>%s1 Empire</French>
+		<German>%s1 Empire</German>
+		<Italian>%s1 Empire</Italian>
+		<Spanish>%s1 Empire</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_KATANGA_LUNDA</Tag>
+		<English>Lunda</English>
+		<French>Lunda</French>
+		<German>Lunda</German>
+		<Italian>Lunda</Italian>
+		<Spanish>Lunda</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_KATANGA_LUBA</Tag>
+		<English>Luba</English>
+		<French>Luba</French>
+		<German>Luba</German>
+		<Italian>Luba</Italian>
+		<Spanish>Luba</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_KATANGA_LUBAN</Tag>
+		<English>Luban</English>
+		<French>Luban</French>
+		<German>Luban</German>
+		<Italian>Luban</Italian>
+		<Spanish>Luban</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_KATANGA_CHOKWE</Tag>
+		<English>Chokwe</English>
+		<French>Chokwe</French>
+		<German>Chokwe</German>
+		<Italian>Chokwe</Italian>
+		<Spanish>Chokwe</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_KATANGA_KUBA</Tag>
+		<English>Kuba</English>
+		<French>Kuba</French>
+		<German>Kuba</German>
+		<Italian>Kuba</Italian>
+		<Spanish>Kuba</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_KATANGA_KUBAN</Tag>
+		<English>Kuban</English>
+		<French>Kuban</French>
+		<German>Kuban</German>
+		<Italian>Kuban</Italian>
+		<Spanish>Kuban</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_KATANGA_REPUBLIC</Tag>
+		<English>Republic of %s1</English>
+		<English>Republic of %s1</English>
+		<French>Republic of %s1</French>
+		<German>Republic of %s1</German>
+		<Italian>Republic of %s1</Italian>
+		<Spanish>Republic of %s1</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_KATANGA_COMMUNIST</Tag>
+		<English>Democratic Province of %s1</English>
+		<English>Democratic Province of %s1</English>
+		<French>Democratic Province of %s1</French>
+		<German>Democratic Province of %s1</German>
+		<Italian>Democratic Province of %s1</Italian>
+		<Spanish>Democratic Province of %s1</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_KATANGA_FASCIST</Tag>
+		<English>Southern Zaire Republic</English>
+		<English>Southern Zaire Republic</English>
+		<French>Southern Zaire Republic</French>
+		<German>Southern Zaire Republic</German>
+		<Italian>Southern Zaire Republic</Italian>
+		<Spanish>Southern Zaire Republic</Spanish>
+	</TEXT>
+</Civ4GameText>

@@ -149,7 +149,7 @@
 		<Tag>TXT_KEY_CIV_EGYPT_COPTIC</Tag>
 		<English>Coptic</English>
 		<French>
-			<Text>copte</Text>
+			<Text>Royaume copte</Text>
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
@@ -182,6 +182,42 @@
 		<Spanish>Sepat of %s1</Spanish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_CIV_EGYPT_MAMLUK</Tag>
+		<English>Mamluk</English>
+		<French>
+			<Text>mamelouk:mamelouke:mamelouks:mameloukes</Text>
+			<Gender>Male:Female:Male:Female</Gender>
+			<Plural>0:0:1:1</Plural>
+		</French>
+		<German>Mamluk</German>
+		<Italian>Mamluk</Italian>
+		<Spanish>Mamluk</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_EGYPT_FATIMID</Tag>
+		<English>Fatimid</English>
+		<French>
+			<Text>fatimide:fatimide:fatimides:fatimides</Text>
+			<Gender>Male:Female:Male:Female</Gender>
+			<Plural>0:0:1:1</Plural>
+		</French>
+		<German>Fatimid</German>
+		<Italian>Fatimid</Italian>
+		<Spanish>Fatimid</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_EGYPT_AYYUBID</Tag>
+		<English>Ayyubid</English>
+		<French>
+			<Text>ayyoubide:ayyoubide:ayyoubides:ayyoubides</Text>
+			<Gender>Male:Female:Male:Female</Gender>
+			<Plural>0:0:1:1</Plural>
+		</French>
+		<German>Ayyubid</German>
+		<Italian>Ayyubid</Italian>
+		<Spanish>Ayyubid</Spanish>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_CIV_EGYPTIAN_PHOENICIA</Tag>
 		<English>Sepat of Retjenu</English>
 		<French>
@@ -204,14 +240,6 @@
 		<German>Kingdom of Punt</German>
 		<Italian>Kingdom of Punt</Italian>
 		<Spanish>Kingdom of Punt</Spanish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CIV_EGYPTIAN_NAME_NUBIA</Tag>
-		<English>Ta-Seti</English>
-		<French>Ta-Seti</French>
-		<German>Ta-Seti</German>
-		<Italian>Ta-Seti</Italian>
-		<Spanish>Ta-Seti</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIV_EGYPT_ADJECTIVE</Tag>
@@ -260,5 +288,13 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_EGYPTIAN_NAME_NUBIA</Tag>
+		<English>Ta-Seti</English>
+		<French>Ta-Seti</French>
+		<German>Ta-Seti</German>
+		<Italian>Ta-Seti</Italian>
+		<Spanish>Ta-Seti</Spanish>
 	</TEXT>
 </Civ4GameText>

@@ -194,6 +194,18 @@
 		<Spanish>French Mandate of Mesopotamia</Spanish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_CIV_FRENCH_GERMANIA</Tag>
+		<English>Germanic Tributaries</English>
+		<French>
+			<Text>Germanic Tributaries</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>Germanic Tributaries</German>
+		<Italian>Germanic Tributaries</Italian>
+		<Spanish>Germanic Tributaries</Spanish>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_CIV_FRANCE_DEPARTEMENTS_OF</Tag>
 		<English>D&#233;partements of %s1</English>
 		<French>
@@ -362,6 +374,14 @@
 		<Spanish>Duchy of Warsaw</Spanish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_CIV_FRENCH_VIETNAM</Tag>
+		<English>Indochinese Union</English>
+		<French>Indochinese Union</French>
+		<German>Indochinese Union</German>
+		<Italian>Indochinese Union</Italian>
+		<Spanish>Indochinese Union</Spanish>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_CIV_FRENCH_INCA</Tag>
 		<English>Andean France</English>
 		<French>
@@ -482,14 +502,6 @@
 		<Spanish>%s2 Equatorial Africa</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_CIV_FRENCH_VIETNAM</Tag>
-		<English>Indochinese Union</English>
-		<French>Indochinese Union</French>
-		<German>Indochinese Union</German>
-		<Italian>Indochinese Union</Italian>
-		<Spanish>Indochinese Union</Spanish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_CIV_FRANCE_ADJECTIVE</Tag>
 		<English>French</English>
 		<French>
@@ -536,5 +548,29 @@
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_FRANCE_FRANKS</Tag>
+		<English>Franks</English>
+		<French>
+			<Text>Franks</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>Franks</German>
+		<Italian>Franks</Italian>
+		<Spanish>Franks</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_FRANCE_FRANKS_TITLE</Tag>
+		<English>Kingdom of the Franks</English>
+		<French>
+			<Text>Kingdom of the Franks</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>Kingdom of the Franks</German>
+		<Italian>Kingdom of the Franks</Italian>
+		<Spanish>Kingdom of the Franks</Spanish>
 	</TEXT>
 </Civ4GameText>

@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Minoa -->
+<Civ4GameText xmlns="http://www.firaxis.com">
+	<TEXT>
+		<Tag>TXT_KEY_CIV_HUNS_DESC</Tag>
+		<English>The Huns</English>
+		<French>The Huns</French>
+		<German>The Huns</German>
+		<Italian>The Huns</Italian>
+		<Spanish>The Huns</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_HUNS_PEOPLES</Tag>
+		<English>Hunnic Peoples</English>
+		<French>Hunnic Peoples</French>
+		<German>Hunnic Peoples</German>
+		<Italian>Hunnic Peoples</Italian>
+		<Spanish>Hunnic Peoples</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_HUNS_ADJECTIVE</Tag>
+		<English>Hunnic</English>
+		<French>Hunnic</French>
+		<German>Hunnic</German>
+		<Italian>Hunnic</Italian>
+		<Spanish>Hunnic</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_HUNS_SHORT_DESC</Tag>
+		<English>Huns</English>
+		<French>Huns</French>
+		<German>Huns</German>
+		<Italian>Huns</Italian>
+		<Spanish>Huns</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_HUNS_DEFAULT</Tag>
+		<English>%s2 Khaganate</English>
+		<French>%s2 Khaganate</French>
+		<German>%s2 Khaganate</German>
+		<Italian>%s2 Khaganate</Italian>
+		<Spanish>%s2 Khaganate</Spanish>
+	</TEXT>
+
+	<TEXT>
+		<Tag>TXT_KEY_CIV_HUNS_EMPIRE</Tag>
+		<English>%s2 Empire</English>
+		<French>%s2 Empire</French>
+		<German>%s2 Empire</German>
+		<Italian>%s2 Empire</Italian>
+		<Spanish>%s2 Empire</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_HUNS_REPUBLIC</Tag>
+		<English>Republic of the %s1</English>
+		<English>Republic of the %s1</English>
+		<French>Republic of the %s1</French>
+		<German>Republic of the %s1</German>
+		<Italian>Republic of the %s1</Italian>
+		<Spanish>Republic of the %s1</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_HUNS_COMMUNIST</Tag>
+		<English>%s2 Peoples' Republic</English>
+		<English>%s2 Peoples' Republic</English>
+		<French>%s2 Peoples' Republic</French>
+		<German>%s2 Peoples' Republic</German>
+		<Italian>%s2 Peoples' Republic</Italian>
+		<Spanish>%s2 Peoples' Republic</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_HUNS_FASCIST</Tag>
+		<English>Second %s2 Empire</English>
+		<English>Second %s2 Empire</English>
+		<French>Second %s2 Empire</French>
+		<German>Second %s2 Empire</German>
+		<Italian>Second %s2 Empire</Italian>
+		<Spanish>Second %s2 Empire</Spanish>
+	</TEXT>
+</Civ4GameText>

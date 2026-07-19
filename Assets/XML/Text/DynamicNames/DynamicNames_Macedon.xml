@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Harappa -->
+<Civ4GameText xmlns="http://www.firaxis.com">
+	<TEXT>
+		<Tag>TXT_KEY_CIV_MACEDON_DESC</Tag>
+		<English>The Macedonians</English>
+		<French>
+			<Text>The Macedonians</Text>
+			<Gender>Male</Gender>
+			<Plural>1</Plural>
+		</French>
+		<German>The Macedonians</German>
+		<Italian>The Macedonians</Italian>
+		<Spanish>The Macedonians</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_MACEDON_PEOPLES</Tag>
+		<English>Macedonian Peoples</English>
+		<French>
+			<Text>Macedonian Peoples</Text>
+			<Gender>Female</Gender>
+			<Plural>1</Plural>
+		</French>
+		<German>Macedonian Peoples</German>
+		<Italian>Macedonian Peoples</Italian>
+		<Spanish>Macedonian Peoples</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_MACEDON_DEFAULT</Tag>
+		<English>Kingdom of %s1</English>
+		<French>
+			<Text>Kingdom of %s1</Text>
+			<Gender>Female</Gender>
+			<Plural>1</Plural>
+		</French>
+		<German>Kingdom of %s1</German>
+		<Italian>Kingdom of %s1</Italian>
+		<Spanish>Kingdom of %s1</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_MACEDON_REPUBLIC</Tag>
+		<English>%s2 Republic</English>
+		<French>
+			<Text>%s2 Republic</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>%s2 Republic</German>
+		<Italian>%s2 Republic</Italian>
+		<Spanish>%s2 Republic</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_MACEDON_COMMUNIST</Tag>
+		<English>%2 Peoples' Republic</English>
+		<French>
+			<Text>%2 Peoples' Republic</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>%2 Peoples' Republic</German>
+		<Italian>%2 Peoples' Republic</Italian>
+		<Spanish>%2 Peoples' Republic</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_MACEDON_FASCIST</Tag>
+		<English>National Republic of %s1</English>
+		<French>
+			<Text>National Republic of %s1</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>National Republic of %s1</German>
+		<Italian>National Republic of %s1</Italian>
+		<Spanish>National Republic of %s1</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_MACEDON_ADJECTIVE</Tag>
+		<English>Macedonian</English>
+		<French>
+			Macedonian
+		</French>
+		<German>Macedonian</German>
+		<Italian>Macedonian</Italian>
+		<Spanish>Macedonian</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_SELEUCIA_ADJECTIVE</Tag>
+		<English>Seleucid</English>
+		<French>
+			Seleucid
+		</French>
+		<German>Seleucid</German>
+		<Italian>Seleucid</Italian>
+		<Spanish>Seleucid</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_SELEUCIA_SHORT_DESC</Tag>
+		<English>Seleucia</English>
+		<French>
+			Seleucia
+		</French>
+		<German>Seleucia</German>
+		<Italian>Seleucia</Italian>
+		<Spanish>Seleucia</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_MACEDON_DESC</Tag>
+		<English>The Macedonians</English>
+		<French>
+			<Text>The Macedonians</Text>
+			<Gender>Male</Gender>
+			<Plural>1</Plural>
+		</French>
+		<German>The Macedonians</German>
+		<Italian>The Macedonians</Italian>
+		<Spanish>The Macedonians</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_MACEDON_SHORT_DESC</Tag>
+		<English>Macedon</English>
+		<French>
+			<Text>Macedon</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>Macedon</German>
+		<Italian>Macedon</Italian>
+		<Spanish>Macedon</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_MACEDON_EMPIRE</Tag>
+		<English>%s2 Empire</English>
+		<French>
+			<Text>%s2 Empire</Text>
+		</French>
+		<German>%s2 Empire</German>
+		<Italian>%s2 Empire</Italian>
+		<Spanish>%s2 Empire</Spanish>
+	</TEXT>
+
+</Civ4GameText>

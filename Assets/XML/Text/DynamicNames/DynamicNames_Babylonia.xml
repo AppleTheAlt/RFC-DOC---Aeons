@@ -50,6 +50,14 @@
 		</Spanish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_CIV_BABYLONIA_DEFAULT</Tag>
+		<English>Land of %s1</English>
+		<French>Land of %s1</French>
+		<German>Land of %s1</German>
+		<Italian>Land of %s1</Italian>
+		<Spanish>Land of %s1</Spanish>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_CIV_BABYLONIA_FASCIST</Tag>
 		<English>Baathist %s1</English>
 		<French>
@@ -208,14 +216,6 @@
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</Spanish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CIV_BABYLONIA_DEFAULT</Tag>
-		<English>Land of %s1</English>
-		<French>Land of %s1</French>
-		<German>Land of %s1</German>
-		<Italian>Land of %s1</Italian>
-		<Spanish>Land of %s1</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIV_BABYLONIA_AKKADIAN</Tag>

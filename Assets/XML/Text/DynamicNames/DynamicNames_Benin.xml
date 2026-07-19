@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Mali -->
+<Civ4GameText xmlns="http://www.firaxis.com">
+	<TEXT>
+		<Tag>TXT_KEY_CIV_BENIN_DESC</Tag>
+		<English>The Beninese</English>
+		<French>The Beninese</French>
+		<German>The Beninese</German>
+		<Italian>The Beninese</Italian>
+		<Spanish>The Beninese</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_BENIN_ADJECTIVE</Tag>
+		<English>Beninese</English>
+		<French>
+			<Text>Beninese</Text>
+			<Gender>Male:Female:Male:Female</Gender>
+			<Plural>0:0:1:1</Plural>
+		</French>
+		<German>Beninese</German>
+		<Italian>Beninese</Italian>
+		<Spanish>Beninese</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_BENIN_SHORT_DESC</Tag>
+		<English>Benin</English>
+		<French>
+			<Text>Benin</Text>
+			<Gender>Male</Gender>
+			<Plural>1</Plural>
+		</French>
+		<German>Benin</German>
+		<Italian>Benin</Italian>
+		<Spanish>Benin</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_BENIN_DEFAULT</Tag>
+		<English>%s1 Empire</English>
+		<French>Empire %s1</French>
+		<German>%s1 Empire</German>
+		<Italian>%s1 Empire</Italian>
+		<Spanish>%s1 Empire</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_BENIN_PEOPLES</Tag>
+		<English>Beninese Peoples</English>
+		<French>
+			<Text>Peuplades mandingues</Text>
+			<Gender>Female</Gender>
+			<Plural>1</Plural>
+		</French>
+		<German>Beninese Peoples</German>
+		<Italian>Beninese Peoples</Italian>
+		<Spanish>Beninese Peoples</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_BENIN_FASCIST</Tag>
+		<English>Great Nigerian Military State</English>
+		<French>
+			<Text>CGreat Nigerian Military State</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>Great Nigerian Military State</German>
+		<Italian>Great Nigerian Military State</Italian>
+		<Spanish>Great Nigerian Military State</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_BENIN_COMMUNIST</Tag>
+		<English>Peoples' Republic of %s1</English>
+		<French>
+			<Text>Peoples' Republic of %s1</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>Peoples' Republic of %s1</German>
+		<Italian>Peoples' Republic of %s1</Italian>
+		<Spanish>Peoples' Republic of %s1</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_IGODOMIGODO</Tag>
+		<English>Igodomigodo</English>
+		<French>
+			<Text>Igodomigodo</Text>
+			<Gender>Female</Gender>
+			<Plural>1</Plural>
+		</French>
+		<German>Igodomigodo</German>
+		<Italian>Igodomigodo</Italian>
+		<Spanish>Igodomigodo</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_IGODOMIGODO_ADJECTIVE</Tag>
+		<English>Igodomigodan</English>
+		<French>
+			<Text>Igodomigodan</Text>
+			<Gender>Female</Gender>
+			<Plural>1</Plural>
+		</French>
+		<German>Igodomigodan</German>
+		<Italian>Igodomigodan</Italian>
+		<Spanish>Igodomigodan</Spanish>
+	</TEXT>
+</Civ4GameText>

@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Minoa -->
+<Civ4GameText xmlns="http://www.firaxis.com">
+	<TEXT>
+		<Tag>TXT_KEY_CIV_FUNJ_DESC</Tag>
+		<English>The Funj</English>
+		<French>The Funj</French>
+		<German>The Funj</German>
+		<Italian>The Funj</Italian>
+		<Spanish>The Funj</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_FUNJISTAN_PEOPLES</Tag>
+		<English>Abdallabi Peoples</English>
+		<French>Abdallabi Peoples</French>
+		<German>Abdallabi Peoples</German>
+		<Italian>Abdallabi Peoples</Italian>
+		<Spanish>Abdallabi Peoples</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_FUNJ_ADJECTIVE</Tag>
+		<English>Funj</English>
+		<French>Funj</French>
+		<German>Funj</German>
+		<Italian>Funj</Italian>
+		<Spanish>Funj</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_FUNJ_SHORT_DESC</Tag>
+		<English>Funjistan</English>
+		<French>Funjistan</French>
+		<German>Funjistan</German>
+		<Italian>Funjistan</Italian>
+		<Spanish>Funjistan</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_FUNJISTAN_DEFAULT</Tag>
+		<English>Kingdom of %s1</English>
+		<French>Kingdom of %s1</French>
+		<German>Kingdom of %s1</German>
+		<Italian>Kingdom of %s1</Italian>
+		<Spanish>Kingdom of %s1</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_SUDAN_DEFAULT</Tag>
+		<English>Kingdom of %s1</English>
+		<French>Kingdom of %s1</French>
+		<German>Kingdom of %s1</German>
+		<Italian>Kingdom of %s1</Italian>
+		<Spanish>Kingdom of %s1</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_FUNJ_SUDAN</Tag>
+		<English>Sudan</English>
+		<French>Sudan</French>
+		<German>Sudan</German>
+		<Italian>Sudan</Italian>
+		<Spanish>Sudan</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_FUNJ_SUDANESE</Tag>
+		<English>South Sudanese</English>
+		<French>South Sudanese</French>
+		<German>South Sudanese</German>
+		<Italian>South Sudanese</Italian>
+		<Spanish>South Sudanese</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_FUNJISTAN_REPUBLIC</Tag>
+		<English>Republic of %s1</English>
+		<English>Republic of %s1</English>
+		<French>Republic of %s1</French>
+		<German>Republic of %s1</German>
+		<Italian>Republic of %s1</Italian>
+		<Spanish>Republic of %s1</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_FUNJISTAN_COMMUNIST</Tag>
+		<English>Marxist %s1</English>
+		<English>Marxist %s1</English>
+		<French>Marxist %s1</French>
+		<German>Marxist %s1</German>
+		<Italian>Marxist %s1</Italian>
+		<Spanish>Marxist %s1</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_FUNJISTAN_FASCIST</Tag>
+		<English>%s2 Military Junta</English>
+		<English>%s2 Military Junta</English>
+		<French>%s2 Military Junta</French>
+		<German>%s2 Military Junta</German>
+		<Italian>%s2 Military Junta</Italian>
+		<Spanish>%s2 Military Junta</Spanish>
+	</TEXT>
+</Civ4GameText>

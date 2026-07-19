@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Mali -->
+<Civ4GameText xmlns="http://www.firaxis.com">
+	<TEXT>
+		<Tag>TXT_KEY_CIV_ASHANTI_DESC</Tag>
+		<English>The Ashanti</English>
+		<French>The Ashanti</French>
+		<German>The Ashanti</German>
+		<Italian>The Ashanti</Italian>
+		<Spanish>The Ashanti</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_ASHANTI_ADJECTIVE</Tag>
+		<English>Ashanti</English>
+		<French>
+			<Text>Ashanti</Text>
+			<Gender>Male:Female:Male:Female</Gender>
+			<Plural>0:0:1:1</Plural>
+		</French>
+		<German>Ashanti</German>
+		<Italian>Ashanti</Italian>
+		<Spanish>Ashanti</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_ASHANTI_SHORT_DESC</Tag>
+		<English>Ashantiland</English>
+		<French>
+			<Text>Ashantiland</Text>
+			<Gender>Male</Gender>
+			<Plural>1</Plural>
+		</French>
+		<German>Ashantiland</German>
+		<Italian>Ashantiland</Italian>
+		<Spanish>Ashantiland</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_ASHANTILAND_DEFAULT</Tag>
+		<English>%s2 Empire</English>
+		<French>Empire %s2</French>
+		<German>%s2 Empire</German>
+		<Italian>%s2 Empire</Italian>
+		<Spanish>%s2 Empire</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_ASHANTILAND_PEOPLES</Tag>
+		<English>Ashanti Peoples</English>
+		<French>
+			<Text>Peuplades mandingues</Text>
+			<Gender>Female</Gender>
+			<Plural>1</Plural>
+		</French>
+		<German>Beninese Peoples</German>
+		<Italian>Beninese Peoples</Italian>
+		<Spanish>Beninese Peoples</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_ASHANTILAND_FASCIST</Tag>
+		<English>Great Ashanti Union</English>
+		<French>
+			<Text>Great Ashanti Union</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>Great Ashanti Union</German>
+		<Italian>Great Ashanti Union</Italian>
+		<Spanish>Great Ashanti Union</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_ASHANTILAND_COMMUNIST</Tag>
+		<English>Peoples' Republic of %s1</English>
+		<French>
+			<Text>Peoples' Republic of %s1</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>Peoples' Republic of %s1</German>
+		<Italian>Peoples' Republic of %s1</Italian>
+		<Spanish>Peoples' Republic of %s1</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_GHANA</Tag>
+		<English>Ghana</English>
+		<French>
+			<Text>Igodomigodo</Text>
+			<Gender>Female</Gender>
+			<Plural>1</Plural>
+		</French>
+		<German>Ghana</German>
+		<Italian>Ghana</Italian>
+		<Spanish>Ghana</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_GHANA_ADJECTIVE</Tag>
+		<English>Ghanaian</English>
+		<French>
+			<Text>Ghanaian</Text>
+			<Gender>Female</Gender>
+			<Plural>1</Plural>
+		</French>
+		<German>Ghanaian</German>
+		<Italian>Ghanaian</Italian>
+		<Spanish>Ghanaian</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_GOLD_COAST</Tag>
+		<English>Gold Coast Colony</English>
+		<French>
+			<Text>Ghanan</Text>
+			<Gender>Female</Gender>
+			<Plural>1</Plural>
+		</French>
+		<German>Gold Coast Colony</German>
+		<Italian>Gold Coast Colony</Italian>
+		<Spanish>Gold Coast Colony</Spanish>
+	</TEXT>
+</Civ4GameText>

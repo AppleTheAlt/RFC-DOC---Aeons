@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Mali -->
+<Civ4GameText xmlns="http://www.firaxis.com">
+	<TEXT>
+		<Tag>TXT_KEY_CIV_HAUSA_DESC</Tag>
+		<English>The Hausa</English>
+		<French>The Hausa</French>
+		<German>The Hausa</German>
+		<Italian>The Hausa</Italian>
+		<Spanish>The Hausa</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_HAUSA_ADJECTIVE</Tag>
+		<English>Hausa</English>
+		<French>
+			<Text>Hausa</Text>
+			<Gender>Male:Female:Male:Female</Gender>
+			<Plural>0:0:1:1</Plural>
+		</French>
+		<German>Hausa</German>
+		<Italian>Hausa</Italian>
+		<Spanish>Hausa</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_HAUSA_SHORT_DESC</Tag>
+		<English>Hausaland</English>
+		<French>
+			<Text>Hausaland</Text>
+			<Gender>Male</Gender>
+			<Plural>1</Plural>
+		</French>
+		<German>Hausaland</German>
+		<Italian>Hausaland</Italian>
+		<Spanish>Hausaland</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_HAUSALAND_DEFAULT</Tag>
+		<English>Kingdom of %s1</English>
+		<French>Kingdom of %s1</French>
+		<German>Kingdom of %s1</German>
+		<Italian>Kingdom of %s1</Italian>
+		<Spanish>Kingdom of %s1</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_HAUSALAND_PEOPLES</Tag>
+		<English>Hausan Peoples</English>
+		<French>
+			<Text>Hausan Peoples</Text>
+			<Gender>Female</Gender>
+			<Plural>1</Plural>
+		</French>
+		<German>Hausan Peoples</German>
+		<Italian>Hausan Peoples</Italian>
+		<Spanish>Hausan Peoples</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_HAUSALAND_FASCIST</Tag>
+		<English>Military Committee of %s1</English>
+		<French>
+			<Text>Comit&#233; militaire du %s1</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>Military Committee of %s1</German>
+		<Italian>Military Committee of %s1</Italian>
+		<Spanish>Military Committee of %s1</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_NIGERIA</Tag>
+		<English>Nigeria</English>
+		<French>
+			<Text>Chad</Text>
+			<Gender>Female</Gender>
+			<Plural>1</Plural>
+		</French>
+		<German>Chad</German>
+		<Italian>Chad</Italian>
+		<Spanish>Chad</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_NIGERIA_ADJECTIVE</Tag>
+		<English>Nigerian</English>
+		<French>
+			<Text>Chadian</Text>
+			<Gender>Female</Gender>
+			<Plural>1</Plural>
+		</French>
+		<German>Chadian</German>
+		<Italian>Chadian</Italian>
+		<Spanish>Chadian</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_SOKOTO</Tag>
+		<English>Sokoto</English>
+		<French>
+			<Text>Sokoto</Text>
+			<Gender>Female</Gender>
+			<Plural>1</Plural>
+		</French>
+		<German>Sokoto</German>
+		<Italian>Sokoto</Italian>
+		<Spanish>Sokoto</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_SOKOTO_ADJECTIVE</Tag>
+		<English>Sokoto</English>
+		<French>
+			<Text>Sokoto</Text>
+			<Gender>Female</Gender>
+			<Plural>1</Plural>
+		</French>
+		<German>Sokoto</German>
+		<Italian>Sokoto</Italian>
+		<Spanish>Sokoto</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_HAUSA_KATSINA</Tag>
+		<English>Katsina</English>
+		<French>
+			<Text>Katsina</Text>
+			<Gender>Female</Gender>
+			<Plural>1</Plural>
+		</French>
+		<German>Katsina</German>
+		<Italian>Katsina</Italian>
+		<Spanish>Katsina</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_HAUSA_SEVEN_KINGDOMS</Tag>
+		<English>Seven Hausa Kingdoms</English>
+		<French>
+			<Text>Seven Hausa Kingdoms</Text>
+			<Gender>Female</Gender>
+			<Plural>1</Plural>
+		</French>
+		<German>Seven Hausa Kingdoms</German>
+		<Italian>Seven Hausa Kingdoms</Italian>
+		<Spanish>Seven Hausa Kingdoms</Spanish>
+	</TEXT>
+</Civ4GameText>

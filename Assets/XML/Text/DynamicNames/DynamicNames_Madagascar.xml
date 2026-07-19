@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Minoa -->
+<Civ4GameText xmlns="http://www.firaxis.com">
+	<TEXT>
+		<Tag>TXT_KEY_CIV_MADAGASCAR_DESC</Tag>
+		<English>The Malagasy</English>
+		<French>The Malagasy</French>
+		<German>The Malagasy</German>
+		<Italian>The Malagasy</Italian>
+		<Spanish>The Malagasy</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_MADAGASCAR_PEOPLES</Tag>
+		<English>Malagasy Peoples</English>
+		<French>Malagasy Peoples</French>
+		<German>Malagasy Peoples</German>
+		<Italian>Malagasy Peoples</Italian>
+		<Spanish>Malagasy Peoples</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_MADAGASCAR_ADJECTIVE</Tag>
+		<English>Malagasy</English>
+		<French>Malagasy</French>
+		<German>Malagasy</German>
+		<Italian>Malagasy</Italian>
+		<Spanish>Malagasy</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_MADAGASCAR_SHORT_DESC</Tag>
+		<English>Madagascar</English>
+		<French>Madagascar</French>
+		<German>Madagascar</German>
+		<Italian>Madagascar</Italian>
+		<Spanish>Madagascar</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_MADAGASCAR_DEFAULT</Tag>
+		<English>Kingdom of %s1</English>
+		<French>Kingdom of %s1</French>
+		<German>Kingdom of %s1</German>
+		<Italian>Kingdom of %s1</Italian>
+		<Spanish>Kingdom of %s1</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_MADAGASCAR_IMERINA</Tag>
+		<English>Imerina</English>
+		<French>Imerina</French>
+		<German>Imerina</German>
+		<Italian>Imerina</Italian>
+		<Spanish>Imerina</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_MADAGASCAR_REPUBLIC</Tag>
+		<English>Republic of %s1</English>
+		<English>Republic of %s1</English>
+		<French>Republic of %s1</French>
+		<German>Republic of %s1</German>
+		<Italian>Republic of %s1</Italian>
+		<Spanish>Republic of %s1</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_MADAGASCAR_COMMUNIST</Tag>
+		<English>Peoples' Republic of %s1</English>
+		<English>Peoples' Republic of %s1</English>
+		<French>Peoples' Republic of %s1</French>
+		<German>Peoples' Republic of %s1</German>
+		<Italian>Peoples' Republic of %s1</Italian>
+		<Spanish>Peoples' Republic of %s1</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_MADAGASCAR_FASCIST</Tag>
+		<English>%s2 National Island-State</English>
+		<English>%s2 National Island-State</English>
+		<French>%s2 National Island-State</French>
+		<German>%s2 National Island-State</German>
+		<Italian>%s2 National Island-State</Italian>
+		<Spanish>%s2 National Island-State</Spanish>
+	</TEXT>
+</Civ4GameText>

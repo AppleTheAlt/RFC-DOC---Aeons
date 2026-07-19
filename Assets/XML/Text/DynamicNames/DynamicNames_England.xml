@@ -274,6 +274,18 @@
 		</Spanish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_CIV_ENGLISH_SOUTH_AFRICA</Tag>
+		<English>Cape Colony</English>
+		<French>
+			<Text>Mandat %s2 de M&#233;sopotamie</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>Cape Colony</German>
+		<Italian>Cape Colony</Italian>
+		<Spanish>Cape Colony</Spanish>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_CIV_ENGLISH_BABYLONIA</Tag>
 		<English>%s2 Mandate of Mesopotamia</English>
 		<French>

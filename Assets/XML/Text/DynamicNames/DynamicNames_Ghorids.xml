@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--  -->
+<Civ4GameText xmlns="http://www.firaxis.com">
+	<TEXT>
+		<Tag>TXT_KEY_CIV_GHORIDS_DESC</Tag>
+		<English>The Ghurids</English>
+		<French>The Ghurids</French>
+		<German>The Ghurids</German>
+		<Italian>The Ghurids</Italian>
+		<Spanish>The Ghurids</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_GHURIDS_PEOPLES</Tag>
+		<English>Ghazni Peoples</English>
+		<French>
+			<Text>Peuplades ghaznis</Text>
+			<Gender>Female</Gender>
+			<Plural>1</Plural>
+		</French>
+		<German>Ghazni Peoples</German>
+		<Italian>Ghazni Peoples</Italian>
+		<Spanish>Ghazni Peoples</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_GHORIDS_ADJECTIVE</Tag>
+		<English>Ghurid</English>
+		<French>Ghurid</French>
+		<German>Ghurid</German>
+		<Italian>Ghurid</Italian>
+		<Spanish>Ghurid</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_GHAZNAVIDS</Tag>
+		<English>Ghaznavids</English>
+		<French>Ghaznavids</French>
+		<German>Ghaznavids</German>
+		<Italian>Ghaznavids</Italian>
+		<Spanish>Ghaznavids</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_GHAZNAVIDS_ADJECTIVE</Tag>
+		<English>Ghaznavid</English>
+		<French>Ghaznavid</French>
+		<German>Ghaznavid</German>
+		<Italian>Ghaznavid</Italian>
+		<Spanish>Ghaznavid</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_GHORIDS_SHORT_DESC</Tag>
+		<English>Ghurids</English>
+		<French>Ghurids</French>
+		<German>Ghurids</German>
+		<Italian>Ghurids</Italian>
+		<Spanish>Ghurids</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_DELHI_SHORT_DESC</Tag>
+		<English>Delhi</English>
+		<French>Delhi</French>
+		<German>Delhi</German>
+		<Italian>Delhi</Italian>
+		<Spanish>Delhi</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_DELHI_ADJECTIVE</Tag>
+		<English>Delhian</English>
+		<French>Delhian</French>
+		<German>Delhian</German>
+		<Italian>Delhian</Italian>
+		<Spanish>Delhian</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_DELHI_SULTANATE</Tag>
+		<English>%s1 Sultanate</English>
+		<French>%s1 Sultanate</French>
+		<German>%s1 Sultanate</German>
+		<Italian>%s1 Sultanate</Italian>
+		<Spanish>%s1 Sultanate</Spanish>
+	</TEXT>
+
+	<TEXT>
+		<Tag>TXT_KEY_CIV_GHURIDS_DEFAULT</Tag>
+		<English>%s2 Sultanate</English>
+		<French>
+			<Text>%s2 Sultanate</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>%s2 Sultanate</Text>
+			<Gender>Neuter:Neuter:Neuter</Gender>
+			<Plural>0:0:0</Plural>
+		</German>
+		<Italian>
+			<Text>%s2 Sultanate</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>%s2 Sultanate</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_GHORID_INDIA</Tag>
+		<English>Deccan Sultanates</English>
+		<French>
+			<Text>Sultatnats du Deccan</Text>
+			<Gender>Male</Gender>
+			<Plural>1</Plural>
+		</French>
+		<German>Deccan Sultanates</German>
+		<Italian>Deccan Sultanates</Italian>
+		<Spanish>Deccan Sultanates</Spanish>
+	</TEXT>
+</Civ4GameText>

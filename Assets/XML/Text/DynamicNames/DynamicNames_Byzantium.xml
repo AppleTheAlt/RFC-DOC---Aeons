@@ -26,7 +26,43 @@
 		<Spanish>Byzantine Peoples</Spanish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_CIV_MEDIOLANUM_PEOPLES</Tag>
+		<English>Mediolanian Peoples</English>
+		<French>
+			<Text>Peuplades byzantines</Text>
+			<Gender>Female</Gender>
+			<Plural>1</Plural>
+		</French>
+		<German>Byzantine Peoples</German>
+		<Italian>Byzantine Peoples</Italian>
+		<Spanish>Byzantine Peoples</Spanish>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_CIV_BYZANTIUM_DEFAULT</Tag>
+		<English>%s2 Empire</English>
+		<French>
+			<Text>Empire %s2</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>%s2 Reich:%s2 Reich:%s2 Reich</Text>
+			<Gender>Neuter:Neuter:Neuter</Gender>
+			<Plural>0:0:0</Plural>
+		</German>
+		<Italian>
+			<Text>Impero %s2</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Imperio %s2</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_MEDIOLANUM_DEFAULT</Tag>
 		<English>%s2 Empire</English>
 		<French>
 			<Text>Empire %s2</Text>
@@ -74,16 +110,28 @@
 		<Spanish>Despotate of %s1</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_CIV_BYZANTIUM_EASTERN</Tag>
-		<English>Eastern Roman</English>
+		<Tag>TXT_KEY_CIV_BYZANTIUM_EASTERN_EMPIRE</Tag>
+		<English>Eastern %s2 Empire</English>
 		<French>
-			<Text>romain d'Orient</Text>
+			<Text>Eastern %s2 Empire</Text>
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
-		<German>Eastern Roman</German>
-		<Italian>Eastern Roman</Italian>
-		<Spanish>Eastern Roman</Spanish>
+		<German>Eastern %s2 Empire</German>
+		<Italian>Eastern %s2 Empire</Italian>
+		<Spanish>Eastern %s2 Empire</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_BYZANTIUM_WESTERN_EMPIRE</Tag>
+		<English>Western %s2 Empire</English>
+		<French>
+			<Text>Western %s2 Empire</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>Western %s2 Empire</German>
+		<Italian>Western %s2 Empire</Italian>
+		<Spanish>Western %s2 Empire</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIV_BYZANTIUM_TREBIZOND</Tag>
@@ -281,6 +329,58 @@
 		</Italian>
 		<Spanish>
 			<Text>Bizancio</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_MEDIOLANUM_ADJECTIVE</Tag>
+		<English>
+			<Text>Mediolanian</Text>
+			<Gender>Male</Gender>
+			<Plural>0:1</Plural>
+		</English>
+		<French>
+			<Text>Mediolanian</Text>
+			<Gender>Male:Female:Male:Female</Gender>
+			<Plural>0:0:1:1</Plural>
+		</French>
+		<German>
+			<Text>Mediolanian</Text>
+			<Gender>Neuter:Neuter:Neuter</Gender>
+			<Plural>0:0:0</Plural>
+		</German>
+		<Italian>
+			<Text>Mediolanian</Text>
+			<Gender>Male:Female:Male:Female</Gender>
+			<Plural>0:0:1:1</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Mediolanian</Text>
+			<Gender>Male:Female:Male:Female</Gender>
+			<Plural>0:0:1:1</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_MEDIOLANUM_SHORT_DESC</Tag>
+		<English>Mediolanum</English>
+		<French>
+			<Text>Mediolanum</Text>
+			<Gender>Female</Gender>
+			<Plural>1</Plural>
+		</French>
+		<German>
+			<Text>Mediolanum</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Mediolanum</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Mediolanum</Text>
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</Spanish>

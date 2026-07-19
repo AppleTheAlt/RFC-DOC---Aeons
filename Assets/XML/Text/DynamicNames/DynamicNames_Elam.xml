@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Assyria -->
+<Civ4GameText xmlns="http://www.firaxis.com">
+	<TEXT>
+		<Tag>TXT_KEY_CIV_ELAM_DESC</Tag>
+		<English>The Elamites</English>
+		<French>The Elamites</French>
+		<German>The Elamites</German>
+		<Italian>The Elamites</Italian>
+		<Spanish>The Elamites</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_ELAM_PEOPLES</Tag>
+		<English>Elamite Peoples</English>
+		<French>Elamite Peoples</French>
+		<German>Elamite Peoples</German>
+		<Italian>Elamite Peoples</Italian>
+		<Spanish>Elamite Peoples</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_ELAM_ADJECTIVE</Tag>
+		<English>Elamite</English>
+		<French>Elamite</French>
+		<German>Elamite</German>
+		<Italian>Elamite</Italian>
+		<Spanish>Elamite</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_ELAM_SHORT_DESC</Tag>
+		<English>Elam</English>
+		<French>Elam</French>
+		<German>Elam</German>
+		<Italian>Elam</Italian>
+		<Spanish>Elam</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_ELAM_DEFAULT</Tag>
+		<English>Elamite Confederation</English>
+		<French>Elamite Confederation</French>
+		<German>Elamite Confederation</German>
+		<Italian>Elamite Confederation</Italian>
+		<Spanish>Elamite Confederation</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_ELAM_EMPIRE</Tag>
+		<English>%s2 Empire</English>
+		<French>%s2 Empire</French>
+		<German>%s2 Empire</German>
+		<Italian>%s2 Empire</Italian>
+		<Spanish>%s2 Empire</Spanish>
+	</TEXT>
+
+	<TEXT>
+		<Tag>TXT_KEY_CIV_ELAM_REPUBLIC</Tag>
+		<English>Republic of %s1</English>
+		<French>
+			<Text>Republic of %s1</Text>
+		</French>
+		<German>Republic of %s1</German>
+		<Italian>Republic of %s1</Italian>
+		<Spanish>Republic of %s1</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_ELAM_COMMUNIST</Tag>
+		<English>Democratic Republic of %s1</English>
+		<French>
+			<Text>Democratic Republic of %s1</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>Democratic Republic of %s1</German>
+		<Italian>Democratic Republic of %s1</Italian>
+		<Spanish>Democratic Republic of %s1</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_ELAM_FASCIST</Tag>
+		<English>Nationalist %s1</English>
+		<French>
+			<Text>Nationalist %s1</Text>
+		</French>
+		<German>Nationalist %s1</German>
+		<Italian>Nationalist %s1</Italian>
+		<Spanish>Nationalist %s1</Spanish>
+	</TEXT>
+
+
+</Civ4GameText>

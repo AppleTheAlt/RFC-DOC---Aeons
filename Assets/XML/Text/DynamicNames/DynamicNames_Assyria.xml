@@ -42,36 +42,20 @@
 		<Spanish>Land of %s1</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_CIV_ASSYRIA_FASCIST</Tag>
-		<English>Baathist %s1</English>
-		<French>
-			<Text>%s1 baathiste</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</French>
-		<German>
-			<Text>Baathistisches %s1:Baathistische %s1:Baathistischen %s1</Text>
-			<Gender>Neuter:Neuter:Neuter</Gender>
-			<Plural>0:0:0</Plural>
-		</German>
-		<Italian>
-			<Text>%s1 Baathista</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>%s1 Baazista</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</Spanish>
+		<Tag>TXT_KEY_CIV_ASSYRIA_EMPIRE</Tag>
+		<English>%s2 Empire</English>
+		<French>%s2 Empire</French>
+		<German>%s2 Empire</German>
+		<Italian>%s2 Empire</Italian>
+		<Spanish>%s2 Empire</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_CIV_ASSYRIA_COMMUNIST</Tag>
-		<English>Democratic Republic of %s1</English>
-		<French>Democratic Republic of %s1</French>
-		<German>Democratic Republic of %s1</German>
-		<Italian>Democratic Republic of %s1</Italian>
-		<Spanish>Democratic Republic of %s1</Spanish>
+		<Tag>TXT_KEY_CIV_ASSYRIA_NEOEMPIRE</Tag>
+		<English>Neo-%s2 Empire</English>
+		<French>Neo-%s2 Empire</French>
+		<German>Neo-%s2 Empire</German>
+		<Italian>Neo-%s2 Empire</Italian>
+		<Spanish>Neo-%s2 Empire</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIV_ASSYRIA_OLD</Tag>
@@ -97,4 +81,54 @@
 		<Italian>Neo-Assyrian</Italian>
 		<Spanish>Neo-Assyrian</Spanish>
 	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_ASSYRIA_REPUBLIC</Tag>
+		<English>United %s2 Provinces</English>
+		<French>
+			<Text>United %s2 Provinces</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>United %s2 Provinces</German>
+		<Italian>United %s2 Provinces</Italian>
+		<Spanish>United %s2 Provinces</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_ASSYRIA_COMMUNIST</Tag>
+		<English>Democratic Republic of %s1</English>
+		<French>
+			<Text>Democratic Republic of %s1</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>Democratic Republic of %s1</German>
+		<Italian>Democratic Republic of %s1</Italian>
+		<Spanish>Democratic Republic of %s1</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_ASSYRIA_FASCIST</Tag>
+		<English>Baathist %s1</English>
+		<French>
+			<Text>%s1 baathiste</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Baathistisches %s1:Baathistische %s1:Baathistischen %s1</Text>
+			<Gender>Neuter:Neuter:Neuter</Gender>
+			<Plural>0:0:0</Plural>
+		</German>
+		<Italian>
+			<Text>%s1 Baathista</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>%s1 Baazista</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+
+
 </Civ4GameText>

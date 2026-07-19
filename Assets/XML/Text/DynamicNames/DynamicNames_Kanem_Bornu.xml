@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Mali -->
+<Civ4GameText xmlns="http://www.firaxis.com">
+	<TEXT>
+		<Tag>TXT_KEY_CIV_KANEM_BORNU_DESC</Tag>
+		<English>The Kanuri</English>
+		<French>The Kanuri</French>
+		<German>The Kanuri</German>
+		<Italian>The Kanuri</Italian>
+		<Spanish>The Kanuri</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_KANEM_BORNU_ADJECTIVE</Tag>
+		<English>Kanuri</English>
+		<French>
+			<Text>Kanuri</Text>
+			<Gender>Male:Female:Male:Female</Gender>
+			<Plural>0:0:1:1</Plural>
+		</French>
+		<German>Kanuri</German>
+		<Italian>Kanuri</Italian>
+		<Spanish>Kanuri</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_KANEM_BORNU_SHORT_DESC</Tag>
+		<English>Kanem-Bornu</English>
+		<French>
+			<Text>Kanem-Bornu</Text>
+			<Gender>Male</Gender>
+			<Plural>1</Plural>
+		</French>
+		<German>Kanem-Bornu</German>
+		<Italian>Kanem-Bornu</Italian>
+		<Spanish>Kanem-Bornu</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_KANEM-BORNU_DEFAULT</Tag>
+		<English>%s1 Empire</English>
+		<French>Empire %s2</French>
+		<German>%s1 Empire</German>
+		<Italian>%s1 Empire</Italian>
+		<Spanish>%s1 Empire</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_KANEM-BORNU_PEOPLES</Tag>
+		<English>Kanuri Peoples</English>
+		<French>
+			<Text>Kanuri Peoples</Text>
+			<Gender>Female</Gender>
+			<Plural>1</Plural>
+		</French>
+		<German>Kanuri Peoples</German>
+		<Italian>Kanuri Peoples</Italian>
+		<Spanish>Kanuri Peoples</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_KANEM-BORNU_FASCIST</Tag>
+		<English>Military Committee of %s1</English>
+		<French>
+			<Text>Comit&#233; militaire du %s1</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>Military Committee of %s1</German>
+		<Italian>Military Committee of %s1</Italian>
+		<Spanish>Military Committee of %s1</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_CHAD</Tag>
+		<English>Chad</English>
+		<French>
+			<Text>Chad</Text>
+			<Gender>Female</Gender>
+			<Plural>1</Plural>
+		</French>
+		<German>Chad</German>
+		<Italian>Chad</Italian>
+		<Spanish>Chad</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_CHAD_ADJECTIVE</Tag>
+		<English>Chadian</English>
+		<French>
+			<Text>Chadian</Text>
+			<Gender>Female</Gender>
+			<Plural>1</Plural>
+		</French>
+		<German>Chadian</German>
+		<Italian>Chadian</Italian>
+		<Spanish>Chadian</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_KANEM</Tag>
+		<English>Kanem</English>
+		<French>
+			<Text>Kanem</Text>
+			<Gender>Female</Gender>
+			<Plural>1</Plural>
+		</French>
+		<German>Kanem</German>
+		<Italian>Kanem</Italian>
+		<Spanish>Kanem</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_BORNU</Tag>
+		<English>Bornu</English>
+		<French>
+			<Text>Bornu</Text>
+			<Gender>Female</Gender>
+			<Plural>1</Plural>
+		</French>
+		<German>Bornu</German>
+		<Italian>Bornu</Italian>
+		<Spanish>Bornu</Spanish>
+	</TEXT>
+</Civ4GameText>

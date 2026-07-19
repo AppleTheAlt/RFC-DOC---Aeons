@@ -210,6 +210,14 @@
 		<Spanish>Protectorate General to Pacify the North</Spanish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_CIV_CHINESE_ADJECTIVE_EGYPT</Tag>
+		<English>Haixi</English>
+		<French>Haixi</French>
+		<German>Haixi</German>
+		<Italian>Haixi</Italian>
+		<Spanish>Haixi</Spanish>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_CIV_CHINESE_VIETNAM</Tag>
 		<English>Protectorate General to Pacify the South</English>
 		<French>
@@ -220,14 +228,6 @@
 		<German>Protectorate General to Pacify the South</German>
 		<Italian>Protectorate General to Pacify the South</Italian>
 		<Spanish>Protectorate General to Pacify the South</Spanish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CIV_CHINESE_ADJECTIVE_EGYPT</Tag>
-		<English>Haixi</English>
-		<French>Haixi</French>
-		<German>Haixi</German>
-		<Italian>Haixi</Italian>
-		<Spanish>Haixi</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIV_CHINESE_ADJECTIVE_INDIA</Tag>
@@ -340,14 +340,6 @@
 		<German>Chaoxian</German>
 		<Italian>Chaoxian</Italian>
 		<Spanish>Chaoxian</Spanish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CIV_CHINESE_ADJECTIVE_KUSHANS</Tag>
-		<English>Yuezhi</English>
-		<French>Yuezhi</French>
-		<German>Yuezhi</German>
-		<Italian>Yuezhi</Italian>
-		<Spanish>Yuezhi</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIV_CHINESE_ADJECTIVE_BYZANTIUM</Tag>
@@ -476,6 +468,14 @@
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_CHINESE_ADJECTIVE_KUSHANS</Tag>
+		<English>Yuezhi</English>
+		<French>Yuezhi</French>
+		<German>Yuezhi</German>
+		<Italian>Yuezhi</Italian>
+		<Spanish>Yuezhi</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIV_CHINESE_ADJECTIVE_JAVA</Tag>

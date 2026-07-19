@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Minoa -->
+<Civ4GameText xmlns="http://www.firaxis.com">
+	<TEXT>
+		<Tag>TXT_KEY_CIV_ARMENIA_DESC</Tag>
+		<English>The Armenians</English>
+		<French>The Armenians</French>
+		<German>The Armenians</German>
+		<Italian>The Armenians</Italian>
+		<Spanish>The Armenians</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_ARMENIA_PEOPLES</Tag>
+		<English>Armenian Peoples</English>
+		<French>Armenian Peoples</French>
+		<German>Armenian Peoples</German>
+		<Italian>Armenian Peoples</Italian>
+		<Spanish>Armenian Peoples</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_ARMENIA_ADJECTIVE</Tag>
+		<English>Armenian</English>
+		<French>Armenian</French>
+		<German>Armenian</German>
+		<Italian>Armenian</Italian>
+		<Spanish>Armenian</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_ARMENIA_SHORT_DESC</Tag>
+		<English>Armenia</English>
+		<French>Armenia</French>
+		<German>Armenia</German>
+		<Italian>Armenia</Italian>
+		<Spanish>Armenia</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_ARMENIA_DEFAULT</Tag>
+		<English>Kingdom of %s1</English>
+		<French>Kingdom of %s1</French>
+		<German>Kingdom of %s1</German>
+		<Italian>Kingdom of %s1</Italian>
+		<Spanish>Kingdom of %s1</Spanish>
+	</TEXT>
+
+	<TEXT>
+		<Tag>TXT_KEY_CIV_ARMENIA_EMPIRE</Tag>
+		<English>Empire of Greater %s1</English>
+		<French>Empire of Greater %s1</French>
+		<German>Empire of Greater %s1</German>
+		<Italian>Empire of Greater %s1</Italian>
+		<Spanish>Empire of Greater %s1</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_ARMENIA_REPUBLIC</Tag>
+		<English>Republic of %s1</English>
+		<English>Republic of %s1</English>
+		<French>Republic of %s1</French>
+		<German>Republic of %s1</German>
+		<Italian>Republic of %s1</Italian>
+		<Spanish>Republic of %s1</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_ARMENIA_COMMUNIST</Tag>
+		<English>%s2 Soviet Socialist Republic</English>
+		<English>%s2 Soviet Socialist Republic</English>
+		<French>%s2 Soviet Socialist Republic</French>
+		<German>%s2 Soviet Socialist Republic</German>
+		<Italian>%s2 Soviet Socialist Republic</Italian>
+		<Spanish>%s2 Soviet Socialist Republic</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_ARMENIA_FASCIST</Tag>
+		<English>Nationalist %s1</English>
+		<English>Nationalist %s1</English>
+		<French>Nationalist %s1</French>
+		<German>Nationalist %s1</German>
+		<Italian>Nationalist %s1</Italian>
+		<Spanish>Nationalist %s1</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_ARMENIA_BAGRATID</Tag>
+		<English>Bagratid Kingdom</English>
+		<English>Bagratid Kingdom</English>
+		<French>Bagratid Kingdom</French>
+		<German>Bagratid Kingdom</German>
+		<Italian>Bagratid Kingdom</Italian>
+		<Spanish>Bagratid Kingdom</Spanish>
+	</TEXT>
+
+</Civ4GameText>

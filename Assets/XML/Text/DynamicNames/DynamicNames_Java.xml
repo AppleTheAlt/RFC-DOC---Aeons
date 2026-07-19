@@ -90,20 +90,20 @@
 		<Spanish>Indonesian</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_CIV_JAVA_DEMAK</Tag>
-		<English>Demak</English>
-		<French>Demak</French>
-		<German>Demak</German>
-		<Italian>Demak</Italian>
-		<Spanish>Demak</Spanish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_CIV_JAVA_MATARAM</Tag>
 		<English>Mataram</English>
 		<French>Mataram</French>
 		<German>Mataram</German>
 		<Italian>Mataram</Italian>
 		<Spanish>Mataram</Spanish>
+	</TEXT>
+	<TEXT>
+	    <Tag>TXT_KEY_CIV_JAVA_DEMAK</Tag>
+		<English>Demak</English>
+		<French>Demak</French>
+		<German>Demak</German>
+		<Italian>Demak</Italian>
+		<Spanish>Demak</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIV_JAVA_MAJAPAHIT</Tag>
@@ -149,4 +149,20 @@
 		<Italian>Kedatuan of %s1</Italian>
 		<Spanish>Kedatuan of %s1</Spanish>
 	</TEXT>
+	<TEXT>
+ 		<Tag>TXT_KEY_CIV_INDONESIA_MATARAM</Tag>
+ 		<English>Mataram</English>
+ 		<French>Mataram</French>
+ 		<German>Mataram</German>
+ 		<Italian>Mataram</Italian>
+ 		<Spanish>Mataram</Spanish>
+ 	</TEXT>
+ 		<TEXT>
+ 		<Tag>TXT_KEY_CIV_INDONESIA_MAJAPAHIT</Tag>
+ 		<English>Majapahit</English>
+ 		<French>Majapahit</French>
+ 		<German>Majapahit</German>
+ 		<Italian>Majapahit</Italian>
+ 		<Spanish>Majapahit</Spanish>
+ 	</TEXT>
 </Civ4GameText>

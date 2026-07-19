@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Minoa -->
+<Civ4GameText xmlns="http://www.firaxis.com">
+	<TEXT>
+		<Tag>TXT_KEY_CIV_GOKTURKS_DESC</Tag>
+		<English>The Gokturks</English>
+		<French>The Gokturks</French>
+		<German>The Gokturks</German>
+		<Italian>The Gokturks</Italian>
+		<Spanish>The Gokturks</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_GOKTURKS_PEOPLES</Tag>
+		<English>Turkic Peoples</English>
+		<French>Turkic Peoples</French>
+		<German>Turkic Peoples</German>
+		<Italian>Turkic Peoples</Italian>
+		<Spanish>Turkic Peoples</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_GOKTURKS_ADJECTIVE</Tag>
+		<English>Gokturk</English>
+		<French>Gokturk</French>
+		<German>Gokturk</German>
+		<Italian>Gokturk</Italian>
+		<Spanish>Gokturk</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_GOKTURKS_SHORT_DESC</Tag>
+		<English>Gokturks</English>
+		<French>Gokturks</French>
+		<German>Gokturks</German>
+		<Italian>Gokturks</Italian>
+		<Spanish>Gokturks</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_GOKTURKS_DEFAULT</Tag>
+		<English>%s2 Khanate</English>
+		<French>%s2 Khanate</French>
+		<German>%s2 Khanate</German>
+		<Italian>%s2 Khanate</Italian>
+		<Spanish>%s2 Khanate</Spanish>
+	</TEXT>
+
+	<TEXT>
+		<Tag>TXT_KEY_CIV_GOKTURKS_EMPIRE</Tag>
+		<English>%s2 Khaganate</English>
+		<French>%s2 Khaganate</French>
+		<German>%s2 Khaganate</German>
+		<Italian>%s2 Khaganate</Italian>
+		<Spanish>%s2 Khaganate</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_GOKTURKS_REPUBLIC</Tag>
+		<English>%s2 Republic</English>
+		<English>%s2 Republic</English>
+		<French>%s2 Republic</French>
+		<German>%s2 Republic</German>
+		<Italian>%s2 Republic</Italian>
+		<Spanish>%s2 Republic</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_GOKTURKS_COMMUNIST</Tag>
+		<English>%s2 Peoples' Republic</English>
+		<English>%s2 Peoples' Republic</English>
+		<French>%s2 Peoples' Republic</French>
+		<German>%s2 Peoples' Republic</German>
+		<Italian>%s2 Peoples' Republic</Italian>
+		<Spanish>%s2 Peoples' Republic</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_GOKTURKS_FASCIST</Tag>
+		<English>National %s2 Republic</English>
+		<English>National %s2 Republic</English>
+		<French>National %s2 Republic</French>
+		<German>National %s2 Republic</German>
+		<Italian>National %s2 Republic</Italian>
+		<Spanish>National %s2 Republic</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_GOKTURKS_KYRGYZSTAN</Tag>
+		<English>Kyrgyzstan</English>
+		<English>Kyrgyzstan</English>
+		<French>Kyrgyzstan</French>
+		<German>Kyrgyzstan</German>
+		<Italian>Kyrgyzstan</Italian>
+		<Spanish>Kyrgyzstan</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_GOKTURKS_KYRGYZ</Tag>
+		<English>Kyrgyz</English>
+		<English>Kyrgyz</English>
+		<French>Kyrgyz</French>
+		<German>Kyrgyz</German>
+		<Italian>Kyrgyz</Italian>
+		<Spanish>Kyrgyz</Spanish>
+	</TEXT>
+</Civ4GameText>

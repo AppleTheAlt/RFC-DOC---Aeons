@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Minoa -->
+<Civ4GameText xmlns="http://www.firaxis.com">
+	<TEXT>
+		<Tag>TXT_KEY_CIV_BUGANDA_DESC</Tag>
+		<English>The Kitarans</English>
+		<French>The Kitarans</French>
+		<German>The Kitarans</German>
+		<Italian>The Kitarans</Italian>
+		<Spanish>The Kitarans</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_BUGANDA_BUGANDA_DESC</Tag>
+		<English>The Bugandans</English>
+		<French>The Bugandans</French>
+		<German>The Bugandans</German>
+		<Italian>The Bugandans</Italian>
+		<Spanish>The Bugandans</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_KITARA_PEOPLES</Tag>
+		<English>Urewe Peoples</English>
+		<French>Urewe Peoples</French>
+		<German>Urewe Peoples</German>
+		<Italian>Urewe Peoples</Italian>
+		<Spanish>Urewe Peoples</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_BUGANDA_ADJECTIVE</Tag>
+		<English>Kitaran</English>
+		<French>Kitaran</French>
+		<German>Kitaran</German>
+		<Italian>Kitaran</Italian>
+		<Spanish>Kitaran</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_BUGANDA_SHORT_DESC</Tag>
+		<English>Kitara</English>
+		<French>Kitara</French>
+		<German>Kitara</German>
+		<Italian>Kitara</Italian>
+		<Spanish>Kitara</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_BUGANDA_NEW_ADJECTIVE</Tag>
+		<English>Bugandan</English>
+		<French>Bugandan</French>
+		<German>Bugandan</German>
+		<Italian>Bugandan</Italian>
+		<Spanish>Bugandan</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_BUGANDA_NEW_SHORT_DESC</Tag>
+		<English>Buganda</English>
+		<French>Buganda</French>
+		<German>Buganda</German>
+		<Italian>Buganda</Italian>
+		<Spanish>Buganda</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_UGANDA_SHORT_DESC</Tag>
+		<English>Uganda</English>
+		<French>Uganda</French>
+		<German>Uganda</German>
+		<Italian>Uganda</Italian>
+		<Spanish>Uganda</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_UGANDA_ADJECTIVE</Tag>
+		<English>Ugandan</English>
+		<French>Ugandan</French>
+		<German>Ugandan</German>
+		<Italian>Ugandan</Italian>
+		<Spanish>Ugandan</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_BUGANDA_DEFAULT</Tag>
+		<English>Kingdom of %s1</English>
+		<French>Kingdom of %s1</French>
+		<German>Kingdom of %s1</German>
+		<Italian>Kingdom of %s1</Italian>
+		<Spanish>Kingdom of %s1</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_KITARA_DEFAULT</Tag>
+		<English>Empire of %s1</English>
+		<French>Empire of %s1</French>
+		<German>Empire of %s1</German>
+		<Italian>Empire of %s1</Italian>
+		<Spanish>Empire of %s1</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_UGANDA_DEFAULT</Tag>
+		<English>%s2 Kingdoms</English>
+		<French>%s2 Kingdoms</French>
+		<German>%s2 Kingdoms</German>
+		<Italian>%s2 Kingdoms</Italian>
+		<Spanish>%s2 Kingdoms</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_BUGANDA_REPUBLIC</Tag>
+		<English>Republic of %s1</English>
+		<English>Republic of %s1</English>
+		<French>Republic of %s1</French>
+		<German>Republic of %s1</German>
+		<Italian>Republic of %s1</Italian>
+		<Spanish>Republic of %s1</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_BUGANDA_COMMUNIST</Tag>
+		<English>Marxist %s1</English>
+		<English>Marxist %s1</English>
+		<French>Marxist %s1</French>
+		<German>Marxist %s1</German>
+		<Italian>Marxist %s1</Italian>
+		<Spanish>Marxist %s1</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_KITARA_FASCIST</Tag>
+		<English>%s2 Police State</English>
+		<English>%s2 Police State</English>
+		<French>%s2 Police State</French>
+		<German>%s2 Police State</German>
+		<Italian>%s2 Police State</Italian>
+		<Spanish>%s2 Police State</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_KITARA_REPUBLIC</Tag>
+		<English>Republic of %s1</English>
+		<English>Republic of %s1</English>
+		<French>Republic of %s1</French>
+		<German>Republic of %s1</German>
+		<Italian>Republic of %s1</Italian>
+		<Spanish>Republic of %s1</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_KITARA_COMMUNIST</Tag>
+		<English>Marxist %s1</English>
+		<English>Marxist %s1</English>
+		<French>Marxist %s1</French>
+		<German>Marxist %s1</German>
+		<Italian>Marxist %s1</Italian>
+		<Spanish>Marxist %s1</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_KITARA_FASCIST</Tag>
+		<English>%s2 Police State</English>
+		<English>%s2 Police State</English>
+		<French>%s2 Police State</French>
+		<German>%s2 Police State</German>
+		<Italian>%s2 Police State</Italian>
+		<Spanish>%s2 Police State</Spanish>
+	</TEXT>
+
+</Civ4GameText>

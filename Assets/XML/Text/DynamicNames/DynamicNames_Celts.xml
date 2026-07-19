@@ -10,6 +10,14 @@
 		<Spanish>The Celts</Spanish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_CIV_IRELAND_DESC</Tag>
+		<English>The Irish</English>
+		<French>The Irish</French>
+		<German>The Irish</German>
+		<Italian>The Irish</Italian>
+		<Spanish>The Irish</Spanish>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_CIV_CELTS_PEOPLES</Tag>
 		<English>Celtic Peoples</English>
 		<French>
@@ -70,12 +78,44 @@
 		<Spanish>Celts</Spanish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_CIV_IRELAND_SHORT_DESC</Tag>
+		<English>Ireland</English>
+		<French>Ireland</French>
+		<German>Ireland</German>
+		<Italian>Ireland</Italian>
+		<Spanish>Ireland</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_IRELAND_ADJECTIVE</Tag>
+		<English>Irish</English>
+		<French>Irish</French>
+		<German>Irish</German>
+		<Italian>Irish</Italian>
+		<Spanish>Irish</Spanish>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_CIV_CELTS_DEFAULT</Tag>
 		<English>%s2 Chiefdoms</English>
 		<French>%s2 Chiefdoms</French>
 		<German>%s2 Chiefdoms</German>
 		<Italian>%s2 Chiefdoms</Italian>
 		<Spanish>%s2 Chiefdoms</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_IRELAND_DEFAULT</Tag>
+		<English>High Kingdom of %s1</English>
+		<French>High Kingdom of %s1</French>
+		<German>High Kingdom of %s1</German>
+		<Italian>High Kingdom of %s1</Italian>
+		<Spanish>High Kingdom of %s1</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_ROMAN_CELTS</Tag>
+		<English>Province of Gaul</English>
+		<French>Province of Gaul</French>
+		<German>Province of Gaul</German>
+		<Italian>Province of Gaul</Italian>
+		<Spanish>Province of Gaul</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIV_CELTS_FASCIST</Tag>
@@ -197,4 +237,5 @@
 		<Italian></Italian>
 		<Spanish></Spanish>
 	</TEXT>
+
 </Civ4GameText>

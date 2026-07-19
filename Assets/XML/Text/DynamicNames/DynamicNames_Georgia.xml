@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Georgia -->
+<Civ4GameText xmlns="http://www.firaxis.com">
+	<TEXT>
+		<Tag>TXT_KEY_CIV_GEORGIA_DESC</Tag>
+		<English>The Georgians</English>
+		<French>The Georgians</French>
+		<German>The Georgians</German>
+		<Italian>The Georgians</Italian>
+		<Spanish>The Georgians</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_GEORGIA_PEOPLES</Tag>
+		<English>Abkhazian Peoples</English>
+		<French>Abkhazian Peoples</French>
+		<German>Abkhazian Peoples</German>
+		<Italian>Abkhazian Peoples</Italian>
+		<Spanish>Abkhazian Peoples</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_GEORGIA_ADJECTIVE</Tag>
+		<English>Georgian</English>
+		<French>Georgian</French>
+		<German>Georgian</German>
+		<Italian>Georgian</Italian>
+		<Spanish>Georgian</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_GEORGIA_SHORT_DESC</Tag>
+		<English>Georgia</English>
+		<French>Georgia</French>
+		<German>Georgia</German>
+		<Italian>Georgia</Italian>
+		<Spanish>Georgia</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_GEORGIA_DEFAULT</Tag>
+		<English>Kingdom of %s1</English>
+		<French>Kingdom of %s1</French>
+		<German>Kingdom of %s1</German>
+		<Italian>Kingdom of %s1</Italian>
+		<Spanish>Kingdom of %s1</Spanish>
+	</TEXT>
+
+	<TEXT>
+		<Tag>TXT_KEY_CIV_GEORGIA_EMPIRE</Tag>
+		<English>%s2 Empire</English>
+		<French>%s2 Empire</French>
+		<German>%s2 Empire</German>
+		<Italian>%s2 Empire</Italian>
+		<Spanish>%s2 Empire</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_GEORGIA_REPUBLIC</Tag>
+		<English>Republic of %s1</English>
+		<English>Republic of %s1</English>
+		<French>Republic of %s1</French>
+		<German>Republic of %s1</German>
+		<Italian>Republic of %s1</Italian>
+		<Spanish>Republic of %s1</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_GEORGIA_COMMUNIST</Tag>
+		<English>%s2 SSR</English>
+		<English>%s2 SSR</English>
+		<French>%s2 SSR</French>
+		<German>%s2 SSR</German>
+		<Italian>%s2 SSR</Italian>
+		<Spanish>%s2 SSR</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_GEORGIA_FASCIST</Tag>
+		<English>National %s2 Republic</English>
+		<English>National %s2 Republic</English>
+		<French>National %s2 Republic</French>
+		<German>National %s2 Republic</German>
+		<Italian>National %s2 Republic</Italian>
+		<Spanish>National %s2 Republic</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_GEORGIA_ABKHAZIA</Tag>
+		<English>Abkhazia</English>
+		<English>Abkhazia</English>
+		<French>Abkhazia</French>
+		<German>Abkhazia</German>
+		<Italian>Abkhazia</Italian>
+		<Spanish>Abkhazia</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_GEORGIA_ABKHAZIAN</Tag>
+		<English>Abkhazian</English>
+		<English>Abkhazian</English>
+		<French>Abkhazian</French>
+		<German>Abkhazian</German>
+		<Italian>Abkhazian</Italian>
+		<Spanish>Abkhazian</Spanish>
+	</TEXT>
+</Civ4GameText>

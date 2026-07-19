@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Minoa -->
+<Civ4GameText xmlns="http://www.firaxis.com">
+	<TEXT>
+		<Tag>TXT_KEY_CIV_GERMANIA_DESC</Tag>
+		<English>The Germani</English>
+		<French>The Germani</French>
+		<German>The Germani</German>
+		<Italian>The Germani</Italian>
+		<Spanish>The Germani</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_GERMANIA_PEOPLES</Tag>
+		<English>Germani Peoples</English>
+		<French>Germani Peoples</French>
+		<German>Germani Peoples</German>
+		<Italian>Germani Peoples</Italian>
+		<Spanish>Germani Peoples</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_GERMANIA_ADJECTIVE</Tag>
+		<English>Germanic</English>
+		<French>Germanic</French>
+		<German>Germanic</German>
+		<Italian>Germanic</Italian>
+		<Spanish>Germanic</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_GERMANIA_SHORT_DESC</Tag>
+		<English>Germania</English>
+		<French>Germania</French>
+		<German>Germania</German>
+		<Italian>Germania</Italian>
+		<Spanish>Germania</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_GERMANIA_DEFAULT</Tag>
+		<English>%s2 Tribes</English>
+		<French>%s2 Tribes</French>
+		<German>%s2 Tribes</German>
+		<Italian>%s2 Tribes</Italian>
+		<Spanish>%s2 Tribes</Spanish>
+	</TEXT>
+
+	<TEXT>
+		<Tag>TXT_KEY_CIV_GERMANIA_EMPIRE</Tag>
+		<English>Empire of the Germani</English>
+		<French>Empire of the Germani</French>
+		<German>Empire of the Germani</German>
+		<Italian>Empire of the Germani</Italian>
+		<Spanish>Empire of the Germani</Spanish>
+	</TEXT>
+
+	<TEXT>
+		<Tag>TXT_KEY_CIV_GERMANIA_HIGH_ELECTIVE</Tag>
+		<English>%s2 High Elective</English>
+		<French>%s2 High Elective</French>
+		<German>%s2 High Elective</German>
+		<Italian>%s2 High Elective</Italian>
+		<Spanish>%s2 High Elective</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_GERMANIA_WESSEX</Tag>
+		<English>Wessex</English>
+		<French>Wessex</French>
+		<German>Wessex</German>
+		<Italian>Wessex</Italian>
+		<Spanish>Wessex</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_GERMANIA_ANGLO_SAXON</Tag>
+		<English>Anglo-Saxon</English>
+		<French>Anglo-Saxon</French>
+		<German>Anglo-Saxon</German>
+		<Italian>Anglo-Saxon</Italian>
+		<Spanish>Anglo-Saxon</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_GERMANIA_REPUBLIC</Tag>
+		<English>Republic of %s1</English>
+		<English>Republic of %s1</English>
+		<French>Republic of %s1</French>
+		<German>Republic of %s1</German>
+		<Italian>Republic of %s1</Italian>
+		<Spanish>Republic of %s1</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_GERMANIA_COMMUNIST</Tag>
+		<English>Marxist Republic of %s1</English>
+		<English>Marxist Republic of %s1</English>
+		<French>Marxist Republic of %s1</French>
+		<German>Marxist Republic of %s1</German>
+		<Italian>Marxist Republic of %s1</Italian>
+		<Spanish>Marxist Republic of %s1</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_GERMANIA_FASCIST</Tag>
+		<English>National Socialist %s2 Worker's Party</English>
+		<English>National Socialist %s2 Worker's Party</English>
+		<French>National Socialist %s2 Worker's Party</French>
+		<German>National Socialist %s2 Worker's Party</German>
+		<Italian>National Socialist %s2 Worker's Party</Italian>
+		<Spanish>National Socialist %s2 Worker's Party</Spanish>
+	</TEXT>
+
+	
+
+</Civ4GameText>

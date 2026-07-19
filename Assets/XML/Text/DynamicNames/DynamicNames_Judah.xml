@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Minoa -->
+<Civ4GameText xmlns="http://www.firaxis.com">
+	<TEXT>
+		<Tag>TXT_KEY_CIV_JUDAH_DESC</Tag>
+		<English>The Judeans</English>
+		<French>The Judeans</French>
+		<German>The Judeans</German>
+		<Italian>The Judeans</Italian>
+		<Spanish>The Judeans</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_JUDAH_PEOPLES</Tag>
+		<English>Caananite Peoples</English>
+		<French>Caananite Peoples</French>
+		<German>Caananite Peoples</German>
+		<Italian>Caananite Peoples</Italian>
+		<Spanish>Caananite Peoples</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_JUDAH_ADJECTIVE</Tag>
+		<English>Judean</English>
+		<French>Judean</French>
+		<German>Judean</German>
+		<Italian>Judean</Italian>
+		<Spanish>Judean</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_JUDAH_SHORT_DESC</Tag>
+		<English>Judah</English>
+		<French>Judah</French>
+		<German>Judah</German>
+		<Italian>Judah</Italian>
+		<Spanish>Judah</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_JUDAH_DEFAULT</Tag>
+		<English>Kingdom of %s1</English>
+		<French>Kingdom of %s1</French>
+		<German>Kingdom of %s1</German>
+		<Italian>Kingdom of %s1</Italian>
+		<Spanish>Kingdom of %s1</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_JUDAH_PALESTINE</Tag>
+		<English>Palestine</English>
+		<French>Palestine</French>
+		<German>Palestine</German>
+		<Italian>Palestine</Italian>
+		<Spanish>Palestine</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_JUDAH_PALESTINIAN</Tag>
+		<English>Palestinian</English>
+		<French>Palestinian</French>
+		<German>Palestinian</German>
+		<Italian>Palestinian</Italian>
+		<Spanish>Palestinian</Spanish>
+	</TEXT>
+
+	<TEXT>
+		<Tag>TXT_KEY_CIV_JUDAH_JERUSALEM</Tag>
+		<English>Jerusalem</English>
+		<French>Jerusalem</French>
+		<German>Jerusalem</German>
+		<Italian>Jerusalem</Italian>
+		<Spanish>Jerusalem</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_JUDAH_JERUSALEMITE</Tag>
+		<English>Jerusalemite</English>
+		<French>Jerusalemite</French>
+		<German>Jerusalemite</German>
+		<Italian>Jerusalemite</Italian>
+		<Spanish>Jerusalemite</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_JUDAH_ISRAEL</Tag>
+		<English>Israel</English>
+		<French>Israel</French>
+		<German>Israel</German>
+		<Italian>Israel</Italian>
+		<Spanish>Israel</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_JUDAH_ISRAELI</Tag>
+		<English>Israeli</English>
+		<French>Israeli</French>
+		<German>Israeli</German>
+		<Italian>Israeli</Italian>
+		<Spanish>Israeli</Spanish>
+	</TEXT>
+
+
+	<TEXT>
+		<Tag>TXT_KEY_CIV_JUDAH_REPUBLIC</Tag>
+		<English>%s2 Republic</English>
+		<English>%s2 Republic</English>
+		<French>%s2 Republic</French>
+		<German>%s2 Republic</German>
+		<Italian>%s2 Republic</Italian>
+		<Spanish>%s2 Republic</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_JUDAH_COMMUNIST</Tag>
+		<English>Socialist %s1</English>
+		<English>Socialist %s1</English>
+		<French>Socialist %s1</French>
+		<German>Socialist %s1</German>
+		<Italian>Socialist %s1</Italian>
+		<Spanish>Socialist %s1</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_JUDAH_FASCIST</Tag>
+		<English>%s2 Regime</English>
+		<English>%s2 Regime</English>
+		<French>%s2 Regime</French>
+		<German>%s2 Regime</German>
+		<Italian>%s2 Regime</Italian>
+		<Spanish>%s2 Regime</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_JUDAH_HOLYKINGDOM</Tag>
+		<English>Holy Kingdom of %s1</English>
+		<English>Holy Kingdom of %s1</English>
+		<French>Holy Kingdom of %s1</French>
+		<German>Holy Kingdom of %s1</German>
+		<Italian>Holy Kingdom of %s1</Italian>
+		<Spanish>Holy Kingdom of %s1</Spanish>
+	</TEXT>
+
+
+
+	
+
+</Civ4GameText>
