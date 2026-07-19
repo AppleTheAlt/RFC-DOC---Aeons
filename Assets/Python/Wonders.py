@@ -279,7 +279,7 @@ def westminsterPalaceInit(city, iBuilding, iChange):
 def westminsterPalaceOnCityAcquired(iOwner, iPlayer, city):
 	wonderCity = getBuildingCity(iWestminsterPalace)
 	if wonderCity and wonderCity.getOwner() == iPlayer and city.isColony():
-		wonderCity.changeBuildingCommerceChange(infos.building(iWestminsterPalace).getBuildingClassType(), CommerceTypes.COMMERCE_GOLD, -1)
+		wonderCity.changeBuildingCommerceChange(infos.building(iWestminsterPalace).getBuildingClassType(), CommerceTypes.COMMERCE_GOLD, 1)
 
 
 # Pantheon effect: +1 gold per Pagan Temple
