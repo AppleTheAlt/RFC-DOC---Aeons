@@ -672,6 +672,7 @@
 		<element type="CivicOptionInfo" maxOccurs="*"/>
 	</ElementType>
 	<ElementType name="iAnarchyLength" content="textOnly" dt:type="int"/>
+	<ElementType name="iImmigrationDesire" content="textOnly" dt:type="int"/>
 	<ElementType name="iAIWeight" content="textOnly" dt:type="int"/>
 	<ElementType name="iGreatPeopleRateModifier" content="textOnly" dt:type="int"/>
 	<ElementType name="iGreatGeneralRateModifier" content="textOnly" dt:type="int"/>
@@ -698,6 +699,7 @@
 	<ElementType name="iGoldPerMilitaryUnit" content="textOnly" dt:type="int"/>
 	<ElementType name="iHappyPerMilitaryUnit" content="textOnly" dt:type="int"/>
 	<ElementType name="bMilitaryFoodProduction" content="textOnly" dt:type="boolean"/>
+	<ElementType name="bNoExternalMigration" content="textOnly" dt:type="boolean"/>
 	<ElementType name="iMaxConscript" content="textOnly" dt:type="int"/>
 	<ElementType name="bSlavery" content="textOnly" dt:type="boolean"/> <!-- Leoreth -->
 	<ElementType name="bNoSlavery" content="textOnly" dt:type="boolean"/> <!-- Leoreth -->
@@ -783,15 +785,15 @@
 		<element type="SpecialistValid" minOccurs="0" maxOccurs="*"/>
 	</ElementType>
 	<!-- Leoreth start -->
-	<ElementType name="iCount" content="textOnly" dt:type="int"/>
-	<ElementType name="SpecialistCount" content="eltOnly">
-		<element type="SpecialistType"/>
-		<element type="iCount"/>
-	</ElementType>
-	<ElementType name="SpecialistCounts" content="eltOnly">
-		<element type="SpecialistCount" minOccurs="0" maxOccurs="*"/>
-	</ElementType>
-	<!-- Leoreth end -->
+ 	<ElementType name="iCount" content="textOnly" dt:type="int"/>
+ 	<ElementType name="SpecialistCount" content="eltOnly">
+ 		<element type="SpecialistType"/>
+ 		<element type="iCount"/>
+ 	</ElementType>
+ 	<ElementType name="SpecialistCounts" content="eltOnly">
+ 		<element type="SpecialistCount" minOccurs="0" maxOccurs="*"/>
+ 	</ElementType>
+ 	<!-- Leoreth end -->
 	<ElementType name="BuildingType" content="textOnly"/>
 	<ElementType name="iHappinessChange" content="textOnly" dt:type="int"/>
 	<ElementType name="BuildingHappinessChange" content="eltOnly">
@@ -885,6 +887,7 @@
 		<element type="Button" minOccurs="0"/>
 		<element type="TechPrereq" minOccurs="0"/>
 		<element type="iAnarchyLength" minOccurs="0"/>
+		<element type="iImmigrationDesire" minOccurs="0"/>
 		<element type="Upkeep" minOccurs="0"/>
 		<element type="iAIWeight" minOccurs="0"/>
 		<element type="iGreatPeopleRateModifier" minOccurs="0"/>
@@ -914,6 +917,7 @@
 		<element type="iGoldPerMilitaryUnit" minOccurs="0"/>
 		<element type="iHappyPerMilitaryUnit" minOccurs="0"/>
 		<element type="bMilitaryFoodProduction" minOccurs="0"/>
+		<element type="bNoExternalMigration" minOccurs="0"/>
 		<element type="iMaxConscript" minOccurs="0"/>
 		<element type="bSlavery" minOccurs="0"/> <!-- Leoreth -->
 		<element type="bNoSlavery" minOccurs="0"/> <!-- Leoreth -->

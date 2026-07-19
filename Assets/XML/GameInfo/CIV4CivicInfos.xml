@@ -26,6 +26,7 @@
 			<TechPrereq>TECH_PROPERTY</TechPrereq>
 			<Button>,Art/Interface/Buttons/Civics/Despotism.dds</Button>
 			<iAnarchyLength>1</iAnarchyLength>
+			<iImmigrationDesire>-1</iImmigrationDesire>
 			<Upkeep>UPKEEP_MEDIUM</Upkeep>
 			<Hurrys>
 				<Hurry>
@@ -59,6 +60,7 @@
 			<TechPrereq>TECH_WRITING</TechPrereq>
 			<Button>,Art/Interface/Buttons/Civics/Republic.dds</Button>
 			<iAnarchyLength>1</iAnarchyLength>
+			<iImmigrationDesire>1</iImmigrationDesire>
 			<Upkeep>UPKEEP_HIGH</Upkeep>
 			<iCulturedCityFreeSpecialists>1</iCulturedCityFreeSpecialists>
 			<ImprovementYieldChanges>
@@ -94,23 +96,23 @@
 				</ImprovementYieldChange>
 			</ImprovementYieldChanges>
 			<SpecialistCounts>
-				<SpecialistCount>
-					<SpecialistType>SPECIALIST_ARTIST</SpecialistType>
-					<iCount>1</iCount>
-				</SpecialistCount>
-				<SpecialistCount>
-					<SpecialistType>SPECIALIST_MERCHANT</SpecialistType>
-					<iCount>1</iCount>
-				</SpecialistCount>
-				<SpecialistCount>
-					<SpecialistType>SPECIALIST_SCIENTIST</SpecialistType>
-					<iCount>1</iCount>
-				</SpecialistCount>
-				<SpecialistCount>
-					<SpecialistType>SPECIALIST_STATESMAN</SpecialistType>
-					<iCount>1</iCount>
-				</SpecialistCount>
-			</SpecialistCounts>
+ 				<SpecialistCount>
+ 					<SpecialistType>SPECIALIST_ARTIST</SpecialistType>
+ 					<iCount>1</iCount>
+ 				</SpecialistCount>
+ 				<SpecialistCount>
+ 					<SpecialistType>SPECIALIST_MERCHANT</SpecialistType>
+ 					<iCount>1</iCount>
+ 				</SpecialistCount>
+ 				<SpecialistCount>
+ 					<SpecialistType>SPECIALIST_SCIENTIST</SpecialistType>
+ 					<iCount>1</iCount>
+ 				</SpecialistCount>
+ 				<SpecialistCount>
+ 					<SpecialistType>SPECIALIST_STATESMAN</SpecialistType>
+ 					<iCount>1</iCount>
+ 				</SpecialistCount>
+ 			</SpecialistCounts>
 			<WeLoveTheKing>TXT_KEY_CIVIC_WE_LOVE_CONSUL</WeLoveTheKing>
 		</CivicInfo>
 		<CivicInfo>
@@ -171,6 +173,7 @@
 			<TechPrereq>TECH_MACROECONOMICS</TechPrereq>
 			<Button>,Art/Interface/Buttons/Civics/State Party.dds</Button>
 			<iAnarchyLength>1</iAnarchyLength>
+			<iImmigrationDesire>-1</iImmigrationDesire>
 			<Upkeep>UPKEEP_HIGH</Upkeep>
 			<iNumCitiesMaintenanceModifier>-75</iNumCitiesMaintenanceModifier>
 			<SpecialistExtraCommerces>
@@ -190,6 +193,7 @@
 			<TechPrereq>TECH_REPRESENTATION</TechPrereq>
 			<Button>,Art/Interface/Buttons/Civics/Democracy.dds</Button>
 			<iAnarchyLength>1</iAnarchyLength>
+			<iImmigrationDesire>2</iImmigrationDesire>
 			<Upkeep>UPKEEP_MEDIUM</Upkeep>
 			<iGreatPeopleRateModifier>100</iGreatPeopleRateModifier>
 			<iLargestCityHappiness>3</iLargestCityHappiness>
@@ -214,6 +218,7 @@
 			<TechPrereq>TECH_LAW</TechPrereq>
 			<Button>,Art/Interface/Buttons/Civics/Citizenship.dds</Button>
 			<iAnarchyLength>1</iAnarchyLength>
+			<iImmigrationDesire>1</iImmigrationDesire>
 			<Upkeep>UPKEEP_HIGH</Upkeep>
 			<BuildingProductionModifiers>
 				<BuildingProductionModifier>
@@ -225,11 +230,11 @@
 					<iProductionModifier>100</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
-					<BuildingType>BUILDINGCLASS_THEATRE</BuildingType>
+					<BuildingType>BUILDINGCLASS_BATH</BuildingType>
 					<iProductionModifier>100</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
-					<BuildingType>BUILDINGCLASS_BATH</BuildingType>
+					<BuildingType>BUILDINGCLASS_THEATRE</BuildingType>
 					<iProductionModifier>100</iProductionModifier>
 				</BuildingProductionModifier>
 			</BuildingProductionModifiers>
@@ -316,6 +321,7 @@
 			<TechPrereq>TECH_STATECRAFT</TechPrereq>
 			<Button>,Art/Interface/Buttons/Civics/Bureaucracy.dds</Button>
 			<iAnarchyLength>1</iAnarchyLength>
+			<iImmigrationDesire>1</iImmigrationDesire>
 			<Upkeep>UPKEEP_HIGH</Upkeep>
 			<CapitalYieldModifiers>
 				<iYield>0</iYield>
@@ -354,6 +360,7 @@
 			<TechPrereq>TECH_SOCIAL_CONTRACT</TechPrereq>
 			<Button>,Art/Interface/Buttons/Civics/Constitution.dds</Button>
 			<iAnarchyLength>1</iAnarchyLength>
+			<iImmigrationDesire>2</iImmigrationDesire>
 			<Upkeep>UPKEEP_MEDIUM</Upkeep>
 			<iFreeSpecialist>1</iFreeSpecialist>
 			<SpecialistValids>
@@ -388,6 +395,7 @@
 			<TechPrereq>TECH_MASONRY</TechPrereq>
 			<Button>,Art/Interface/Buttons/Civics/Slavery.dds</Button>
 			<iAnarchyLength>1</iAnarchyLength>
+			<iImmigrationDesire>-2</iImmigrationDesire>
 			<Upkeep>UPKEEP_LOW</Upkeep>
 			<bSlavery>1</bSlavery>
 			<ImprovementYieldChanges>
@@ -433,6 +441,7 @@
 			<TechPrereq>TECH_CALENDAR</TechPrereq>
 			<Button>,Art/Interface/Buttons/Civics/Manorialism.dds</Button>
 			<iAnarchyLength>1</iAnarchyLength>
+			<iImmigrationDesire>-1</iImmigrationDesire>
 			<Upkeep>UPKEEP_LOW</Upkeep>
 			<iWorkerSpeedModifier>50</iWorkerSpeedModifier>
 			<ImprovementYieldChanges>
@@ -460,6 +469,12 @@
 					</ImprovementYields>
 				</ImprovementYieldChange>
 			</ImprovementYieldChanges>
+			<BuildingProductionModifiers>
+				<BuildingProductionModifier>
+					<BuildingType>BUILDINGCLASS_MANOR</BuildingType>
+					<iProductionModifier>100</iProductionModifier>
+				</BuildingProductionModifier>
+			</BuildingProductionModifiers>
 		</CivicInfo>
 		<CivicInfo>
 			<CivicOptionType>CIVICOPTION_SOCIETY</CivicOptionType>
@@ -470,6 +485,7 @@
 			<TechPrereq>TECH_LITERATURE</TechPrereq>
 			<Button>,Art/Interface/Buttons/Civics/Caste System.dds</Button>
 			<iAnarchyLength>1</iAnarchyLength>
+			<iImmigrationDesire>-1</iImmigrationDesire>
 			<Upkeep>UPKEEP_MEDIUM</Upkeep>
 			<iExtraHealth>2</iExtraHealth>
 			<ImprovementYieldChanges>
@@ -524,6 +540,7 @@
 			<TechPrereq>TECH_CIVIL_LIBERTIES</TechPrereq>
 			<Button>,Art/Interface/Buttons/Civics/Individualism.dds</Button>
 			<iAnarchyLength>1</iAnarchyLength>
+			<iImmigrationDesire>3</iImmigrationDesire>
 			<Upkeep>UPKEEP_MEDIUM</Upkeep>
 			<bFreeImprovementUpgrade>1</bFreeImprovementUpgrade>
 			<ImprovementYieldChanges>
@@ -555,7 +572,6 @@
 			<Button>,Art/Interface/Buttons/Civics/Totalitarianism.dds</Button>
 			<iAnarchyLength>1</iAnarchyLength>
 			<Upkeep>NONE</Upkeep>
-			<iWarWearinessModifier>-100</iWarWearinessModifier>
 			<SpecialistTypeExtraYields>
 				<SpecialistTypeExtraYield>
 					<SpecialistType>SPECIALIST_CITIZEN</SpecialistType>
@@ -565,6 +581,8 @@
 					</YieldChanges>
 				</SpecialistTypeExtraYield>
 			</SpecialistTypeExtraYields>
+			<iWarWearinessModifier>-100</iWarWearinessModifier>
+			<bNoExternalMigration>1</bNoExternalMigration>
 			<ImprovementYieldChanges>
 				<ImprovementYieldChange>
 					<ImprovementType>IMPROVEMENT_TOWN</ImprovementType>
@@ -590,6 +608,7 @@
 			<TechPrereq>TECH_CIVIL_RIGHTS</TechPrereq>
 			<Button>,Art/Interface/Buttons/Civics/Egalitarianism.dds</Button>
 			<iAnarchyLength>1</iAnarchyLength>
+			<iImmigrationDesire>2</iImmigrationDesire>
 			<Upkeep>UPKEEP_MEDIUM</Upkeep>
 			<bNoSlavery>1</bNoSlavery>
 			<SpecialistExtraCommerces>
@@ -622,6 +641,7 @@
 			<TechPrereq>TECH_ARITHMETICS</TechPrereq>
 			<Button>,Art/Interface/Buttons/Civics/Redistribution.dds</Button>
 			<iAnarchyLength>1</iAnarchyLength>
+			<iImmigrationDesire>-1</iImmigrationDesire>
 			<Upkeep>UPKEEP_HIGH</Upkeep>
 			<TradeYieldModifiers>
 				<iYield>0</iYield>
@@ -648,6 +668,7 @@
 			<Button>,Art/Interface/Buttons/Civics/Merchant Trade.dds</Button>
 			<iAnarchyLength>1</iAnarchyLength>
 			<Upkeep>UPKEEP_LOW</Upkeep>
+			<iImmigrationDesire>1</iImmigrationDesire>
 			<iTradeRoutes>1</iTradeRoutes>
 			<SpecialistTypeExtraYields>
 				<SpecialistTypeExtraYield>
@@ -660,15 +681,15 @@
 				</SpecialistTypeExtraYield>
 			</SpecialistTypeExtraYields>
 			<BuildingProductionModifiers>
-				<BuildingProductionModifier>
-					<BuildingType>BUILDINGCLASS_MARKET</BuildingType>
-					<iProductionModifier>100</iProductionModifier>
-				</BuildingProductionModifier>
-				<BuildingProductionModifier>
-					<BuildingType>BUILDINGCLASS_LIGHTHOUSE</BuildingType>
-					<iProductionModifier>100</iProductionModifier>
-				</BuildingProductionModifier>
-			</BuildingProductionModifiers>
+ 				<BuildingProductionModifier>
+ 					<BuildingType>BUILDINGCLASS_MARKET</BuildingType>
+ 					<iProductionModifier>100</iProductionModifier>
+ 				</BuildingProductionModifier>
+ 				<BuildingProductionModifier>
+ 					<BuildingType>BUILDINGCLASS_LIGHTHOUSE</BuildingType>
+ 					<iProductionModifier>100</iProductionModifier>
+ 				</BuildingProductionModifier>
+ 			</BuildingProductionModifiers>
 		</CivicInfo>
 		<CivicInfo>
 			<CivicOptionType>CIVICOPTION_ECONOMY</CivicOptionType>
@@ -728,6 +749,7 @@
 			<Button>,Art/Interface/Buttons/Civics/Free Enterprise.dds</Button>
 			<iAnarchyLength>1</iAnarchyLength>
 			<Upkeep>UPKEEP_LOW</Upkeep>
+			<iImmigrationDesire>2</iImmigrationDesire>
 			<iCorporationCommerceModifier>50</iCorporationCommerceModifier>
 			<TradeYieldModifiers>
 				<iYield>0</iYield>
@@ -753,27 +775,27 @@
 			<Upkeep>UPKEEP_MEDIUM</Upkeep>
 			<iProcessModifier>50</iProcessModifier>
 			<BuildingProductionModifiers>
+ 				<BuildingProductionModifier>
+ 					<BuildingType>BUILDINGCLASS_FACTORY</BuildingType>
+ 					<iProductionModifier>100</iProductionModifier>
+ 				</BuildingProductionModifier>
+ 				<BuildingProductionModifier>
+ 					<BuildingType>BUILDINGCLASS_COAL_PLANT</BuildingType>
+ 					<iProductionModifier>100</iProductionModifier>
+ 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
-					<BuildingType>BUILDINGCLASS_FACTORY</BuildingType>
-					<iProductionModifier>100</iProductionModifier>
-				</BuildingProductionModifier>
-				<BuildingProductionModifier>
-					<BuildingType>BUILDINGCLASS_COAL_PLANT</BuildingType>
-					<iProductionModifier>100</iProductionModifier>
-				</BuildingProductionModifier>
-				<BuildingProductionModifier>
-					<BuildingType>BUILDINGCLASS_GAS_PLANT</BuildingType>
-					<iProductionModifier>100</iProductionModifier>
-				</BuildingProductionModifier>
-				<BuildingProductionModifier>
-					<BuildingType>BUILDINGCLASS_HYDRO_PLANT</BuildingType>
-					<iProductionModifier>100</iProductionModifier>
-				</BuildingProductionModifier>
-				<BuildingProductionModifier>
-					<BuildingType>BUILDINGCLASS_ELECTRICAL_GRID</BuildingType>
-					<iProductionModifier>100</iProductionModifier>
-				</BuildingProductionModifier>
-			</BuildingProductionModifiers>
+ 					<BuildingType>BUILDINGCLASS_GAS_PLANT</BuildingType>
+ 					<iProductionModifier>100</iProductionModifier>
+ 				</BuildingProductionModifier>
+ 				<BuildingProductionModifier>
+ 					<BuildingType>BUILDINGCLASS_HYDRO_PLANT</BuildingType>
+ 					<iProductionModifier>100</iProductionModifier>
+ 				</BuildingProductionModifier>
+ 				<BuildingProductionModifier>
+ 					<BuildingType>BUILDINGCLASS_ELECTRICAL_GRID</BuildingType>
+ 					<iProductionModifier>100</iProductionModifier>
+ 				</BuildingProductionModifier>
+ 			</BuildingProductionModifiers>
 			<ImprovementYieldChanges>
 				<ImprovementYieldChange>
 					<ImprovementType>IMPROVEMENT_WORKSHOP</ImprovementType>
@@ -799,21 +821,21 @@
 				</ImprovementYieldChange>
 			</ImprovementYieldChanges>
 			<SpecialistTypeExtraYields>
-				<SpecialistTypeExtraYield>
-					<SpecialistType>SPECIALIST_ENGINEER</SpecialistType>
-					<YieldChanges>
+ 				<SpecialistTypeExtraYield>
+ 					<SpecialistType>SPECIALIST_ENGINEER</SpecialistType>
+ 					<YieldChanges>
 						<iYield>0</iYield>
-						<iYield>1</iYield>
-					</YieldChanges>
-				</SpecialistTypeExtraYield>
-				<SpecialistTypeExtraYield>
-					<SpecialistType>SPECIALIST_SCIENTIST</SpecialistType>
-					<YieldChanges>
+ 						<iYield>1</iYield>
+ 					</YieldChanges>
+ 				</SpecialistTypeExtraYield>
+ 				<SpecialistTypeExtraYield>
+ 					<SpecialistType>SPECIALIST_SCIENTIST</SpecialistType>
+ 					<YieldChanges>
 						<iYield>0</iYield>
-						<iYield>1</iYield>
-					</YieldChanges>
-				</SpecialistTypeExtraYield>
-			</SpecialistTypeExtraYields>
+ 						<iYield>1</iYield>
+ 					</YieldChanges>
+ 				</SpecialistTypeExtraYield>
+ 			</SpecialistTypeExtraYields>
 		</CivicInfo>
 		<CivicInfo>
 			<CivicOptionType>CIVICOPTION_ECONOMY</CivicOptionType>
@@ -824,6 +846,7 @@
 			<TechPrereq>TECH_SOCIAL_SERVICES</TechPrereq>
 			<Button>,Art/Interface/Buttons/Civics/Public Welfare.dds</Button>
 			<iAnarchyLength>1</iAnarchyLength>
+			<iImmigrationDesire>2</iImmigrationDesire>
 			<Upkeep>UPKEEP_HIGH</Upkeep>
 			<iCorporationUnhappinessModifier>-50</iCorporationUnhappinessModifier>
 			<SpecialistTypeExtraYields>
@@ -873,6 +896,7 @@
 			<TechPrereq>TECH_DIVINATION</TechPrereq>
 			<Button>,Art/Interface/Buttons/Civics/Deification.dds</Button>
 			<iAnarchyLength>1</iAnarchyLength>
+			<iImmigrationDesire>-1</iImmigrationDesire>
 			<Upkeep>UPKEEP_MEDIUM</Upkeep>
 			<iWonderProductionModifier>25</iWonderProductionModifier>
 			<bStateReligion>1</bStateReligion>
@@ -884,11 +908,11 @@
 				</BuildingHappinessChange>
 			</BuildingHappinessChanges>
 			<SpecialistCounts>
-				<SpecialistCount>
-					<SpecialistType>SPECIALIST_PRIEST</SpecialistType>
-					<iCount>1</iCount>
-				</SpecialistCount>
-			</SpecialistCounts>
+ 				<SpecialistCount>
+ 					<SpecialistType>SPECIALIST_PRIEST</SpecialistType>
+ 					<iCount>1</iCount>
+ 				</SpecialistCount>
+ 			</SpecialistCounts>
 		</CivicInfo>
 		<CivicInfo>
 			<CivicOptionType>CIVICOPTION_RELIGION</CivicOptionType>
@@ -912,6 +936,7 @@
 			<TechPrereq>TECH_PHILOSOPHY</TechPrereq>
 			<Button>,Art/Interface/Buttons/Civics/Syncretism.dds</Button>
 			<iAnarchyLength>1</iAnarchyLength>
+			<iImmigrationDesire>1</iImmigrationDesire>
 			<Upkeep>UPKEEP_LOW</Upkeep>
 			<bStateReligion>1</bStateReligion>
 			<iNonStateReligionHappiness>1</iNonStateReligionHappiness>
@@ -948,6 +973,12 @@
 			<Upkeep>UPKEEP_LOW</Upkeep>
 			<bStateReligion>1</bStateReligion>
 			<iStateReligionGreatPeopleRateModifier>50</iStateReligionGreatPeopleRateModifier>
+			<BuildingHappinessChanges>
+ 				<BuildingHappinessChange>
+ 					<BuildingType>BUILDINGCLASS_RELIQUARY</BuildingType>
+ 					<iHappinessChange>1</iHappinessChange>
+ 				</BuildingHappinessChange>
+ 			</BuildingHappinessChanges>
 		</CivicInfo>
 		<CivicInfo>
 			<CivicOptionType>CIVICOPTION_RELIGION</CivicOptionType>
@@ -958,6 +989,7 @@
 			<TechPrereq>TECH_DOCTRINE</TechPrereq>
 			<Button>,Art/Interface/Buttons/Civics/Fanaticism.dds</Button>
 			<iAnarchyLength>1</iAnarchyLength>
+			<iImmigrationDesire>-1</iImmigrationDesire>
 			<Upkeep>UPKEEP_MEDIUM</Upkeep>
 			<bStateReligion>1</bStateReligion>
 			<iStateReligionFreeExperience>2</iStateReligionFreeExperience>
@@ -984,6 +1016,7 @@
 			<TechPrereq>TECH_SCIENTIFIC_METHOD</TechPrereq>
 			<Button>,Art/Interface/Buttons/Civics/Secularism.dds</Button>
 			<iAnarchyLength>1</iAnarchyLength>
+			<iImmigrationDesire>1</iImmigrationDesire>
 			<Upkeep>UPKEEP_MEDIUM</Upkeep>
 			<CommerceModifiers>
 				<iCommerce>0</iCommerce>
@@ -996,19 +1029,19 @@
 				</SpecialistValid>
 			</SpecialistValids>
 			<BuildingHappinessChanges>
-				<BuildingHappinessChange>
-					<BuildingType>BUILDINGCLASS_UNIVERSITY</BuildingType>
-					<iHappinessChange>1</iHappinessChange>
-				</BuildingHappinessChange>
-				<BuildingHappinessChange>
-					<BuildingType>BUILDINGCLASS_OBSERVATORY</BuildingType>
-					<iHappinessChange>1</iHappinessChange>
-				</BuildingHappinessChange>
-				<BuildingHappinessChange>
-					<BuildingType>BUILDINGCLASS_LABORATORY</BuildingType>
-					<iHappinessChange>1</iHappinessChange>
-				</BuildingHappinessChange>
-			</BuildingHappinessChanges>
+ 				<BuildingHappinessChange>
+ 					<BuildingType>BUILDINGCLASS_UNIVERSITY</BuildingType>
+ 					<iHappinessChange>1</iHappinessChange>
+ 				</BuildingHappinessChange>
+ 				<BuildingHappinessChange>
+ 					<BuildingType>BUILDINGCLASS_OBSERVATORY</BuildingType>
+ 					<iHappinessChange>1</iHappinessChange>
+ 				</BuildingHappinessChange>
+ 				<BuildingHappinessChange>
+ 					<BuildingType>BUILDINGCLASS_LABORATORY</BuildingType>
+ 					<iHappinessChange>1</iHappinessChange>
+ 				</BuildingHappinessChange>
+ 			</BuildingHappinessChanges>
 		</CivicInfo>
 		<CivicInfo>
 			<CivicOptionType>CIVICOPTION_TERRITORY</CivicOptionType>
@@ -1029,6 +1062,7 @@
 			<TechPrereq>TECH_NAVIGATION</TechPrereq>
 			<Button>,Art/Interface/Buttons/Civics/Thalassocracy.dds</Button>
 			<iAnarchyLength>1</iAnarchyLength>
+			<iImmigrationDesire>1</iImmigrationDesire>
 			<Upkeep>UPKEEP_HIGH</Upkeep>
 			<BuildingProductionModifiers>
 				<BuildingProductionModifier>
@@ -1112,6 +1146,7 @@
 			<TechPrereq>TECH_GENERALSHIP</TechPrereq>
 			<Button>,Art/Interface/Buttons/Civics/Hegemony.dds</Button>
 			<iAnarchyLength>1</iAnarchyLength>
+			<iImmigrationDesire>-1</iImmigrationDesire>
 			<Upkeep>UPKEEP_MEDIUM</Upkeep>
 			<iCaptureGoldModifier>25</iCaptureGoldModifier>
 			<iOccupationTimeChange>-1</iOccupationTimeChange>
@@ -1150,15 +1185,16 @@
 			<Upkeep>UPKEEP_MEDIUM</Upkeep>
 			<bNoForeignTrade>1</bNoForeignTrade>
 			<SpecialistExtraYields>
-				<iYield>0</iYield>
-				<iYield>1</iYield>
-			</SpecialistExtraYields>
+ 				<iYield>0</iYield>
+ 				<iYield>1</iYield>
+ 			</SpecialistExtraYields>
 			<CommerceModifiers>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>25</iCommerce>
 			</CommerceModifiers>
+			<bNoExternalMigration>1</bNoExternalMigration>
 		</CivicInfo>
 		<CivicInfo>
 			<CivicOptionType>CIVICOPTION_TERRITORY</CivicOptionType>
@@ -1169,6 +1205,7 @@
 			<TechPrereq>TECH_EXPLORATION</TechPrereq>
 			<Button>,Art/Interface/Buttons/Civics/Colonialism.dds</Button>
 			<iAnarchyLength>1</iAnarchyLength>
+			<iImmigrationDesire>2</iImmigrationDesire>
 			<Upkeep>UPKEEP_MEDIUM</Upkeep>
 			<iColonyMaintenanceModifier>-50</iColonyMaintenanceModifier>
 			<bColonialSlavery>1</bColonialSlavery>
@@ -1238,7 +1275,8 @@
 			<TechPrereq>TECH_GEOPOLITICS</TechPrereq>
 			<Button>,Art/Interface/Buttons/Civics/Multilateralism.dds</Button>
 			<iAnarchyLength>1</iAnarchyLength>
-			<Upkeep>UPKEEP_MEDIUM</Upkeep>>
+			<iImmigrationDesire>2</iImmigrationDesire>
+			<Upkeep>UPKEEP_MEDIUM</Upkeep>
 			<bNoSlavery>1</bNoSlavery>
 			<iWarWearinessModifier>100</iWarWearinessModifier>
 			<iDefensivePactTradeModifier>100</iDefensivePactTradeModifier>

@@ -115,11 +115,11 @@
 			<Button>Art/Interface/Buttons/Religions/Teotl.dds</Button>
 		</PaganReligionInfo>
 		<PaganReligionInfo>
-			<Type>PAGAN_RELIGION_TEOTL_TOLTEC</Type>
-			<Description>TXT_KEY_PAGAN_RELIGION_TEOTL</Description>
-			<Civilopedia>TXT_KEY_PAGAN_RELIGION_TEOTL_PEDIA</Civilopedia>
-			<Button>Art/Interface/Buttons/Religions/Teotl.dds</Button>
-		</PaganReligionInfo>
+ 			<Type>PAGAN_RELIGION_TEOTL_TOLTEC</Type>
+ 			<Description>TXT_KEY_PAGAN_RELIGION_TEOTL</Description>
+ 			<Civilopedia>TXT_KEY_PAGAN_RELIGION_TEOTL_PEDIA</Civilopedia>
+ 			<Button>Art/Interface/Buttons/Religions/Teotl.dds</Button>
+ 		</PaganReligionInfo>
 		<PaganReligionInfo>
 			<Type>PAGAN_RELIGION_TEOTL_AZTEC</Type>
 			<Description>TXT_KEY_PAGAN_RELIGION_TEOTL</Description>
@@ -137,6 +137,18 @@
 			<Description>TXT_KEY_PAGAN_RELIGION_YORUBA</Description>
 			<Civilopedia>TXT_KEY_PAGAN_RELIGION_YORUBA_PEDIA</Civilopedia>
 			<Button>Art/Interface/Buttons/Religions/Yoruba.dds</Button>
+		</PaganReligionInfo>
+		<PaganReligionInfo>
+			<Type>PAGAN_RELIGION_FOMBA_GASY</Type>
+			<Description>TXT_KEY_PAGAN_RELIGION_FOMBA_GASY</Description>
+			<Civilopedia>TXT_KEY_PAGAN_RELIGION_FOMBA_GASY_PEDIA</Civilopedia>
+			<Button>Art/Interface/Buttons/Religions/Fomba_Gasy.dds</Button>
+		</PaganReligionInfo>
+			<PaganReligionInfo>
+			<Type>PAGAN_RELIGION_BANTU</Type>
+			<Description>TXT_KEY_PAGAN_RELIGION_BANTU</Description>
+			<Civilopedia>TXT_KEY_PAGAN_RELIGION_BANTU_PEDIA</Civilopedia>
+			<Button>Art/Interface/Buttons/Religions/Bantu.dds</Button>
 		</PaganReligionInfo>
 	</PaganReligionInfos>
 </Civ4PaganReligionInfo>
