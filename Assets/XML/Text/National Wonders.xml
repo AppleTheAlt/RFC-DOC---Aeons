@@ -353,4 +353,20 @@
 		<Italian></Italian>
 		<Spanish></Spanish>
 	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_CARAVAN_SUPPLY_HELP</Tag>
+		<English>[ICON_BULLET]Requires a total of 5 Desert, Semidesert or Salt Flat tiles in city radius[NEWLINE][ICON_BULLET]Allows trading across deserts.</English>
+		<French>[ICON_BULLET]Requires a total of 5 Desert, Semidesert or Salt Flat tiles in city radius[NEWLINE][ICON_BULLET]Allows trading across deserts.</French>
+		<German>[ICON_BULLET]Requires a total of 5 Desert, Semidesert or Salt Flat tiles in city radius[NEWLINE][ICON_BULLET]Allows trading across deserts.</German>
+		<Italian>[ICON_BULLET]Requires a total of 5 Desert, Semidesert or Salt Flat tiles in city radius[NEWLINE][ICON_BULLET]Allows trading across deserts.</Italian>
+		<Spanish>[ICON_BULLET]Requires a total of 5 Desert, Semidesert or Salt Flat tiles in city radius[NEWLINE][ICON_BULLET]Allows trading across deserts.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_CARAVAN_SUPPLY</Tag>
+		<English>Caravan Supply</English>
+		<French>Caravan Supply</French>
+		<German>Caravan Supply</German>
+		<Italian>Caravan Supply</Italian>
+		<Spanish>Caravan Supply</Spanish>
+	</TEXT>
 </Civ4GameText>

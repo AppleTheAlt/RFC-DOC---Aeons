@@ -2,6 +2,24 @@
 <Civ4GameText xmlns="http://www.firaxis.com">
 
 	<TEXT>
+		<Tag>TXT_KEY_TECH_FEUDALISM_HELP</Tag>
+		<English>[ICON_BULLET]Allows Sub-Saharan African Civs to train settlers.</English>
+		<French>[ICON_BULLET]Allows Sub-Saharan African Civs to train settlers.</French>
+		<German>[ICON_BULLET]Allows Sub-Saharan African Civs to train settlers.</German>
+		<Italian>[ICON_BULLET]Allows Sub-Saharan African Civs to train settlers.</Italian>
+		<Spanish>[ICON_BULLET]Allows Sub-Saharan African Civs to train settlers.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TECH_LAW_HELP</Tag>
+		<English>[ICON_BULLET]Allows Nomadic Civs to train workers.</English>
+		<French>[ICON_BULLET]Allows Nomadic Civs to train workers.</French>
+		<German>[ICON_BULLET]Allows Nomadic Civs to train workers.</German>
+		<Italian>[ICON_BULLET]Allows Nomadic Civs to train workers.</Italian>
+		<Spanish>[ICON_BULLET]Allows Nomadic Civs to train workers.</Spanish>
+	</TEXT>
+
+
+	<TEXT>
 		<Tag>TXT_KEY_TECH_ACADEMIA</Tag>
 		<English>Academia</English>
 		<French>
@@ -435,9 +453,6 @@
 		<Italian>No Translation</Italian>
 		<Spanish>No Translation</Spanish>
 	</TEXT>
-
-
-
 	<TEXT>
 		<Tag>TXT_KEY_TECH_CYBERNETICS</Tag>
 		<English>Cybernetics</English>
@@ -460,7 +475,6 @@
 		<French>No Translation</French>
 		<German>No Translation</German>
 		<Italian>No Translation</Italian>
-		<Spanish>No Translation</Spanish>
 	</TEXT>
 
 
@@ -2139,8 +2153,6 @@
 		<Italian>No Translation</Italian>
 		<Spanish>No Translation</Spanish>
 	</TEXT>
-
-
 
 	<TEXT>
 		<Tag>TXT_KEY_TECH_GUILDS</Tag>
@@ -5015,6 +5027,176 @@
 		<German>Digital</German>
 		<Italian>Digital</Italian>
 		<Spanish>Digital</Spanish>
+	</TEXT>
+	<TEXT>
+ 		<Tag>TXT_KEY_TECH_RECURVE_BOW</Tag>
+ 		<English>Recurve Bow</English>
+ 		<French>Recurve Bow</French>
+ 		<German>Recurve Bow</German>
+ 		<Italian>Recurve Bow</Italian>
+ 		<Spanish>Recurve Bow</Spanish>
+ 	</TEXT>
+ <TEXT>
+		<Tag>TXT_KEY_TECH_RECURVE_BOW_QUOTE</Tag>
+		<English>"And the earth was covered with steel, and arrows fell from the clouds like hail, and the ground was torn with hoofs, and blood flowed like water upon the plains..."[PARAGRAPH:2]- Ferdowsi, Shahnameh</English>
+		<French>"And the earth was covered with steel, and arrows fell from the clouds like hail, and the ground was torn with hoofs, and blood flowed like water upon the plains..."[PARAGRAPH:2]- Ferdowsi, Shahnameh</French>
+		<German>"And the earth was covered with steel, and arrows fell from the clouds like hail, and the ground was torn with hoofs, and blood flowed like water upon the plains..."[PARAGRAPH:2]- Ferdowsi, Shahnameh</German>
+		<Italian>"And the earth was covered with steel, and arrows fell from the clouds like hail, and the ground was torn with hoofs, and blood flowed like water upon the plains..."[PARAGRAPH:2]- Ferdowsi, Shahnameh</Italian>
+		<Spanish>"And the earth was covered with steel, and arrows fell from the clouds like hail, and the ground was torn with hoofs, and blood flowed like water upon the plains..."[PARAGRAPH:2]- Ferdowsi, Shahnameh</Spanish>
+	</TEXT>
+ 
+ 	<TEXT>
+ 		<Tag>TXT_KEY_TECH_RECURVE_BOW_PEDIA</Tag>
+ 		<English>TXT_KEY_TECH_RECURVE_BOW_PEDIA</English>
+ 		<French>TXT_KEY_TECH_RECURVE_BOW_PEDIA</French>
+ 		<German>TXT_KEY_TECH_RECURVE_BOW_PEDIA</German>
+ 		<Italian>TXT_KEY_TECH_RECURVE_BOW_PEDIA</Italian>
+ 		<Spanish>TXT_KEY_TECH_RECURVE_BOW_PEDIA</Spanish>
+ 	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TECH_RECURVE_BOW_QUOTE</Tag>
+		<English>"And the earth was covered with steel, and arrows fell from the clouds like hail, and the ground was torn with hoofs, and blood flowed like water upon the plains..."[PARAGRAPH:2]- Ferdowsi, Shahnameh</English>
+		<French>"And the earth was covered with steel, and arrows fell from the clouds like hail, and the ground was torn with hoofs, and blood flowed like water upon the plains..."[PARAGRAPH:2]- Ferdowsi, Shahnameh</French>
+		<German>"And the earth was covered with steel, and arrows fell from the clouds like hail, and the ground was torn with hoofs, and blood flowed like water upon the plains..."[PARAGRAPH:2]- Ferdowsi, Shahnameh</German>
+		<Italian>"And the earth was covered with steel, and arrows fell from the clouds like hail, and the ground was torn with hoofs, and blood flowed like water upon the plains..."[PARAGRAPH:2]- Ferdowsi, Shahnameh</Italian>
+		<Spanish>"And the earth was covered with steel, and arrows fell from the clouds like hail, and the ground was torn with hoofs, and blood flowed like water upon the plains..."[PARAGRAPH:2]- Ferdowsi, Shahnameh</Spanish>
+	</TEXT>
+ 
+ 
+ 	<TEXT>
+ 		<Tag>TXT_KEY_TECH_CONSENSUS</Tag>
+ 		<English>Consensus</English>
+ 		<French>Consensus</French>
+ 		<German>Consensus</German>
+ 		<Italian>Consensus</Italian>
+ 		<Spanish>Consensus</Spanish>
+ 	</TEXT>
+ 
+ 	<TEXT>
+		<Tag>TXT_KEY_TECH_CONSENSUS_QUOTE</Tag>
+		<English>"We recognize that on the death of our Sovereign it is fit and proper for us to consider our freedoms and liberties, perceiving the basis for them to be in the free election of our King and Lord."[PARAGRAPH:2]- The Convocation Sejm</English>
+		<French>"We recognize that on the death of our Sovereign it is fit and proper for us to consider our freedoms and liberties, perceiving the basis for them to be in the free election of our King and Lord."[PARAGRAPH:2]- The Convocation Sejm</French>
+		<German>"We recognize that on the death of our Sovereign it is fit and proper for us to consider our freedoms and liberties, perceiving the basis for them to be in the free election of our King and Lord."[PARAGRAPH:2]- The Convocation Sejm</German>
+		<Italian>"We recognize that on the death of our Sovereign it is fit and proper for us to consider our freedoms and liberties, perceiving the basis for them to be in the free election of our King and Lord."[PARAGRAPH:2]- The Convocation Sejm</Italian>
+		<Spanish>"We recognize that on the death of our Sovereign it is fit and proper for us to consider our freedoms and liberties, perceiving the basis for them to be in the free election of our King and Lord."[PARAGRAPH:2]- The Convocation Sejm</Spanish>
+	</TEXT>
+ 
+ 	<TEXT>
+ 		<Tag>TXT_KEY_TECH_CONSENSUS_PEDIA</Tag>
+ 		<English>TXT_KEY_TECH_CONSENSUS_PEDIA</English>
+ 		<French>TXT_KEY_TECH_CONSENSUS_PEDIA</French>
+ 		<German>TXT_KEY_TECH_CONSENSUS_PEDIA</German>
+ 		<Italian>TXT_KEY_TECH_CONSENSUS_PEDIA</Italian>
+ 		<Spanish>TXT_KEY_TECH_CONSENSUS_PEDIA</Spanish>
+ 	</TEXT>
+ 
+ 	<TEXT>
+ 		<Tag>TXT_KEY_TECH_SPRING_STEEL</Tag>
+ 		<English>Spring Steel</English>
+ 		<French>Spring Steel</French>
+ 		<German>Spring Steel</German>
+ 		<Italian>Spring Steel</Italian>
+ 		<Spanish>Spring Steel</Spanish>
+ 	</TEXT>
+
+	<TEXT>
+		<Tag>TXT_KEY_TECH_SPRING_STEEL_QUOTE</Tag>
+		<English>"Energy may be likened to the bending of a crossbow; decision, to the releasing of a trigger."[PARAGRAPH:2]- Sun Tzu, the Art of War</English>
+		<French>"Energy may be likened to the bending of a crossbow; decision, to the releasing of a trigger."[PARAGRAPH:2]- Sun Tzu, the Art of War</French>
+		<German>"Energy may be likened to the bending of a crossbow; decision, to the releasing of a trigger."[PARAGRAPH:2]- Sun Tzu, the Art of War</German>
+		<Italian>"Energy may be likened to the bending of a crossbow; decision, to the releasing of a trigger."[PARAGRAPH:2]- Sun Tzu, the Art of War</Italian>
+		<Spanish>"Energy may be likened to the bending of a crossbow; decision, to the releasing of a trigger."[PARAGRAPH:2]- Sun Tzu, the Art of War</Spanish>
+	</TEXT>
+ 
+ 	<TEXT>
+ 		<Tag>TXT_KEY_TECH_LATEEN_SAILS</Tag>
+ 		<English>Lateen Sails</English>
+ 		<French>Lateen Sails</French>
+ 		<German>Lateen Sails</German>
+ 		<Italian>Lateen Sails</Italian>
+ 		<Spanish>Lateen Sails</Spanish>
+ 	</TEXT>
+
+	<TEXT>
+		<Tag>TXT_KEY_TECH_LATEEN_SAILS_QUOTE</Tag>
+		<English>"And he commanded the sailors to follow along with them always and not to separate themselves far from the army, but when the wind was favouring to lower the great sails, and follow with the small sails."[PARAGRAPH:2]- Procopius, The Vandal Wars</English>
+		<French>"And he commanded the sailors to follow along with them always and not to separate themselves far from the army, but when the wind was favouring to lower the great sails, and follow with the small sails."[PARAGRAPH:2]- Procopius, The Vandal Wars</French>
+		<German>"And he commanded the sailors to follow along with them always and not to separate themselves far from the army, but when the wind was favouring to lower the great sails, and follow with the small sails."[PARAGRAPH:2]- Procopius, The Vandal Wars</German>
+		<Italian>"And he commanded the sailors to follow along with them always and not to separate themselves far from the army, but when the wind was favouring to lower the great sails, and follow with the small sails."[PARAGRAPH:2]- Procopius, The Vandal Wars</Italian>
+		<Spanish>"And he commanded the sailors to follow along with them always and not to separate themselves far from the army, but when the wind was favouring to lower the great sails, and follow with the small sails."[PARAGRAPH:2]- Procopius, The Vandal Wars</Spanish>
+	</TEXT>
+ 
+ 	<TEXT>
+ 		<Tag>TXT_KEY_TECH_LIMB_PROTECTION</Tag>
+ 		<English>Limb Protection</English>
+ 		<French>Limb Protection</French>
+ 		<German>Limb Protection</German>
+ 		<Italian>Limb Protection</Italian>
+ 		<Spanish>Limb Protection</Spanish>
+ 	</TEXT>
+	
+	<TEXT>
+		<Tag>TXT_KEY_TECH_LIMB_PROTECTION_QUOTE</Tag>
+		<English>"ARMOR, n. The kind of clothing worn by a man whose tailor is a blacksmith."[PARAGRAPH:2]- Ambrose Bierce, The Cynic's Dictionary</English>
+		<French>"ARMURE, n. Le genre de v&#234;tement port&#233; par un homme dont le tailleur est un forgeron."[PARAGRAPH:2]- Ambrose Bierce, The Cynic's Dictionary</French>
+		<German>"ARMOR, n. The kind of clothing worn by a man whose tailor is a blacksmith."[PARAGRAPH:2]- Ambrose Bierce, The Cynic's Dictionary</German>
+		<Italian>"ARMOR, n. The kind of clothing worn by a man whose tailor is a blacksmith."[PARAGRAPH:2]- Ambrose Bierce, The Cynic's Dictionary</Italian>
+		<Spanish>"ARMOR, n. The kind of clothing worn by a man whose tailor is a blacksmith."[PARAGRAPH:2]- Ambrose Bierce, The Cynic's Dictionary</Spanish>
+	</TEXT>
+ 
+ 	<TEXT>
+ 		<Tag>TXT_KEY_TECH_SELECTIVE_BREEDING</Tag>
+ 		<English>Selective Breeding</English>
+ 		<French>Selective Breeding</French>
+ 		<German>Selective Breeding</German>
+ 		<Italian>Selective Breeding</Italian>
+ 		<Spanish>Selective Breeding</Spanish>
+ 	</TEXT>
+
+	<TEXT>
+		<Tag>TXT_KEY_TECH_SELECTIVE_BREEDING_QUOTE</Tag>
+		<English>"God forbid that I should go to any Heaven in which there are no horses."[PARAGRAPH:2]- Robert Cunninghame-Graham</English>
+		<French>"God forbid that I should go to any Heaven in which there are no horses."[PARAGRAPH:2]- Robert Cunninghame-Graham</French>
+		<German>"God forbid that I should go to any Heaven in which there are no horses."[PARAGRAPH:2]- Robert Cunninghame-Graham</German>
+		<Italian>"God forbid that I should go to any Heaven in which there are no horses."[PARAGRAPH:2]- Robert Cunninghame-Graham</Italian>
+		<Spanish>"God forbid that I should go to any Heaven in which there are no horses."[PARAGRAPH:2]- Robert Cunninghame-Graham</Spanish>
+	</TEXT>
+ 
+ 	<TEXT>
+ 		<Tag>TXT_KEY_TECH_DISCIPLINE</Tag>
+ 		<English>Discipline</English>
+ 		<French>Discipline</French>
+ 		<German>Discipline</German>
+ 		<Italian>Discipline</Italian>
+ 		<Spanish>Discipline</Spanish>
+ 	</TEXT>
+
+	
+	<TEXT>
+		<Tag>TXT_KEY_TECH_DISCIPLINE_QUOTE</Tag>
+		<English>"Discipline is the soul of an army. It makes small numbers formidable; procures success to the weak, and esteem to all."[PARAGRAPH:2]- George Washington</English>
+		<French>"Discipline is the soul of an army. It makes small numbers formidable; procures success to the weak, and esteem to all."[PARAGRAPH:2]- George Washington</French>
+		<German>"Discipline is the soul of an army. It makes small numbers formidable; procures success to the weak, and esteem to all."[PARAGRAPH:2]- George Washington</German>
+		<Italian>"Discipline is the soul of an army. It makes small numbers formidable; procures success to the weak, and esteem to all."[PARAGRAPH:2]- George Washington</Italian>
+		<Spanish>"Discipline is the soul of an army. It makes small numbers formidable; procures success to the weak, and esteem to all."[PARAGRAPH:2]- George Washington</Spanish>
+	</TEXT>
+ 
+ 	<TEXT>
+ 		<Tag>TXT_KEY_TECH_RELIGIOUS_ORDERS</Tag>
+ 		<English>Religious Orders</English>
+ 		<French>Religious Orders</French>
+ 		<German>Religious Orders</German>
+ 		<Italian>Religious Orders</Italian>
+ 		<Spanish>Religious Orders</Spanish>
+ 	</TEXT>
+
+	<TEXT>
+		<Tag>TXT_KEY_TECH_RELIGIOUS_ORDERS_QUOTE</Tag>
+		<English>"They bear arms suitable for battle; on the right shoulder, or between both shoulders, they wear the cross of Christ; the cry, 'God wills it! God wills it! God wills it!' they shout in truth with one voice."[PARAGRAPH:2]- Gesta Francorum</English>
+		<French>"They bear arms suitable for battle; on the right shoulder, or between both shoulders, they wear the cross of Christ; the cry, 'God wills it! God wills it! God wills it!' they shout in truth with one voice."[PARAGRAPH:2]- Gesta Francorum</French>
+		<German>"They bear arms suitable for battle; on the right shoulder, or between both shoulders, they wear the cross of Christ; the cry, 'God wills it! God wills it! God wills it!' they shout in truth with one voice."[PARAGRAPH:2]- Gesta Francorum</German>
+		<Italian>"They bear arms suitable for battle; on the right shoulder, or between both shoulders, they wear the cross of Christ; the cry, 'God wills it! God wills it! God wills it!' they shout in truth with one voice."[PARAGRAPH:2]- Gesta Francorum</Italian>
+		<Spanish>"They bear arms suitable for battle; on the right shoulder, or between both shoulders, they wear the cross of Christ; the cry, 'God wills it! God wills it! God wills it!' they shout in truth with one voice."[PARAGRAPH:2]- Gesta Francorum</Spanish>
 	</TEXT>
 
 </Civ4GameText>

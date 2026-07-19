@@ -31,10 +31,41 @@
 	</TEXT>
 	
 <!-- GOAL DESCRIPTIONS -->
-	
+	<TEXT>
+		<Tag>TXT_KEY_VICTORY_DESC_STATE_RELIGION_SURPASS_COUNT</Tag>
+		<English>%s2 civilizations following %s1 state religion</English>
+		<French></French>
+		<German></German>
+		<Italian></Italian>
+		<Spanish></Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_VICTORY_DESC_TEAM_RANK_SURPASS</Tag>
+		<English>Have a higher score than %s1</English>
+		<French></French>
+		<German></German>
+		<Italian></Italian>
+		<Spanish></Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_VICTORY_DESC_TEAM_RANK</Tag>
+		<English>number %s1 highest score</English>
+		<French></French>
+		<German></German>
+		<Italian></Italian>
+		<Spanish></Spanish>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_VICTORY_DESC_CONTROL</Tag>
 		<English>control %s1</English>
+		<French></French>
+		<German></German>
+		<Italian></Italian>
+		<Spanish></Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_VICTORY_DESC_HAVE_THE_HIGHEST_POPULATION_CITY</Tag>
+		<English>have the highest population city in %s1</English>
 		<French></French>
 		<German></German>
 		<Italian></Italian>
@@ -49,14 +80,6 @@
 		<Spanish></Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_VICTORY_DESC_CONTROL_DIRECTLY_OR_THROUGH_ALLIES</Tag>
-		<English>control %s1 directly or through allies</English>
-		<French></French>
-		<German></German>
-		<Italian></Italian>
-		<Spanish></Spanish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_VICTORY_DESC_CONTROL_DIRECTLY_OR_THROUGH_VASSALS</Tag>
 		<English>control %s1 directly or through vassals</English>
 		<French></French>
@@ -64,6 +87,14 @@
 		<Italian></Italian>
 		<Spanish></Spanish>
 	</TEXT>
+	<TEXT>
+ 		<Tag>TXT_KEY_VICTORY_DESC_CONTROL_DIRECTLY_OR_THROUGH_ALLIES</Tag>
+ 		<English>control %s1 directly or through allies</English>
+ 		<French></French>
+ 		<German></German>
+ 		<Italian></Italian>
+ 		<Spanish></Spanish>
+ 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_VICTORY_DESC_HAVE</Tag>
 		<English>have %s1</English>
@@ -73,13 +104,13 @@
 		<Spanish></Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_VICTORY_DESC_HAVE_IN_CITY</Tag>
-		<English>have %s1 in %s2</English>
-		<French></French>
-		<German></German>
-		<Italian></Italian>
-		<Spanish></Spanish>
-	</TEXT>
+ 		<Tag>TXT_KEY_VICTORY_DESC_HAVE_IN_CITY</Tag>
+ 		<English>have %s1 in %s2</English>
+ 		<French></French>
+ 		<German></German>
+ 		<Italian></Italian>
+ 		<Spanish></Spanish>
+ 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_VICTORY_DESC_HAVE_BETWEEN_ALLIES</Tag>
 		<English>have %s1 between you and your allies</English>
@@ -105,8 +136,24 @@
 		<Spanish></Spanish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_VICTORY_DESC_FIRST_DISCOVER_REGION</Tag>
+		<English>%s2 out of %s1</English>
+		<French></French>
+		<German></German>
+		<Italian></Italian>
+		<Spanish></Spanish>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_VICTORY_DESC_BROKERED_PEACE</Tag>
 		<English>end %s1 wars through diplomacy</English>
+		<French></French>
+		<German></German>
+		<Italian></Italian>
+		<Spanish></Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_VICTORY_DESC_TECH_TRADED</Tag>
+		<English>receieve %s1 techs from other civilizations</English>
 		<French></French>
 		<German></German>
 		<Italian></Italian>
@@ -393,6 +440,14 @@
 		<Spanish></Spanish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_VICTORY_DESC_BE_FIRST_ENTER</Tag>
+		<English>Be first to enter the %s1 era</English>
+		<French></French>
+		<German></German>
+		<Italian></Italian>
+		<Spanish></Spanish>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_VICTORY_DESC_MAKE_SURE</Tag>
 		<English>make sure %s1</English>
 		<French></French>
@@ -411,6 +466,14 @@
 	<TEXT>
 		<Tag>TXT_KEY_VICTORY_DESC_MAKE_SURE_THAT_ARE_SECULAR</Tag>
 		<English>make sure that %s1 are secular</English>
+		<French></French>
+		<German></German>
+		<Italian></Italian>
+		<Spanish></Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_VICTORY_DESC_MAKE_SURE_THAT_ARE_ISLAMIC</Tag>
+		<English>make sure that %s1 are Islamic</English>
 		<French></French>
 		<German></German>
 		<Italian></Italian>
@@ -644,6 +707,22 @@
 		<Spanish></Spanish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_VICTORY_DESC_RIVER_POPULATION</Tag>
+		<English>a total population of %s1 along rivers</English>
+		<French></French>
+		<German></German>
+		<Italian></Italian>
+		<Spanish></Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_VICTORY_DESC_POPULATION_REGION</Tag>
+		<English>a population of %s2 in %s1</English>
+		<French></French>
+		<German></German>
+		<Italian></Italian>
+		<Spanish></Spanish>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_VICTORY_DESC_RELIGION_POPULATION</Tag>
 		<English>a %s1 population of %s2</English>
 		<French></French>
@@ -692,6 +771,14 @@
 		<Spanish></Spanish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_VICTORY_DESC_POWERED_CITY_COUNT</Tag>
+		<English>%s1 powered cities</English>
+		<French></French>
+		<German></German>
+		<Italian></Italian>
+		<Spanish></Spanish>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_VICTORY_DESC_CITY_COUNT_SINGLE</Tag>
 		<English>a city in %s1</English>
 		<French></French>
@@ -702,6 +789,14 @@
 	<TEXT>
 		<Tag>TXT_KEY_VICTORY_DESC_CONTACT_BEFORE_REVEALED</Tag>
 		<English>%s1 before any of them discovers %s2</English>
+		<French></French>
+		<German></German>
+		<Italian></Italian>
+		<Spanish></Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_VICTORY_DESC_FIRST_DISCOVER_REGION</Tag>
+		<English>%s2 out of %s1</English>
 		<French></French>
 		<German></German>
 		<Italian></Italian>
@@ -764,6 +859,14 @@
 		<Spanish></Spanish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_VICTORY_DESC_DEFEATED_UNITS_UNDISCOVERED</Tag>
+		<English>%s1 units whose tech you haven't discovered yet</English>
+		<French></French>
+		<German></German>
+		<Italian></Italian>
+		<Spanish></Spanish>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_VICTORY_DESC_AVERAGE_CULTURE</Tag>
 		<English>an average culture of %s1</English>
 		<French></French>
@@ -789,7 +892,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_VICTORY_DESC_RAID_GOLD</Tag>
-		<English>%s1 gold by pillaging, conquering cities and sinking ships</English>
+		<English>%s1 gold by pillaging, conquering cities and defeating units</English>
 		<French></French>
 		<German></German>
 		<Italian></Italian>
@@ -876,6 +979,14 @@
 		<Spanish></Spanish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_VICTORY_DESC_BEST_ARMY</Tag>
+		<English>the world's largest army</English>
+		<French></French>
+		<German></German>
+		<Italian></Italian>
+		<Spanish></Spanish>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_VICTORY_DESC_RELIGION_SPREAD_PERCENT</Tag>
 		<English>%s1 to %s2 of the world's population</English>
 		<French></French>
@@ -925,7 +1036,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_VICTORY_DESC_AREA_BLOCKADE_GOLD</Tag>
-		<English>%s2 gold through blockading and pillaging in %s1</English>
+		<English>%s2 gold through blockading, pillaging, and capturing cities in %s1</English>
 		<French></French>
 		<German></German>
 		<Italian></Italian>
@@ -950,6 +1061,14 @@
 	<TEXT>
 		<Tag>TXT_KEY_VICTORY_DESC_AREA_NO_STATE_RELIGION</Tag>
 		<English>no %s2 civilizations in %s1</English>
+		<French></French>
+		<German></German>
+		<Italian></Italian>
+		<Spanish></Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_VICTORY_DESC_AREA_NO_RELIGION</Tag>
+		<English>no %s2 presence in %s1</English>
 		<French></French>
 		<German></German>
 		<Italian></Italian>
@@ -1012,6 +1131,14 @@
 		<Spanish></Spanish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_VICTORY_DESC_DIPLOMATIC_MISSION</Tag>
+		<English>%s2 %s3 to %s1</English>
+		<French></French>
+		<German></German>
+		<Italian></Italian>
+		<Spanish></Spanish>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_VICTORY_DESC_POPULATION_CITY_COUNT</Tag>
 		<English>%s2 cities with a population of %s1</English>
 		<French></French>
@@ -1022,6 +1149,14 @@
 	<TEXT>
 		<Tag>TXT_KEY_VICTORY_DESC_OPEN_BORDER_COUNT</Tag>
 		<English>open border agreements with %s1 %s2</English>
+		<French></French>
+		<German></German>
+		<Italian></Italian>
+		<Spanish></Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_VICTORY_DESC_CONTACT_COUNT</Tag>
+		<English>contact with %s1 %s2</English>
 		<French></French>
 		<German></German>
 		<Italian></Italian>
@@ -1132,6 +1267,22 @@
 		<Spanish></Spanish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_VICTORY_DESC_ENTER_ERA</Tag>
+		<English>enter the %s1 era</English>
+		<French></French>
+		<German></German>
+		<Italian></Italian>
+		<Spanish></Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_VICTORY_DESC_X_ERA</Tag>
+		<English>the %s1</English>
+		<French></French>
+		<German></German>
+		<Italian></Italian>
+		<Spanish></Spanish>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_VICTORY_DESC_CULTURE_CITY</Tag>
 		<English>a city with %s1 culture</English>
 		<French></French>
@@ -1196,6 +1347,14 @@
 		<Spanish></Spanish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_VICTORY_DESC_FIRST_DEFENSIVE_PACT</Tag>
+		<English>the first to form a defensive pact</English>
+		<French></French>
+		<German></German>
+		<Italian></Italian>
+		<Spanish></Spanish>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_VICTORY_DESC_NO_CITY_CONQUERED</Tag>
 		<English>never conquer any cities</English>
 		<French></French>
@@ -1220,6 +1379,14 @@
 		<Spanish></Spanish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_VICTORY_DESC_CITY_POPULATION</Tag>
+		<English>%s2 buildings in %s1</English>
+		<French></French>
+		<German></German>
+		<Italian></Italian>
+		<Spanish></Spanish>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_VICTORY_DESC_UNIT_COMBAT_COUNT</Tag>
 		<English>an army of %s2 %s1</English>
 		<French></French>
@@ -1230,6 +1397,22 @@
 	<TEXT>
 		<Tag>TXT_KEY_VICTORY_DESC_HEALTHIEST_TURNS</Tag>
 		<English>the highest life expectancy rating in the world for %s1 turns</English>
+		<French></French>
+		<German></German>
+		<Italian></Italian>
+		<Spanish></Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_VICTORY_DESC_LARGER_ARMY_THAN_POPULATION_TURNS</Tag>
+		<English>a larger army than population for %s1 turns</English>
+		<French></French>
+		<German></German>
+		<Italian></Italian>
+		<Spanish></Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_VICTORY_DESC_LIFE_EXPECTANCY_TURNS</Tag>
+		<English>a life expectancy higher than %s1 for %s2 turns</English>
 		<French></French>
 		<German></German>
 		<Italian></Italian>
@@ -1252,6 +1435,14 @@
 		<Spanish></Spanish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_VICTORY_DESC_CONTROL_TURNS</Tag>
+		<English>%s1 for %s2 turns</English>
+		<French></French>
+		<German></German>
+		<Italian></Italian>
+		<Spanish></Spanish>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_VICTORY_DESC_HAPPIEST_TURNS</Tag>
 		<English>the highest approval rating in the world for %s1 turns</English>
 		<French></French>
@@ -1268,8 +1459,32 @@
 		<Spanish></Spanish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_VICTORY_DESC_ALL_CONTACT</Tag>
+		<English>contact with all %s1</English>
+		<French></French>
+		<German></German>
+		<Italian></Italian>
+		<Spanish></Spanish>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_VICTORY_DESC_NO_STATE_RELIGION</Tag>
 		<English>make sure there are no %s1 civilizations in the world</English>
+		<French></French>
+		<German></German>
+		<Italian></Italian>
+		<Spanish></Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_VICTORY_PROGR_AREA_NO_RELIGION</Tag>
+		<English>No %s2 presence in %s1</English>
+		<French></French>
+		<German></German>
+		<Italian></Italian>
+		<Spanish></Spanish>
+	</TEXT>	
+	<TEXT>
+		<Tag>TXT_KEY_VICTORY_PROGR_FIRST_DISCOVER_REGION</Tag>
+		<English>%s2</English>
 		<French></French>
 		<German></German>
 		<Italian></Italian>
@@ -1302,6 +1517,22 @@
 	<TEXT>
 		<Tag>TXT_KEY_VICTORY_DESC_PRODUCTION</Tag>
 		<English>%s1 production</English>
+		<French></French>
+		<German></German>
+		<Italian></Italian>
+		<Spanish></Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_VICTORY_DESC_PRODUCTION_REGION</Tag>
+		<English>%s2 production in %s1</English>
+		<French></French>
+		<German></German>
+		<Italian></Italian>
+		<Spanish></Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_VICTORY_DESC_COMMERCE_REGION</Tag>
+		<English>%s2 commerce in %s1</English>
 		<French></French>
 		<German></German>
 		<Italian></Italian>
@@ -1508,8 +1739,24 @@
 		<Spanish></Spanish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_VICTORY_DESC_REGION_CULTURE_AMOUNT</Tag>
+		<English>%s2 culture in %s1</English>
+		<French></French>
+		<German></German>
+		<Italian></Italian>
+		<Spanish></Spanish>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_VICTORY_DESC_STATE_RELIGION_COUNT</Tag>
 		<English>there are %s3 %s1 civilizations with %s2 state religion</English>
+		<French></French>
+		<German></German>
+		<Italian></Italian>
+		<Spanish></Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_VICTORY_DESC_STATE_RELIGION_COUNT</Tag>
+		<English>there are %s2 civilizations with %s1 state religion with less score than %s3</English>
 		<French></French>
 		<German></German>
 		<Italian></Italian>
@@ -1574,9 +1821,18 @@
 	
 <!-- REQUIREMENT PROGRESS -->
 	
+	
 	<TEXT>
 		<Tag>TXT_KEY_VICTORY_PROGR_SIMPLE</Tag>
 		<English>%s1</English>
+		<French></French>
+		<German></German>
+		<Italian></Italian>
+		<Spanish></Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_VICTORY_PROGR_TEAM_RANK</Tag>
+		<English>Number %s1 highest score</English>
 		<French></French>
 		<German></German>
 		<Italian></Italian>
@@ -1607,6 +1863,14 @@
 		<Spanish></Spanish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_VICTORY_PROGR_BEST_POPULATION_TURNS</Tag>
+		<English>most populous turns</English>
+		<French></French>
+		<German></German>
+		<Italian></Italian>
+		<Spanish></Spanish>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_VICTORY_PROGR_BEST_CULTURE</Tag>
 		<English>most cultured</English>
 		<French></French>
@@ -1631,6 +1895,14 @@
 		<Spanish></Spanish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_VICTORY_PROGR_TECH_TRADED</Tag>
+		<English>Techs Traded</English>
+		<French></French>
+		<German></German>
+		<Italian></Italian>
+		<Spanish></Spanish>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_VICTORY_PROGR_CULTURE_AMOUNT</Tag>
 		<English>Total Culture</English>
 		<French></French>
@@ -1641,6 +1913,22 @@
 	<TEXT>
 		<Tag>TXT_KEY_VICTORY_PROGR_POPULATION</Tag>
 		<English>Total Population</English>
+		<French></French>
+		<German></German>
+		<Italian></Italian>
+		<Spanish></Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_VICTORY_PROGR_RIVER_POPULATION</Tag>
+		<English>Total Population along Rivers</English>
+		<French></French>
+		<German></German>
+		<Italian></Italian>
+		<Spanish></Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_VICTORY_PROGR_POPULATION_REGION</Tag>
+		<English>Population in %s1</English>
 		<French></French>
 		<German></German>
 		<Italian></Italian>
@@ -1681,6 +1969,14 @@
 	<TEXT>
 		<Tag>TXT_KEY_VICTORY_PROGR_CITY_COUNT</Tag>
 		<English>Cities in %s1</English>
+		<French></French>
+		<German></German>
+		<Italian></Italian>
+		<Spanish></Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_VICTORY_PROGR_POWERED_CITY_COUNT</Tag>
+		<English>Powered cities</English>
 		<French></French>
 		<German></German>
 		<Italian></Italian>
@@ -1737,6 +2033,14 @@
 	<TEXT>
 		<Tag>TXT_KEY_VICTORY_PROGR_DEFEATED_UNITS</Tag>
 		<English>defeated %s1 units</English>
+		<French></French>
+		<German></German>
+		<Italian></Italian>
+		<Spanish></Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_VICTORY_PROGR_DEFEATED_UNITS_UNDISCOVERED</Tag>
+		<English>defeated %s1 units whose tech you haven't discovered yet</English>
 		<French></French>
 		<German></German>
 		<Italian></Italian>
@@ -1833,6 +2137,14 @@
 	<TEXT>
 		<Tag>TXT_KEY_VICTORY_PROGR_BEST_TECH</Tag>
 		<English>most advanced</English>
+		<French></French>
+		<German></German>
+		<Italian></Italian>
+		<Spanish></Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_VICTORY_PROGR_BEST_ARMY</Tag>
+		<English>largest army</English>
 		<French></French>
 		<German></German>
 		<Italian></Italian>
@@ -1951,6 +2263,14 @@
 		<Spanish></Spanish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_VICTORY_PROGR_DIPLOMATIC_MISSION</Tag>
+		<English>Diplomatic missions to %s1</English>
+		<French></French>
+		<German></German>
+		<Italian></Italian>
+		<Spanish></Spanish>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_VICTORY_PROGR_POPULATION_CITY_COUNT</Tag>
 		<English>Population in %s1</English>
 		<French></French>
@@ -1967,6 +2287,14 @@
 		<Spanish></Spanish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_VICTORY_PROGR_CONTACT_COUNT</Tag>
+		<English>Contact</English>
+		<French></French>
+		<German></German>
+		<Italian></Italian>
+		<Spanish></Spanish>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_VICTORY_PROGR_ROUTE</Tag>
 		<English>%s2 along %s1 in your territory</English>
 		<French></French>
@@ -1975,7 +2303,7 @@
 		<Spanish></Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_VICTORY_PROGR_POPULATION_IN_AREA_PERCENT</Tag>
+		<Tag>TXT_KEY_VICTORY_PROGR_AREA_POPULATION_PERCENT</Tag>
 		<English>Population in %s1</English>
 		<French></French>
 		<German></German>
@@ -1983,7 +2311,7 @@
 		<Spanish></Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_VICTORY_PROGR_AREA_POPULATION_PERCENT</Tag>
+		<Tag>TXT_KEY_VICTORY_PROGR_POPULATION_IN_AREA_PERCENT</Tag>
 		<English>Population in %s1</English>
 		<French></French>
 		<German></German>
@@ -2071,6 +2399,14 @@
 		<Spanish></Spanish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_VICTORY_PROGR_ENTER_ERA</Tag>
+		<English>Entered %s1 era</English>
+		<French></French>
+		<German></German>
+		<Italian></Italian>
+		<Spanish></Spanish>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_VICTORY_PROGR_CULTURE_CITY</Tag>
 		<English>Culture in %s1</English>
 		<French></French>
@@ -2135,6 +2471,14 @@
 		<Spanish></Spanish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_VICTORY_PROGR_FIRST_DEFENSIVE_PACT</Tag>
+		<English>defensive pact</English>
+		<French></French>
+		<German></German>
+		<Italian></Italian>
+		<Spanish></Spanish>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_VICTORY_PROGR_NO_CITY_CONQUERED</Tag>
 		<English>no cities conquered</English>
 		<French></French>
@@ -2159,8 +2503,32 @@
 		<Spanish></Spanish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_VICTORY_PROGR_CITY_BUILDING_TOTAL</Tag>
+		<English>Buildings</English>
+		<French></French>
+		<German></German>
+		<Italian></Italian>
+		<Spanish></Spanish>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_VICTORY_PROGR_HEALTHIEST_TURNS</Tag>
 		<English>Turns at highest life expectancy</English>
+		<French></French>
+		<German></German>
+		<Italian></Italian>
+		<Spanish></Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_VICTORY_PROGR_LARGER_ARMY_THAN_POPULATION_TURNS</Tag>
+		<English>Turns with larger army than population</English>
+		<French></French>
+		<German></German>
+		<Italian></Italian>
+		<Spanish></Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_VICTORY_PROGR_LIFE_EXPECTANCY_TURNS</Tag>
+		<English>Turns with life expectancy above %s1</English>
 		<French></French>
 		<German></German>
 		<Italian></Italian>
@@ -2177,6 +2545,14 @@
 	<TEXT>
 		<Tag>TXT_KEY_VICTORY_PROGR_PEACE_TURNS</Tag>
 		<English>Turns at peace</English>
+		<French></French>
+		<German></German>
+		<Italian></Italian>
+		<Spanish></Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_VICTORY_PROGR_CONTROL_TURNS</Tag>
+		<English>Turns controlling %s1</English>
 		<French></French>
 		<German></German>
 		<Italian></Italian>
@@ -2217,6 +2593,22 @@
 	<TEXT>
 		<Tag>TXT_KEY_VICTORY_PROGR_PRODUCTION</Tag>
 		<English>Generated production</English>
+		<French></French>
+		<German></German>
+		<Italian></Italian>
+		<Spanish></Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_VICTORY_PROGR_PRODUCTION_REGION</Tag>
+		<English>Generated production in %s1</English>
+		<French></French>
+		<German></German>
+		<Italian></Italian>
+		<Spanish></Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_VICTORY_PROGR_COMMERCE_REGION</Tag>
+		<English>Generated commerce in %s1</English>
 		<French></French>
 		<German></German>
 		<Italian></Italian>
@@ -2407,6 +2799,14 @@
 		<Spanish></Spanish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_VICTORY_PROGR_REGION_CULTURE_AMOUNT</Tag>
+		<English>Culture in %s1</English>
+		<French></French>
+		<German></German>
+		<Italian></Italian>
+		<Spanish></Spanish>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_VICTORY_PROGR_COMPLETE_ERA</Tag>
 		<English>%s1 technologies</English>
 		<French></French>
@@ -2514,6 +2914,14 @@
 	<TEXT>
 		<Tag>TXT_KEY_VICTORY_PROGR_STATE_RELIGION_COUNT</Tag>
 		<English>%s1 civilizations with %s2 state religion</English>
+		<French></French>
+		<German></German>
+		<Italian></Italian>
+		<Spanish></Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_VICTORY_PROGR_STATE_RELIGION_SURPASS_COUNT</Tag>
+		<English>Lower score civilizations following %s1 state religion</English>
 		<French></French>
 		<German></German>
 		<Italian></Italian>
@@ -2686,30 +3094,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_VICTORY_ORDINAL_5</Tag>
 		<English>fifth</English>
-		<French></French>
-		<German></German>
-		<Italian></Italian>
-		<Spanish></Spanish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_VICTORY_ORDINAL_6</Tag>
-		<English>sixth</English>
-		<French></French>
-		<German></German>
-		<Italian></Italian>
-		<Spanish></Spanish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_VICTORY_ORDINAL_7</Tag>
-		<English>seventh</English>
-		<French></French>
-		<German></German>
-		<Italian></Italian>
-		<Spanish></Spanish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_VICTORY_ORDINAL_8</Tag>
-		<English>eighth</English>
 		<French></French>
 		<German></German>
 		<Italian></Italian>
@@ -2912,6 +3296,15 @@
 		<Spanish></Spanish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_VICTORY_GOLDEN_AGE_TURNS</Tag>
+		<English>turns during Golden Ages</English>
+		<French></French>
+		<German></German>
+		<Italian></Italian>
+		<Spanish></Spanish>
+	</TEXT>
+
+	<TEXT>
 		<Tag>TXT_KEY_VICTORY_TRADE_MISSION</Tag>
 		<English>trade mission</English>
 		<French></French>
@@ -2920,14 +3313,13 @@
 		<Spanish></Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_VICTORY_SUFFIX</Tag>
-		<English>%s1 %s2</English>
+		<Tag>TXT_KEY_VICTORY_DIPLOMATIC_MISSION</Tag>
+		<English>diplomatic mission</English>
 		<French></French>
 		<German></German>
 		<Italian></Italian>
 		<Spanish></Spanish>
 	</TEXT>
-	
 	
 <!-- Names of arguments -->
 
@@ -2964,6 +3356,14 @@
 		<Spanish></Spanish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_VICTORY_NAME_BAGHDAD</Tag>
+		<English>Baghdad</English>
+		<French></French>
+		<German></German>
+		<Italian></Italian>
+		<Spanish></Spanish>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_VICTORY_NAME_BERLIN</Tag>
 		<English>Berlin</English>
 		<French></French>
@@ -2988,14 +3388,6 @@
 		<Spanish></Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_VICTORY_NAME_CAIRO</Tag>
-		<English>Cairo</English>
-		<French></French>
-		<German></German>
-		<Italian></Italian>
-		<Spanish></Spanish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_VICTORY_NAME_CARTHAGE</Tag>
 		<English>Carthage</English>
 		<French></French>
@@ -3004,8 +3396,80 @@
 		<Spanish></Spanish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_VICTORY_NAME_CAIRO</Tag>
+		<English>Cairo</English>
+		<French></French>
+		<German></German>
+		<Italian></Italian>
+		<Spanish></Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_VICTORY_NAME_ROME</Tag>
+		<English>Rome</English>
+		<French></French>
+		<German></German>
+		<Italian></Italian>
+		<Spanish></Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_VICTORY_NAME_ARTASHAT</Tag>
+		<English>Artashat</English>
+		<French></French>
+		<German></German>
+		<Italian></Italian>
+		<Spanish></Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_VICTORY_NAME_JERUSALEM</Tag>
+		<English>Jerusalem</English>
+		<French></French>
+		<German></German>
+		<Italian></Italian>
+		<Spanish></Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_VICTORY_NAME_LISBON</Tag>
+		<English>Lisbon</English>
+		<French></French>
+		<German></German>
+		<Italian></Italian>
+		<Spanish></Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_VICTORY_NAME_VENICE</Tag>
+		<English>Venice</English>
+		<French></French>
+		<German></German>
+		<Italian></Italian>
+		<Spanish></Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_VICTORY_NAME_BEIJING</Tag>
+		<English>Beijing</English>
+		<French></French>
+		<German></German>
+		<Italian></Italian>
+		<Spanish></Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_VICTORY_NAME_MOGADISHU</Tag>
+		<English>Mogadishu</English>
+		<French></French>
+		<German></German>
+		<Italian></Italian>
+		<Spanish></Spanish>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_VICTORY_NAME_CONSTANTINOPLE</Tag>
 		<English>Constantinople</English>
+		<French></French>
+		<German></German>
+		<Italian></Italian>
+		<Spanish></Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_VICTORY_NAME_TOLEDO</Tag>
+		<English>Toledo</English>
 		<French></French>
 		<German></German>
 		<Italian></Italian>
@@ -3036,8 +3500,24 @@
 		<Spanish></Spanish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_VICTORY_NAME_MWIMBELE</Tag>
+		<English>Mwimbele</English>
+		<French></French>
+		<German></German>
+		<Italian></Italian>
+		<Spanish></Spanish>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_VICTORY_NAME_MOSCOW</Tag>
 		<English>Moscow</English>
+		<French></French>
+		<German></German>
+		<Italian></Italian>
+		<Spanish></Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_VICTORY_NAME_MUBENDE</Tag>
+		<English>Mubende</English>
 		<French></French>
 		<German></German>
 		<Italian></Italian>
@@ -3048,12 +3528,28 @@
 		<English>Paris</English>
 		<French></French>
 		<German></German>
-		<Italian></Italian>
+		<Italian></Italian>W
 		<Spanish></Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_VICTORY_NAME_PERSEPOLIS</Tag>
 		<English>Persepolis</English>
+		<French></French>
+		<German></German>
+		<Italian></Italian>
+		<Spanish></Spanish>
+	</TEXT>	
+	<TEXT>
+		<Tag>TXT_KEY_VICTORY_NAME_SELEUCIA</Tag>
+		<English>Seleucia</English>
+		<French></French>
+		<German></German>
+		<Italian></Italian>W
+		<Spanish></Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_VICTORY_NAME_SUSA</Tag>
+		<English>Susa</English>
 		<French></French>
 		<German></German>
 		<Italian></Italian>
@@ -3133,6 +3629,54 @@
 		<Spanish></Spanish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_VICTORY_NAME_MALAYA</Tag>
+		<English>Malaya</English>
+		<French></French>
+		<German></German>
+		<Italian></Italian>
+		<Spanish></Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_VICTORY_NAME_BORNEO</Tag>
+		<English>Borneo</English>
+		<French></French>
+		<German></German>
+		<Italian></Italian>
+		<Spanish></Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_VICTORY_NAME_BENIN_CITY</Tag>
+		<English>Benin City</English>
+		<French></French>
+		<German></German>
+		<Italian></Italian>
+		<Spanish></Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_VICTORY_NAME_CAPE_TOWN</Tag>
+		<English>Cape Town</English>
+		<French></French>
+		<German></German>
+		<Italian></Italian>
+		<Spanish></Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_VICTORY_NAME_MOZAMBIQUE</Tag>
+		<English>Mozambique</English>
+		<French></French>
+		<German></German>
+		<Italian></Italian>
+		<Spanish></Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_VICTORY_NAME_PRETORIA</Tag>
+		<English>Pretoria</English>
+		<French></French>
+		<German></German>
+		<Italian></Italian>
+		<Spanish></Spanish>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_VICTORY_NAME_RELIGION_HOLY_CITY</Tag>
 		<English>the %s1 holy city</English>
 		<French></French>
@@ -3168,6 +3712,22 @@
 	<TEXT>
 		<Tag>TXT_KEY_VICTORY_NAME_ANDES</Tag>
 		<English>the Andes</English>
+		<French></French>
+		<German></German>
+		<Italian></Italian>
+		<Spanish></Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_VICTORY_NAME_GREECE_ANATOLIA</Tag>
+		<English>Greece and Anatolia</English>
+		<French></French>
+		<German></German>
+		<Italian></Italian>
+		<Spanish></Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_VICTORY_NAME_CITIES_SURROUNDING_MOUNTAINS</Tag>
+		<English>Cities surrounding mountains</English>
 		<French></French>
 		<German></German>
 		<Italian></Italian>
@@ -3222,6 +3782,14 @@
 		<Spanish></Spanish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_VICTORY_NAME_BACTRIA</Tag>
+		<English>Bactria</English>
+		<French></French>
+		<German></German>
+		<Italian></Italian>
+		<Spanish></Spanish>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_VICTORY_NAME_BRAZIL</Tag>
 		<English>Brazil</English>
 		<French></French>
@@ -3245,7 +3813,7 @@
 		<Italian></Italian>
 		<Spanish></Spanish>
 	</TEXT>
-	<TEXT>
+		<TEXT>
 		<Tag>TXT_KEY_VICTORY_NAME_CENTRAL_ASIA</Tag>
 		<English>Central Asia</English>
 		<French></French>
@@ -3288,6 +3856,30 @@
 	<TEXT>
 		<Tag>TXT_KEY_VICTORY_NAME_EGYPT</Tag>
 		<English>Egypt</English>
+		<French></French>
+		<German></German>
+		<Italian></Italian>
+		<Spanish></Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_VICTORY_NAME_EGYPT_COASTAL</Tag>
+		<English>Coastal Egypt</English>
+		<French></French>
+		<German></German>
+		<Italian></Italian>
+		<Spanish></Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_VICTORY_NAME_OTHER_TURKIC</Tag>
+		<English>other Turkic (Ottomans, Timurids, Gokturks and Ghorids)</English>
+		<French></French>
+		<German></German>
+		<Italian></Italian>
+		<Spanish></Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_VICTORY_NAME_OTHER_TURKISH_MONGOL_OR_PERSIAN</Tag>
+		<English>other Turkish, Mongol or Persian</English>
 		<French></French>
 		<German></German>
 		<Italian></Italian>
@@ -3350,8 +3942,24 @@
 		<Spanish></Spanish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_VICTORY_NAME_INDUSVALLEY</Tag>
+		<English>Indus Valley</English>
+		<French></French>
+		<German></German>
+		<Italian></Italian>
+		<Spanish></Spanish>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_VICTORY_NAME_INDIA</Tag>
 		<English>India</English>
+		<French></French>
+		<German></German>
+		<Italian></Italian>
+		<Spanish></Spanish>
+	</TEXT>	
+	<TEXT>
+		<Tag>TXT_KEY_VICTORY_NAME_THE_MIDDLE_EAST</Tag>
+		<English>The Middle East</English>
 		<French></French>
 		<German></German>
 		<Italian></Italian>
@@ -3654,6 +4262,38 @@
 		<Spanish></Spanish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_VICTORY_NAME_SOUTHERN_AFRICA</Tag>
+		<English>Southern Africa</English>
+		<French></French>
+		<German></German>
+		<Italian></Italian>
+		<Spanish></Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_VICTORY_NAME_AFRICAN_LAKES</Tag>
+		<English>African lake</English>
+		<French></French>
+		<German></German>
+		<Italian></Italian>
+		<Spanish></Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_VICTORY_NAME_BANTU_REGIONS</Tag>
+		<English>The Bantu Regions</English>
+		<French></French>
+		<German></German>
+		<Italian></Italian>
+		<Spanish></Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_VICTORY_NAME_EAST_AFRICA</Tag>
+		<English>East Africa</English>
+		<French></French>
+		<German></German>
+		<Italian></Italian>
+		<Spanish></Spanish>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_VICTORY_NAME_DZUNGARIA</Tag>
 		<English>Dzungaria</English>
 		<French></French>
@@ -3669,7 +4309,6 @@
 		<Italian></Italian>
 		<Spanish></Spanish>
 	</TEXT>
-	
 	<TEXT>
 		<Tag>TXT_KEY_VICTORY_NAME_ANDEAN_COAST</Tag>
 		<English>the Andean Coast</English>
@@ -3695,6 +4334,22 @@
 		<Spanish></Spanish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_VICTORY_NAME_RED_SEA_REGION</Tag>
+		<English>the Red Sea Region</English>
+		<French></French>
+		<German></German>
+		<Italian></Italian>
+		<Spanish></Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_VICTORY_NAME_PERSIAN_GULF</Tag>
+		<English>the Persian Gulf</English>
+		<French></French>
+		<German></German>
+		<Italian></Italian>
+		<Spanish></Spanish>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_VICTORY_NAME_CANADIAN_TERRITORY</Tag>
 		<English>Canadian territory</English>
 		<French></French>
@@ -3713,6 +4368,30 @@
 	<TEXT>
 		<Tag>TXT_KEY_VICTORY_NAME_CITY_IN_CHINA</Tag>
 		<English>a city in China</English>
+		<French></French>
+		<German></German>
+		<Italian></Italian>
+		<Spanish></Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_VICTORY_NAME_CITY_IN_PERSIA</Tag>
+		<English>a city in Persia</English>
+		<French></French>
+		<German></German>
+		<Italian></Italian>
+		<Spanish></Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_VICTORY_NAME_THE_WORLD</Tag>
+		<English>The World</English>
+		<French></French>
+		<German></German>
+		<Italian></Italian>
+		<Spanish></Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_VICTORY_NAME_WEST_AFRICA</Tag>
+		<English>West Africa</English>
 		<French></French>
 		<German></German>
 		<Italian></Italian>
@@ -3792,8 +4471,24 @@
 		<Spanish></Spanish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_VICTORY_NAME_BUILDINGS</Tag>
+		<English>buildings</English>
+		<French>buildings</French>
+		<German>buildings</German>
+		<Italian>buildings</Italian>
+		<Spanish>buildings</Spanish>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_VICTORY_NAME_CHRISTIAN_CATHEDRALS</Tag>
 		<English>Christian cathedrals</English>
+		<French></French>
+		<German></German>
+		<Italian></Italian>
+		<Spanish></Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_VICTORY_NAME_ISLAMIC</Tag>
+		<English>Islamic</English>
 		<French></French>
 		<German></German>
 		<Italian></Italian>
@@ -3815,7 +4510,70 @@
 		<Italian></Italian>
 		<Spanish></Spanish>
 	</TEXT>
-	
+	<TEXT>
+		<Tag>TXT_KEY_VICTORY_NAME_ORTHODOX_WONDER</Tag>
+		<English>Orthodox wonder</English>
+		<French></French>
+		<German></German>
+		<Italian></Italian>
+		<Spanish></Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_VICTORY_NAME_CATHOLIC_WONDER</Tag>
+		<English>Catholic wonder</English>
+		<French></French>
+		<German></German>
+		<Italian></Italian>
+		<Spanish></Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_VICTORY_NAME_ZOROASTRIAN_WONDER</Tag>
+		<English>Zoroastrian wonder</English>
+		<French></French>
+		<German></German>
+		<Italian></Italian>
+		<Spanish></Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_VICTORY_NAME_CATHEDRALS</Tag>
+		<English>Cathedrals</English>
+		<French></French>
+		<German></German>
+		<Italian></Italian>
+		<Spanish></Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_VICTORY_NAME_ISLAMIC_CATHEDRALS</Tag>
+		<English>Islamic grand mosques</English>
+		<French></French>
+		<German></German>
+		<Italian></Italian>
+		<Spanish></Spanish>
+	</TEXT>
+		<TEXT>
+		<Tag>TXT_KEY_VICTORY_NAME_ISLAMIC_CATHEDRAL</Tag>
+		<English>Islamic grand mosque</English>
+		<French></French>
+		<German></German>
+		<Italian></Italian>
+		<Spanish></Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_VICTORY_NAME_ISLAMIC_WONDER</Tag>
+		<English>Sunni wonder</English>
+		<French></French>
+		<German></German>
+		<Italian></Italian>
+		<Spanish></Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_VICTORY_NAME_UNIQUE_RESOURCES</Tag>
+		<English>unique</English>
+		<French></French>
+		<German></German>
+		<Italian></Italian>
+		<Spanish></Spanish>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_VICTORY_NAME_DIFFERENT_HAPPINESS_RESOURCES</Tag>
 		<English>different happiness</English>
@@ -3840,7 +4598,7 @@
 		<Italian></Italian>
 		<Spanish></Spanish>
 	</TEXT>
-	
+
 	<TEXT>
 		<Tag>TXT_KEY_VICTORY_NAME_MOUNTED</Tag>
 		<English>Mounted units</English>
@@ -3867,10 +4625,25 @@
 		<Italian></Italian>
 		<Spanish></Spanish>
 	</TEXT>
-	
 	<TEXT>
 		<Tag>TXT_KEY_VICTORY_NAME_AFRICAN</Tag>
 		<English>African</English>
+		<French></French>
+		<German></German>
+		<Italian></Italian>
+		<Spanish></Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_VICTORY_NAME_NORTH_AFRICAN</Tag>
+		<English>North African</English>
+		<French></French>
+		<German></German>
+		<Italian></Italian>
+		<Spanish></Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_VICTORY_NAME_AFRICAN_CIVS</Tag>
+		<English>all African civilizations</English>
 		<French></French>
 		<German></German>
 		<Italian></Italian>
@@ -3938,6 +4711,22 @@
 	<TEXT>
 		<Tag>TXT_KEY_VICTORY_GOAL_AZTECS_3</Tag>
 		<English>Control the core of any European civilization</English>
+		<French></French>
+		<German></German>
+		<Italian></Italian>
+		<Spanish></Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_VICTORY_GOAL_GOKTURKS_1</Tag>
+		<English>Have Developing culture in your Capital by 700 AD, Refined culture in a different Capital by 900 AD, and Influential culture in another Capital by 1100 AD</English>
+		<French></French>
+		<German></German>
+		<Italian></Italian>
+		<Spanish></Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_VICTORY_GOAL_SWAHILI_3</Tag>
+		<English>Conquer a city in two out of Zimbabwe, Oman, Ethiopia or the Horn of Africa</English>
 		<French></French>
 		<German></German>
 		<Italian></Italian>
@@ -4093,8 +4882,24 @@
 		<Spanish></Spanish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_VICTORY_ANNOUNCE_FIRST_DEFENSIVE_PACT_OTHER</Tag>
+		<English>%s1 is the first to start a defensive pact.</English>
+		<French></French>
+		<German></German>
+		<Italian></Italian>
+		<Spanish></Spanish>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_VICTORY_ANNOUNCE_FIRST_TRIBUTE_UNKNOWN</Tag>
 		<English>An unknown civilization is the first to receive tribute.</English>
+		<French></French>
+		<German></German>
+		<Italian></Italian>
+		<Spanish></Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_VICTORY_ANNOUNCE_DEFENSIVE_PACT_UNKNOWN</Tag>
+		<English>An unknown civilization is the first to start a defensive pact.</English>
 		<French></French>
 		<German></German>
 		<Italian></Italian>
@@ -4125,5 +4930,12 @@
 		<Italian></Italian>
 		<Spanish></Spanish>
 	</TEXT>
-	
+	<TEXT>
+ 		<Tag>TXT_KEY_VICTORY_SUFFIX</Tag>
+ 		<English>%s1 %s2</English>
+ 		<French></French>
+ 		<German></German>
+ 		<Italian></Italian>
+ 		<Spanish></Spanish>
+ 	</TEXT>
 </Civ4GameText>

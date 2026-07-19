@@ -2,6 +2,693 @@
 <!-- Buildings -->
 <Civ4GameText>
 	<TEXT>
+ 		<Tag>TXT_KEY_BUILDING_AMMONIA_PLANT</Tag>
+ 		<English>Ammonia Plant</English>
+ 		<French>
+ 			<Text>Ammonia Plant</Text>
+ 			<Gender>Male</Gender>
+ 			<Plural>0</Plural>
+ 		</French>
+ 		<German>Ammonia Plant</German>
+ 		<Italian>Ammonia Plant</Italian>
+ 		<Spanish>Ammonia Plant</Spanish>
+ 	</TEXT>
+	<TEXT>
+ 		<Tag>TXT_KEY_BUILDING_AGRICULTURAL_FACTORY</Tag>
+ 		<English>Agricultural Factory</English>
+ 		<French>
+ 			<Text>Agricultural Factory</Text>
+ 			<Gender>Male</Gender>
+ 			<Plural>0</Plural>
+ 		</French>
+ 		<German>Agricultural Factory</German>
+ 		<Italian>Agricultural Factory</Italian>
+ 		<Spanish>Agricultural Factory</Spanish>
+ 	</TEXT>
+	<TEXT>
+ 		<Tag>TXT_KEY_BUILDING_FRONTIER</Tag>
+ 		<English>Frontier</English>
+ 		<French>
+ 			<Text>Frontier</Text>
+ 			<Gender>Male</Gender>
+ 			<Plural>0</Plural>
+ 		</French>
+ 		<German>Frontier</German>
+ 		<Italian>Frontier</Italian>
+ 		<Spanish>Frontier</Spanish>
+ 	</TEXT>
+	<TEXT>
+ 		<Tag>TXT_KEY_BUILDING_ADMINMOD_HELP</Tag>
+ 		<English>[ICON_BULLET]Increases administrative capacity before overextension in Core cities</English>
+ 		<French>
+ 			<Text>[ICON_BULLET]Increases administrative capacity before overextension in Core cities</Text>
+ 			<Gender>Male</Gender>
+ 			<Plural>0</Plural>
+ 		</French>
+ 		<German>[ICON_BULLET]Increases administrative capacity before overextension in Core cities</German>
+ 		<Italian>[ICON_BULLET]Increases administrative capacity before overextension in Core cities</Italian>
+ 		<Spanish>[ICON_BULLET]Increases administrative capacity before overextension in Core cities</Spanish>
+ 	</TEXT>
+	<TEXT>
+ 		<Tag>TXT_KEY_BUILDING_COUNCIL_HELP</Tag>
+ 		<English>[ICON_BULLET]Reduces Decadence by 1 when built[NEWLINE][ICON_BULLET]Increases administrative capacity before overextension in Core cities</English>
+ 		<French>
+ 			<Text>[ICON_BULLET]Reduces Decadence by 1 when built[NEWLINE][ICON_BULLET]Increases administrative capacity before overextension in Core cities</Text>
+ 			<Gender>Male</Gender>
+ 			<Plural>0</Plural>
+ 		</French>
+ 		<German>[ICON_BULLET]Reduces Decadence by 1 when built[NEWLINE][ICON_BULLET]Increases administrative capacity before overextension in Core cities</German>
+ 		<Italian>[ICON_BULLET]Reduces Decadence by 1 when built[NEWLINE][ICON_BULLET]Increases administrative capacity before overextension in Core cities</Italian>
+ 		<Spanish>[ICON_BULLET]Reduces Decadence by 1 when built[NEWLINE][ICON_BULLET]Increases administrative capacity before overextension in Core cities</Spanish>
+ 	</TEXT>
+	<TEXT>
+ 		<Tag>TXT_KEY_BUILDING_COUNCIL</Tag>
+ 		<English>Council</English>
+ 		<French>
+ 			<Text>Council</Text>
+ 			<Gender>Male</Gender>
+ 			<Plural>0</Plural>
+ 		</French>
+ 		<German>Council</German>
+ 		<Italian>Council</Italian>
+ 		<Spanish>Council</Spanish>
+ 	</TEXT>
+	<TEXT>
+ 		<Tag>TXT_KEY_BUILDING_MOROCCAN_CASTLE_MOSQUE</Tag>
+ 		<English>Castle Mosque</English>
+ 		<French>
+ 			<Text>Castle Mosque</Text>
+ 			<Gender>Male</Gender>
+ 			<Plural>0</Plural>
+ 		</French>
+ 		<German>Castle Mosque</German>
+ 		<Italian>Castle Mosque</Italian>
+ 		<Spanish>Castle Mosque</Spanish>
+ 	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_MALAGASY_AMULET_WORKSHOP</Tag>
+		<English>Amulet Workshop</English>
+		<French>Amulet Workshop</French>
+		<German>Amulet Workshop</German>
+		<Italian>Amulet Workshop</Italian>
+		<Spanish>Amulet Workshop</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_ADALITE_COFFEE_PORT</Tag>
+		<English>Coffee Port</English>
+		<French>Coffee Port</French>
+		<German>Coffee Port</German>
+		<Italian>Coffee Port</Italian>
+		<Spanish>Coffee Port</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_SOMALI_GUM_WORKSHOP</Tag>
+		<English>Gum Workshop</English>
+		<French>Gum Workshop</French>
+		<German>Gum Workshop</German>
+		<Italian>Gum Workshop</Italian>
+		<Spanish>Gum Workshop</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FUNJ_ARABIC_SCHOOL</Tag>
+		<English>Arabic School</English>
+		<French>Arabic School</French>
+		<German>Arabic School</German>
+		<Italian>Arabic School</Italian>
+		<Spanish>Arabic School</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_BUGANDAN_ROYAL_FORGE</Tag>
+		<English>Royal Forge</English>
+		<French>Royal Forge</French>
+		<German>Royal Forge</German>
+		<Italian>Royal Forge</Italian>
+		<Spanish>Royal Forge</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_SOUTH_AFRICAN_RUGBY_STADIUM</Tag>
+		<English>Rugby Stadium</English>
+		<French>Rugby Stadium</French>
+		<German>Rugby Stadium</German>
+		<Italian>Rugby Stadium</Italian>
+		<Spanish>Rugby Stadium</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_KATANGESE_CHOKWE_SCULPTURE</Tag>
+		<English>Chokwe Sculpture</English>
+		<French>Chokwe Sculpture</French>
+		<German>Chokwe Sculpture</German>
+		<Italian>Chokwe Sculpture</Italian>
+		<Spanish>Chokwe Sculpture</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_BOER_LAAGER_CAMP</Tag>
+		<English>Laager Camp</English>
+		<French>Laager Camp</French>
+		<German>Laager Camp</German>
+		<Italian>Laager Camp</Italian>
+		<Spanish>Laager Camp</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_ZIMBABWEAN_ZIMBABWE</Tag>
+		<English>Zimbabwe</English>
+		<French>Zimbabwe</French>
+		<German>Zimbabwe</German>
+		<Italian>Zimbabwe</Italian>
+		<Spanish>Zimbabwe</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_ARCHERY_RANGE</Tag>
+		<English>Archery Range</English>
+		<French>Archery Range</French>
+		<German>Archery Range</German>
+		<Italian>Archery Range</Italian>
+		<Spanish>Archery Range</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_SCHOOL</Tag>
+		<English>School</English>
+		<French>School</French>
+		<German>School</German>
+		<Italian>School</Italian>
+		<Spanish>School</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FAIRGROUND</Tag>
+		<English>Fairground</English>
+		<French>Fairground</French>
+		<German>Fairground</German>
+		<Italian>Fairground</Italian>
+		<Spanish>Fairground</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_MANOR</Tag>
+		<English>Manor</English>
+		<French>Manor</French>
+		<German>Manor</German>
+		<Italian>Manor</Italian>
+		<Spanish>Manor</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_RELIQUARY</Tag>
+		<English>Reliquary</English>
+		<French>Reliquary</French>
+		<German>Reliquary</German>
+		<Italian>Reliquary</Italian>
+		<Spanish>Reliquary</Spanish>
+	</TEXT>
+
+
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_ASHANTI_DRUMMING_STATION</Tag>
+		<English>Drumming Station</English>
+		<French>Drumming Station</French>
+		<German>Drumming Station</German>
+		<Italian>Drumming Station</Italian>
+		<Spanish>Drumming Station</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_HAUSAN_JUJUHALL</Tag>
+		<English>Juju Hall</English>
+		<French>Juju Hall</French>
+		<German>Juju Hall</German>
+		<Italian>Juju Hall</Italian>
+		<Spanish>Juju Hall</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_BENINESE_EARTH_MOAT</Tag>
+		<English>Earth Moat</English>
+		<French>Earth Moat</French>
+		<German>Earth Moat</German>
+		<Italian>Earth Moat</Italian>
+		<Spanish>Earth Moat</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_KANEM_BORNUAN_RIBAT</Tag>
+		<English>Ribat</English>
+		<French>Ribat</French>
+		<German>Ribat</German>
+		<Italian>Ribat</Italian>
+		<Spanish>Ribat</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_SONGHAI_JULLA_GUILD</Tag>
+		<English>Julla Guild</English>
+		<French>Julla Guild</French>
+		<German>Julla Guild</German>
+		<Italian>Julla Guild</Italian>
+		<Spanish>Julla Guild</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_GHANAIAN_TREASURY</Tag>
+		<English>Treasury</English>
+		<French>Treasury</French>
+		<German>Treasury</German>
+		<Italian>Treasury</Italian>
+		<Spanish>Treasury</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_KHAZARS_SILK_ROAD_TRADE_POST</Tag>
+		<English>Silk Road Trade Port</English>
+		<French>Silk Road Trade Port</French>
+		<German>Silk Road Trade Port</German>
+		<Italian>Silk Road Trade Port</Italian>
+		<Spanish>Silk Road Trade Port</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_INN</Tag>
+		<English>Inn</English>
+		<French>Inn</French>
+		<German>Inn</German>
+		<Italian>Inn</Italian>
+		<Spanish>Inn</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_INFIRMARY</Tag>
+		<English>Infirmary</English>
+		<French>Infirmary</French>
+		<German>Infirmary</German>
+		<Italian>Infirmary</Italian>
+		<Spanish>Infirmary</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_RACING_TRACK</Tag>
+		<English>Racing Track</English>
+		<French>Racing Track</French>
+		<German>Racing Track</German>
+		<Italian>Racing Track</Italian>
+		<Spanish>Racing Track</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_GUILD_HALL</Tag>
+		<English>Guild Hall</English>
+		<French>Guild Hall</French>
+		<German>Guild Hall</German>
+		<Italian>Guild Hall</Italian>
+		<Spanish>Guild Hall</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_SLAVE_BARRACKS</Tag>
+		<English>Slave Barracks</English>
+		<French>Slave Barracks</French>
+		<German>Slave Barracks</German>
+		<Italian>Slave Barracks</Italian>
+		<Spanish>Slave Barracks</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_SLAVE_BARRACKS_PEDIA</Tag>
+		<English>[TAB]Shahabuddin Muhammad Ghori had no offspring, but he treated his Turkic slaves as his sons, who were trained both as soldiers and administrators and provided with the best possible education. Many of his competent and loyal slaves rose to positions of importance in Shahabuddin Ghori's army and government.[PARAGRAPH:1]When a courtier lamented that the Sultan had no male heirs, Shahabuddin Ghori retorted:[PARAGRAPH:1]"Other monarchs may have one son, or two sons; I have thousands of sons, my Turkish slaves who will be the heirs of my dominions, and who, after me, will take care to preserve my name in the Khutbah throughout these territories."[PARAGRAPH:1]Shahabuddin Ghori's prediction proved true. After his assassination, his Empire was divided amongst his slaves. It was one of those slaves, Qutbuddin Aibak, who founded the Delhi-based dynasty that would rule India for the next 300 years.</English>
+		<French>[TAB]Shahabuddin Muhammad Ghori had no offspring, but he treated his Turkic slaves as his sons, who were trained both as soldiers and administrators and provided with the best possible education. Many of his competent and loyal slaves rose to positions of importance in Shahabuddin Ghori's army and government.[PARAGRAPH:1]When a courtier lamented that the Sultan had no male heirs, Shahabuddin Ghori retorted:[PARAGRAPH:1]"Other monarchs may have one son, or two sons; I have thousands of sons, my Turkish slaves who will be the heirs of my dominions, and who, after me, will take care to preserve my name in the Khutbah throughout these territories."[PARAGRAPH:1]Shahabuddin Ghori's prediction proved true. After his assassination, his Empire was divided amongst his slaves. It was one of those slaves, Qutbuddin Aibak, who founded the Delhi-based dynasty that would rule India for the next 300 years.</French>
+		<German>[TAB]Shahabuddin Muhammad Ghori had no offspring, but he treated his Turkic slaves as his sons, who were trained both as soldiers and administrators and provided with the best possible education. Many of his competent and loyal slaves rose to positions of importance in Shahabuddin Ghori's army and government.[PARAGRAPH:1]When a courtier lamented that the Sultan had no male heirs, Shahabuddin Ghori retorted:[PARAGRAPH:1]"Other monarchs may have one son, or two sons; I have thousands of sons, my Turkish slaves who will be the heirs of my dominions, and who, after me, will take care to preserve my name in the Khutbah throughout these territories."[PARAGRAPH:1]Shahabuddin Ghori's prediction proved true. After his assassination, his Empire was divided amongst his slaves. It was one of those slaves, Qutbuddin Aibak, who founded the Delhi-based dynasty that would rule India for the next 300 years.</German>
+		<Italian>[TAB]Shahabuddin Muhammad Ghori had no offspring, but he treated his Turkic slaves as his sons, who were trained both as soldiers and administrators and provided with the best possible education. Many of his competent and loyal slaves rose to positions of importance in Shahabuddin Ghori's army and government.[PARAGRAPH:1]When a courtier lamented that the Sultan had no male heirs, Shahabuddin Ghori retorted:[PARAGRAPH:1]"Other monarchs may have one son, or two sons; I have thousands of sons, my Turkish slaves who will be the heirs of my dominions, and who, after me, will take care to preserve my name in the Khutbah throughout these territories."[PARAGRAPH:1]Shahabuddin Ghori's prediction proved true. After his assassination, his Empire was divided amongst his slaves. It was one of those slaves, Qutbuddin Aibak, who founded the Delhi-based dynasty that would rule India for the next 300 years.</Italian>
+		<Spanish>[TAB]Shahabuddin Muhammad Ghori had no offspring, but he treated his Turkic slaves as his sons, who were trained both as soldiers and administrators and provided with the best possible education. Many of his competent and loyal slaves rose to positions of importance in Shahabuddin Ghori's army and government.[PARAGRAPH:1]When a courtier lamented that the Sultan had no male heirs, Shahabuddin Ghori retorted:[PARAGRAPH:1]"Other monarchs may have one son, or two sons; I have thousands of sons, my Turkish slaves who will be the heirs of my dominions, and who, after me, will take care to preserve my name in the Khutbah throughout these territories."[PARAGRAPH:1]Shahabuddin Ghori's prediction proved true. After his assassination, his Empire was divided amongst his slaves. It was one of those slaves, Qutbuddin Aibak, who founded the Delhi-based dynasty that would rule India for the next 300 years.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_GREAT_ICON</Tag>
+		<English>Great Icon</English>
+		<French>
+			<Text>Great Icon</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>Great Icon</German>
+		<Italian>Great Icon</Italian>
+		<Spanish>Great Icon</Spanish>
+	</TEXT>
+
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_GEORGIAN_TSIKHE</Tag>
+		<English>Tsikhe</English>
+		<French>
+			<Text>Tsikhe</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>Tsikhe</German>
+		<Italian>Tsikhe</Italian>
+		<Spanish>Tsikhe</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_JERUSALEMITE_CHANCERY</Tag>
+		<English>Chancery</English>
+		<French>
+			<Text>Chancery</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>Chancery</German>
+		<Italian>Chancery</Italian>
+		<Spanish>Chancery</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_OMANI_COASTAL_OUTPOST</Tag>
+		<English>Coastal Outpost</English>
+		<French>
+			<Text>Coastal Outpost</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>Coastal Outpost</German>
+		<Italian>Coastal Outpost</Italian>
+		<Spanish>Coastal Outpost</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_YEMENI_TOWER_HOUSE</Tag>
+		<English>Tower House</English>
+		<French>
+			<Text>Tower House</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>Tower House</German>
+		<Italian>Tower House</Italian>
+		<Spanish>Tower House</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_TUNISIAN_KASBAH</Tag>
+		<English>Kasbah</English>
+		<French>
+			<Text>Kasbah</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>Kasbah</German>
+		<Italian>Kasbah</Italian>
+		<Spanish>Kasbah</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_GOKTURK_ORKHON_INSCRIPTION</Tag>
+		<English>Orkhon Inscription</English>
+		<French>
+			<Text>Orkhon Inscription</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>Orkhon Inscription</German>
+		<Italian>Orkhon Inscription</Italian>
+		<Spanish>Orkhon Inscription</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_SAMANID_KILN</Tag>
+		<English>Kiln</English>
+		<French>
+			<Text>Kiln</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>Kiln</German>
+		<Italian>Kiln</Italian>
+		<Spanish>Kiln</Spanish>
+	</TEXT>
+
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_BUYID_SUFI_SHRINE</Tag>
+		<English>Sufi Shrine</English>
+		<French>
+			<Text>Sufi Shrine</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>Sufi Shrine</German>
+		<Italian>Sufi Shrine</Italian>
+		<Spanish>Sufi Shrine</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_SHIA_TEMPLE</Tag>
+		<English>Shia Mosque</English>
+		<French>
+			<Text>Shia Mosque</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>Shia Mosque</German>
+		<Italian>Shia Mosque</Italian>
+		<Spanish>Shia Mosque</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_SHIA_MONASTERY</Tag>
+		<English>Shia Madrassa</English>
+		<French>
+			<Text>Shia Madrassa</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>Shia Madrassa</German>
+		<Italian>Shia Madrassa</Italian>
+		<Spanish>Shia Madrassa</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_SHIA_CATHEDRAL</Tag>
+		<English>Shia Grand Mosque</English>
+		<French>
+			<Text>Shia Grand Mosque</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>Shia Grand Mosque</German>
+		<Italian>Shia Grand Mosque</Italian>
+		<Spanish>Shia Grand Mosque</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_SHIA_SHRINE</Tag>
+		<English>Imam Ali Shrine</English>
+		<French>
+			<Text>Imam Ali Shrine</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>Imam Ali Shrine</German>
+		<Italian>Imam Ali Shrine</Italian>
+		<Spanish>Imam Ali Shrine</Spanish>
+	</TEXT>
+
+
+
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_MAMLUK_SOUK</Tag>
+		<English>Souk</English>
+		<French>
+			<Text>Souk</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>Souk</German>
+		<Italian>Souk</Italian>
+		<Spanish>Souk</Spanish>
+	</TEXT>
+
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_PARTHIAN_CARAVANSERAI</Tag>
+		<English>Bazaar</English>
+		<French>
+			<Text>Bazaar</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>Bazaar</German>
+		<Italian>Bazaar</Italian>
+		<Spanish>Bazaar</Spanish>
+	</TEXT>
+
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_ARMENIAN_CARPET_WORKSHOP</Tag>
+		<English>Carpet Workshop</English>
+		<French>
+			<Text>Carpet Workshop</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>Carpet Workshop</German>
+		<Italian>Carpet Workshop</Italian>
+		<Spanish>Carpet Workshop</Spanish>
+	</TEXT>
+
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_SCYTHIAN_KURGAN</Tag>
+		<English>Kurgan</English>
+		<French>
+			<Text>Kurgan</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>Kurgan</German>
+		<Italian>Kurgan</Italian>
+		<Spanish>Kurgan</Spanish>
+	</TEXT>
+
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_NUMIDIAN_GRAIN_MARKET</Tag>
+		<English>Grain Market</English>
+		<French>
+			<Text>Grain Market</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>Grain Market</German>
+		<Italian>Grain Market</Italian>
+		<Spanish>Grain Market</Spanish>
+	</TEXT>
+
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_VANDAL_BAKERY</Tag>
+		<English>Bakery</English>
+		<French>
+			<Text>Bakery</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>Bakery</German>
+		<Italian>Bakery</Italian>
+		<Spanish>Bakery</Spanish>
+	</TEXT>
+
+
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_HUNNIC_SILK_TENT</Tag>
+		<English>Silk Tent</English>
+		<French>
+			<Text>Silk Tent</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>Silk Tent</German>
+		<Italian>Silk Tent</Italian>
+		<Spanish>Silk Tent</Spanish>
+	</TEXT>
+
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_GOTHIC_STONE_HERMITAGE</Tag>
+		<English>Stone Hermitage</English>
+		<French>
+			<Text>Stone Hermitage</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>Stone Hermitage</German>
+		<Italian>Stone Hermitage</Italian>
+		<Spanish>Stone Hermitage</Spanish>
+	</TEXT>
+
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_GERMANIC_RUNESTONE</Tag>
+		<English>Runestone</English>
+		<French>
+			<Text>Runestone</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>Runestone</German>
+		<Italian>Runestone</Italian>
+		<Spanish>Runestone</Spanish>
+	</TEXT>
+
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_MACEDONIAN_AGORA</Tag>
+		<English>Agora</English>
+		<French>
+			<Text>Agora</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>Agora</German>
+		<Italian>Agora</Italian>
+		<Spanish>Agora</Spanish>
+	</TEXT>
+
+
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_SPARTAN_AGOGE_BARRACKS</Tag>
+		<English>Agoge Barracks</English>
+		<French>
+			<Text>Agoge Barracks</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>Agoge Barracks</German>
+		<Italian>Agoge Barracks</Italian>
+		<Spanish>Agoge Barracks</Spanish>
+	</TEXT>
+
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_MYCENAEAN_THOLOS</Tag>
+		<English>Tholos</English>
+		<French>
+			<Text>Tholos</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>Tholos</German>
+		<Italian>Tholos</Italian>
+		<Spanish>Tholos</Spanish>
+	</TEXT>
+
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_ELAMITE_HIGHLAND_OUTPOST</Tag>
+		<English>Highland Outpost</English>
+		<French>
+			<Text>Highland Outpost</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>Highland Outpost</German>
+		<Italian>Highland Outpost</Italian>
+		<Spanish>Highland Outpost</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_JUDEAN_KOTEL</Tag>
+		<English>Kotel</English>
+		<French>
+			<Text>Kotel</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>Kotel</German>
+		<Italian>Kotel</Italian>
+		<Spanish>Kotel</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_SUMERIAN_MUDBRICK_HOUSE</Tag>
+		<English>Mudbrick House</English>
+		<French>
+			<Text>Mudbrick House</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>Mudbrick House</German>
+		<Italian>Mudbrick House</Italian>
+		<Spanish>Mudbrick House</Spanish>
+	</TEXT>
+
+
+
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_KNOSSOS_PALACE</Tag>
+		<English>Knossos Palace</English>
+		<French>
+			<Text>Knossos Palace</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>Knossos Palace</German>
+		<Italian>Knossos Palace</Italian>
+		<Spanish>Knossos Palace</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_MINOAN_POTTERY_HOUSE</Tag>
+		<English>Pottery House</English>
+		<French>
+			<Text>Pottery House</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>Pottery House</German>
+		<Italian>Pottery House</Italian>
+		<Spanish>Pottery House</Spanish>
+	</TEXT>
+
+
+
+	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ACADEMY_STRATEGY</Tag>
 		<English>The [COLOR_BUILDING_TEXT]Academy[COLOR_REVERT] increases a city's scientific research as well as providing a small amount of culture.</English>
 		<French>The [COLOR_BUILDING_TEXT]Academy[COLOR_REVERT] increases a city's scientific research as well as providing a small amount of culture.</French>
@@ -483,11 +1170,11 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HOLY_ROMAN_RATHAUS_STRATEGY</Tag>
-		<English>The [COLOR_BUILDING_TEXT]Rathaus[COLOR_REVERT], the German replacement for the [COLOR_BUILDING_TEXT]Civic Square[COLOR_REVERT], lowers city maintenance.</English>
-		<French>The [COLOR_BUILDING_TEXT]Rathaus[COLOR_REVERT], the German replacement for the [COLOR_BUILDING_TEXT]Civic Square[COLOR_REVERT], lowers city maintenance.</French>
-		<German>The [COLOR_BUILDING_TEXT]Rathaus[COLOR_REVERT], the German replacement for the [COLOR_BUILDING_TEXT]Civic Square[COLOR_REVERT], lowers city maintenance.</German>
-		<Italian>The [COLOR_BUILDING_TEXT]Rathaus[COLOR_REVERT], the German replacement for the [COLOR_BUILDING_TEXT]Civic Square[COLOR_REVERT], lowers city maintenance.</Italian>
-		<Spanish>The [COLOR_BUILDING_TEXT]Rathaus[COLOR_REVERT], the German replacement for the [COLOR_BUILDING_TEXT]Civic Square[COLOR_REVERT], lowers city maintenance.</Spanish>
+		<English>The [COLOR_BUILDING_TEXT]Rathaus[COLOR_REVERT], the German replacement for the [COLOR_BUILDING_TEXT]Council[COLOR_REVERT], lowers city maintenance.</English>
+		<French>The [COLOR_BUILDING_TEXT]Rathaus[COLOR_REVERT], the German replacement for the [COLOR_BUILDING_TEXT]Council[COLOR_REVERT], lowers city maintenance.</French>
+		<German>The [COLOR_BUILDING_TEXT]Rathaus[COLOR_REVERT], the German replacement for the [COLOR_BUILDING_TEXT]Council[COLOR_REVERT], lowers city maintenance.</German>
+		<Italian>The [COLOR_BUILDING_TEXT]Rathaus[COLOR_REVERT], the German replacement for the [COLOR_BUILDING_TEXT]Council[COLOR_REVERT], lowers city maintenance.</Italian>
+		<Spanish>The [COLOR_BUILDING_TEXT]Rathaus[COLOR_REVERT], the German replacement for the [COLOR_BUILDING_TEXT]Council[COLOR_REVERT], lowers city maintenance.</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HOSPITAL_STRATEGY</Tag>
@@ -539,19 +1226,19 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MUGHAL_DURBAR</Tag>
-		<English>Durbar</English>
-		<French>Durbar</French>
-		<German>Durbar</German>
-		<Italian>Durbar</Italian>
-		<Spanish>Durbar</Spanish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_MUGHAL_DURBAR_STRATEGY</Tag>
-		<English>The [COLOR_BUILDING_TEXT]Durbar[COLOR_REVERT], the Mughal replacement for the [COLOR_BUILDING_TEXT]Estate[COLOR_REVERT], requires the [COLOR_TECH_TEXT]Heritage[COLOR_REVERT] technology instead of the [COLOR_TECH_TEXT]Horticulture[COLOR_REVERT] technology and provides a free [COLOR_HIGHLIGHT_TEXT]Artist[COLOR_REVERT]</English>
-		<French>The [COLOR_BUILDING_TEXT]Durbar[COLOR_REVERT], the Mughal replacement for the [COLOR_BUILDING_TEXT]Estate[COLOR_REVERT], requires the [COLOR_TECH_TEXT]Heritage[COLOR_REVERT] technology instead of the [COLOR_TECH_TEXT]Horticulture[COLOR_REVERT] technology and provides a free [COLOR_HIGHLIGHT_TEXT]Artist[COLOR_REVERT]</French>
-		<German>The [COLOR_BUILDING_TEXT]Durbar[COLOR_REVERT], the Mughal replacement for the [COLOR_BUILDING_TEXT]Estate[COLOR_REVERT], requires the [COLOR_TECH_TEXT]Heritage[COLOR_REVERT] technology instead of the [COLOR_TECH_TEXT]Horticulture[COLOR_REVERT] technology and provides a free [COLOR_HIGHLIGHT_TEXT]Artist[COLOR_REVERT]</German>
-		<Italian>The [COLOR_BUILDING_TEXT]Durbar[COLOR_REVERT], the Mughal replacement for the [COLOR_BUILDING_TEXT]Estate[COLOR_REVERT], requires the [COLOR_TECH_TEXT]Heritage[COLOR_REVERT] technology instead of the [COLOR_TECH_TEXT]Horticulture[COLOR_REVERT] technology and provides a free [COLOR_HIGHLIGHT_TEXT]Artist[COLOR_REVERT]</Italian>
-		<Spanish>The [COLOR_BUILDING_TEXT]Durbar[COLOR_REVERT], the Mughal replacement for the [COLOR_BUILDING_TEXT]Estate[COLOR_REVERT], requires the [COLOR_TECH_TEXT]Heritage[COLOR_REVERT] technology instead of the [COLOR_TECH_TEXT]Horticulture[COLOR_REVERT] technology and provides a free [COLOR_HIGHLIGHT_TEXT]Artist[COLOR_REVERT]</Spanish>
+ 		<English>Durbar</English>
+ 		<French>Durbar</French>
+ 		<German>Durbar</German>
+ 		<Italian>Durbar</Italian>
+ 		<Spanish>Durbar</Spanish>
+ 	</TEXT>
+ 	<TEXT>
+ 		<Tag>TXT_KEY_BUILDING_MUGHAL_DURBAR_STRATEGY</Tag>
+ 		<English>The [COLOR_BUILDING_TEXT]Durbar[COLOR_REVERT], the Mughal replacement for the [COLOR_BUILDING_TEXT]Estate[COLOR_REVERT], requires the [COLOR_TECH_TEXT]Heritage[COLOR_REVERT] technology instead of the [COLOR_TECH_TEXT]Horticulture[COLOR_REVERT] technology and provides a free [COLOR_HIGHLIGHT_TEXT]Artist[COLOR_REVERT]</English>
+ 		<French>The [COLOR_BUILDING_TEXT]Durbar[COLOR_REVERT], the Mughal replacement for the [COLOR_BUILDING_TEXT]Estate[COLOR_REVERT], requires the [COLOR_TECH_TEXT]Heritage[COLOR_REVERT] technology instead of the [COLOR_TECH_TEXT]Horticulture[COLOR_REVERT] technology and provides a free [COLOR_HIGHLIGHT_TEXT]Artist[COLOR_REVERT]</French>
+ 		<German>The [COLOR_BUILDING_TEXT]Durbar[COLOR_REVERT], the Mughal replacement for the [COLOR_BUILDING_TEXT]Estate[COLOR_REVERT], requires the [COLOR_TECH_TEXT]Heritage[COLOR_REVERT] technology instead of the [COLOR_TECH_TEXT]Horticulture[COLOR_REVERT] technology and provides a free [COLOR_HIGHLIGHT_TEXT]Artist[COLOR_REVERT]</German>
+ 		<Italian>The [COLOR_BUILDING_TEXT]Durbar[COLOR_REVERT], the Mughal replacement for the [COLOR_BUILDING_TEXT]Estate[COLOR_REVERT], requires the [COLOR_TECH_TEXT]Heritage[COLOR_REVERT] technology instead of the [COLOR_TECH_TEXT]Horticulture[COLOR_REVERT] technology and provides a free [COLOR_HIGHLIGHT_TEXT]Artist[COLOR_REVERT]</Italian>
+ 		<Spanish>The [COLOR_BUILDING_TEXT]Durbar[COLOR_REVERT], the Mughal replacement for the [COLOR_BUILDING_TEXT]Estate[COLOR_REVERT], requires the [COLOR_TECH_TEXT]Heritage[COLOR_REVERT] technology instead of the [COLOR_TECH_TEXT]Horticulture[COLOR_REVERT] technology and provides a free [COLOR_HIGHLIGHT_TEXT]Artist[COLOR_REVERT]</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_JAVANESE_CANDI</Tag>
@@ -959,11 +1646,11 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_POLISH_SEJMIK_STRATEGY</Tag>
-		<English>The [COLOR_BUILDING_TEXT]Sejmik[COLOR_REVERT], the Polish replacement for the [COLOR_BUILDING_TEXT]Civic Square[COLOR_REVERT], provides a small cash and happiness bonus.</English>
-		<French>The [COLOR_BUILDING_TEXT]Sejmik[COLOR_REVERT], the Polish replacement for the [COLOR_BUILDING_TEXT]Civic Square[COLOR_REVERT], provides a small cash and happiness bonus.</French>
-		<German>The [COLOR_BUILDING_TEXT]Sejmik[COLOR_REVERT], the Polish replacement for the [COLOR_BUILDING_TEXT]Civic Square[COLOR_REVERT], provides a small cash and happiness bonus.</German>
-		<Italian>The [COLOR_BUILDING_TEXT]Sejmik[COLOR_REVERT], the Polish replacement for the [COLOR_BUILDING_TEXT]Civic Square[COLOR_REVERT], provides a small cash and happiness bonus.</Italian>
-		<Spanish>The [COLOR_BUILDING_TEXT]Sejmik[COLOR_REVERT], the Polish replacement for the [COLOR_BUILDING_TEXT]Civic Square[COLOR_REVERT], provides a small cash and happiness bonus.</Spanish>
+		<English>The [COLOR_BUILDING_TEXT]Sejmik[COLOR_REVERT], the Polish replacement for the [COLOR_BUILDING_TEXT]Council[COLOR_REVERT], provides a small cash and happiness bonus.</English>
+		<French>The [COLOR_BUILDING_TEXT]Sejmik[COLOR_REVERT], the Polish replacement for the [COLOR_BUILDING_TEXT]Council[COLOR_REVERT], provides a small cash and happiness bonus.</French>
+		<German>The [COLOR_BUILDING_TEXT]Sejmik[COLOR_REVERT], the Polish replacement for the [COLOR_BUILDING_TEXT]Council[COLOR_REVERT], provides a small cash and happiness bonus.</German>
+		<Italian>The [COLOR_BUILDING_TEXT]Sejmik[COLOR_REVERT], the Polish replacement for the [COLOR_BUILDING_TEXT]Council[COLOR_REVERT], provides a small cash and happiness bonus.</Italian>
+		<Spanish>The [COLOR_BUILDING_TEXT]Sejmik[COLOR_REVERT], the Polish replacement for the [COLOR_BUILDING_TEXT]Council[COLOR_REVERT], provides a small cash and happiness bonus.</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_POLYNESIAN_MALAE</Tag>
@@ -1491,7 +2178,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ISLAMIC_TEMPLE</Tag>
-		<English>Islamic Mosque</English>
+		<English>Sunni Mosque</English>
 		<French>
 			<Text>Mosqu&#233;e islamique:Mosqu&#233;es islamiques</Text>
 			<Gender>Female</Gender>
@@ -1511,7 +2198,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ISLAMIC_MONASTERY</Tag>
-		<English>Islamic Madrassa</English>
+		<English>Sunni Madrassa</English>
 		<French>
 			<Text>Madrassa islamique:Madrassas islamiques</Text>
 			<Gender>Female</Gender>
@@ -1531,7 +2218,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ISLAMIC_CATHEDRAL</Tag>
-		<English>Islamic Grand Mosque</English>
+		<English>Sunni Grand Mosque</English>
 		<French>
 			<Text>Grande mosqu&#233;e islamique:Grandes mosqu&#233;es islamiques</Text>
 			<Gender>Female</Gender>
@@ -2124,6 +2811,7 @@
 		<German>[COLOR_BUILDING_TEXT]Distilleries[COLOR_REVERT] provide additional happiness from [COLOR_HIGHLIGHT_TEXT]Potato[COLOR_REVERT] and [COLOR_HIGHLIGHT_TEXT]Sugar[COLOR_REVERT] and increase the improved tile yield of [COLOR_HIGHLIGHT_TEXT]Rice[COLOR_REVERT], [COLOR_HIGHLIGHT_TEXT]Potato[COLOR_REVERT], [COLOR_HIGHLIGHT_TEXT]Sugar[COLOR_REVERT], and [COLOR_HIGHLIGHT_TEXT]Wine[COLOR_REVERT].</German>
 		<Italian>[COLOR_BUILDING_TEXT]Distilleries[COLOR_REVERT] provide additional happiness from [COLOR_HIGHLIGHT_TEXT]Potato[COLOR_REVERT] and [COLOR_HIGHLIGHT_TEXT]Sugar[COLOR_REVERT] and increase the improved tile yield of [COLOR_HIGHLIGHT_TEXT]Rice[COLOR_REVERT], [COLOR_HIGHLIGHT_TEXT]Potato[COLOR_REVERT], [COLOR_HIGHLIGHT_TEXT]Sugar[COLOR_REVERT], and [COLOR_HIGHLIGHT_TEXT]Wine[COLOR_REVERT].</Italian>
 		<Spanish>[COLOR_BUILDING_TEXT]Distilleries[COLOR_REVERT] provide additional happiness from [COLOR_HIGHLIGHT_TEXT]Potato[COLOR_REVERT] and [COLOR_HIGHLIGHT_TEXT]Sugar[COLOR_REVERT] and increase the improved tile yield of [COLOR_HIGHLIGHT_TEXT]Rice[COLOR_REVERT], [COLOR_HIGHLIGHT_TEXT]Potato[COLOR_REVERT], [COLOR_HIGHLIGHT_TEXT]Sugar[COLOR_REVERT], and [COLOR_HIGHLIGHT_TEXT]Wine[COLOR_REVERT].</Spanish>
+		<Spanish>[COLOR_BUILDING_TEXT]Distilleries[COLOR_REVERT] increase the city's unhealthiness and increase the improved tile yield of [COLOR_HIGHLIGHT_TEXT]Rice[COLOR_REVERT], [COLOR_HIGHLIGHT_TEXT]Wheat[COLOR_REVERT], [COLOR_HIGHLIGHT_TEXT]Sugar[COLOR_REVERT] and [COLOR_HIGHLIGHT_TEXT]Wine[COLOR_REVERT].</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_NEWS_PRESS</Tag>
@@ -2762,6 +3450,38 @@
 		<Spanish>The [COLOR_BUILDING_TEXT]Bukongo Temple[COLOR_REVERT] is the [COLOR_BUILDING_TEXT]Pagan Temple[COLOR_REVERT] of civilizations that follow [COLOR_HIGHLIGHT_TEXT]Bukongo[COLOR_REVERT].</Spanish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FOMBA_GASY_TEMPLE</Tag>
+		<English>Fomba Gasy Shrine</English>
+		<French>Fomba Gasy Shrine</French>
+		<German>Fomba Gasy Shrine</German>
+		<Italian>Fomba Gasy Shrine</Italian>
+		<Spanish>Fomba Gasy Shrine</Spanish>	
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FOMBA_GASY_TEMPLE_STRATEGY</Tag>
+		<English>The [COLOR_BUILDING_TEXT]Fomba Gasy Shrine[COLOR_REVERT] is the [COLOR_BUILDING_TEXT]Pagan Temple[COLOR_REVERT] of civilizations that follow [COLOR_HIGHLIGHT_TEXT]Fomba Gasy[COLOR_REVERT].</English>
+		<French>The [COLOR_BUILDING_TEXT]Fomba Gasy Shrine[COLOR_REVERT] is the [COLOR_BUILDING_TEXT]Pagan Temple[COLOR_REVERT] of civilizations that follow [COLOR_HIGHLIGHT_TEXT]Fomba Gasy[COLOR_REVERT].</French>
+		<German>The [COLOR_BUILDING_TEXT]Fomba Gasy Shrine[COLOR_REVERT] is the [COLOR_BUILDING_TEXT]Pagan Temple[COLOR_REVERT] of civilizations that follow [COLOR_HIGHLIGHT_TEXT]Fomba Gasy[COLOR_REVERT].</German>
+		<Italian>The [COLOR_BUILDING_TEXT]Fomba Gasy Shrine[COLOR_REVERT] is the [COLOR_BUILDING_TEXT]Pagan Temple[COLOR_REVERT] of civilizations that follow [COLOR_HIGHLIGHT_TEXT]Fomba Gasy[COLOR_REVERT].</Italian>
+		<Spanish>The [COLOR_BUILDING_TEXT]Fomba Gasy Shrine[COLOR_REVERT] is the [COLOR_BUILDING_TEXT]Pagan Temple[COLOR_REVERT] of civilizations that follow [COLOR_HIGHLIGHT_TEXT]Fomba Gasy[COLOR_REVERT].</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_BANTU_TEMPLE</Tag>
+		<English>Bantu Shrine</English>
+		<French>Bantu Shrine</French>
+		<German>Bantu Shrine</German>
+		<Italian>Bantu Shrine</Italian>
+		<Spanish>Bantu Shrine</Spanish>	
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_BANTU_TEMPLE_STRATEGY</Tag>
+		<English>The [COLOR_BUILDING_TEXT]Bantu Temple[COLOR_REVERT] is the [COLOR_BUILDING_TEXT]Pagan Temple[COLOR_REVERT] of civilizations that follow [COLOR_HIGHLIGHT_TEXT]Bantu[COLOR_REVERT].</English>
+		<French>The [COLOR_BUILDING_TEXT]Bantu Temple[COLOR_REVERT] is the [COLOR_BUILDING_TEXT]Pagan Temple[COLOR_REVERT] of civilizations that follow [COLOR_HIGHLIGHT_TEXT]Bantu[COLOR_REVERT].</French>
+		<German>The [COLOR_BUILDING_TEXT]Bantu Temple[COLOR_REVERT] is the [COLOR_BUILDING_TEXT]Pagan Temple[COLOR_REVERT] of civilizations that follow [COLOR_HIGHLIGHT_TEXT]Bantu[COLOR_REVERT].</German>
+		<Italian>The [COLOR_BUILDING_TEXT]Bantu Temple[COLOR_REVERT] is the [COLOR_BUILDING_TEXT]Pagan Temple[COLOR_REVERT] of civilizations that follow [COLOR_HIGHLIGHT_TEXT]Bantu[COLOR_REVERT].</Italian>
+		<Spanish>The [COLOR_BUILDING_TEXT]Bantu Temple[COLOR_REVERT] is the [COLOR_BUILDING_TEXT]Pagan Temple[COLOR_REVERT] of civilizations that follow [COLOR_HIGHLIGHT_TEXT]Bantu[COLOR_REVERT].</Spanish>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_BUILDING_TURKIC_DIVAN</Tag>
 		<English>Divan</English>
 		<French>
@@ -3195,11 +3915,11 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MASRYEEN_SOUK_STRATEGY</Tag>
-		<English>The [COLOR_BUILDING_TEXT]Souk[COLOR_REVERT], the Masryeen replacement for the [COLOR_BUILDING_TEXT]Market[COLOR_REVERT], grants an additional +50% foreign trade route yield.</English>
-		<French>The [COLOR_BUILDING_TEXT]Souk[COLOR_REVERT], the Masryeen replacement for the [COLOR_BUILDING_TEXT]Market[COLOR_REVERT], grants an additional +50% foreign trade route yield.</French>
-		<German>The [COLOR_BUILDING_TEXT]Souk[COLOR_REVERT], the Masryeen replacement for the [COLOR_BUILDING_TEXT]Market[COLOR_REVERT], grants an additional +50% foreign trade route yield.</German>
-		<Italian>The [COLOR_BUILDING_TEXT]Souk[COLOR_REVERT], the Masryeen replacement for the [COLOR_BUILDING_TEXT]Market[COLOR_REVERT], grants an additional +50% foreign trade route yield.</Italian>
-		<Spanish>The [COLOR_BUILDING_TEXT]Souk[COLOR_REVERT], the Masryeen replacement for the [COLOR_BUILDING_TEXT]Market[COLOR_REVERT], grants an additional +50% foreign trade route yield.</Spanish>
+		<English>The [COLOR_BUILDING_TEXT]Souk[COLOR_REVERT], the Masryeen replacement for the [COLOR_BUILDING_TEXT]Market[COLOR_REVERT], grants an additional +100% foreign trade route yield with other State Religions.</English>
+		<French>The [COLOR_BUILDING_TEXT]Souk[COLOR_REVERT], the Masryeen replacement for the [COLOR_BUILDING_TEXT]Market[COLOR_REVERT], grants an additional +100% foreign trade route yield with other State Religions.</French>
+		<German>The [COLOR_BUILDING_TEXT]Souk[COLOR_REVERT], the Masryeen replacement for the [COLOR_BUILDING_TEXT]Market[COLOR_REVERT], grants an additional +100% foreign trade route yield with other State Religions.</German>
+		<Italian>The [COLOR_BUILDING_TEXT]Souk[COLOR_REVERT], the Masryeen replacement for the [COLOR_BUILDING_TEXT]Market[COLOR_REVERT], grants an additional +100% foreign trade route yield with other State Religions.</Italian>
+		<Spanish>The [COLOR_BUILDING_TEXT]Souk[COLOR_REVERT], the Masryeen replacement for the [COLOR_BUILDING_TEXT]Market[COLOR_REVERT], grants an additional +100% foreign trade route yield with other State Religions.</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SAUDI_OIL_DEPOT</Tag>

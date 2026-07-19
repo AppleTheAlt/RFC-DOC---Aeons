@@ -58,21 +58,13 @@
 		<Spanish> [ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Empire Size:[COLOR_REVERT]</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_TECH_DIFFERENCE</Tag>
-		<English> [ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Tech Divergence:[COLOR_REVERT]</English>
-		<French> [ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Tech Divergence:[COLOR_REVERT]</French>
-		<German> [ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Tech Divergence:[COLOR_REVERT]</German>
-		<Italian> [ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Tech Divergence:[COLOR_REVERT]</Italian>
-		<Spanish> [ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Tech Divergence:[COLOR_REVERT]</Spanish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_TECH_TRANSMISSION</Tag>
-		<English>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Transmission:[COLOR_REVERT] %D1_Change [ICON_RESEARCH]</English>
-		<French>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Transmission:[COLOR_REVERT] %D1_Change [ICON_RESEARCH]</French>
-		<German>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Transmission:[COLOR_REVERT] %D1_Change [ICON_RESEARCH]</German>
-		<Italian>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Transmission:[COLOR_REVERT] %D1_Change [ICON_RESEARCH]</Italian>
-		<Spanish>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Transmission:[COLOR_REVERT] %D1_Change [ICON_RESEARCH]</Spanish>
-	</TEXT>
+ 		<Tag>TXT_KEY_TECH_DIFFERENCE</Tag>
+ 		<English> [ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Tech Divergence:[COLOR_REVERT]</English>
+ 		<French> [ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Tech Divergence:[COLOR_REVERT]</French>
+ 		<German> [ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Tech Divergence:[COLOR_REVERT]</German>
+ 		<Italian> [ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Tech Divergence:[COLOR_REVERT]</Italian>
+ 		<Spanish> [ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Tech Divergence:[COLOR_REVERT]</Spanish>
+ 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITS_CONTRACTED_OUT</Tag>
 		<English>Units Contracted Out</English>
@@ -96,6 +88,30 @@
 		<German> [ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Modernisierung:[COLOR_REVERT]</German>
 		<Italian> [ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Modernization:[COLOR_REVERT]</Italian>
 		<Spanish> [ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Modernization:[COLOR_REVERT]</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TECH_SUBJECTS_MODIFIER</Tag>
+		<English> [ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Discovered by Subjects:[COLOR_REVERT]</English>
+		<French> [ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Discovered by Subjects:[COLOR_REVERT]</French>
+		<German> [ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Discovered by Subjects:[COLOR_REVERT]</German>
+		<Italian> [ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Discovered by Subjects:[COLOR_REVERT]</Italian>
+		<Spanish> [ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Discovered by Subjects:[COLOR_REVERT]</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TECH_OVERLORD_MODIFIER</Tag>
+		<English> [ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Discovered by Overlord:[COLOR_REVERT]</English>
+		<French> [ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Discovered by Overlord:[COLOR_REVERT]</French>
+		<German> [ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Discovered by Overlord:[COLOR_REVERT]</German>
+		<Italian> [ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Discovered by Overlord:[COLOR_REVERT]</Italian>
+		<Spanish> [ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Discovered by Overlord:[COLOR_REVERT]</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TECH_FELLOW_SUBJECT_MODIFIER</Tag>
+		<English> [ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Discovered by Other Subjects:[COLOR_REVERT]</English>
+		<French> [ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Discovered by Other Subjects:[COLOR_REVERT]</French>
+		<German> [ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Discovered by Other Subjects:[COLOR_REVERT]</German>
+		<Italian> [ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Discovered by Other Subjects:[COLOR_REVERT]</Italian>
+		<Spanish> [ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Discovered by Other Subjects:[COLOR_REVERT]</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_SPAWN_MODIFIER</Tag>
@@ -1103,6 +1119,22 @@
 		<Spanish>Las ciudades %s1:4 han declarado su independencia del dominio extranjero.</Spanish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_INDEPENDENCE_WAR</Tag>
+		<English>We have declared an independence war, cutting off our %s1 subjugation!</English>
+		<French>We have declared an independence war, cutting off our %s1 subjugation!</French>
+		<German>We have declared an independence war, cutting off our %s1 subjugation!</German>
+		<Italian>We have declared an independence war, cutting off our %s1 subjugation!</Italian>
+		<Spanish>We have declared an independence war, cutting off our %s1 subjugation!</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_INDEPENDENCE_WAR_DEFENDER</Tag>
+		<English>%s1 leaders have declared independence from us, cutting their relationship to us as a subject!</English>
+		<French>%s1 leaders have declared independence from us, cutting their relationship to us as a subject!</French>
+		<German>%s1 leaders have declared independence from us, cutting their relationship to us as a subject!</German>
+		<Italian>%s1 leaders have declared independence from us, cutting their relationship to us as a subject!</Italian>
+		<Spanish>%s1 leaders have declared independence from us, cutting their relationship to us as a subject!</Spanish>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_INVADERS_HUMAN</Tag>
 		<English>%s1 armies have invaded our territory!</English>
 		<French>Les arm&#233;es %s1:4 ont envahi notre territoire !</French>
@@ -1125,6 +1157,14 @@
 		<German>Your Holkan has defeated a %s1 %s2, acquiring %d3 [ICON_FOOD] for %s4.</German>
 		<Italian>Your Holkan has defeated a %s1 %s2, acquiring %d3 [ICON_FOOD] for %s4.</Italian>
 		<Spanish>Your Holkan has defeated a %s1 %s2, acquiring %d3 [ICON_FOOD] for %s4.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_ZIMBABWEAN_ASSEGAI_WIELDER_EFFECT</Tag>
+		<English>Your Assegai Wielder has defeated a %s1 %s2, acquiring %d3 [ICON_PRODUCTION] for %s4.</English>
+		<French>Votre Assegai Wielder a vaincu un %s2 %s1 et ramen&#233; %d3 [ICON_PRODUCTION] &#224; %s4.</French>
+		<German>Your Assegai Wielder has defeated a %s1 %s2, acquiring %d3 [ICON_PRODUCTION] for %s4.</German>
+		<Italian>Your Assegai Wielder has defeated a %s1 %s2, acquiring %d3 [ICON_PRODUCTION] for %s4.</Italian>
+		<Spanish>Your Assegai Wielder has defeated a %s1 %s2, acquiring %d3 [ICON_PRODUCTION] for %s4.</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MERCENARIES_DISABLED</Tag>
@@ -1391,6 +1431,14 @@
 		<Spanish>[ICON_BULLET]%D1%%[ICON_PRODUCTION] for State Religion Building</Spanish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_MISC_HELP_PROD_NUBIA</Tag>
+		<English>[ICON_BULLET]%D1%%[ICON_PRODUCTION] for Military and Growth Buildings with Stone</English>
+		<French>[ICON_BULLET]%D1%%[ICON_PRODUCTION] for Military and Growth Buildings with Stone</French>
+		<German>[ICON_BULLET]%D1%%[ICON_PRODUCTION] for Military and Growth Buildings with Stone</German>
+		<Italian>[ICON_BULLET]%D1%%[ICON_PRODUCTION] for Military and Growth Buildings with Stone</Italian>
+		<Spanish>[ICON_BULLET]%D1%%[ICON_PRODUCTION] for Military and Growth Buildings with Stone</Spanish>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_MISC_HELP_PROD_CAPITAL_BUILDING</Tag>
 		<English>[ICON_BULLET]%D1%%[ICON_PRODUCTION] for having the current building in your capital</English>
 		<French>[ICON_BULLET]%D1%%[ICON_PRODUCTION] parce que le b&#226;timent actuel est d&#233;j&#224; dans votre capitale</French>
@@ -1509,6 +1557,46 @@
 		<German>[ICON_BULLET]Handel: </German>
 		<Italian>[ICON_BULLET]Commercio: </Italian>
 		<Spanish>[ICON_BULLET]Intercambio: </Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_ARAB_HORDE</Tag>
+		<English>The Arabs have invaded %s1_civ_adjective territory!</English>
+		<French>Les hordes mongoles ont envahi le territoire %s1_civ_adjective !</French>
+		<German>Die mongolischen Horden sind in %s1_civ_adjective Territorium eingefallen!</German>
+		<Italian>The Mongol hordes have invaded %s1_civ_adjective territory!</Italian>
+		<Spanish>The Mongol hordes have invaded %s1_civ_adjective territory!</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_ARAB_HORDE_HUMAN</Tag>
+		<English>The Arab armies have invaded our territory!</English>
+		<French>Les hordes mongoles ont envahi notre territoire !</French>
+		<German>Die mongolischen Horden sind in unser Territorium eingefallen!</German>
+		<Italian>The Mongol hordes have invaded our territory!</Italian>
+		<Spanish>The Mongol hordes have invaded our territory!</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_FATIMID_HORDE</Tag>
+		<English>The Fatimids have invaded %s1_civ_adjective territory!</English>
+		<French>Les hordes mongoles ont envahi le territoire %s1_civ_adjective !</French>
+		<German>Die mongolischen Horden sind in %s1_civ_adjective Territorium eingefallen!</German>
+		<Italian>The Mongol hordes have invaded %s1_civ_adjective territory!</Italian>
+		<Spanish>The Mongol hordes have invaded %s1_civ_adjective territory!</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_FATIMID_HORDE_HUMAN</Tag>
+		<English>The Fatimid armies have invaded our territory!</English>
+		<French>Les hordes mongoles ont envahi notre territoire !</French>
+		<German>Die mongolischen Horden sind in unser Territorium eingefallen!</German>
+		<Italian>The Mongol hordes have invaded our territory!</Italian>
+		<Spanish>The Mongol hordes have invaded our territory!</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_FATIMID_HORDE_ARABIA_ABANDON</Tag>
+		<English>Our volunteers have defected due to the Caliphate's collapse.</English>
+		<French>Les hordes mongoles ont envahi notre territoire !</French>
+		<German>Die mongolischen Horden sind in unser Territorium eingefallen!</German>
+		<Italian>The Mongol hordes have invaded our territory!</Italian>
+		<Spanish>The Mongol hordes have invaded our territory!</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MONGOL_HORDE</Tag>
@@ -1831,6 +1919,22 @@
 		<Spanish>Great Statesman</Spanish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_SPECIALIST_TREKKER</Tag>
+		<English>Trekker</English>
+		<French>Trekker</French>
+		<German>Trekker</German>
+		<Italian>Trekker</Italian>
+		<Spanish>Trekker</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_SPECIALIST_GREAT_TREKKER</Tag>
+		<English>Great Trekker</English>
+		<French>Great Trekker</French>
+		<German>Great Trekker</German>
+		<Italian>Great Trekker</Italian>
+		<Spanish>Great Trekker</Spanish>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_SPECIALIST_SLAVE</Tag>
 		<English>Slave</English>
 		<French>Esclave</French>
@@ -1885,6 +1989,14 @@
 		<German>[ICON_BULLET]Requires [LINK=literal]Vassalage[\LINK]</German>
 		<Italian>[ICON_BULLET]Requires [LINK=literal]Vassalage[\LINK]</Italian>
 		<Spanish>[ICON_BULLET]Requires [LINK=literal]Vassalage[\LINK]</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_GOTH_VICTORY_UP</Tag>
+		<English>You have acquired %d1 [ICON_GOLD] by defeating a %s2 %s3.</English>
+		<French>You have acquired %d1 [ICON_GOLD] by defeating a %s2 %s3.</French>
+		<German>You have acquired %d1 [ICON_GOLD] by defeating a %s2 %s3.</German>
+		<Italian>You have acquired %d1 [ICON_GOLD] by defeating a %s2 %s3.</Italian>
+		<Spanish>You have acquired %d1 [ICON_GOLD] by defeating a %s2 %s3.</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_NORSE_NAVAL_UP</Tag>
@@ -2319,6 +2431,14 @@
 		<Spanish>As the Cradle of Civilization, we can choose another free technology:</Spanish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_FUNJ_UP</Tag>
+		<English>Due to Islamic teachings, we can choose another free technology:</English>
+		<French>Due to Islamic teachings, we can choose another free technology:</French>
+		<German>Due to Islamic teachings, we can choose another free technology:</German>
+		<Italian>Due to Islamic teachings, we can choose another free technology:</Italian>
+		<Spanish>Due to Islamic teachings, we can choose another free technology:</Spanish>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_CIVIC_SPECIALIST_HAPPINESS</Tag>
 		<English>[ICON_BULLET]%D1_Change%F2_HappyOrUn per Specialist</English>
 		<French>[ICON_BULLET]%D1_Change%F2_HappyOrUn par sp&#233;cialiste</French>
@@ -2607,6 +2727,30 @@
 		<Spanish>[ICON_BULLET]%D1_Change%% Open Terrain Defense</Spanish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_UNIT_HEATHEN_STRENGTH</Tag>
+		<English>[ICON_BULLET]%D1_Change%% vs. Other State [ICON_RELIGION]</English>
+		<French>[ICON_BULLET]%D1_Change%% vs. Other State [ICON_RELIGION]</French>
+		<German>[ICON_BULLET]%D1_Change%% vs. Other State [ICON_RELIGION]</German>
+		<Italian>[ICON_BULLET]%D1_Change%% vs. Other State [ICON_RELIGION]</Italian>
+		<Spanish>[ICON_BULLET]%D1_Change%% vs. Other State [ICON_RELIGION]</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_UNITY_STRENGTH</Tag>
+		<English>[ICON_BULLET]%D1_Change%% Strength from %d2 of this Unit</English>
+		<French>[ICON_BULLET]%D1_Change%% Strength from %d2 of this Unit</French>
+		<German>[ICON_BULLET]%D1_Change%% Strength from %d2 of this Unit</German>
+		<Italian>[ICON_BULLET]%D1_Change%% Strength from %d2 of this Unit</Italian>
+		<Spanish>[ICON_BULLET]%D1_Change%% Strength from %d2 of this Unit</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_UNITY_STRENGTH_COMBINE</Tag>
+		<English>[ICON_BULLET]%D1_Change%% from %d3 [LINK=literal]%s2[\LINK] Units</English>
+		<French>[ICON_BULLET]%D1_Change%% from %d3 [LINK=literal]%s2[\LINK] Units</French>
+		<German>[ICON_BULLET]%D1_Change%% from %d3 [LINK=literal]%s2[\LINK] Units</German>
+		<Italian>[ICON_BULLET]%D1_Change%% from %d3 [LINK=literal]%s2[\LINK] Units</Italian>
+		<Spanish>[ICON_BULLET]%D1_Change%% from %d3 [LINK=literal]%s2[\LINK] Units</Spanish>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_UNIT_RIVER_ATTACK</Tag>
 		<English>[ICON_BULLET]%D1_Change%% Attack Along Rivers</English>
 		<French>[ICON_BULLET]%D1_Change%% Attack Along Rivers</French>
@@ -2621,6 +2765,22 @@
 		<German>[ICON_BULLET]%D1_Bonus%% durch offenes Terrain (Einheitenf&#228;higkeit)</German>
 		<Italian>[ICON_BULLET]%D1_Bonus%% from Open Terrain (Unit Ability)</Italian>
 		<Spanish>[ICON_BULLET]%D1_Bonus%% from Open Terrain (Unit Ability)</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_COMBAT_PLOT_UNITY_MOD</Tag>
+		<English>[ICON_BULLET]%D1_Bonus%% from Unity (Unit Ability)</English>
+		<French>[ICON_BULLET]%D1_Bonus%% from Unity (Unit Ability)</French>
+		<German>[ICON_BULLET]%D1_Bonus%% from Unity (Unit Ability)</German>
+		<Italian>[ICON_BULLET]%D1_Bonus%% from Unity (Unit Ability)</Italian>
+		<Spanish>[ICON_BULLET]%D1_Bonus%% from Unity (Unit Ability)</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_COMBAT_HEATHEN_STRENGTH</Tag>
+		<English>[ICON_BULLET]%D1_Bonus%% Against other Religions (Unit Ability)</English>
+		<French>[ICON_BULLET]%D1_Bonus%% Against other Religions (Unit Ability)</French>
+		<German>[ICON_BULLET]%D1_Bonus%% Against other Religions (Unit Ability)</German>
+		<Italian>[ICON_BULLET]%D1_Bonus%% Against other Religions (Unit Ability)</Italian>
+		<Spanish>[ICON_BULLET]%D1_Bonus%% Against other Religions (Unit Ability)</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_COMBAT_PLOT_EXTRA_RIVER_MOD</Tag>
@@ -2805,6 +2965,14 @@
 		<German>[ICON_BULLET]%D1%%%F2 durch Kulturstufe</German>
 		<Italian>[ICON_BULLET]%D1%%%F2 from Culture Level</Italian>
 		<Spanish>[ICON_BULLET]%D1%%%F2 from Culture Level</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISC_HELP_YIELD_KATANGA</Tag>
+		<English>[ICON_BULLET]%D1%%%F2 from Basin Isolationism (Unique Power)</English>
+		<French>[ICON_BULLET]%D1%%%F2 from Basin Isolationism (Unique Power)</French>
+		<German>[ICON_BULLET]%D1%%%F2 from Basin Isolationism (Unique Power)</German>
+		<Italian>[ICON_BULLET]%D1%%%F2 from Basin Isolationism (Unique Power)</Italian>
+		<Spanish>[ICON_BULLET]%D1%%%F2 from Basin Isolationism (Unique Power)</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISC_HELP_FOOD_FROM_HAPPINESS</Tag>
@@ -2992,6 +3160,14 @@
 		<Spanish>[ICON_BULLET]%D1%%[ICON_PRODUCTION] for building an existing project</Spanish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_MISC_HELP_PROD_ADAL</Tag>
+		<English>[ICON_BULLET]%D1%%[ICON_PRODUCTION] due to Vigor (Unique Power)</English>
+		<French>[ICON_BULLET]%D1%%[ICON_PRODUCTION] due to Vigor (Unique Power)</French>
+		<German>[ICON_BULLET]%D1%%[ICON_PRODUCTION] due to Vigor (Unique Power)</German>
+		<Italian>[ICON_BULLET]%D1%%[ICON_PRODUCTION] due to Vigor (Unique Power)</Italian>
+		<Spanish>[ICON_BULLET]%D1%%[ICON_PRODUCTION] due to Vigor (Unique Power)</Spanish>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_PROJECT_DOUBLE_SPEED_EXISTING</Tag>
 		<English>Double Production Speed when already completed by another civilization</English>
 		<French>Vitesse de production doubl&#233;e si d&#233;j&#224; compl&#233;t&#233; par une autre civilisation</French>
@@ -3103,6 +3279,14 @@
 		<German>[ICON_BULLET]%D1%%%F2 durch Zivilisationsmodifikator</German>
 		<Italian>[ICON_BULLET]%D1%%%F2 from Civilization modifier</Italian>
 		<Spanish>[ICON_BULLET]%D1%%%F2 from Civilization modifier</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISC_HELP_KANEM_BORNU_MODIFIER</Tag>
+		<English>[ICON_BULLET]%D1%%%F2 from Unique Power</English>
+		<French>[ICON_BULLET]%D1%%%F2 from Unique Power</French>
+		<German>[ICON_BULLET]%D1%%%F2 from Unique Power</German>
+		<Italian>[ICON_BULLET]%D1%%%F2 from Unique Power</Italian>
+		<Spanish>[ICON_BULLET]%D1%%%F2 from Unique Power</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>INTERFACE_CITY_WONDER_LIMIT</Tag>
@@ -3545,6 +3729,190 @@
 		<Spanish></Spanish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_MESSAGE_CONQUERORS_ARA_GOT</Tag>
+		<English>We are receiving reports that the Caliphate intends on bringing Iberia under its control!</English>
+		<French>We are receiving reports that the Caliphate intends on bringing Iberia under its control!</French>
+		<German>We are receiving reports that the Caliphate intends on bringing Iberia under its control!</German>
+		<Italian>We are receiving reports that the Caliphate intends on bringing Iberia under its control!</Italian>
+		<Spanish>We are receiving reports that the Caliphate intends on bringing Iberia under its control!</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MESSAGE_CONQUERORS_ARA_VAN</Tag>
+		<English>We are receiving reports that the Caliphate intends on bringing Africa under its control!</English>
+		<French>We are receiving reports that the Caliphate intends on bringing Africa under its control!</French>
+		<German>We are receiving reports that the Caliphate intends on bringing Africa under its control!</German>
+		<Italian>We are receiving reports that the Caliphate intends on bringing Africa under its control!</Italian>
+		<Spanish>We are receiving reports that the Caliphate intends on bringing Africa under its control!</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MESSAGE_CONQUERORS_FRA_GEM</Tag>
+		<English>We are receiving reports that the French king has ambitions of a new Roman Empire stretching to Germany!</English>
+		<French>We are receiving reports that the French king has ambitions of a new Roman Empire stretching to Germany!</French>
+		<German>We are receiving reports that the French king has ambitions of a new Roman Empire stretching to Germany!</German>
+		<Italian>We are receiving reports that the French king has ambitions of a new Roman Empire stretching to Germany!</Italian>
+		<Spanish>We are receiving reports that the French king has ambitions of a new Roman Empire stretching to Germany!</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MESSAGE_CONQUERORS_HUN_CEL</Tag>
+		<English>We are receiving reports that the Huns have plans to create an empire as far reaching as Gaul!</English>
+		<French>We are receiving reports that the Huns have plans to create an empire as far reaching as Gaul!</French>
+		<German>We are receiving reports that the Huns have plans to create an empire as far reaching as Gaul!</German>
+		<Italian>We are receiving reports that the Huns have plans to create an empire as far reaching as Gaul!</Italian>
+		<Spanish>We are receiving reports that the Huns have plans to create an empire as far reaching as Gaul!</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MESSAGE_CONQUERORS_HUN_ROM</Tag>
+		<English>We are receiving reports that the powerful leader of the Hunnic barbarians has ambitions to rout Rome to its core!</English>
+		<French>We are receiving reports that the powerful leader of the Hunnic barbarians has ambitions to rout Rome to its core!</French>
+		<German>We are receiving reports that the powerful leader of the Hunnic barbarians has ambitions to rout Rome to its core!</German>
+		<Italian>We are receiving reports that the powerful leader of the Hunnic barbarians has ambitions to rout Rome to its core!</Italian>
+		<Spanish>We are receiving reports that the powerful leader of the Hunnic barbarians has ambitions to rout Rome to its core!</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MESSAGE_CONQUERORS_HUN_GOT</Tag>
+		<English>We are receiving reports that the Huns have ambitions to devastate the Gothic homeland!</English>
+		<French>We are receiving reports that the Huns have ambitions to devastate the Gothic homeland!</French>
+		<German>We are receiving reports that the Huns have ambitions to devastate the Gothic homeland!</German>
+		<Italian>We are receiving reports that the Huns have ambitions to devastate the Gothic homeland!</Italian>
+		<Spanish>We are receiving reports that the Huns have ambitions to devastate the Gothic homeland!</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MESSAGE_CONQUERORS_GOT_ROM</Tag>
+		<English>We are receiving reports that the Gothic barbarians are making a gambit to establish a kingdom under their ambitious leader!</English>
+		<French>We are receiving reports that the Gothic barbarians are making a gambit to establish a kingdom under their ambitious leader!</French>
+		<German>We are receiving reports that the Gothic barbarians are making a gambit to establish a kingdom under their ambitious leader!</German>
+		<Italian>We are receiving reports that the Gothic barbarians are making a gambit to establish a kingdom under their ambitious leader!</Italian>
+		<Spanish>We are receiving reports that the Gothic barbarians are making a gambit to establish a kingdom under their ambitious leader!</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MESSAGE_CONQUERORS_VAN_ROM</Tag>
+		<English>We are receiving reports that the Germanic barbarians have crossed the strait of Gibraltar to establish a kingdom in Africa!</English>
+		<French>We are receiving reports that the Germanic barbarians have crossed the strait of Gibraltar to establish a kingdom in Africa!</French>
+		<German>We are receiving reports that the Germanic barbarians have crossed the strait of Gibraltar to establish a kingdom in Africa!</German>
+		<Italian>We are receiving reports that the Germanic barbarians have crossed the strait of Gibraltar to establish a kingdom in Africa!</Italian>
+		<Spanish>We are receiving reports that the Germanic barbarians have crossed the strait of Gibraltar to establish a kingdom in Africa!</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MESSAGE_CONQUERORS_NUB_EGY</Tag>
+		<English>We are receiving reports that the Kushite invaders from the south intend to establish an Egyptian dynasty!</English>
+		<French>We are receiving reports that the Kushite invaders from the south intend to establish an Egyptian dynasty!</French>
+		<German>We are receiving reports that the Kushite invaders from the south intend to establish an Egyptian dynasty!</German>
+		<Italian>We are receiving reports that the Kushite invaders from the south intend to establish an Egyptian dynasty!</Italian>
+		<Spanish>We are receiving reports that the Kushite invaders from the south intend to establish an Egyptian dynasty!</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MESSAGE_CONQUERORS_PER_MYC</Tag>
+		<English>We are receiving reports that the Persian emperor intends to bring forth an age of tyrants onto Greece!</English>
+		<French>We are receiving reports that the Persian emperor intends to bring forth an age of tyrants onto Greece!</French>
+		<German>We are receiving reports that the Persian emperor intends to bring forth an age of tyrants onto Greece!</German>
+		<Italian>We are receiving reports that the Persian emperor intends to bring forth an age of tyrants onto Greece!</Italian>
+		<Spanish>We are receiving reports that the Persian emperor intends to bring forth an age of tyrants onto Greece!</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MESSAGE_CONQUERORS_PER_SPR</Tag>
+		<English>We are receiving reports that the Persian emperor intends to bring forth an age of tyrants onto Greece!</English>
+		<French>We are receiving reports that the Persian emperor intends to bring forth an age of tyrants onto Greece!</French>
+		<German>We are receiving reports that the Persian emperor intends to bring forth an age of tyrants onto Greece!</German>
+		<Italian>We are receiving reports that the Persian emperor intends to bring forth an age of tyrants onto Greece!</Italian>
+		<Spanish>We are receiving reports that the Persian emperor intends to bring forth an age of tyrants onto Greece!</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MESSAGE_CONQUERORS_PER_GRE</Tag>
+		<English>We are receiving reports that the Persian emperor intends to bring forth an age of tyrants onto Greece!</English>
+		<French>We are receiving reports that the Persian emperor intends to bring forth an age of tyrants onto Greece!</French>
+		<German>We are receiving reports that the Persian emperor intends to bring forth an age of tyrants onto Greece!</German>
+		<Italian>We are receiving reports that the Persian emperor intends to bring forth an age of tyrants onto Greece!</Italian>
+		<Spanish>We are receiving reports that the Persian emperor intends to bring forth an age of tyrants onto Greece!</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MESSAGE_CONQUERORS_PER_HIT</Tag>
+		<English>We are receiving reports that the King of Kings plans to push his "Immortal" infantry into Anatolia!</English>
+		<French>We are receiving reports that the King of Kings plans to push his "Immortal" infantry into Anatolia!</French>
+		<German>We are receiving reports that the King of Kings plans to push his "Immortal" infantry into Anatolia!</German>
+		<Italian>We are receiving reports that the King of Kings plans to push his "Immortal" infantry into Anatolia!</Italian>
+		<Spanish>We are receiving reports that the King of Kings plans to push his "Immortal" infantry into Anatolia!</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MESSAGE_CONQUERORS_PER_EGY</Tag>
+		<English>We are receiving reports that the King of Kings of Persia plans on claiming Egypt as one of his satrapies!</English>
+		<French>We are receiving reports that the King of Kings of Persia plans on claiming Egypt as one of his satrapies!</French>
+		<German>We are receiving reports that the King of Kings of Persia plans on claiming Egypt as one of his satrapies!</German>
+		<Italian>We are receiving reports that the King of Kings of Persia plans on claiming Egypt as one of his satrapies!</Italian>
+		<Spanish>We are receiving reports that the King of Kings of Persia plans on claiming Egypt as one of his satrapies!</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MESSAGE_CONQUERORS_PER_BAB</Tag>
+		<English>We are receiving reports that the King of Kings is making a final push into Babylonia!</English>
+		<French>We are receiving reports that the King of Kings is making a final push into Babylonia!</French>
+		<German>We are receiving reports that the King of Kings is making a final push into Babylonia!</German>
+		<Italian>We are receiving reports that the King of Kings is making a final push into Babylonia!</Italian>
+		<Spanish>We are receiving reports that the King of Kings is making a final push into Babylonia!</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MESSAGE_CONQUERORS_PER_ASS</Tag>
+		<English>We are receiving reports that the King of Kings is making a final push into Assyria!</English>
+		<French>We are receiving reports that the King of Kings is making a final push into Assyria!</French>
+		<German>We are receiving reports that the King of Kings is making a final push into Assyria!</German>
+		<Italian>We are receiving reports that the King of Kings is making a final push into Assyria!</Italian>
+		<Spanish>We are receiving reports that the King of Kings is making a final push into Assyria!</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MESSAGE_CONQUERORS_ENG_CEL</Tag>
+		<English>We are receiving reports that Norman invaders intend on claiming the clanns of Ireland as their own!</English>
+		<French>We are receiving reports that Norman invaders intend on claiming the clanns of Ireland as their own!</French>
+		<German>We are receiving reports that Norman invaders intend on claiming the clanns of Ireland as their own!</German>
+		<Italian>We are receiving reports that Norman invaders intend on claiming the clanns of Ireland as their own!</Italian>
+		<Spanish>We are receiving reports that Norman invaders intend on claiming the clanns of Ireland as their own!</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MESSAGE_CONQUERORS_BAB_CAR</Tag>
+		<English>We are receiving reports that the Babylonians are planning to subjugate the Phoenicians!</English>
+		<French>We are receiving reports that the Babylonians are planning to subjugate the Phoenicians!</French>
+		<German>We are receiving reports that the Babylonians are planning to subjugate the Phoenicians!</German>
+		<Italian>We are receiving reports that the Babylonians are planning to subjugate the Phoenicians!</Italian>
+		<Spanish>We are receiving reports that the Babylonians are planning to subjugate the Phoenicians!</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MESSAGE_CONQUERORS_ASS_CAR</Tag>
+		<English>We are receiving reports that the Assyrians are beginning schemes to add the Levant to their empire!</English>
+		<French>We are receiving reports that the Assyrians are beginning schemes to add the Levant to their empire!</French>
+		<German>We are receiving reports that the Assyrians are beginning schemes to add the Levant to their empire!</German>
+		<Italian>We are receiving reports that the Assyrians are beginning schemes to add the Levant to their empire!</Italian>
+		<Spanish>We are receiving reports that the Assyrians are beginning schemes to add the Levant to their empire!</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MESSAGE_CONQUERORS_BAB_JUD</Tag>
+		<English>We are receiving reports that the Babylonians are planning to subjugate the Israelites!</English>
+		<French>We are receiving reports that the Babylonians are planning to subjugate the Israelites!</French>
+		<German>We are receiving reports that the Babylonians are planning to subjugate the Israelites!</German>
+		<Italian>We are receiving reports that the Babylonians are planning to subjugate the Israelites!</Italian>
+		<Spanish>We are receiving reports that the Babylonians are planning to subjugate the Israelites!</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MESSAGE_CONQUERORS_ASS_JUD</Tag>
+		<English>We are receiving reports that the Assyrians are beginning schemes to add the Levant to their empire!</English>
+		<French>We are receiving reports that the Assyrians are beginning schemes to add the Levant to their empire!</French>
+		<German>We are receiving reports that the Assyrians are beginning schemes to add the Levant to their empire!</German>
+		<Italian>We are receiving reports that the Assyrians are beginning schemes to add the Levant to their empire!</Italian>
+		<Spanish>We are receiving reports that the Assyrians are beginning schemes to add the Levant to their empire!</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MESSAGE_CONQUERORS_BAB_ASS</Tag>
+		<English>We are receiving reports that the Babylonians plan to unite all of Mesopotamia under one empire!</English>
+		<French>We are receiving reports that the Babylonians plan to unite all of Mesopotamia under one empire!</French>
+		<German>We are receiving reports that the Babylonians plan to unite all of Mesopotamia under one empire!</German>
+		<Italian>We are receiving reports that the Babylonians plan to unite all of Mesopotamia under one empire!</Italian>
+		<Spanish>We are receiving reports that the Babylonians plan to unite all of Mesopotamia under one empire!</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MESSAGE_CONQUERORS_ASS_BAB</Tag>
+		<English>We are receiving reports that the Assyrians plan to create an empire and overthrow Babylon!</English>
+		<French>We are receiving reports that the Assyrians plan to create an empire and overthrow Babylon!</French>
+		<German>We are receiving reports that the Assyrians plan to create an empire and overthrow Babylon!</German>
+		<Italian>We are receiving reports that the Assyrians plan to create an empire and overthrow Babylon!</Italian>
+		<Spanish>We are receiving reports that the Assyrians plan to create an empire and overthrow Babylon!</Spanish>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_MESSAGE_CONQUERORS_ROM_CAR</Tag>
 		<English>We are receiving reports that a Roman army is planning to cross the Strait of Sicily and attack Africa!</English>
 		<French>We are receiving reports that a Roman army is planning to cross the Strait of Sicily and attack Africa!</French>
@@ -3559,6 +3927,14 @@
 		<German>We are receiving reports that a Roman army is planning to intervene in Greece!</German>
 		<Italian>We are receiving reports that a Roman army is planning to intervene in Greece!</Italian>
 		<Spanish>We are receiving reports that a Roman army is planning to intervene in Greece!</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MESSAGE_CONQUERORS_ROM_MNO</Tag>
+		<English>We are receiving reports that a Roman army is planning to establish Crete as one of their provinces!</English>
+		<French>We are receiving reports that a Roman army is planning to establish Crete as one of their provinces!</French>
+		<German>We are receiving reports that a Roman army is planning to establish Crete as one of their provinces!</German>
+		<Italian>We are receiving reports that a Roman army is planning to establish Crete as one of their provinces!</Italian>
+		<Spanish>We are receiving reports that a Roman army is planning to establish Crete as one of their provinces!</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MESSAGE_CONQUERORS_ROM_CEL</Tag>
@@ -3577,6 +3953,14 @@
 		<Spanish>We are receiving reports that a Roman army is planning to turn Egypt into one of its provinces!</Spanish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_MESSAGE_CONQUERORS_ROM_PAR</Tag>
+		<English>We are receiving reports that a Roman army is trying to push into Parthian homeland!</English>
+		<French>We are receiving reports that a Roman army is trying to push into Parthian homeland!</French>
+		<German>We are receiving reports that a Roman army is trying to push into Parthian homeland!</German>
+		<Italian>We are receiving reports that a Roman army is trying to push into Parthian homeland!</Italian>
+		<Spanish>We are receiving reports that a Roman army is trying to push into Parthian homeland!</Spanish>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_MESSAGE_CONQUERORS_GRE_BAB</Tag>
 		<English>We are receiving reports that a Greek leader is planning to unite its armies and conquer Mesopotamia!</English>
 		<French>We are receiving reports that a Greek leader is planning to unite its armies and conquer Mesopotamia!</French>
@@ -3585,7 +3969,7 @@
 		<Spanish>We are receiving reports that a Greek leader is planning to unite its armies and conquer Mesopotamia!</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_MESSAGE_CONQUERORS_GRE_EGY</Tag>
+		<Tag>TXT_KEY_MESSAGE_CONQUERORS_MAC_EGY</Tag>
 		<English>We are receiving reports that the Greeks are planning to subdue Egypt!</English>
 		<French>We are receiving reports that the Greeks are planning to subdue Egypt!</French>
 		<German>We are receiving reports that the Greeks are planning to subdue Egypt!</German>
@@ -3593,7 +3977,7 @@
 		<Spanish>We are receiving reports that the Greeks are planning to subdue Egypt!</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_MESSAGE_CONQUERORS_GRE_PER</Tag>
+		<Tag>TXT_KEY_MESSAGE_CONQUERORS_MAC_PER</Tag>
 		<English>We are receiving reports that the Greek armies intend to capture the heart of Persia!</English>
 		<French>We are receiving reports that the Greek armies intend to capture the heart of Persia!</French>
 		<German>We are receiving reports that the Greek armies intend to capture the heart of Persia!</German>
@@ -3761,12 +4145,164 @@
 		<Spanish></Spanish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_MISC_INTEGRATE</Tag>
+		<English>Integrate</English>
+		<French>Integrate</French>
+		<German>Integrate</German>
+		<Italian>Integrate</Italian>
+		<Spanish>Integrate</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TRADE_FULLANNEX_STRING</Tag>
+		<English>Integrate</English>
+		<French>Integrate</French>
+		<German>Integrate</German>
+		<Italian>Integrate</Italian>
+		<Spanish>Integrate</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISC_IMMIGRATION_DESIRE</Tag>
+		<English>[ICON_BULLET]Immigration Desire: %d1</English>
+		<French>[ICON_BULLET]Immigration Desire: %d1</French>
+		<German>[ICON_BULLET]Immigration Desire: %d1</German>
+		<Italian>[ICON_BULLET]Immigration Desire: %d1</Italian>
+		<Spanish>[ICON_BULLET]Immigration Desire: %d1</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISC_IMMIGRATION_DESIRE_CIVICS</Tag>
+		<English>[ICON_BULLET]%d1 from Civics</English>
+		<French>[ICON_BULLET]%d1 from Civics</French>
+		<German>[ICON_BULLET]%d1 from Civics</German>
+		<Italian>[ICON_BULLET]%d1 from Civics</Italian>
+		<Spanish>[ICON_BULLET]%d1 from Civics</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISC_IMMIGRATION_DESIRE_HAPPINESS</Tag>
+		<English>[ICON_BULLET]%d1 from Happiness</English>
+		<French>[ICON_BULLET]%d1 from Happiness</French>
+		<German>[ICON_BULLET]%d1 from Happiness</German>
+		<Italian>[ICON_BULLET]%d1 from Happiness</Italian>
+		<Spanish>[ICON_BULLET]%d1 from Happiness</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISC_IMMIGRATION_DESIRE_FOOD</Tag>
+		<English>[ICON_BULLET]%d1 from Food</English>
+		<French>[ICON_BULLET]%d1 from Food</French>
+		<German>[ICON_BULLET]%d1 from Food</German>
+		<Italian>[ICON_BULLET]%d1 from Food</Italian>
+		<Spanish>[ICON_BULLET]%d1 from Food</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISC_IMMIGRATION_DESIRE_HEALTH</Tag>
+		<English>[ICON_BULLET]%d1 from Health</English>
+		<French>[ICON_BULLET]%d1 from Health</French>
+		<German>[ICON_BULLET]%d1 from Health</German>
+		<Italian>[ICON_BULLET]%d1 from Health</Italian>
+		<Spanish>[ICON_BULLET]%d1 from Health</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISC_IMMIGRATION_DESIRE_POPULATION</Tag>
+		<English>[ICON_BULLET]%d1 from Health</English>
+		<French>[ICON_BULLET]%d1 from Health</French>
+		<German>[ICON_BULLET]%d1 from Health</German>
+		<Italian>[ICON_BULLET]%d1 from Health</Italian>
+		<Spanish>[ICON_BULLET]%d1 from Health</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISC_IMMIGRATION_DESIRE_CULTURE_LEVEL</Tag>
+		<English>[ICON_BULLET]%d1 from Culture Level</English>
+		<French>[ICON_BULLET]%d1 from Culture Level</French>
+		<German>[ICON_BULLET]%d1 from Culture Level</German>
+		<Italian>[ICON_BULLET]%d1 from Culture Level</Italian>
+		<Spanish>[ICON_BULLET]%d1 from Culture Level</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISC_IMMIGRATION_DESIRE_COLONY</Tag>
+		<English>[ICON_BULLET]%d1 from Colonial Enthusiasm</English>
+		<French>[ICON_BULLET]%d1 from Colonial Enthusiasm</French>
+		<German>[ICON_BULLET]%d1 from Colonial Enthusiasm</German>
+		<Italian>[ICON_BULLET]%d1 from Colonial Enthusiasm</Italian>
+		<Spanish>[ICON_BULLET]%d1 from Colonial Enthusiasm</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISC_IMMIGRATION_DESIRE_BUILDINGS</Tag>
+		<English>[ICON_BULLET]%d1 from Buildings</English>
+		<French>[ICON_BULLET]%d1 from Buildings</French>
+		<German>[ICON_BULLET]%d1 from Buildings</German>
+		<Italian>[ICON_BULLET]%d1 from Buildings</Italian>
+		<Spanish>[ICON_BULLET]%d1 from Buildings</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_IMMIGRATION_SMALL</Tag>
+		<English>Provides a small increase to [COLOR_HIGHLIGHT_TEXT]Immigration[COLOR_REVERT]</English>
+		<French>Provides a small increase to [COLOR_HIGHLIGHT_TEXT]Immigration[COLOR_REVERT]</French>
+		<German>Provides a small increase to [COLOR_HIGHLIGHT_TEXT]Immigration[COLOR_REVERT]</German>
+		<Italian>Provides a small increase to [COLOR_HIGHLIGHT_TEXT]Immigration[COLOR_REVERT]</Italian>
+		<Spanish>Provides a small increase to [COLOR_HIGHLIGHT_TEXT]Immigration[COLOR_REVERT]</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_IMMIGRATION_MEDIUM</Tag>
+		<English>Provides a medium increase to [COLOR_HIGHLIGHT_TEXT]Immigration[COLOR_REVERT]</English>
+		<French>Provides a medium increase to [COLOR_HIGHLIGHT_TEXT]Immigration[COLOR_REVERT]</French>
+		<German>Provides a medium increase to [COLOR_HIGHLIGHT_TEXT]Immigration[COLOR_REVERT]</German>
+		<Italian>Provides a medium increase to [COLOR_HIGHLIGHT_TEXT]Immigration[COLOR_REVERT]</Italian>
+		<Spanish>Provides a medium increase to [COLOR_HIGHLIGHT_TEXT]Immigration[COLOR_REVERT]</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_IMMIGRATION_LARGE</Tag>
+		<English>Provides a large increase to [COLOR_HIGHLIGHT_TEXT]Immigration[COLOR_REVERT]</English>
+		<French>Provides a large increase to [COLOR_HIGHLIGHT_TEXT]Immigration[COLOR_REVERT]</French>
+		<German>Provides a large increase to [COLOR_HIGHLIGHT_TEXT]Immigration[COLOR_REVERT]</German>
+		<Italian>Provides a large increase to [COLOR_HIGHLIGHT_TEXT]Immigration[COLOR_REVERT]</Italian>
+		<Spanish>Provides a large increase to [COLOR_HIGHLIGHT_TEXT]Immigration[COLOR_REVERT]</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_IMMIGRATION_SMALL_DOWN</Tag>
+		<English>Provides a small decrease to [COLOR_HIGHLIGHT_TEXT]Immigration[COLOR_REVERT]</English>
+		<French>Provides a small decrease to [COLOR_HIGHLIGHT_TEXT]Immigration[COLOR_REVERT]</French>
+		<German>Provides a small decrease to [COLOR_HIGHLIGHT_TEXT]Immigration[COLOR_REVERT]</German>
+		<Italian>Provides a small decrease to [COLOR_HIGHLIGHT_TEXT]Immigration[COLOR_REVERT]</Italian>
+		<Spanish>Provides a small decrease to [COLOR_HIGHLIGHT_TEXT]Immigration[COLOR_REVERT]</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_IMMIGRATION_MEDIUM_DOWN</Tag>
+		<English>Provides a medium decrease to [COLOR_HIGHLIGHT_TEXT]Immigration[COLOR_REVERT]</English>
+		<French>Provides a medium decrease to [COLOR_HIGHLIGHT_TEXT]Immigration[COLOR_REVERT]</French>
+		<German>Provides a medium decrease to [COLOR_HIGHLIGHT_TEXT]Immigration[COLOR_REVERT]</German>
+		<Italian>Provides a medium decrease to [COLOR_HIGHLIGHT_TEXT]Immigration[COLOR_REVERT]</Italian>
+		<Spanish>Provides a medium decrease to [COLOR_HIGHLIGHT_TEXT]Immigration[COLOR_REVERT]</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_IMMIGRATION_LARGE_DOWN</Tag>
+		<English>Provides a large decrease to [COLOR_HIGHLIGHT_TEXT]Immigration[COLOR_REVERT]</English>
+		<French>Provides a large decrease to [COLOR_HIGHLIGHT_TEXT]Immigration[COLOR_REVERT]</French>
+		<German>Provides a large decrease to [COLOR_HIGHLIGHT_TEXT]Immigration[COLOR_REVERT]</German>
+		<Italian>Provides a large decrease to [COLOR_HIGHLIGHT_TEXT]Immigration[COLOR_REVERT]</Italian>
+		<Spanish>Provides a large decrease to [COLOR_HIGHLIGHT_TEXT]Immigration[COLOR_REVERT]</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_IMMIGRATION_NONE_EXTERNAL</Tag>
+		<English>Prevents external [COLOR_HIGHLIGHT_TEXT]Migration[COLOR_REVERT]</English>
+		<French>Prevents external [COLOR_HIGHLIGHT_TEXT]Migration[COLOR_REVERT]</French>
+		<German>Prevents external [COLOR_HIGHLIGHT_TEXT]Migration[COLOR_REVERT]</German>
+		<Italian>Prevents external [COLOR_HIGHLIGHT_TEXT]Migration[COLOR_REVERT]</Italian>
+		<Spanish>Prevents external [COLOR_HIGHLIGHT_TEXT]Migration[COLOR_REVERT]</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISC_EMIGRATION_DESIRE</Tag>
+		<English>[ICON_BULLET]Emigration Desire: %d1</English>
+		<French>[ICON_BULLET]Emigration Desire: %d1</French>
+		<German>[ICON_BULLET]Emigration Desire: %d1</German>
+		<Italian>[ICON_BULLET]Emigration Desire: %d1</Italian>
+		<Spanish>[ICON_BULLET]Emigration Desire: %d1</Spanish>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_CIVIC_SPECIALIST_COUNT</Tag>
-		<English>[ICON_BULLET]%D1_Change slots for[SPACE]</English>
-		<French>[ICON_BULLET]%D1_Change slots for[SPACE]</French>
-		<German>[ICON_BULLET]%D1_Change slots for[SPACE]</German>
-		<Italian>[ICON_BULLET]%D1_Change slots for[SPACE]</Italian>
-		<Spanish>[ICON_BULLET]%D1_Change slots for[SPACE]</Spanish>
+ 		<English>[ICON_BULLET]%D1_Change slots for[SPACE]</English>
+ 		<French>[ICON_BULLET]%D1_Change slots for[SPACE]</French>
+ 		<German>[ICON_BULLET]%D1_Change slots for[SPACE]</German>
+ 		<Italian>[ICON_BULLET]%D1_Change slots for[SPACE]</Italian>
+ 		<Spanish>[ICON_BULLET]%D1_Change slots for[SPACE]</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TOPCIVS_POPULATION</Tag>
@@ -3775,6 +4311,14 @@
 		<German>Most Populous</German>
 		<Italian>Most Populous</Italian>
 		<Spanish>Most Populous</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_INTERFACE_SIGNIFICANCE</Tag>
+		<English>Significance</English>
+		<French>Significance</French>
+		<German>Significance</German>
+		<Italian>Significance</Italian>
+		<Spanish>Significance</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_INTERFACE_STRENGTHS</Tag>
@@ -3793,12 +4337,12 @@
 		<Spanish>Challenges</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_INTERFACE_SIGNIFICANCE</Tag>
-		<English>Significance</English>
-		<French>Significance</French>
-		<German>Significance</German>
-		<Italian>Significance</Italian>
-		<Spanish>Significance</Spanish>
+		<Tag>TXT_KEY_</Tag>
+		<English></English>
+		<French></French>
+		<German></German>
+		<Italian></Italian>
+		<Spanish></Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MESSAGE_CITY_NAME_CHANGE</Tag>
@@ -3833,6 +4377,46 @@
 		<Spanish>Our %s1 has defected to the %s2 side after being defeated by their Bannerman near %s3.</Spanish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_ZULU_UP_EFFECT</Tag>
+		<English>A %s1 %s2 has been captured by our military near %s3.</English>
+		<French>A %s1 %s2 has been captured by our military near %s3.</French>
+		<German>A %s1 %s2 has been captured by our military near %s3.</German>
+		<Italian>A %s1 %s2 has been captured by our military near %s3.</Italian>
+		<Spanish>A %s1 %s2 has been captured by our military near %s3.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_ZULU_EFFECT_TARGET</Tag>
+		<English>Our %s1 has been captured by the %s2!</English>
+		<French>Our %s1 has been captured by the %s2!</French>
+		<German>Our %s1 has been captured by the %s2!</German>
+		<Italian>Our %s1 has been captured by the %s2!</Italian>
+		<Spanish>Our %s1 has been captured by the %s2!</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_HAUSA_UP_EFFECT</Tag>
+		<English>A %s1 %s2 has defected from the rival kingdoms and joined our army near %s3.</English>
+		<French>A %s1 %s2 has defected from the rival kingdoms and joined our army near %s3.</French>
+		<German>A %s1 %s2 has defected from the rival kingdoms and joined our army near %s3.</German>
+		<Italian>A %s1 %s2 has defected from the rival kingdoms and joined our army near %s3.</Italian>
+		<Spanish>A %s1 %s2 has defected from the rival kingdoms and joined our army near %s3.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_DIFFERENT_RELIGION_TRADE_ROUTE_MOD</Tag>
+		<English>%D1_Mod%% Trade Route Yield with civilizations with different State Religions</English>
+		<French>%D1_Mod%% Trade Route Yield with civilizations with different State Religions</French>
+		<German>%D1_Mod%% Trade Route Yield with civilizations with different State Religions</German>
+		<Italian>%D1_Mod%% Trade Route Yield with civilizations with different State Religions</Italian>
+		<Spanish>%D1_Mod%% Trade Route Yield with civilizations with different State Religions</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TRADE_ROUTE_MOD_DIFFERENT_RELIGION</Tag>
+		<English>%D1_Mod%% from Different Religion</English>
+		<French>%D1_Mod%% from Different Religion</French>
+		<German>%D1_Mod%% from Different Religion</German>
+		<Italian>%D1_Mod%% from Different Religion</Italian>
+		<Spanish>%D1_Mod%% from Different Religion</Spanish>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_MISC_ATTITUDE_COMPETITOR</Tag>
 		<English>%D1: "We are rival powers."</English>
 		<French>%D1: "We are rival powers."</French>
@@ -3841,11 +4425,19 @@
 		<Spanish>%D1: "We are rival powers."</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_</Tag>
-		<English></English>
+		<Tag>TXT_KEY_MESSAGE_RELIGION_FLIP_UNIT</Tag>
+		<English>Our change in faith has cause some of our holy warriors to become standard regiments.</English>
 		<French></French>
 		<German></German>
 		<Italian></Italian>
 		<Spanish></Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MAIN_IMMIGRATION_DESIRE</Tag>
+		<English>[ICON_IMMIGRATION]: %d2</English>
+		<French>[ICON_IMMIGRATION]: %d2</French>
+		<German>[ICON_IMMIGRATION]: %d2</German>
+		<Italian>[ICON_IMMIGRATION]: %d2</Italian>
+		<Spanish>[ICON_IMMIGRATION]: %d2</Spanish>
 	</TEXT>
 </Civ4GameText>

@@ -206,9 +206,9 @@
 		</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_RELIGION_ISLAM_ADJECTIVE</Tag>
+		<Tag>TXT_KEY_RELIGION_ISLAM_SUNNI</Tag>
 		<English>
-			<Text>Islamic</Text>
+			<Text>Sunni Islam</Text>
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</English>
@@ -232,6 +232,74 @@
 			<Gender>Male:Female:Male:Female</Gender>
 			<Plural>0:0:1:1</Plural>
 		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_RELIGION_ISLAM_ADJECTIVE</Tag>
+		<English>
+			<Text>Sunni</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</English>
+		<French>
+			<Text>musulman:musulmane:musulmans:musulmanes</Text>
+			<Gender>Male:Female:Male:Female</Gender>
+			<Plural>0:0:1:1</Plural>
+		</French>
+		<German>
+			<Text>Islamisch:islamischen:islamische</Text>
+			<Gender>Neuter:Neuter:Neuter</Gender>
+			<Plural>0:0:0</Plural>
+		</German>
+		<Italian>
+			<Text>musulmano:musulmana:musulmani:musulmane</Text>
+			<Gender>Male:Female:Male:Female</Gender>
+			<Plural>0:0:1:1</Plural>
+		</Italian>
+		<Spanish>
+			<Text>isl&#225;mico:isl&#225;mica:isl&#225;micos:isl&#225;micas</Text>
+			<Gender>Male:Female:Male:Female</Gender>
+			<Plural>0:0:1:1</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_RELIGION_SHIA_ADJECTIVE</Tag>
+		<English>
+			<Text>Shi'ite</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</English>
+		<French>
+			<Text>musulman:musulmane:musulmans:musulmanes</Text>
+			<Gender>Male:Female:Male:Female</Gender>
+			<Plural>0:0:1:1</Plural>
+		</French>
+		<German>
+			<Text>Islamisch:islamischen:islamische</Text>
+			<Gender>Neuter:Neuter:Neuter</Gender>
+			<Plural>0:0:0</Plural>
+		</German>
+		<Italian>
+			<Text>musulmano:musulmana:musulmani:musulmane</Text>
+			<Gender>Male:Female:Male:Female</Gender>
+			<Plural>0:0:1:1</Plural>
+		</Italian>
+		<Spanish>
+			<Text>isl&#225;mico:isl&#225;mica:isl&#225;micos:isl&#225;micas</Text>
+			<Gender>Male:Female:Male:Female</Gender>
+			<Plural>0:0:1:1</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_RELIGION_SHIA</Tag>
+		<English>Shia Islam</English>
+		<French>
+			<Text>Shia</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>Shia</German>
+		<Italian>Shia</Italian>
+		<Spanish>Shia</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_RELIGION_PROTESTANTISM</Tag>
@@ -628,5 +696,21 @@
 		<German>Mugyo</German>
 		<Italian>Mugyo</Italian>
 		<Spanish>Mugyo</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PAGAN_RELIGION_FOMBA_GASY</Tag>
+		<English>Fomba Gasy</English>
+		<French>FombaGasy</French>
+		<German>Fomba Gasy</German>
+		<Italian>Fomba Gasy</Italian>
+		<Spanish>Fomba Gasy</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PAGAN_RELIGION_BANTU</Tag>
+		<English>Bantu</English>
+		<French>Bantu</French>
+		<German>Bantu</German>
+		<Italian>Bantu</Italian>
+		<Spanish>Bantu</Spanish>
 	</TEXT>
 </Civ4GameText>

@@ -2,6 +2,14 @@
 <!-- Improvements -->
 <Civ4GameText>
 	<TEXT>
+		<Tag>TXT_KEY_IMPROVEMENT_CANAL</Tag>
+		<English>Canal</English>
+		<French>Canal</French>
+		<German>Canal</German>
+		<Italian>Canal</Italian>
+		<Spanish>Canal</Spanish>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_OCEAN_FISHERY</Tag>
 		<English>Ocean Fishery</English>
 		<French>
@@ -148,13 +156,5 @@
 		<German>Slave Mine</German>
 		<Italian>Slave Mine</Italian>
 		<Spanish>Slave Mine</Spanish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_IMPROVEMENT_CANAL</Tag>
-		<English>Canal</English>
-		<French>Canal</French>
-		<German>Canal</German>
-		<Italian>Canal</Italian>
-		<Spanish>Canal</Spanish>
 	</TEXT>
 </Civ4GameText>

@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- Events -->
-<Civ4GameText>
+<Civ4GameText>	
+	<TEXT>
+		<Tag>TXT_KEY_EVENT_EARLY_COLONIZERS</Tag>
+		<English>Citizens of the %s1 civilization are leaving their home city to seek a better life in a new colony.</English>
+		<French>Citizens of the %s1 civilization are leaving their home city to seek a better life in a new colony.</French>
+		<German>Citizens of the %s1 civilization are leaving their home city to seek a better life in a new colony.</German>
+		<Italian>Citizens of the %s1 civilization are leaving their home city to seek a better life in a new colony.</Italian>
+		<Spanish>Citizens of the %s1 civilization are leaving their home city to seek a better life in a new colony.</Spanish>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_ASKCOLONIALCITY_MESSAGE</Tag>
 		<English>[H1]The %s1 Trading Company[\H1][NEWLINE]The %s2 Trading Company asks for the control of %s4 and offers %d3 gold. Refusal will lead to war. Shall we accept their offer?</English>
@@ -3740,7 +3748,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_TRIGGER_CRUSADE</Tag>
-		<English>Our holy sites are still in the hands of the %s1:2_civ_adjective infidels. Our spiritual leaders cry out for us to wage a crusade to wrest control of %s6_city away from them.</English>
+		<English>Our war against the %s1:2_civ_adjective continues. Our spiritual leaders cry out for us to wage a crusade to wrest control of %s6_city away from them.</English>
 		<French>Notre guerre contre les %s1:2_civ_adjective continue. Nos dirigeants spirituels r&#233;clament que nous lancions une croisade pour leur arracher le contr&#244;le de la ville : %s6_city.</French>
 		<German>Unser Krieg gegen das %s1:3_civ_adjective Volk geht weiter. Unsere religi&#246;sen F&#252;hrer fordern, das wir uns einem Kreuzzug anschlie&#223;en, um ihnen die Stadt %s6_city zu entrei&#223;en.</German>
 		<Italian>La nostra guerra contro i nemici %s1:3_civ_adjective continua. I nostri leader spirituali chiedono a gran voce che promuoviamo una crociata per togliere al nemico il controllo di %s6_city.</Italian>
@@ -6921,5 +6929,85 @@
 		<German>[PARAGRAPH:1]Um diese Quest abzuschlie&#223;en, m&#252;ssen Sie %d1 [COLOR_BUILDING_TEXT]Docks[COLOR_REVERT] in Ihren K&#252;stenst&#228;dten bauen. Au&#223;erdem m&#252;ssen Sie %d2 [COLOR_UNIT_TEXT]Karavellen[COLOR_REVERT] bauen.[PARAGRAPH:1]Sie scheitern, wenn eine andere Zivilisation die Quest vor Ihnen abschlie&#223;t oder wenn Sie das Industriezeitalter erreichen, ohne die Bedingungen erf&#252;llt zu haben.</German>
 		<Italian>[PARAGRAPH:1]To complete this quest, you must construct %d1 [COLOR_BUILDING_TEXT]Wharfs[COLOR_REVERT] in your various coastal cities. You will also have to build %d2 [COLOR_UNIT_TEXT]Caravels[COLOR_REVERT].[PARAGRAPH:1]You will fail this quest if a rival civilization completes it first, or if you reach the Industrial Era without having met the conditions.</Italian>
 		<Spanish>[PARAGRAPH:1]To complete this quest, you must construct %d1 [COLOR_BUILDING_TEXT]Wharfs[COLOR_REVERT] in your various coastal cities. You will also have to build %d2 [COLOR_UNIT_TEXT]Caravels[COLOR_REVERT].[PARAGRAPH:1]You will fail this quest if a rival civilization completes it first, or if you reach the Industrial Era without having met the conditions.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_EVENT_TRIGGER_CRUSADE_GENERIC</Tag>
+		<English>A Crusade has been called, and you have been chosen to lead it. Do you accept?</English>
+		<French></French>
+		<German></German>
+		<Italian></Italian>
+		<Spanish></Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_EVENT_CRUSADE_GENERIC_YES</Tag>
+		<English>Deus vult!</English>
+		<French></French>
+		<German></German>
+		<Italian></Italian>
+		<Spanish></Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_EVENT_CRUSADE_GENERIC_YES_DIVERT</Tag>
+		<English>Yes, but we should make a little detour...</English>
+		<French></French>
+		<German></German>
+		<Italian></Italian>
+		<Spanish></Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_EVENT_CRUSADE_GENERIC_NO_SELECT_ANOTHER</Tag>
+		<English>No, we are too occupied. Let others lead the Crusade.</English>
+		<French></French>
+		<German></German>
+		<Italian></Italian>
+		<Spanish></Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_EVENT_WORLDNEWS_CRUSADE_GENERIC_YES</Tag>
+		<English>%s1 nobles have agreed to lead a new Crusade!</English>
+		<French></French>
+		<German></German>
+		<Italian></Italian>
+		<Spanish></Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_EVENT_WORLDNEWS_CRUSADE_GENERIC_YES_HELP</Tag>
+		<English>[ICON_BULLET]Receive an army outside a random Pagan or Muslim city in the Balkans, Baltics or Mediterranean and declare war on the owner of that city.</English>
+		<French></French>
+		<German></German>
+		<Italian></Italian>
+		<Spanish></Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_EVENT_WORLDNEWS_CRUSADE_GENERIC_YES_DIVERT</Tag>
+		<English>%s1 nobles have diverted the Crusade to attack an Orthodox city!</English>
+		<French></French>
+		<German></German>
+		<Italian></Italian>
+		<Spanish></Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_EVENT_WORLDNEWS_CRUSADE_GENERIC_YES_DIVERT_HELP</Tag>
+		<English>[ICON_BULLET]Pay to divert your crusading force outside a random Orthodox city in the Balkans or Mediterranean and declare war on the owner of that city.</English>
+		<French></French>
+		<German></German>
+		<Italian></Italian>
+		<Spanish></Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_EVENT_WORLDNEWS_CRUSADE_GENERIC_NO_SELECT_ANOTHER</Tag>
+		<English>%1 nobles have declined to lead the Crusade, and so other leaders were chosen.</English>
+		<French></French>
+		<German></German>
+		<Italian></Italian>
+		<Spanish></Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_EVENT_WORLDNEWS_CRUSADE_GENERIC_NO_SELECT_ANOTHER_HELP</Tag>
+		<English>[ICON_BULLET]Another civ receives an army to lead against Pagans or Muslims.</English>
+		<French></French>
+		<German></German>
+		<Italian></Italian>
+		<Spanish></Spanish>
 	</TEXT>
 </Civ4GameText>

@@ -2,13 +2,329 @@
 <!-- Barbarians -->
 <Civ4GameText>
 	<TEXT>
-		<Tag>TXT_KEY_ADJECTIVE_ABORIGINAL</Tag>
-		<English>Aboriginal</English>
-		<French>Aboriginal</French>
-		<German>Aboriginal</German>
-		<Italian>Aboriginal</Italian>
-		<Spanish>Aboriginal</Spanish>
+ 		<Tag>TXT_KEY_ADJECTIVE_PEASANT_REVOLTER</Tag>
+ 		<English>Peasant Revolter</English>
+ 		<French>Peasant Revolter</French>
+ 		<German>Peasant Revolter</German>
+ 		<Italian>Peasant Revolter</Italian>
+ 		<Spanish>Peasant Revolter</Spanish>
+ 	</TEXT>
+	<TEXT>
+ 		<Tag>TXT_KEY_ADJECTIVE_REBEL</Tag>
+ 		<English>Rebel</English>
+ 		<French>Rebel</French>
+ 		<German>Rebel</German>
+ 		<Italian>Rebel</Italian>
+ 		<Spanish>Rebel</Spanish>
+ 	</TEXT>
+	<TEXT>
+ 		<Tag>TXT_KEY_ADJECTIVE_DARFUR</Tag>
+ 		<English>Darfur</English>
+ 		<French>Darfur</French>
+ 		<German>Darfur</German>
+ 		<Italian>Darfur</Italian>
+ 		<Spanish>Darfur</Spanish>
+ 	</TEXT>
+	<TEXT>
+ 		<Tag>TXT_KEY_ADJECTIVE_WADAI</Tag>
+ 		<English>Wadai</English>
+ 		<French>Wadai</French>
+ 		<German>Wadai</German>
+ 		<Italian>Wadai</Italian>
+ 		<Spanish>Wadai</Spanish>
+ 	</TEXT>
+	<TEXT>
+ 		<Tag>TXT_KEY_ADJECTIVE_YEKE</Tag>
+ 		<English>Yeke</English>
+ 		<French>Yeke</French>
+ 		<German>Yeke</German>
+ 		<Italian>Yeke</Italian>
+ 		<Spanish>Yeke</Spanish>
+ 	</TEXT>
+	<TEXT>
+ 		<Tag>TXT_KEY_ADJECTIVE_KAZEMBE</Tag>
+ 		<English>Kazembe</English>
+ 		<French>Kazembe</French>
+ 		<German>Kazembe</German>
+ 		<Italian>Kazembe</Italian>
+ 		<Spanish>Kazembe</Spanish>
+ 	</TEXT>
+	<TEXT>
+ 		<Tag>TXT_KEY_ADJECTIVE_NKORE</Tag>
+ 		<English>Nkore</English>
+ 		<French>Nkore</French>
+ 		<German>Nkore</German>
+ 		<Italian>Nkore</Italian>
+ 		<Spanish>Nkore</Spanish>
+ 	</TEXT>
+	<TEXT>
+ 		<Tag>TXT_KEY_ADJECTIVE_BUNYORO</Tag>
+ 		<English>Bunyoro</English>
+ 		<French>Bunyoro</French>
+ 		<German>Bunyoro</German>
+ 		<Italian>Bunyoro</Italian>
+ 		<Spanish>Bunyoro</Spanish>
+ 	</TEXT>
+	<TEXT>
+ 		<Tag>TXT_KEY_ADJECTIVE_RWANDAN</Tag>
+ 		<English>Rwandan</English>
+ 		<French>Rwandan</French>
+ 		<German>Rwandan</German>
+ 		<Italian>Rwandan</Italian>
+ 		<Spanish>Rwandan</Spanish>
+ 	</TEXT>
+	<TEXT>
+ 		<Tag>TXT_KEY_ADJECTIVE_BURUNDIAN</Tag>
+ 		<English>Burundian</English>
+ 		<French>Burundian</French>
+ 		<German>Burundian</German>
+ 		<Italian>Burundian</Italian>
+ 		<Spanish>Burundian</Spanish>
+ 	</TEXT>
+	<TEXT>
+ 		<Tag>TXT_KEY_ADJECTIVE_LUO</Tag>
+ 		<English>Luo</English>
+ 		<French>Luo</French>
+ 		<German>Luo</German>
+ 		<Italian>Luo</Italian>
+ 		<Spanish>Luo</Spanish>
+ 	</TEXT>
+	<TEXT>
+ 		<Tag>TXT_KEY_ADJECTIVE_OROMO</Tag>
+ 		<English>Oromo</English>
+ 		<French>Oromo</French>
+ 		<German>Oromo</German>
+ 		<Italian>Oromo</Italian>
+ 		<Spanish>Oromo</Spanish>
+ 	</TEXT>
+	<TEXT>
+ 		<Tag>TXT_KEY_ADJECTIVE_UTETERA</Tag>
+ 		<English>Utetera</English>
+ 		<French>Utetera</French>
+ 		<German>Utetera</German>
+ 		<Italian>Utetera</Italian>
+ 		<Spanish>Utetera</Spanish>
+ 	</TEXT>
+	<TEXT>
+ 		<Tag>TXT_KEY_ADJECTIVE_NGONI</Tag>
+ 		<English>Ngoni</English>
+ 		<French>Ngoni</French>
+ 		<German>Ngoni</German>
+ 		<Italian>Ngoni</Italian>
+ 		<Spanish>Ngoni</Spanish>
+ 	</TEXT>
+	<TEXT>
+ 		<Tag>TXT_KEY_ADJECTIVE_BUTUAN</Tag>
+ 		<English>Butuan</English>
+ 		<French>Butuan</French>
+ 		<German>Butuan</German>
+ 		<Italian>Butuan</Italian>
+ 		<Spanish>Butuan</Spanish>
+ 	</TEXT>
+	<TEXT>
+ 		<Tag>TXT_KEY_ADJECTIVE_VENDA</Tag>
+ 		<English>Venda</English>
+ 		<French>Venda</French>
+ 		<German>Venda</German>
+ 		<Italian>Venda</Italian>
+ 		<Spanish>Venda</Spanish>
+ 	</TEXT>
+	<TEXT>
+ 		<Tag>TXT_KEY_ADJECTIVE_MAPUNGUBWE</Tag>
+ 		<English>Mapungubwe</English>
+ 		<French>Mapungubwe</French>
+ 		<German>Mapungubwe</German>
+ 		<Italian>Mapungubwe</Italian>
+ 		<Spanish>Mapungubwe</Spanish>
+ 	</TEXT>
+	<TEXT>
+ 		<Tag>TXT_KEY_ADJECTIVE_LAO</Tag>
+ 		<English>Lao</English>
+ 		<French>Lao</French>
+ 		<German>Lao</German>
+ 		<Italian>Lao</Italian>
+ 		<Spanish>Lao</Spanish>
+ 	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_ADJECTIVE_DAHOMEY</Tag>
+ 		<English>Dahomey</English>
+ 		<French>Dahomey</French>
+ 		<German>Dahomey</German>
+ 		<Italian>Dahomey</Italian>
+ 		<Spanish>Dahomey</Spanish>
 	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_ADJECTIVE_SAO</Tag>
+ 		<English>Sao</English>
+ 		<French>Sao</French>
+ 		<German>Sao</German>
+ 		<Italian>Sao</Italian>
+ 		<Spanish>Sao</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_ADJECTIVE_GAO</Tag>
+ 		<English>Gao</English>
+ 		<French>Gao</French>
+ 		<German>Gao</German>
+ 		<Italian>Gao</Italian>
+ 		<Spanish>Gao</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_ADJECTIVE_INDO_ARYAN</Tag>
+ 		<English>Indo-Aryan</English>
+ 		<French>Indo-Aryan</French>
+ 		<German>Indo-Aryan</German>
+ 		<Italian>Indo-Aryan</Italian>
+ 		<Spanish>Indo-Aryan</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_ADJECTIVE_MONGOL</Tag>
+		<English>Mongol</English>
+		<French>Mongol</French>
+		<German>Mongol</German>
+		<Italian>Mongol</Italian>
+		<Spanish>Mongol</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_ADJECTIVE_TANGUT</Tag>
+		<English>Tangut</English>
+		<French>Tangut</French>
+		<German>Tangut</German>
+		<Italian>Tangut</Italian>
+		<Spanish>Tangut</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_ADJECTIVE_XIRONG</Tag>
+		<English>Xirong</English>
+		<French>Xirong</French>
+		<German>Xirong</German>
+		<Italian>Xirong</Italian>
+		<Spanish>Xirong</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_ADJECTIVE_HU</Tag>
+		<English>Hu</English>
+		<French>Hu</French>
+		<German>Hu</German>
+		<Italian>Hu</Italian>
+		<Spanish>Hu</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_ADJECTIVE_DZUNGAR</Tag>
+		<English>Dzungar</English>
+		<French>Dzungar</French>
+		<German>Dzungar</German>
+		<Italian>Dzungar</Italian>
+		<Spanish>Dzungar</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_ADJECTIVE_OIRAT</Tag>
+		<English>Oirat</English>
+		<French>Oirat</French>
+		<German>Oirat</German>
+		<Italian>Oirat</Italian>
+		<Spanish>Oirat</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_ADJECTIVE_NOGAI</Tag>
+		<English>Nogai</English>
+		<French>Nogai</French>
+		<German>Nogai</German>
+		<Italian>Nogai</Italian>
+		<Spanish>Nogai</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_ADJECTIVE_OROMO</Tag>
+		<English>Oromo</English>
+		<French>Oromo</French>
+		<German>Oromo</German>
+		<Italian>Oromo</Italian>
+		<Spanish>Oromo</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_ADJECTIVE_ADAL</Tag>
+		<English>Adalite</English>
+		<French>Adalite</French>
+		<German>Adalite</German>
+		<Italian>Adalite</Italian>
+		<Spanish>Adalite</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_ADJECTIVE_SPARTAN</Tag>
+		<English>Spartan</English>
+		<French>Spartan</French>
+		<German>Spartan</German>
+		<Italian>Spartan</Italian>
+		<Spanish>Spartan</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_ADJECTIVE_ROMAN</Tag>
+		<English>Roman</English>
+		<French>Roman</French>
+		<German>Roman</German>
+		<Italian>Roman</Italian>
+		<Spanish>Roman</Spanish>
+	</TEXT>
+
+	<TEXT>
+		<Tag>TXT_KEY_ADJECTIVE_JUDEAN</Tag>
+		<English>Judean</English>
+		<French>Judean</French>
+		<German>Judean</German>
+		<Italian>Judean</Italian>
+		<Spanish>Judean</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_ADJECTIVE_ILLYRIAN</Tag>
+		<English>Illyrian</English>
+		<French>Illyrian</French>
+		<German>Illyrian</German>
+		<Italian>Illyrian</Italian>
+		<Spanish>Illyrian</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_ADJECTIVE_WILUSAN</Tag>
+		<English>Wilusan</English>
+		<French>Wilusan</French>
+		<German>Wilusan</German>
+		<Italian>Wilusan</Italian>
+		<Spanish>Wilusan</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_ADJECTIVE_DORIAN</Tag>
+		<English>Dorian</English>
+		<French>Dorian</French>
+		<German>Dorian</German>
+		<Italian>Dorian</Italian>
+		<Spanish>Dorian</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_ADJECTIVE_THRACIAN</Tag>
+		<English>Thracian</English>
+		<French>Thracian</French>
+		<German>Thracian</German>
+		<Italian>Thracian</Italian>
+		<Spanish>Thracian</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_ADJECTIVE_SUMERIAN</Tag>
+		<English>Sumerian</English>
+		<French>Sumerian</French>
+		<German>Sumerian</German>
+		<Italian>Sumerian</Italian>
+		<Spanish>Sumerian</Spanish>
+	</TEXT>
+
+	<TEXT>
+		<Tag>TXT_KEY_ADJECTIVE_ASSYRIAN</Tag>
+		<English>Assyrian</English>
+		<French>Assyrian</French>
+		<German>Assyrian</German>
+		<Italian>Assyrian</Italian>
+		<Spanish>Assyrian</Spanish>
+	</TEXT>
+
+
 	<TEXT>
 		<Tag>TXT_KEY_ADJECTIVE_AKAN</Tag>
 		<English>Akan</English>
@@ -96,14 +412,6 @@
 		<German>Barbary</German>
 		<Italian>Barbary</Italian>
 		<Spanish>Barbary</Spanish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_ADJECTIVE_BAVARIAN</Tag>
-		<English>Bavarian</English>
-		<French>Bavarian</French>
-		<German>Bavarian</German>
-		<Italian>Bavarian</Italian>
-		<Spanish>Bavarian</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_ADJECTIVE_BEDOUIN</Tag>
@@ -226,22 +534,6 @@
 		<Spanish>Cuman</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_ADJECTIVE_DINKA</Tag>
-		<English>Dinka</English>
-		<French>Dinka</French>
-		<German>Dinka</German>
-		<Italian>Dinka</Italian>
-		<Spanish>Dinka</Spanish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_ADJECTIVE_DZUNGAR</Tag>
-		<English>Dzungar</English>
-		<French>Dzungar</French>
-		<German>Dzungar</German>
-		<Italian>Dzungar</Italian>
-		<Spanish>Dzungar</Spanish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_ADJECTIVE_EDO</Tag>
 		<English>Edo</English>
 		<French>Edo</French>
@@ -280,22 +572,6 @@
 		<German>Fula</German>
 		<Italian>Fula</Italian>
 		<Spanish>Fula</Spanish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_ADJECTIVE_FUNJ</Tag>
-		<English>Funj</English>
-		<French>Funj</French>
-		<German>Funj</German>
-		<Italian>Funj</Italian>
-		<Spanish>Funj</Spanish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_ADJECTIVE_FUR</Tag>
-		<English>Fur</English>
-		<French>Fur</French>
-		<German>Fur</German>
-		<Italian>Fur</Italian>
-		<Spanish>Fur</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_ADJECTIVE_GALATIAN</Tag>
@@ -338,28 +614,12 @@
 		<Spanish>Hausa</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_ADJECTIVE_HEPHTHALITE</Tag>
-		<English>Hephthalite</English>
-		<French>Hephthalite</French>
-		<German>Hephthalite</German>
-		<Italian>Hephthalite</Italian>
-		<Spanish>Hephthalite</Spanish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_ADJECTIVE_HINDI</Tag>
 		<English>Hindi</English>
 		<French>Hindi</French>
 		<German>Hindi</German>
 		<Italian>Hindi</Italian>
 		<Spanish>Hindi</Spanish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_ADJECTIVE_HU</Tag>
-		<English>Hu</English>
-		<French>Hu</French>
-		<German>Hu</German>
-		<Italian>Hu</Italian>
-		<Spanish>Hu</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_ADJECTIVE_HUNA</Tag>
@@ -394,12 +654,12 @@
 		<Spanish>Hyksos</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_ADJECTIVE_INDO_ARYAN</Tag>
-		<English>Indo-Aryan</English>
-		<French>Indo-Aryan</French>
-		<German>Indo-Aryan</German>
-		<Italian>Indo-Aryan</Italian>
-		<Spanish>Indo-Aryan</Spanish>
+		<Tag>TXT_KEY_ADJECTIVE_INDO_SCYTHIAN</Tag>
+		<English>Indo-Scythian</English>
+		<French>Indo-Scythian</French>
+		<German>Indo-Scythian</German>
+		<Italian>Indo-Scythian</Italian>
+		<Spanish>Indo-Scythian</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_ADJECTIVE_INDO_EUROPEAN</Tag>
@@ -408,14 +668,6 @@
 		<German>Indo-European</German>
 		<Italian>Indo-European</Italian>
 		<Spanish>Indo-European</Spanish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_ADJECTIVE_INDO_SCYTHIAN</Tag>
-		<English>Indo-Scythian</English>
-		<French>Indo-Scythian</French>
-		<German>Indo-Scythian</German>
-		<Italian>Indo-Scythian</Italian>
-		<Spanish>Indo-Scythian</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_ADJECTIVE_IRANIAN</Tag>
@@ -506,22 +758,6 @@
 		<Spanish>Komi</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_ADJECTIVE_KUBA</Tag>
-		<English>Kuba</English>
-		<French>Kuba</French>
-		<German>Kuba</German>
-		<Italian>Kuba</Italian>
-		<Spanish>Kuba</Spanish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_ADJECTIVE_LAO</Tag>
-		<English>Lao</English>
-		<French>Lao</French>
-		<German>Lao</German>
-		<Italian>Lao</Italian>
-		<Spanish>Lao</Spanish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_ADJECTIVE_LIBYAN</Tag>
 		<English>Libyan</English>
 		<French>Libyan</French>
@@ -610,14 +846,6 @@
 		<Spanish>Mon</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_ADJECTIVE_MONGOL</Tag>
-		<English>Mongol</English>
-		<French>Mongol</French>
-		<German>Mongol</German>
-		<Italian>Mongol</Italian>
-		<Spanish>Mongol</Spanish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_ADJECTIVE_MUISCA</Tag>
 		<English>Muisca</English>
 		<French>Muisca</French>
@@ -658,28 +886,12 @@
 		<Spanish>Nguni</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_ADJECTIVE_NOGAI</Tag>
-		<English>Nogai</English>
-		<French>Nogai</French>
-		<German>Nogai</German>
-		<Italian>Nogai</Italian>
-		<Spanish>Nogai</Spanish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_ADJECTIVE_NUBIAN</Tag>
 		<English>Nubian</English>
 		<French>Nubian</French>
 		<German>Nubian</German>
 		<Italian>Nubian</Italian>
 		<Spanish>Nubian</Spanish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_ADJECTIVE_OIRAT</Tag>
-		<English>Oirat</English>
-		<French>Oirat</French>
-		<German>Oirat</German>
-		<Italian>Oirat</Italian>
-		<Spanish>Oirat</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_ADJECTIVE_OSTROGOTHIC</Tag>
@@ -728,22 +940,6 @@
 		<German>Rajput</German>
 		<Italian>Rajput</Italian>
 		<Spanish>Rajput</Spanish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_ADJECTIVE_RUS</Tag>
-		<English>Rus</English>
-		<French>Rus</French>
-		<German>Rus</German>
-		<Italian>Rus</Italian>
-		<Spanish>Rus</Spanish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_ADJECTIVE_SAKA</Tag>
-		<English>Saka</English>
-		<French>Saka</French>
-		<German>Saka</German>
-		<Italian>Saka</Italian>
-		<Spanish>Saka</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_ADJECTIVE_SARMATIAN</Tag>
@@ -938,14 +1134,6 @@
 		<Spanish>Uighur</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_ADJECTIVE_UTETERA</Tag>
-		<English>Utetera</English>
-		<French>Utetera</French>
-		<German>Utetera</German>
-		<Italian>Utetera</Italian>
-		<Spanish>Utetera</Spanish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_ADJECTIVE_VANDAL</Tag>
 		<English>Vandal</English>
 		<French>Vandal</French>
@@ -1008,22 +1196,6 @@
 		<German>Xiongnu</German>
 		<Italian>Xiongnu</Italian>
 		<Spanish>Xiongnu</Spanish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_ADJECTIVE_XIRONG</Tag>
-		<English>Xirong</English>
-		<French>Xirong</French>
-		<German>Xirong</German>
-		<Italian>Xirong</Italian>
-		<Spanish>Xirong</Spanish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_ADJECTIVE_YEKE</Tag>
-		<English>Yeke</English>
-		<French>Yeke</French>
-		<German>Yeke</German>
-		<Italian>Yeke</Italian>
-		<Spanish>Yeke</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_ADJECTIVE_YEMENI</Tag>
@@ -1121,6 +1293,78 @@
 		<German>Pirates have become active in nearby waters.</German>
 		<Italian>Pirates have become active in nearby waters.</Italian>
 		<Spanish>Pirates have become active in nearby waters.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_ADJECTIVE_DINKA</Tag>
+		<English>Dinka</English>
+		<French>Dinka</French>
+		<German>Dinka</German>
+		<Italian>Dinka</Italian>
+		<Spanish>Dinka</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_ADJECTIVE_FUR</Tag>
+		<English>Fur</English>
+		<French>Fur</French>
+		<German>Fur</German>
+		<Italian>Fur</Italian>
+		<Spanish>Fur</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_ADJECTIVE_HEPHTHALITE</Tag>
+		<English>Hephthalite</English>
+		<French>Hephthalite</French>
+		<German>Hephthalite</German>
+		<Italian>Hephthalite</Italian>
+		<Spanish>Hephthalite</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_ADJECTIVE_RUS</Tag>
+		<English>Rus</English>
+		<French>Rus</French>
+		<German>Rus</German>
+		<Italian>Rus</Italian>
+		<Spanish>Rus</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_ADJECTIVE_SAKA</Tag>
+		<English>Saka</English>
+		<French>Saka</French>
+		<German>Saka</German>
+		<Italian>Saka</Italian>
+		<Spanish>Saka</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_ADJECTIVE_ABORIGINAL</Tag>
+		<English>Aboriginal</English>
+		<French>Aboriginal</French>
+		<German>Aboriginal</German>
+		<Italian>Aboriginal</Italian>
+		<Spanish>Aboriginal</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_ADJECTIVE_KUBA</Tag>
+		<English>Kuba</English>
+		<French>Kuba</French>
+		<German>Kuba</German>
+		<Italian>Kuba</Italian>
+		<Spanish>Kuba</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_ADJECTIVE_UTETERA</Tag>
+		<English>Utetera</English>
+		<French>Utetera</French>
+		<German>Utetera</German>
+		<Italian>Utetera</Italian>
+		<Spanish>Utetera</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_ADJECTIVE_YEKE</Tag>
+		<English>Yeke</English>
+		<French>Yeke</French>
+		<German>Yeke</German>
+		<Italian>Yeke</Italian>
+		<Spanish>Yeke</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BARBARIAN_NOTIFICATION_</Tag>

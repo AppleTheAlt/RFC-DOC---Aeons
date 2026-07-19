@@ -1,6 +1,1357 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Civ4GameText>
 	<TEXT>
+		<Tag>TXT_KEY_VICTORY_TITLE_1</Tag>
+		<English></English>
+		<French></French>
+		<German></German>
+		<Italian></Italian>
+		<Spanish></Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_VICTORY_TITLE_2</Tag>
+		<English></English>
+		<French></French>
+		<German></German>
+		<Italian></Italian>
+		<Spanish></Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_VICTORY_TITLE_3</Tag>
+		<English></English>
+		<French></French>
+		<German></German>
+		<Italian></Italian>
+		<Spanish></Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_VICTORY_TITLE_SOU1</Tag>
+		<English>Industrial Africa</English>
+		<French>Industrial Africa</French>
+		<German>Industrial Africa</German>
+		<Italian>Industrial Africa</Italian>
+		<Spanish>Industrial Africa</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_VICTORY_TITLE_SOU2</Tag>
+		<English>Vela Incident</English>
+		<French>Vela Incident</French>
+		<German>Vela Incident</German>
+		<Italian>Vela Incident</Italian>
+		<Spanish>Vela Incident</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_VICTORY_TITLE_SOU3</Tag>
+		<English>Ubuntu</English>
+		<French>Ubuntu</French>
+		<German>Ubuntu</German>
+		<Italian>Ubuntu</Italian>
+		<Spanish>Ubuntu</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_VICTORY_TITLE_BOE2</Tag>
+		<English>Netherlands-South African Railway Company</English>
+		<French>Netherlands-South African Railway Company</French>
+		<German>Netherlands-South African Railway Company</German>
+		<Italian>Netherlands-South African Railway Company</Italian>
+		<Spanish>Netherlands-South African Railway Company</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_VICTORY_TITLE_BOE1</Tag>
+		<English>The Burgher Republic</English>
+		<French>The Burgher Republic</French>
+		<German>The Burgher Republic</German>
+		<Italian>The Burgher Republic</Italian>
+		<Spanish>The Burgher Republic</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_VICTORY_TITLE_BOE3</Tag>
+		<English>African Settlers</English>
+		<French>African Settlers</French>
+		<German>African Settlers</German>
+		<Italian>African Settlers</Italian>
+		<Spanish>African Settlers</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_VICTORY_TITLE_ZUL1</Tag>
+		<English>The Mfecane</English>
+		<French>The Mfecane</French>
+		<German>The Mfecane</German>
+		<Italian>The Mfecane</Italian>
+		<Spanish>The Mfecane</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_VICTORY_TITLE_ZUL2</Tag>
+		<English>Battle of Isandlwana</English>
+		<French>Battle of Isandlwana</French>
+		<German>Battle of Isandlwana</German>
+		<Italian>Battle of Isandlwana</Italian>
+		<Spanish>Battle of Isandlwana</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_VICTORY_TITLE_ZUL3</Tag>
+		<English>Masisukume Sakhe</English>
+		<French>Masisukume Sakhe</French>
+		<German>Masisukume Sakhe</German>
+		<Italian>Masisukume Sakhe</Italian>
+		<Spanish>Masisukume Sakhe</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_VICTORY_TITLE_KAT1</Tag>
+		<English>Chokwe Artisanry</English>
+		<French>Chokwe Artisanry</French>
+		<German>Chokwe Artisanry</German>
+		<Italian>Chokwe Artisanry</Italian>
+		<Spanish>Chokwe Artisanry</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_VICTORY_TITLE_KAT2</Tag>
+		<English>Lords of the Rainforests</English>
+		<French>Lords of the Rainforests</French>
+		<German>Lords of the Rainforests</German>
+		<Italian>Lords of the Rainforests</Italian>
+		<Spanish>Lords of the Rainforests</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_VICTORY_TITLE_KAT3</Tag>
+		<English>Jewel of the Basin</English>
+		<French>Jewel of the Basin</French>
+		<German>Jewel of the Basin</German>
+		<Italian>Jewel of the Basin</Italian>
+		<Spanish>Jewel of the Basin</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_VICTORY_TITLE_MAD1</Tag>
+		<English>Island of Explorers</English>
+		<French>Island of Explorers</French>
+		<German>Island of Explorers</German>
+		<Italian>Island of Explorers</Italian>
+		<Spanish>Island of Explorers</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_VICTORY_TITLE_MAD2</Tag>
+		<English>Austronesian Heritage</English>
+		<French>Austronesian Heritage</French>
+		<German>Austronesian Heritage</German>
+		<Italian>Austronesian Heritage</Italian>
+		<Spanish>Austronesian Heritage</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_VICTORY_TITLE_MAD3</Tag>
+		<English>The Happy Island</English>
+		<French>The Happy Island</French>
+		<German>The Happy Island</German>
+		<Italian>The Happy Island</Italian>
+		<Spanish>The Happy Island</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_VICTORY_TITLE_FUN1</Tag>
+		<English>Islamization of Sudan</English>
+		<French>Islamization of Sudan</French>
+		<German>Islamization of Sudan</German>
+		<Italian>Islamization of Sudan</Italian>
+		<Spanish>Islamization of Sudan</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_VICTORY_TITLE_FUN2</Tag>
+		<English>Cultivating the Nile</English>
+		<French>Cultivating the Nile</French>
+		<German>Cultivating the Nile</German>
+		<Italian>Cultivating the Nile</Italian>
+		<Spanish>Cultivating the Nile</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_VICTORY_TITLE_FUN3</Tag>
+		<English>The Centre of Arabic Learning</English>
+		<French>The Centre of Arabic Learning</French>
+		<German>The Centre of Arabic Learning</German>
+		<Italian>The Centre of Arabic Learning</Italian>
+		<Spanish>The Centre of Arabic Learning</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_VICTORY_TITLE_ADA1</Tag>
+		<English>The Gates of Adal</English>
+		<French>The Gates of Adal</French>
+		<German>The Gates of Adal</German>
+		<Italian>The Gates of Adal</Italian>
+		<Spanish>The Gates of Adal</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_VICTORY_TITLE_ADA2</Tag>
+		<English>Red Sea Trade</English>
+		<French>Red Sea Trade</French>
+		<German>Red Sea Trade</German>
+		<Italian>Red Sea Trade</Italian>
+		<Spanish>Red Sea Trade</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_VICTORY_TITLE_ADA3</Tag>
+		<English>The Ottoman Alliance</English>
+		<French>The Ottoman Alliance</French>
+		<German>The Ottoman Alliance</German>
+		<Italian>The Ottoman Alliance</Italian>
+		<Spanish>The Ottoman Alliance</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_VICTORY_TITLE_BUG1</Tag>
+		<English>Kitaran Empire</English>
+		<French>Kitaran Empire</French>
+		<German>Kitaran Empire</German>
+		<Italian>Kitaran Empire</Italian>
+		<Spanish>Kitaran Empire</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_VICTORY_TITLE_BUG2</Tag>
+		<English>The Lake Raiders</English>
+		<French>The Lake Raiders</French>
+		<German>The Lake Raiders</German>
+		<Italian>The Lake Raiders</Italian>
+		<Spanish>The Lake Raiders</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_VICTORY_TITLE_BUG3</Tag>
+		<English>Faith of the Kingdoms</English>
+		<French>Faith of the Kingdoms</French>
+		<German>Faith of the Kingdoms</German>
+		<Italian>Faith of the Kingdoms</Italian>
+		<Spanish>Faith of the Kingdoms</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_VICTORY_TITLE_UKR1</Tag>
+		<English>Baptism of Rus</English>
+		<French>Baptism of Rus</French>
+		<German>Baptism of Rus</German>
+		<Italian>Baptism of Rus</Italian>
+		<Spanish>Baptism of Rus</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_VICTORY_TITLE_UKR2</Tag>
+		<English>Campaigns of Sviatoslav</English>
+		<French>Campaigns of Sviatoslav</French>
+		<German>Campaigns of Sviatoslav</German>
+		<Italian>Campaigns of Sviatoslav</Italian>
+		<Spanish>Campaigns of Sviatoslav</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_VICTORY_TITLE_UKR3</Tag>
+		<English>Sovereign Lord Novgorod the Great</English>
+		<French>Sovereign Lord Novgorod the Great</French>
+		<German>Sovereign Lord Novgorod the Great</German>
+		<Italian>Sovereign Lord Novgorod the Great</Italian>
+		<Spanish>Sovereign Lord Novgorod the Great</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_VICTORY_TITLE_VIE1</Tag>
+		<English>Face to Face with the Enemy</English>
+		<French>Face to Face with the Enemy</French>
+		<German>Face to Face with the Enemy</German>
+		<Italian>Face to Face with the Enemy</Italian>
+		<Spanish>Face to Face with the Enemy</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_VICTORY_TITLE_VIE2</Tag>
+		<English>Nam Tien</English>
+		<French>Nam Tien</French>
+		<German>Nam Tien</German>
+		<Italian>Nam Tien</Italian>
+		<Spanish>Nam Tien</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_VICTORY_TITLE_VIE3</Tag>
+		<English>Van Hoa Viet Nam</English>
+		<French>Van Hoa Viet Nam</French>
+		<German>Van Hoa Viet Nam</German>
+		<Italian>Van Hoa Viet Nam</Italian>
+		<Spanish>Van Hoa Viet Nam</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_VICTORY_TITLE_TOL1</Tag>
+		<English>Place of Reeds</English>
+		<French>Place of Reeds</French>
+		<German>Place of Reeds</German>
+		<Italian>Place of Reeds</Italian>
+		<Spanish>Place of Reeds</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_VICTORY_TITLE_TOL2</Tag>
+		<English>Birthplace of the Gods</English>
+		<French>Birthplace of the Gods</French>
+		<German>Birthplace of the Gods</German>
+		<Italian>Birthplace of the Gods</Italian>
+		<Spanish>Birthplace of the Gods</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_VICTORY_TITLE_TOL3</Tag>
+		<English>Spearthrower Owl</English>
+		<French>Spearthrower Owl</French>
+		<German>Spearthrower Owl</German>
+		<Italian>Spearthrower Owl</Italian>
+		<Spanish>Spearthrower Owl</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_VICTORY_TITLE_SWA1</Tag>
+		<English>Middlemen Traders</English>
+		<French>Middlemen Traders</French>
+		<German>Middlemen Traders</German>
+		<Italian>Middlemen Traders</Italian>
+		<Spanish>Middlemen Traders</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_VICTORY_TITLE_SWA2</Tag>
+		<English>Remote Coasts</English>
+		<French>Remote Coasts</French>
+		<German>Remote Coasts</German>
+		<Italian>Remote Coasts</Italian>
+		<Spanish>Remote Coasts</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_VICTORY_TITLE_SWA3</Tag>
+		<English>Swahili Thallasocracy</English>
+		<French>Swahili Thallasocracy</French>
+		<German>Swahili Thallasocracy</German>
+		<Italian>Swahili Thallasocracy</Italian>
+		<Spanish>Swahili Thallasocracy</Spanish>
+	</TEXT>
+	
+	<TEXT>
+		<Tag>TXT_KEY_VICTORY_TITLE_SWE1</Tag>
+		<English>Lion of the North</English>
+		<French>Lion of the North</French>
+		<German>Lion of the North</German>
+		<Italian>Lion of the North</Italian>
+		<Spanish>Lion of the North</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_VICTORY_TITLE_SWE2</Tag>
+		<English>Dominium Maris Baltici</English>
+		<French>Dominium Maris Baltici</French>
+		<German>Dominium Maris Baltici</German>
+		<Italian>Dominium Maris Baltici</Italian>
+		<Spanish>Dominium Maris Baltici</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_VICTORY_TITLE_SWE3</Tag>
+		<English>Nordic Model</English>
+		<French>Nordic Model</French>
+		<German>Nordic Model</German>
+		<Italian>Nordic Model</Italian>
+		<Spanish>Nordic Model</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_VICTORY_TITLE_MAA1</Tag>
+		<English>The Spice Route</English>
+		<French>The Spice Route</French>
+		<German>The Spice Route</German>
+		<Italian>The Spice Route</Italian>
+		<Spanish>The Spice Route</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_VICTORY_TITLE_MAA2</Tag>
+		<English>Prosperous Excellence</English>
+		<French>Prosperous Excellence</French>
+		<German>Prosperous Excellence</German>
+		<Italian>Prosperous Excellence</Italian>
+		<Spanish>Prosperous Excellence</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_VICTORY_TITLE_MAA3</Tag>
+		<English>Porch of Mecca</English>
+		<French>Porch of Mecca</French>
+		<German>Porch of Mecca</German>
+		<Italian>Porch of Mecca</Italian>
+		<Spanish>Porch of Mecca</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_VICTORY_TITLE_KUS1</Tag>
+		<English>Greco-Buddhist Culture</English>
+		<French>Greco-Buddhist Culture</French>
+		<German>Greco-Buddhist Culture</German>
+		<Italian>Greco-Buddhist Culture</Italian>
+		<Spanish>Greco-Buddhist Culture</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_VICTORY_TITLE_KUS2</Tag>
+		<English>The Great Vehicle</English>
+		<French>The Great Vehicle</French>
+		<German>The Great Vehicle</German>
+		<Italian>The Great Vehicle</Italian>
+		<Spanish>The Great Vehicle</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_VICTORY_TITLE_KUS3</Tag>
+		<English>Pax Kushana</English>
+		<French>Pax Kushana</French>
+		<German>Pax Kushana</German>
+		<Italian>Pax Kushana</Italian>
+		<Spanish>Pax Kushana</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_VICTORY_TITLE_JAV1</Tag>
+		<English>Dharmic Temple Compounds</English>
+		<French>Dharmic Temple Compounds</French>
+		<German>Dharmic Temple Compounds</German>
+		<Italian>Dharmic Temple Compounds</Italian>
+		<Spanish>Dharmic Temple Compounds</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_VICTORY_TITLE_JAV2</Tag>
+		<English>Emerald of the Equator</English>
+		<French>Emerald of the Equator</French>
+		<German>Emerald of the Equator</German>
+		<Italian>Emerald of the Equator</Italian>
+		<Spanish>Emerald of the Equator</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_VICTORY_TITLE_JAV3</Tag>
+		<English>Wali Sanga</English>
+		<French>Wali Sanga</French>
+		<German>Wali Sanga</German>
+		<Italian>Wali Sanga</Italian>
+		<Spanish>Wali Sanga</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_VICTORY_TITLE_HIT1</Tag>
+		<English>Metal Monopoly</English>
+		<French>Metal Monopoly</French>
+		<German>Metal Monopoly</German>
+		<Italian>Metal Monopoly</Italian>
+		<Spanish>Metal Monopoly</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_VICTORY_TITLE_HIT2</Tag>
+		<English>Monumental Architecture</English>
+		<French>Monumental Architecture</French>
+		<German>Monumental Architecture</German>
+		<Italian>Monumental Architecture</Italian>
+		<Spanish>Monumental Architecture</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_VICTORY_TITLE_HIT3</Tag>
+		<English>Treaty of Kadesh</English>
+		<French>Treaty of Kadesh</French>
+		<German>Treaty of Kadesh</German>
+		<Italian>Treaty of Kadesh</Italian>
+		<Spanish>Treaty of Kadesh</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_VICTORY_TITLE_BUR1</Tag>
+		<English>Land of Temples</English>
+		<French>Land of Temples</French>
+		<German>Land of Temples</German>
+		<Italian>Land of Temples</Italian>
+		<Spanish>Land of Temples</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_VICTORY_TITLE_BUR2</Tag>
+		<English>Chakravarti</English>
+		<French>Chakravarti</French>
+		<German>Chakravarti</German>
+		<Italian>Chakravarti</Italian>
+		<Spanish>Chakravarti</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_VICTORY_TITLE_BUR3</Tag>
+		<English>Conqueror of the Ten Directions</English>
+		<French>Conqueror of the Ten Directions</French>
+		<German>Conqueror of the Ten Directions</German>
+		<Italian>Conqueror of the Ten Directions</Italian>
+		<Spanish>Conqueror of the Ten Directions</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_VICTORY_TITLE_ZIM1</Tag>
+		<English>Great Zimbabwe</English>
+		<French>Great Zimbabwe</French>
+		<German>Great Zimbabwe</German>
+		<Italian>Great Zimbabwe</Italian>
+		<Spanish>Great Zimbabwe</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_VICTORY_TITLE_ZIM2</Tag>
+		<English>Mwenemutapa</English>
+		<French>Mwenemutapa</French>
+		<German>Mwenemutapa</German>
+		<Italian>Mwenemutapa</Italian>
+		<Spanish>Mwenemutapa</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_VICTORY_TITLE_ZIM3</Tag>
+		<English>Rozwi Empire</English>
+		<French>Rozwi Empire</French>
+		<German>Rozwi Empire</German>
+		<Italian>Rozwi Empire</Italian>
+		<Spanish>Rozwi Empire</Spanish>
+	</TEXT>
+
+	<TEXT>
+		<Tag>TXT_KEY_VICTORY_TITLE_SOM1</Tag>
+		<English>Navigators of the Horn</English>
+		<French>Navigators of the Horn</French>
+		<German>Navigators of the Horn</German>
+		<Italian>Navigators of the Horn</Italian>
+		<Spanish>Navigators of the Horn</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_VICTORY_TITLE_SOM2</Tag>
+		<English>Frankincense and Giraffes</English>
+		<French>Frankincense and Giraffes</French>
+		<German>Frankincense and Giraffes</German>
+		<Italian>Frankincense and Giraffes</Italian>
+		<Spanish>Frankincense and Giraffes</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_VICTORY_TITLE_SOM3</Tag>
+		<English>Hydraulic Hegemony</English>
+		<French>Hydraulic Hegemony</French>
+		<German>Hydraulic Hegemony</German>
+		<Italian>Hydraulic Hegemony</Italian>
+		<Spanish>Hydraulic Hegemony</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_VICTORY_TITLE_ASH1</Tag>
+		<English>The Heart of Africa</English>
+		<French>The Heart of Africa</French>
+		<German>The Heart of Africa</German>
+		<Italian>The Heart of Africa</Italian>
+		<Spanish>The Heart of Africa</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_VICTORY_TITLE_ASH2</Tag>
+		<English>African Sphere of Influence</English>
+		<French>African Sphere of Influence</French>
+		<German>African Sphere of Influence</German>
+		<Italian>African Sphere of Influence</Italian>
+		<Spanish>African Sphere of Influence</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_VICTORY_TITLE_ASH3</Tag>
+		<English>Ghana Prospers</English>
+		<French>Ghana Prospers</French>
+		<German>Ghana Prospers</German>
+		<Italian>Ghana Prospers</Italian>
+		<Spanish>Ghana Prospers</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_VICTORY_TITLE_BEN1</Tag>
+		<English>The Earthen Capital</English>
+		<French>The Earthen Capital</French>
+		<German>The Earthen Capital</German>
+		<Italian>The Earthen Capital</Italian>
+		<Spanish>The Earthen Capital</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_VICTORY_TITLE_BEN2</Tag>
+		<English>Oba Market</English>
+		<French>Oba Market</French>
+		<German>Oba Market</German>
+		<Italian>Oba Market</Italian>
+		<Spanish>Oba Market</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_VICTORY_TITLE_BEN3</Tag>
+		<English>The Ancestral Path</English>
+		<French>The Ancestral Path</French>
+		<German>The Ancestral Path</German>
+		<Italian>The Ancestral Path</Italian>
+		<Spanish>The Ancestral Path</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_VICTORY_TITLE_HAU1</Tag>
+		<English>The Seven Hausa Kingdoms</English>
+		<French>The Seven Hausa Kingdoms</French>
+		<German>The Seven Hausa Kingdoms</German>
+		<Italian>The Seven Hausa Kingdoms</Italian>
+		<Spanish>The Seven Hausa Kingdoms</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_VICTORY_TITLE_HAU2</Tag>
+		<English>Fulani Jihads</English>
+		<French>Fulani Jihads</French>
+		<German>Fulani Jihads</German>
+		<Italian>Fulani Jihads</Italian>
+		<Spanish>Fulani Jihads</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_VICTORY_TITLE_HAU3</Tag>
+		<English>Nigerian Unity</English>
+		<French>Nigerian Unity</French>
+		<German>Nigerian Unity</German>
+		<Italian>Nigerian Unity</Italian>
+		<Spanish>Nigerian Unity</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_VICTORY_TITLE_KAN1</Tag>
+		<English>God King of Chad</English>
+		<French>God King of Chad</French>
+		<German>God King of Chad</German>
+		<Italian>God King of Chad</Italian>
+		<Spanish>God King of Chad</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_VICTORY_TITLE_KAN2</Tag>
+		<English>The Shining Corner of the Arab World</English>
+		<French>The Shining Corner of the Arab World</French>
+		<German>The Shining Corner of the Arab World</German>
+		<Italian>The Shining Corner of the Arab World</Italian>
+		<Spanish>The Shining Corner of the Arab World</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_VICTORY_TITLE_KAN3</Tag>
+		<English>Guns of the Sahel</English>
+		<French>Guns of the Sahel</French>
+		<German>Guns of the Sahel</German>
+		<Italian>Guns of the Sahel</Italian>
+		<Spanish>Guns of the Sahel</Spanish>
+	</TEXT>
+	 <TEXT>
+		<Tag>TXT_KEY_VICTORY_TITLE_SON1</Tag>
+		<English>Legacy of Askia</English>
+		<French>Legacy of Askia</French>
+		<German>Legacy of Askia</German>
+		<Italian>Legacy of Askia</Italian>
+		<Spanish>Legacy of Askia</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_VICTORY_TITLE_SON2</Tag>
+		<English>Might of the Sahel</English>
+		<French>Might of the Sahel</French>
+		<German>Might of the Sahel</German>
+		<Italian>Might of the Sahel</Italian>
+		<Spanish>Might of the Sahel</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_VICTORY_TITLE_SON3</Tag>
+		<English>Revitalizing Sankore</English>
+		<French>Revitalizing Sankore</French>
+		<German>Revitalizing Sankore</German>
+		<Italian>Revitalizing Sankore</Italian>
+		<Spanish>Revitalizing Sankore</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_VICTORY_TITLE_GHA1</Tag>
+		<English>All Roads Lead to Rome</English>
+		<French>All Roads Lead to Rome</French>
+		<German>All Roads Lead to Rome</German>
+		<Italian>All Roads Lead to Rome</Italian>
+		<Spanish>All Roads Lead to Rome</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_VICTORY_TITLE_GHA2</Tag>
+		<English>A Professionalised Army</English>
+		<French>A Professionalised Army</French>
+		<German>A Professionalised Army</German>
+		<Italian>A Professionalised Army</Italian>
+		<Spanish>A Professionalised Army</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_VICTORY_TITLE_GHA3</Tag>
+		<English>Sub-Saharan Empire</English>
+		<French>Sub-Saharan Empire</French>
+		<German>Sub-Saharan Empire</German>
+		<Italian>Sub-Saharan Empire</Italian>
+		<Spanish>Sub-Saharan Empire</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_VICTORY_TITLE_JER1</Tag>
+		<English>Crusader Kings</English>
+		<French>Crusader Kings</French>
+		<German>Crusader Kings</German>
+		<Italian>Crusader Kings</Italian>
+		<Spanish>Crusader Kings</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_VICTORY_TITLE_JER2</Tag>
+		<English>Outremer Culture</English>
+		<French>Outremer Culture</French>
+		<German>Outremer Culture</German>
+		<Italian>Outremer Culture</Italian>
+		<Spanish>Outremer Culture</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_VICTORY_TITLE_JER3</Tag>
+		<English>Deus Vult</English>
+		<French>Deus Vult</French>
+		<German>Deus Vult</German>
+		<Italian>Deus Vult</Italian>
+		<Spanish>Deus Vult</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_VICTORY_TITLE_GEO1</Tag>
+		<English>Tamar's Legacy</English>
+		<French>Tamar's Legacy</French>
+		<German>Tamar's Legacy</German>
+		<Italian>Tamar's Legacy</Italian>
+		<Spanish>Tamar's Legacy</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_VICTORY_TITLE_GEO2</Tag>
+		<English>Georgian Golden Age</English>
+		<French>Georgian Golden Age</French>
+		<German>Georgian Golden Age</German>
+		<Italian>Georgian Golden Age</Italian>
+		<Spanish>Georgian Golden Age</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_VICTORY_TITLE_GEO3</Tag>
+		<English>Caucasian Centralisation</English>
+		<French>Caucasian Centralisation</French>
+		<German>Caucasian Centralisation</German>
+		<Italian>Caucasian Centralisation</Italian>
+		<Spanish>Caucasian Centralisation</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_VICTORY_TITLE_GOK1</Tag>
+		<English>Turkic Migrations</English>
+		<French>Turkic Migrations</French>
+		<German>Turkic Migrations</German>
+		<Italian>Turkic Migrations</Italian>
+		<Spanish>Turkic Migrations</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_VICTORY_TITLE_GOK2</Tag>
+		<English>The Silk Road</English>
+		<French>La route de la soie </French>
+		<German>Die Seidenstra&#223;e</German>
+		<Italian>The Silk Road</Italian>
+		<Spanish>The Silk Road</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_VICTORY_TITLE_GOK3</Tag>
+		<English>Army of the Khagan</English>
+		<French>Army of the Khagan</French>
+		<German>Army of the Khagan</German>
+		<Italian>Army of the Khagan</Italian>
+		<Spanish>Army of the Khagan</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_VICTORY_TITLE_TUN1</Tag>
+		<English>The Berber Raids</English>
+		<French>The Berber Raids</French>
+		<German>The Berber Raids</German>
+		<Italian>The Berber Raids</Italian>
+		<Spanish>The Berber Raids</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_VICTORY_TITLE_TUN2</Tag>
+		<English>Heirs of Carthage</English>
+		<French>Heirs of Carthage</French>
+		<German>Heirs of Carthage</German>
+		<Italian>Heirs of Carthage</Italian>
+		<Spanish>Heirs of Carthage</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_VICTORY_TITLE_TUN3</Tag>
+		<English>Citadels of the Maghreb</English>
+		<French>Citadels of the Maghreb</French>
+		<German>Citadels of the Maghreb</German>
+		<Italian>Citadels of the Maghreb</Italian>
+		<Spanish>Citadels of the Maghreb</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_VICTORY_TITLE_KHA1</Tag>
+		<English>Diplomatic Nexus</English>
+		<French>Diplomatic Nexus</French>
+		<German>Diplomatic Nexus</German>
+		<Italian>Diplomatic Nexus</Italian>
+		<Spanish>Diplomatic Nexus</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_VICTORY_TITLE_KHA2</Tag>
+		<English>A Consolidated Empire</English>
+		<French>A Consolidated Empire</French>
+		<German>A Consolidated Empire</German>
+		<Italian>A Consolidated Empire</Italian>
+		<Spanish>A Consolidated Empire</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_VICTORY_TITLE_KHA3</Tag>
+		<English>A Medieval Jewish State</English>
+ 		<French>A Medieval Jewish State</French>
+ 		<German>A Medieval Jewish State</German>
+ 		<Italian>A Medieval Jewish State</Italian>
+ 		<Spanish>AA Medieval Jewish State</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_VICTORY_TITLE_OMA1</Tag>
+		<English>Hormuzi Thalassocracy</English>
+		<French>Hormuzi Thalassocracy</French>
+		<German>Hormuzi Thalassocracy</German>
+		<Italian>Hormuzi Thalassocracy</Italian>
+		<Spanish>Hormuzi Thalassocracy</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_VICTORY_TITLE_OMA2</Tag>
+		<English>Colonised to Coloniser</English>
+		<French>Colonised to Coloniser</French>
+		<German>Colonised to Coloniser</German>
+		<Italian>Colonised to Coloniser</Italian>
+		<Spanish>Colonised to Coloniser</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_VICTORY_TITLE_OMA3</Tag>
+		<English>Empire of Oman and Zanzibar</English>
+		<French>Empire of Oman and Zanzibar</French>
+		<German>Empire of Oman and Zanzibar</German>
+		<Italian>Empire of Oman and Zanzibar</Italian>
+		<Spanish>Empire of Oman and Zanzibar</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_VICTORY_TITLE_YEM1</Tag>
+		<English>Revival of Sheba</English>
+		<French>Revival of Sheba</French>
+		<German>Revival of Sheba</German>
+		<Italian>Revival of Sheba</Italian>
+		<Spanish>Revival of Sheba</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_VICTORY_TITLE_YEM3</Tag>
+		<English>Mocha Port</English>
+		<French>Mocha Port</French>
+		<German>Mocha Port</German>
+		<Italian>Mocha Port</Italian>
+		<Spanish>Mocha Port</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_VICTORY_TITLE_YEM2</Tag>
+		<English>Pearl of the Indian Ocean</English>
+		<French>Pearl of the Indian Ocean</French>
+		<German>Pearl of the Indian Ocean</German>
+		<Italian>Pearl of the Indian Ocean</Italian>
+		<Spanish>Pearl of the Indian Ocean</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_VICTORY_TITLE_SAM1</Tag>
+		<English>Iranian Intermezzo</English>
+		<French>Iranian Intermezzo</French>
+		<German>Iranian Intermezzo</German>
+		<Italian>Iranian Intermezzo</Italian>
+		<Spanish>Iranian Intermezzo</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_VICTORY_TITLE_SAM2</Tag>
+		<English>Persification</English>
+		<French>Persification</French>
+		<German>Persification</German>
+		<Italian>Persification</Italian>
+		<Spanish>Persification</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_VICTORY_TITLE_SAM3</Tag>
+		<English>Shahanshah</English>
+		<French>Shahanshah</French>
+		<German>Shahanshah</German>
+		<Italian>Shahanshah</Italian>
+		<Spanish>Shahanshah</Spanish>
+	</TEXT>
+
+	<TEXT>
+		<Tag>TXT_KEY_VICTORY_TITLE_BUY1</Tag>
+		<English>Buyids of Iraq</English>
+		<French>Buyids of Iraq</French>
+		<German>Buyids of Iraq</German>
+		<Italian>Buyids of Iraq</Italian>
+		<Spanish>Buyids of Iraq</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_VICTORY_TITLE_BUY2</Tag>
+		<English>Interfaith Emirs</English>
+		<French>Interfaith Emirs</French>
+		<German>Interfaith Emirs</German>
+		<Italian>Interfaith Emirs</Italian>
+		<Spanish>Interfaith Emirs</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_VICTORY_TITLE_BUY3</Tag>
+		<English>Farsi Textile Manufactories</English>
+		<French>Farsi Textile Manufactories</French>
+		<German>Farsi Textile Manufactories</German>
+		<Italian>Farsi Textile Manufactories</Italian>
+		<Spanish>Farsi Textile Manufactories</Spanish>
+	</TEXT>
+
+	<TEXT>
+		<Tag>TXT_KEY_VICTORY_TITLE_MIS1</Tag>
+		<English>Fatimid Faith</English>
+		<French>Fatimid Faith</French>
+		<German>Fatimid Faith</German>
+		<Italian>Fatimid Faith</Italian>
+		<Spanish>Fatimid Faith</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_VICTORY_TITLE_MIS2</Tag>
+		<English>Ayyubid Diplomacy</English>
+		<French>Ayyubid Diplomacy</French>
+		<German>Ayyubid Diplomacy</German>
+		<Italian>Ayyubid Diplomacy</Italian>
+		<Spanish>Ayyubid Diplomacy</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_VICTORY_TITLE_MIS3</Tag>
+		<English>Mamluk Authority</English>
+		<French>Mamluk Authority</French>
+		<German>Mamluk Authority</German>
+		<Italian>Mamluk Authority</Italian>
+		<Spanish>Mamluk Authority</Spanish>
+	</TEXT>
+
+	<TEXT>
+		<Tag>TXT_KEY_VICTORY_TITLE_GHO1</Tag>
+		<English>Piety</English>
+		<French>Piety</French>
+		<German>Piety</German>
+		<Italian>Piety</Italian>
+		<Spanish>Piety</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_VICTORY_TITLE_GHO2</Tag>
+		<English>The End of Idolatry</English>
+		<French>The End of Idolatry</French>
+		<German>The End of Idolatry</German>
+		<Italian>The End of Idolatry</Italian>
+		<Spanish>The End of Idolatry</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_VICTORY_TITLE_GHO3</Tag>
+		<English>Finders Keepers</English>
+		<French>Finders Keepers</French>
+		<German>Finders Keepers</German>
+		<Italian>Finders Keepers</Italian>
+		<Spanish>Finders Keepers</Spanish>
+	</TEXT>
+
+	<TEXT>
+		<Tag>TXT_KEY_VICTORY_TITLE_NUM1</Tag>
+		<English>Campaigns against Carthage</English>
+		<French>Campaigns against Carthage</French>
+		<German>Campaigns against Carthage</German>
+		<Italian>Campaigns against Carthage</Italian>
+		<Spanish>Campaigns against Carthage</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_VICTORY_TITLE_NUM2</Tag>
+		<English>Numidian Grain</English>
+		<French>Numidian Grain</French>
+		<German>Numidian Grain</German>
+		<Italian>Numidian Grain</Italian>
+		<Spanish>Numidian Grain</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_VICTORY_TITLE_NUM3</Tag>
+		<English>Bread Basket of the Mediterranean</English>
+		<French>Bread Basket of the Mediterranean</French>
+		<German>Bread Basket of the Mediterranean</German>
+		<Italian>Bread Basket of the Mediterranean</Italian>
+		<Spanish>Bread Basket of the Mediterranean</Spanish>
+	</TEXT>
+
+
+	<TEXT>
+		<Tag>TXT_KEY_VICTORY_TITLE_PAR1</Tag>
+		<English>Roman-Parthian Wars</English>
+		<French>Roman-Parthian Wars</French>
+		<German>Roman-Parthian Wars</German>
+		<Italian>Roman-Parthian Wars</Italian>
+		<Spanish>Roman-Parthian Wars</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_VICTORY_TITLE_PAR2</Tag>
+		<English>Sassanid Golden Ages</English>
+		<French>Sassanid Golden Ages</French>
+		<German>Sassanid Golden Ages</German>
+		<Italian>Sassanid Golden Ages</Italian>
+		<Spanish>Sassanid Golden Ages</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_VICTORY_TITLE_PAR3</Tag>
+		<English>Khosrow's Empire</English>
+		<French>Khosrow's Empire</French>
+		<German>Khosrow's Empire</German>
+		<Italian>Khosrow's Empire</Italian>
+		<Spanish>Khosrow's Empire</Spanish>
+	</TEXT>
+
+	<TEXT>
+		<Tag>TXT_KEY_VICTORY_TITLE_ARM1</Tag>
+		<English>Apostle of Armenia</English>
+		<French>Apostle of Armenia</French>
+		<German>Apostle of Armenia</German>
+		<Italian>Apostle of Armenia</Italian>
+		<Spanish>Apostle of Armenia</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_VICTORY_TITLE_ARM2</Tag>
+		<English>Nakharar Elite</English>
+		<French>Nakharar Elite</French>
+		<German>Nakharar Elite</German>
+		<Italian>Nakharar Elite</Italian>
+		<Spanish>Nakharar Elite</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_VICTORY_TITLE_ARM3</Tag>
+		<English>Unflinching Heritage</English>
+		<French>Unflinching Heritage</French>
+		<German>Unflinching Heritage</German>
+		<Italian>Unflinching Heritage</Italian>
+		<Spanish>Unflinching Heritage</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_VICTORY_TITLE_SCY1</Tag>
+		<English>Slayer of Cyrus</English>
+		<French>Slayer of Cyrus</French>
+		<German>Slayer of Cyrus</German>
+		<Italian>Slayer of Cyrus</Italian>
+		<Spanish>Slayer of Cyrus</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_VICTORY_TITLE_SCY2</Tag>
+		<English>The Eurasian People</English>
+		<French>The Eurasian People</French>
+		<German>The Eurasian People</German>
+		<Italian>The Eurasian People</Italian>
+		<Spanish>The Eurasian People</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_VICTORY_TITLE_SCY3</Tag>
+		<English>Pontic-Scythian Kingdom</English>
+		<French>Pontic-Scythian Kingdom</French>
+		<German>Pontic-Scythian Kingdom</German>
+		<Italian>Pontic-Scythian Kingdom</Italian>
+		<Spanish>Pontic-Scythian Kingdom</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_VICTORY_TITLE_HUN1</Tag>
+		<English>Attila the Hun</English>
+		<French>Attila the Hun</French>
+		<German>Attila the Hun</German>
+		<Italian>Attila the Hun</Italian>
+		<Spanish>Attila the Hun</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_VICTORY_TITLE_HUN2</Tag>
+		<English>The Scourge of God</English>
+		<French>The Scourge of God</French>
+		<German>The Scourge of God</German>
+		<Italian>The Scourge of God</Italian>
+		<Spanish>The Scourge of God</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_VICTORY_TITLE_HUN3</Tag>
+		<English>Riches of Rome</English>
+		<French>Riches of Rome</French>
+		<German>Riches of Rome</German>
+		<Italian>Riches of Rome</Italian>
+		<Spanish>Riches of Rome</Spanish>
+	</TEXT>
+
+	<TEXT>
+		<Tag>TXT_KEY_VICTORY_TITLE_GOT1</Tag>
+		<English>Forebearers of the Medieval Age</English>
+		<French>Forebearers of the Medieval Age</French>
+		<German>Forebearers of the Medieval Age</German>
+		<Italian>Forebearers of the Medieval Age</Italian>
+		<Spanish>Forebearers of the Medieval Age</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_VICTORY_TITLE_GOT2</Tag>
+		<English>The Sack of Rome</English>
+		<French>The Sack of Rome</French>
+		<German>The Sack of Rome</German>
+		<Italian>The Sack of Rome</Italian>
+		<Spanish>The Sack of Rome</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_VICTORY_TITLE_GOT3</Tag>
+		<English>Visigothic Architecture</English>
+		<French>Visigothic Architecture</French>
+		<German>Visigothic Architecture</German>
+		<Italian>Visigothic Architecture</Italian>
+		<Spanish>Visigothic Architecture</Spanish>
+	</TEXT>
+
+	<TEXT>
+		<Tag>TXT_KEY_VICTORY_TITLE_VAN1</Tag>
+		<English>Vandalism</English>
+		<French>Vandalism</French>
+		<German>Vandalism</German>
+		<Italian>Vandalism</Italian>
+		<Spanish>Vandalism</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_VICTORY_TITLE_VAN2</Tag>
+		<English>The Vandal Kingdom</English>
+		<French>The Vandal Kingdom</French>
+		<German>The Vandal Kingdom</German>
+		<Italian>The Vandal Kingdom</Italian>
+		<Spanish>The Vandal Kingdom</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_VICTORY_TITLE_VAN3</Tag>
+		<English>Vandal Prosperity</English>
+		<French>Vandal Prosperity</French>
+		<German>Vandal Prosperity</German>
+		<Italian>Vandal Prosperity</Italian>
+		<Spanish>Vandal Prosperity</Spanish>
+	</TEXT>
+
+	
+	<TEXT>
+		<Tag>TXT_KEY_VICTORY_TITLE_GEM1</Tag>
+		<English>Batavian Revolt</English>
+		<French>Batavian Revolt</French>
+		<German>Batavian Revolt</German>
+		<Italian>Batavian Revolt</Italian>
+		<Spanish>Batavian Revolt</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_VICTORY_TITLE_GEM2</Tag>
+		<English>Anglo-Saxons</English>
+		<French>Anglo-Saxons</French>
+		<German>Anglo-Saxons</German>
+		<Italian>Anglo-Saxons</Italian>
+		<Spanish>Anglo-Saxons</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_VICTORY_TITLE_GEM3</Tag>
+		<English>Papal Validation</English>
+		<French>Papal Validation</French>
+		<German>Papal Validation</German>
+		<Italian>Papal Validation</Italian>
+		<Spanish>Papal Validation</Spanish>
+	</TEXT>
+
+
+	<TEXT>
+		<Tag>TXT_KEY_VICTORY_TITLE_CEL1</Tag>
+		<English>The Gallic Warriors</English>
+		<French>The Gallic Warriors</French>
+		<German>The Gallic Warriors</German>
+		<Italian>The Gallic Warriors</Italian>
+		<Spanish>The Gallic Warriors</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_VICTORY_TITLE_CEL2</Tag>
+		<English>Unification of The Celts</English>
+		<French>Unification of The Celts</French>
+		<German>Unification of The Celts</German>
+		<Italian>Unification of The Celts</Italian>
+		<Spanish>Unification of The Celts</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_VICTORY_TITLE_CEL3</Tag>
+		<English>Brennus' Invasion</English>
+		<French>Brennus' Invasion</French>
+		<German>Brennus' Invasion</German>
+		<Italian>Brennus' Invasion</Italian>
+		<Spanish>Brennus' Invasion</Spanish>
+	</TEXT>
+
+	<TEXT>
+		<Tag>TXT_KEY_VICTORY_TITLE_MAC1</Tag>
+		<English>Alexander the Great</English>
+		<French>Alexander the Great</French>
+		<German>Alexander the Great</German>
+		<Italian>Alexander the Great</Italian>
+		<Spanish>Alexander the Great</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_VICTORY_TITLE_MAC2</Tag>
+		<English>Seleucus the Victorious</English>
+		<French>Seleucus the Victorious</French>
+		<German>Seleucus the Victorious</German>
+		<Italian>Seleucus the Victorious</Italian>
+		<Spanish>Seleucus the Victorious</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_VICTORY_TITLE_MAC3</Tag>
+		<English>Ptolemy the Saviour</English>
+		<French>Ptolemy the Saviour</French>
+		<German>Ptolemy the Saviour</German>
+		<Italian>Ptolemy the Saviour</Italian>
+		<Spanish>Ptolemy the Saviour</Spanish>
+	</TEXT>
+
+	<TEXT>
+		<Tag>TXT_KEY_VICTORY_TITLE_SPR1</Tag>
+		<English>The Peloponnesian War</English>
+		<French>The Peloponnesian War</French>
+		<German>The Peloponnesian War</German>
+		<Italian>The Peloponnesian War</Italian>
+		<Spanish>The Peloponnesian War</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_VICTORY_TITLE_SPR2</Tag>
+		<English>Absolute Agoge</English>
+		<French>Absolute Agoge</French>
+		<German>Absolute Agoge</German>
+		<Italian>Absolute Agoge</Italian>
+		<Spanish>Absolute Agoge</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_VICTORY_TITLE_SPR3</Tag>
+		<English>The Spartan Way</English>
+		<French>The Spartan Way</French>
+		<German>The Spartan Way</German>
+		<Italian>The Spartan Way</Italian>
+		<Spanish>The Spartan Way</Spanish>
+	</TEXT>
+
+
+	<TEXT>
+		<Tag>TXT_KEY_VICTORY_TITLE_MYC1</Tag>
+		<English>Victors of the Trojan Wars</English>
+		<French>Victors of the Trojan Wars</French>
+		<German>Victors of the Trojan Wars</German>
+		<Italian>Victors of the Trojan Wars</Italian>
+		<Spanish>Victors of the Trojan Wars</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_VICTORY_TITLE_MYC2</Tag>
+		<English>The Citadels of Mycenae</English>
+		<French>The Citadels of Mycenae</French>
+		<German>The Citadels of Mycenae</German>
+		<Italian>The Citadels of Mycenae</Italian>
+		<Spanish>The Citadels of Mycenae</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_VICTORY_TITLE_MYC3</Tag>
+		<English>Homeric Heroes</English>
+		<French>Homeric Heroes</French>
+		<German>Homeric Heroes</German>
+		<Italian>Homeric Heroes</Italian>
+		<Spanish>Homeric Heroes</Spanish>
+	</TEXT>
+
+	<TEXT>
+		<Tag>TXT_KEY_VICTORY_TITLE_ELA1</Tag>
+		<English>From Greece to the Indus</English>
+		<French>From Greece to the Indus</French>
+		<German>From Greece to the Indus</German>
+		<Italian>From Greece to the Indus</Italian>
+		<Spanish>From Greece to the Indus</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_VICTORY_TITLE_ELA2</Tag>
+		<English>The Merchants of Susa</English>
+		<French>The Merchants of Susa</French>
+		<German>The Merchants of Susa</German>
+		<Italian>The Merchants of Susa</Italian>
+		<Spanish>The Merchants of Susa</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_VICTORY_TITLE_ELA3</Tag>
+		<English>Destroyers of Ur</English>
+		<French>Destroyers of Ur</French>
+		<German>Destroyers of Ur</German>
+		<Italian>Destroyers of Ur</Italian>
+		<Spanish>Destroyers of Ur</Spanish>
+	</TEXT>
+
+
+
+	<TEXT>
+		<Tag>TXT_KEY_VICTORY_TITLE_ASS1</Tag>
+		<English>The First Assyrian Empire</English>
+		<French>The First Assyrian Empire</French>
+		<German>The First Assyrian Empire</German>
+		<Italian>The First Assyrian Empire</Italian>
+		<Spanish>The First Assyrian Empire</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_VICTORY_TITLE_ASS2</Tag>
+		<English>The Neo-Assyrian Empire</English>
+		<French>The Neo-Assyrian Empire</French>
+		<German>The Neo-Assyrian Empire</German>
+		<Italian>The Neo-Assyrian Empire</Italian>
+		<Spanish>The Neo-Assyrian Empire</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_VICTORY_TITLE_ASS3</Tag>
+		<English>Nebuchadnezzar's Palace</English>
+		<French>Nebuchadnezzar's Palace</French>
+		<German>Nebuchadnezzar's Palace</German>
+		<Italian>Nebuchadnezzar's Palace</Italian>
+		<Spanish>Nebuchadnezzar's Palace</Spanish>
+	</TEXT>
+
+
+	<TEXT>
+		<Tag>TXT_KEY_VICTORY_TITLE_SUM1</Tag>
+		<English>The Cradle of Civilization</English>
+		<French>The Cradle of Civilization</French>
+		<German>The Cradle of Civilization</German>
+		<Italian>The Cradle of Civilization</Italian>
+		<Spanish>The Cradle of Civilization</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_VICTORY_TITLE_SUM2</Tag>
+		<English>The Unconquerable Empire</English>
+		<French>The Unconquerable Empire</French>
+		<German>The Unconquerable Empire</German>
+		<Italian>The Unconquerable Empire</Italian>
+		<Spanish>The Unconquerable Empire</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_VICTORY_TITLE_SUM3</Tag>
+		<English>The Splendor of Akkad</English>
+		<French>The Splendor of Akkad</French>
+		<German>The Splendor of Akkad</German>
+		<Italian>The Splendor of Akkad</Italian>
+		<Spanish>The Splendor of Akkad</Spanish>
+	</TEXT>
+
+
+	<TEXT>
+		<Tag>TXT_KEY_VICTORY_TITLE_JUD1</Tag>
+		<English>The Holy Land</English>
+		<French>The Holy Land</French>
+		<German>The Holy Land</German>
+		<Italian>The Holy Land</Italian>
+		<Spanish>The Holy Land</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_VICTORY_TITLE_JUD2</Tag>
+		<English>The Last Sanhedrin</English>
+		<French>The Last Sanhedrin</French>
+		<German>The Last Sanhedrin</German>
+		<Italian>The Last Sanhedrin</Italian>
+		<Spanish>The Last Sanhedrin</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_VICTORY_TITLE_JUD3</Tag>
+		<English>Birthplace of Christian Teaching</English>
+		<French>Birthplace of Christian Teaching</French>
+		<German>Birthplace of Christian Teaching</German>
+		<Italian>Birthplace of Christian Teaching</Italian>
+		<Spanish>Birthplace of Christian Teaching</Spanish>
+	</TEXT>
+
+
+	<TEXT>
+		<Tag>TXT_KEY_VICTORY_TITLE_MNO1</Tag>
+		<English>The Might of Knossos</English>
+		<French>The Might of Knossos</French>
+		<German>The Might of Knossos</German>
+		<Italian>The Might of Knossos</Italian>
+		<Spanish>The Might of Knossos</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_VICTORY_TITLE_MNO2</Tag>
+		<English>Mediterranean Trade Connections</English>
+		<French>Mediterranean Trade Connections</French>
+		<German>Mediterranean Trade Connections</German>
+		<Italian>Mediterranean Trade Connections</Italian>
+		<Spanish>Mediterranean Trade Connections</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_VICTORY_TITLE_MNO3</Tag>
+		<English>The Doric Colonies</English>
+		<French>The Doric Colonies</French>
+		<German>The Doric Colonies</German>
+		<Italian>The Doric Colonies</Italian>
+		<Spanish>The Doric Colonies</Spanish>
+	</TEXT>
+
+
+	<TEXT>
 		<Tag>TXT_KEY_VICTORY_TITLE_AME1</Tag>
 		<English>Manifest Destiny</English>
 		<French>Destin&#233;e manifeste </French>
@@ -27,52 +1378,27 @@
 	
 	<TEXT>
 		<Tag>TXT_KEY_VICTORY_TITLE_ARA1</Tag>
-		<English>Ijtihad</English>
-		<French>Ijtihad </French>
-		<German>Ischtihad</German>
-		<Italian>Ijtihad</Italian>
-		<Spanish>Ijtihad</Spanish>
+		<English>The Caliphate</English>
+		<French>The Caliphate </French>
+		<German>The Caliphate</German>
+		<Italian>The Caliphate</Italian>
+		<Spanish>The Caliphate</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_VICTORY_TITLE_ARA2</Tag>
-		<English>Jihad</English>
-		<French>Djihad </French>
-		<German>Dschihad</German>
-		<Italian>Jihad</Italian>
-		<Spanish>Jihad</Spanish>
+		<English>Islamic Golden Age</English>
+		<French>Islamic Golden Age</French>
+		<German>Islamic Golden Age</German>
+		<Italian>Islamic Golden Age</Italian>
+		<Spanish>Islamic Golden Age</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_VICTORY_TITLE_ARA3</Tag>
-		<English>Dawah</English>
-		<French>Dawa </French>
-		<German>Dawah</German>
-		<Italian>Dawah</Italian>
-		<Spanish>Dawah</Spanish>
-	</TEXT>
-	
-	<TEXT>
-		<Tag>TXT_KEY_VICTORY_TITLE_ASS1</Tag>
-		<English>Professional Army</English>
-		<French>Professional Army</French>
-		<German>Professional Army</German>
-		<Italian>Professional Army</Italian>
-		<Spanish>Professional Army</Spanish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_VICTORY_TITLE_ASS2</Tag>
-		<English>Four Corners of the World</English>
-		<French>Four Corners of the World</French>
-		<German>Four Corners of the World</German>
-		<Italian>Four Corners of the World</Italian>
-		<Spanish>Four Corners of the World</Spanish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_VICTORY_TITLE_ASS3</Tag>
-		<English>Library of Ashurbanipal</English>
-		<French>Library of Ashurbanipal</French>
-		<German>Library of Ashurbanipal</German>
-		<Italian>Library of Ashurbanipal</Italian>
-		<Spanish>Library of Ashurbanipal</Spanish>
+		<English>Dar al-islam</English>
+		<French>Dar al-islam</French>
+		<German>Dar al-islam</German>
+		<Italian>Dar al-islam</Italian>
+		<Spanish>Dar al-islam</Spanish>
 	</TEXT>
 	
 	<TEXT>
@@ -99,7 +1425,6 @@
 		<Italian>Peronism</Italian>
 		<Spanish>Peronism</Spanish>
 	</TEXT>
-	
 	<TEXT>
 		<Tag>TXT_KEY_VICTORY_TITLE_AUS1</Tag>
 		<English>Federation of Australia</English>
@@ -124,7 +1449,6 @@
 		<Italian>Imagine, Collaborate, Innovate</Italian>
 		<Spanish>Imagine, Collaborate, Innovate</Spanish>
 	</TEXT>
-	
 	<TEXT>
 		<Tag>TXT_KEY_VICTORY_TITLE_AZT1</Tag>
 		<English>Floating Gardens</English>
@@ -152,11 +1476,11 @@
 	
 	<TEXT>
 		<Tag>TXT_KEY_VICTORY_TITLE_BAB1</Tag>
-		<English>Code of Hammurabi</English>
+		<English>Hammurabi's Code</English>
 		<French>Le Code de Hammurabi </French>
 		<German>Der Kodex von Hammurabi</German>
-		<Italian>Code of Hammurabi</Italian>
-		<Spanish>Code of Hammurabi</Spanish>
+		<Italian>Hammurabi's Code</Italian>
+		<Spanish>Hammurabi's Code</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_VICTORY_TITLE_BAB2</Tag>
@@ -174,7 +1498,7 @@
 		<Italian>The Fertile Crescent</Italian>
 		<Spanish>The Fertile Crescent</Spanish>
 	</TEXT>
-	
+
 	<TEXT>
 		<Tag>TXT_KEY_VICTORY_TITLE_BEL1</Tag>
 		<English>Sillon Industriel</English>
@@ -223,31 +1547,6 @@
 		<German>Pindorama</German>
 		<Italian>Pindorama</Italian>
 		<Spanish>Pindorama</Spanish>
-	</TEXT>
-	
-	<TEXT>
-		<Tag>TXT_KEY_VICTORY_TITLE_BUR1</Tag>
-		<English>Land of Temples</English>
-		<French>Land of Temples</French>
-		<German>Land of Temples</German>
-		<Italian>Land of Temples</Italian>
-		<Spanish>Land of Temples</Spanish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_VICTORY_TITLE_BUR2</Tag>
-		<English>Chakravarti</English>
-		<French>Chakravarti</French>
-		<German>Chakravarti</German>
-		<Italian>Chakravarti</Italian>
-		<Spanish>Chakravarti</Spanish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_VICTORY_TITLE_BUR3</Tag>
-		<English>Conqueror of the Ten Directions</English>
-		<French>Conqueror of the Ten Directions</French>
-		<German>Conqueror of the Ten Directions</German>
-		<Italian>Conqueror of the Ten Directions</Italian>
-		<Spanish>Conqueror of the Ten Directions</Spanish>
 	</TEXT>
 	
 	<TEXT>
@@ -318,36 +1617,11 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_VICTORY_TITLE_CAR3</Tag>
-		<English>Carthaginian Periplus</English>
-		<French>Carthaginian Periplus</French>
-		<German>Carthaginian Periplus</German>
-		<Italian>Carthaginian Periplus</Italian>
-		<Spanish>Carthaginian Periplus</Spanish>
-	</TEXT>
-	
-	<TEXT>
-		<Tag>TXT_KEY_VICTORY_TITLE_CEL1</Tag>
-		<English>Vae Victis</English>
-		<French>Vae Victis</French>
-		<German>Vae Victis</German>
-		<Italian>Vae Victis</Italian>
-		<Spanish>Vae Victis</Spanish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_VICTORY_TITLE_CEL2</Tag>
-		<English>Celtic Migrations</English>
-		<French>Celtic Migrations</French>
-		<German>Celtic Migrations</German>
-		<Italian>Celtic Migrations</Italian>
-		<Spanish>Celtic Migrations</Spanish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_VICTORY_TITLE_CEL3</Tag>
-		<English>Insular Christianity</English>
-		<French>Insular Christianity</French>
-		<German>Insular Christianity</German>
-		<Italian>Insular Christianity</Italian>
-		<Spanish>Insular Christianity</Spanish>
+		<English>Caananite Heritage</English>
+		<French>Caananite Heritage</French>
+		<German>Caananite Heritage</German>
+		<Italian>Caananite Heritage</Italian>
+		<Spanish>Caananite Heritage</Spanish>
 	</TEXT>
 	
 	<TEXT>
@@ -401,31 +1675,6 @@
 	</TEXT>
 	
 	<TEXT>
-		<Tag>TXT_KEY_VICTORY_TITLE_DRA1</Tag>
-		<English>Indian Ocean Trade</English>
-		<French>Indian Ocean Trade</French>
-		<German>Indian Ocean Trade</German>
-		<Italian>Indian Ocean Trade</Italian>
-		<Spanish>Indian Ocean Trade</Spanish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_VICTORY_TITLE_DRA2</Tag>
-		<English>The Chola Empire</English>
-		<French>L'empire Chola </French>
-		<German>Das Chola-Reich</German>
-		<Italian>The Chola Empire</Italian>
-		<Spanish>The Chola Empire</Spanish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_VICTORY_TITLE_DRA3</Tag>
-		<English>City of Victory</English>
-		<French>City of Victory</French>
-		<German>Stadt des Sieges</German>
-		<Italian>City of Victory</Italian>
-		<Spanish>City of Victory</Spanish>
-	</TEXT>
-	
-	<TEXT>
 		<Tag>TXT_KEY_VICTORY_TITLE_EGY1</Tag>
 		<English>The Old Kingdom</English>
 		<French>The Old Kingdom</French>
@@ -452,19 +1701,19 @@
 	
 	<TEXT>
 		<Tag>TXT_KEY_VICTORY_TITLE_ENG1</Tag>
-		<English>Britannia Rule the Waves</English>
-		<French>Grande-Bretagne, r&#232;gne sur les flots </French>
-		<German>Britannia Rule the Waves</German>
-		<Italian>Britannia Rule the Waves</Italian>
-		<Spanish>Britannia Rule the Waves</Spanish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_VICTORY_TITLE_ENG2</Tag>
 		<English>The Sun Never Sets</English>
 		<French>Le soleil ne se couche jamais </French>
 		<German>Die Sonne geht niemals unter</German>
 		<Italian>The Sun Never Sets</Italian>
 		<Spanish>The Sun Never Sets</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_VICTORY_TITLE_ENG2</Tag>
+		<English>Britannia Rule the Waves</English>
+		<French>Grande-Bretagne, r&#232;gne sur les flots </French>
+		<German>Britannia Rule the Waves</German>
+		<Italian>Britannia Rule the Waves</Italian>
+		<Spanish>Britannia Rule the Waves</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_VICTORY_TITLE_ENG3</Tag>
@@ -485,19 +1734,19 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_VICTORY_TITLE_ETH2</Tag>
+		<English>Nine Saints</English>
+		<French>Les Neuf Saints </French>
+		<German>Neun Heilige</German>
+		<Italian>Nine Saints</Italian>
+		<Spanish>Nine Saints</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_VICTORY_TITLE_ETH3</Tag>
 		<English>Prester John</English>
 		<French>Le royaume du pr&#234;tre Jean </French>
 		<German>Priesterk&#246;nig Johannes</German>
 		<Italian>Prester John</Italian>
 		<Spanish>Prester John</Spanish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_VICTORY_TITLE_ETH3</Tag>
-		<English>African Union</English>
-		<French>African Union</French>
-		<German>African Union</German>
-		<Italian>African Union</Italian>
-		<Spanish>African Union</Spanish>
 	</TEXT>
 	
 	<TEXT>
@@ -552,27 +1801,27 @@
 	
 	<TEXT>
 		<Tag>TXT_KEY_VICTORY_TITLE_GRE1</Tag>
-		<English>The School of Hellas</English>
-		<French>L'&#233;cole de la Gr&#232;ce</French>
-		<German>Die Schule von Hellas</German>
-		<Italian>The School of Hellas</Italian>
-		<Spanish>The School of Hellas</Spanish>
+		<English>Wonders of the Aegean</English>
+		<French>Wonders of the Aegean</French>
+		<German>Wonders of the Aegean</German>
+		<Italian>Wonders of the Aegean</Italian>
+		<Spanish>Wonders of the Aegean</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_VICTORY_TITLE_GRE2</Tag>
-		<English>Alexander's Empire</English>
-		<French>L'empire d'Alexandre</French>
-		<German>Alexanders Reich</German>
-		<Italian>Alexander's Empire</Italian>
-		<Spanish>Alexander's Empire</Spanish>
+		<English>Athenian Thallasocracy</English>
+		<French>Athenian Thallasocracy</French>
+		<German>Athenian Thallasocracy</German>
+		<Italian>Athenian Thallasocracy</Italian>
+		<Spanish>Athenian Thallasocracy</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_VICTORY_TITLE_GRE3</Tag>
-		<English>Wonders of the Aegean</English>
-		<French>Les merveilles de la mer &#201;g&#233;e</French>
-		<German>Wunder der &#196;g&#228;is</German>
-		<Italian>Wonders of the Aegean</Italian>
-		<Spanish>Wonders of the Aegean</Spanish>
+		<English>Greek Golden Age</English>
+		<French>Greek Golden Age</French>
+		<German>Greek Golden Age</German>
+		<Italian>Greek Golden Age</Italian>
+		<Spanish>Greek Golden Age</Spanish>
 	</TEXT>
 	
 	<TEXT>
@@ -598,31 +1847,6 @@
 		<German>Urban Planning</German>
 		<Italian>Urban Planning</Italian>
 		<Spanish>Urban Planning</Spanish>
-	</TEXT>
-	
-	<TEXT>
-		<Tag>TXT_KEY_VICTORY_TITLE_HIT1</Tag>
-		<English>Metal Monopoly</English>
-		<French>Metal Monopoly</French>
-		<German>Metal Monopoly</German>
-		<Italian>Metal Monopoly</Italian>
-		<Spanish>Metal Monopoly</Spanish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_VICTORY_TITLE_HIT2</Tag>
-		<English>Monumental Architecture</English>
-		<French>Monumental Architecture</French>
-		<German>Monumental Architecture</German>
-		<Italian>Monumental Architecture</Italian>
-		<Spanish>Monumental Architecture</Spanish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_VICTORY_TITLE_HIT3</Tag>
-		<English>Treaty of Kadesh</English>
-		<French>Treaty of Kadesh</French>
-		<German>Treaty of Kadesh</German>
-		<Italian>Treaty of Kadesh</Italian>
-		<Spanish>Treaty of Kadesh</Spanish>
 	</TEXT>
 	
 	<TEXT>
@@ -801,31 +2025,6 @@
 	</TEXT>
 	
 	<TEXT>
-		<Tag>TXT_KEY_VICTORY_TITLE_JAV1</Tag>
-		<English>Dharmic Temple Compounds</English>
-		<French>Dharmic Temple Compounds</French>
-		<German>Dharmic Temple Compounds</German>
-		<Italian>Dharmic Temple Compounds</Italian>
-		<Spanish>Dharmic Temple Compounds</Spanish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_VICTORY_TITLE_JAV2</Tag>
-		<English>Emerald of the Equator</English>
-		<French>Emerald of the Equator</French>
-		<German>Emerald of the Equator</German>
-		<Italian>Emerald of the Equator</Italian>
-		<Spanish>Emerald of the Equator</Spanish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_VICTORY_TITLE_JAV3</Tag>
-		<English>Wali Sanga</English>
-		<French>Wali Sanga</French>
-		<German>Wali Sanga</German>
-		<Italian>Wali Sanga</Italian>
-		<Spanish>Wali Sanga</Spanish>
-	</TEXT>
-	
-	<TEXT>
 		<Tag>TXT_KEY_VICTORY_TITLE_KHM1</Tag>
 		<English>Sculpture and Architecture</English>
 		<French>Sculpture and Architecture</French>
@@ -848,31 +2047,6 @@
 		<German>Life-Giving Canals</German>
 		<Italian>Life-Giving Canals</Italian>
 		<Spanish>Life-Giving Canals</Spanish>
-	</TEXT>
-	
-	<TEXT>
-		<Tag>TXT_KEY_VICTORY_TITLE_KUS1</Tag>
-		<English>Greco-Buddhist Culture</English>
-		<French>Greco-Buddhist Culture</French>
-		<German>Greco-Buddhist Culture</German>
-		<Italian>Greco-Buddhist Culture</Italian>
-		<Spanish>Greco-Buddhist Culture</Spanish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_VICTORY_TITLE_KUS2</Tag>
-		<English>The Great Vehicle</English>
-		<French>The Great Vehicle</French>
-		<German>The Great Vehicle</German>
-		<Italian>The Great Vehicle</Italian>
-		<Spanish>The Great Vehicle</Spanish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_VICTORY_TITLE_KUS3</Tag>
-		<English>Pax Kushana</English>
-		<French>Pax Kushana</French>
-		<German>Pax Kushana</German>
-		<Italian>Pax Kushana</Italian>
-		<Spanish>Pax Kushana</Spanish>
 	</TEXT>
 	
 	<TEXT>
@@ -926,39 +2100,6 @@
 	</TEXT>
 	
 	<TEXT>
-		<Tag>TXT_KEY_VICTORY_TITLE_MAA1</Tag>
-		<English>The Spice Route</English>
-		<French>The Spice Route</French>
-		<German>The Spice Route</German>
-		<Italian>The Spice Route</Italian>
-		<Spanish>The Spice Route</Spanish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_VICTORY_TITLE_MAA2</Tag>
-		<English>Prosperous Excellence</English>
-		<French>Prosperous Excellence</French>
-		<German>Prosperous Excellence</German>
-		<Italian>Prosperous Excellence</Italian>
-		<Spanish>Prosperous Excellence</Spanish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_VICTORY_TITLE_MAA3</Tag>
-		<English>Porch of Mecca</English>
-		<French>Porch of Mecca</French>
-		<German>Porch of Mecca</German>
-		<Italian>Porch of Mecca</Italian>
-		<Spanish>Porch of Mecca</Spanish>
-	</TEXT>
-	
-	<TEXT>
-		<Tag>TXT_KEY_VICTORY_TITLE_MAL1</Tag>
-		<English>Caravans of the Sahara</English>
-		<French>Caravanes du Sahara </French>
-		<German>Karawanen der Sahara</German>
-		<Italian>Caravans of the Sahara</Italian>
-		<Spanish>Caravans of the Sahara</Spanish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_VICTORY_TITLE_MAL2</Tag>
 		<English>The Great Hajj</English>
 		<French>La grand hajj </French>
@@ -967,14 +2108,22 @@
 		<Spanish>The Great Hajj</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_VICTORY_TITLE_MAL3</Tag>
+		<Tag>TXT_KEY_VICTORY_TITLE_MAL1</Tag>
 		<English>The Madrassah of Timbuktu</English>
 		<French>La madrassa de Tombouctou</French>
 		<German>Die Madrasah von Timbuktu</German>
 		<Italian>The Madrassah of Timbuktu</Italian>
 		<Spanish>The Madrassah of Timbuktu</Spanish>
 	</TEXT>
-	
+	<TEXT>
+		<Tag>TXT_KEY_VICTORY_TITLE_MAL3</Tag>
+		<English>Caravans of the Sahara</English>
+		<French>Caravanes du Sahara </French>
+		<German>Karawanen der Sahara</German>
+		<Italian>Caravans of the Sahara</Italian>
+		<Spanish>Caravans of the Sahara</Spanish>
+	</TEXT>
+
 	<TEXT>
 		<Tag>TXT_KEY_VICTORY_TITLE_MAN1</Tag>
 		<English>Ten Great Campaigns</English>
@@ -1051,31 +2200,6 @@
 	</TEXT>
 	
 	<TEXT>
-		<Tag>TXT_KEY_VICTORY_TITLE_MIS1</Tag>
-		<English>Commander of the Faithful</English>
-		<French>Commander of the Faithful</French>
-		<German>Commander of the Faithful</German>
-		<Italian>Commander of the Faithful</Italian>
-		<Spanish>Commander of the Faithful</Spanish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_VICTORY_TITLE_MIS2</Tag>
-		<English>Wealth of the Nile</English>
-		<French>Wealth of the Nile</French>
-		<German>Wealth of the Nile</German>
-		<Italian>Wealth of the Nile</Italian>
-		<Spanish>Wealth of the Nile</Spanish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_VICTORY_TITLE_MIS3</Tag>
-		<English>Ali the Genie</English>
-		<French>Ali the Genie</French>
-		<German>Ali the Genie</German>
-		<Italian>Ali the Genie</Italian>
-		<Spanish>Ali the Genie</Spanish>
-	</TEXT>
-	
-	<TEXT>
 		<Tag>TXT_KEY_VICTORY_TITLE_MON1</Tag>
 		<English>The Yuan Dynasty</English>
 		<French>La dynastie Yuan </French>
@@ -1118,20 +2242,20 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_VICTORY_TITLE_MOO3</Tag>
-		<English>Barbary Corsairs</English>
-		<French>Corsaires barbaresques </French>
-		<German>Korsaren der Barbareskenk&#252;ste</German>
-		<Italian>Barbary Corsairs</Italian>
-		<Spanish>Barbary Corsairs</Spanish>
+		<English>Legacy of Ibn Battuta</English>
+		<French>Legacy of Ibn Battuta</French>
+		<German>Legacy of Ibn Battuta</German>
+		<Italian>Legacy of Ibn Battuta</Italian>
+		<Spanish>Legacy of Ibn Battuta</Spanish>
 	</TEXT>
 	
 	<TEXT>
 		<Tag>TXT_KEY_VICTORY_TITLE_MUG1</Tag>
-		<English>Muhammad ibn Tughluq</English>
-		<French>Mouhammed ibn Tughl&#251;q </French>
-		<German>Muhammad ibn Tughluq</German>
-		<Italian>Muhammad ibn Tughluq</Italian>
-		<Spanish>Muhammad ibn Tughluq</Spanish>
+		<English>Tamerlane</English>
+		<French>Tamerlane</French>
+		<German>Tamerlane</German>
+		<Italian>Tamerlane</Italian>
+		<Spanish>Tamerlane</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_VICTORY_TITLE_MUG2</Tag>
@@ -1148,56 +2272,6 @@
 		<German>Schah Dschahan</German>
 		<Italian>Shah Jahan</Italian>
 		<Spanish>Shah Jahan</Spanish>
-	</TEXT>
-	
-	<TEXT>
-		<Tag>TXT_KEY_VICTORY_TITLE_NOR1</Tag>
-		<English>Norman Conquests</English>
-		<French>Les conqu&#234;tes normandes </French>
-		<German>Normannische Eroberungen</German>
-		<Italian>Norman Conquests</Italian>
-		<Spanish>Norman Conquests</Spanish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_VICTORY_TITLE_NOR2</Tag>
-		<English>Vinland Saga</English>
-		<French>La saga du Vinland </French>
-		<German>Die Vinland-Saga</German>
-		<Italian>Vinland Saga</Italian>
-		<Spanish>Vinland Saga</Spanish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_VICTORY_TITLE_NOR3</Tag>
-		<English>Danegeld</English>
-		<French>Danegeld </French>
-		<German>Danegeld</German>
-		<Italian>Danegeld</Italian>
-		<Spanish>Danegeld</Spanish>
-	</TEXT>
-	
-	<TEXT>
-		<Tag>TXT_KEY_VICTORY_TITLE_NUB1</Tag>
-		<English>Kingdom of Kush</English>
-		<French>Kingdom of Kush</French>
-		<German>Kingdom of Kush</German>
-		<Italian>Kingdom of Kush</Italian>
-		<Spanish>Kingdom of Kush</Spanish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_VICTORY_TITLE_NUB2</Tag>
-		<English>The Twenty-Fifth Dynasty</English>
-		<French>The Twenty-Fifth Dynasty</French>
-		<German>The Twenty-Fifth Dynasty</German>
-		<Italian>The Twenty-Fifth Dynasty</Italian>
-		<Spanish>The Twenty-Fifth Dynasty</Spanish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_VICTORY_TITLE_NUB3</Tag>
-		<English>Coptic Orthodox Patriarchate</English>
-		<French>Coptic Orthodox Patriarchate</French>
-		<German>Coptic Orthodox Patriarchate</German>
-		<Italian>Coptic Orthodox Patriarchate</Italian>
-		<Spanish>Coptic Orthodox Patriarchate</Spanish>
 	</TEXT>
 	
 	<TEXT>
@@ -1235,19 +2309,19 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_VICTORY_TITLE_PER2</Tag>
-		<English>Greatest Empire of the World</English>
-		<French>Greatest Empire of the World</French>
-		<German>Greatest Empire of the World</German>
-		<Italian>Greatest Empire of the World</Italian>
-		<Spanish>Greatest Empire of the World</Spanish>
+		<English>Wonders of the World</English>
+		<French>Merveilles du monde </French>
+		<German>Die Weltwunder</German>
+		<Italian>Wonders of the World</Italian>
+		<Spanish>Wonders of the World</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_VICTORY_TITLE_PER3</Tag>
-		<English>Sasanian Golden Era</English>
-		<French>Sasanian Golden Era</French>
-		<German>Sasanian Golden Era</German>
-		<Italian>Sasanian Golden Era</Italian>
-		<Spanish>Sasanian Golden Era</Spanish>
+		<English>The First Empire</English>
+		<French>Le premier empire </French>
+		<German>Das erste Gro&#223;reich</German>
+		<Italian>The First Empire</Italian>
+		<Spanish>The First Empire</Spanish>
 	</TEXT>
 	
 	<TEXT>
@@ -1352,14 +2426,14 @@
 	
 	<TEXT>
 		<Tag>TXT_KEY_VICTORY_TITLE_RUS1</Tag>
-		<English>Third Rome</English>
-		<French>Third Rome</French>
-		<German>Third Rome</German>
-		<Italian>Third Rome</Italian>
-		<Spanish>Third Rome</Spanish>
+		<English>Eastward Expansion</English>
+		<French>Expansion vers l'est </French>
+		<German>Expansion nach Osten</German>
+		<Italian>Eastward Expansion</Italian>
+		<Spanish>Eastward Expansion</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_VICTORY_TITLE_RUS3</Tag>
+		<Tag>TXT_KEY_VICTORY_TITLE_RUS2</Tag>
 		<English>The Cold War</English>
 		<French>La Guerre froide </French>
 		<German>Der Kalte Krieg</German>
@@ -1367,14 +2441,14 @@
 		<Spanish>The Cold War</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_VICTORY_TITLE_RUS2</Tag>
-		<English>Siberian Frontier</English>
-		<French>Siberian Frontier</French>
-		<German>Siberian Frontier</German>
-		<Italian>Siberian Frontier</Italian>
-		<Spanish>Siberian Frontier</Spanish>
+		<Tag>TXT_KEY_VICTORY_TITLE_RUS3</Tag>
+		<English>The Iron Curtain</English>
+		<French>Le rideau de fer </French>
+		<German>Der Eiserne Vorhang</German>
+		<Italian>The Iron Curtain</Italian>
+		<Spanish>The Iron Curtain</Spanish>
 	</TEXT>
-	
+
 	<TEXT>
 		<Tag>TXT_KEY_VICTORY_TITLE_SAU1</Tag>
 		<English>Pan-Arabism</English>
@@ -1426,54 +2500,30 @@
 	</TEXT>
 	
 	<TEXT>
-		<Tag>TXT_KEY_VICTORY_TITLE_SWA1</Tag>
-		<English>Middlemen Traders</English>
-		<French>Middlemen Traders</French>
-		<German>Middlemen Traders</German>
-		<Italian>Middlemen Traders</Italian>
-		<Spanish>Middlemen Traders</Spanish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_VICTORY_TITLE_SWA2</Tag>
-		<English>Remote Coasts</English>
-		<French>Remote Coasts</French>
-		<German>Remote Coasts</German>
-		<Italian>Remote Coasts</Italian>
-		<Spanish>Remote Coasts</Spanish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_VICTORY_TITLE_SWA3</Tag>
+		<Tag>TXT_KEY_VICTORY_TITLE_DRA1</Tag>
 		<English>Indian Ocean Trade</English>
 		<French>Indian Ocean Trade</French>
 		<German>Indian Ocean Trade</German>
 		<Italian>Indian Ocean Trade</Italian>
 		<Spanish>Indian Ocean Trade</Spanish>
 	</TEXT>
-	
 	<TEXT>
-		<Tag>TXT_KEY_VICTORY_TITLE_SWE1</Tag>
-		<English>Lion of the North</English>
-		<French>Lion of the North</French>
-		<German>Lion of the North</German>
-		<Italian>Lion of the North</Italian>
-		<Spanish>Lion of the North</Spanish>
+		<Tag>TXT_KEY_VICTORY_TITLE_DRA2</Tag>
+		<English>The Chola Empire</English>
+		<French>L'empire Chola </French>
+		<German>Das Chola-Reich</German>
+		<Italian>The Chola Empire</Italian>
+		<Spanish>The Chola Empire</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_VICTORY_TITLE_SWE2</Tag>
-		<English>Dominium Maris Baltici</English>
-		<French>Dominium Maris Baltici</French>
-		<German>Dominium Maris Baltici</German>
-		<Italian>Dominium Maris Baltici</Italian>
-		<Spanish>Dominium Maris Baltici</Spanish>
+		<Tag>TXT_KEY_VICTORY_TITLE_DRA3</Tag>
+		<English>City of Victory</English>
+		<French>City of Victory</French>
+		<German>Stadt des Sieges</German>
+		<Italian>City of Victory</Italian>
+		<Spanish>City of Victory</Spanish>
 	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_VICTORY_TITLE_SWE3</Tag>
-		<English>Nordic Model</English>
-		<French>Nordic Model</French>
-		<German>Nordic Model</German>
-		<Italian>Nordic Model</Italian>
-		<Spanish>Nordic Model</Spanish>
-	</TEXT>
+
 	<TEXT>
 		<Tag>TXT_KEY_VICTORY_TITLE_TAT1</Tag>
 		<English>Tatar Yoke</English>
@@ -1548,107 +2598,79 @@
 		<Italian>The Dalai Lamas</Italian>
 		<Spanish>The Dalai Lamas</Spanish>
 	</TEXT>
-	
-	<TEXT>
-		<Tag>TXT_KEY_VICTORY_TITLE_TOL1</Tag>
-		<English>Place of Reeds</English>
-		<French>Place of Reeds</French>
-		<German>Place of Reeds</German>
-		<Italian>Place of Reeds</Italian>
-		<Spanish>Place of Reeds</Spanish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_VICTORY_TITLE_TOL2</Tag>
-		<English>Birthplace of the Gods</English>
-		<French>Birthplace of the Gods</French>
-		<German>Birthplace of the Gods</German>
-		<Italian>Birthplace of the Gods</Italian>
-		<Spanish>Birthplace of the Gods</Spanish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_VICTORY_TITLE_TOL3</Tag>
-		<English>Spearthrower Owl</English>
-		<French>Spearthrower Owl</French>
-		<German>Spearthrower Owl</German>
-		<Italian>Spearthrower Owl</Italian>
-		<Spanish>Spearthrower Owl</Spanish>
-	</TEXT>
-	
 	<TEXT>
 		<Tag>TXT_KEY_VICTORY_TITLE_TUR1</Tag>
-		<English>The Khaganate</English>
-		<French>Le khaganat </French>
-		<German>Das Gro&#223;khanat</German>
-		<Italian>The Khaganate</Italian>
-		<Spanish>The Khaganate</Spanish>
+		<English>Seljuk Empire</English>
+		<French>Seljuk Empire</French>
+		<German>Seljuk Empire</German>
+		<Italian>Seljuk Empire</Italian>
+		<Spanish>Seljuk Empire</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_VICTORY_TITLE_TUR2</Tag>
-		<English>The Silk Road</English>
-		<French>La route de la soie </French>
-		<German>Die Seidenstra&#223;e</German>
-		<Italian>The Silk Road</Italian>
-		<Spanish>The Silk Road</Spanish>
+		<English>Rules of Astrologers</English>
+		<French>Rules of Astrologers</French>
+		<German>Rules of Astrologers</German>
+		<Italian>Rules of Astrologers</Italian>
+		<Spanish>Rules of Astrologers</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_VICTORY_TITLE_TUR3</Tag>
-		<English>Patronage</English>
-		<French>M&#233;c&#233;nat </French>
-		<German>M&#228;zenat</German>
-		<Italian>Patronage</Italian>
-		<Spanish>Patronage</Spanish>
+		<English>Pan-Turkestan</English>
+		<French>Pan-Turkestan</French>
+		<German>Pan-Turkestan</German>
+		<Italian>Pan-Turkestan</Italian>
+		<Spanish>Pan-Turkestan</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_VICTORY_TITLE_NOR1</Tag>
+		<English>Norman Conquests</English>
+		<French>Les conqu&#234;tes normandes </French>
+		<German>Normannische Eroberungen</German>
+		<Italian>Norman Conquests</Italian>
+		<Spanish>Norman Conquests</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_VICTORY_TITLE_NOR2</Tag>
+		<English>Vinland Saga</English>
+		<French>La saga du Vinland </French>
+		<German>Die Vinland-Saga</German>
+		<Italian>Vinland Saga</Italian>
+		<Spanish>Vinland Saga</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_VICTORY_TITLE_NOR3</Tag>
+		<English>Danegeld</English>
+		<French>Danegeld </French>
+		<German>Danegeld</German>
+		<Italian>Danegeld</Italian>
+		<Spanish>Danegeld</Spanish>
 	</TEXT>
 	
 	<TEXT>
-		<Tag>TXT_KEY_VICTORY_TITLE_UKR1</Tag>
-		<English>Baptism of Rus</English>
-		<French>Baptism of Rus</French>
-		<German>Baptism of Rus</German>
-		<Italian>Baptism of Rus</Italian>
-		<Spanish>Baptism of Rus</Spanish>
+		<Tag>TXT_KEY_VICTORY_TITLE_NUB1</Tag>
+		<English>Kingdom of Kush</English>
+		<French>Kingdom of Kush</French>
+		<German>Kingdom of Kush</German>
+		<Italian>Kingdom of Kush</Italian>
+		<Spanish>Kingdom of Kush</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_VICTORY_TITLE_UKR2</Tag>
-		<English>Campaigns of Sviatoslav</English>
-		<French>Campaigns of Sviatoslav</French>
-		<German>Campaigns of Sviatoslav</German>
-		<Italian>Campaigns of Sviatoslav</Italian>
-		<Spanish>Campaigns of Sviatoslav</Spanish>
+		<Tag>TXT_KEY_VICTORY_TITLE_NUB2</Tag>
+		<English>The Twenty-Fifth Dynasty</English>
+		<French>The Twenty-Fifth Dynasty</French>
+		<German>The Twenty-Fifth Dynasty</German>
+		<Italian>The Twenty-Fifth Dynasty</Italian>
+		<Spanish>The Twenty-Fifth Dynasty</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_VICTORY_TITLE_UKR3</Tag>
-		<English>Sovereign Lord Novgorod the Great</English>
-		<French>Sovereign Lord Novgorod the Great</French>
-		<German>Sovereign Lord Novgorod the Great</German>
-		<Italian>Sovereign Lord Novgorod the Great</Italian>
-		<Spanish>Sovereign Lord Novgorod the Great</Spanish>
+		<Tag>TXT_KEY_VICTORY_TITLE_NUB3</Tag>
+		<English>Coptic Orthodox Patriarchate</English>
+		<French>Coptic Orthodox Patriarchate</French>
+		<German>Coptic Orthodox Patriarchate</German>
+		<Italian>Coptic Orthodox Patriarchate</Italian>
+		<Spanish>Coptic Orthodox Patriarchate</Spanish>
 	</TEXT>
-	
-	<TEXT>
-		<Tag>TXT_KEY_VICTORY_TITLE_VIE1</Tag>
-		<English>Face to Face with the Enemy</English>
-		<French>Face to Face with the Enemy</French>
-		<German>Face to Face with the Enemy</German>
-		<Italian>Face to Face with the Enemy</Italian>
-		<Spanish>Face to Face with the Enemy</Spanish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_VICTORY_TITLE_VIE2</Tag>
-		<English>Nam Tien</English>
-		<French>Nam Tien</French>
-		<German>Nam Tien</German>
-		<Italian>Nam Tien</Italian>
-		<Spanish>Nam Tien</Spanish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_VICTORY_TITLE_VIE3</Tag>
-		<English>Van Hoa Viet Nam</English>
-		<French>Van Hoa Viet Nam</French>
-		<German>Van Hoa Viet Nam</German>
-		<Italian>Van Hoa Viet Nam</Italian>
-		<Spanish>Van Hoa Viet Nam</Spanish>
-	</TEXT>
-	
 	
 	<!-- RELIGIOUS GOAL TITLES -->
 	
@@ -1801,6 +2823,32 @@
 		<Italian>Jihad</Italian>
 		<Spanish>Jihad</Spanish>
 	</TEXT>
+
+	<TEXT>
+		<Tag>TXT_KEY_VICTORY_TITLE_SHIA1</Tag>
+		<English>Ali-un-Wailulluah</English>
+		<French>Ali-un-Wailulluah</French>
+		<German>Ali-un-Wailulluah</German>
+		<Italian>Ali-un-Wailulluah</Italian>
+		<Spanish>Ali-un-Wailulluah</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_VICTORY_TITLE_SHIA2</Tag>
+		<English>Ismah</English>
+		<French>Ismah</French>
+		<German>Ismah</German>
+		<Italian>Ismah</Italian>
+		<Spanish>Ismah</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_VICTORY_TITLE_SHIA3</Tag>
+		<English>al-Mahdi</English>
+		<French>al-Mahdi</French>
+		<German>al-Mahdi</German>
+		<Italian>al-Mahdi</Italian>
+		<Spanish>al-Mahdi</Spanish>
+	</TEXT>
+
 	
 	<TEXT>
 		<Tag>TXT_KEY_VICTORY_TITLE_ORTH1</Tag>
@@ -1850,30 +2898,5 @@
 		<German>Sola Scriptura</German>
 		<Italian>Sola Scriptura</Italian>
 		<Spanish>Sola Scriptura</Spanish>
-	</TEXT>
-	
-	<TEXT>
-		<Tag>TXT_KEY_VICTORY_TITLE_1</Tag>
-		<English></English>
-		<French></French>
-		<German></German>
-		<Italian></Italian>
-		<Spanish></Spanish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_VICTORY_TITLE_2</Tag>
-		<English></English>
-		<French></French>
-		<German></German>
-		<Italian></Italian>
-		<Spanish></Spanish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_VICTORY_TITLE_3</Tag>
-		<English></English>
-		<French></French>
-		<German></German>
-		<Italian></Italian>
-		<Spanish></Spanish>
 	</TEXT>
 </Civ4GameText>

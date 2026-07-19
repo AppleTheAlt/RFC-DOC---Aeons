@@ -2,6 +2,650 @@
 <!-- Units -->
 <Civ4GameText>
 	<TEXT>
+		<Tag>TXT_KEY_UNIT_GREAT_STATESMAN_HELP</Tag>
+		<English>[ICON_BULLET]Can Purge Corruption</English>
+		<French>[ICON_BULLET]Can Purge Corruption</French>
+		<German>[ICON_BULLET]Can Purge Corruption</German>
+		<Italian>[ICON_BULLET]Can Purge Corruption</Italian>
+		<Spanish>[ICON_BULLET]Can Purge Corruption</Spanish>
+	</TEXT>
+	<TEXT>
+ 		<Tag>TXT_KEY_UNIT_CAMEL_LANCER</Tag>
+ 		<English>Camel Lancer</English>
+ 		<French>Camel Lancer</French>
+ 		<German>Camel Lancer</German>
+ 		<Italian>Camel Lancer</Italian>
+ 		<Spanish>Camel Lancer</Spanish>
+ 	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_MALAGASY_PIROGUE</Tag>
+		<English>Pirogue</English>
+		<French>Pirogue</French>
+		<German>Pirogue</German>
+		<Italian>Pirogue</Italian>
+		<Spanish>Pirogue</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_MALAGASY_FOLOALINDAHY</Tag>
+		<English>Foloalindahy</English>
+		<French>Foloalindahy</French>
+		<German>Foloalindahy</German>
+		<Italian>Foloalindahy</Italian>
+		<Spanish>Foloalindahy</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_FUNJ_SHUKURI</Tag>
+		<English>Shukuri</English>
+		<French>Shukuri</French>
+		<German>Shukuri</German>
+		<Italian>Shukuri</Italian>
+		<Spanish>Shukuri</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_FUNJ_YEMENI_HAJANA</Tag>
+		<English>Hajana</English>
+		<French>Hajana</French>
+		<German>Hajana</German>
+		<Italian>Hajana</Italian>
+		<Spanish>Hajana</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_ZIMBABWEAN_ROZWI_WARRIOR</Tag>
+		<English>Rozwi Warrior</English>
+		<French>Rozwi Warrior</French>
+		<German>Rozwi Warrior</German>
+		<Italian>Rozwi Warrior</Italian>
+		<Spanish>Rozwi Warrior</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_ADALITE_MALASSAY</Tag>
+		<English>Malassay</English>
+		<French>Malassay</French>
+		<German>Malassay</German>
+		<Italian>Malassay</Italian>
+		<Spanish>Malassay</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_SOMALI_GUULWADAYAAL</Tag>
+		<English>Guulwadayaal</English>
+		<French>Guulwadayaal</French>
+		<German>Guulwadayaal</German>
+		<Italian>Guulwadayaal</Italian>
+		<Spanish>Guulwadayaal</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_SOMALI_BEDEN</Tag>
+		<English>Beden</English>
+		<French>Beden</French>
+		<German>Beden</German>
+		<Italian>Beden</Italian>
+		<Spanish>Beden</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_KATANGESE_KALAKA</Tag>
+		<English>Kalaka</English>
+		<French>Kalaka</French>
+		<German>Kalaka</German>
+		<Italian>Kalaka</Italian>
+		<Spanish>Kalaka</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_BUGANDAN_ABAMBOWA</Tag>
+		<English>Abambowa</English>
+		<French>Abambowa</French>
+		<German>Abambowa</German>
+		<Italian>Abambowa</Italian>
+		<Spanish>Abambowa</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_SOUTH_AFRICAN_COMMANDO</Tag>
+		<English>Commando Infantry</English>
+		<French>Commando Infantry</French>
+		<German>Commando Infantry</German>
+		<Italian>Commando Infantry</Italian>
+		<Spanish>Commando Infantry</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_BOER_BITTEREINDER</Tag>
+		<English>Bittereinder</English>
+		<French>Bittereinder</French>
+		<German>Bittereinder</German>
+		<Italian>Bittereinder</Italian>
+		<Spanish>Bittereinder</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_ZIMBABWEAN_ASSEGAI_WIELDER_HELP</Tag>
+		<English>[ICON_BULLET]Receives [ICON_PRODUCTION] for Defeating Enemy Units</English>
+		<French>[ICON_BULLET]Receives [ICON_PRODUCTION] for Defeating Enemy Units</French>
+		<German>[ICON_BULLET]Receives [ICON_PRODUCTION] for Defeating Enemy Units</German>
+		<Italian>[ICON_BULLET]Receives [ICON_PRODUCTION] for Defeating Enemy Units</Italian>
+		<Spanish>[ICON_BULLET]Receives [ICON_PRODUCTION] for Defeating Enemy Units</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_ZIMBABWEAN_ASSEGAI_WIELDER</Tag>
+		<English>Assegai Wielder</English>
+		<French>Assegai Wielder</French>
+		<German>Assegai Wielder</German>
+		<Italian>Assegai Wielder</Italian>
+		<Spanish>Assegai Wielder</Spanish>
+	</TEXT>
+	<TEXT>
+ 		<Tag>TXT_KEY_UNIT_FIDAI</Tag>
+ 		<English>Fida'i</English>
+ 		<French>Fida'i</French>
+ 		<German>Fida'i</German>
+ 		<Italian>Fida'i</Italian>
+ 		<Spanish>Fida'i</Spanish>
+ 	</TEXT>
+	<TEXT>
+ 		<Tag>TXT_KEY_UNIT_WARRIOR_MONK</Tag>
+ 		<English>Warrior Monk</English>
+ 		<French>Warrior Monk</French>
+ 		<German>Warrior Monk</German>
+ 		<Italian>Warrior Monk</Italian>
+ 		<Spanish>Warrior Monk</Spanish>
+ 	</TEXT>
+	<TEXT>
+ 		<Tag>TXT_KEY_UNIT_KSHATRIYA</Tag>
+ 		<English>Kshatriya</English>
+ 		<French>Kshatriya</French>
+ 		<German>Kshatriya</German>
+ 		<Italian>Kshatriya</Italian>
+ 		<Spanish>Kshatriya</Spanish>
+ 	</TEXT>
+	<TEXT>
+ 		<Tag>TXT_KEY_UNIT_JERUSALEMITE_CRUSADER_HELP</Tag>
+ 		<English>[ICON_BULLET]Requires The Knight's Templar</English>
+ 		<French>[ICON_BULLET]Requires The Knight's Templar</French>
+ 		<German>[ICON_BULLET]Requires The Knight's Templar</German>
+ 		<Italian>[ICON_BULLET]Requires The Knight's Templar</Italian>
+ 		<Spanish>[ICON_BULLET]Requires The Knight's Templar</Spanish>
+ 	</TEXT>
+	<TEXT>
+ 		<Tag>TXT_KEY_UNIT_ARMOURED_HORSEMAN</Tag>
+ 		<English>Armoured Horseman</English>
+ 		<French>Armoured Horseman</French>
+ 		<German>Armoured Horseman</German>
+ 		<Italian>Armoured Horseman</Italian>
+ 		<Spanish>Armoured Horseman</Spanish>
+ 	</TEXT>
+	<TEXT>
+ 		<Tag>TXT_KEY_UNIT_OMANI_SLAVER</Tag>
+ 		<English>Slave Hunter</English>
+ 		<French>Slave Hunter</French>
+ 		<German>Slave Hunter</German>
+ 		<Italian>Slave Hunter</Italian>
+ 		<Spanish>Slave Hunter</Spanish>
+ 	</TEXT>
+	<TEXT>
+ 		<Tag>TXT_KEY_UNIT_BERBER_FARIS</Tag>
+ 		<English>Berber Faris</English>
+ 		<French>Berber Faris</French>
+ 		<German>Berber Faris</German>
+ 		<Italian>Berber Faris</Italian>
+ 		<Spanish>Berber Faris</Spanish>
+ 	</TEXT>
+	<TEXT>
+ 		<Tag>TXT_KEY_UNIT_ZULU_IMPI</Tag>
+ 		<English>Impi</English>
+ 		<French>Impi</French>
+ 		<German>Impi</German>
+ 		<Italian>Impi</Italian>
+ 		<Spanish>Impi</Spanish>
+ 	</TEXT>
+	<TEXT>
+ 		<Tag>TXT_KEY_UNIT_ASHANTI_TWAFO</Tag>
+ 		<English>Twafo</English>
+ 		<French>Twafo</French>
+ 		<German>Twafo</German>
+ 		<Italian>Twafo</Italian>
+ 		<Spanish>Twafo</Spanish>
+ 	</TEXT>
+	<TEXT>
+ 		<Tag>TXT_KEY_UNIT_HAUSAN_MUJAHID</Tag>
+ 		<English>Mujahid</English>
+ 		<French>Mujahid</French>
+ 		<German>Mujahid</German>
+ 		<Italian>Mujahid</Italian>
+ 		<Spanish>Mujahid</Spanish>
+ 	</TEXT>
+	<TEXT>
+ 		<Tag>TXT_KEY_UNIT_HAUSAN_YAN_LIFIDA</Tag>
+ 		<English>Yan Lifida</English>
+ 		<French>Yan Lifida</French>
+ 		<German>Yan Lifida</German>
+ 		<Italian>Yan Lifida</Italian>
+ 		<Spanish>Yan Lifida</Spanish>
+ 	</TEXT>
+	<TEXT>
+ 		<Tag>TXT_KEY_UNIT_BENINESE_IYOBA_REGIMENT</Tag>
+ 		<English>Iyoba Warrior</English>
+ 		<French>Iyoba Warrior</French>
+ 		<German>Iyoba Warrior</German>
+ 		<Italian>Iyoba Warrior</Italian>
+ 		<Spanish>Iyoba Warrior</Spanish>
+ 	</TEXT>
+	<TEXT>
+ 		<Tag>TXT_KEY_UNIT_KANEM_BORNUAN_IRONHELM</Tag>
+ 		<English>Ironhelm</English>
+ 		<French>Ironhelm</French>
+ 		<German>Ironhelm</German>
+ 		<Italian>Ironhelm</Italian>
+ 		<Spanish>Ironhelm</Spanish>
+ 	</TEXT>
+	<TEXT>
+ 		<Tag>TXT_KEY_UNIT_KANEM_BORNUAN_CARAVAN</Tag>
+ 		<English>Caravan</English>
+ 		<French>Caravan</French>
+ 		<German>Caravan</German>
+ 		<Italian>Caravan</Italian>
+ 		<Spanish>Caravan</Spanish>
+ 	</TEXT>
+	<TEXT>
+ 		<Tag>TXT_KEY_UNIT_KANEM_BORNUAN_CARAVAN_HELP</Tag>
+ 		<English>[ICON_BULLET]Cannot Be Hurried</English>
+ 		<French>[ICON_BULLET]Cannot Be Hurried</French>
+ 		<German>[ICON_BULLET]Cannot Be Hurried</German>
+ 		<Italian>[ICON_BULLET]Cannot Be Hurried</Italian>
+ 		<Spanish>[ICON_BULLET]Cannot Be Hurried</Spanish>
+ 	</TEXT>
+	<TEXT>
+ 		<Tag>TXT_KEY_UNIT_SONGHAI_GUY</Tag>
+ 		<English>Guy</English>
+ 		<French>Guy</French>
+ 		<German>Guy</German>
+ 		<Italian>Guy</Italian>
+ 		<Spanish>Guy</Spanish>
+ 	</TEXT>
+	<TEXT>
+ 		<Tag>TXT_KEY_UNIT_GHANAIAN_JONOW</Tag>
+ 		<English>Jonow</English>
+ 		<French>Jonow</French>
+ 		<German>Jonow</German>
+ 		<Italian>Jonow</Italian>
+ 		<Spanish>Jonow</Spanish>
+ 	</TEXT>
+	<TEXT>
+ 		<Tag>UNIT_KHAZAR_NOBLE_LANCER</Tag>
+ 		<English>Tarkhan</English>
+ 		<French>Tarkhan</French>
+ 		<German>Tarkhan</German>
+ 		<Italian>Tarkhan</Italian>
+ 		<Spanish>Tarkhan</Spanish>
+ 	</TEXT>
+	<TEXT>
+ 		<Tag>TXT_KEY_UNIT_VIETNAMESE_VIET_CONG</Tag>
+ 		<English>Viet Cong</English>
+ 		<French>Viet Cong</French>
+ 		<German>Viet Cong</German>
+ 		<Italian>Viet Cong</Italian>
+ 		<Spanish>Viet Cong</Spanish>
+ 	</TEXT>
+	<TEXT>
+ 		<Tag>TXT_KEY_UNIT_CELTIC_GALLOWGLASS</Tag>
+ 		<English>Gallowglass</English>
+ 		<French>Gallowglass</French>
+ 		<German>Gallowglass</German>
+ 		<Italian>Gallowglass</Italian>
+ 		<Spanish>Gallowglass</Spanish>
+ 	</TEXT>
+	<TEXT>
+ 		<Tag>TXT_KEY_UNIT_IRANIAN_ZAMBURAK</Tag>
+ 		<English>Zamburak</English>
+ 		<French>Zamburak</French>
+ 		<German>Zamburak</German>
+ 		<Italian>Zamburak</Italian>
+ 		<Spanish>Zamburak</Spanish>
+ 	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_BARBARY_PIRATE_HELP</Tag>
+		<English>Guaranteed to capture slaves against other religions with slavery enabled</English>
+		<French>Guaranteed to capture slaves against other religions with slavery enabled</French>
+		<German>Guaranteed to capture slaves against other religions with slavery enabled</German>
+		<Italian>Guaranteed to capture slaves against other religions with slavery enabled</Italian>
+		<Spanish>Guaranteed to capture slaves against other religions with slavery enabled</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_LEVYMAN</Tag>
+		<English>Levyman</English>
+		<French>Levyman</French>
+		<German>Levyman</German>
+		<Italian>Levyman</Italian>
+		<Spanish>Levyman</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_SHORTBOWMAN</Tag>
+		<English>Shortbowman</English>
+		<French>Shortbowman</French>
+		<German>Shortbowman</German>
+		<Italian>Shortbowman</Italian>
+		<Spanish>Shortbowman</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_GHURID_VETERAN_SPEARS</Tag>
+		<English>Mujahideen Spearman</English>
+		<French>Mujahideen Spearman</French>
+		<German>Mujahideen Spearman</German>
+		<Italian>Mujahideen Spearman</Italian>
+		<Spanish>Mujahideen Spearman</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_GEORGIAN_MONASPA</Tag>
+		<English>Monaspa</English>
+		<French>
+			<Text>Monaspa</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>Monaspa</German>
+		<Italian>Monaspa</Italian>
+		<Spanish>Monaspa</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_JERUSALEMITE_CRUSADER</Tag>
+		<English>Crusader</English>
+		<French>
+			<Text>Crusader</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>Crusader</German>
+		<Italian>Crusader</Italian>
+		<Spanish>Crusader</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_JERUSALEMITE_HOSPITALLER</Tag>
+		<English>Hospitaller</English>
+		<French>
+			<Text>Hospitaller</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>Hospitaller</German>
+		<Italian>Hospitaller</Italian>
+		<Spanish>Hospitaller</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_OMANI_BAGHLAH</Tag>
+		<English>Baghlah</English>
+		<French>
+			<Text>Baghlah</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>Baghlah</German>
+		<Italian>Baghlah</Italian>
+		<Spanish>Baghlah</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_YEMENI_BEDOUIN_SHEIKH</Tag>
+		<English>Bedouin Sheikh</English>
+		<French>
+			<Text>Bedouin Sheikh</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>Bedouin Sheikh</German>
+		<Italian>Bedouin Sheikh</Italian>
+		<Spanish>Bedouin Sheikh</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_TUNISIAN_BARBARY_PIRATE</Tag>
+		<English>Barbary Pirate</English>
+		<French>
+			<Text>Barbary Pirate</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>Barbary Pirate</German>
+		<Italian>Barbary Pirate</Italian>
+		<Spanish>Barbary Pirate</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_GOKTURK_ASHINA</Tag>
+		<English>Ashina</English>
+		<French>
+			<Text>Ashina</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>Ashina</German>
+		<Italian>Ashina</Italian>
+		<Spanish>Ashina</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_BUYID_DAYLAMITE</Tag>
+		<English>Daylamite</English>
+		<French>
+			<Text>Daylamite</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>Daylamite</German>
+		<Italian>Daylamite</Italian>
+		<Spanish>Daylamite</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_SAMANID_DEHQAN_ARCHER</Tag>
+		<English>Dehqan Archer</English>
+		<French>
+			<Text>Dehqan Archer</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>Dehqan Archer</German>
+		<Italian>Dehqan Archer</Italian>
+		<Spanish>Dehqan Archer</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_SHIA_MISSIONARY</Tag>
+		<English>Shia Imam</English>
+		<French>
+			<Text>Shia Imam</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>Shia Imam</German>
+		<Italian>Shia Imam</Italian>
+		<Spanish>Shia Imam</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_MAMLUK_HAND_CANNON</Tag>
+		<English>Hand Cannon</English>
+		<French>
+			<Text>Hand Cannon</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>Hand Cannon</German>
+		<Italian>Hand Cannon</Italian>
+		<Spanish>Hand Cannon</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_MAMLUK_CAVALRY</Tag>
+		<English>Ghulam Cavalry</English>
+		<French>
+			<Text>Ghulam Cavalry</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>Ghulam Cavalry</German>
+		<Italian>Ghulam Cavalry</Italian>
+		<Spanish>Ghulam Cavalry</Spanish>
+	</TEXT>
+
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_ARMENIAN_AYRUDZI</Tag>
+		<English>Ayrudzi</English>
+		<French>
+			<Text>Ayrudzi</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>Ayrudzi</German>
+		<Italian>Ayrudzi</Italian>
+		<Spanish>Ayrudzi</Spanish>
+	</TEXT>
+
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_SCYTHIAN_ASPABARATA</Tag>
+		<English>Aspabarata</English>
+		<French>
+			<Text>Aspabarata</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>Aspabarata</German>
+		<Italian>Aspabarata</Italian>
+		<Spanish>Aspabarata</Spanish>
+	</TEXT>
+
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_NUMIDIAN_JAVELINEER</Tag>
+		<English>Javelineer</English>
+		<French>
+			<Text>Javelineer</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>Javelineer</German>
+		<Italian>Javelineer</Italian>
+		<Spanish>Javelineer</Spanish>
+	</TEXT>
+
+
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_VANDAL_FLOTILLA</Tag>
+		<English>Flotilla</English>
+		<French>
+			<Text>Flotilla</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>Flotilla</German>
+		<Italian>Flotilla</Italian>
+		<Spanish>Flotilla</Spanish>
+	</TEXT>
+
+	
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_HUNNIC_HEAVY_HORSE_ARCHER</Tag>
+		<English>Heavy Horse Archer</English>
+		<French>
+			<Text>Heavy Horse Archer</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>Heavy Horse Archer</German>
+		<Italian>Heavy Horse Archer</Italian>
+		<Spanish>Heavy Horse Archer</Spanish>
+	</TEXT>
+
+
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_GOTHIC_KONTOS_CAVALRY</Tag>
+		<English>Kontos Cavalry</English>
+		<French>
+			<Text>Kontos Cavalry</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>Kontos Cavalry</German>
+		<Italian>Kontos Cavalry</Italian>
+		<Spanish>Kontos Cavalry</Spanish>
+	</TEXT>
+
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_GERMANIC_WARRIOR</Tag>
+		<English>Germanic Warrior</English>
+		<French>
+			<Text>Germanic Warrior</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>Germanic Warrior</German>
+		<Italian>Germanic Warrior</Italian>
+		<Spanish>Germanic Warrior</Spanish>
+	</TEXT>
+
+
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_IRON_AXEMAN</Tag>
+		<English>Iron Axeman</English>
+		<French>
+			<Text>Iron Axeman</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>Iron Axeman</German>
+		<Italian>Iron Axeman</Italian>
+		<Spanish>Iron Axeman</Spanish>
+	</TEXT>
+
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_SPARTAN_SPARTIATE</Tag>
+		<English>Spartiate</English>
+		<French>
+			<Text>Spartiate</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>Spartiate</German>
+		<Italian>Spartiate</Italian>
+		<Spanish>Spartiate</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_MYCENAEAN_TROJAN_HORSE</Tag>
+		<English>Trojan Horse</English>
+		<French>
+			<Text>Trojan Horse</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>Trojan Horse</German>
+		<Italian>Trojan Horse</Italian>
+		<Spanish>Trojan Horse</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_JUDEAN_MACCABEE</Tag>
+		<English>Maccabee</English>
+		<French>
+			<Text>Maccabee</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>Maccabee</German>
+		<Italian>Maccabee</Italian>
+		<Spanish>Maccabee</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_ELAMITE_HORNED_WARRIOR</Tag>
+		<English>Horned Warrior</English>
+		<French>
+			<Text>Horned Warrior</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>Horned Warrior</German>
+		<Italian>Horned Warrior</Italian>
+		<Spanish>Horned Warrior</Spanish>
+	</TEXT>
+
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_MINOAN_FISHINGBOAT</Tag>
+		<English>Fishing Ship</English>
+		<French>
+			<Text>Fishing Ship</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>Fishing Ship</German>
+		<Italian>Fishing Ship</Italian>
+		<Spanish>Fishing Ship</Spanish>
+	</TEXT>
+	<TEXT>
+
+
 		<Tag>TXT_KEY_UNIT_ARGENTINE_GRENADIER_CAVALRY</Tag>
 		<English>Grenadier Cavalry</English>
 		<French>
@@ -48,10 +692,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_ARGENTINE_GRENADIER_CAVALRY_STRATEGY</Tag>
 		<English>The [COLOR_UNIT_TEXT]Grenadier Cavalry[COLOR_REVERT], the Argentine replacement for the [COLOR_UNIT_TEXT]Dragoon[COLOR_REVERT], has a combat bonus against [COLOR_UNIT_TEXT]Musketeer[COLOR_REVERT] and [COLOR_UNIT_TEXT]Rifleman[COLOR_REVERT] units and starts with the [COLOR_HIGHLIGHT_TEXT]City Raider I[COLOR_REVERT] promotion.</English>
-		<French>The [COLOR_UNIT_TEXT]Grenadier Cavalry[COLOR_REVERT], the Argentine replacement for the [COLOR_UNIT_TEXT]Dragoon[COLOR_REVERT], has a combat bonus against [COLOR_UNIT_TEXT]Musketeer[COLOR_REVERT] and [COLOR_UNIT_TEXT]Rifleman[COLOR_REVERT] units and starts with the [COLOR_HIGHLIGHT_TEXT]City Raider I[COLOR_REVERT] promotion.</French>
-		<German>The [COLOR_UNIT_TEXT]Grenadier Cavalry[COLOR_REVERT], the Argentine replacement for the [COLOR_UNIT_TEXT]Dragoon[COLOR_REVERT], has a combat bonus against [COLOR_UNIT_TEXT]Musketeer[COLOR_REVERT] and [COLOR_UNIT_TEXT]Rifleman[COLOR_REVERT] units and starts with the [COLOR_HIGHLIGHT_TEXT]City Raider I[COLOR_REVERT] promotion.</German>
-		<Italian>The [COLOR_UNIT_TEXT]Grenadier Cavalry[COLOR_REVERT], the Argentine replacement for the [COLOR_UNIT_TEXT]Dragoon[COLOR_REVERT], has a combat bonus against [COLOR_UNIT_TEXT]Musketeer[COLOR_REVERT] and [COLOR_UNIT_TEXT]Rifleman[COLOR_REVERT] units and starts with the [COLOR_HIGHLIGHT_TEXT]City Raider I[COLOR_REVERT] promotion.</Italian>
-		<Spanish>The [COLOR_UNIT_TEXT]Grenadier Cavalry[COLOR_REVERT], the Argentine replacement for the [COLOR_UNIT_TEXT]Dragoon[COLOR_REVERT], has a combat bonus against [COLOR_UNIT_TEXT]Musketeer[COLOR_REVERT] and [COLOR_UNIT_TEXT]Rifleman[COLOR_REVERT] units and starts with the [COLOR_HIGHLIGHT_TEXT]City Raider I[COLOR_REVERT] promotion.</Spanish>
+ 		<French>The [COLOR_UNIT_TEXT]Grenadier Cavalry[COLOR_REVERT], the Argentine replacement for the [COLOR_UNIT_TEXT]Dragoon[COLOR_REVERT], has a combat bonus against [COLOR_UNIT_TEXT]Musketeer[COLOR_REVERT] and [COLOR_UNIT_TEXT]Rifleman[COLOR_REVERT] units and starts with the [COLOR_HIGHLIGHT_TEXT]City Raider I[COLOR_REVERT] promotion.</French>
+ 		<German>The [COLOR_UNIT_TEXT]Grenadier Cavalry[COLOR_REVERT], the Argentine replacement for the [COLOR_UNIT_TEXT]Dragoon[COLOR_REVERT], has a combat bonus against [COLOR_UNIT_TEXT]Musketeer[COLOR_REVERT] and [COLOR_UNIT_TEXT]Rifleman[COLOR_REVERT] units and starts with the [COLOR_HIGHLIGHT_TEXT]City Raider I[COLOR_REVERT] promotion.</German>
+ 		<Italian>The [COLOR_UNIT_TEXT]Grenadier Cavalry[COLOR_REVERT], the Argentine replacement for the [COLOR_UNIT_TEXT]Dragoon[COLOR_REVERT], has a combat bonus against [COLOR_UNIT_TEXT]Musketeer[COLOR_REVERT] and [COLOR_UNIT_TEXT]Rifleman[COLOR_REVERT] units and starts with the [COLOR_HIGHLIGHT_TEXT]City Raider I[COLOR_REVERT] promotion.</Italian>
+ 		<Spanish>The [COLOR_UNIT_TEXT]Grenadier Cavalry[COLOR_REVERT], the Argentine replacement for the [COLOR_UNIT_TEXT]Dragoon[COLOR_REVERT], has a combat bonus against [COLOR_UNIT_TEXT]Musketeer[COLOR_REVERT] and [COLOR_UNIT_TEXT]Rifleman[COLOR_REVERT] units and starts with the [COLOR_HIGHLIGHT_TEXT]City Raider I[COLOR_REVERT] promotion.</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_ARTILLERY_STRATEGY</Tag>
@@ -666,6 +1310,18 @@
 		<Spanish>Great Statesman</Spanish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_UNIT_GREAT_TREKKER</Tag>
+		<English>Great Trekker</English>
+		<French>
+			<Text>Great Trekker</Text>
+			<Gender>Male:Female</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>Great Trekker</German>
+		<Italian>Great Trekker</Italian>
+		<Spanish>Great Trekker</Spanish>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_UNIT_GREEK_HOPLITE</Tag>
 		<English>Hoplite</English>
 		<French>
@@ -1264,6 +1920,14 @@
 		<German>[ICON_BULLET]Receives [ICON_GOLD] for Sinking Enemy Ships</German>
 		<Italian>[ICON_BULLET]Receives [ICON_GOLD] for Sinking Enemy Ships</Italian>
 		<Spanish>[ICON_BULLET]Receives [ICON_GOLD] for Sinking Enemy Ships</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_GOLDDEFEAT_HELP</Tag>
+		<English>[ICON_BULLET]Receives [ICON_GOLD] for Defeating Enemy Units</English>
+		<French>[ICON_BULLET]Re&#231;oit de l'[ICON_GOLD] en Defeating Enemy Units</French>
+		<German>[ICON_BULLET]Receives [ICON_GOLD] for Defeating Enemy Units</German>
+		<Italian>[ICON_BULLET]Receives [ICON_GOLD] for Defeating Enemy Units</Italian>
+		<Spanish>[ICON_BULLET]Receives [ICON_GOLD] for Defeating Enemy Units</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_MOORISH_CORSAIR_STRATEGY</Tag>
@@ -2119,7 +2783,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_ISLAMIC_MISSIONARY</Tag>
-		<English>Islamic Imam</English>
+		<English>Sunni Imam</English>
 		<French>
 			<Text>Imam musulman</Text>
 			<Gender>Male</Gender>
@@ -3235,11 +3899,11 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_PORTUGUESE_BANDEIRANTE_HELP</Tag>
-		<English>[ICON_BULLET]Can Capture [LINK=UNIT_SLAVE]Slaves[\LINK] Regardless of Civics[NEWLINE][ICON_BULLET]Guaranteed to Capture [LINK=UNIT_SLAVE]Slaves[\LINK]</English>
+		<English>[ICON_BULLET]Can Capture [LINK=UNIT_SLAVE]Slaves[\LINK] Regardless of Civics[NEWLINE][ICON_BULLET]Guaranteed to Capture [LINK=UNIT_SLAVE]Slaves[\LINK] from Natives</English>
 		<French>[ICON_BULLET]Can Capture [LINK=UNIT_SLAVE]Slaves[\LINK] Regardless of Civics[NEWLINE][ICON_BULLET]Capture d'[LINK=UNIT_SLAVE]esclaves[\LINK] garantie</French>
-		<German>[ICON_BULLET]Can Capture [LINK=UNIT_SLAVE]Slaves[\LINK] Regardless of Civics[NEWLINE][ICON_BULLET]Guaranteed to Capture [LINK=UNIT_SLAVE]Slaves[\LINK]</German>
-		<Italian>[ICON_BULLET]Can Capture [LINK=UNIT_SLAVE]Slaves[\LINK] Regardless of Civics[NEWLINE][ICON_BULLET]Guaranteed to Capture [LINK=UNIT_SLAVE]Slaves[\LINK]</Italian>
-		<Spanish>[ICON_BULLET]Can Capture [LINK=UNIT_SLAVE]Slaves[\LINK] Regardless of Civics[NEWLINE][ICON_BULLET]Guaranteed to Capture [LINK=UNIT_SLAVE]Slaves[\LINK]</Spanish>
+		<German>[ICON_BULLET]Can Capture [LINK=UNIT_SLAVE]Slaves[\LINK] Regardless of Civics[NEWLINE][ICON_BULLET]Guaranteed to Capture [LINK=UNIT_SLAVE]Slaves[\LINK] from Natives</German>
+		<Italian>[ICON_BULLET]Can Capture [LINK=UNIT_SLAVE]Slaves[\LINK] Regardless of Civics[NEWLINE][ICON_BULLET]Guaranteed to Capture [LINK=UNIT_SLAVE]Slaves[\LINK] from Natives</Italian>
+		<Spanish>[ICON_BULLET]Can Capture [LINK=UNIT_SLAVE]Slaves[\LINK] Regardless of Civics[NEWLINE][ICON_BULLET]Guaranteed to Capture [LINK=UNIT_SLAVE]Slaves[\LINK] from Natives</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_PORTUGUESE_BANDEIRANTE_STRATEGY</Tag>
@@ -3284,10 +3948,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_INDIAN_VARU_STRATEGY</Tag>
 		<English>The [COLOR_UNIT_TEXT]Varu[COLOR_REVERT], the Indian replacement for the [COLOR_UNIT_TEXT]War Elephant[COLOR_REVERT], begins with the [COLOR_HIGHLIGHT_TEXT]Shock[COLOR_REVERT] promotion.</English>
-		<French>The [COLOR_UNIT_TEXT]Varu[COLOR_REVERT], the Indian replacement for the [COLOR_UNIT_TEXT]War Elephant[COLOR_REVERT], begins with the [COLOR_HIGHLIGHT_TEXT]Shock[COLOR_REVERT] promotion.</French>
-		<German>The [COLOR_UNIT_TEXT]Varu[COLOR_REVERT], the Indian replacement for the [COLOR_UNIT_TEXT]War Elephant[COLOR_REVERT], begins with the [COLOR_HIGHLIGHT_TEXT]Shock[COLOR_REVERT] promotion.</German>
-		<Italian>The [COLOR_UNIT_TEXT]Varu[COLOR_REVERT], the Indian replacement for the [COLOR_UNIT_TEXT]War Elephant[COLOR_REVERT], begins with the [COLOR_HIGHLIGHT_TEXT]Shock[COLOR_REVERT] promotion.</Italian>
-		<Spanish>The [COLOR_UNIT_TEXT]Varu[COLOR_REVERT], the Indian replacement for the [COLOR_UNIT_TEXT]War Elephant[COLOR_REVERT], begins with the [COLOR_HIGHLIGHT_TEXT]Shock[COLOR_REVERT] promotion.</Spanish>
+ 		<French>The [COLOR_UNIT_TEXT]Varu[COLOR_REVERT], the Indian replacement for the [COLOR_UNIT_TEXT]War Elephant[COLOR_REVERT], begins with the [COLOR_HIGHLIGHT_TEXT]Shock[COLOR_REVERT] promotion.</French>
+ 		<German>The [COLOR_UNIT_TEXT]Varu[COLOR_REVERT], the Indian replacement for the [COLOR_UNIT_TEXT]War Elephant[COLOR_REVERT], begins with the [COLOR_HIGHLIGHT_TEXT]Shock[COLOR_REVERT] promotion.</German>
+ 		<Italian>The [COLOR_UNIT_TEXT]Varu[COLOR_REVERT], the Indian replacement for the [COLOR_UNIT_TEXT]War Elephant[COLOR_REVERT], begins with the [COLOR_HIGHLIGHT_TEXT]Shock[COLOR_REVERT] promotion.</Italian>
+ 		<Spanish>The [COLOR_UNIT_TEXT]Varu[COLOR_REVERT], the Indian replacement for the [COLOR_UNIT_TEXT]War Elephant[COLOR_REVERT], begins with the [COLOR_HIGHLIGHT_TEXT]Shock[COLOR_REVERT] promotion.</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_MALAY_DJONG</Tag>
@@ -3596,30 +4260,6 @@
 		<German>Lantaka</German>
 		<Italian>Lantaka</Italian>
 		<Spanish>Lantaka</Spanish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_IRANIAN_ZAMBURAK</Tag>
-		<English>Zamburak</English>
-		<French>Zamburak</French>
-		<German>Zamburak</German>
-		<Italian>Zamburak</Italian>
-		<Spanish>Zamburak</Spanish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_CELTIC_GALLOWGLASS</Tag>
-		<English>Gallowglass</English>
-		<French>Gallowglass</French>
-		<German>Gallowglass</German>
-		<Italian>Gallowglass</Italian>
-		<Spanish>Gallowglass</Spanish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_VIETNAMESE_VIET_CONG</Tag>
-		<English>Viet Cong</English>
-		<French>Viet Cong</French>
-		<German>Viet Cong</German>
-		<Italian>Viet Cong</Italian>
-		<Spanish>Viet Cong</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_AUSTRALIAN_DIGGER</Tag>

@@ -2,6 +2,746 @@
 <!-- Unique Powers -->
 <Civ4GameText>
 	<TEXT>
+ 		<Tag>TXT_KEY_UP_SOU_TITLE</Tag>
+ 		<English>The Power of the Union:</English>
+ 		<French>The Power of the Union:</French>
+ 		<German>The Power of the Union:</German>
+ 		<Italian>The Power of the Union:</Italian>
+ 		<Spanish>The Power of the Union:</Spanish>
+ 	</TEXT>
+ 	<TEXT>
+ 		<Tag>TXT_KEY_UP_SOU</Tag>
+ 		<English>Gain twice the discount from techs already discovered by vassals and masters</English>
+ 		<French>Gain twice the discount from techs already discovered by vassals and masters</French>
+ 		<German>Gain twice the discount from techs already discovered by vassals and masters</German>
+ 		<Italian>Gain twice the discount from techs already discovered by vassals and masters</Italian>
+ 		<Spanish>Gain twice the discount from techs already discovered by vassals and masters</Spanish>
+ 	</TEXT>
+	<TEXT>
+ 		<Tag>TXT_KEY_UP_MOR_TITLE</Tag>
+ 		<English>The Power of Counter Crusade:</English>
+ 		<French>The Power of Counter Crusade:</French>
+ 		<German>Die Macht der Counter Crusade:</German>
+ 		<Italian>The Power of Counter Crusade:</Italian>
+ 		<Spanish>The Power of Counter Crusade:</Spanish>
+ 	</TEXT>
+ 	<TEXT>
+ 		<Tag>TXT_KEY_UP_MOR</Tag>
+ 		<English>Grants free camel lancer on city conquest until the Renaissance</English>
+ 		<French>Grants free camel lancer on city conquest until the Renaissance</French>
+ 		<German>Grants free camel lancer on city conquest until the Renaissance</German>
+ 		<Italian>Grants free camel lancer on city conquest until the Renaissance</Italian>
+ 		<Spanish>Grants free camel lancer on city conquest until the Renaissance</Spanish>
+ 	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UP_MAD_TITLE</Tag>
+		<English>The Power of Nature Inhabitance:</English>
+		<French>The Power of Nature Inhabitance:</French>
+		<German> The Power of Nature Inhabitance:</German>
+		<Italian>The Power of Nature Inhabitance:</Italian>
+		<Spanish>The Power of Nature Inhabitance:</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UP_MAD</Tag>
+		<English>Nature Reserves can be built regardless of technology and provide +1 [ICON_FOOD], +1 [ICON_COMMERCE]</English>
+		<French>Nature Reserves can be built regardless of technology and provide +1 [ICON_FOOD], +1 [ICON_COMMERCE]</French>
+		<German>Nature Reserves can be built regardless of technology and provide +1 [ICON_FOOD], +1 [ICON_COMMERCE]</German>
+		<Italian>Nature Reserves can be built regardless of technology and provide +1 [ICON_FOOD], +1 [ICON_COMMERCE]</Italian>
+		<Spanish>Nature Reserves can be built regardless of technology and provide +1 [ICON_FOOD], +1 [ICON_COMMERCE]</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UP_FUN_TITLE</Tag>
+		<English>The Power of Islamic Learning:</English>
+		<French>The Power of Islamic Learning:</French>
+		<German> The Power of Islamic Learning:</German>
+		<Italian>The Power of Islamic Learning:</Italian>
+		<Spanish>The Power of Islamic Learning:</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UP_FUN</Tag>
+		<English>Each tech comes with a bonus tech from your current era or before while your stability is stable or higher</English>
+		<French>Each tech comes with a bonus tech from your current era or before while your stability is stable or higher</French>
+		<German>Each tech comes with a bonus tech from your current era or before while your stability is stable or higher</German>
+		<Italian>Each tech comes with a bonus tech from your current era or before while your stability is stable or higher</Italian>
+		<Spanish>Each tech comes with a bonus tech from your current era or before while your stability is stable or higher</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UP_ADA_TITLE</Tag>
+		<English>The Power of Vigor:</English>
+		<French>The Power of Vigor:</French>
+		<German>The Power of Vigor:</German>
+		<Italian>The Power of Vigor:</Italian>
+		<Spanish>The Power of Vigor:</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UP_ADA</Tag>
+		<English>Gain +100% [ICON_PRODUCTION] for buildings in recently founded or conquered cities (10 turns on normal speed)</English>
+		<French>Gain +100% [ICON_PRODUCTION] for buildings in recently founded or conquered cities (10 turns on normal speed)</French>
+		<German>Gain +100% [ICON_PRODUCTION] for buildingsin recently founded or conquered cities (10 turns on normal speed)</German>
+		<Italian>Gain +100% [ICON_PRODUCTION] for buildings in recently founded or conquered cities (10 turns on normal speed)</Italian>
+		<Spanish>Gain +100% [ICON_PRODUCTION] for buildings in recently founded or conquered cities (10 turns on normal speed)</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UP_KAT_TITLE</Tag>
+		<English>The Power of the Basin Empire:</English>
+		<French>The Power of the Basin Empire:</French>
+		<German>The Power of the Basin Empire:</German>
+		<Italian>The Power of the Basin Empire:</Italian>
+		<Spanish>The Power of the Basin Empire:</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UP_KAT</Tag>
+		<English>Gain +2% [ICON_FOOD] in the capital per each building while no open borders are maintained</English>
+		<French>Gain +2% [ICON_FOOD] in the capital per each building while no open borders are maintained</French>
+		<German>Gain +2% [ICON_FOOD] in the capital per each building while no open borders are maintained</German>
+		<Italian>Gain +2% [ICON_FOOD] in the capital per each building while no open borders are maintained</Italian>
+		<Spanish>Gain +2% [ICON_FOOD] in the capital per each building while no open borders are maintained</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UP_BUG_TITLE</Tag>
+		<English>The Power of the Lake Raiders:</English>
+		<French>The Power of Lake Raiders:</French>
+		<German>The Power of Lake Raiders:</German>
+		<Italian>The Power of Lake Raiders:</Italian>
+		<Spanish>The Power of Lake Raiders:</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UP_BUG</Tag>
+		<English>Slaves can be integrated into your cities for one population, at the cost of three turns of +1 [ICON_UNHAPPY]</English>
+		<French>Slaves can be integrated into your cities for one population, at the cost of three turns of +1 [ICON_UNHAPPY]</French>
+		<German>Slaves can be integrated into your cities for one population, at the cost of three turns of +1 [ICON_UNHAPPY]</German>
+		<Italian>Slaves can be integrated into your cities for one population, at the cost of three turns of +1 [ICON_UNHAPPY]</Italian>
+		<Spanish>Slaves can be integrated into your cities for one population, at the cost of three turns of +1 [ICON_UNHAPPY]</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UP_ZIM_TITLE</Tag>
+		<English>The Power of Adapted Cities:</English>
+		<French>The Power of Adapted Cities:</French>
+		<German>The Power of Adapted Cities:</German>
+		<Italian>The Power of Adapted Cities:</Italian>
+		<Spanish>The Power of Adapted Cities:</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UP_ZIM</Tag>
+		<English>Cities founded on resources provide that resource's primary yield to their first ring</English>
+		<French>Cities founded on resources provide that resource's primary yield to their first ring</French>
+		<German>Cities founded on resources provide that resource's primary yield to their first ring</German>
+		<Italian>Cities founded on resources provide that resource's primary yield to their first ring</Italian>
+		<Spanish>Cities founded on resources provide that resource's primary yield to their first ring</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UP_BOE_TITLE</Tag>
+		<English>The Power of the Great Trek:</English>
+		<French>The Power of the Great Trek:</French>
+		<German>The Power of the Great Trek:</German>
+		<Italian>The Power of the Great Trek:</Italian>
+		<Spanish>The Power of the Great Trek:</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UP_BOE</Tag>
+		<English>Receive a free Trekker Specialist whenever you receive migrants from another Civilization</English>
+		<French>Receive a free Trekker Specialist whenever you receieve migrants from another Civilization</French>
+		<German>Receive a free Trekker Specialist whenever you receieve migrants from another Civilization</German>
+		<Italian>Receive a free Trekker Specialist whenever you receieve migrants from another Civilization</Italian>
+		<Spanish>Receive a free Trekker Specialist whenever you receieve migrants from another Civilization</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UP_ZUL_TITLE</Tag>
+		<English>The Power of Capture Technology:</English>
+		<French>The Power of Capture Technology:</French>
+		<German>The Power of Capture Technology:</German>
+		<Italian>The Power of Capture Technology:</Italian>
+		<Spanish>The Power of Capture Technology:</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UP_ZUL</Tag>
+		<English>Your units have a 50% chance to capture units whose prerequisite tech you haven't discovered yet</English>
+		<French>Your units have a 50% chance to capture units whose prerequisite tech you haven't discovered yet</French>
+		<German>Your units have a 50% chance to capture units whose prerequisite tech you haven't discovered yet</German>
+		<Italian>Your units have a 50% chance to capture units whose prerequisite tech you haven't discovered yet</Italian>
+		<Spanish>Your units have a 50% chance to capture units whose prerequisite tech you haven't discovered yet</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UP_SOM_TITLE</Tag>
+		<English>The Power of Hydraulic Rights:</English>
+		<French>The Power of Hydraulic Rights:</French>
+		<German>The Power of Hydraulic Rights:</German>
+		<Italian>The Power of Hydraulic Rights:</Italian>
+		<Spanish>The Power of Hydraulic Rights:</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UP_SOM</Tag>
+		<English>-1 [ICON_COMMERCE], -1 [ICON_PRODUCTION] from water tiles, but +1 [ICON_COMMERCE], +1 [ICON_PRODUCTION] from specialists in coastal cities</English>
+		<French>-1 [ICON_COMMERCE], -1 [ICON_PRODUCTION] from water tiles, but +1 [ICON_COMMERCE], +1 [ICON_PRODUCTION] from specialists in coastal cities</French>
+		<German>-1 [ICON_COMMERCE], -1 [ICON_PRODUCTION] from water tiles, but +1 [ICON_COMMERCE], +1 [ICON_PRODUCTION] from specialists in coastal cities</German>
+		<Italian>-1 [ICON_COMMERCE], -1 [ICON_PRODUCTION] from water tiles, but +1 [ICON_COMMERCE], +1 [ICON_PRODUCTION] from specialists in coastal cities</Italian>
+		<Spanish>-1 [ICON_COMMERCE], -1 [ICON_PRODUCTION] from water tiles, but +1 [ICON_COMMERCE], +1 [ICON_PRODUCTION] from specialists in coastal cities</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UP_ASH_TITLE</Tag>
+		<English>The Power of the Golden Stool:</English>
+		<French>The Power of the Golden Stool:</French>
+		<German>The Power of the Golden Stool:</German>
+		<Italian>The Power of the Golden Stool:</Italian>
+		<Spanish>The Power of the Golden Stool:</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UP_ASH</Tag>
+		<English>Losing a unit gives [ICON_CULTURE] in the capital equal to its [ICON_PRODUCTION] cost</English>
+		<French>Losing a unit gives [ICON_CULTURE] in the capital equal to its [ICON_PRODUCTION] cost</French>
+		<German>Losing a unit gives [ICON_CULTURE] in the capital equal to its [ICON_PRODUCTION] cost</German>
+		<Italian>Losing a unit gives [ICON_CULTURE] in the capital equal to its [ICON_PRODUCTION] cost</Italian>
+		<Spanish>Losing a unit gives [ICON_CULTURE] in the capital equal to its [ICON_PRODUCTION] cost</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UP_HAU_TITLE</Tag>
+		<English>The Power of the Seven Kingdoms:</English>
+		<French>The Power of the Seven Kingdoms:</French>
+		<German>The Power of the Seven Kingdoms:</German>
+		<Italian>The Power of the Seven Kingdoms:</Italian>
+		<Spanish>The Power of the Seven Kingdoms:</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UP_HAU</Tag>
+		<English>Natives spawn in your borders until the industrial era, but natives may join your armies when defeated</English>
+		<French>Natives spawn in your borders until the industrial era, but natives may join your armies when defeated</French>
+		<German>Natives spawn in your borders until the industrial era, but natives may join your armies when defeated</German>
+		<Italian>Natives spawn in your borders until the industrial era, but natives may join your armies when defeated</Italian>
+		<Spanish>Natives spawn in your borders until the industrial era, but natives may join your armies when defeated</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UP_BEN_TITLE</Tag>
+		<English>The Power of Iron Sacrifice:</English>
+		<French>The Power of Iron Sacrifice:</French>
+		<German>The Power of Iron Sacrifice:</German>
+		<Italian>The Power of Iron Sacrifice:</Italian>
+		<Spanish>The Power of Iron Sacrifice:</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UP_BEN</Tag>
+		<English>Can sacrifice slaves to hurry building production</English>
+		<French>Can sacrifice slaves to hurry building production</French>
+		<German>Can sacrifice slaves to hurry building production</German>
+		<Italian>Can sacrifice slaves to hurry building production</Italian>
+		<Spanish>Can sacrifice slaves to hurry building production</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UP_KAN_TITLE</Tag>
+		<English>The Power of the Oases:</English>
+		<French>The Power of the Oases:</French>
+		<German>The Power of the Oases:</German>
+		<Italian>The Power of the Oases:</Italian>
+		<Spanish>The Power of the Oases:</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UP_KAN</Tag>
+		<English>Gain +5% [ICON_COMMERCE] per desert tile in cities adjacent to a lake or oasis</English>
+		<French>Gain +5% [ICON_COMMERCE] per desert tile in cities adjacent to a lake or oasis</French>
+		<German>Gain +5% [ICON_COMMERCE] per desert tile in cities adjacent to a lake or oasis</German>
+		<Italian>Gain +5% [ICON_COMMERCE] per desert tile in cities adjacent to a lake or oasis</Italian>
+		<Spanish>Gain +5% [ICON_COMMERCE] per desert tile in cities adjacent to a lake or oasis</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UP_SON_TITLE</Tag>
+		<English>The Power of the Hikoy:</English>
+		<French>The Power of the Hikoy:</French>
+		<German>The Power of the Hikoy:</German>
+		<Italian>The Power of the Hikoy:</Italian>
+		<Spanish>The Power of the Hikoy:</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UP_SON</Tag>
+		<English>Gain Great Engineer points in the capital when you win a battle attacking from or being attacked from a river</English>
+		<French>Gain Great Engineer points in the capital when you win a battle attacking from or being attacked from a river</French>
+		<German>Gain Great Engineer points in the capital when you win a battle attacking from or being attacked from a river</German>
+		<Italian>Gain Great Engineer points in the capital when you win a battle attacking from or being attacked from a river</Italian>
+		<Spanish>Gain Great Engineer points in the capital when you win a battle attacking from or being attacked from a river</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UP_GHA_TITLE</Tag>
+		<English>The Power of Drought and Rain:</English>
+		<French>The Power of Drought and Rain:</French>
+		<German>The Power of Drought and Rain:</German>
+		<Italian>The Power of Drought and Rain:</Italian>
+		<Spanish>The Power of Drought and Rain:</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UP_GHA</Tag>
+		<English>Rivers switch between providing +1 [ICON_COMMERCE] +1 [ICON_FOOD], and no extra yields every 200 years</English>
+		<French>Rivers switch between providing +1 [ICON_COMMERCE] +1 [ICON_FOOD], and no extra yields every 200 years</French>
+		<German>Rivers switch between providing +1 [ICON_COMMERCE] +1 [ICON_FOOD], and no extra yields every 200 years</German>
+		<Italian>Rivers switch between providing +1 [ICON_COMMERCE] +1 [ICON_FOOD], and no extra yields every 200 years</Italian>
+		<Spanish>Rivers switch between providing +1 [ICON_COMMERCE] +1 [ICON_FOOD], and no extra yields every 200 years</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UP_KHA_TITLE</Tag>
+		<English>The Power of Religious Crossroads:</English>
+		<French>The Power of Religious Crossroads:</French>
+		<German>The Power of Religious Crossroads:</German>
+		<Italian>The Power of Religious Crossroads:</Italian>
+		<Spanish>The Power of Religious Crossroads:</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UP_KHA</Tag>
+		<English>No negative attitude from different state [ICON_RELIGION]</English>
+		<French>No negative attitude from different state [ICON_RELIGION]</French>
+		<German>No negative attitude from different state [ICON_RELIGION]</German>
+		<Italian>No negative attitude from different state [ICON_RELIGION]</Italian>
+		<Spanish>No negative attitude from different state [ICON_RELIGION]</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UP_GHO_TITLE</Tag>
+		<English>The Power of Zeal:</English>
+		<French>The Power of Zeal:</French>
+		<German>The Power of Zeal:</German>
+		<Italian>The Power of Zeal:</Italian>
+		<Spanish>The Power of Zeal:</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UP_GHO</Tag>
+		<English>Removes all non-state religions on city capture and grants gold per religion removed</English>
+		<French>Removes all non-state religions on city capture and grants gold per religion removed</French>
+		<German>Removes all non-state religions on city capture and grants gold per religion removed</German>
+		<Italian>Removes all non-state religions on city capture and grants gold per religion removed</Italian>
+		<Spanish>Removes all non-state religions on city capture and grants gold per religion removed</Spanish>
+	</TEXT>
+
+	<TEXT>
+		<Tag>TXT_KEY_UP_GEO_TITLE</Tag>
+		<English>The Power of Veneration:</English>
+		<French>The Power of Veneration:</French>
+		<German>The Power of Veneration:</German>
+		<Italian>The Power of Veneration:</Italian>
+		<Spanish>The Power of Veneration:</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UP_GEO</Tag>
+		<English>Great Artists can create Great Icons and Great Prophets can start a short Golden Age</English>
+		<French>Great Artists can create Great Icons and Great Prophets can start a short Golden Age</French>
+		<German>Great Artists can create Great Icons and Great Prophets can start a short Golden Age</German>
+		<Italian>Great Artists can create Great Icons and Great Prophets can start a short Golden Age</Italian>
+		<Spanish>Great Artists can create Great Icons and Great Prophets can start a short Golden Age</Spanish>
+	</TEXT>
+
+	<TEXT>
+		<Tag>TXT_KEY_UP_JER_TITLE</Tag>
+		<English>The Power of the Outremers:</English>
+		<French>The Power of the Outremers:</French>
+		<German>The Power of the Outremers:</German>
+		<Italian>The Power of the Outremers:</Italian>
+		<Spanish>The Power of the Outremers:</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UP_JER</Tag>
+		<English>Catholic buildings and wonders provide culture equal to twice their production cost when built</English>
+		<French>Catholic buildings and wonders provide culture equal to twice their production cost when built</French>
+		<German>Catholic buildings and wonders provide culture equal to twice their production cost when built</German>
+		<Italian>Catholic buildings and wonders provide culture equal to twice their production cost when built</Italian>
+		<Spanish>Catholic buildings and wonders provide culture equal to twice their production cost when built</Spanish>
+	</TEXT>
+
+
+	<TEXT>
+		<Tag>TXT_KEY_UP_OMA_TITLE</Tag>
+		<English>The Power of the Zanzibar Sultans:</English>
+		<French>The Power of the Zanzibar Sultans:</French>
+		<German>The Power of the Zanzibar Sultans:</German>
+		<Italian>The Power of the Zanzibar Sultans:</Italian>
+		<Spanish>The Power of the Zanzibar Sultans:</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UP_OMA</Tag>
+		<English>Colonies gain +1 [ICON_TRADE] route per each culture level from Developing culture onwards</English>
+		<French>Colonies gain +1 [ICON_TRADE] route per each culture level from Developing culture onwards</French>
+		<German>Colonies gain +1 [ICON_TRADE] route per each culture level from Developing culture onwards</German>
+		<Italian>Colonies gain +1 [ICON_TRADE] route per each culture level from Developing culture onwards</Italian>
+		<Spanish>Colonies gain +1 [ICON_TRADE] route per each culture level from Developing culture onwards</Spanish>
+	</TEXT>
+
+	<TEXT>
+		<Tag>TXT_KEY_UP_YEM_TITLE</Tag>
+		<English>The Power of Arabia Felix:</English>
+		<French>The Power of Arabia Felix:</French>
+		<German>The Power of Arabia Felix:</German>
+		<Italian>The Power of Arabia Felix:</Italian>
+		<Spanish>The Power of Arabia Felix:</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UP_YEM</Tag>
+		<English>+1 [ICON_FOOD] from deserts and semideserts</English>
+		<French>+1 [ICON_FOOD] from deserts and semideserts</French>
+		<German>+1 [ICON_FOOD] from deserts and semideserts</German>
+		<Italian>+1 [ICON_FOOD] from deserts and semideserts</Italian>
+		<Spanish>+1 [ICON_FOOD] from deserts and semideserts</Spanish>
+	</TEXT>
+
+	<TEXT>
+		<Tag>TXT_KEY_UP_TUN_TITLE</Tag>
+		<English>The Power of Citadels:</English>
+		<French>The Power of Citadels:</French>
+		<German>The Power of Citadels:</German>
+		<Italian>The Power of Citadels:</Italian>
+		<Spanish>The Power of Citadels:</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UP_TUN</Tag>
+		<English>+1 [ICON_FOOD] from Engineers and Great Engineers</English>
+		<French>+1 [ICON_FOOD] from Engineers and Great Engineers</French>
+		<German>+1 [ICON_FOOD] from Engineers and Great Engineers</German>
+		<Italian>+1 [ICON_FOOD] from Engineers and Great Engineers</Italian>
+		<Spanish>+1 [ICON_FOOD] from Engineers and Great Engineers</Spanish>
+	</TEXT>
+
+
+	<TEXT>
+		<Tag>TXT_KEY_UP_TUR_TITLE</Tag>
+		<English>The Power of Unity:</English>
+		<French>The Power of Unity:</French>
+		<German>The Power of Unity:</German>
+		<Italian>The Power of Unity:</Italian>
+		<Spanish>The Power of Unity:</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UP_TUR</Tag>
+		<English>Free Morale promotion for all land units</English>
+		<French>Free Morale promotion for all land units</French>
+		<German>Free Morale promotion for all land units</German>
+		<Italian>Free Morale promotion for all land units</Italian>
+		<Spanish>Free Morale promotion for all land units</Spanish>
+	</TEXT>
+
+	<TEXT>
+		<Tag>TXT_KEY_UP_SAM_TITLE</Tag>
+		<English>The Power of Persian Poetry:</English>
+		<French>The Power of Persian Poetry:</French>
+		<German>The Power of Persian Poetry:</German>
+		<Italian>The Power of Persian Poetry:</Italian>
+		<Spanish>The Power of Persian Poetry:</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UP_SAM</Tag>
+		<English>Gain +3 [ICON_COMMERCE] from Artists</English>
+		<French>Gain +3 [ICON_COMMERCE] from Artists</French>
+		<German>Gain +3 [ICON_COMMERCE] from Artists</German>
+		<Italian>Gain +3 [ICON_COMMERCE] from Artists</Italian>
+		<Spanish>Gain +3 [ICON_COMMERCE] from Artists</Spanish>
+	</TEXT>
+
+
+	<TEXT>
+		<Tag>TXT_KEY_UP_BUY_TITLE</Tag>
+		<English>The Power of Religious Legitimacy:</English>
+		<French>The Power of Religious Legitimacy:</French>
+		<German>The Power of Religious Legitimacy:</German>
+		<Italian>The Power of Religious Legitimacy:</Italian>
+		<Spanish>The Power of Religious Legitimacy:</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UP_BUY</Tag>
+		<English>Gain 5% tech cost reduction per each owned shrine</English>
+		<French>Gain 5% tech cost reduction per each owned shrine</French>
+		<German>Gain 5% tech cost reduction per each owned shrine</German>
+		<Italian>Gain 5% tech cost reduction per each owned shrine</Italian>
+		<Spanish>Gain 5% tech cost reduction per each owned shrine</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UP_MIS_TITLE</Tag>
+		<English>The Power of Ghulams:</English>
+		<French>The Power of Ghulams:</French>
+		<German>The Power of Ghulams:</German>
+		<Italian>The Power of Ghulams:</Italian>
+		<Spanish>The Power of Ghulams:</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UP_MIS</Tag>
+		<English>Additional [ICON_COMMERCE] on Farms and additional experience for hurried units with Slavery</English>
+		<French>Additional [ICON_COMMERCE] on Farms and additional experience for hurried units with Slavery</French>
+		<German>Additional [ICON_COMMERCE] on Farms and additional experience for hurried units with Slavery</German>
+		<Italian>Additional [ICON_COMMERCE] on Farms and additional experience for hurried units with Slavery</Italian>
+		<Spanish>Additional [ICON_COMMERCE] on Farms and additional experience for hurried units with Slavery</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UP_MAM_TITLE</Tag>
+		<English>The Power of Transcontinental Diplomacy:</English>
+		<French>The Power of Transcontinental Diplomacy:</French>
+		<German>The Power of Transcontinental Diplomacy:</German>
+		<Italian>The Power of Transcontinental Diplomacy:</Italian>
+		<Spanish>The Power of Transcontinental Diplomacy:</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UP_MAM</Tag>
+		<English>Obtain +100% [ICON_TRADE] route yield from Civs with different state religion</English>
+		<French>Obtain +100% [ICON_TRADE] route yield from Civs with different state religion</French>
+		<German>Obtain +100% [ICON_TRADE] route yield from Civs with different state religion</German>
+		<Italian>Obtain +100% [ICON_TRADE] route yield from Civs with different state religion</Italian>
+		<Spanish>Obtain +100% [ICON_TRADE] route yield from Civs with different state religion</Spanish>
+	</TEXT>
+
+	<TEXT>
+		<Tag>TXT_KEY_UP_PAR_TITLE</Tag>
+		<English>The Power of Silk Crossroads:</English>
+		<French>The Power of Silk Crossroads:</French>
+		<German>The Power of Silk Crossroads:</German>
+		<Italian>The Power of Silk Crossroads:</Italian>
+		<Spanish>The Power of Silk Crossroads:</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UP_PAR</Tag>
+		<English>Hills in your trade network provide +1 [ICON_COMMERCE]</English>
+		<French>Hills in your trade network provide +1 [ICON_COMMERCE]</French>
+		<German>Hills in your trade network provide +1 [ICON_COMMERCE]</German>
+		<Italian>Hills in your trade network provide +1 [ICON_COMMERCE]</Italian>
+		<Spanish>Hills in your trade network provide +1 [ICON_COMMERCE]</Spanish>
+	</TEXT>
+
+
+	<TEXT>
+		<Tag>TXT_KEY_UP_ARM_TITLE</Tag>
+		<English>The Power of Craftsmanship:</English>
+		<French>The Power of Craftsmanship:</French>
+		<German>The Power of Craftsmanship:</German>
+		<Italian>The Power of Craftsmanship:</Italian>
+		<Spanish>The Power of Craftsmanship:</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UP_ARM</Tag>
+		<English>Gain +3 free specialists in the capital</English>
+		<French>Gain +3 free specialists in the capital</French>
+		<German>Gain +3 free specialists in the capital</German>
+		<Italian>Gain +3 free specialists in the capital</Italian>
+		<Spanish>Gain +3 free specialists in the capital</Spanish>
+	</TEXT>
+
+	<TEXT>
+		<Tag>TXT_KEY_UP_SCY_TITLE</Tag>
+		<English>The Power of Steppe Warfare:</English>
+		<French>The Power of Steppe Warfare:</French>
+		<German>The Power of Steppe Warfare:</German>
+		<Italian>The Power of Steppe Warfare:</Italian>
+		<Spanish>The Power of Steppe Warfare:</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UP_SCY</Tag>
+		<English>Gain a free Aspabarata every time you build a cavalry unit until the Medieval Era</English>
+		<French>Gain a free Aspabarata every time you build a cavalry unit until the Medieval Era</French>
+		<German>Gain a free Aspabarata every time you build a cavalry unit until the Medieval Era</German>
+		<Italian>Gain a free Aspabarata every time you build a cavalry unit until the Medieval Era</Italian>
+		<Spanish>Gain a free Aspabarata every time you build a cavalry unit until the Medieval Era</Spanish>
+	</TEXT>
+
+	<TEXT>
+		<Tag>TXT_KEY_UP_NUM_TITLE</Tag>
+		<English>The Power of Grain Rations:</English>
+		<French>The Power of Grain Rations:</French>
+		<German>The Power of Grain Rations:</German>
+		<Italian>The Power of Grain Rations:</Italian>
+		<Spanish>The Power of Grain Rations:</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UP_NUM</Tag>
+		<English>Gain +10 [ICON_FOOD] when a unit is produced until the Medieval Era.</English>
+		<French>Gain +10 [ICON_FOOD] when a unit is produced until the Medieval Era.</French>
+		<German>Gain +10 [ICON_FOOD] when a unit is produced until the Medieval Era.</German>
+		<Italian>Gain +10 [ICON_FOOD] when a unit is produced until the Medieval Era.</Italian>
+		<Spanish>Gain +10 [ICON_FOOD] when a unit is produced until the Medieval Era.</Spanish>
+	</TEXT>
+
+	<TEXT>
+		<Tag>TXT_KEY_UP_VAN_TITLE</Tag>
+		<English>The Power of Overseas Migration:</English>
+		<French>The Power of Overseas Migration:</French>
+		<German>The Power of Overseas Migration:</German>
+		<Italian>The Power of Overseas Migration:</Italian>
+		<Spanish>The Power of Overseas Migration:</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UP_VAN</Tag>
+		<English>Receieve a free Flotilla in conquered cities until the Medieval Era</English>
+		<French>Receieve a free Flotilla in conquered cities until the Medieval Era</French>
+		<German>Receieve a free Flotilla in conquered cities until the Medieval Era</German>
+		<Italian>Receieve a free Flotilla in conquered cities until the Medieval Era</Italian>
+		<Spanish>Receieve a free Flotilla in conquered cities until the Medieval Era</Spanish>
+	</TEXT>
+
+	<TEXT>
+		<Tag>TXT_KEY_UP_HUN_TITLE</Tag>
+		<English>The Power of Total War:</English>
+		<French>The Power of Total War:</French>
+		<German>The Power of Total War:</German>
+		<Italian>The Power of Total War:</Italian>
+		<Spanish>The Power of Total War:</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UP_HUN</Tag>
+		<English>Obtain twice the [ICON_GOLD] from conquering cities</English>
+		<French>Obtain twice the [ICON_GOLD] from conquering cities</French>
+		<German>Obtain twice the [ICON_GOLD] from conquering cities</German>
+		<Italian>Obtain twice the [ICON_GOLD] from conquering cities</Italian>
+		<Spanish>Obtain twice the [ICON_GOLD] from conquering cities</Spanish>
+	</TEXT>
+
+	<TEXT>
+		<Tag>TXT_KEY_UP_GOT_TITLE</Tag>
+		<English>The Power of Foederati:</English>
+		<French>The Power of Foederati:</French>
+		<German>The Power of Foederati:</German>
+		<Italian>The Power of Foederati:</Italian>
+		<Spanish>The Power of Foederati:</Spanish>
+	</TEXT>
+
+
+	<TEXT>
+		<Tag>TXT_KEY_UP_GOT</Tag>
+		<English>Obtain [ICON_GOLD] when defeating enemy units, proportional to their production cost</English>
+		<French>Obtain [ICON_GOLD] when defeating enemy units, proportional to their production cost</French>
+		<German>Obtain [ICON_GOLD] when defeating enemy units, proportional to their production cost</German>
+		<Italian>Obtain [ICON_GOLD] when defeating enemy units, proportional to their production cost</Italian>
+		<Spanish>Obtain [ICON_GOLD] when defeating enemy units, proportional to their production cost</Spanish>
+	</TEXT>
+
+	<TEXT>
+		<Tag>TXT_KEY_UP_GEM_TITLE</Tag>
+		<English>The Power of Wooden Villages:</English>
+		<French>The Power of Wooden Villages:</French>
+		<German>The Power of Wooden Villages:</German>
+		<Italian>The Power of Wooden Villages:</Italian>
+		<Spanish>The Power of Wooden Villages:</Spanish>
+	</TEXT>
+
+	<TEXT>
+		<Tag>TXT_KEY_UP_GEM</Tag>
+		<English>Forests in cities with less than 4 population provide +1 [ICON_PRODUCTION]</English>
+		<French>Forests in cities with less than 4 population provide +1 [ICON_PRODUCTION]</French>
+		<German>Forests in cities with less than 4 population provide +1 [ICON_PRODUCTION]</German>
+		<Italian>Forests in cities with less than 4 population provide +1 [ICON_PRODUCTION]</Italian>
+		<Spanish>Forests in cities with less than 4 population provide +1 [ICON_PRODUCTION]</Spanish>
+	</TEXT>
+
+	<TEXT>
+		<Tag>TXT_KEY_UP_MAC_TITLE</Tag>
+		<English>The Power of Endless Conquest:</English>
+		<French>The Power of Endless Conquest:</French>
+		<German>The Power of Endless Conquest:</German>
+		<Italian>The Power of Endless Conquest:</Italian>
+		<Spanish>The Power of Endless Conquest:</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UP_MAC</Tag>
+		<English>Gain 2 free companions in conquered cities until the end of the Classical Era</English>
+		<French>Gain 2 free companions in conquered cities until the end of the Classical Era</French>
+		<German>Gain 2 free companions in conquered cities until the end of the Classical Era</German>
+		<Italian>Gain 2 free companions in conquered cities until the end of the Classical Era</Italian>
+		<Spanish>Gain 2 free companions in conquered cities until the end of the Classical Era</Spanish>
+	</TEXT>
+
+	<TEXT>
+		<Tag>TXT_KEY_UP_SPR_TITLE</Tag>
+		<English>The Power of Military Society:</English>
+		<French>The Power of Military Society:</French>
+		<German>The Power of Military Society:</German>
+		<Italian>The Power of Military Society:</Italian>
+		<Spanish>The Power of Military Society:</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UP_SPR</Tag>
+		<English>Temporary unhappiness decays thrice per turn instead of once</English>
+		<French>Temporary unhappiness decays thrice per turn instead of once</French>
+		<German>Temporary unhappiness decays thrice per turn instead of once</German>
+		<Italian>Temporary unhappiness decays thrice per turn instead of once</Italian>
+		<Spanish>Temporary unhappiness decays thrice per turn instead of once</Spanish>
+	</TEXT>
+
+	<TEXT>
+		<Tag>TXT_KEY_UP_MYC_TITLE</Tag>
+		<English>The Power of Heroes:</English>
+		<French>The Power of Heroes:</French>
+		<German>The Power of Heroes:</German>
+		<Italian>The Power of Heroes:</Italian>
+		<Spanish>The Power of Heroes:</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UP_MYC</Tag>
+		<English>Your units gain unlimited experience from barbarians</English>
+		<French>Your units gain unlimited experience from barbarians</French>
+		<German>Your units gain unlimited experience from barbarianss</German>
+		<Italian>Your units gain unlimited experience from barbarians</Italian>
+		<Spanish>Your units gain unlimited experience from barbarians</Spanish>
+	</TEXT>
+
+
+	<TEXT>
+		<Tag>TXT_KEY_UP_ELA_TITLE</Tag>
+		<English>The Power of the First Traders:</English>
+		<French>The Power of the First Traders:</French>
+		<German>The Power of the First Traders:</German>
+		<Italian>The Power of the First Traders:</Italian>
+		<Spanish>The Power of the First Traders:</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UP_ELA</Tag>
+		<English>Triple [ICON_TRADE] yield from distance until the end of the Ancient Era</English>
+		<French>Triple [ICON_TRADE] yield from distance until the end of the Ancient Era</French>
+		<German>Triple [ICON_TRADE] yield from distance until the end of the Ancient Era</German>
+		<Italian>Triple [ICON_TRADE] yield from distance until the end of the Ancient Era</Italian>
+		<Spanish>Triple [ICON_TRADE] yield from distance until the end of the Ancient Era</Spanish>
+	</TEXT>
+
+	<TEXT>
+		<Tag>TXT_KEY_UP_BAB_TITLE</Tag>
+		<English>The Power of Law:</English>
+		<French>The Power of Law:</French>
+		<German>The Power of Law:</German>
+		<Italian>The Power of Law:</Italian>
+		<Spanish>The Power of Law:</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UP_BAB</Tag>
+		<English>After conquering a city, your next tech will come with a bonus tech from your current era or before until the Medieval Era</English>
+		<French>After conquering a city, your next tech will come with a bonus tech from your current era or before until the Medieval Era</French>
+		<German>After conquering a city, your next tech will come with a bonus tech from your current era or before until the Medieval Era</German>
+		<Italian>After conquering a city, your next tech will come with a bonus tech from your current era or before until the Medieval Era</Italian>
+		<Spanish>After conquering a city, your next tech will come with a bonus tech from your current era or before until the Medieval Era</Spanish>
+	</TEXT>
+
+
+	<TEXT>
+		<Tag>TXT_KEY_UP_JUD_TITLE</Tag>
+		<English>The Power of Diaspora:</English>
+		<French>The Power of Diaspora:</French>
+		<German>The Power of Diaspora:</German>
+		<Italian>The Power of Diaspora:</Italian>
+		<Spanish>The Power of Diaspora:</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UP_JUD</Tag>
+		<English>Gain 500 [ICON_CULTURE] in your capital when converting cities to Judaism</English>
+		<French>Gain 500 [ICON_CULTURE] in your capital when converting cities to Judaism</French>
+		<German>Gain 500 [ICON_CULTURE] in your capital when converting cities to Judaism</German>
+		<Italian>Gain 500 [ICON_CULTURE] in your capital when converting cities to Judaism</Italian>
+		<Spanish>Gain 500 [ICON_CULTURE] in your capital when converting cities to Judaism</Spanish>
+	</TEXT>
+
+
+	<TEXT>
+		<Tag>TXT_KEY_UP_MNO_TITLE</Tag>
+		<English>The Power of Island Artisanry:</English>
+		<French>The Power of Island Artisanry:</French>
+		<German>The Power of Island Artisanry:</German>
+		<Italian>The Power of Island Artisanry:</Italian>
+		<Spanish>The Power of Island Artisanry:</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UP_MNO</Tag>
+		<English>+1 [ICON_PRODUCTION] on water tiles</English>
+		<French>+1 [ICON_PRODUCTION] on water tiles</French>
+		<German>+1 [ICON_PRODUCTION] on water tiles</German>
+		<Italian>+1 [ICON_PRODUCTION] on water tiles</Italian>
+		<Spanish>+1 [ICON_PRODUCTION] on water tiles</Spanish>
+	</TEXT>
+
+
+
+	<TEXT>
 		<Tag>TXT_KEY_UP_AME_TITLE</Tag>
 		<English>The Power of Manifest Destiny</English>
 		<French>The Power of Manifest Destiny</French>
@@ -75,11 +815,11 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UP_ASS_TITLE</Tag>
-		<English>The Power of the First Empire:</English>
-		<French>The Power of the First Empire:</French>
-		<German>The Power of the First Empire:</German>
-		<Italian>The Power of the First Empire:</Italian>
-		<Spanish>The Power of the First Empire:</Spanish>
+		<English>The Power of Subjugation:</English>
+		<French>The Power of Subjugation:</French>
+		<German>The Power of Subjugation:</German>
+		<Italian>The Power of Subjugation:</Italian>
+		<Spanish>The Power of Subjugation:</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UP_ASS</Tag>
@@ -122,7 +862,7 @@
 		<Spanish>Military units can enslave defeated enemy units, can sacrifice slaves to trigger a short golden age</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UP_BAB_TITLE</Tag>
+		<Tag>TXT_KEY_UP_SUM_TITLE</Tag>
 		<English>The Power of the Cradle of Civilization:</English>
 		<French>Le pouvoir du berceau de la civilisation :</French>
 		<German>Die Macht der Wiege der Zivilisation:</German>
@@ -130,7 +870,7 @@
 		<Spanish>El poder de la ley:</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UP_BAB</Tag>
+		<Tag>TXT_KEY_UP_SUM</Tag>
 		<English>Receives a free technology for the first five technologies discovered</English>
 		<French>Une technologie gratuite pour les cinq premi&#232;res technologies d&#233;couvertes</French>
 		<German>Erh&#228;lt eine weitere Technologie f&#252;r die ersten f&#252;nf entdeckten Technologien</German>
@@ -211,11 +951,11 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UP_CAN</Tag>
-		<English>Double trade route yield from years of peace</English>
-		<French>Double trade route yield from years of peace</French>
-		<German>Double trade route yield from years of peace</German>
-		<Italian>Double trade route yield from years of peace</Italian>
-		<Spanish>Double trade route yield from years of peace</Spanish>
+		<English>Double [ICON_TRADE] route yield from years of peace</English>
+		<French>Double [ICON_TRADE] route yield from years of peace</French>
+		<German>Double [ICON_TRADE] route yield from years of peace</German>
+		<Italian>Double [ICON_TRADE] route yield from years of peace</Italian>
+		<Spanish>Double [ICON_TRADE] route yield from years of peace</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UP_MULTICULTURALISM</Tag>
@@ -235,7 +975,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UP_CAR</Tag>
-		<English>Can always hurry units with gold and pays no extra upkeep for hurried units</English>
+		<English><English>Can always hurry units with gold and pays no extra upkeep for hurried units</English></English>
 		<French>L'acc&#233;l&#233;ration des unit&#233;s est toujours disponible et co&#251;te deux fois moins cher ; pas de co&#251;t d'entretien suppl&#233;mentaire pour ces unit&#233;s</French>
 		<German>Kann immer Einheiten mit Gold beschleunigen und bezahlt keinen zus&#228;tzlicher Unterhalt f&#252;r beschleunigte Einheiten</German>
 		<Italian>Dimezzati i costi di assunzione e mantenimento dei mercenari</Italian>
@@ -323,7 +1063,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UP_EGY</Tag>
-		<English>Monarchy, Redistribution and Deification enabled at start</English>
+		<English>Monarchy, Redistribution and Deification are enabled at start</English>
 		<French>La monarchie, la redistribution et la d&#233;ification sont activ&#233;es au d&#233;part</French>
 		<German>Aktivierung von Monarchie, Umverteilung und Verg&#246;tterung beim Spielstart</German>
 		<Italian>All'avvio sono abilitati governo ereditario e schiavit&#249;</Italian>
@@ -404,10 +1144,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_UP_GRE</Tag>
 		<English>+150% [ICON_GREATPEOPLE] birth rate until the end of the Classical Era</English>
-		<French>Le taux de natalit&#233; des personnages illustres est augment&#233; de 150 % jusqu'&#224; la fin de l'&#200;re classique</French>
-		<German>+150% [ICON_GREATPEOPLE] Geburtsrate bis zum Ende des klassischen Zeitalters</German>
-		<Italian>+150% tasso di natalit&#224; dei Grandi Personaggi fino alla fine del Medioevo</Italian>
-		<Spanish>+100% a la tasa de natalidad de grandes personajes hasta el final de la Edad Media</Spanish>
+		<French>Le taux de natalit&#233; des [ICON_GREATPEOPLE] est augment&#233; de 150 % jusqu'&#224; la fin de l'&#200;re classique</French>
+		<German>+150% Geburtenrate von [ICON_GREATPEOPLE] bis zum Ende des klassischen Zeitalters</German>
+		<Italian>+150% tasso di natalit&#224; dei [ICON_GREATPEOPLE] fino alla fine del Medioevo</Italian>
+		<Spanish>+100% a la tasa de natalidad de [ICON_GREATPEOPLE] hasta el final de la Edad Media</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UP_GREEK_CONQUESTS_TARGET</Tag>
@@ -428,7 +1168,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UP_HAR</Tag>
 		<English>Positive [ICON_HEALTHY] contributes to city growth during the Ancient era</English>
-		<French>Les points de sant&#233; en exc&#232;s contribuent &#224; la croissance des villes pendant l'&#200;re antique</French>
+		<French>Les points de [ICON_HEALTHY]; en exc&#232;s contribuent &#224; la croissance des villes pendant l'&#200;re antique</French>
 		<German>Positive [ICON_HEALTHY] contributes to city growth during the Ancient era</German>
 		<Italian>Positive [ICON_HEALTHY] contributes to city growth during the Ancient era</Italian>
 		<Spanish>Positive [ICON_HEALTHY] contributes to city growth during the Ancient era</Spanish>
@@ -476,8 +1216,8 @@
 	<TEXT>
 		<Tag>TXT_KEY_UP_HRE</Tag>
 		<English>Double construction speed of state [ICON_RELIGION] buildings</English>
-		<French>La vistesse de construction des b&#226;timents li&#233;s &#224; la religion d'&#201;tat est doubl&#233;e</French>
-		<German>Doppelte Baugeschwindigkeit f&#252;r Geb&#228;ude der Staatsreligion</German>
+		<French>La vistesse de construction des b&#226;timents li&#233;s &#224; la [ICON_RELIGION] d'&#201;tat est doubl&#233;e</French>
+		<German>Doppelte Baugeschwindigkeit f&#252;r Geb&#228;ude der [ICON_RELIGION]</German>
 		<Italian>Double construction speed of state [ICON_RELIGION] buildings</Italian>
 		<Spanish>Double construction speed of state [ICON_RELIGION] buildings</Spanish>
 	</TEXT>
@@ -488,6 +1228,46 @@
 		<German>Unsere Bev&#246;lkerung in %s1 w&#228;chst durch Einwanderer aus der Alten Welt!</German>
 		<Italian>La nostra popolazione sta crescendo grazie agli immigranti dal vecchio mondo!</Italian>
 		<Spanish>&#161;Nuestra poblaci&#243;n est&#225; creciendo como consecuencia de la inmigraci&#243;n procedente del Viejo Mundo!</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UP_EMIGRATION_AEONS</Tag>
+		<English>Our people left %s1 for %s2 in search of a better life...</English>
+		<French>Our people left %s1 for %s2 in search of a better life...</French>
+		<German>Our people left %s1 for %s2 in search of a better life...</German>
+		<Italian>Our people left %s1 for %s2 in search of a better life...</Italian>
+		<Spanish>Our people left %s1 for %s2 in search of a better life...</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UP_EMIGRATION_AEONS_DIRTY_TRAITORS</Tag>
+		<English>Dirty traitors in %s1 tried to leave our country but we disposed of them before they left!</English>
+		<French>Dirty traitors in %s1 tried to leave our country but we disposed of them before they left!</French>
+		<German>Dirty traitors in %s1 tried to leave our country but we disposed of them before they left!</German>
+		<Italian>Dirty traitors in %s1 tried to leave our country but we disposed of them before they left!</Italian>
+		<Spanish>Dirty traitors in %s1 tried to leave our country but we disposed of them before they left!</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UP_IMMIGRATION_AEONS</Tag>
+		<English>Immigrants from %s1 have joined us in %s2!</English>
+		<French>Immigrants from %s1 have joined us in %s2!</French>
+		<German>Immigrants from %s1 have joined us in %s2!</German>
+		<Italian>Immigrants from %s1 have joined us in %s2!</Italian>
+		<Spanish>Immigrants from %s1 have joined us in %s2!</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UP_IMMIGRATION_AEONS</Tag>
+		<English>Those cursed immigrants from %s1 have spread the plague us in %s2!</English>
+		<French>Those cursed immigrants from %s1 have spread the plague us in %s2!</French>
+		<German>Those cursed immigrants from %s1 have spread the plague us in %s2!</German>
+		<Italian>Those cursed immigrants from %s1 have spread the plague us in %s2!</Italian>
+		<Spanish>Those cursed immigrants from %s1 have spread the plague us in %s2!</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UP_INTERNAL_MIGRATION_AEONS</Tag>
+		<English>Inhabitants of %s1 have migrated to %s2</English>
+		<French>Inhabitants of %s1 have migrated to %s2</French>
+		<German>Inhabitants of %s1 have migrated to %s2</German>
+		<Italian>Inhabitants of %s1 have migrated to %s2</Italian>
+		<Spanish>Inhabitants of %s1 have migrated to %s2</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UP_INC_TITLE</Tag>
@@ -555,7 +1335,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UP_JAP_TITLE</Tag>
-		<English>The Power of Modernization:</English>
+		<English>The Power of Meiji Restoration:</English>
 		<French>Le pouvoir de la modernisation :</French>
 		<German>Die Macht der Modernisierung:</German>
 		<Italian>Il potere dell'onore:</Italian>
@@ -563,11 +1343,11 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UP_JAP</Tag>
-		<English>After discovering all medieval techs, every tech three other civilizations are willing to trade costs -50% [ICON_RESEARCH]</English>
-		<French>Apr&#232;s avoir d&#233;couvert toutes les technologies m&#233;di&#233;vales, chaque technologie co&#251;te -50 % [ICON_RESEARCH] si trois civilisations sont dispos&#233;es &#224; l'&#233;changer</French>
-		<German>Nachdem alle Technologien des Mittelalters entdeckt wurden, kostet jede Technologie -50% [ICON_RESEARCH], die drei andere Zivilisationen zu tauschen bereit sind</German>
-		<Italian>Tutte le unit&#224; militari terrestri hanno un bonus in difesa delle citt&#224;</Italian>
-		<Spanish>Todas las unidades militares terrestres tienen una bonificaci&#243;n al defender ciudades</Spanish>
+		<English>Experience an additional -25% [ICON_RESEARCH] cost for technologies while undergoing modernisation</English>
+		<French>Experience an additional -25% [ICON_RESEARCH] cost for technologies while undergoing modernisation</French>
+		<German>Experience an additional -25% [ICON_RESEARCH] cost for technologies while undergoing modernisation</German>
+		<Italian>Experience an additional -25% [ICON_RESEARCH] cost for technologies while undergoing modernisation</Italian>
+		<Spanish>Experience an additional -25% [ICON_RESEARCH] cost for technologies while undergoing modernisation</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UP_JAV_TITLE</Tag>
@@ -613,7 +1393,7 @@
 		<Tag>TXT_KEY_UP_CON</Tag>
 		<English>Jungles, rainforests, and marshes yield [ICON_FOOD] and [ICON_PRODUCTION] and cause no [ICON_UNHEALTHY]</English>
 		<French>Les jungles, les for&#234;ts tropicales et les mar&#233;cages rapportent de la nourriture et de la production, et ne causent pas de maladie</French>
-		<German>Dschungel, Regenw&#228;lder und Marschen geben zus&#228;tzliche [ICON_FOOD] und [ICON_PRODUCTION] und verursachen keine [ICON_UNHEALTHY]</German>
+		<German>Dschungel, Regenw&#228;lder und Marschen geben zus&#228;tzliche Nahrung und Produktion und verursachen keine Krankheit</German>
 		<Italian>Jungles, rainforests, and marshes yield [ICON_FOOD] and [ICON_PRODUCTION] and cause no [ICON_UNHEALTHY]</Italian>
 		<Spanish>Jungles, rainforests, and marshes yield [ICON_FOOD] and [ICON_PRODUCTION] and cause no [ICON_UNHEALTHY]</Spanish>
 	</TEXT>
@@ -667,11 +1447,11 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UP_MAA</Tag>
-		<English>+2 trade routes for cities with different landmasses within their third ring</English>
-		<French>+2 trade routes for cities with different landmasses within their third ring</French>
-		<German>+2 trade routes for cities with different landmasses within their third ring</German>
-		<Italian>+2 trade routes for cities with different landmasses within their third ring</Italian>
-		<Spanish>+2 trade routes for cities with different landmasses within their third ring</Spanish>
+		<English>+2 [ICON_TRADE] routes for cities with different landmasses within their third ring</English>
+		<French>+2 [ICON_TRADE] routes for cities with different landmasses within their third ring</French>
+		<German>+2 [ICON_TRADE] routes for cities with different landmasses within their third ring</German>
+		<Italian>+2 [ICON_TRADE] routes for cities with different landmasses within their third ring</Italian>
+		<Spanish>+2 [ICON_TRADE] routes for cities with different landmasses within their third ring</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UP_MAL_TITLE</Tag>
@@ -683,27 +1463,11 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UP_MAL</Tag>
-		<English>Double [ICON_TRADE] yield from distance for inland cities, desert provides trade connections</English>
-		<French>Double [ICON_TRADE] yield from distance for inland cities, desert provides trade connections</French>
-		<German>Double [ICON_TRADE] yield from distance for inland cities, desert provides trade connections</German>
-		<Italian>Double [ICON_TRADE] yield from distance for inland cities, desert provides trade connections</Italian>
-		<Spanish>Double [ICON_TRADE] yield from distance for inland cities, desert provides trade connections</Spanish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UP_MAN_TITLE</Tag>
-		<English>The Power of Harmony:</English>
-		<French>The Power of Harmony:</French>
-		<German>The Power of Harmony:</German>
-		<Italian>The Power of Harmony:</Italian>
-		<Spanish>The Power of Harmony:</Spanish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UP_MAN</Tag>
-		<English>Additional [ICON_FOOD] and [ICON_COMMERCE] from improved resources worked by happy cities at peace</English>
-		<French>Additional [ICON_FOOD] and [ICON_COMMERCE] from improved resources worked by happy cities at peace</French>
-		<German>Additional [ICON_FOOD] and [ICON_COMMERCE] from improved resources worked by happy cities at peace</German>
-		<Italian>Additional [ICON_FOOD] and [ICON_COMMERCE] from improved resources worked by happy cities at peace</Italian>
-		<Spanish>Additional [ICON_FOOD] and [ICON_COMMERCE] from improved resources worked by happy cities at peace</Spanish>
+		<English>Triple [ICON_TRADE] yield from distance for inland cities</English>
+		<French>Triple [ICON_TRADE] yield from distance for inland cities</French>
+		<German>Triple [ICON_TRADE] yield from distance for inland cities</German>
+		<Italian>Triple [ICON_TRADE] yield from distance for inland cities</Italian>
+		<Spanish>Triple [ICON_TRADE] yield from distance for inland cities</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UP_MAY_TITLE</Tag>
@@ -736,22 +1500,6 @@
 		<German>Konvertiert +50% [ICON_PRODUCTION] to [ICON_RESEARCH]</German>
 		<Italian>Converts +50% [ICON_PRODUCTION] to [ICON_RESEARCH]</Italian>
 		<Spanish>Converts +50% [ICON_PRODUCTION] to [ICON_RESEARCH]</Spanish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UP_MIS_TITLE</Tag>
-		<English>The Power of Ghulams:</English>
-		<French>The Power of Ghulams:</French>
-		<German>The Power of Ghulams:</German>
-		<Italian>The Power of Ghulams:</Italian>
-		<Spanish>The Power of Ghulams:</Spanish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UP_MIS</Tag>
-		<English>Additional [ICON_COMMERCE] on Farms and additional experience for hurried units with Slavery</English>
-		<French>Additional [ICON_COMMERCE] on Farms and additional experience for hurried units with Slavery</French>
-		<German>Additional [ICON_COMMERCE] on Farms and additional experience for hurried units with Slavery</German>
-		<Italian>Additional [ICON_COMMERCE] on Farms and additional experience for hurried units with Slavery</Italian>
-		<Spanish>Additional [ICON_COMMERCE] on Farms and additional experience for hurried units with Slavery</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UP_MON_TITLE</Tag>
@@ -836,42 +1584,26 @@
 	<TEXT>
 		<Tag>TXT_KEY_UP_MUG</Tag>
 		<English>Completing a building grants half its [ICON_PRODUCTION] cost as [ICON_CULTURE]</English>
-		<French>Completing a building grants half its [ICON_PRODUCTION] cost as [ICON_CULTURE]</French>
-		<German>Completing a building grants half its [ICON_PRODUCTION] cost as [ICON_CULTURE]</German>
+		<French>Au moment de compl&#233;ter un b&#226;timent, les villes re&#231;oivent en culture la moiti&#233; du co&#251;t de construction</French>
+		<German>St&#228;dte erhalten die H&#228;lfte der Baukosten als Kultur, wenn ein Geb&#228;ude errichtet wird</German>
 		<Italian>Completing a building grants half its [ICON_PRODUCTION] cost as [ICON_CULTURE]</Italian>
 		<Spanish>Completing a building grants half its [ICON_PRODUCTION] cost as [ICON_CULTURE]</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UP_NOR_TITLE</Tag>
-		<English>The Power of Raids:</English>
-		<French>Le pouvoir des raids :</French>
-		<German>Die Macht des Raubens:</German>
-		<Italian>Il potere dell'incursione:</Italian>
-		<Spanish>El poder del pillaje:</Spanish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UP_NOR</Tag>
-		<English>Additional [ICON_GOLD] from pillaging, sacking cities and sinking ships during the Middle Ages</English>
-		<French>Piller, saccager des villes et couler des navires vous rapporte de l'or suppl&#233;mentaire pendant le Moyen &#194;ge</French>
-		<German>Zus&#228;tzliches [ICON_GOLD] durch Pl&#252;nderung von St&#228;dten und Verbesserungen und das Versenken von Schiffen w&#228;hrend des Mittelalters</German>
-		<Italian>Additional [ICON_GOLD] from pillaging, sacking cities and sinking ships during the Middle Ages</Italian>
-		<Spanish>Additional [ICON_GOLD] from pillaging, sacking cities and sinking ships during the Middle Ages</Spanish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_UP_NUB_TITLE</Tag>
-		<English>The Power of Baqt:</English>
-		<French>The Power of Baqt:</French>
-		<German>The Power of Baqt:</German>
-		<Italian>The Power of Baqt:</Italian>
-		<Spanish>The Power of Baqt:</Spanish>
+		<English>The Power of Vaults:</English>
+		<French>The Power of Vaults:</French>
+		<German>The Power of Vaults:</German>
+		<Italian>The Power of Vaults:</Italian>
+		<Spanish>The Power of Vaults:</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UP_NUB</Tag>
-		<English>No negative attitude from different state [ICON_RELIGION]</English>
-		<French>No negative attitude from different state [ICON_RELIGION]</French>
-		<German>No negative attitude from different state [ICON_RELIGION]</German>
-		<Italian>No negative attitude from different state [ICON_RELIGION]</Italian>
-		<Spanish>No negative attitude from different state [ICON_RELIGION]</Spanish>
+		<English>+50% [ICON_PRODUCTION] towards Growth and Military buildings with Stone</English>
+		<French>+50% [ICON_PRODUCTION] towards Growth and Military buildings with Stone</French>
+		<German>+50% [ICON_PRODUCTION] towards Growth and Military buildings with Stone</German>
+		<Italian>+50% [ICON_PRODUCTION] towards Growth and Military buildings with Stone</Italian>
+		<Spanish>+50% [ICON_PRODUCTION] towards Growth and Military buildings with Stone</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UP_PER_TITLE</Tag>
@@ -952,6 +1684,30 @@
 		<German>+30% [ICON_PRODUCTION] f&#252;r Geb&#228;ude, die bereits in der Hauptstadt sind</German>
 		<Italian>Le strade all'interno dei confini romani permettono movimento delle unit&#224; 4X invece di 2X</Italian>
 		<Spanish>Las carreteras dentro de las fronteras romanas permiten un movimiento de unidades multiplicado x4 en lugar de x2</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UP_ROMAN_CONQUESTS</Tag>
+		<English>An army has been fielded to attack %s1_civ_adjective!</English>
+		<French>Une arm&#233;e a &#233;t&#233; lev&#233;e pour attaquer %s1_civ_adjective !</French>
+		<German>Eine Armee wurde zusammengestellt zum Angriff auf %s1_civ_adjective!</German>
+		<Italian>An army has been fielded to attack %s1_civ_adjective!</Italian>
+		<Spanish>An army has been fielded to attack %s1_civ_adjective!</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UP_ROMAN_CONQUESTS_TARGET</Tag>
+		<English>The Romans have fielded an army to conquer our civilization!</English>
+		<French>Les Romains ont lev&#233; une arm&#233;e pour conqu&#233;rir notre civilisation !</French>
+		<German>Die R&#246;mer haben eine Armee zum Angriff auf unsere Zivilisation zusammengestellt!</German>
+		<Italian>The Romans have fielded an army to conquer our civilization!</Italian>
+		<Spanish>The Romans have fielded an army to conquer our civilization!</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UP_ROMAN_TRIUMPH</Tag>
+		<English>Your triumphant victories have enabled you to field another legion!</English>
+		<French>Vos victoires triomphantes vous ont permis de lever une autre l&#233;gion !</French>
+		<German>Eure triumphalen Siege haben Euch erm&#246;glicht, eine weitere Legion auszuheben!</German>
+		<Italian>Your triumphant victories have enabled you to field another legion!</Italian>
+		<Spanish>Your triumphant victories have enabled you to field another legion!</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UP_RUS_TITLE</Tag>
@@ -1114,7 +1870,7 @@
 		<Spanish>Specialists produce +1 [ICON_PRODUCTION] and +2 [ICON_CULTURE]</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UP_TUR_TITLE</Tag>
+		<Tag>TXT_KEY_UP_GOK_TITLE</Tag>
 		<English>The Power of Orda:</English>
 		<French>Le pouvoir de la horde :</French>
 		<German>Die Macht der Orda:</German>
@@ -1122,7 +1878,7 @@
 		<Spanish>The Power of Orda:</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UP_TUR</Tag>
+		<Tag>TXT_KEY_UP_GOK</Tag>
 		<English>Barbarians cannot enter your territory during peacetime and mounted barbarians will join your armies if attacked during wartime</English>
 		<French>En temps de paix, les barbares ne peuvent pas entrer dans votre territoire ; en temps de guerre, les barbares mont&#233;s se joignent &#224; votre arm&#233;e si vous les attaquez</French>
 		<German>Barbaren k&#246;nnen Ihr Territorium in Friedenszeiten nicht betreten und berittene Barbaren, die in Kriegszeiten angegriffen werden, treten Ihren Armeen bei</German>
@@ -1155,11 +1911,11 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UP_UKR</Tag>
-		<English>+1[ICON_COMMERCE] for unimproved land tiles in your [ICON_TRADE] network</English>
-		<French>+1[ICON_COMMERCE] for unimproved land tiles in your [ICON_TRADE] network</French>
-		<German>+1[ICON_COMMERCE] for unimproved land tiles in your [ICON_TRADE] network</German>
-		<Italian>+1[ICON_COMMERCE] for unimproved land tiles in your [ICON_TRADE] network</Italian>
-		<Spanish>+1[ICON_COMMERCE] for unimproved land tiles in your [ICON_TRADE] network</Spanish>
+		<English>+1[ICON_COMMERCE] for unimproved land tiles in your trade network</English>
+		<French>+1[ICON_COMMERCE] for unimproved land tiles in your trade network</French>
+		<German>+1[ICON_COMMERCE] for unimproved land tiles in your trade network</German>
+		<Italian>+1[ICON_COMMERCE] for unimproved land tiles in your trade network</Italian>
+		<Spanish>+1[ICON_COMMERCE] for unimproved land tiles in your trade network</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UP_VIE_TITLE</Tag>
@@ -1176,5 +1932,37 @@
 		<German>When attacking within their own territory, units receive the defensive bonus of their current tile</German>
 		<Italian>When attacking within their own territory, units receive the defensive bonus of their current tile</Italian>
 		<Spanish>When attacking within their own territory, units receive the defensive bonus of their current tile</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UP_NOR_TITLE</Tag>
+		<English>The Power of Raids:</English>
+		<French>Le pouvoir des raids :</French>
+		<German>Die Macht des Raubens:</German>
+		<Italian>Il potere dell'incursione:</Italian>
+		<Spanish>El poder del pillaje:</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UP_NOR</Tag>
+		<English>Additional [ICON_GOLD] from pillaging, sacking cities and sinking ships during the Middle Ages</English>
+		<French>Additional [ICON_GOLD] from pillaging, sacking cities and sinking ships during the Middle Ages</French>
+		<German>Additional [ICON_GOLD] from pillaging, sacking cities and sinking ships during the Middle Ages</German>
+		<Italian>Additional [ICON_GOLD] from pillaging, sacking cities and sinking ships during the Middle Ages</Italian>
+		<Spanish>Additional [ICON_GOLD] from pillaging, sacking cities and sinking ships during the Middle Ages</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UP_MAN_TITLE</Tag>
+		<English>The Power of Harmony:</English>
+		<French>The Power of Harmony:</French>
+		<German>The Power of Harmony:</German>
+		<Italian>The Power of Harmony:</Italian>
+		<Spanish>The Power of Harmony:</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UP_MAN</Tag>
+		<English>Additional [ICON_FOOD] and [ICON_COMMERCE] from improved resources worked by happy cities at peace</English>
+		<French>Additional [ICON_FOOD] and [ICON_COMMERCE] from improved resources worked by happy cities at peace</French>
+		<German>Additional [ICON_FOOD] and [ICON_COMMERCE] from improved resources worked by happy cities at peace</German>
+		<Italian>Additional [ICON_FOOD] and [ICON_COMMERCE] from improved resources worked by happy cities at peace</Italian>
+		<Spanish>Additional [ICON_FOOD] and [ICON_COMMERCE] from improved resources worked by happy cities at peace</Spanish>
 	</TEXT>
 </Civ4GameText>

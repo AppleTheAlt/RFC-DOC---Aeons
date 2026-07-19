@@ -256,6 +256,14 @@
 		<Spanish>Millet</Spanish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_BONUS_FERTILIZER</Tag>
+		<English>Fertilizer</English>
+		<French>Fertilizer</French>
+		<German>Fertilizer</German>
+		<Italian>Fertilizer</Italian>
+		<Spanish>Fertilizer</Spanish>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_BONUS_DYE_COCHINEAL</Tag>
 		<English>Dye (Cochineal)</English>
 		<French>Dye (Cochineal)</French>

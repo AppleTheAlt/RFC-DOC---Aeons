@@ -2,6 +2,320 @@
 <!-- World Wonders -->
 <Civ4GameText>
 	<TEXT>
+		<Tag>TXT_KEY_BUILDING_ROYAL_ROVA_HELP</Tag>
+		<English>[ICON_BULLET]Newly settled cities come with a [COLOR_UNIT_TEXT]Worker[COLOR_REVERT] and [COLOR_UNIT_TEXT]Defender[COLOR_REVERT].</English>
+		<French>[ICON_BULLET]Newly settled cities come with a [COLOR_UNIT_TEXT]Worker[COLOR_REVERT] and [COLOR_UNIT_TEXT]Defender[COLOR_REVERT].</French>
+		<German>[ICON_BULLET]Newly settled cities come with a [COLOR_UNIT_TEXT]Worker[COLOR_REVERT] and [COLOR_UNIT_TEXT]Defender[COLOR_REVERT].</German>
+		<Italian>[ICON_BULLET]Newly settled cities come with a [COLOR_UNIT_TEXT]Worker[COLOR_REVERT] and [COLOR_UNIT_TEXT]Defender[COLOR_REVERT].</Italian>
+		<Spanish>[ICON_BULLET]Newly settled cities come with a [COLOR_UNIT_TEXT]Worker[COLOR_REVERT] and [COLOR_UNIT_TEXT]Defender[COLOR_REVERT].</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_ROYAL_ROVA</Tag>
+		<English>Royal Rova</English>
+		<French>
+			<Text>Royal Rova</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>Royal Rova</German>
+		<Italian>Royal Rova</Italian>
+		<Spanish>Royal Rova</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_KASUBI_TOMBS_HELP</Tag>
+		<English>[ICON_BULLET]+1 [ICON_HAPPY] from [COLOR_HIGHLIGHT_TEXT]Priest[COLOR_REVERT]</English>
+		<French>[ICON_BULLET]+1 [ICON_HAPPY] from [COLOR_HIGHLIGHT_TEXT]Priest[COLOR_REVERT]</French>
+		<German>[ICON_BULLET]+1 [ICON_HAPPY] from [COLOR_HIGHLIGHT_TEXT]Priest[COLOR_REVERT]</German>
+		<Italian>[ICON_BULLET]+1 [ICON_HAPPY] from [COLOR_HIGHLIGHT_TEXT]Priest[COLOR_REVERT]</Italian>
+		<Spanish>[ICON_BULLET]+1 [ICON_HAPPY] from [COLOR_HIGHLIGHT_TEXT]Priest[COLOR_REVERT]</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_KASUBI_TOMBS</Tag>
+		<English>Kasubi Tombs</English>
+		<French>
+			<Text>Kasubi Tombs</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>Kasubi Tombs</German>
+		<Italian>Kasubi Tombs</Italian>
+		<Spanish>Kasubi Tombs</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_CIRCUS_MAXIMUS</Tag>
+		<English>Circus Maximus</English>
+		<French>
+			<Text>Circus Maximus</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>Circus Maximus</German>
+		<Italian>Circus Maximus</Italian>
+		<Spanish>Circus Maximus</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_ETEMENAKI</Tag>
+		<English>Etemenaki</English>
+		<French>
+			<Text>Etemenaki</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>Etemenaki</German>
+		<Italian>Etemenaki</Italian>
+		<Spanish>Etemenaki</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_TRAJANS_COLUMN_HELP</Tag>
+		<English>[ICON_BULLET]Reduced stability impact from overextension</English>
+		<French>[ICON_BULLET]Reduced stability impact from overextension</French>
+		<German>[ICON_BULLET]Reduced stability impact from overextension</German>
+		<Italian>[ICON_BULLET]Reduced stability impact from overextension</Italian>
+		<Spanish>[ICON_BULLET]Reduced stability impact from overextension</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_TRAJANS_COLUMN</Tag>
+		<English>Trajan's Column</English>
+		<French>
+			<Text>Trajan's Column</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>Trajan's Column</German>
+		<Italian>Trajan's Column</Italian>
+		<Spanish>Trajan's Column</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_GREAT_BATH</Tag>
+		<English>Great Bath</English>
+		<French>
+			<Text>Great Bath</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>Great Bath</German>
+		<Italian>Great Bath</Italian>
+		<Spanish>Great Bath</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_ABU_SIMBEL_HELP</Tag>
+		<English>[ICON_BULLET]+0.5 [ICON_COMMERCE] per population in this city</English>
+		<French>[ICON_BULLET]+0.5 [ICON_COMMERCE] per population in this city</French>
+		<German>[ICON_BULLET]+0.5 [ICON_COMMERCE] per population in this city</German>
+		<Italian>[ICON_BULLET]+0.5 [ICON_COMMERCE] per population in this city</Italian>
+		<Spanish>[ICON_BULLET]+0.5 [ICON_COMMERCE] per population in this city</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_ABU_SIMBEL</Tag>
+		<English>Abu Simbel</English>
+		<French>
+			<Text>Abu Simbel</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>Abu Simbel</German>
+		<Italian>Abu Simbel</Italian>
+		<Spanish>Abu Simbel</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_NURI</Tag>
+		<English>Nuri</English>
+		<French>
+			<Text>Nuri</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>Nuri</German>
+		<Italian>Nuri</Italian>
+		<Spanish>Nuri</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_NURI_HELP</Tag>
+		<English>[ICON_BULLET]Requires a Total of 5 Floodplains in City Radius[NEWLINE][ICON_BULLET]+1 [ICON_GREATPEOPLE] per Floodplain in city radius</English>
+		<French>[ICON_BULLET]Requires a Total of 5 Floodplains in City Radius[NEWLINE][ICON_BULLET]+1 [ICON_GREATPEOPLE] per Floodplain in city radius</French>
+		<German>[ICON_BULLET]Requires a Total of 5 Floodplains in City Radius[NEWLINE][ICON_BULLET]+1 [ICON_GREATPEOPLE] per Floodplain in city radius</German>
+		<Italian>[ICON_BULLET]Requires a Total of 5 Floodplains in City Radius[NEWLINE][ICON_BULLET]+1 [ICON_GREATPEOPLE] per Floodplain in city radius</Italian>
+		<Spanish>[ICON_BULLET]Requires a Total of 5 Floodplains in City Radius[NEWLINE][ICON_BULLET]+1 [ICON_GREATPEOPLE] per Floodplain in city radius</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_NURI_STRATEGY</Tag>
+		<English>[COLOR_BUILDING_TEXT]Nuri[COLOR_REVERT] provides a Great People point for every floodplains tile in the city radius. It also increases the chance of generating a [COLOR_UNIT_TEXT]Great Prophet[COLOR_REVERT].</English>
+		<French>[COLOR_BUILDING_TEXT]Nuri[COLOR_REVERT] provides a Great People point for every floodplains tile in the city radius. It also increases the chance of generating a [COLOR_UNIT_TEXT]Great Prophet[COLOR_REVERT].</French>
+		<German>[COLOR_BUILDING_TEXT]Nuri[COLOR_REVERT] provides a Great People point for every floodplains tile in the city radius. It also increases the chance of generating a [COLOR_UNIT_TEXT]Great Prophet[COLOR_REVERT].</German>
+		<Italian>[COLOR_BUILDING_TEXT]Nuri[COLOR_REVERT] provides a Great People point for every floodplains tile in the city radius. It also increases the chance of generating a [COLOR_UNIT_TEXT]Great Prophet[COLOR_REVERT].</Italian>
+		<Spanish>[COLOR_BUILDING_TEXT]Nuri[COLOR_REVERT] provides a Great People point for every floodplains tile in the city radius. It also increases the chance of generating a [COLOR_UNIT_TEXT]Great Prophet[COLOR_REVERT].</Spanish>
+	</TEXT>
+	<TEXT>
+ 		<Tag>TXT_KEY_BUILDING_TEMPLE_OF_AMUN_HELP</Tag>
+ 		<English>[ICON_BULLET]+1 free specialist per active World Wonder in all cities</English>
+ 		<French>[ICON_BULLET]+1 free specialist per active World Wonder in all cities</French>
+ 		<German>[ICON_BULLET]+1 free specialist per active World Wonder in all cities</German>
+ 		<Italian>[ICON_BULLET]+1 free specialist per active World Wonder in all cities</Italian>
+ 		<Spanish>[ICON_BULLET]+1 free specialist per active World Wonder in all cities</Spanish>
+ 	</TEXT>
+	<TEXT>
+ 		<Tag>TXT_KEY_BUILDING_TEMPLE_OF_AMUN</Tag>
+ 		<English>Temple of Amun</English>
+ 		<French>
+ 			<Text>Temple of Amun</Text>
+ 			<Gender>Male</Gender>
+ 			<Plural>0</Plural>
+ 		</French>
+ 		<German>Temple of Amun</German>
+ 		<Italian>Temple of Amun</Italian>
+ 		<Spanish>Temple of Amun</Spanish>
+ 	</TEXT>
+	<TEXT>
+ 		<Tag>TXT_KEY_BUILDING_HARAR_GATES_HELP</Tag>
+ 		<English>[ICON_BULLET]Upgrading Units Costs 1/3rd of the Price[NEWLINE][ICON_BULLET]Units with Siege Abilities Heal While Moving</English>
+ 		<French>[ICON_BULLET]Upgrading Units Costs 1/3rd of the Price[NEWLINE][ICON_BULLET]Units with Siege Abilities Heal While Moving</French>
+ 		<German>[ICON_BULLET]Upgrading Units Costs 1/3rd of the Price[NEWLINE][ICON_BULLET]Units with Siege Abilities Heal While Moving</German>
+ 		<Italian>[ICON_BULLET]Upgrading Units Costs 1/3rd of the Price[NEWLINE][ICON_BULLET]Units with Siege Abilities Heal While Moving</Italian>
+ 		<Spanish>[ICON_BULLET]Upgrading Units Costs 1/3rd of the Price[NEWLINE][ICON_BULLET]Units with Siege Abilities Heal While Moving</Spanish>
+ 	</TEXT>
+	<TEXT>
+ 		<Tag>TXT_KEY_BUILDING_STONETOWN_FORT_HELP</Tag>
+ 		<English>[ICON_BULLET]Can Settle Slaves Regardless of Region</English>
+ 		<French>[ICON_BULLET]Can Settle Slaves Regardless of Region</French>
+ 		<German>[ICON_BULLET]Can Settle Slaves Regardless of Region</German>
+ 		<Italian>[ICON_BULLET]Can Settle Slaves Regardless of Region</Italian>
+ 		<Spanish>[ICON_BULLET]Can Settle Slaves Regardless of Region</Spanish>
+ 	</TEXT>
+	<TEXT>
+ 		<Tag>TXT_KEY_BUILDING_ROYAL_KRAAL_HELP</Tag>
+ 		<English>[ICON_BULLET]Requires a Total of 2 Savanna Tiles in City Radius[NEWLINE][ICON_BULLET]Requires a Total of 3 Plains Tiles in City Radius[NEWLINE][ICON_BULLET]+1[ICON_PRODUCTION], +1[ICON_FOOD] on Savanna[NEWLINE][ICON_BULLET]+1[ICON_FOOD] on Plains</English>
+ 		<French>[ICON_BULLET]Requires a Total of 2 Savanna Tiles in City Radius[NEWLINE][ICON_BULLET]Requires a Total of 3 Plains Tiles in City Radius[NEWLINE][ICON_BULLET]+1[ICON_PRODUCTION], +1[ICON_FOOD] on Savanna[NEWLINE][ICON_BULLET]+1[ICON_FOOD] on Plains</French>
+ 		<German>[ICON_BULLET]Requires a Total of 2 Savanna Tiles in City Radius[NEWLINE][ICON_BULLET]Requires a Total of 3 Plains Tiles in City Radius[NEWLINE][ICON_BULLET]+1[ICON_PRODUCTION], +1[ICON_FOOD] on Savanna[NEWLINE][ICON_BULLET]+1[ICON_FOOD] on Plains</German>
+ 		<Italian>[ICON_BULLET]Requires a Total of 2 Savanna Tiles in City Radius[NEWLINE][ICON_BULLET]Requires a Total of 3 Plains Tiles in City Radius[NEWLINE][ICON_BULLET]+1[ICON_PRODUCTION], +1[ICON_FOOD] on Savanna[NEWLINE][ICON_BULLET]+1[ICON_FOOD] on Plains</Italian>
+ 		<Spanish>[ICON_BULLET]Requires a Total of 2 Savanna Tiles in City Radius[NEWLINE][ICON_BULLET]Requires a Total of 3 Plains Tiles in City Radius[NEWLINE][ICON_BULLET]+1[ICON_PRODUCTION], +1[ICON_FOOD] on Savanna[NEWLINE][ICON_BULLET]+1[ICON_FOOD] on Plains</Spanish>
+ 	</TEXT>
+	<TEXT>
+ 		<Tag>TXT_KEY_BUILDING_KULUMBIMBI_HELP</Tag>
+ 		<English>[ICON_BULLET]Receieve Double Papal and United Nations Votes[NEWLINE][ICON_BULLET]+2[ICON_RESEARCH] from Catholic Religious Buildings</English>
+ 		<French>[ICON_BULLET]Receieve Double Papal and United Nations Votes[NEWLINE][ICON_BULLET]+2[ICON_RESEARCH] from Catholic Religious Buildings</French>
+ 		<German>[ICON_BULLET]Receieve Double Papal and United Nations Votes[NEWLINE][ICON_BULLET]+2[ICON_RESEARCH] from Catholic Religious Buildings</German>
+ 		<Italian>[ICON_BULLET]Receieve Double Papal and United Nations Votes[NEWLINE][ICON_BULLET]+2[ICON_RESEARCH] from Catholic Religious Buildings</Italian>
+ 		<Spanish>[ICON_BULLET]Receieve Double Papal and United Nations Votes[NEWLINE][ICON_BULLET]+2[ICON_RESEARCH] from Catholic Religious Buildings</Spanish>
+ 	</TEXT>
+	<TEXT>
+ 		<Tag>TXT_KEY_BUILDING_KULUMBIMBI</Tag>
+ 		<English>Kulumbimbi</English>
+ 		<French>
+ 			<Text>Kulumbimbi</Text>
+ 			<Gender>Male</Gender>
+ 			<Plural>0</Plural>
+ 		</French>
+ 		<German>Kulumbimbi</German>
+ 		<Italian>Kulumbimbi</Italian>
+ 		<Spanish>Kulumbimbi</Spanish>
+ 	</TEXT>
+	<TEXT>
+ 		<Tag>TXT_KEY_BUILDING_STONETOWN_FORT</Tag>
+ 		<English>Stonetown Fort</English>
+ 		<French>
+ 			<Text>Stonetown Fort</Text>
+ 			<Gender>Male</Gender>
+ 			<Plural>0</Plural>
+ 		</French>
+ 		<German>Stonetown Fort</German>
+ 		<Italian>Stonetown Fort</Italian>
+ 		<Spanish>Stonetown Fort</Spanish>
+ 	</TEXT>
+	<TEXT>
+ 		<Tag>TXT_KEY_BUILDING_ROYAL_KRAAL</Tag>
+ 		<English>Royal Kraal</English>
+ 		<French>
+ 			<Text>Royal Kraal</Text>
+ 			<Gender>Male</Gender>
+ 			<Plural>0</Plural>
+ 		</French>
+ 		<German>Royal Kraal</German>
+ 		<Italian>Royal Kraal</Italian>
+ 		<Spanish>Royal Kraal</Spanish>
+ 	</TEXT>
+	<TEXT>
+ 		<Tag>TXT_KEY_BUILDING_HARAR_GATES</Tag>
+ 		<English>Harar Gates</English>
+ 		<French>
+ 			<Text>Harar Gates</Text>
+ 			<Gender>Male</Gender>
+ 			<Plural>0</Plural>
+ 		</French>
+ 		<German>Harar Gates</German>
+ 		<Italian>Harar Gates</Italian>
+ 		<Spanish>Harar Gates</Spanish>
+ 	</TEXT>
+	<TEXT>
+ 		<Tag>TXT_KEY_BUILDING_GREAT_ENCLOSURE</Tag>
+ 		<English>Great Enclosure</English>
+ 		<French>
+ 			<Text>Great Enclosure</Text>
+ 			<Gender>Male</Gender>
+ 			<Plural>0</Plural>
+ 		</French>
+ 		<German>Great Enclosure</German>
+ 		<Italian>Great Enclosure</Italian>
+ 		<Spanish>Great Enclosure</Spanish>
+ 	</TEXT>
+
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_PROPHETS_MOSQUE</Tag>
+		<English>Prophet's Mosque</English>
+		<French>
+			<Text>Prophet's Mosque</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>Prophet's Mosque</German>
+		<Italian>Prophet's Mosque</Italian>
+		<Spanish>Prophet's Mosque</Spanish>
+	</TEXT>
+
+
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_ALHAMBRA_HELP</Tag>
+		<English>[ICON_BULLET]+0.5 [ICON_PRODUCTION] per Population in this city</English>
+		<French>[ICON_BULLET]+0.5 [ICON_PRODUCTION] per Population in this city</French>
+		<German>[ICON_BULLET]+0.5 [ICON_PRODUCTION] per Population in this city</German>
+		<Italian>[ICON_BULLET]+0.5 [ICON_PRODUCTION] per Population in this city</Italian>
+		<Spanish>[ICON_BULLET]+0.5 [ICON_PRODUCTION] per Population in this city</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_ALHAMBRA</Tag>
+		<English>Alhambra</English>
+		<French>
+			<Text>Alhambra</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>Alhambra</German>
+		<Italian>Alhambra</Italian>
+		<Spanish>Alhambra</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_AL_AZHAR</Tag>
+		<English>Al Azhar</English>
+		<French>
+			<Text>Al Azhar</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>Al Azhar</German>
+		<Italian>Al Azhar</Italian>
+		<Spanish>Al Azhar</Spanish>
+	</TEXT>
+
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_KNOSSOS_PALACE_HELP</Tag>
+		<English>[ICON_BULLET]Requires [LINK=FEATURE_ISLANDS]Islands[\LINK] in city radius[NEWLINE]+2 [ICON_FOOD] on Islands</English>
+		<French>[ICON_BULLET]Requires [LINK=FEATURE_ISLANDS]Islands[\LINK] in city radius[NEWLINE]+2 [ICON_FOOD] on Islands</French>
+		<German>[ICON_BULLET]Requires [LINK=FEATURE_ISLANDS]Islands[\LINK] in city radius[NEWLINE]+2 [ICON_FOOD] on Islands</German>
+		<Italian>[ICON_BULLET]Requires [LINK=FEATURE_ISLANDS]Islands[\LINK] in city radius[NEWLINE]+2 [ICON_FOOD] on Islands</Italian>
+		<Spanish>[ICON_BULLET]Requires [LINK=FEATURE_ISLANDS]Islands[\LINK] in city radius[NEWLINE]+2 [ICON_FOOD] on Islands</Spanish>
+	</TEXT>
+
+
+	<TEXT>
 		<Tag>TXT_KEY_BUILDING_WAT_PREAH_PISNULOK</Tag>
 		<English>Wat Preah Pisnulok</English>
 		<French>
@@ -308,18 +622,18 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_EIFFEL_TOWER_HELP</Tag>
 		<English>[ICON_BULLET]Golden Ages consume one fewer Great Person</English>
-		<French>[ICON_BULLET]Golden Ages consume one fewer Great Person</French>
-		<German>[ICON_BULLET]Goldene Zeitalter verbrauchen eine gro&#223;e Pers&#246;nlichkeit weniger</German>
-		<Italian>[ICON_BULLET]Golden Ages consume one fewer Great Person</Italian>
-		<Spanish>[ICON_BULLET]Golden Ages consume one fewer Great Person</Spanish>
+ 		<French>[ICON_BULLET]Golden Ages consume one fewer Great Person</French>
+ 		<German>[ICON_BULLET]Goldene Zeitalter verbrauchen eine gro&#223;e Pers&#246;nlichkeit weniger</German>
+ 		<Italian>[ICON_BULLET]Golden Ages consume one fewer Great Person</Italian>
+ 		<Spanish>[ICON_BULLET]Golden Ages consume one fewer Great Person</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_EIFFEL_TOWER_STRATEGY</Tag>
 		<English>The [COLOR_BUILDING_TEXT]Eiffel Tower[COLOR_REVERT] grants a culture boost and also reduces the amount of great people consumed in a golden age by 1. Its city has an improved chance of generating a [COLOR_UNIT_TEXT]Great Artist[COLOR_REVERT].</English>
-		<French>The [COLOR_BUILDING_TEXT]Eiffel Tower[COLOR_REVERT] grants a culture boost and also reduces the amount of great people consumed in a golden age by 1. Its city has an improved chance of generating a [COLOR_UNIT_TEXT]Great Artist[COLOR_REVERT].</French>
-		<German>The [COLOR_BUILDING_TEXT]Eiffel Tower[COLOR_REVERT] grants a culture boost and also reduces the amount of great people consumed in a golden age by 1. Its city has an improved chance of generating a [COLOR_UNIT_TEXT]Great Artist[COLOR_REVERT].</German>
-		<Italian>The [COLOR_BUILDING_TEXT]Eiffel Tower[COLOR_REVERT] grants a culture boost and also reduces the amount of great people consumed in a golden age by 1. Its city has an improved chance of generating a [COLOR_UNIT_TEXT]Great Artist[COLOR_REVERT].</Italian>
-		<Spanish>The [COLOR_BUILDING_TEXT]Eiffel Tower[COLOR_REVERT] grants a culture boost and also reduces the amount of great people consumed in a golden age by 1. Its city has an improved chance of generating a [COLOR_UNIT_TEXT]Great Artist[COLOR_REVERT].</Spanish>
+ 		<French>The [COLOR_BUILDING_TEXT]Eiffel Tower[COLOR_REVERT] grants a culture boost and also reduces the amount of great people consumed in a golden age by 1. Its city has an improved chance of generating a [COLOR_UNIT_TEXT]Great Artist[COLOR_REVERT].</French>
+ 		<German>The [COLOR_BUILDING_TEXT]Eiffel Tower[COLOR_REVERT] grants a culture boost and also reduces the amount of great people consumed in a golden age by 1. Its city has an improved chance of generating a [COLOR_UNIT_TEXT]Great Artist[COLOR_REVERT].</German>
+ 		<Italian>The [COLOR_BUILDING_TEXT]Eiffel Tower[COLOR_REVERT] grants a culture boost and also reduces the amount of great people consumed in a golden age by 1. Its city has an improved chance of generating a [COLOR_UNIT_TEXT]Great Artist[COLOR_REVERT].</Italian>
+ 		<Spanish>The [COLOR_BUILDING_TEXT]Eiffel Tower[COLOR_REVERT] grants a culture boost and also reduces the amount of great people consumed in a golden age by 1. Its city has an improved chance of generating a [COLOR_UNIT_TEXT]Great Artist[COLOR_REVERT].</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_COLOSSUS_STRATEGY</Tag>
@@ -1486,6 +1800,14 @@
 		<Spanish>[ICON_BULLET]+50% Commerce from Corporations</Spanish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_BUILDING_ITCHAN_KHALA_HELP</Tag>
+		<English>[ICON_BULLET]Trade routes remain connected even during war</English>
+		<French>[ICON_BULLET]Les routes commerciales demeurent connect&#233;es en temps de guerre</French>
+		<German>[ICON_BULLET]Trade routes remain connected even during war</German>
+		<Italian>[ICON_BULLET]Trade routes remain connected even during war</Italian>
+		<Spanish>[ICON_BULLET]Trade routes remain connected even during war</Spanish>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SALSAL_BUDDHA_STRATEGY</Tag>
 		<English>The [COLOR_BUILDING_TEXT]Salsal Buddha[COLOR_REVERT] increases the commerce from Corporations in all cities. It also increases its city's chance of generating a [COLOR_UNIT_TEXT]Great Merchant[COLOR_REVERT].</English>
 		<French>The [COLOR_BUILDING_TEXT]Salsal Buddha[COLOR_REVERT] increases the commerce from Corporations in all cities. It also increases its city's chance of generating a [COLOR_UNIT_TEXT]Great Merchant[COLOR_REVERT].</French>
@@ -1575,7 +1897,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SILVER_TREE_FOUNTAIN_HELP</Tag>
-		<English>[ICON_BULLET]Another great person is born whenever a Great General appears</English>
+		<English>[ICON_BULLET]Another  is born whenever a Great General appears</English>
 		<French>[ICON_BULLET]Un autre personnage illustre na&#238;t lors de l'apparition d'un g&#233;n&#233;ral illustre</French>
 		<German>[ICON_BULLET]Another great person is born whenever a Great General appears</German>
 		<Italian>[ICON_BULLET]Another great person is born whenever a Great General appears</Italian>
@@ -2356,10 +2678,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_GARDENS_BY_THE_BAY_HELP</Tag>
 		<English>[ICON_BULLET]+1[ICON_HAPPY] per building that provides [ICON_HEALTHY]</English>
-		<French>[ICON_BULLET]+1[ICON_HAPPY] per building that provides [ICON_HEALTHY]</French>
-		<German>[ICON_BULLET]+1[ICON_HAPPY] per building that provides [ICON_HEALTHY]</German>
-		<Italian>[ICON_BULLET]+1[ICON_HAPPY] per building that provides [ICON_HEALTHY]</Italian>
-		<Spanish>[ICON_BULLET]+1[ICON_HAPPY] per building that provides [ICON_HEALTHY]</Spanish>
+ 		<French>[ICON_BULLET]+1[ICON_HAPPY] per building that provides [ICON_HEALTHY]</French>
+ 		<German>[ICON_BULLET]+1[ICON_HAPPY] per building that provides [ICON_HEALTHY]</German>
+ 		<Italian>[ICON_BULLET]+1[ICON_HAPPY] per building that provides [ICON_HEALTHY]</Italian>
+ 		<Spanish>[ICON_BULLET]+1[ICON_HAPPY] per building that provides [ICON_HEALTHY]</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_GARDENS_BY_THE_BAY_STRATEGY</Tag>
@@ -3035,7 +3357,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_NOBEL_PRIZE_EFFECT</Tag>
-		<English>A Nobel Prize has been awarded to the %s1 %s2 in %s3, adding %d4 [ICON_GREATPEOPLE]</English>
+		<English><English>A Nobel Prize has been awarded to the %s1 %s2 in %s3, adding %d4 [ICON_GREATPEOPLE]</English></English>
 		<French>Un prix Nobel a &#233;t&#233; d&#233;cern&#233; au personnage illustre %s1 %s2 de %s3, g&#233;n&#233;rant %d4 [ICON_GREATPEOPLE]</French>
 		<German>A Nobel Prize has been awarded to the %s1 Great Person %s2 in %s3, adding %d4 [ICON_GREATPEOPLE]</German>
 		<Italian>A Nobel Prize has been awarded to the %s1 Great Person %s2 in %s3, adding %d4 [ICON_GREATPEOPLE]</Italian>
@@ -3282,6 +3604,123 @@
 		<Spanish>University of Sankore produced %d1 [ICON_GOLD] after receiving [COLOR_HIGHLIGHT_TEXT]%s2[COLOR_REVERT] in trade.</Spanish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_BUILDING_AIT_BENHADDOU</Tag>
+		<English>Ait Benhaddou</English>
+		<French></French>
+		<German></German>
+		<Italian></Italian>
+		<Spanish></Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_AIT_BENHADDOU_HELP</Tag>
+		<English>[ICON_BULLET]Requires a total of 3 Desert Hills or Semidesert Hills in city radius[NEWLINE][ICON_BULLET]+1[ICON_FOOD], +1[ICON_PRODUCTION] on Desert Hills and Semidesert Hills</English>
+		<French>[ICON_BULLET]Requires a total of 3 Desert Hills or Semidesert Hills in city radius[NEWLINE][ICON_BULLET]+1[ICON_FOOD], +1[ICON_PRODUCTION] on Desert Hills and Semidesert Hills</French>
+		<German>[ICON_BULLET]Requires a total of 3 Desert Hills or Semidesert Hills in city radius[NEWLINE][ICON_BULLET]+1[ICON_FOOD], +1[ICON_PRODUCTION] on Desert Hills and Semidesert Hills</German>
+		<Italian>[ICON_BULLET]Requires a total of 3 Desert Hills or Semidesert Hills in city radius[NEWLINE][ICON_BULLET]+1[ICON_FOOD], +1[ICON_PRODUCTION] on Desert Hills and Semidesert Hills</Italian>
+		<Spanish>[ICON_BULLET]Requires a total of 3 Desert Hills or Semidesert Hills in city radius[NEWLINE][ICON_BULLET]+1[ICON_FOOD], +1[ICON_PRODUCTION] on Desert Hills and Semidesert Hills</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_ROSE_GARDEN_PALACE</Tag>
+		<English>Rose Garden Palace</English>
+		<French></French>
+		<German></German>
+		<Italian></Italian>
+		<Spanish></Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_ROSE_GARDEN_PALACE_HELP</Tag>
+		<English>Gain a free Great Statesman whenever you complete a wonder in this city (Including this wonder)</English>
+		<French>Gain a free Great Statesman whenever you complete a wonder in this city (Including this wonder)</French>
+		<German>Gain a free Great Statesman whenever you complete a wonder in this city (Including this wonder)</German>
+		<Italian>Gain a free Great Statesman whenever you complete a wonder in this city (Including this wonder)</Italian>
+		<Spanish>Gain a free Great Statesman whenever you complete a wonder in this city (Including this wonder)</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_ITCHAN_KHALA</Tag>
+		<English>Itchan Kala</English>
+		<French></French>
+		<German></German>
+		<Italian></Italian>
+		<Spanish></Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_NAREKAVANK</Tag>
+		<English>Narekavank</English>
+		<French></French>
+		<German></German>
+		<Italian></Italian>
+		<Spanish></Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_NAREKAVANK_HELP</Tag>
+		<English>Gain [ICON_GREATPEOPLE] (Great Prophet) whenever you lose a unit in combat</English>
+		<French>Gain [ICON_GREATPEOPLE] (Great Prophet) whenever you lose a unit in combat</French>
+		<German>Gain [ICON_GREATPEOPLE] (Great Prophet) whenever you lose a unit in combat</German>
+		<Italian>Gain [ICON_GREATPEOPLE] (Great Prophet) whenever you lose a unit in combat</Italian>
+		<Spanish>Gain [ICON_GREATPEOPLE] (Great Prophet) whenever you lose a unit in combat</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_OUADANE_KSOUR_HELP</Tag>
+		<English>[ICON_BULLET]Requires a total of 5 Desert Tiles in city radius[NEWLINE][ICON_BULLET]+1 trade route per 2 desert tiles in this city</English>
+		<French>[ICON_BULLET]Requires a total of 5 Desert Tiles in city radius[NEWLINE][ICON_BULLET]+1 trade route per 2 desert tiles in this city</French>
+		<German>[ICON_BULLET]Requires a total of 5 Desert Tiles in city radius[NEWLINE][ICON_BULLET]+1 trade route per 2 desert tiles in this city</German>
+		<Italian>[ICON_BULLET]Requires a total of 5 Desert Tiles in city radius[NEWLINE][ICON_BULLET]+1 trade route per 2 desert tiles in this city</Italian>
+		<Spanish>[ICON_BULLET]Requires a total of 5 Desert Tiles in city radius[NEWLINE][ICON_BULLET]+1 trade route per 2 desert tiles in this city</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_OUADANE_KSOUR</Tag>
+		<English>Ouadane Ksar</English>
+		<French>Ouadane Ksar</French>
+		<German>Ouadane Ksar</German>
+		<Italian>Ouadane Ksar</Italian>
+		<Spanish>Ouadane Ksar</Spanish>
+	</TEXT>
+
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_IYANUWO</Tag>
+		<English>Iyanuwo</English>
+		<French>Iyanuwo</French>
+		<German>Iyanuwo</German>
+		<Italian>Iyanuwo</Italian>
+		<Spanish>Iyanuwo</Spanish>
+	</TEXT>
+
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_TOMB_OF_ASKIA</Tag>
+		<English>Tomb of Askia</English>
+		<French>Tomb of Askia</French>
+		<German>Tomb of Askia</German>
+		<Italian>Tomb of Askia</Italian>
+		<Spanish>Tomb of Askia</Spanish>
+	</TEXT>
+
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_TOMB_OF_ASKIA_HELP</Tag>
+		<English>[ICON_BULLET]Gain 2 Light and 2 Heavy Cavalry when you Complete a Trade Mission with a [COLOR_UNIT_TEXT]Great Merchant[COLOR_REVERT]</English>
+		<French>[ICON_BULLET]Gain 2 light and 2 heavy cavalry when you complete a trade mission with a [COLOR_UNIT_TEXT]Great Merchant[COLOR_REVERT]</French>
+		<German>[ICON_BULLET]Gain 2 light and 2 heavy cavalry when you complete a trade mission with a [COLOR_UNIT_TEXT]Great Merchant[COLOR_REVERT]</German>
+		<Italian>[ICON_BULLET]Gain 2 light and 2 heavy cavalry when you complete a trade mission with a [COLOR_UNIT_TEXT]Great Merchant[COLOR_REVERT]</Italian>
+		<Spanish>[ICON_BULLET]Gain 2 light and 2 heavy cavalry when you complete a trade mission with a [COLOR_UNIT_TEXT]Great Merchant[COLOR_REVERT]</Spanish>
+	</TEXT>
+
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_OSUN_OSOGBO</Tag>
+		<English>Osun Osogbo</English>
+		<French>Osun Osogbo</French>
+		<German>Osun Osogbo</German>
+		<Italian>Osun Osogbo</Italian>
+		<Spanish>Osun Osogbo</Spanish>
+	</TEXT>
+
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_OSUN_OSOGBO_HELP</Tag>
+		<English>[ICON_BULLET]+3 [ICON_HAPPY] from Pagan Temples</English>
+		<French>[ICON_BULLET]+3 [ICON_HAPPY] from Pagan Temples</French>
+		<German>[ICON_BULLET]+3 [ICON_HAPPY] from Pagan Temples</German>
+		<Italian>[ICON_BULLET]+3 [ICON_HAPPY] from Pagan Temples</Italian>
+		<Spanish>[ICON_BULLET]+3 [ICON_HAPPY] from Pagan Temples</Spanish>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_BUILDING_PANTHEON</Tag>
 		<English>The Pantheon</English>
 		<French>The Pantheon</French>
@@ -3352,13 +3791,5 @@
 		<German>[ICON_BULLET]+1[ICON_COMMERCE] during Golden Ages</German>
 		<Italian>[ICON_BULLET]+1[ICON_COMMERCE] during Golden Ages</Italian>
 		<Spanish>[ICON_BULLET]+1[ICON_COMMERCE] during Golden Ages</Spanish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_</Tag>
-		<English></English>
-		<French></French>
-		<German></German>
-		<Italian></Italian>
-		<Spanish></Spanish>
 	</TEXT>
 </Civ4GameText>

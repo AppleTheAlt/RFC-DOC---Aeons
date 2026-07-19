@@ -134,6 +134,30 @@
 		<Spanish>[COLOR_HIGHLIGHT_TEXT]Sacrifice[COLOR_REVERT][NEWLINE]Starts a [ICON_GOLDENAGE] Golden Age for %d1 turns[NEWLINE]+1 [ICON_UNHAPPY] for %d2 turns[NEWLINE]This will consume the slave.</Spanish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_BUTTON_SANCTIFY_PROPHET</Tag>
+		<English>[COLOR_HIGHLIGHT_TEXT]Sanctify Prophet[COLOR_REVERT][NEWLINE]Starts a [ICON_GOLDENAGE] Golden Age for %d1 turns</English>
+		<French>[COLOR_HIGHLIGHT_TEXT]Sanctify Prophet[COLOR_REVERT][NEWLINE]Starts a [ICON_GOLDENAGE] Golden Age for %d1 turns</French>
+		<German>[COLOR_HIGHLIGHT_TEXT]Sanctify Prophet[COLOR_REVERT][NEWLINE]Starts a [ICON_GOLDENAGE] Golden Age for %d1 turns</German>
+		<Italian>[COLOR_HIGHLIGHT_TEXT]Sanctify Prophet[COLOR_REVERT][NEWLINE]Starts a [ICON_GOLDENAGE] Golden Age for %d1 turns</Italian>
+		<Spanish>[COLOR_HIGHLIGHT_TEXT]Sanctify Prophet[COLOR_REVERT][NEWLINE]Starts a [ICON_GOLDENAGE] Golden Age for %d1 turns</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUTTON_PURGE_CORRUPTION</Tag>
+		<English>[COLOR_HIGHLIGHT_TEXT]Purge Corruption[COLOR_REVERT][NEWLINE]Reduces Decadence by 3.</English>
+		<French>[COLOR_HIGHLIGHT_TEXT]Purge Corruption[COLOR_REVERT][NEWLINE]Reduces Decadence by 3.</French>
+		<German>[COLOR_HIGHLIGHT_TEXT]Purge Corruption[COLOR_REVERT][NEWLINE]Reduces Decadence by 3.</German>
+		<Italian>[COLOR_HIGHLIGHT_TEXT]Purge Corruption[COLOR_REVERT][NEWLINE]Reduces Decadence by 3.</Italian>
+		<Spanish>[COLOR_HIGHLIGHT_TEXT]Purge Corruption[COLOR_REVERT][NEWLINE]Reduces Decadence by 3.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUTTON_INTEGRATE_SLAVE</Tag>
+		<English>[COLOR_HIGHLIGHT_TEXT]Integrate Slave[COLOR_REVERT][NEWLINE]Increases population by %d1[NEWLINE]+1 [ICON_UNHAPPY] for %d2 turns[NEWLINE]This will consume the slave.</English>
+		<French>[COLOR_HIGHLIGHT_TEXT]Integrate Slave[COLOR_REVERT][NEWLINE]Increases population by %d1[NEWLINE]+1 [ICON_UNHAPPY] for %d2 turns[NEWLINE]This will consume the slave.</French>
+		<German>[COLOR_HIGHLIGHT_TEXT]Integrate Slave[COLOR_REVERT][NEWLINE]Increases population by %d1[NEWLINE]+1 [ICON_UNHAPPY] for %d2 turns[NEWLINE]This will consume the slave.</German>
+		<Italian>[COLOR_HIGHLIGHT_TEXT]Integrate Slave[COLOR_REVERT][NEWLINE]Increases population by %d1[NEWLINE]+1 [ICON_UNHAPPY] for %d2 turns[NEWLINE]This will consume the slave.</Italian>
+		<Spanish>[COLOR_HIGHLIGHT_TEXT]Integrate Slave[COLOR_REVERT][NEWLINE]Increases population by %d1[NEWLINE]+1 [ICON_UNHAPPY] for %d2 turns[NEWLINE]This will consume the slave.</Spanish>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_ACTION_DIPLOMATIC_MISSION_PEACE</Tag>
 		<English>The Great Person will make another civilization forget your past transgressions and improve your relations. It consumes the Great Person.</English>
 		<French>Le personnage illustre fera oublier &#224; la civilisation vos transgressions pass&#233;es et am&#233;liorera vos relations. Cela consomme le personnage illustre.</French>
