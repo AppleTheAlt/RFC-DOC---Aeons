@@ -62,8 +62,12 @@
 	<symbol id="mugyo"/>
 	<symbol id="bidaism"/>
 	<symbol id="bukongo"/>
+	<symbol id="fomba gasy"/>
+	<symbol id="bantu"/>
 	<symbol id="citizen" from="POWER" offset="1"/>
 	<symbol id="greatgeneral" name="GREAT_GENERAL"/>
+	<symbol id="military" from="POWER" offset="25"/>
+	<symbol id="immigration" name="IMMIGRATION"/>
 	
 	<init module="AttitudeUtil">
 		<!-- Furious, Annoyed, Cautious, Pleased, Friendly -->
