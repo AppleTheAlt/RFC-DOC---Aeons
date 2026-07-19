@@ -164,6 +164,7 @@
 	<ElementType name="iAreaHappiness" content="textOnly" dt:type="int"/>
 	<ElementType name="iGlobalHappiness" content="textOnly" dt:type="int"/>
 	<ElementType name="iStateReligionHappiness" content="textOnly" dt:type="int"/>
+	<ElementType name="iImmigrationDesire" content="textOnly" dt:type="int"/> <!-- Aeons -->
 	<ElementType name="iWorkerSpeedModifier" content="textOnly" dt:type="int"/>
 	<ElementType name="iMilitaryProductionModifier" content="textOnly" dt:type="int"/>
 	<ElementType name="iSpaceProductionModifier" content="textOnly" dt:type="int"/>
@@ -174,6 +175,7 @@
 	<ElementType name="iTradeRouteModifier" content="textOnly" dt:type="int"/>
 	<ElementType name="iCultureTradeRouteModifier" content="textOnly" dt:type="int"/>
 	<ElementType name="iForeignTradeRouteModifier" content="textOnly" dt:type="int"/>
+	<ElementType name="iDifferentReligionTradeRouteModifier" content="textOnly" dt:type="int"/> <!-- Aeons -->
 	<ElementType name="iGlobalPopulationChange" content="textOnly" dt:type="int"/>
 	<ElementType name="iFreeTechs" content="textOnly" dt:type="int"/>
 	<ElementType name="iDefense" content="textOnly" dt:type="int"/>
@@ -217,6 +219,9 @@
 		<element type="iYield" minOccurs="0" maxOccurs="*"/>
 	</ElementType>
 	<ElementType name="GlobalYieldModifiers" content="eltOnly">
+		<element type="iYield" minOccurs="0" maxOccurs="*"/>
+	</ElementType>
+	<ElementType name="CultureYieldModifiers" content="eltOnly">
 		<element type="iYield" minOccurs="0" maxOccurs="*"/>
 	</ElementType>
 	<ElementType name="iCommerce" content="textOnly" dt:type="int"/>
@@ -372,6 +377,10 @@
 	</ElementType>
 	<ElementType name="SpecialistYieldChanges" content="eltOnly">
 		<element type="SpecialistYieldChange" minOccurs="0" maxOccurs="*"/>
+	</ElementType>
+	<ElementType name="SpecialistHappyChange" content="eltOnly"> <!-- Aeons -->
+		<element type="SpecialistType"/>
+		<element type="iHappiness"/>
 	</ElementType>
 	<ElementType name="BonusYieldModifier" content="eltOnly">
 		<element type="BonusType"/>
@@ -566,6 +575,7 @@
 		<element type="iTradeRouteModifier" minOccurs="0"/>
 		<element type="iCultureTradeRouteModifier" minOccurs="0"/>
 		<element type="iForeignTradeRouteModifier" minOccurs="0"/>
+		<element type="iDifferentReligionTradeRouteModifier" minOccurs="0"/>
 		<element type="iGlobalPopulationChange" minOccurs="0"/>
 		<element type="iFreeTechs" minOccurs="0"/>
 		<element type="iDefense" minOccurs="0"/>
@@ -585,6 +595,7 @@
 		<element type="PowerYieldModifiers" minOccurs="0"/>
 		<element type="AreaYieldModifiers" minOccurs="0"/>
 		<element type="GlobalYieldModifiers" minOccurs="0"/>
+		<element type="CultureYieldModifiers" minOccurs="0"/> <!-- Aeons -->
 		<element type="CommerceChanges" minOccurs="0"/>
 		<element type="ObsoleteSafeCommerceChanges" minOccurs="0"/>
 		<element type="CommerceChangeDoubleTimes" minOccurs="0"/>
@@ -612,6 +623,7 @@
 		<element type="PrereqBuildingClassPercents" minOccurs="0"/>
 		<element type="BuildingClassNeededs" minOccurs="0"/>
 		<element type="SpecialistYieldChanges" minOccurs="0"/>
+		<element type="SpecialistHappyChange" minOccurs="0"/> <!-- Aeons -->
 		<element type="BonusYieldModifiers" minOccurs="0"/>
 		<element type="BonusCommerceModifiers" minOccurs="0"/>
 		<element type="BonusYieldChanges" minOccurs="0"/>
