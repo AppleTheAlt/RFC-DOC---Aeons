@@ -11606,13 +11606,6 @@
 			<bInGeneric>1</bInGeneric>
 		</SoundData>
 		<SoundData>
-			<SoundID>SONG_SOUTH_ASIA_1</SoundID>
-			<Filename>Sounds/Soundtrack/SouthAsia/SouthAsia1</Filename>
-			<LoadType>STREAMED</LoadType>
-			<bIsCompressed>1</bIsCompressed>
-			<bInGeneric>1</bInGeneric>
-		</SoundData>
-		<SoundData>
 			<SoundID>SONG_SOUTH_ASIA_2</SoundID>
 			<Filename>Sounds/Soundtrack/SouthAsia/SouthAsia2</Filename>
 			<LoadType>STREAMED</LoadType>
@@ -11657,13 +11650,6 @@
 		<SoundData>
 			<SoundID>SONG_SOUTH_ASIA_8</SoundID>
 			<Filename>Sounds/Soundtrack/SouthAsia/SouthAsia8</Filename>
-			<LoadType>STREAMED</LoadType>
-			<bIsCompressed>1</bIsCompressed>
-			<bInGeneric>1</bInGeneric>
-		</SoundData>
-		<SoundData>
-			<SoundID>SONG_SOUTH_ASIA_9</SoundID>
-			<Filename>Sounds/Soundtrack/SouthAsia/SouthAsia9</Filename>
 			<LoadType>STREAMED</LoadType>
 			<bIsCompressed>1</bIsCompressed>
 			<bInGeneric>1</bInGeneric>
