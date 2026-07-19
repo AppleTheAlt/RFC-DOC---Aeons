@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<!-- edited with XMLSPY v2004 rel. 2 U (http://www.xmlspy.com) by Firaxis Games (Firaxis Games) -->
+<!-- Sid Meier's Civilization 4 -->
+<!-- Copyright Firaxis Games 2005 -->
+<!-- -->
+<!-- Leaderhead art path information -->
+<Civ4ArtDefines xmlns="x-schema:Civilis_CIV4ArtDefinesSchema.xml">
+	<LeaderheadArtInfos>
+		<LeaderheadArtInfo>
+			<Type>ART_DEF_LEADER_CIVILIS</Type>
+			<Button>Modules/Custom Civilizations/Batavii/Civilis/Civilis_Button.dds</Button>
+			<NIF>Modules/Custom Civilizations/Batavii/Civilis/ragnar_lodbrok.nif</NIF>
+			<KFM>Modules/Custom Civilizations/Batavii/Civilis/ragnar_lodbrok.kfm</KFM>
+			<NoShaderNIF>Modules/Custom Civilizations/Batavii/Civilis/ragnar_lodbrok_noshader.nif</NoShaderNIF>
+			<BackgroundKFM>Modules/Custom Civilizations/Batavii/Civilis/Ragnar_BG.kfm</BackgroundKFM>
+		</LeaderheadArtInfo>
+	</LeaderheadArtInfos>
+</Civ4ArtDefines>
