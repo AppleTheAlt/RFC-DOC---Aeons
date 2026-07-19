@@ -41,6 +41,7 @@ g_gpBarList = (
 	"UNIT_GREAT_STATESMAN",
 	"UNIT_GREAT_PROPHET",
 	"UNIT_GREAT_GENERAL",
+	"UNIT_GREAT_TREKKER", # Aeons
 # MOD: specify the unit type (XML key) for each new great person (1)
 	#"UNIT_DOCTOR",
 )
@@ -57,6 +58,7 @@ NUM_GP = len(g_gpBarList)
 	GP_STATESMAN,
 	GP_PROPHET,
 	GP_GENERAL,
+	GP_TREKKER,
 # MOD: define a constant for each new great person in same order as above (2)
 	#GP_DOCTOR,
 ) = range(NUM_GP)
@@ -88,6 +90,7 @@ def init():
 	g_gpColors[GP_STATESMAN] = gc.getInfoTypeForString("COLOR_PLAYER_GOLDENROD")
 	g_gpColors[GP_PROPHET] = gc.getInfoTypeForString("COLOR_BLUE")
 	g_gpColors[GP_GENERAL] = gc.getInfoTypeForString("COLOR_RED")
+	g_gpColors[GP_TREKKER] = gc.getInfoTypeForString("COLOR_PLAYER_BOER_ORANGE") # Aeons
 	# MOD: specify color for each new great person (3)
 	#g_gpColors[GP_DOCTOR] = gc.getInfoTypeForString("COLOR_WHITE")
 	
@@ -101,6 +104,7 @@ def init():
 	g_unitIcons[g_gpUnitTypes[GP_STATESMAN]] = FontUtil.getChar(FontSymbols.SCALES_CHAR)
 	g_unitIcons[g_gpUnitTypes[GP_PROPHET]] = FontUtil.getChar(FontSymbols.RELIGION_CHAR)
 	g_unitIcons[g_gpUnitTypes[GP_GENERAL]] = FontUtil.getChar(FontSymbols.GREAT_GENERAL_CHAR)
+	g_unitIcons[g_gpUnitTypes[GP_TREKKER]] = FontUtil.getChar(FontSymbols.IMMIGRATION_CHAR)
 	# MOD: specify icon (font glyph) for each new great person (4)
 	#g_unitIcons[g_gpUnitTypes[GP_DOCTOR]] = FontUtil.getChar(FontSymbols.HEALTHY_CHAR)
 

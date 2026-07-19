@@ -128,6 +128,19 @@ def getWidgetHelp(argsList):
 	# Leoreth: Byzantine UP: bribe button
 	if iData1 == 10001:
 		return CyTranslator().getText("TXT_KEY_ACTION_BRIBE_UNITS", ())
+
+	# Aeons: Georgian UP: Saints
+	if iData1 == 10002:
+		return CyTranslator().getText("TXT_KEY_BUTTON_SANCTIFY_PROPHET", (turns(3), turns(0)))
+
+	# Aeons: Bugandan UP: Slave join population
+	if iData1 == 10003:
+		return CyTranslator().getText("TXT_KEY_BUTTON_INTEGRATE_SLAVE", (1, turns(3)))
+
+	# Aeons: Great Statesman Purge Corruption
+	if iData1 == 10004:
+		return CyTranslator().getText("TXT_KEY_BUTTON_PURGE_CORRUPTION", ())
+
 		
 	if iData1 == 12001:
 		szText = BugUtil.getPlainText("TXT_KEY_BUG_TECH_PREFS_ALL") + "\n"
