@@ -101,11 +101,11 @@ class CvCorporationScreen:
 		self.W_INFLUENCES_AREA = self.X_CITY2_AREA + self.W_CITY_AREA - self.X_INFLUENCES_AREA
 		self.H_INFLUENCES_AREA = self.H_REQUIREMENTS_AREA
 		self.INFLUENCES_ID =  "InfluencessAreaWidget"
-	
+
 	@property
 	def DX_CORPORATION(self):
-		return (self.W_CORPORATION_AREA - 2*self.X_CORPORATION_START) / (gc.getNumCorporationInfos() - 1)
-			
+		return (self.W_CORPORATION_AREA - 2*self.X_CORPORATION_START) / (gc.getNumCorporationInfos() - 1)		
+	
 	def getScreen(self):
 		return CyGInterfaceScreen(self.SCREEN_NAME, CvScreenEnums.CORPORATION_SCREEN)
 

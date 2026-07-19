@@ -145,7 +145,6 @@ class CvWorldBuilderScreen:
 		iPlayer = self.m_iCurrentPlayer
 		if not CyInterface().isInAdvancedStart() and (x, y) != (-1, -1):
 			sText = "<font=3b>%s, X: %d, Y: %d, City: %s, Region: %s</font>" %(CyTranslator().getText("TXT_KEY_WB_LATITUDE",(self.m_pCurrentPlot.getLatitude(),)), x, y, cn.getDisplayName(self.m_iCurrentPlayer, self.m_pCurrentPlot), self.m_pCurrentPlot.getRegionName())
-			
 			screen.setLabel( "WBCoords", "Background", sText, CvUtil.FONT_CENTER_JUSTIFY, screen.getXResolution()/2, 6, -0.3, FontTypes.GAME_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1 )
 
 			if self.iPlayerAddMode in lDoCMapModes + [iModeCity]:
@@ -505,7 +504,7 @@ class CvWorldBuilderScreen:
 		elif self.iPlayerAddMode == iModeCity:
 			if self.m_pCurrentPlot.isCity(): return
 			pCity = gc.getPlayer(iPlayer).initCity(x, y)
-			sName = cn.getDisplayName(iPlayer, (x, y))
+			sName = cn.getDisplayName(self.m_iCurrentPlayer, (x, y))
 			if sName:
 				pCity.setName(sName, True)
 			if bPython:
@@ -2327,7 +2326,7 @@ class CvWorldBuilderScreen:
 			if pOldCity:
 				x, y = location(self.m_pCurrentPlot)
 				pNewCity = pPlayer.initCity(x, y)
-				sName = cn.getDisplayName(self.m_iCurrentPlayer, (x, y))
+				sName = cn.getDisplayName(iPlayer, (x, y))
 				if sName:
 					pNewCity.setName(sName, True)
 				self.copyCityStats(pOldCity, pNewCity, False)

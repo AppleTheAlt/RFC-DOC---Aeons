@@ -13,6 +13,7 @@ from Rules import *
 from StoredData import data
 from Consts import *
 from Core import *
+from Decadence import * # Aeons - For Statesman
 
 # BUG - DLL - start
 import BugDll
@@ -2383,12 +2384,12 @@ class CvMainInterface:
 				for i in range ( g_NumUnitClassInfos ):
 					eLoopUnit = gc.getCivilizationInfo(pHeadSelectedCity.getCivilizationType()).getCivilizationUnits(i)
 
-					if (pHeadSelectedCity.canTrain(eLoopUnit, False, True)):
+					if (pHeadSelectedCity.canTrain(eLoopUnit, False, True)): 
 						szButton = gc.getPlayer(pHeadSelectedCity.getOwner()).getUnitButton(eLoopUnit)
 						screen.appendMultiListButton( "BottomButtonContainer", szButton, iRow, WidgetTypes.WIDGET_TRAIN, i, -1, False )
 						screen.show( "BottomButtonContainer" )
 						
-						if ( not pHeadSelectedCity.canTrain(eLoopUnit, False, False) ):
+						if ( not pHeadSelectedCity.canTrain(eLoopUnit, False, False) ): 
 							screen.disableMultiListButton( "BottomButtonContainer", iRow, iCount, szButton)
 						
 						iCount = iCount + 1
@@ -2513,6 +2514,32 @@ class CvMainInterface:
 								screen.appendMultiListButton("BottomButtonContainer", gc.getBuildingInfo(unique_building(pUnit.getOwner(), iPaganTemple)).getButton(), 0, WidgetTypes.WIDGET_GENERAL, 10000, 10000, False)
 								screen.show("BottomButtonContainer")
 								iCount = iCount + 1
+					# Aeons: Bugandan UP: Slaves can add to city population
+					if pUnit.getUnitType() == iSlave and civ(pUnit) == iBuganda:
+						city = city_(pUnit)
+						if city:
+							if civ(city) == iBuganda:
+								screen.appendMultiListButton("BottomButtonContainer", gc.getBuildingInfo(iGranary).getButton(), 0, WidgetTypes.WIDGET_GENERAL, 10003, 10003, False)
+								screen.show("BottomButtonContainer")
+								iCount = iCount + 1
+
+					# Aeons: Georgian UP: Saints
+					if pUnit.getUnitType() == iGreatProphet and civ(pUnit) == iGeorgia:
+						city = city_(pUnit)
+						if city:
+							if civ(city) == iGeorgia:
+								screen.appendMultiListButton("BottomButtonContainer", gc.getBuildingInfo(iGreatIcon).getButton(), 0, WidgetTypes.WIDGET_GENERAL, 10002, 10002, False)
+								screen.show("BottomButtonContainer")
+								iCount = iCount + 1
+
+					# Aeons: Great Statesman lower decadence
+					# This should probably be turned into an actual action in the future, and not awkward hardcoded here, but whatever
+					if pUnit.getUnitType() == iGreatStatesman or  pUnit.getUnitType() == iFemaleGreatStatesman:
+						city = city_(pUnit)
+						if city:
+							screen.appendMultiListButton("BottomButtonContainer", gc.getBuildingInfo(iCourthouse).getButton(), 0, WidgetTypes.WIDGET_GENERAL, 10004, 10004, False)
+							screen.show("BottomButtonContainer")
+							iCount = iCount + 1
 						
 					# Leoreth: Byzantine UP: bribe barbarians
 					if pUnit.getUnitType() == iSpy and not pUnit.isMadeAttack() and player(pUnit).getNumCities() > 0:
@@ -3092,6 +3119,7 @@ class CvMainInterface:
 						if not CyInterface().isCityScreenUp():
 							szOutText = u"<font=2>" + localText.getText("TXT_KEY_MISC_POS_GOLD_PER_TURN", (gc.getPlayer(ePlayer).getModifiedCommerceRate(CommerceTypes(eCommerce)), )) + u"</font>"
 							szString = "RateText" + str(iI)
+							szString = "RateText" + str(iI)
 # BUG - Min/Max Sliders - start
 							if MainOpt.isShowMinMaxCommerceButtons():
 								iMinMaxAdjustX = 40
@@ -3478,6 +3506,7 @@ class CvMainInterface:
 		screen.hide( "DefenseText" )
 		screen.hide( "NationalWonderLimitText" )
 		screen.hide( "WorldWonderLimitText" )
+		screen.hide( "ImmigrationDesireText" )
 		screen.hide( "SatelliteLimitText" )
 		screen.hide( "AdministrationText" )
 		screen.hide( "SeparatismText" )
@@ -4549,6 +4578,16 @@ class CvMainInterface:
 					szNewBuffer = szNewBuffer + "</font>"
 					screen.setLabel( "DefenseText", "Background", szBuffer, CvUtil.FONT_RIGHT_JUSTIFY, xResolution - 270, 40, -0.3, FontTypes.SMALL_FONT, WidgetTypes.WIDGET_HELP_DEFENSE, -1, -1 )
 					screen.show( "DefenseText" )
+
+				# Aeons - Immigration Desire
+				iImmigrationDesire = pHeadSelectedCity.immigrationDesire(true)
+
+				szBuffer = localText.getText("TXT_KEY_MAIN_IMMIGRATION_DESIRE", (CyGame().getSymbolID(FontSymbols.IMMIGRATION_CHAR), iImmigrationDesire))
+				szNewBuffer = "<font=4>"
+				szNewBuffer = szNewBuffer + szBuffer
+				szNewBuffer = szNewBuffer + "</font>"
+				screen.setLabel( "ImmigrationDesireText", "Background", szBuffer, CvUtil.FONT_RIGHT_JUSTIFY, xResolution - 900, 40, -0.3, FontTypes.SMALL_FONT, WidgetTypes.WIDGET_HELP_IMMIGRATION_DESIRE, -1, -1 )
+				screen.show( "ImmigrationDesireText" )
 
 				# National and Worldwonder limit indicator
 				iIndicatorOffset = 400
@@ -5741,6 +5780,44 @@ class CvMainInterface:
 		if inputClass.getNotifyCode() == 11 and inputClass.getData1() == 10001:
 			doUnitBribes(g_pSelectedUnit)
 		# Leoreth: end
+
+		# Aeons: Sanctify Saint as Georgia
+		if (inputClass.getNotifyCode() == 11 and inputClass.getData1() == 10002):
+			self.pPushedButtonUnit = g_pSelectedUnit
+			iX = self.pPushedButtonUnit.getX()
+			iY = self.pPushedButtonUnit.getY()
+			city = gc.getMap().plot(iX, iY).getPlotCity()
+			
+			player(city).changeGoldenAgeTurns(turns(3))
+
+			self.pPushedButtonUnit.kill(False, city.getOwner())
+			
+			events.fireEvent("sacrificeGoldenAge", city.getOwner(), city)
+
+		# Aeons: Slave Join population as Buganda
+		if (inputClass.getNotifyCode() == 11 and inputClass.getData1() == 10003):
+			self.pPushedButtonUnit = g_pSelectedUnit
+			iX = self.pPushedButtonUnit.getX()
+			iY = self.pPushedButtonUnit.getY()
+			city = gc.getMap().plot(iX, iY).getPlotCity()
+			
+			city.changePopulation(1)
+			city.changeHurryAngerTimer(turns(3))
+
+
+			self.pPushedButtonUnit.kill(False, city.getOwner())
+
+		# Aeons: Purge Corruption with Great Statesman
+		if (inputClass.getNotifyCode() == 11 and inputClass.getData1() == 10004):
+			self.pPushedButtonUnit = g_pSelectedUnit
+			iX = self.pPushedButtonUnit.getX()
+			iY = self.pPushedButtonUnit.getY()
+			city = gc.getMap().plot(iX, iY).getPlotCity()
+
+			statesmanLowerDecadence(city.getOwner())
+
+			self.pPushedButtonUnit.kill(False, city.getOwner())
+
 
 		return 0
 	

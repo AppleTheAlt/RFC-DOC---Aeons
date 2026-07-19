@@ -3221,6 +3221,7 @@ class CvMainInterface:
 		screen.hide( "NationalityText" )
 		screen.hide( "NationalityBar" )
 		screen.hide( "DefenseText" )
+		screen.hide( "ImmigrationDesireText" )
 		screen.hide( "CityScrollMinus" )
 		screen.hide( "CityScrollPlus" )
 		screen.hide( "CityNameText" )
@@ -4243,6 +4244,16 @@ class CvMainInterface:
 					szNewBuffer = szNewBuffer + "</font>"
 					screen.setLabel( "DefenseText", "Background", szBuffer, CvUtil.FONT_RIGHT_JUSTIFY, xResolution - 270, 40, -0.3, FontTypes.SMALL_FONT, WidgetTypes.WIDGET_HELP_DEFENSE, -1, -1 )
 					screen.show( "DefenseText" )
+
+				# Aeons - Immigration Desire
+				iImmigrationDesire = pHeadSelectedCity.immigrationDesire(true)
+
+				szBuffer = localText.getText("TXT_KEY_MAIN_IMMIGRATION_DESIRE", (CyGame().getSymbolID(FontSymbols.IMMIGRATION_CHAR), iImmigrationDesire))
+				szNewBuffer = "<font=4>"
+				szNewBuffer = szNewBuffer + szBuffer
+				szNewBuffer = szNewBuffer + "</font>"
+				screen.setLabel( "ImmigrationDesireText", "Background", szBuffer, CvUtil.FONT_RIGHT_JUSTIFY, xResolution - 900, 40, -0.3, FontTypes.SMALL_FONT, WidgetTypes.WIDGET_HELP_IMMIGRATION_DESIRE, -1, -1 )
+				screen.show( "ImmigrationDesireText" )
 
 				if ( pHeadSelectedCity.getCultureLevel != CultureLevelTypes.NO_CULTURELEVEL ):
 					iRate = pHeadSelectedCity.getCommerceRateTimes100(CommerceTypes.COMMERCE_CULTURE)
