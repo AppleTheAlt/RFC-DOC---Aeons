@@ -13,10 +13,10 @@ lCivilizations = [
 		iGold=400,
 		iStateReligion=iHinduism,
 		lCivics=[iMonarchy, iTheocracy, iCasteSystem, iRegulatedTrade, iMonasticism, iHegemony],
-		techs=techs.column(10).including(iCombinedArms, iUrbanPlanning).without(iExploration),
-		dAttitudes={iMughals: -2},
+		techs=techs.column(11).including(iCombinedArms, iUrbanPlanning).without(iExploration),
+		dAttitudes={iTimurids: -2},
 		dMemories={
-			iMughals: {MemoryTypes.MEMORY_DECLARED_WAR: 2},
+			iTimurids: {MemoryTypes.MEMORY_DECLARED_WAR: 2},
 		},
 	),
 	Civilization(
@@ -26,7 +26,18 @@ lCivilizations = [
 		iGold=400,
 		iStateReligion=iHinduism,
 		lCivics=[iMonarchy, iBureaucracy, iCasteSystem, iMerchantTrade, iMonasticism, iHegemony],
-		techs=techs.column(10).including(iCombinedArms, iUrbanPlanning).without(iExploration, iOptics),
+		techs=techs.column(11).including(iCombinedArms, iUrbanPlanning).without(iExploration, iOptics),
+		dMemories={
+			iSweden: {MemoryTypes.MEMORY_DECLARED_WAR: 3},
+		},
+	),
+	Civilization(
+		iEthiopia,
+		iLeader=iZaraYaqob,
+		iGold=200,
+		iStateReligion=iOrthodoxy,
+		lCivics=[iMonarchy, iTheocracy, iSlavery, iMerchantTrade, iClergy, iHegemony],
+		techs=techs.column(8).including(iDiscipline, iReligiousOrders)
 	),
 	Civilization(
 		iKorea,
@@ -34,7 +45,7 @@ lCivilizations = [
 		iGold=200,
 		iStateReligion=iConfucianism,
 		lCivics=[iDespotism, iBureaucracy, iCasteSystem, iRegulatedTrade, iSyncretism, iIsolationism],
-		techs=techs.column(10).without(iExploration, iOptics, iAcademia),
+		techs=techs.column(11).without(iExploration, iOptics, iAcademia),
 		dAttitudes={iManchuria: 2}
 	),
 	Civilization(
@@ -43,7 +54,7 @@ lCivilizations = [
 		iGold=400,
 		iStateReligion=iBuddhism,
 		lCivics=[iMonarchy, iVassalage, iManorialism, iRegulatedTrade, iMonasticism, iIsolationism],
-		techs=techs.column(10).including(iCombinedArms, iUrbanPlanning).without(iExploration, iOptics),
+		techs=techs.column(11).including(iCombinedArms, iUrbanPlanning).without(iExploration, iOptics),
 	),
 	Civilization(
 		iNorse, # Denmark
@@ -51,18 +62,27 @@ lCivilizations = [
 		iGold=150,
 		iStateReligion=iProtestantism,
 		lCivics=[iMonarchy, iBureaucracy, iManorialism, iRegulatedTrade, iClergy],
-		techs=techs.column(10).including(iCombinedArms),
+		techs=techs.column(11).including(iCombinedArms),
 		dMemories={
 			iSweden: {MemoryTypes.MEMORY_DECLARED_WAR: 3},
 		},
 	),
 	Civilization(
 		iTurks, # Uzbeks
-		iLeader=iTamerlane,
+		iLeader=iShaybaniKhan,
 		iGold=50,
 		iStateReligion=iIslam,
 		lCivics=[iDespotism, iVassalage, iSlavery, iMerchantTrade, iClergy, iHegemony],
-		techs=techs.column(9).including(iFirearms, iLogistics, iHeritage),
+		techs=techs.column(10).including(iFirearms, iLogistics, iHeritage),
+	),
+	Civilization(
+		iMorocco,
+		iLeader=iAhmad,
+		iGold=200,
+		iStateReligion=iIslam,
+		lCivics=[iDespotism, iBureaucracy, iSlavery, iRegulatedTrade, iSyncretism, iHegemony],
+		techs=techs.column(11).without(iExploration),
+		dAttitudes={iSpain: -2, iPortugal: -2, iOttomans: -1},
 	),
 	Civilization(
 		iSpain,
@@ -70,7 +90,7 @@ lCivilizations = [
 		iGold=400,
 		iStateReligion=iCatholicism,
 		lCivics=[iMonarchy, iTheocracy, iManorialism, iRegulatedTrade, iClergy, iColonialism],
-		techs=techs.column(10).including(iCombinedArms, iGeography, iHorticulture),
+		techs=techs.column(11).including(iCombinedArms, iGeography, iHorticulture),
 		dAttitudes={iPortugal: 2},
 	),
 	Civilization(
@@ -79,7 +99,7 @@ lCivilizations = [
 		iGold=400,
 		iStateReligion=iCatholicism,
 		lCivics=[iMonarchy, iBureaucracy, iManorialism, iRegulatedTrade, iClergy, iColonialism],
-		techs=techs.column(11).without(iUrbanPlanning, iEconomics),
+		techs=techs.column(12).without(iUrbanPlanning, iEconomics),
 		dAttitudes={iEngland: -4, iHolyRome: -2, iOttomans: -2, iNetherlands: 2},
 		dMemories={
 			iEngland: {MemoryTypes.MEMORY_DECLARED_WAR: 2},
@@ -88,18 +108,38 @@ lCivilizations = [
 		},
 	),
 	Civilization(
+		iKanemBornu,
+		iLeader=iDunamaDabbalemi,
+		iGold=200,
+		iStateReligion=iIslam,
+		lCivics=[iDespotism, iVassalage, iSlavery, iClergy, iMerchantTrade, iHegemony],
+		techs=techs.column(11).without(iExploration, iUrbanPlanning, iOptics, iCartography),
+	),
+	Civilization(
 		iEngland,
 		iLeader=iVictoria,
 		iGold=600,
 		iStateReligion=iProtestantism,
 		lCivics=[iMonarchy, iBureaucracy, iIndividualism, iFreeEnterprise, iClergy, iColonialism],
-		techs=techs.column(11).without(iUrbanPlanning, iHorticulture),
-		dAttitudes={iFrance: -4, iPortugal: 2, iMughals: -2, iOttomans: -2},
+		techs=techs.column(12).without(iUrbanPlanning, iHorticulture),
+		dAttitudes={iFrance: -4, iPortugal: 2, iTimurids: -2, iOttomans: -2},
 		dMemories={
 			iFrance: {MemoryTypes.MEMORY_DECLARED_WAR: 2},
-			iMughals: {MemoryTypes.MEMORY_DENIED_RELIGION: 2},
+			iTimurids: {MemoryTypes.MEMORY_DENIED_RELIGION: 2},
 			iNetherlands: {MemoryTypes.MEMORY_DECLARED_WAR: 2},
 		},
+	),
+	Civilization(
+		iYemen,
+		iLeader=iAlQasim,
+		iGold=200,
+		iStateReligion=iShia,
+		lCivics=[iDespotism, iBureaucracy, iSlavery, iRegulatedTrade, iSyncretism, iHegemony],
+		techs=techs.column(11).without(iExploration, iOptics),
+		dAttitudes={iOttomans: -4},
+		dMemories={
+			iOttomans: {MemoryTypes.MEMORY_DECLARED_WAR: 2},
+		}
 	),
 	Civilization(
 		iHolyRome, # Austria
@@ -107,7 +147,7 @@ lCivilizations = [
 		iGold=150,
 		iStateReligion=iCatholicism,
 		lCivics=[iMonarchy, iVassalage, iManorialism, iRegulatedTrade, iClergy, iHegemony],
-		techs=techs.column(10).including(iCombinedArms, iUrbanPlanning, iHorticulture).without(iExploration),
+		techs=techs.column(11).including(iCombinedArms, iUrbanPlanning, iHorticulture).without(iExploration),
 		dAttitudes={iFrance: -2, iOttomans: -4},
 		dMemories={
 			iFrance: {MemoryTypes.MEMORY_DECLARED_WAR: 3},
@@ -121,7 +161,23 @@ lCivilizations = [
 		iGold=100,
 		iStateReligion=iBuddhism,
 		lCivics=[iDespotism, iVassalage, iCasteSystem, iRegulatedTrade, iMonasticism, iHegemony],
-		techs=techs.column(9).including(iFirearms, iLogistics),
+		techs=techs.column(10).including(iFirearms, iLogistics),
+	),
+	Civilization(
+		iHausa,
+		iLeader=iAmina,
+		iGold=300,
+		iStateReligion=iIslam,
+		lCivics=[iElective, iSlavery, iMerchantTrade, iClergy],
+		techs=techs.column(8).including(iPaper, iDiscipline),
+	),
+	Civilization(
+		iBenin,
+		iLeader=iEwuare,
+		iGold=200,
+		lCivics=[iDespotism, iSlavery, iRedistribution, iClergy],
+		techs=techs.column(7).without(iFeudalism, iTheology),
+		dAttitudes={iPortugal: -1}
 	),
 	Civilization(
 		iVietnam,
@@ -129,7 +185,14 @@ lCivilizations = [
 		iGold=150,
 		iStateReligion=iConfucianism,
 		lCivics=[iMonarchy, iBureaucracy, iCasteSystem, iRegulatedTrade, iSyncretism, iThalassocracy],
-		techs=techs.column(9).including(iFirearms, iAcademia, iHeritage, iStatecraft),
+		techs=techs.column(10).including(iFirearms, iAcademia, iHeritage, iStatecraft),
+	),
+	Civilization(
+		iBuganda,
+		iLeader=iKakamaTwale,
+		iGold=100,
+		lCivics=[iDespotism, iSlavery, iRedistribution],
+		techs=techs.column(4).including(iGeneralship).without(iLiterature, iWriting)
 	),
 	Civilization(
 		iPoland,
@@ -137,7 +200,7 @@ lCivilizations = [
 		iGold=200,
 		iStateReligion=iCatholicism,
 		lCivics=[iElective, iVassalage, iManorialism, iRegulatedTrade, iSyncretism],
-		techs=techs.column(11).without(iEconomics, iGeography, iHorticulture, iUrbanPlanning),
+		techs=techs.column(12).without(iEconomics, iGeography, iHorticulture, iUrbanPlanning),
 		dMemories={
 			iHolyRome: {MemoryTypes.MEMORY_DECLARED_WAR: 2},
 			iRussia: {MemoryTypes.MEMORY_DECLARED_WAR: 2},
@@ -145,24 +208,41 @@ lCivilizations = [
 		},
 	),
 	Civilization(
+		iOman, # Zanzibar
+		iLeader=iBarghash,
+		iGold=350,
+		iStateReligion=iIslam,
+		lCivics=[iDespotism, iBureaucracy, iSlavery, iRegulatedTrade, iFanaticism, iColonialism],
+		techs=techs.column(11).including(iUrbanPlanning, iHorticulture),
+		dAttitudes={iPortugal: -2, iSpain: -1}
+	),
+	Civilization(
 		iPortugal,
 		iLeader=iJoao,
 		iGold=450,
 		iStateReligion=iCatholicism,
 		lCivics=[iMonarchy, iBureaucracy, iManorialism, iRegulatedTrade, iClergy, iColonialism],
-		techs=techs.column(10).including(iGeography, iHorticulture),
+		techs=techs.column(11).including(iGeography, iHorticulture),
 		dAttitudes={iSpain: 2, iEngland: 2, iNetherlands: -2},
 		dMemories={
 			iNetherlands: {MemoryTypes.MEMORY_DECLARED_WAR: 2},
 		},
 	),
 	Civilization(
-		iMughals,
+		iZimbabwe,
+		iLeader=iChangamire,
+		iGold=200,
+		lCivics=[iDespotism, iSlavery, iRedistribution],
+		techs=techs.column(4).including(iGeneralship).without(iLiterature),
+		dAttitudes={iPortugal: -1, iOman: -2}
+	),
+	Civilization(
+		iTimurids,
 		iLeader=iAkbar,
 		iGold=200,
 		iStateReligion=iIslam,
 		lCivics=[iMonarchy, iBureaucracy, iManorialism, iRegulatedTrade, iSyncretism, iHegemony],
-		techs=techs.column(10).including(iUrbanPlanning, iHorticulture).without(iExploration, iOptics),
+		techs=techs.column(11).including(iUrbanPlanning, iHorticulture).without(iExploration, iOptics),
 		dAttitudes={iEngland: -2, iIndia: -2, iIran: -2},
 		dMemories={
 			iEngland: {MemoryTypes.MEMORY_DECLARED_WAR: 2},
@@ -175,7 +255,7 @@ lCivilizations = [
 		iGold=250,
 		iStateReligion=iProtestantism,
 		lCivics=[iMonarchy, iBureaucracy, iManorialism, iRegulatedTrade, iClergy, iHegemony],
-		techs=techs.column(10).including(iCombinedArms, iScientificMethod, iUrbanPlanning),
+		techs=techs.column(11).including(iCombinedArms, iScientificMethod, iUrbanPlanning),
 		dAttitudes={iRussia: -2, iPoland: -2},
 		dMemories={
 			iRussia: {MemoryTypes.MEMORY_DECLARED_WAR: 2},
@@ -189,7 +269,7 @@ lCivilizations = [
 		iGold=350,
 		iStateReligion=iOrthodoxy,
 		lCivics=[iDespotism, iTheocracy, iManorialism, iRegulatedTrade, iClergy, iHegemony],
-		techs=techs.column(10).including(iCombinedArms, iUrbanPlanning).without(iExploration, iOptics),
+		techs=techs.column(11).including(iCombinedArms, iUrbanPlanning).without(iExploration, iOptics),
 		dAttitudes={iSweden: -2, iOttomans: -4},
 		dMemories={
 			iSweden: {MemoryTypes.MEMORY_DECLARED_WAR: 2},
@@ -203,7 +283,7 @@ lCivilizations = [
 		iGold=200,
 		iStateReligion=iIslam,
 		lCivics=[iDespotism, iBureaucracy, iSlavery, iRegulatedTrade, iSyncretism, iHegemony],
-		techs=techs.column(10).including(iUrbanPlanning, iHorticulture).without(iExploration),
+		techs=techs.column(11).including(iUrbanPlanning, iHorticulture).without(iExploration),
 		dAttitudes={iIran: -4, iHolyRome: -4, iRussia: -4, iPoland: -2, iFrance: -2, iEngland: -2, iNetherlands: -2},
 		dMemories={
 			iIran: {MemoryTypes.MEMORY_DECLARED_WAR: 3},
@@ -219,7 +299,11 @@ lCivilizations = [
 		iGold=300,
 		iStateReligion=iBuddhism,
 		lCivics=[iMonarchy, iVassalage, iCasteSystem, iRegulatedTrade, iMonasticism, iThalassocracy],
-		techs=techs.column(10).without(iExploration, iOptics),
+		techs=techs.column(11).without(iExploration, iOptics),
+		dAttitudes={iTimurids: -2, iOttomans: -4},
+		dMemories={
+			iOttomans: {MemoryTypes.MEMORY_DECLARED_WAR: 3},
+		},
 	),
 	Civilization(
 		iCongo,
@@ -227,19 +311,31 @@ lCivilizations = [
 		iGold=300,
 		iStateReligion=iCatholicism,
 		lCivics=[iElective, iVassalage, iSlavery, iRedistribution, iClergy],
-		techs=techs.column(8).including(iCartography, iJudiciary),
+		techs=techs.column(8).including(iReligiousOrders).without(iLimbProtection, iSelectiveBreeding),
+	),
+	Civilization(
+		iFunj,
+		iLeader=iAmaraDunqas,
+		iGold=200,
+		iStateReligion=iIslam,
+		lCivics=[iMonarchy, iVassalage, iSlavery, iMerchantTrade, iClergy, iHegemony],
+		techs=techs.column(9).including(iCompanies, iGunpowder)
 	),
 	Civilization(
 		iIran,
 		iLeader=iAbbas,
 		iGold=200,
-		iStateReligion=iIslam,
+		iStateReligion=iShia,
 		lCivics=[iMonarchy, iTheocracy, iSlavery, iMerchantTrade, iFanaticism, iHegemony],
-		techs=techs.column(10).including(iCombinedArms, iGeography, iUrbanPlanning, iHorticulture),
-		dAttitudes={iMughals: -2, iOttomans: -4},
-		dMemories={
-			iOttomans: {MemoryTypes.MEMORY_DECLARED_WAR: 3},
-		},
+		techs=techs.column(11).including(iCombinedArms, iGeography, iUrbanPlanning, iHorticulture),
+		dAttitudes={iTimurids: -2, iOttomans: -4}
+	),
+	Civilization(
+		iMadagascar,
+		iLeader=iAndrianampoinimerina,
+		lCivics=[iDespotism, iSlavery, iDeification, iMerchantTrade, iThalassocracy],
+		iGold=100,
+		techs=techs.column(10).including(iFirearms)
 	),
 	Civilization(
 		iNetherlands,
@@ -247,11 +343,17 @@ lCivilizations = [
 		iGold=800,
 		iStateReligion=iProtestantism,
 		lCivics=[iRepublic, iBureaucracy, iIndividualism, iFreeEnterprise, iSyncretism, iColonialism],
-		techs=techs.column(10).including(iCombinedArms, iEconomics, iGeography, iScientificMethod, iCivilLiberties),
+		techs=techs.column(11).including(iCombinedArms, iEconomics, iGeography, iScientificMethod, iCivilLiberties),
 		dAttitudes={iFrance: 2, iPortugal: -2, iOttomans: -2},
 		dMemories={
 			iEngland: {MemoryTypes.MEMORY_DECLARED_WAR: 1},
 		},
+	),
+	Civilization(
+		iKatanga,
+		iLeader=iChibindaIlunga,
+		lCivics=[iDespotism, iSlavery, iDeification],
+		techs=techs.column(3).without(iWriting),
 	),
 	Civilization(
 		iManchuria,
@@ -263,12 +365,19 @@ lCivilizations = [
 		dAttitudes={iKorea: 2}
 	),
 	Civilization(
+		iAshanti,
+		iLeader=iOsei,
+		iGold=300,
+		lCivics=[iMonarchy, iSlavery, iMerchantTrade, iHegemony],
+		techs=techs.column(7).including(iLimbProtection)
+	),
+	Civilization(
 		iGermany,
 		iLeader=iFrederick,
 		iGold=800,
 		iStateReligion=iProtestantism,
 		lCivics=[iMonarchy, iBureaucracy, iManorialism, iRegulatedTrade, iSyncretism, iHegemony],
-		techs=techs.column(10).without(iGeography, iCivilLiberties, iHorticulture),
+		techs=techs.column(11).without(iGeography, iCivilLiberties, iHorticulture),
 	),
 	Civilization(
 		iNative,
@@ -278,12 +387,12 @@ lCivilizations = [
 	Civilization(
 		iIndependent2,
 		iGold=500,
-		techs=techs.column(10)
+		techs=techs.column(11)
 	),
 	Civilization(
 		iIndependent,
 		iGold=500,
-		techs=techs.column(10)
+		techs=techs.column(11)
 	),
 ]
 
@@ -307,10 +416,10 @@ def setupGoals(iCiv, goals):
 
 def updateData():
 	data.dFirstContactConquerors = {iMaya: True, iToltecs: True, iAztecs: True, iInca: True}
-	
+
 	for iCiv in lTradingCompanyCivs:
 		data.civs[iCiv].bTradingCompanyConquerors = False
-	
+
 	data.civs[iChina].iResurrections = 2
 	data.civs[iIndia].iResurrections = 1
 	data.civs[iDravidia].iResurrections = 1
@@ -330,14 +439,18 @@ scenario1700AD = Scenario(
 		iEngland: "TXT_KEY_CIV_BRITAIN_DESC",
 		iManchuria: "TXT_KEY_CIV_CHINA_DESC",
 		iGermany: "TXT_KEY_CIV_HOLY_ROMAN_DESC",
+		iTimurids: "TXT_KEY_CIV_MUGHALS_DESC",
+		iZimbabwe: "TXT_KEY_CIV_ROZWI_DESC",
+		iBuganda: "TXT_KEY_CIV_BUGANDA_BUGANDA_DESC",
+		iOman: "TXT_KEY_CIV_ZANZIBAR_DESC",
 	},
 	
 	dOwnedTiles = {
-		iFrance: [(59, 55)],
-		iPortugal: [(53, 52), (54, 52), (55, 52), (55, 51), (55, 50), (54, 48)],
-		iRussia: [(82, 64)],
-		iNetherlands: [(62, 62)],
-	},
+ 		iFrance: [(59, 55)],
+ 		iPortugal: [(53, 52), (54, 52), (55, 52), (55, 51), (55, 50), (54, 48)],
+ 		iRussia: [(82, 64)],
+ 		iNetherlands: [(62, 62)],
+ 	},
 	iCultureTurns = 100,
 	
 	dRevealed = {
@@ -380,11 +493,13 @@ scenario1700AD = Scenario(
 		iHolyRome: 8,
 		iPoland: 8,
 		iPortugal: 8,
-		iMughals: 8,
+		iTimurids: 8,
 		iOttomans: 8,
 		iThailand: 8,
+		iMorocco: 8,
 		iCongo: 4,
 		iNetherlands: 6,
+		iYemen: 3,
 	},
 	dGreatGeneralsCreated = {
 		iChina: 4,
@@ -395,17 +510,19 @@ scenario1700AD = Scenario(
 		iJapan: 3,
 		iNorse: 3,
 		iTurks: 3,
+		iMorocco: 3,
 		iSpain: 4,
 		iFrance: 3,
 		iEngland: 3,
 		iHolyRome: 4,
 		iPoland: 3,
 		iPortugal: 3,
-		iMughals: 4,
+		iTimurids: 4,
 		iOttomans: 5,
 		iThailand: 3,
 		iCongo: 2,
 		iNetherlands: 3,
+		iYemen: 1,
 	},
 	
 	dColonistsAlreadyGiven = {
@@ -416,17 +533,17 @@ scenario1700AD = Scenario(
 		iPortugal : 6,
 		iNetherlands : 4,
 	},
-	
+
 	lWorkingCities = [
 		(tEsfahan, [(92, 46)]),
 	],
 	
 	lInitialWars = [
-		(iEngland, iMughals, WarPlanTypes.WARPLAN_LIMITED),
-		(iIndia, iMughals, WarPlanTypes.WARPLAN_TOTAL)
+		(iEngland, iTimurids, WarPlanTypes.WARPLAN_LIMITED),
+		(iIndia, iTimurids, WarPlanTypes.WARPLAN_TOTAL)
 	],
 	
-	lAllGoalsFailed = [iChina, iIndia, iDravidia, iKorea, iNorse, iTurks, iSpain, iHolyRome, iBurma, iVietnam, iPoland, iPortugal, iMughals, iSweden, iRussia, iOttomans, iThailand],
+	lAllGoalsFailed = [iChina, iIndia, iDravidia, iKorea, iNorse, iTurks, iSpain, iHolyRome, iBurma, iVietnam, iPoland, iPortugal, iTimurids, iSweden, iRussia, iOttomans, iThailand],
 	lGoalsSucceeded = [(iIran, 0), (iJapan, 0), (iFrance, 0), (iCongo, 0), (iNetherlands, 1)],
 	setupGoals = setupGoals,
 	

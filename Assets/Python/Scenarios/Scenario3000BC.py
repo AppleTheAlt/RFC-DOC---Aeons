@@ -9,7 +9,7 @@ lCivilizations = [
 		techs=techs.of(iMining, iPottery, iAgriculture, iMythology)
 	),
 	Civilization(
-		iBabylonia,
+		iSumeria,
 		techs=techs.of(iPottery, iPastoralism, iAgriculture, iMythology)
 	),
 	Civilization(

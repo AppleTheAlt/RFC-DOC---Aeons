@@ -19,53 +19,62 @@ LEADER_DATES = {
 	iHatshepsut: -1600,
 	iRamesses: -1300,
 	iPtolemy: -330,
+	iBaibars: 1260,
 	iSargon: -2400,
-	iHammurabi: -1800,
 	iWentAntu: -2000,
+	iMinos: -1700,
 	iAshurbanipal: -660,
-	iWu: -100,
-	iTaizong: 630,
+	iWu: -220,
+	iTaizong: 1100, # Moved from 630
 	iHongwu: 1370,
+	iHammurabi: -1800,
+	iNebuchadnezzar: -600,
 	iMursili: -1600,
 	iPericles: -450,
 	iAlexanderTheGreat: -330,
+	iSeleucus: -300,
 	iAsoka: -260,
 	iChandragupta: 320,
 	iShivaji: 1680,
 	iGandhi: 1930,
 	iHiram: -980,
 	iHannibal: -210,
+	iBrennus: -380,
+	iBoudica: 60,
+ 	iBrianBoru: 1100, # Moved from 1000
+	iDavid: -885,
 	iTaharqa: -690,
 	iAmanirena: -100,
+	iMerkurios: 600,
 	iAhoeitu: 900,
 	iCyrus: -550,
 	iDarius: -520,
-	iShapur: 300,
-	iBrennus: -380,
-	iBoudica: 60,
-	iBrianBoru: 1000,
+	iMasinissa: -200,
+	iYaghmurasen: 1240,
+	iMithridates: -160,
+	iKhosrow: 540,
 	iScipio: -200,
 	iJuliusCaesar: -50,
 	iAugustus: -20,
+	iMarcusAurelius: 180,
 	iPacal: 620,
 	iRajendra: 1020,
 	iKrishnaDevaRaya: 1510,
-	iEzana: 320,
+	iEzana: 320, 
 	iZaraYaqob: 1440,
 	iMenelik: 1890,
 	iLeLoi: 1400,
-	iHoChiMinh: 1945,
 	iTopiltzin: 900,
 	iKanishka: 130,
-	iWangKon: 920,
+	iWangKon: 1100, # Moved from 920
 	iSejong: 1420,
+	iDinghaCisse: 400,
 	iNeangNeak: 100,
 	iSuryavarman: 1120,
+	iConstantine: 330,
 	iJustinian: 530,
 	iBasil: 980,
-	iDinga: 700,
-	iMansaMusa: 1320,
-	iSriJayanasa: 700,
+	iSriJayanasa: 1100, #Moved from 700
 	iTunPerak: 1450,
 	iKammu: 790,
 	iOdaNobunaga: 1580,
@@ -76,35 +85,51 @@ LEADER_DATES = {
 	iGerhardsen: 1950,
 	iBumin: 550,
 	iAlpArslan: 1070,
+	iShaybaniKhan: 1500,
 	iTamerlane: 1370,
 	iHarun: 790,
+	iQatadaIbnIdris: 1200,
+	iSaladin: 1180,
+	iMuhammadAli: 1805,
 	iSongtsen: 620,
 	iLobsangGyatso: 1650,
-	iRahman: 920,
+	iBulan: 720,
+	iRahman: 1100, # Moved from 920
 	iYaqub: 1190,
+	iAhmad: 1600,
+	iMohammedV: 1900,
 	iHayamWuruk: 1350,
 	iSuharto: 1950,
 	iIsabella: 1480,
 	iPhilip: 1560,
-	iCharlemagne: 770,
+	iCharlemagne: 650,
+	iPhilipAugustus: 1100, # Should be 1180 but 1100 start needed
 	iLouis: 1650,
 	iNapoleon: 1800,
 	iDeGaulle: 1950,
-	iAlfred: 880,
+	iAlfred: 1100,	# Moved from 850
 	iElizabeth: 1560,
 	iVictoria: 1840,
 	iChurchill: 1940,
+	iHoChiMinh: 1945,
+	iArwaAlSulayhi: 1067,
+	iAlQasim: 1700, #He was earlier but we want him ruling 1700 Yemen.
+	iAlSallal: 1962,
 	iBarbarossa: 1160,
 	iCharles: 1550,
 	iFrancis: 1800,
 	iAnawrahta: 1050,
 	iBayinnaung: 1550,
+	iAmina:	1700, #Allow for 1700 start
+	iUsumanDanFodio: 1810,
+	iObasanjo: 1990,
 	iYaroslav: 1050,
 	iKhmelnytsky: 1600,
+	iIsmaelSamani: 1000,
+	iEwuare: 1440,
+	iAlMuiz: 1100, # Moved from 950
 	iDawud: 1300,
-	iSaladin: 1180,
-	iBaibars: 1260,
-	iMuhammadAli: 1805,
+	iMansaMusa: 1320,
 	iCasimir: 1340,
 	iSobieski: 1680,
 	iPilsudski: 1930,
@@ -113,11 +138,15 @@ LEADER_DATES = {
 	iJoao: 1490,
 	iMaria: 1830,
 	iHuaynaCapac: 1500,
+	iAbiBinOmar: 1300,
+	iBarghash: 1870,
 	iLorenzo: 1470,
 	iCavour: 1860,
 	iGenghisKhan: 1210,
 	iKublaiKhan: 1260,
 	iMontezuma: 1440,
+	iAbuAmrUthman: 1440,
+	iSabuktigin: 1000,
 	iTughluq: 1330,
 	iAkbar: 1560,
 	iUzbeg: 1315,
@@ -130,13 +159,16 @@ LEADER_DATES = {
 	iCatherine: 1770,
 	iAlexanderI: 1810,
 	iMehmed: 1450,
-	iSuleiman: 1520,
+	iSuleiman: 1700, #Adjusted to allow Suleiman in 1700AD start
+	iMahmudII: 1800,
 	iAtaturk: 1930,
 	iMbemba: 1510,
 	iAbbas: 1590,
 	iWillemVanOranje: 1570,
 	iWilliam: 1650,
 	iKangxi: 1660,
+	iOsei: 1815, # Moved to have Osei in 1815 start
+	iYaaAsantewa: 1900,
 	iFrederick: 1740,
 	iBismarck: 1880,
 	iIbnSaud: 1930,
@@ -155,6 +187,13 @@ LEADER_DATES = {
 	iCurtin: 1940,
 	iMacDonald: 1870,
 	iTrudeau: 1970,
+	iBotha: 1980,
+	iNelsonMandela: 1995,
+	iKakamaTwale: 1700, # Later for 1700 start
+	iMutesa: 1850,
+	iIdiAmin: 1950,
+	iAmaraDunqas: 1815, # Allow for 1815 start
+
 }
 
 RELIGION_FOUNDING_DATES = {
@@ -180,13 +219,19 @@ ERA_START_DATES = {
 	iDigital: 1980,
 }
 
+
 WONDER_ORIGINAL_BUILDERS = {
 	iGreatLighthouse : (iEgypt, -284),
 	iGreatLibrary : (iEgypt, -285),
-	iPyramids : (iEgypt, -2600),
+	iPyramids : (iEgypt, -2700),
 	iGreatSphinx : (iEgypt, -2500),
+	iAbuSimbel : (iEgypt, -1200),
+	iGreatBath : (iHarappa, -2000),
+	iEtemenaki : (iBabylonia, -1200),
 	iHangingGardens : (iBabylonia, -600),
 	iIshtarGate : (iBabylonia, -575),
+	iTempleOfAmun : (iNubia, -740),
+	iNuri : (iNubia, -650),
 	iAlKhazneh : (iIndependent, 100),
 	iJewishShrine : (iIndependent, -957),
 	iCatholicShrine : (iRome, 318),
@@ -198,7 +243,7 @@ WONDER_ORIGINAL_BUILDERS = {
 	iForbiddenPalace : (iChina, 1420),
 	iGrandCanal : (iChina, 618),
 	iPorcelainTower : (iChina, 1431),
-	iOracle : (iGreece, -800),
+	iOracle : (iMycenae, -1000),
 	iParthenon : (iGreece, -438),
 	iStatueOfZeus : (iGreece, -435),
 	iTempleOfArtemis : (iGreece, -323),
@@ -216,11 +261,14 @@ WONDER_ORIGINAL_BUILDERS = {
 	iGreatMausoleum : (iPersia, -350),
 	iGondeshapur : (iPersia, 256),
 	iAquaAppia : (iRome, -312),
+	iCircusMaximus : (iRome, -120),
 	iFlavianAmphitheatre : (iRome, 80),
+	iTrajansColumn : (iRome, 113),
 	iPantheon : (iRome, 126),
 	iTempleOfKukulkan : (iMaya, 800),
-	iMonolithicChurch : (iEthiopia, 1181),
+	iMonolithicChurch : (iEthiopia, 1100),
 	iJetavanaramaya : (iDravidia, 273),
+	iNarekavank : (iArmenia, 980),
 	iCheomseongdae : (iKorea, 632),
 	iPyramidOfTheSun : (iToltecs, 200),
 	iSalsalBuddha : (iKushans, 570),
@@ -228,16 +276,22 @@ WONDER_ORIGINAL_BUILDERS = {
 	iTheodosianWalls : (iByzantium, 413),
 	iHagiaSophia : (iByzantium, 537),
 	iMountAthos : (iByzantium, 800),
-	iUniversityOfSankore : (iMali, 988),
+	iOuadaneKsar : (iGhana, 900),
+	iUniversityOfSankore : (iGhana, 1150),
 	iGreatAdobeMosque : (iMali, 1300),
+	iTombOfAskia : (iSonghai, 1500),
+	iIyanuwo : (iBenin, 1460),
+	iOsunOsogbo : (iHausa, 1650),
 	iItsukushimaShrine : (iJapan, 1593),
 	iHimejiCastle : (iJapan, 1333),
+	iItchanKhala : (iTurks, 1170),
 	iGurEAmir : (iTurks, 1404),
 	iDomeOfTheRock : (iArabia, 692),
+	iProphetsMosque : (iArabia, 705),
 	iSpiralMinaret : (iArabia, 851),
 	iIslamicShrine : (iArabia, 692),
 	iHouseOfWisdom : (iArabia, 754),
-	iAlamut : (iArabia, 1090),
+	iAlamut : (iBuyids, 1090),
 	iPotalaPalace : (iTibet, 1694),
 	iBorobudur : (iJava, 825),
 	iPrambanan : (iJava, 850),
@@ -246,6 +300,8 @@ WONDER_ORIGINAL_BUILDERS = {
 	iChapultepecCastle : (iSpain, 1785),
 	iLasLajasSanctuary : (iSpain, 1764),
 	iMezquita : (iMoors, 785),
+	iAitBenhaddou : (iMorocco, 1080),
+	iAlhambra : (iMorocco, 1238),
 	iNotreDame : (iFrance, 1260),
 	iVersailles : (iFrance, 1661),
 	iLouvre : (iFrance, 1692),
@@ -257,29 +313,38 @@ WONDER_ORIGINAL_BUILDERS = {
 	iSaintThomasChurch : (iHolyRome, 1496),
 	iSaintSophia : (iRus, 1031),
 	iShwedagonPaya : (iBurma, 1362),
+	iAlAzhar : (iMisr, 972),
+	#iKasubiTombs : (iBuganda, 1860),
 	iSaltCathedral : (iPoland, 1330),
 	iOldSynagogue : (iPoland, 1407),
 	iTorreDeBelem : (iPortugal, 1519),
 	iSantaMariaDelFiore : (iItaly, 1436),
 	iSanMarcoBasilica : (iItaly, 1063),
 	iSistineChapel : (iItaly, 1541),
-	iMachuPicchu : (iInca, 1450),
+	iGreatEnclosure: (iZimbabwe, 1200),
 	iSilverTreeFountain : (iMongols, 1220),
 	iFloatingGardens : (iAztecs, 1350),
-	iShalimarGardens : (iMughals, 1642),
-	iHarmandirSahib : (iMughals, 1604),
-	iTajMahal : (iMughals, 1653),
-	iRedFort : (iMughals, 1648),
+	iHararGates : (iAdal, 1415),
+	iShalimarGardens : (iTimurids, 1642),
+	iHarmandirSahib : (iTimurids, 1604),
+	iTajMahal : (iTimurids, 1653),
+	iRedFort : (iTimurids, 1648),
+	iSaintSophia : (iRussia, 1031),
 	iKremlin : (iRussia, 1495),
-	iHermitage : (iRussia, 1764),
 	iSaintBasilsCathedral : (iRussia, 1561),
+	iHermitage : (iRussia, 1764),
 	iTopkapiPalace : (iOttomans, 1465),
 	iBlueMosque : (iOttomans, 1616),
 	iEmeraldBuddha : (iThailand, 1783),
+	iKulumbimbi : (iCongo, 1549),
+	iRoseGardenPalace : (iIran, 1530),
 	iImageOfTheWorldSquare : (iIran, 1629),
+	iRoyalRova : (iMadagascar, 1650),
 	iBourse : (iNetherlands, 1602),
 	iAmberRoom : (iGermany, 1700),
 	iBrandenburgGate : (iGermany, 1791),
+	#iRoyalKraal : (iZulu, 1830),
+	iStonetownFort : (iOman, 1700),
 }
 
 DEFAULT_CIV_DESCRIPTIONS = {}
@@ -301,14 +366,14 @@ class GreatWall(object):
 		self.lClearCulture = kwargs.get("lClearCulture", [])
 		
 		self.lEffectAreas = kwargs.get("lEffectAreas", [])
-	
+
 	@property
-	def greatWall(self):
-		return plots.rectangle(self.tGraphicsTL, self.tGraphicsBR)
-	
-	@property
-	def areaChange(self):
-		return self.greatWall.expand(1).land().without(self.lBorderExceptions)
+ 	def greatWall(self):
+ 		return plots.rectangle(self.tGraphicsTL, self.tGraphicsBR)
+ 	
+ 	@property
+ 	def areaChange(self):
+ 		return self.greatWall.expand(1).land().without(self.lBorderExceptions)
 		
 	def apply(self):
 		city = getBuildingCity(iGreatWall, False)
@@ -318,6 +383,7 @@ class GreatWall(object):
 		iOwner = city.getOwner()
 		iOldArea = city.getArea()
 		iNewArea = plots.capital(iAmerica).getArea()
+		
 		
 		for plot in self.areaChange:
 			plot.setArea(iNewArea)
@@ -330,16 +396,17 @@ class GreatWall(object):
 		
 		for plot in plots.sum(plots.rectangle(*tCorners).without(self.lGraphicsExceptions).land() for tCorners in self.lEffectAreas):
 			plot.setWithinGreatWall(True)
-	
+
 	def cleanup(self):
+
 		city = getBuildingCity(iGreatWall, False)
-		if not city:
-			return
-		
-		iOldArea = plots.capital(iTibet).getArea()
-		
-		for plot in self.areaChange:
-			plot.setArea(iOldArea)
+ 		if not city:
+ 			return
+
+ 		iOldArea = plots.capital(iTibet).getArea()
+ 		
+ 		for plot in self.areaChange:
+ 			plot.setArea(iOldArea)
 
 
 class Revealed(object):
@@ -411,8 +478,11 @@ class Scenario(object):
 		for iCiv, description in self.dCivilizationDescriptions.items():
 			infos.civ(iCiv).setDescriptionKeyPersistent(description)
 	
+		# Aeons - I spent ages checking DLL, Pedia and more for this
+		# Why is it here???
 		for i, iCiv in enumerate(lBirthOrder):
-			infos.civ(iCiv).setDescription("%02d" % i)
+			# Aeons - change civs to sort by 3 digits since we have >100 civs
+			infos.civ(iCiv).setDescription("%03d" % i) 
 			
 		for iCiv in range(iNumCivs):
 			iCivStartYear = infos.civ(iCiv).getStartingYear()
@@ -425,12 +495,12 @@ class Scenario(object):
 		self.adjustTurns(False)
 	
 		for iCiv in range(iNumCivs):
-			leaders = infos.leaders().where(lambda iLeader: infos.civ(iCiv).isOriginalLeader(iLeader) and iLeader in LEADER_DATES).sort(lambda iLeader: LEADER_DATES.get(iLeader, 2025))
+			leaders = infos.leaders().where(lambda iLeader: infos.civ(iCiv).isOriginalLeader(iLeader) and iLeader in LEADER_DATES).sort(lambda iLeader: LEADER_DATES.get(iLeader, 2026))
 			if not leaders:
 				continue
 			
-			before, after = leaders.split(lambda iLeader: LEADER_DATES.get(iLeader, 2025) < self.iStartYear)
-			if not after or (before and since(year(LEADER_DATES.get(before.last(), 2025))) < until(year(LEADER_DATES.get(after.first(), 2025)))):
+			before, after = leaders.split(lambda iLeader: LEADER_DATES.get(iLeader, 2026) < self.iStartYear)
+			if not after or (before and since(year(LEADER_DATES.get(before.last(), 2026))) < until(year(LEADER_DATES.get(after.first(), 2026)))):
 				after = after.including(before.last())
 				
 			for iLeader in range(iNumLeaders):
@@ -499,8 +569,6 @@ class Scenario(object):
 		self.restoreLeaders()
 		
 		self.updateData()
-		self.updateLastTurnAlive()
-		self.updateNames()
 		self.updateCityNames()
 	
 	def adjustTerritories(self):
@@ -530,7 +598,6 @@ class Scenario(object):
 		for iBuilding in range(iNumBuildings):
 			if not city.isHasRealBuilding(iBuilding):
 				continue
-			
 			if iBuilding in WONDER_ORIGINAL_BUILDERS:
 				iCiv, iYear = WONDER_ORIGINAL_BUILDERS[iBuilding]
 				iYearBuilt = iYear
@@ -539,7 +606,6 @@ class Scenario(object):
 				iTech = infos.building(iBuilding).getPrereqAndTech()
 				if iTech >= 0:
 					iYearBuilt = max(iYearBuilt, ERA_START_DATES.get(infos.tech(iTech).getEra()))
-				
 				iSpecialBuilding = infos.building(iBuilding).getSpecialBuildingType()
 				if iSpecialBuilding >= 0:
 					iTech = infos.specialBuilding(iSpecialBuilding).getTechPrereq()
@@ -554,11 +620,12 @@ class Scenario(object):
 			city.setBuildingOriginalTime(iBuilding, iYearBuilt)
 	
 	def expireWonders(self):
-		for iWonder, (iCiv, iYear) in WONDER_ORIGINAL_BUILDERS.items():
-			if game.getBuildingClassCreatedCount(infos.building(iWonder).getBuildingClassType()) == 0:
-				if iYear < self.iStartYear and iWonder not in self.lUnexpiredWonders:
-					game.incrementBuildingClassCreatedCount(infos.building(iWonder).getBuildingClassType())
-	
+			for iWonder, (iCiv, iYear) in WONDER_ORIGINAL_BUILDERS.items():
+				if game.getBuildingClassCreatedCount(infos.building(iWonder).getBuildingClassType()) == 0:
+					if iYear < self.iStartYear and iWonder not in self.lUnexpiredWonders:
+						game.incrementBuildingClassCreatedCount(infos.building(iWonder).getBuildingClassType())
+
+
 	def adjustGreatPeople(self):
 		for iCiv, iGreatPeople in self.dGreatPeopleCreated.items():
 			player(iCiv).changeGreatPeopleCreated(iGreatPeople)
@@ -595,7 +662,7 @@ class Scenario(object):
 		for iCiv in range(iNumCivs):
 			for iLeader in range(iNumLeaders):
 				infos.civ(iCiv).setLeader(iLeader, infos.civ(iCiv).isOriginalLeader(iLeader))
-	
+
 	def updateLastTurnAlive(self):
 		for iCiv in lBirthOrder:
 			if self.iStartYear > dBirth[iCiv]:
@@ -607,16 +674,16 @@ class Scenario(object):
 	def updateNames(self):
 		for iPlayer in players.major():
 			checkName(iPlayer)
-	
+
 	def updateCityNames(self):
 		cn.setupScenario()
 		cn.updateAllNames()
-	
+
 	def updateCityWork(self):
 		for tCity, tTiles in self.lWorkingCities:
 			for tTile in tTiles:
 				plot(tTile).setWorkingCity(city_(tCity))
-		
+
 		for city in cities.all():
 			city.AI_updateAssignWork()
 	
