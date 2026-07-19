@@ -25,8 +25,8 @@ class CityCulture(CityRequirement):
 	
 
 # Third Babylonian UHV goal
-# First French UHV goal
 # Third Turkic UHV goal
+# First French UHV goal
 # Second Argentine UHV goal
 # Third Zoroastrian URV goal
 # Second Jewish URV goal
@@ -92,7 +92,7 @@ class CityDifferentGreatPeopleCount(CityRequirement):
 class CityPopulation(CityRequirement):
 
 	GLOBAL_TYPES = (CITY,)
-	TYPES = (NUMBER,)
+ 	TYPES = (NUMBER,)
 	
 	GOAL_DESC_KEY = "TXT_KEY_VICTORY_DESC_HAVE_IN_CITY"
 	DESC_KEY = "TXT_KEY_VICTORY_DESC_CITY_POPULATION"
@@ -115,7 +115,6 @@ class CityPopulation(CityRequirement):
 # Third Tibetan UHV goal
 # Second Moorish UHV goal
 # Third Holy Roman UHV goal
-# First Masryeen UHV goal
 # First Dutch UHV goal
 # First German UHV goal
 # Second Islamic URV goal
@@ -153,3 +152,4 @@ class CitySpecialistCount(CityRequirement):
 		
 	def progress_text(self, **options):
 		return CityRequirement.progress_text(self, bPlural=self.bPlural)
+

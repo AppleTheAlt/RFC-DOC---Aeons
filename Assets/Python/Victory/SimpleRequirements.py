@@ -6,6 +6,7 @@ from Civics import isCommunist
 import heapq
 
 
+
 # Third Ethiopian UHV goal
 class AllAttitude(Requirement):
 
@@ -48,7 +49,47 @@ class AllAttitude(Requirement):
 		
 		return [civilizations]
 
+# Aeons - First Malagasy Goal
+class AllContacted(Requirement):
+	
+	DESC_KEY = "TXT_KEY_VICTORY_DESC_ALL_CONTACT"
+	PROGR_KEY = "TXT_KEY_VICTORY_PROGR_CONTACT_COUNT"
+	
+	def __init__(self, civs=None, **options):
+		Requirement.__init__(self, civs=civs, **options)
+		
+		self.civs = civs
+	
+	def valid_players(self):
+		valid_players = players.major().alive()
+		
+		if self.civs:
+			valid_players = valid_players.civs(*self.civs)
+		
+		return valid_players
+	
+	def value(self, evaluator):
+		return evaluator.max(lambda iPlayer: self.valid_players().without(iPlayer).where(lambda p: team(iPlayer).canContact(player(p).getTeam())).count())
+	
+	def required(self):
+		return self.valid_players().count() - 1
+	
+	def fulfilled(self, evaluator):
+		return self.value(evaluator) >= self.required()
+	
+	def progress(self, evaluator):
+		return "%s %s: %s / %s" % (self.indicator(evaluator), capitalize(text(self.PROGR_KEY, *self.format_parameters())), self.value(evaluator), self.required())
+	
+	def additional_formats(self):
+		civilizations = text("TXT_KEY_VICTORY_CIVILIZATIONS")
+		
+		civilizations = qualify_adjective(civilizations, CIVS, self.civs)
+		civilizations = qualify(civilizations, "TXT_KEY_VICTORY_OTHER", not self.civs)
+		
+		return [civilizations]
 
+
+# First American UHV goal
 class AllowNone(Requirement):
 
 	GLOBAL_TYPES = (CIVS,)
@@ -107,7 +148,6 @@ class AllowOnly(Requirement):
 		
 		return False
 
-
 # Third Spanish UHV goal
 class AreaNoStateReligion(Requirement):
 
@@ -126,6 +166,22 @@ class AreaNoStateReligion(Requirement):
 	def fulfilled(self, evaluator):
 		return self.area.cities().none(lambda city: player(city).getStateReligion() == self.iReligion)
 
+class AreaNoReligion(Requirement):
+
+	TYPES = (AREA, RELIGION_ADJECTIVE)
+
+	GOAL_DESC_KEY = "TXT_KEY_VICTORY_DESC_ALLOW"
+	DESC_KEY = "TXT_KEY_VICTORY_DESC_AREA_NO_RELIGION"
+	PROGR_KEY = "TXT_KEY_VICTORY_PROGR_AREA_NO_RELIGION"
+
+	def __init__(self, area, iReligion, **options):
+		Requirement.__init__(self, area, iReligion, **options)
+
+		self.area = area
+		self.iReligion = iReligion
+
+	def fulfilled(self, evaluator):
+		return self.area.cities().none(lambda city: city.isHasReligion(self.iReligion))
 
 # Third Russian UHV goal
 class Communist(Requirement):
@@ -136,7 +192,6 @@ class Communist(Requirement):
 
 	def fulfilled(self, evaluator):
 		return evaluator.any(lambda p: isCommunist(p))
-
 
 # First Arabian UHV goal
 class CompleteEra(ThresholdRequirement):
@@ -157,8 +212,25 @@ class CompleteEra(ThresholdRequirement):
 	
 	def required(self):
 		return infos.techs().count(lambda iTech: infos.tech(iTech).getEra() == self.iEra)
-	
 
+# Aeons - Second Katangese UHV goal
+class EnterEra(Requirement):
+
+	TYPES = (ERA,)
+
+	GOAL_DESC_KEY = "TXT_KEY_VICTORY_DESC_ENTER_ERA"
+	PROGR_KEY = "TXT_KEY_VICTORY_PROGR_ENTER_ERA"
+	
+	def __init__(self, iEra, **options):
+		Requirement.__init__(self, iEra, **options)
+		
+		self.iEra = iEra
+		self.bPlural = True
+
+	def fulfilled(self, evaluator):
+		return infos.techs().where(lambda iTech: infos.tech(iTech).getEra() == self.iEra).count(lambda iTech: evaluator.any(lambda iPlayer: team(iPlayer).isHasTech(iTech))) > 0
+
+	
 # Second Egyptian UHV goal
 # Second Assyrian UHV goal
 # Second Greek UHV goal
@@ -169,7 +241,6 @@ class CompleteEra(ThresholdRequirement):
 # First Norse UHV goal
 # Second Arabian UHV goal
 # Third Burmese UHV goal
-# Third Masryeen UHV goal
 # First Mongol UHV goal
 # Third Aztec UHV goal
 # Second Ottoman UHV goal
@@ -344,7 +415,6 @@ class NoStateReligion(Requirement):
 	def progress_text(self):
 		return "%s: %d" % (text(self.PROGR_KEY, *self.format_parameters()), self.value())
 
-
 class OnlyDefensiveWar(Requirement):
 	
 	GOAL_DESC_KEY = "TXT_KEY_VICTORY_DESC_ONLY_DEFENSIVE_WAR"
@@ -370,7 +440,6 @@ class OnlyDefensiveWar(Requirement):
 				if team(player(iPlayer).getTeam()).AI_makePeaceTradeVal(goalTeam.getID()) > goalTeam.AI_makePeaceTradeVal(player(iPlayer).getTeam()):
 					goal.expire()
 					break
-
 
 class Project(Requirement):
 
@@ -504,19 +573,19 @@ class RouteConnection(Requirement):
 
 # Second Ethiopian UHV goal
 class StateReligion(Requirement):
-	
-	TYPES = (RELIGION,)
-	
-	GOAL_DESC_KEY = "TXT_KEY_VICTORY_DESC_ADOPT"
-	
-	def __init__(self, iStateReligion, **options):
-		Requirement.__init__(self, iStateReligion, **options)
-		
-		self.iStateReligion = iStateReligion
-	
-	def fulfilled(self, evaluator):
-		return evaluator.any(lambda p: player(p).getStateReligion() == self.iStateReligion)
-
+ 	
+ 	TYPES = (RELIGION,)
+ 	
+ 	GOAL_DESC_KEY = "TXT_KEY_VICTORY_DESC_ADOPT"
+ 	
+ 	def __init__(self, iStateReligion, **options):
+ 		Requirement.__init__(self, iStateReligion, **options)
+ 		
+ 		self.iStateReligion = iStateReligion
+ 	
+ 	def fulfilled(self, evaluator):
+ 		return evaluator.any(lambda p: player(p).getStateReligion() == self.iStateReligion)
+ 
 
 # Third Protestant URV goal
 class StateReligionPercent(Requirement):
@@ -570,6 +639,8 @@ class TradeConnection(Requirement):
 	def fulfilled(self, evaluator):
 		other_players = players.major().alive().without(evaluator.players())
 		return evaluator.any(lambda iPlayer: other_players.any(lambda iOtherPlayer: player(iPlayer).canContact(iOtherPlayer) and player(iPlayer).canTradeNetworkWith(iOtherPlayer)))
+
+	
 
 
 # First Egyptian UHV goal

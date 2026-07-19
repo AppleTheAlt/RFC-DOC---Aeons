@@ -11,6 +11,7 @@ class Evaluators(object):
 			ALLIES: AlliesEvaluator,
 			STATE_RELIGION: ReligionEvaluator,
 			SECULAR: SecularEvaluator,
+			ISLAMIC_RELIGIONS: IslamicEvaluator,
 			WORLD: WorldEvaluator,
 		}
 	
@@ -118,6 +119,12 @@ class SecularEvaluator(Evaluator):
 	def players(self):
 		for iSecular in players.major().alive().where(lambda p: not player(p).isStateReligion()):
 			yield iSecular
+
+class IslamicEvaluator(Evaluator):
+
+	def players(self):
+		for iPlayer in players.major().alive().where(lambda p: player(p).getStateReligion() in [iIslam, iShia]):
+			yield iPlayer
 
 
 class WorldEvaluator(Evaluator):

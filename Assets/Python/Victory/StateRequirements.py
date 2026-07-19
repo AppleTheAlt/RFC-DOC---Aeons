@@ -1,7 +1,6 @@
 from Core import *
 from BaseRequirements import *
 
-
 # Third Mayan UHV goal
 class ContactBeforeRevealed(StateRequirement):
 
@@ -79,6 +78,27 @@ class Discover(StateRequirement):
 			goal.check()
 
 
+class TeamRank(StateRequirement):
+
+	TYPES = (AMOUNT,)
+	
+	DESC_KEY = "TXT_KEY_VICTORY_DESC_TEAM_RANK"
+	PROGR_KEY = "TXT_KEY_VICTORY_PROGR_TEAM_RANK"
+	
+	def __init__(self, iRequired, **options):
+		StateRequirement.__init__(self, iRequired, **options)
+
+		self.iRequired = iRequired
+
+		self.handle("BeginPlayerTurn", self.check_team_rank)
+	
+	def check_team_rank(self, goal, iRequired, iPlayer):
+		if gc.getGame().getTeamRank(iPlayer)+1 <= self.iRequired: #Raised by 1 as highest team rank is 0.
+			self.succeed()
+			goal.check()
+
+
+
 # Third Congolese UHV goal
 class EnterEraBefore(StateRequirement):
 
@@ -106,6 +126,35 @@ class EnterEraBefore(StateRequirement):
 	def expire_enter_era(self, goal, iTech, iPlayer):
 		iEra = infos.tech(iTech).getEra()
 		if self.iExpireEra == iEra and self.state == POSSIBLE:
+			self.fail()
+			goal.expire()
+
+# Third Buyid UHV goal
+class FirstEnterEraX(StateRequirement):
+
+	TYPES = (ERA,)
+	
+	GOAL_DESC_KEY = "TXT_KEY_VICTORY_DESC_BE_FIRST_ENTER"
+	DESC_KEY = "TXT_KEY_VICTORY_DESC_X_ERA"
+	PROGR_KEY = "TXT_KEY_VICTORY_PROGR_ENTER_ERA_BEFORE"
+
+	def __init__(self, iEra, **options):
+		StateRequirement.__init__(self, iEra, **options)
+		
+		self.iEra = iEra
+		
+		self.handle("techAcquired", self.check_enter_era_first)
+		self.expire("techAcquired", self.expire_enter_era_first)
+		
+	def check_enter_era_first(self, goal, iTech, iPlayer):
+		iEra = infos.tech(iTech).getEra()
+		if self.iEra == iEra and self.state == POSSIBLE:
+			self.succeed()
+			goal.check()
+	
+	def expire_enter_era_first(self, goal, iTech, iPlayer):
+		iEra = infos.tech(iTech).getEra()
+		if self.iEra == iEra and self.state == POSSIBLE:
 			self.fail()
 			goal.expire()
 	
@@ -145,6 +194,47 @@ class FirstDiscover(StateRequirement):
 			self.fail()
 			goal.announce_failure_cause(iPlayer, "TXT_KEY_VICTORY_ANNOUNCE_FIRST_DISCOVER", TECH.format(iTech))
 			goal.expire()	
+
+
+# Kanem-Bornu 3
+class FirstDiscoverCivs(StateRequirement):
+
+	TYPES = (CIVS,TECH,)
+	
+	GOAL_DESC_KEY = "TXT_KEY_VICTORY_DESC_FIRST_DISCOVER"
+	DESC_KEY = "TXT_KEY_VICTORY_DESC_FIRST_DISCOVER_REGION"
+	PROGR_KEY = "TXT_KEY_VICTORY_PROGR_FIRST_DISCOVER_REGION"
+	
+	def __init__(self, civs, iTech, **options):
+		StateRequirement.__init__(self, civs, iTech, **options)
+		
+		self.iTech = iTech
+		self.civs = civs
+		self.handle("techAcquired", self.check_first_discovered_region)
+		self.expire("techAcquired", self.expire_first_discovered_region)
+
+	def init(self, goal):
+		if self.countNumValidTeamsWithTech() > 0:
+			goal.set_state(FAILURE)
+			
+	
+	def check_first_discovered_region(self, goal, iTech, iPlayer):
+		if self.iTech == iTech and self.countNumValidTeamsWithTech() == 1:
+			self.succeed()
+			goal.check()
+
+	def expire_first_discovered_region(self, goal, iTech, iPlayer):
+		if self.iTech == iTech and self.state == POSSIBLE and civ(iPlayer) in self.civs:
+			self.fail()
+			goal.announce_failure_cause(iPlayer, "TXT_KEY_VICTORY_ANNOUNCE_FIRST_DISCOVER", TECH.format(iTech))
+			goal.expire()
+
+	def countNumValidTeamsWithTech(self):
+		iValidTeams = 0
+		for civ in self.civs:
+			if team(civ).isHasTech(self.iTech):
+				iValidTeams += 1
+		return iValidTeams
 
 
 # Third Pesedjet URV goal
@@ -236,6 +326,28 @@ class FirstTribute(StateRequirement):
 	def fail_on_tribute(self, goal, iTo):
 		self.fail()
 		goal.announce_failure_cause(iTo, "TXT_KEY_VICTORY_ANNOUNCE_FIRST_TRIBUTE")
+		goal.fail()
+
+# Aeons - Third Adal
+class FirstDefensivePact(StateRequirement):
+
+	GOAL_DESC_KEY = "TXT_KEY_VICTORY_DESC_BE"
+	DESC_KEY = "TXT_KEY_VICTORY_DESC_FIRST_DEFENSIVE_PACT"
+	PROGR_KEY = "TXT_KEY_VICTORY_PROGR_FIRST_DEFENSIVE_PACT"
+	
+	def __init__(self, **options):
+		StateRequirement.__init__(self, **options)
+		
+		self.handle("defensivePact", self.succeed_on_defensive_pact)
+		self.expire("defensivePact", self.fail_on_defensive_pact)
+	
+	def succeed_on_defensive_pact(self, goal, iTo):
+		self.succeed()
+		goal.check()
+	
+	def fail_on_defensive_pact(self, goal, iTo):
+		self.fail()
+		goal.announce_failure_cause(iTo, "TXT_KEY_VICTORY_ANNOUNCE_FIRST_DEFENSIVE_PACT")
 		goal.fail()
 
 

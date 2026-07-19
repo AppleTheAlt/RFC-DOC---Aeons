@@ -43,6 +43,26 @@ class CultureAmount(ThresholdRequirement):
 		return player(iPlayer).countTotalCulture()
 
 
+#Goths and Jerusalem
+class CultureAmountRegion(ThresholdRequirement):
+
+
+	TYPES = (AREA,AMOUNT,)
+	
+	DESC_KEY = "TXT_KEY_VICTORY_DESC_REGION_CULTURE_AMOUNT"
+	PROGR_KEY = "TXT_KEY_VICTORY_PROGR_REGION_CULTURE_AMOUNT"
+
+
+
+	def __init__(self, area, iRequired, **options):
+		ThresholdRequirement.__init__(self, area, iRequired, **options)
+	
+	def value(self, iPlayer, area):
+		return cities.owner(iPlayer).where(lambda city: city.plot() in area
+).sum(lambda city: city.getCulture(iPlayer))
+
+
+
 # First Japanese UHV goal
 class FoundedCultureAmount(ThresholdRequirement):
 

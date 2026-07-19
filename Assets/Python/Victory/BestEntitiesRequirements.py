@@ -25,8 +25,7 @@ class BestCultureCity(BestCityRequirement):
 	
 	def metric(self, city):
 		return city.getCulture(city.getOwner())
-
-
+	
 # Second Buddhist URV goal
 class BestHappinessCities(BestCitiesRequirement):
 	
@@ -38,7 +37,6 @@ class BestHappinessCities(BestCitiesRequirement):
 	
 	def metric(self, city):
 		return city.happyLevel()
-	
 
 # Third Hindu URV goal
 class BestPopulationCities(BestCitiesRequirement):
@@ -53,8 +51,8 @@ class BestPopulationCities(BestCitiesRequirement):
 
 
 # Second Babylonian UHV goal
-# Third Khmer UHV goal
 # Second Byzantine UHV goal
+# Third Khmer UHV goal
 # First Aztec UHV goal
 # Second Thai UHV goal
 # Third Mexican UHV goal
@@ -67,7 +65,6 @@ class BestPopulationCity(BestCityRequirement):
 	def metric(self, city):
 		return city.getPopulation()
 	
-
 class BestPopulationPlayer(BestPlayersRequirement):
 
 	DESC_KEY = "TXT_KEY_VICTORY_DESC_BEST_POPULATION_PLAYER"
@@ -96,7 +93,6 @@ class BestSpecialistCity(BestCityRequirement):
 			return self.iSpecialist.evaluate(city.getFreeSpecialistCount)
 		
 		return city.getFreeSpecialistCount(self.iSpecialist)
-
 
 # Third Manchu UHV goal
 class BestTechPlayer(BestPlayersRequirement):
@@ -157,3 +153,18 @@ class BestWonderCity(BestCityRequirement):
 	
 	def metric(self, city):
 		return infos.buildings().count(lambda iBuilding: city.isHasRealBuilding(iBuilding) and isWonder(iBuilding))
+
+# Third Gokturk UHV goal
+class BestArmy(BestPlayersRequirement):
+
+	GOAL_DESC_KEY = "TXT_KEY_VICTORY_DESC_CONTROL"
+	DESC_KEY = "TXT_KEY_VICTORY_DESC_BEST_ARMY"
+	PROGR_KEY = "TXT_KEY_VICTORY_PROGR_BEST_ARMY"
+	
+	def __init__(self, *parameters, **options):
+		BestPlayersRequirement.__init__(self, *parameters, **options)
+		
+		self.checked("BeginPlayerTurn")
+	
+	def metric(self, iPlayer):
+		return player(iPlayer).getNumMilitaryUnits()

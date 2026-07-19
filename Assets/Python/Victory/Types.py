@@ -234,6 +234,7 @@ class CivsType(Type):
 		return argument.name()
 
 
+# TODO: test
 class CivsAdjectiveType(Type):
 
 	def validate_func(self, argument):
@@ -380,6 +381,6 @@ UNITCOMBAT = UnitCombatType("UnitCombat")
 
 FAILURE, POSSIBLE, SUCCESS = Enum.of("State", ("Failure", "Possible", "Success"))
 
-SELF, VASSALS, ALLIES, STATE_RELIGION, SECULAR, WORLD = Enum.of("Subject", ("Self", "Vassals", "Allies", "StateReligion", "Secular", "World"))
+SELF, VASSALS, ALLIES, STATE_RELIGION, SECULAR, ISLAMIC_RELIGIONS, WORLD = Enum.of("Subject", ("Self", "Vassals", "Allies", "StateReligion", "Secular", "Islamic", "World"))
 
 STATEFUL, STATELESS = Enum.of("Mode", ("Stateful", "Stateless"))

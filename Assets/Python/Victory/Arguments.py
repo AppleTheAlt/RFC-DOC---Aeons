@@ -63,6 +63,9 @@ class NamedList(NamedArgument):
 	def __contains__(self, item):
 		return item in self.items
 
+	def __getitem__(self, index):
+ 		return self.items[index]
+
 
 class Aggregate(NamedArgument):
 
@@ -80,9 +83,6 @@ class Aggregate(NamedArgument):
 	
 	def __contains__(self, item):
 		return item in self.items
-	
-	def __getitem__(self, index):
-		return self.items[index]
 	
 	def __eq__(self, other):
 		if isinstance(other, Aggregate):
@@ -132,7 +132,7 @@ class CountAggregate(Aggregate):
 	def aggregate(self, items):
 		return count(items)
 
-
+# TODO: test
 class MaximumAggregate(Aggregate):
 
 	def __init__(self, *items):
@@ -141,7 +141,6 @@ class MaximumAggregate(Aggregate):
 	
 	def aggregate(self, items):
 		return max(items)
-
 
 class AreaArgumentFactory(object):
 
@@ -259,7 +258,7 @@ class AreaArgument(NamedArgument):
 	
 	def passable(self, *args, **kwargs):
 		return self.call("passable", args, kwargs)
-	
+
 	def birth(self, iCiv):
 		return self.call_for_civ("birth", iCiv)
 	
@@ -344,6 +343,7 @@ class LocationCityArgument(CityArgument):
 		return plots.of([self.tile])
 
 
+# TODO: test
 class AreaCityArgument(CityArgument):
 
 	def __init__(self, plots):
@@ -352,7 +352,7 @@ class AreaCityArgument(CityArgument):
 		self.plots = plots
 	
 	def __repr__(self):
-		return "AreaCityArgument(%s)" % (self.plots,)
+		return "AreaCityArgument%s" % (self.plots,)
 	
 	def __eq__(self, other):
 		if not isinstance(other, AreaCityArgument):
@@ -528,6 +528,9 @@ def religious_buildings(func):
 
 def wonders():
 	return SumAggregate(iBuilding for iBuilding in infos.buildings() if isWonder(iBuilding)).named("TXT_KEY_VICTORY_NAME_WONDERS")
+
+def anyBuildings():
+	return SumAggregate(iBuilding for iBuilding in infos.buildings() if iBuilding == base_building(iBuilding)).named("TXT_KEY_VICTORY_NAME_BUILDINGS")
 	
 def group(iGroup):
 	return CivsArgument.group(iGroup)
@@ -540,6 +543,10 @@ def area_city(tRectangle):
 
 def happiness_resources():
 	return [iResource for iResource in infos.bonuses() if infos.bonus(iResource).getHappiness() > 0]
+
+def resources():
+	return [iResource for iResource in infos.bonuses()]
+
 
 def holy_city(iReligion = None):
 	if iReligion is None:

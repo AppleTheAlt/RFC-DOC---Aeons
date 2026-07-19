@@ -12,7 +12,7 @@ class AreaPercent(PercentRequirement):
 	GOAL_DESC_KEY = "TXT_KEY_VICTORY_DESC_CONTROL"
 	DESC_KEY = "TXT_KEY_VICTORY_DESC_AREA_PERCENT"
 	PROGR_KEY = "TXT_KEY_VICTORY_PROGR_AREA_PERCENT"
-	
+
 	SUBJECT_DESC_KEYS = {
 		ALLIES: "TXT_KEY_VICTORY_DESC_CONTROL_DIRECTLY_OR_THROUGH_ALLIES",
 	}
@@ -58,16 +58,13 @@ class CommercePercent(PercentRequirement):
 	GOAL_DESC_KEY = "TXT_KEY_VICTORY_DESC_CONTROL"
 	DESC_KEY = "TXT_KEY_VICTORY_DESC_COMMERCE_PERCENT"
 	PROGR_KEY = "TXT_KEY_VICTORY_PROGR_COMMERCE_PERCENT"
-	
+
 	SUBJECT_DESC_KEYS = {
-		ALLIES: "TXT_KEY_VICTORY_DESC_CONTROL_DIRECTLY_OR_THROUGH_ALLIES",
-	}
+ 		ALLIES: "TXT_KEY_VICTORY_DESC_CONTROL_DIRECTLY_OR_THROUGH_ALLIES",
+ 	}
 	
 	def value(self, iPlayer):
-		if player(iPlayer).isExisting():
-			return max(0, player(iPlayer).calculateTotalCommerce())
-		
-		return 0
+		return max(0, player(iPlayer).calculateTotalCommerce())
 
 
 # First Persian UHV goal
@@ -92,7 +89,6 @@ class LandPercent(PercentRequirement):
 	def total(self):
 		return map.getLandPlots()
 
-
 # Third Inca UHV goal
 class PopulationInAreaPercent(PercentRequirement):
 
@@ -112,7 +108,6 @@ class PopulationInAreaPercent(PercentRequirement):
 	
 	def total(self):
 		return self.area.cities().sum(CyCity.getPopulation)
-
 
 # Third Indian UHV goal
 # Second Persian UHV goal
@@ -140,16 +135,13 @@ class PowerPercent(PercentRequirement):
 	GOAL_DESC_KEY = "TXT_KEY_VICTORY_DESC_CONTROL"
 	DESC_KEY = "TXT_KEY_VICTORY_DESC_POWER_PERCENT"
 	PROGR_KEY = "TXT_KEY_VICTORY_PROGR_POWER_PERCENT"
-	
+
 	SUBJECT_DESC_KEYS = {
-		ALLIES: "TXT_KEY_VICTORY_DESC_CONTROL_DIRECTLY_OR_THROUGH_ALLIES",
-	}
+ 		ALLIES: "TXT_KEY_VICTORY_DESC_CONTROL_DIRECTLY_OR_THROUGH_ALLIES",
+ 	}
 	
 	def value(self, iPlayer):
-		if player(iPlayer).isExisting():
-			return player(iPlayer).getPower()
-		
-		return 0
+		return player(iPlayer).getPower()
 
 
 # Third Arabian UHV goal
@@ -185,7 +177,6 @@ class ReligiousVotePercent(PercentRequirement):
 	def value(self, iPlayer):
 		return player(iPlayer).getVotes(16, 1)
 
-
 # Third Phoenician UHV goal
 # Second Swahili UHV goal
 class RevealedPercent(PercentRequirement):
@@ -218,7 +209,6 @@ class RevealedPercent(PercentRequirement):
 
 	def total(self):
 		return self.area.count()
-
 
 # First Portuguese UHV goal
 class WaterAreaPercent(PercentRequirement):

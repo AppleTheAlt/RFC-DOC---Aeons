@@ -90,7 +90,7 @@ class EventHandlerRegistry(object):
 				func(goal, city, iBuilding)
 		
 		return buildingBuilt
-	
+
 	def changeWar(self, goal, applicable, func):
 		def changeWar((bWar, iTeam, iOtherTeam, bFromDefensivePact)):
 			if applicable(goal, team(iTeam).getLeaderID()):
@@ -126,19 +126,19 @@ class EventHandlerRegistry(object):
 		
 		return cityCaptureGold
 	
-	def cityLiberated(self, goal, applicable, func):
-		def cityLiberated((city,)):
-			if applicable(goal, city.getOwner()):
-				func(goal, city)
-		
-		return cityLiberated
-	
 	def cityLost(self, goal, applicable, func):
 		def cityLost((city,)):
 			if applicable(goal, city.getOwner()):
 				func(goal)
 
 		return cityLost
+
+	def cityLiberated(self, goal, applicable, func):
+		def cityLiberated((city,)):
+			if applicable(goal, city.getOwner()):
+				func(goal, city)
+		
+		return cityLiberated
 		
 	def cityRazed(self, goal, applicable, func):
 		def cityRazed((city, iPlayer)):
@@ -146,7 +146,7 @@ class EventHandlerRegistry(object):
 				func(goal)
 		
 		return cityRazed
-	
+
 	def citySacked(self, goal, applicable, func):
 		def citySacked((city,)):
 			if applicable(goal, city.getOwner()):
@@ -171,7 +171,7 @@ class EventHandlerRegistry(object):
 	def combatResult(self, goal, applicable, func):
 		def combatResult((winningUnit, losingUnit)):
 			if applicable(goal, winningUnit.getOwner()):
-				func(goal, losingUnit)
+				func(goal, losingUnit, winningUnit)
 		
 		return combatResult
 	
@@ -188,7 +188,7 @@ class EventHandlerRegistry(object):
 				func(goal)
 		
 		return endPlayerTurn
-	
+
 	def enslave(self, goal, applicable, func):
 		def enslave((iPlayer, losingUnit)):
 			if applicable(goal, iPlayer):
@@ -202,7 +202,7 @@ class EventHandlerRegistry(object):
 				func(goal, team(iHasMetTeam).getLeaderID())
 		
 		return firstContact
-	
+
 	def goldGranted(self, goal, applicable, func):
 		def goldGranted((iFrom, iTo, iGold)):
 			print "gold granted from %s to %s: %d" % (name(iFrom), name(iTo), iGold)
@@ -232,6 +232,15 @@ class EventHandlerRegistry(object):
 				func(goal)
 		
 		return peaceBrokered
+
+
+	def techTraded(self, goal, applicable, func):
+		def techTraded((iFromPlayer, iToPlayer, iTech)):
+			if applicable(goal, iToPlayer):
+				func(goal)
+		
+		return techTraded
+
 	
 	def playerChangeStateReligion(self, goal, applicable, func):
 		def playerChangeStateReligion((iPlayer, iNewReligion, iOldReligion)):
@@ -275,13 +284,6 @@ class EventHandlerRegistry(object):
 		
 		return religionFounded
 	
-	def religionSpread(self, goal, applicable, func):
-		def religionSpread((iReligion, iPlayer, city)):
-			if applicable(goal, iPlayer):
-				func(goal, city, iReligion)
-		
-		return religionSpread
-	
 	def sacrificeGoldenAge(self, goal, applicable, func):
 		def sacrificeGoldenAge((iPlayer, city)):
 			if applicable(goal, iPlayer):
@@ -302,6 +304,14 @@ class EventHandlerRegistry(object):
 				func(goal, iGold, (iX, iY))
 		
 		return tradeMission
+
+	def diplomaticMission(self, goal, applicable, func):
+		def diplomaticMission((iUnit, iPlayer, iX, iY)):
+			if applicable(goal, iPlayer):
+				func(goal, (iX, iY))
+		
+		return diplomaticMission
+
 	
 	def tribute(self, goal, applicable, func):
 		def tribute((iFrom, iTo)):
@@ -309,7 +319,14 @@ class EventHandlerRegistry(object):
 				func(goal, iTo)
 		
 		return tribute
-	
+
+	def defensivePact(self, goal, applicable, func):
+		def defensivePact((iFrom, iTo)):
+			if applicable(goal, iTo):
+				func(goal, iTo)
+		
+		return defensivePact
+
 	def unitGifted(self, goal, applicable, func):
 		def unitGifted((unit, iPlayer, plot)):
 			if applicable(goal, iPlayer):
