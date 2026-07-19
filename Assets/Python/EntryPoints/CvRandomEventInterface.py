@@ -16,6 +16,7 @@ from Religions import embraceReformation, tolerateReformation, counterReformatio
 
 from RFCUtils import *
 from Core import *
+from AIWars import spawnCrusaders
 
 localText = CyTranslator()
 
@@ -1377,6 +1378,10 @@ def canTriggerAncientOlympics(argsList):
 
 	if stateReligion == CvUtil.findInfoTypeNum(gc.getReligionInfo,gc.getNumReligionInfos(),'RELIGION_ISLAM'):
 		return false
+
+	if stateReligion == CvUtil.findInfoTypeNum(gc.getReligionInfo,gc.getNumReligionInfos(),'RELIGION_SHIA'):
+		return false
+
 
 	return true
 
@@ -2871,6 +2876,84 @@ def canApplySportsLeagueDone3(argsList):
 			
 	return false
 
+######## Cross' Crusade Variant ########
+
+# If Catholic nation between the discovery of Feudalism and the founding of Protestantism, discovery of Humanities or birth of Timurids, whichever comes first
+# Choice 1 randomly selects a Muslim or indy city in the Levant, Spain, Maghreb, Egypt, Balkans, Greece, Anatolia or Baltics and spawns conquerors
+# Choice 2 randomly selects an Orthodox city in those regions and spawns conquerors
+# Choice 3 declines, auto-selecting choice 1 for another Catholic civ
+
+# Will only trigger if there is a valid Muslim target. Without one, you can't divert it to an Orthodox city!
+# Baltic Crusades also depend on the existence of a Muslim state in the Mediterranean, but there almost always is one (Moors, Fatimids/Ayyubids/Mamluks, Abbasids, Turks, Ottomans, Tunis)
+
+def canTriggerGenericCrusade(argsList):
+	if year() >= year(dBirth[iTimurids]):
+		return
+
+	if gc.getGame().isReligionFounded(iProtestantism):
+		return
+
+	kTriggeredData = argsList[0]
+	iPlayer = kTriggeredData.ePlayer
+	pPlayer = gc.getPlayer(iPlayer)
+
+	if team(iPlayer).isAVassal():
+		return
+
+	if gc.getGame().isOption(GameOptionTypes.GAMEOPTION_ONE_CITY_CHALLENGE) and pPlayer.isHuman():
+		return false
+
+	if pPlayer.getStateReligion() != iCatholicism:
+		return false
+
+	return cities.regions(rLevant, rIberia, rMaghreb, rEgypt, rBalkans, rGreece, rAnatolia, rBaltics).any(lambda city: gc.getPlayer(city.getOwner()).getStateReligion() == iIslam or gc.getPlayer(city.getOwner()).getStateReligion() == iShia and not team(city).isVassal(iPlayer))
+
+def doTriggerCrusadeAgainstAgainstHeathens(argsList):
+	kTriggeredData = argsList[1]
+	iPlayer = kTriggeredData.ePlayer
+
+	targetCity = cities.regions(rLevant, rIberia, rMaghreb, rEgypt, rBalkans, rGreece, rAnatolia, rBaltics).where(lambda city: (gc.getPlayer(city.getOwner()).isMinorCiv() and not city.isHasReligion(iCatholicism) and not city.isHasReligion(iOrthodoxy)) or (gc.getPlayer(city.getOwner()).getStateReligion() == iIslam  or (gc.getPlayer(city.getOwner()).getStateReligion() == iShia) and not team(city).isVassal(iPlayer))).random()
+	targetLocation = location(targetCity)
+	spawnCrusaders(iPlayer, -1, targetLocation, targetLocation, 1, WarPlanTypes.WARPLAN_TOTAL)
+
+def getHelpCrusadeAgainstAgainstHeathens(argsList):
+	return localText.getText("TXT_KEY_EVENT_WORLDNEWS_CRUSADE_GENERIC_YES_HELP", ())
+
+def canDoTriggerCrusadeAgainstOrthodox(argsList):
+	kTriggeredData = argsList[1]
+	iPlayer = kTriggeredData.ePlayer
+
+	return cities.regions(rLevant, rEgypt, rBalkans, rGreece, rAnatolia).any(lambda city: (gc.getPlayer(city.getOwner()).isMinorCiv() and city.isHasReligion(iOrthodoxy)) or (gc.getPlayer(city.getOwner()).getStateReligion() == iOrthodoxy and not team(city).isVassal(iPlayer)))
+
+def doTriggerCrusadeAgainstOrthodox(argsList):
+	kTriggeredData = argsList[1]
+	iPlayer = kTriggeredData.ePlayer
+
+	targetCity = cities.regions(rLevant, rEgypt, rBalkans, rGreece, rAnatolia).where(lambda city: (gc.getPlayer(city.getOwner()).isMinorCiv() and city.isHasReligion(iOrthodoxy)) or (gc.getPlayer(city.getOwner()).getStateReligion() == iOrthodoxy and not team(city).isVassal(iPlayer))).random()
+	targetLocation = location(targetCity)
+
+	spawnCrusaders(iPlayer, -1, targetLocation, targetLocation, 1, WarPlanTypes.WARPLAN_TOTAL)
+
+def getHelpCrusadeAgainstOrthodox(argsList):
+	return localText.getText("TXT_KEY_EVENT_WORLDNEWS_CRUSADE_GENERIC_YES_DIVERT_HELP", ())
+
+def doTriggerCrusadeAgainstAgainstHeathensWithAnotherCatholic(argsList):
+	kTriggeredData = argsList[1]
+	iSourcePlayer = kTriggeredData.ePlayer
+
+	iNewCrusadeLeader = group(iCivGroupEurope).where(lambda player: player.isAlive() and not player.isHuman() and player.getStateReligion() == iCatholicism and not team(iCiv).isAVassal() and player.getID() != iSourcePlayer).random()
+
+	if iNewCrusadeLeader is None:
+		return
+
+	targetCity = cities.regions(rLevant, rIberia, rMaghreb, rEgypt, rBalkans, rGreece, rAnatolia, rBaltics).where(lambda city: (gc.getPlayer(city.getOwner()).isMinorCiv() and not city.isHasReligion(iCatholicism) and not city.isHasReligion(iOrthodoxy)) or (gc.getPlayer(city.getOwner()).getStateReligion() == iIslam  or (gc.getPlayer(city.getOwner()).getStateReligion() == iShia) and not team(city).isVassal(iPlayer))).random()
+	targetLocation = location(targetCity)
+
+	spawnCrusaders(iNewCrusadeLeader, -1, targetLocation, targetLocation, 1, WarPlanTypes.WARPLAN_TOTAL)
+
+def getHelpCrusadeAgainstAgainstHeathensWithAnotherCatholic(argsList):
+	return localText.getText("TXT_KEY_EVENT_WORLDNEWS_CRUSADE_GENERIC_NO_SELECT_ANOTHER_HELP", ())
+
 ######## CRUSADE ###########
 
 def canTriggerCrusade(argsList):
@@ -2879,34 +2962,45 @@ def canTriggerCrusade(argsList):
 	player = gc.getPlayer(kTriggeredData.ePlayer)
 	otherPlayer = gc.getPlayer(kTriggeredData.eOtherPlayer)
 	
-	if player.getStateReligion() != iCatholicism:
-		return False
+	iReligion = kTriggeredData.eReligion
+	if iReligion == iCatholicism:
+		iReligion = iOrthodoxy
 	
-	if otherPlayer.getStateReligion() != iIslam:
-		return False
+	if iReligion != iOrthodoxy:
+		return false
 	
-	if team(player.getTeam()).isAtWar(otherPlayer.getTeam()):
-		return False
+	holyCity = gc.getGame().getHolyCity(iReligion)
 	
-	return True
+	if holyCity.isNone():
+		return false
+	
+	if gc.getGame().isOption(GameOptionTypes.GAMEOPTION_ONE_CITY_CHALLENGE) and gc.getPlayer(kTriggeredData.ePlayer).isHuman():
+		return false
+	
+	if player.isHuman() and not gc.getTeam(player.getTeam()).isAtWar(holyCity.getTeam()):
+		return false
+		
+	if gc.getPlayer(holyCity.getOwner()).getStateReligion() not in [iOrthodoxy, iCatholicism, iProtestantism]:
+		return true
+			
+	return false
 
-def canTriggerCrusadeCity(argsList):
-	iTrigger, iPlayer, iID = argsList
-	city = player(iPlayer).getCity(iID)
-	
-	return city.isHolyCityByType(iOrthodoxy)
-	
 def doTriggerCrusade(argsList):
 	kTriggeredData = argsList[0]
 	
 	iPlayer = kTriggeredData.ePlayer
-	iOtherPlayer = kTriggeredData.eOtherPlayer
+	iReligion = kTriggeredData.eReligion
 	
+	if iReligion == iCatholicism:
+		iReligion = iOrthodoxy
+	
+	holyCity = gc.getGame().getHolyCity(iReligion)	
+
 	if not gc.getPlayer(iPlayer).isHuman():
 		createRoleUnit(iPlayer, capital(iPlayer), iShockCity, 3)
 		createRoleUnit(iPlayer, capital(iPlayer), iSiege, 2)
-	
-	gc.getTeam(gc.getPlayer(iPlayer).getTeam()).declareWar(gc.getPlayer(iOtherPlayer).getTeam(), True, WarPlanTypes.WARPLAN_LIMITED)
+
+	gc.getTeam(gc.getPlayer(iPlayer).getTeam()).declareWar(holyCity.getTeam(), True, WarPlanTypes.WARPLAN_LIMITED)
 
 def getHelpCrusade1(argsList):
 	iEvent = argsList[0]
@@ -4124,7 +4218,7 @@ def canDoSpyDiscovered3(argsList):
 	
 	if player.getCapitalCity().isNone():
 		return false
-		
+
 	iUnitClassType = CvUtil.findInfoTypeNum(gc.getUnitClassInfo, gc.getNumUnitClassInfos(), 'UNITCLASS_TANK')
 	iUnitType = gc.getCivilizationInfo(player.getCivilizationType()).getCivilizationUnits(iUnitClassType)
 	if not player.canTrain(iUnitType, False, False):
@@ -4278,6 +4372,7 @@ def canTriggerTradingCompanyConquerors(argsList):
 	iPlayer = kTriggeredData.ePlayer
 	iCiv = civ(iPlayer)
 	
+	
 	if not player(iPlayer).isHuman():
 		return False
 	
@@ -4298,7 +4393,7 @@ def canChooseTradingCompanyConquerors1(argsList):
 	pPlayer = gc.getPlayer(iPlayer)
 	iCiv = civ(iPlayer)
 
-	lCivList = [iSpain, iFrance, iEngland, iPortugal, iNetherlands]
+	lCivList = [iSpain, iFrance, iEngland, iPortugal, iNetherlands, iOman]
 	id = lCivList.index(iCiv)
 
 	targets = data.lTradingCompanyConquerorsTargets[iCiv]

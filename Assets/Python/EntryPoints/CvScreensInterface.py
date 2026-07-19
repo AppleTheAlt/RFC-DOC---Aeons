@@ -920,6 +920,7 @@ def canEverRespawn(argsList):
 	
 	return 0
 
+
 def toggleStabilityOverlay():
 	toggleStabilityOverlayUtils()
 
