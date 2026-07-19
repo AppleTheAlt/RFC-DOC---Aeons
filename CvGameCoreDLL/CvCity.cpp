@@ -5250,7 +5250,7 @@ void CvCity::processPlayerBuilding(BuildingTypes eBuilding, int iChange)
 	}
 
 	// Aeons: Kulumbimbi - +2 research from Catholic religious buildings
-	else if (GET_PLAYER(getOwnerINLINE()).isHasBuildingEffect((BuildingTypes)KULUMBIMBI))
+	else if (eBuilding == KULUMBIMBI)
 	{
 		for (int iI = 0; iI < GC.getNumBuildingInfos(); iI++)
 		{
@@ -11728,6 +11728,16 @@ int CvCity::getAdditionalBaseCommerceRateByBuildingImpl(CommerceTypes eIndex, Bu
 				iExtraRate += GET_PLAYER(getOwnerINLINE()).getNumAvailableBonuses(BONUS_COPPER);
 				iExtraRate += GET_PLAYER(getOwnerINLINE()).getNumAvailableBonuses(BONUS_IRON);
 				iExtraRate += GET_PLAYER(getOwnerINLINE()).getNumAvailableBonuses(BONUS_ALUMINUM);
+			}
+			else if (eBuilding == KULUMBIMBI)
+			{
+				for (int iJ = 0; iJ < GC.getNumBuildingInfos(); iJ++)
+				{
+					if (isHasRealBuilding((BuildingTypes)iJ) && GC.getBuildingInfo((BuildingTypes)iJ).getReligionType() == CATHOLICISM)
+					{
+						iExtraRate += 2;
+					}
+				}
 			}
 			else if (eBuilding == GLOBAL_SEED_VAULT)
 			{
