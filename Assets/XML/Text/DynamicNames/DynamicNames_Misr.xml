@@ -19,11 +19,11 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIV_MISR_ADJECTIVE</Tag>
-		<English>Masryeen</English>
-		<French>Masryeen</French>
-		<German>Masryeen</German>
-		<Italian>Masryeen</Italian>
-		<Spanish>Masryeen</Spanish>
+		<English>Masyreen</English>
+		<French>Masyreen</French>
+		<German>Masyreen</German>
+		<Italian>Masyreen</Italian>
+		<Spanish>Masyreen</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIV_MISR_SHORT_DESC</Tag>
@@ -32,6 +32,22 @@
 		<German>Misr</German>
 		<Italian>Misr</Italian>
 		<Spanish>Misr</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_FATIMIDS_SHORT_DESC</Tag>
+		<English>Fatimids</English>
+		<French>Fatimids</French>
+		<German>Fatimids</German>
+		<Italian>Fatimids</Italian>
+		<Spanish>Fatimids</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_FATIMIDS_ADJECTIVE</Tag>
+		<English>Fatimid</English>
+		<French>Fatimid</French>
+		<German>Fatimid</German>
+		<Italian>Fatimid</Italian>
+		<Spanish>Fatimid</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIV_MISR_DEFAULT</Tag>

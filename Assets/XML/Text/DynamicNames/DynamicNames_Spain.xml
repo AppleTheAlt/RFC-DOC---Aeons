@@ -146,6 +146,18 @@
 		<Spanish>Castile</Spanish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_CIV_SPAIN_LEON</Tag>
+		<English>Leon</English>
+		<French>
+			<Text>Leon</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>Leon</German>
+		<Italian>Leon</Italian>
+		<Spanish>Leon</Spanish>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_CIV_SPAIN_CASTILIAN</Tag>
 		<English>Castilian</English>
 		<French>
@@ -156,6 +168,18 @@
 		<German>Castilian</German>
 		<Italian>Castilian</Italian>
 		<Spanish>Castilian</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_SPAIN_LEONESE</Tag>
+		<English>Leonese</English>
+		<French>
+			<Text>Leonese</Text>
+			<Gender>Male:Female:Male:Female</Gender>
+			<Plural>0:0:1:1</Plural>
+		</French>
+		<German>Leonese</German>
+		<Italian>Leonese</Italian>
+		<Spanish>Leonese</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIV_SPAIN_IBERIA</Tag>

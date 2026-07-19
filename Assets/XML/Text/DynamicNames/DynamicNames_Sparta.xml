@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Harappa -->
+<Civ4GameText xmlns="http://www.firaxis.com">
+	<TEXT>
+		<Tag>TXT_KEY_CIV_SPARTA_DESC</Tag>
+		<English>The Spartans</English>
+		<French>
+			<Text>The Spartans</Text>
+			<Gender>Male</Gender>
+			<Plural>1</Plural>
+		</French>
+		<German>The Spartans</German>
+		<Italian>The Spartans</Italian>
+		<Spanish>The Spartans</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_SPARTA_PEOPLES</Tag>
+		<English>Laconian Peoples</English>
+		<French>
+			<Text>Laconian Peoples</Text>
+			<Gender>Female</Gender>
+			<Plural>1</Plural>
+		</French>
+		<German>Laconian Peoples</German>
+		<Italian>Laconian Peoples</Italian>
+		<Spanish>Laconian Peoples</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_SPARTA_DEFAULT</Tag>
+		<English>City State of %s1</English>
+		<French>
+			<Text>City State of %s1</Text>
+			<Gender>Female</Gender>
+			<Plural>1</Plural>
+		</French>
+		<German>City State of %s1</German>
+		<Italian>City State of %s1</Italian>
+		<Spanish>City State of %s1</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_SPARTA_REPUBLIC</Tag>
+		<English>%S2 Republic</English>
+		<French>
+			<Text>%S2 Republic</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>%s2 Republic</German>
+		<Italian>%s2 Republic</Italian>
+		<Spanish>%s2 Republic</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_SPARTA_COMMUNIST</Tag>
+		<English>Democratic %s1</English>
+		<French>
+			<Text>Democratic %s1</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>Democratic %s1</German>
+		<Italian>Democratic %s1</Italian>
+		<Spanish>Democratic %s1</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_SPARTA_FASCIST</Tag>
+		<English>Supreme Spartan State</English>
+		<French>
+			<Text>Supreme Spartan State</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>Supreme Spartan State</German>
+		<Italian>Supreme Spartan State</Italian>
+		<Spanish>Supreme Spartan State</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_SPARTA_ADJECTIVE</Tag>
+		<English>Spartan</English>
+		<French>
+			<Text>Spartan</Text>
+			<Gender>Male:Female:Male:Female</Gender>
+			<Plural>0:0:1:1</Plural>
+		</French>
+		<German>Spartan</German>
+		<Italian>Spartan</Italian>
+		<Spanish>Spartan</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_SPARTA_DESC</Tag>
+		<English>The Spartans</English>
+		<French>
+			<Text>The Spartans</Text>
+			<Gender>Male</Gender>
+			<Plural>1</Plural>
+		</French>
+		<German>The Spartans</German>
+		<Italian>The Spartans</Italian>
+		<Spanish>The Spartans</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_SPARTA_SHORT_DESC</Tag>
+		<English>Sparta</English>
+		<French>
+			<Text>Sparta</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>Sparta</German>
+		<Italian>Sparta</Italian>
+		<Spanish>Sparta</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_SPARTA_EMPIRE</Tag>
+		<English>%s2 Empire</English>
+		<French>
+			<Text>%s2 Empire</Text>
+		</French>
+		<German>%s2 Empire</German>
+		<Italian>%s2 Empire</Italian>
+		<Spanish>%s2 Empire</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_SPARTA_League</Tag>
+		<English>Achean League</English>
+		<French>
+			<Text>Achean League</Text>
+		</French>
+		<German>Achean League</German>
+		<Italian>Achean League</Italian>
+		<Spanish>Achean League</Spanish>
+	</TEXT>
+
+	<TEXT>
+		<Tag>TXT_KEY_CIV_SPARTA_LEAGUE</Tag>
+		<English>Peloponessian League</English>
+		<French>
+			<Text>Peloponessian League</Text>
+			<Gender>Male</Gender>
+			<Plural>1</Plural>
+		</French>
+		<German>Peloponessian League</German>
+		<Italian>Peloponessian League</Italian>
+		<Spanish>Peloponessian League</Spanish>
+	</TEXT>
+
+
+</Civ4GameText>

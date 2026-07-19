@@ -178,6 +178,14 @@
 		<Spanish>Yuan</Spanish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_CIV_MONGOLIA_NORTHERN_YUAN</Tag>
+		<English>Northern Yuan</English>
+		<French>Northern Yuan</French>
+		<German>Northern Yuan</German>
+		<Italian>Northern Yuan</Italian>
+		<Spanish>Northern Yuan</Spanish>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_CIV_MONGOLIA_KHAMAG</Tag>
 		<English>Khamag Mongol</English>
 		<French>
@@ -306,6 +314,14 @@
 		<Spanish>Khanate of %s1</Spanish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_CIV_MONGOL_NAME_RUSSIA</Tag>
+		<English>Oros</English>
+		<French>Oros</French>
+		<German>Oros</German>
+		<Italian>Oros</Italian>
+		<Spanish>Oros</Spanish>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_CIV_MONGOL_OTTOMANS</Tag>
 		<English>Khanate of Turkestan</English>
 		<French>
@@ -364,14 +380,6 @@
 		<German>Moghulistan</German>
 		<Italian>Moghulistan</Italian>
 		<Spanish>Moghulistan</Spanish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CIV_MONGOL_NAME_RUSSIA</Tag>
-		<English>Oros</English>
-		<French>Oros</French>
-		<German>Oros</German>
-		<Italian>Oros</Italian>
-		<Spanish>Oros</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIV_MONGOL_ADJECTIVE</Tag>

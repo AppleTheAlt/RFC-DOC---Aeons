@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Civ4GameText xmlns="http://www.firaxis.com">
+	<TEXT>
+		<Tag>TXT_KEY_CIV_OMAN_DESC</Tag>
+		<English>The Omanis</English>
+		<French>The Omanis</French>
+		<German>The Omanis</German>
+		<Italian>The Omanis</Italian>
+		<Spanish>The Omanis</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_ZANZIBAR_DESC</Tag>
+		<English>The Zanzibaris</English>
+		<French>The Zanzibaris</French>
+		<German>The Zanzibaris</German>
+		<Italian>The Zanzibaris</Italian>
+		<Spanish>The Zanzibaris</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_OMAN_PEOPLES</Tag>
+		<English>Omani Peoples</English>
+		<French>Omani Peoples</French>
+		<German>Omani Peoples</German>
+		<Italian>Omani Peoples</Italian>
+		<Spanish>Omani Peoples</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_ZANZIBAR_PEOPLES</Tag>
+		<English>Zanzibari Peoples</English>
+		<French>Zanzibari Peoples</French>
+		<German>Zanzibari Peoples</German>
+		<Italian>Zanzibari Peoples</Italian>
+		<Spanish>Zanzibari Peoples</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_OMAN_ADJECTIVE</Tag>
+		<English>Omani</English>
+		<French>Omani</French>
+		<German>Omani</German>
+		<Italian>Omani</Italian>
+		<Spanish>Omani</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_OMAN_SHORT_DESC</Tag>
+		<English>Oman</English>
+		<French>Oman</French>
+		<German>Oman</German>
+		<Italian>Oman</Italian>
+		<Spanish>Oman</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_ZANZIBAR_ADJECTIVE</Tag>
+		<English>Zanzibari</English>
+		<French>Zanzibari</French>
+		<German>Zanzibari</German>
+		<Italian>Zanzibari</Italian>
+		<Spanish>Zanzibari</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_ZANZIBAR_SHORT_DESC</Tag>
+		<English>Zanzibar</English>
+		<French>Zanzibar</French>
+		<German>Zanzibar</German>
+		<Italian>Zanzibar</Italian>
+		<Spanish>Zanzibar</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_OMAN_DEFAULT</Tag>
+		<English>Sultanate of %s1</English>
+		<French>Sultanate of %s1</French>
+		<German>Sultanate of %s1</German>
+		<Italian>Sultanate of %s1</Italian>
+		<Spanish>Sultanate of %s1</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_ZANZIBAR_DEFAULT</Tag>
+		<English>Sultanate of %s1</English>
+		<French>Sultanate of %s1</French>
+		<German>Sultanate of %s1</German>
+		<Italian>Sultanate of %s1</Italian>
+		<Spanish>Sultanate of %s1</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_OMAN_IMAMATE</Tag>
+		<English>Imamate of %s1</English>
+		<French>Imamate of %s1</French>
+		<German>Imamate of %s1</German>
+		<Italian>Imamate of %s1</Italian>
+		<Spanish>Imamate of %s1</Spanish>
+	</TEXT>
+
+	<TEXT>
+		<Tag>TXT_KEY_CIV_OMAN_EMPIRE</Tag>
+		<English>%s2 Empire</English>
+		<French>%s2 Empire</French>
+		<German>%s2 Empire</German>
+		<Italian>%s2 Empire</Italian>
+		<Spanish>%s2 Empire</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_OMAN_REPUBLIC</Tag>
+		<English>Republic of %s1</English>
+		<English>Republic of %s1</English>
+		<French>Republic of %s1</French>
+		<German>Republic of %s1</German>
+		<Italian>Republic of %s1</Italian>
+		<Spanish>Republic of %s1</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_OMAN_COMMUNIST</Tag>
+		<English>Peoples' Republic of %s1</English>
+		<English>Peoples' Republic of %s1</English>
+		<French>Peoples' Republic of %s1</French>
+		<German>Peoples' Republic of %s1</German>
+		<Italian>Peoples' Republic of %s1</Italian>
+		<Spanish>Peoples' Republic of %s1</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_OMAN_FASCIST</Tag>
+		<English>National Islamic %s2 Republic</English>
+		<English>National Islamic %s2 Republic</English>
+		<French>National Islamic %s2 Republic</French>
+		<German>National Islamic %s2 Republic</German>
+		<Italian>National Islamic %s2 Republic</Italian>
+		<Spanish>National Islamic %s2 Republic</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_OMAN_SOHAR</Tag>
+		<English>Sohar</English>
+		<French>Sohar</French>
+		<German>Sohar</German>
+		<Italian>Sohar</Italian>
+		<Spanish>Sohar</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_OMAN_SOHARI</Tag>
+		<English>Sohari</English>
+		<French>Sohari</French>
+		<German>Sohari</German>
+		<Italian>Sohari</Italian>
+		<Spanish>Sohari</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_OMAN_HORMUZ</Tag>
+		<English>Hormuz</English>
+		<French>Hormuz</French>
+		<German>Hormuz</German>
+		<Italian>Hormuz</Italian>
+		<Spanish>Hormuz</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_OMAN_HORMUZI</Tag>
+		<English>Hormuzi</English>
+		<French>Hormuzi</French>
+		<German>Hormuzi</German>
+		<Italian>Hormuzi</Italian>
+		<Spanish>Hormuzi</Spanish>
+	</TEXT>
+
+</Civ4GameText>

@@ -58,14 +58,6 @@
 		</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_CIV_THAILAND_SUKHOTHAI</Tag>
-		<English>Sukhothai</English>
-		<French>Sukhothai</French>
-		<German>Sukhothai</German>
-		<Italian>Sukhothai</Italian>
-		<Spanish>Sukhothai</Spanish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_CIV_THAILAND_AYUTTHAYA</Tag>
 		<English>Ayutthaya</English>
 		<French>
@@ -136,5 +128,13 @@
 		<German>Thailand</German>
 		<Italian>Thailand</Italian>
 		<Spanish>Thailand</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_THAILAND_SUKHOTHAI</Tag>
+		<English>Sukhothai</English>
+		<French>Sukhothai</French>
+		<German>Sukhothai</German>
+		<Italian>Sukhothai</Italian>
+		<Spanish>Sukhothai</Spanish>
 	</TEXT>
 </Civ4GameText>

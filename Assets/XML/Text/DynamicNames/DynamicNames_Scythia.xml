@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Minoa -->
+<Civ4GameText xmlns="http://www.firaxis.com">
+	<TEXT>
+		<Tag>TXT_KEY_CIV_SCYTHIA_DESC</Tag>
+		<English>The Scythians</English>
+		<French>The Scythians</French>
+		<German>The Scythians</German>
+		<Italian>The Scythians</Italian>
+		<Spanish>The Scythians</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_SCYTHIA_PEOPLES</Tag>
+		<English>Saka Peoples</English>
+		<French>Saka Peoples</French>
+		<German>Saka Peoples</German>
+		<Italian>Saka Peoples</Italian>
+		<Spanish>Saka Peoples</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_SCYTHIA_ADJECTIVE</Tag>
+		<English>Scythian</English>
+		<French>Scythian</French>
+		<German>Scythian</German>
+		<Italian>Scythian</Italian>
+		<Spanish>Scythian</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_SCYTHIA_SHORT_DESC</Tag>
+		<English>Scythia</English>
+		<French>Scythia</French>
+		<German>Scythia</German>
+		<Italian>Scythia</Italian>
+		<Spanish>Scythia</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_SCYTHIA_DEFAULT</Tag>
+		<English>%s2 Tribes</English>
+		<French>%s2 Tribes</French>
+		<German>%s2 Tribes</German>
+		<Italian>%s2 Tribes</Italian>
+		<Spanish>%s2 Tribes</Spanish>
+	</TEXT>
+
+	<TEXT>
+		<Tag>TXT_KEY_CIV_SCYTHIA_EMPIRE</Tag>
+		<English>%s2 Empire</English>
+		<French>%s2 Empire</French>
+		<German>%s2 Empire</German>
+		<Italian>%s2 Empire</Italian>
+		<Spanish>%s2 Empire</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_SCYTHIA_REPUBLIC</Tag>
+		<English>%s2 Republic</English>
+		<English>%s2 Republic</English>
+		<French>%s2 Republic</French>
+		<German>%s2 Republic</German>
+		<Italian>%s2 Republic</Italian>
+		<Spanish>%s2 Republic</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_SCYTHIA_COMMUNIST</Tag>
+		<English>%s2 Peoples' Republic</English>
+		<English>%s2 Peoples' Republic</English>
+		<French>%s2 Peoples' Republic</French>
+		<German>%s2 Peoples' Republic</German>
+		<Italian>%s2 Peoples' Republic</Italian>
+		<Spanish>%s2 Peoples' Republic</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_SCYTHIA_FASCIST</Tag>
+		<English>National %s2 Republic</English>
+		<English>National %s2 Republic</English>
+		<French>National %s2 Republic</French>
+		<German>National %s2 Republic</German>
+		<Italian>National %s2 Republic</Italian>
+		<Spanish>National %s2 Republic</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_SCYTHIA_KINGDOM</Tag>
+		<English>%s2 Kingdom</English>
+		<English>%s2 Kingdom</English>
+		<French>%s2 Kingdom</French>
+		<German>%s2 Kingdom</German>
+		<Italian>%s2 Kingdom</Italian>
+		<Spanish>%s2 Kingdom</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_SCYTHIA_PONTIC_KINGDOM</Tag>
+		<English>Pontic-%s2 Kingdom</English>
+		<English>Pontic-%s2 Kingdom</English>
+		<French>Pontic-%s2 Kingdom</French>
+		<German>Pontic-%s2 Kingdom</German>
+		<Italian>Pontic-%s2 Kingdom</Italian>
+		<Spanish>Pontic-%s2 Kingdom</Spanish>
+	</TEXT>
+
+</Civ4GameText>

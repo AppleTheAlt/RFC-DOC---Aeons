@@ -3,7 +3,7 @@
 <Civ4GameText xmlns="http://www.firaxis.com">
 	<TEXT>
 		<Tag>TXT_KEY_CIV_TURKS_DESC</Tag>
-		<English>The Turks</English>
+		<English>The Seljuks</English>
 		<French>
 			<Text>Les Turcs</Text>
 			<Gender>Male</Gender>
@@ -87,15 +87,15 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIV_TURKESTAN_PEOPLES</Tag>
-		<English>Turkic Peoples</English>
+		<English>Oghuz Peoples</English>
 		<French>
-			<Text>Peuplades turques</Text>
+			<Text>Oghuz Peoples</Text>
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
-		<German>Turkic Peoples</German>
-		<Italian>Turkic Peoples</Italian>
-		<Spanish>Turkic Peoples</Spanish>
+		<German>Oghuz Peoples</German>
+		<Italian>Oghuz Peoples</Italian>
+		<Spanish>Oghuz Peoples</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIV_TURKESTAN_DEFAULT</Tag>
@@ -170,18 +170,6 @@
 		<Spanish>Khanate of %s1</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_CIV_TURKS_TIMURID</Tag>
-		<English>Timurid</English>
-		<French>
-			<Text>timouride:timouride:timourides:timourides</Text>
-			<Gender>Male:Female:Male:Female</Gender>
-			<Plural>0:0:1:1</Plural>
-		</French>
-		<German>Timurid</German>
-		<Italian>Timurid</Italian>
-		<Spanish>Timurid</Spanish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_CIV_TURKS_SHAYBANID</Tag>
 		<English>Shaybanid</English>
 		<French>
@@ -242,6 +230,42 @@
 		<Spanish>Seljuk</Spanish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_CIV_TURKS_SELJUKS</Tag>
+		<English>Seljuks</English>
+		<French>
+			<Text>seldjoukide:seldjoukide:seldjoukides:seldjoukides</Text>
+			<Gender>Male:Female:Male:Female</Gender>
+			<Plural>0:0:1:1</Plural>
+		</French>
+		<German>Seljuks</German>
+		<Italian>Seljuks</Italian>
+		<Spanish>Seljuks</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_TURKS_PAN_TURKIC</Tag>
+		<English>Pan-Turkic</English>
+		<French>
+			<Text>Pan-Turkic</Text>
+			<Gender>Male:Female:Male:Female</Gender>
+			<Plural>0:0:1:1</Plural>
+		</French>
+		<German>Pan-Turkic</German>
+		<Italian>Pan-Turkic</Italian>
+		<Spanish>Pan-Turkic</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_TURKS_PAN_TURKESTAN</Tag>
+		<English>Pan-Turkestan</English>
+		<French>
+			<Text>Pan-Turkestan</Text>
+			<Gender>Male:Female:Male:Female</Gender>
+			<Plural>0:0:1:1</Plural>
+		</French>
+		<German>Pan-Turkestan</German>
+		<Italian>Pan-Turkestan</Italian>
+		<Spanish>Pan-Turkestan</Spanish>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_CIV_TURKS_UZBEKISTAN</Tag>
 		<English>Uzbekistan</English>
 		<French>
@@ -282,14 +306,6 @@
 		<Spanish>Eastern Turkic</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_CIV_TURKS_KHWARAZMIAN</Tag>
-		<English>Khwarazmian</English>
-		<French>Khwarazmian</French>
-		<German>Khwarazmian</German>
-		<Italian>Khwarazmian</Italian>
-		<Spanish>Khwarazmian</Spanish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_CIV_TURKIC_VASSAL</Tag>
 		<English>Atabeylik of %s1</English>
 		<French>
@@ -312,6 +328,14 @@
 		<German>R&#251;m</German>
 		<Italian>R&#251;m</Italian>
 		<Spanish>R&#251;m</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_TURKS_KHWARAZMIAN</Tag>
+		<English>Khwarazmian</English>
+		<French>Khwarazmian</French>
+		<German>Khwarazmian</German>
+		<Italian>Khwarazmian</Italian>
+		<Spanish>Khwarazmian</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIV_TURKS_</Tag>

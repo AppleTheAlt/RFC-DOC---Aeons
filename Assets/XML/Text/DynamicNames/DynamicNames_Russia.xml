@@ -170,6 +170,14 @@
 		<Spanish>%s1 Krai</Spanish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_CIV_RUSSIAN_RUS</Tag>
+		<English>Novorossiya Governorate</English>
+		<French>Novorossiya Governorate</French>
+		<German>Novorossiya Governorate</German>
+		<Italian>Novorossiya Governorate</Italian>
+		<Spanish>Novorossiya Governorate</Spanish>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_CIV_RUSSIAN_POLAND</Tag>
 		<English>Congress %s1</English>
 		<French>
@@ -180,22 +188,6 @@
 		<German>Congress %s1</German>
 		<Italian>Congress %s1</Italian>
 		<Spanish>Congress %s1</Spanish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CIV_RUSSIAN_RUS</Tag>
-		<English>Novorossiya Governorate</English>
-		<French>Novorossiya Governorate</French>
-		<German>Novorossiya Governorate</German>
-		<Italian>Novorossiya Governorate</Italian>
-		<Spanish>Novorossiya Governorate</Spanish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CIV_RUSSIAN_TATARS</Tag>
-		<English>Taurida Governorate</English>
-		<French>Taurida Governorate</French>
-		<German>Taurida Governorate</German>
-		<Italian>Taurida Governorate</Italian>
-		<Spanish>Taurida Governorate</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIV_RUSSIA_SOVIET</Tag>
@@ -364,5 +356,13 @@
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_RUSSIAN_TATARS</Tag>
+		<English>Taurida Governorate</English>
+		<French>Taurida Governorate</French>
+		<German>Taurida Governorate</German>
+		<Italian>Taurida Governorate</Italian>
+		<Spanish>Taurida Governorate</Spanish>
 	</TEXT>
 </Civ4GameText>

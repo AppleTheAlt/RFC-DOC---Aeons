@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Minoa -->
+<Civ4GameText xmlns="http://www.firaxis.com">
+	<TEXT>
+		<Tag>TXT_KEY_CIV_TUNIS_DESC</Tag>
+		<English>The Tunisians</English>
+		<French>The Tunisians</French>
+		<German>The Tunisians</German>
+		<Italian>The Tunisians</Italian>
+		<Spanish>The Tunisians</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_TUNIS_PEOPLES</Tag>
+		<English>Tunisian Peoples</English>
+		<French>Tunisian Peoples</French>
+		<German>Tunisian Peoples</German>
+		<Italian>Tunisian Peoples</Italian>
+		<Spanish>Tunisian Peoples</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_TUNIS_ADJECTIVE</Tag>
+		<English>Tunisian</English>
+		<French>Tunisian</French>
+		<German>Tunisian</German>
+		<Italian>Tunisian</Italian>
+		<Spanish>Tunisian</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_TUNIS_SHORT_DESC</Tag>
+		<English>Tunis</English>
+		<French>Tunis</French>
+		<German>Tunis</German>
+		<Italian>Tunis</Italian>
+		<Spanish>Tunis</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_TUNIS_DEFAULT</Tag>
+		<English>%s2 Sultanate</English>
+		<French>%s2 Sultanate</French>
+		<German>%s2 Sultanate</German>
+		<Italian>%s2 Sultanate</Italian>
+		<Spanish>%s2 Sultanate</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_TUNIS_EMPIRE</Tag>
+		<English>%s2 Empire</English>
+		<French>%s2 Empire</French>
+		<German>%s2 Empire</German>
+		<Italian>%s2 Empire</Italian>
+		<Spanish>%s2 Empire</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_TUNIS_CALIPHATE</Tag>
+		<English>%s2 Caliphate</English>
+		<French>%s2 Caliphate</French>
+		<German>%s2 Caliphate</German>
+		<Italian>%s2 Caliphate</Italian>
+		<Spanish>%s2 Caliphate</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_TUNIS_KINGDOM</Tag>
+		<English>%s2 Kingdom</English>
+		<French>%s2 Kingdom</French>
+		<German>%s2 Kingdom</German>
+		<Italian>%s2 Kingdom</Italian>
+		<Spanish>%s2 Kingdom</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_FRENCH_TUNISIA</Tag>
+		<English>French Protectorate of Tunisia</English>
+		<French>French Protectorate of Tunisia</French>
+		<German>French Protectorate of Tunisia</German>
+		<Italian>French Protectorate of Tunisia</Italian>
+		<Spanish>French Protectorate of Tunisia</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_OTTOMAN_TUNIS</Tag>
+		<English>Eyalet of Tunis</English>
+		<French>Eyalet of Tunis</French>
+		<German>Eyalet of Tunis</German>
+		<Italian>Eyalet of Tunis</Italian>
+		<Spanish>Eyalet of Tunis</Spanish>
+	</TEXT>
+
+	<TEXT>
+		<Tag>TXT_KEY_CIV_TUNIS_REPUBLIC</Tag>
+		<English>Republic of %s1</English>
+		<English>Republic of %s1</English>
+		<French>Republic of %s1</French>
+		<German>Republic of %s1</German>
+		<Italian>Republic of %s1</Italian>
+		<Spanish>Republic of %s1</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_TUNIS_COMMUNIST</Tag>
+		<English>Socialist %s1</English>
+		<English>Socialist %s1</English>
+		<French>Socialist %s1</French>
+		<German>Socialist %s1</German>
+		<Italian>Socialist %s1</Italian>
+		<Spanish>Socialist %s1</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_TUNIS_FASCIST</Tag>
+		<English>National %s2 Republic</English>
+		<English>National %s2 Republic</English>
+		<French>National %s2 Republic</French>
+		<German>National %s2 Republic</German>
+		<Italian>National %s2 Republic</Italian>
+		<Spanish>National %s2 Republic</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_TUNIS_KINGDOM</Tag>
+		<English>%s2 Kingdom</English>
+		<English>%s2 Kingdom</English>
+		<French>%s2 Kingdom</French>
+		<German>%s2 Kingdom</German>
+		<Italian>%s2 Kingdom</Italian>
+		<Spanish>%s2 Kingdom</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_TUNIS_HAFSIDS</Tag>
+		<English>Hafsids</English>
+		<English>Hafsids</English>
+		<French>Hafsids</French>
+		<German>Hafsids</German>
+		<Italian>Hafsids</Italian>
+		<Spanish>Hafsids</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_TUNIS_HAFSID</Tag>
+		<English>Hafsid</English>
+		<English>Hafsid</English>
+		<French>Hafsid</French>
+		<German>Hafsid</German>
+		<Italian>Hafsid</Italian>
+		<Spanish>Hafsid</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_TUNIS_TUNISIA</Tag>
+		<English>Tunisia</English>
+		<English>Tunisia</English>
+		<French>Tunisia</French>
+		<German>Tunisia</German>
+		<Italian>Tunisia</Italian>
+		<Spanish>Tunisia</Spanish>
+	</TEXT>
+
+</Civ4GameText>

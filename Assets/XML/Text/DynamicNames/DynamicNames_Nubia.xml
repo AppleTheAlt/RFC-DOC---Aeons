@@ -42,6 +42,62 @@
 		<Spanish>Kingdom of %s1</Spanish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_CIV_SUDAN_DEFAULT</Tag>
+		<English>State of %s1</English>
+		<French>State of %s1</French>
+		<German>State of %s1</German>
+		<Italian>State of %s1</Italian>
+		<Spanish>State of %s1</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_NUBIA_KUSH</Tag>
+		<English>Kush</English>
+		<French>Kush</French>
+		<German>Kush</German>
+		<Italian>Kush</Italian>
+		<Spanish>Kush</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_NUBIA_MAKURIA</Tag>
+		<English>Makuria</English>
+		<French>Makuria</French>
+		<German>Makuria</German>
+		<Italian>Makuria</Italian>
+		<Spanish>Makuria</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_NUBIA_SOUTH_SUDAN</Tag>
+		<English>South Sudan</English>
+		<French>South Sudan</French>
+		<German>South Sudan</German>
+		<Italian>South Sudan</Italian>
+		<Spanish>South Sudan</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_NUBIA_SOUTH_SUDANESE</Tag>
+		<English>South Sudanese</English>
+		<French>South Sudanese</French>
+		<German>South Sudanese</German>
+		<Italian>South Sudanese</Italian>
+		<Spanish>South Sudanese</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_NUBIA_KUSHITE</Tag>
+		<English>Kushite</English>
+		<French>Kushite</French>
+		<German>Kushite</German>
+		<Italian>Kushite</Italian>
+		<Spanish>Kushite</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_NUBIA_MAKURIAN</Tag>
+		<English>Makurian</English>
+		<French>Makurian</French>
+		<German>Makurian</German>
+		<Italian>Makurian</Italian>
+		<Spanish>Makurian</Spanish>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_CIV_NUBIA_REPUBLIC</Tag>
 		<English>Republic of the Sudan</English>
 		<French>Republic of the Sudan</French>
@@ -64,14 +120,6 @@
 		<German>Sudanese State</German>
 		<Italian>Sudanese State</Italian>
 		<Spanish>Sudanese State</Spanish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CIV_NUBIA_KUSH</Tag>
-		<English>Kush</English>
-		<French>Kush</French>
-		<German>Kush</German>
-		<Italian>Kush</Italian>
-		<Spanish>Kush</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIV_NUBIA_KUSHITE</Tag>

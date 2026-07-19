@@ -90,11 +90,51 @@
 		<Spanish>Tanzanian</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_CIV_SWAHILI_ZANZIBAR</Tag>
-		<English>Zanzibar</English>
-		<French>Zanzibar</French>
-		<German>Zanzibar</German>
-		<Italian>Zanzibar</Italian>
-		<Spanish>Zanzibar</Spanish>
+		<Tag>TXT_KEY_CIV_KILWA_SHORT_DESC</Tag>
+		<English>Kilwa</English>
+		<French>Kilwa</French>
+		<German>Kilwa</German>
+		<Italian>Kilwa</Italian>
+		<Spanish>Kilwa</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_KILWA_ADJECTIVE</Tag>
+		<English>Kilwan</English>
+		<French>Kilwan</French>
+		<German>Kilwan</German>
+		<Italian>Kilwan</Italian>
+		<Spanish>Kilwan</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_TANZANIA_SHORT_DESC</Tag>
+		<English>Tanzania</English>
+		<French>Tanzania</French>
+		<German>Tanzania</German>
+		<Italian>Tanzania</Italian>
+		<Spanish>Tanzania</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_TANZANIA_ADJECTIVE</Tag>
+		<English>Tanzanian</English>
+		<French>Tanzanian</French>
+		<German>Tanzanian</German>
+		<Italian>Tanzanian</Italian>
+		<Spanish>Tanzanian</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_TANZANIA_DEFAULT</Tag>
+		<English>Kingdom of %s1</English>
+		<French>Kingdom of %s1</French>
+		<German>Kingdom of %s1</German>
+		<Italian>Kingdom of %s1</Italian>
+		<Spanish>Kingdom of %s1</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_EAST_AFRICA_FEDERATION</Tag>
+		<English>East African Federation</English>
+		<French>East African Federation</French>
+		<German>East African Federation</German>
+		<Italian>East African Federation</Italian>
+		<Spanish>East African Federation</Spanish>
 	</TEXT>
 </Civ4GameText>

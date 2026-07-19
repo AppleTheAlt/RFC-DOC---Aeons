@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Minoa -->
+<Civ4GameText xmlns="http://www.firaxis.com">
+	<TEXT>
+		<Tag>TXT_KEY_CIV_ZIMBABWE_DESC</Tag>
+		<English>The Shona</English>
+		<French>The Shona</French>
+		<German>The Shona</German>
+		<Italian>The Shona</Italian>
+		<Spanish>The Shona</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_ROZWI_DESC</Tag>
+		<English>The Shona</English>
+		<French>The Shona</French>
+		<German>The Shona</German>
+		<Italian>The Shona</Italian>
+		<Spanish>The Shona</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_ZIMBABWE_PEOPLES</Tag>
+		<English>Shona Peoples</English>
+		<French>Shona Peoples</French>
+		<German>Shona Peoples</German>
+		<Italian>Shona Peoples</Italian>
+		<Spanish>Shona Peoples</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_ZIMBABWE_ADJECTIVE</Tag>
+		<English>Shona</English>
+		<French>Shona</French>
+		<German>Shona</German>
+		<Italian>Shona</Italian>
+		<Spanish>Shona</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_ZIMBABWE_MODERN_ADJECTIVE</Tag>
+		<English>Zimbabwean</English>
+		<French>Zimbabwean</French>
+		<German>Zimbabwean</German>
+		<Italian>Zimbabwean</Italian>
+		<Spanish>Zimbabwean</Spanish>
+	</TEXT> 
+	<TEXT>
+		<Tag>TXT_KEY_CIV_ZIMBABWE_SHORT_DESC</Tag>
+		<English>Zimbabwe</English>
+		<French>Zimbabwe</French>
+		<German>Zimbabwe</German>
+		<Italian>Zimbabwe</Italian>
+		<Spanish>Zimbabwe</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_MUTAPA_SHORT_DESC</Tag>
+		<English>Mutapa</English>
+		<French>Mutapa</French>
+		<German>Mutapa</German>
+		<Italian>Mutapa</Italian>
+		<Spanish>Mutapa</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_MUTAPA_ADJECTIVE</Tag>
+		<English>Mutapan</English>
+		<French>Mutapan</French>
+		<German>Mutapan</German>
+		<Italian>Mutapan</Italian>
+		<Spanish>Mutapan</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_ROZWI_SHORT_DESC</Tag>
+		<English>Rozwiland</English>
+		<French>Rozwiland</French>
+		<German>Rozwiland</German>
+		<Italian>Rozwiland</Italian>
+		<Spanish>Rozwiland</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_ROZWI_ADJECTIVE</Tag>
+		<English>Rozwi</English>
+		<French>Rozwi</French>
+		<German>Rozwi</German>
+		<Italian>Rozwi</Italian>
+		<Spanish>Rozwi</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_RHODESIA_SHORT_DESC</Tag>
+		<English>Rhodesia</English>
+		<French>Rhodesia</French>
+		<German>Rhodesia</German>
+		<Italian>Rhodesia</Italian>
+		<Spanish>Rhodesia</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_RHODESIA_ADJECTIVE</Tag>
+		<English>Rhodesian</English>
+		<French>Rhodesian</French>
+		<German>Rhodesian</German>
+		<Italian>Rhodesian</Italian>
+		<Spanish>Rhodesian</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_ZIMBABWE_DEFAULT</Tag>
+		<English>Kingdom of %s1</English>
+		<French>Kingdom of %s1</French>
+		<German>Kingdom of %s1</German>
+		<Italian>Kingdom of %s1</Italian>
+		<Spanish>Kingdom of %s1</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_MUTAPA_DEFAULT</Tag>
+		<English>%s1 Empire</English>
+		<French>%s1 Empire</French>
+		<German>%s1 Empire</German>
+		<Italian>%s1 Empire</Italian>
+		<Spanish>%s1 Empire</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_ROZWILAND_DEFAULT</Tag>
+		<English>%s2 Empire</English>
+		<French>%s2 Empire</French>
+		<German>%s2 Empire</German>
+		<Italian>%s2 Empire</Italian>
+		<Spanish>%s2 Empire</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_RHODESIA_DEFAULT</Tag>
+		<English>%s2 Commonwealth</English>
+		<French>%s2 Commonwealth</French>
+		<German>%s2 Commonwealth</German>
+		<Italian>%s2 Commonwealth</Italian>
+		<Spanish>%s2 Commonwealth</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_ZIMBABWE_REPUBLIC</Tag>
+		<English>Republic of %s1</English>
+		<English>Republic of %s1</English>
+		<French>Republic of %s1</French>
+		<German>Republic of %s1</German>
+		<Italian>Republic of %s1</Italian>
+		<Spanish>Republic of %s1</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_ZIMBABWE_COMMUNIST</Tag>
+		<English>%s1 African National Union</English>
+		<English>%s1 African National Union</English>
+		<French>%s1 African National Union</French>
+		<German>%s1 African National Union</German>
+		<Italian>%s1 African National Union</Italian>
+		<Spanish>%s1 African National Union</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_ZIMBABWE_FASCIST</Tag>
+		<English>Military Occupation of %s1</English>
+		<English>Military Occupation of %s1</English>
+		<French>Military Occupation of %s1</French>
+		<German>Military Occupation of %s1</German>
+		<Italian>Military Occupation of %s1</Italian>
+		<Spanish>Military Occupation of %s1</Spanish>
+	</TEXT>
+</Civ4GameText>

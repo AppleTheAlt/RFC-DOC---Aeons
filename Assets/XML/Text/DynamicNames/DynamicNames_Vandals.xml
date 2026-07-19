@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Minoa -->
+<Civ4GameText xmlns="http://www.firaxis.com">
+	<TEXT>
+		<Tag>TXT_KEY_CIV_VANDALS_DESC</Tag>
+		<English>The Vandals</English>
+		<French>The Vandals</French>
+		<German>The Vandals</German>
+		<Italian>The Vandals</Italian>
+		<Spanish>The Vandals</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_VANDALS_PEOPLES</Tag>
+		<English>Vandal Peoples</English>
+		<French>Vandal Peoples</French>
+		<German>Vandal Peoples</German>
+		<Italian>Vandal Peoples</Italian>
+		<Spanish>Vandal Peoples</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_VANDALS_ADJECTIVE</Tag>
+		<English>Vandal</English>
+		<French>Vandal</French>
+		<German>Vandal</German>
+		<Italian>Vandal</Italian>
+		<Spanish>Vandal</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_VANDALS_SHORT_DESC</Tag>
+		<English>Vandals</English>
+		<French>Vandals</French>
+		<German>Vandals</German>
+		<Italian>Vandals</Italian>
+		<Spanish>Vandals</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_VANDALS_DEFAULT</Tag>
+		<English>%s2 Chiefdoms</English>
+		<French>%s2 Chiefdoms</French>
+		<German>%s2 Chiefdoms</German>
+		<Italian>%s2 Chiefdoms</Italian>
+		<Spanish>%s2 Chiefdoms</Spanish>
+	</TEXT>
+
+	<TEXT>
+		<Tag>TXT_KEY_CIV_VANDALS_EMPIRE</Tag>
+		<English>%s2 Empire</English>
+		<French>%s2 Empire</French>
+		<German>%s2 Empire</German>
+		<Italian>%s2 Empire</Italian>
+		<Spanish>%s2 Empire</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_VANDALS_REPUBLIC</Tag>
+		<English>Republic of the %s1</English>
+		<English>Republic of the %s1</English>
+		<French>Republic of the %s1</French>
+		<German>Republic of the %s1</German>
+		<Italian>Republic of the %s1</Italian>
+		<Spanish>Republic of the %s1</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_VANDALS_COMMUNIST</Tag>
+		<English>%s2 Peoples' Republic</English>
+		<English>%s2 Peoples' Republic</English>
+		<French>%s2 Peoples' Republic</French>
+		<German>%s2 Peoples' Republic</German>
+		<Italian>%s2 Peoples' Republic</Italian>
+		<Spanish>%s2 Peoples' Republic</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_VANDALS_FASCIST</Tag>
+		<English>National %s2 Republic</English>
+		<English>National %s2 Republic</English>
+		<French>National %s2 Republic</French>
+		<German>National %s2 Republic</German>
+		<Italian>National %s2 Republic</Italian>
+		<Spanish>National %s2 Republic</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_VANDALS_KINGDOM</Tag>
+		<English>%s2 Kingdom</English>
+		<English>%s2 Kingdom</English>
+		<French>%s2 Kingdom</French>
+		<German>%s2 Kingdom</German>
+		<Italian>%s2 Kingdom</Italian>
+		<Spanish>%s2 Kingdom</Spanish>
+	</TEXT>
+
+</Civ4GameText>

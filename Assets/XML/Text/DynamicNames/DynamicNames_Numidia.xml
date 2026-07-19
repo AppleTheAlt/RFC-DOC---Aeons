@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Minoa -->
+<Civ4GameText xmlns="http://www.firaxis.com">
+	<TEXT>
+		<Tag>TXT_KEY_CIV_NUMIDIA_DESC</Tag>
+		<English>The Numidians</English>
+		<French>The Numidians</French>
+		<German>The Numidians</German>
+		<Italian>The Numidians</Italian>
+		<Spanish>The Numidians</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_ALGERIA_DESC</Tag>
+		<English>The Algerians</English>
+		<French>The Algerians</French>
+		<German>The Algerians</German>
+		<Italian>The Algerians</Italian>
+		<Spanish>The Algerians</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_NUMIDIA_PEOPLES</Tag>
+		<English>Numidian Peoples</English>
+		<French>Numidian Peoples</French>
+		<German>Numidian Peoples</German>
+		<Italian>Numidian Peoples</Italian>
+		<Spanish>Numidian Peoples</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_NUMIDIA_ADJECTIVE</Tag>
+		<English>Numidian</English>
+		<French>Numidian</French>
+		<German>Numidian</German>
+		<Italian>Numidian</Italian>
+		<Spanish>Numidian</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_NUMIDIA_SHORT_DESC</Tag>
+		<English>Numidia</English>
+		<French>Numidia</French>
+		<German>Numidia</German>
+		<Italian>Numidia</Italian>
+		<Spanish>Numidia</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_ALGERIA_ADJECTIVE</Tag>
+		<English>Algerian</English>
+		<French>Algerian</French>
+		<German>Algerian</German>
+		<Italian>Algerian</Italian>
+		<Spanish>Algerian</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_ALGERIA_SHORT_DESC</Tag>
+		<English>Algeria</English>
+		<French>Algeria</French>
+		<German>Algeria</German>
+		<Italian>Algeria</Italian>
+		<Spanish>Algeria</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_NUMIDIA_DEFAULT</Tag>
+		<English>Kingdom of %s1</English>
+		<French>Kingdom of %s1</French>
+		<German>Kingdom of %s1</German>
+		<Italian>Kingdom of %s1</Italian>
+		<Spanish>Kingdom of %s1</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_ALGERIA_DEFAULT</Tag>
+		<English>Kingdom of %s1</English>
+		<French>Kingdom of %s1</French>
+		<German>Kingdom of %s1</German>
+		<Italian>Kingdom of %s1</Italian>
+		<Spanish>Kingdom of %s1</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_NUMIDIA_EMPIRE</Tag>
+		<English>%s2 Empire</English>
+		<French>%s2 Empire</French>
+		<German>%s2 Empire</German>
+		<Italian>%s2 Empire</Italian>
+		<Spanish>%s2 Empire</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_NUMIDIA_REPUBLIC</Tag>
+		<English>People's Democratic Republic of %s1</English>
+		<English>People's Democratic Republic of %s1</English>
+		<French>People's Democratic Republic of %s1</French>
+		<German>People's Democratic Republic of %s1</German>
+		<Italian>People's Democratic Republic of %s1</Italian>
+		<Spanish>People's Democratic Republic of %s1</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_NUMIDIA_COMMUNIST</Tag>
+		<English>%s2 Workers' Republic</English>
+		<English>%s2 Workers' Republic</English>
+		<French>%s2 Workers' Republic</French>
+		<German>%s2 Workers' Republic</German>
+		<Italian>%s2 Workers' Republic</Italian>
+		<Spanish>%s2 Workers' Republic</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_NUMIDIA_FASCIST</Tag>
+		<English>National %s2 Republic</English>
+		<English>National %s2 Republic</English>
+		<French>National %s2 Republic</French>
+		<German>National %s2 Republic</German>
+		<Italian>National %s2 Republic</Italian>
+		<Spanish>National %s2 Republic</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_NUMIDIA_MASSAESYLI</Tag>
+		<English>Massaesyli</English>
+		<English>Massaesyli</English>
+		<French>Massaesyli</French>
+		<German>Massaesyli</German>
+		<Italian>Massaesyli</Italian>
+		<Spanish>Massaesyli</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_NUMIDIA_MASSAESYLIAN</Tag>
+		<English>Massaesylian</English>
+		<English>Massaesylian</English>
+		<French>Massaesylian</French>
+		<German>Massaesylian</German>
+		<Italian>Massaesylian</Italian>
+		<Spanish>Massaesylian</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_NUMIDIA_ZAYYANID</Tag>
+		<English>Zayyanid</English>
+		<English>Zayyanid</English>
+		<French>Zayyanid</French>
+		<German>Zayyanid</German>
+		<Italian>Zayyanid</Italian>
+		<Spanish>Zayyanid</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_NUMIDIA_ZAYYANIDS</Tag>
+		<English>Zayyanids</English>
+		<English>Zayyanids</English>
+		<French>Zayyanids</French>
+		<German>Zayyanids</German>
+		<Italian>Zayyanids</Italian>
+		<Spanish>Zayyanids</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_NUMIDIA_ALGERIA</Tag>
+		<English>Algeria</English>
+		<English>Algeria</English>
+		<French>Algeria</French>
+		<German>Algeria</German>
+		<Italian>Algeria</Italian>
+		<Spanish>Algeria</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_NUMIDIA_ALGERIAN</Tag>
+		<English>Algerian</English>
+		<English>Algerian</English>
+		<French>Algerian</French>
+		<German>Algerian</German>
+		<Italian>Algerian</Italian>
+		<Spanish>Algerian</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_NUMIDIA_EMPIRE</Tag>
+		<English>%s2 Empire</English>
+		<English>%s2 Empire</English>
+		<French>%s2 Empire</French>
+		<German>%s2 Empire</German>
+		<Italian>%s2 Empire</Italian>
+		<Spanish>%s2 Empire</Spanish>
+	</TEXT>
+
+
+</Civ4GameText>

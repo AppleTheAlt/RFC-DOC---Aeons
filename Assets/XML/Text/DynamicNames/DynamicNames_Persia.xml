@@ -2,6 +2,14 @@
 <!-- Persia -->
 <Civ4GameText xmlns="http://www.firaxis.com">
 	<TEXT>
+		<Tag>TXT_KEY_CIV_PERSIAN_NAME_ASSYRIA</Tag>
+		<English>Athura</English>
+		<French>Athura</French>
+		<German>Athura</German>
+		<Italian>Athura</Italian>
+		<Spanish>Athura</Spanish>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_CIV_PERSIA_DESC</Tag>
 		<English>The Persians</English>
 		<French>
@@ -84,6 +92,42 @@
 		<German>Neo-Persian Empire</German>
 		<Italian>Neo-Persian Empire</Italian>
 		<Spanish>Neo-Persian Empire</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_PERSIA_MEDES</Tag>
+		<English>Medes</English>
+		<French>
+			<Text>m&#232;de:m&#232;de:m&#232;des:m&#232;des</Text>
+			<Gender>Male:Female:Male:Female</Gender>
+			<Plural>0:0:1:1</Plural>
+		</French>
+		<German>Medes</German>
+		<Italian>Medes</Italian>
+		<Spanish>Medes</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_PERSIA_SAFFARIDS</Tag>
+		<English>Saffarids</English>
+		<French>
+			<Text>Saffarids</Text>
+			<Gender>Male:Female:Male:Female</Gender>
+			<Plural>0:0:1:1</Plural>
+		</French>
+		<German>Saffarids</German>
+		<Italian>Saffarids</Italian>
+		<Spanish>Saffarids</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_PERSIA_SAFFARID</Tag>
+		<English>Saffarid</English>
+		<French>
+			<Text>Saffarid</Text>
+			<Gender>Male:Female:Male:Female</Gender>
+			<Plural>0:0:1:1</Plural>
+		</French>
+		<German>Saffarid</German>
+		<Italian>Saffarid</Italian>
+		<Spanish>Saffarid</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIV_PERSIA_MEDIAN</Tag>
@@ -412,14 +456,6 @@
 		<German>Sogdiana</German>
 		<Italian>Sogdiana</Italian>
 		<Spanish>Sogdiana</Spanish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CIV_PERSIAN_NAME_ASSYRIA</Tag>
-		<English>Athura</English>
-		<French>Athura</French>
-		<German>Athura</German>
-		<Italian>Athura</Italian>
-		<Spanish>Athura</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIV_IRAN_ADJECTIVE</Tag>

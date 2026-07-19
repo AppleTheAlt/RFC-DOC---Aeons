@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Minoa -->
+<Civ4GameText xmlns="http://www.firaxis.com">
+	<TEXT>
+		<Tag>TXT_KEY_CIV_YEMEN_DESC</Tag>
+		<English>The Yemenis</English>
+		<French>The Yemenis</French>
+		<German>The Yemenis</German>
+		<Italian>The Yemenis</Italian>
+		<Spanish>The Yemenis</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_YEMEN_PEOPLES</Tag>
+		<English>Yemeni Peoples</English>
+		<French>Yemeni Peoples</French>
+		<German>Yemeni Peoples</German>
+		<Italian>Yemeni Peoples</Italian>
+		<Spanish>Yemeni Peoples</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_YEMEN_ADJECTIVE</Tag>
+		<English>Yemeni</English>
+		<French>Yemeni</French>
+		<German>Yemeni</German>
+		<Italian>Yemeni</Italian>
+		<Spanish>Yemeni</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_YEMEN_SHORT_DESC</Tag>
+		<English>Yemen</English>
+		<French>Yemen</French>
+		<German>Yemen</German>
+		<Italian>Yemen</Italian>
+		<Spanish>Yemen</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_YEMEN_DEFAULT</Tag>
+		<English>Sultanate of %s1</English>
+		<French>Sultanate of %s1</French>
+		<German>Sultanate of %s1</German>
+		<Italian>Sultanate of %s1</Italian>
+		<Spanish>Sultanate of %s1</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_YEMEN_DYNASTIC_SULTAN</Tag>
+		<English>%s2 Sultanate</English>
+		<French>%s2 Sultanate</French>
+		<German>%s2 Sultanate</German>
+		<Italian>%s2 Sultanate</Italian>
+		<Spanish>%s2 Sultanate</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_YEMEN_EMPIRE</Tag>
+		<English>%s2 Empire</English>
+		<French>%s2 Empire</French>
+		<German>%s2 Empire</German>
+		<Italian>%s2 Empire</Italian>
+		<Spanish>%s2 Empire</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_YEMEN_CALIPHATE</Tag>
+		<English>%s2 Caliphate</English>
+		<French>%s2 Caliphate</French>
+		<German>%s2 Caliphate</German>
+		<Italian>%s2 Caliphate</Italian>
+		<Spanish>%s2 Caliphate</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_YEMEN_REPUBLIC</Tag>
+		<English>Republic of %s1</English>
+		<English>Republic of %s1</English>
+		<French>Republic of %s1</French>
+		<German>Republic of %s1</German>
+		<Italian>Republic of %s1</Italian>
+		<Spanish>Republic of %s1</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_YEMEN_COMMUNIST</Tag>
+		<English>Peoples' Democratic %s2 Republic</English>
+		<English>Peoples' Democratic %s2 Republic</English>
+		<French>Peoples' Democratic %s2 Republic</French>
+		<German>Peoples' Democratic %s2 Republic</German>
+		<Italian>Peoples' Democratic %s2 Republic</Italian>
+		<Spanish>Peoples' Democratic %s2 Republic</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_YEMEN_FASCIST</Tag>
+		<English>%s1 Arab Republic</English>
+		<English>%s1 Arab Republic</English>
+		<French>%s1 Arab Republic</French>
+		<German>%s1 Arab Republic</German>
+		<Italian>%s1 Arab Republic</Italian>
+		<Spanish>%s1 Arab Republic</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_YEMEN_KINGDOM</Tag>
+		<English>%s2 Kingdom</English>
+		<English>%s2 Kingdom</English>
+		<French>%s2 Kingdom</French>
+		<German>%s2 Kingdom</German>
+		<Italian>%s2 Kingdom</Italian>
+		<Spanish>%s2 Kingdom</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_YEMEN_SULAYHIDS</Tag>
+		<English>Sulayhids</English>
+		<French>Sulayhids</French>
+		<German>Sulayhids</German>
+		<Italian>Sulayhids</Italian>
+		<Spanish>Sulayhids</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_YEMEN_SULAYHID</Tag>
+		<English>Sulayhid</English>
+		<French>Sulayhid</French>
+		<German>Sulayhid</German>
+		<Italian>Sulayhid</Italian>
+		<Spanish>Sulayhid</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_YEMEN_ZIYADIDS</Tag>
+		<English>Ziyadids</English>
+		<French>Ziyadids</French>
+		<German>Ziyadids</German>
+		<Italian>Ziyadids</Italian>
+		<Spanish>Ziyadids</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_YEMEN_ZIYADID</Tag>
+		<English>Ziyadid</English>
+		<French>Ziyadid</French>
+		<German>Ziyadid</German>
+		<Italian>Ziyadid</Italian>
+		<Spanish>Ziyadid</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_YEMEN_ZURAYIDS</Tag>
+		<English>Zurayids</English>
+		<French>Zurayids</French>
+		<German>Zurayids</German>
+		<Italian>Zurayids</Italian>
+		<Spanish>Zurayids</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_YEMEN_ZURAYID</Tag>
+		<English>Zurayid</English>
+		<French>Zurayid</French>
+		<German>Zurayid</German>
+		<Italian>Zurayid</Italian>
+		<Spanish>Zurayid</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_YEMEN_RASULIDS</Tag>
+		<English>Rasulids</English>
+		<French>Rasulids</French>
+		<German>Rasulids</German>
+		<Italian>Rasulids</Italian>
+		<Spanish>Rasulids</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_YEMEN_RASULID</Tag>
+		<English>Rasulid</English>
+		<French>Rasulid</French>
+		<German>Rasulid</German>
+		<Italian>Rasulid</Italian>
+		<Spanish>Rasulid</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_YEMEN_TAHIRIDS</Tag>
+		<English>Tahirids</English>
+		<French>Tahirids</French>
+		<German>Tahirids</German>
+		<Italian>Tahirids</Italian>
+		<Spanish>Tahirids</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_YEMEN_TAHIRID</Tag>
+		<English>Tahirid</English>
+		<French>Tahirid</French>
+		<German>Tahirid</German>
+		<Italian>Tahirid</Italian>
+		<Spanish>Tahirid</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_YEMEN_QASIMIDS</Tag>
+		<English>Qasimids</English>
+		<French>Qasimids</French>
+		<German>Qasimids</German>
+		<Italian>Qasimids</Italian>
+		<Spanish>Qasimids</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_YEMEN_QASIMID</Tag>
+		<English>Qasimid</English>
+		<French>Qasimid</French>
+		<German>Qasimid</German>
+		<Italian>Qasimid</Italian>
+		<Spanish>Qasimid</Spanish>
+	</TEXT>
+
+</Civ4GameText>

@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Minoa -->
+<Civ4GameText xmlns="http://www.firaxis.com">
+	<TEXT>
+		<Tag>TXT_KEY_CIV_SUMERIA_DESC</Tag>
+		<English>The Sumerians</English>
+		<French>The Sumerians</French>
+		<German>The Sumerians</German>
+		<Italian>The Sumerians</Italian>
+		<Spanish>The Sumerians</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_SUMERIA_PEOPLES</Tag>
+		<English>Sumerian Peoples</English>
+		<French>Sumerian Peoples</French>
+		<German>Sumerian Peoples</German>
+		<Italian>Sumerian Peoples</Italian>
+		<Spanish>Sumerian Peoples</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_SUMERIA_ADJECTIVE</Tag>
+		<English>Sumerian</English>
+		<French>Sumerian</French>
+		<German>Sumerian</German>
+		<Italian>Sumerian</Italian>
+		<Spanish>Sumerian</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_SUMERIA_SHORT_DESC</Tag>
+		<English>Sumeria</English>
+		<French>Sumeria</French>
+		<German>Sumeria</German>
+		<Italian>Sumeria</Italian>
+		<Spanish>Sumeria</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_SUMERIA_DEFAULT</Tag>
+		<English>%s2 City-States</English>
+		<French>%s2 City-States</French>
+		<German>%s2 City-States</German>
+		<Italian>%s2 City-States</Italian>
+		<Spanish>%s2 City-States</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_SUMERIA_AKKAD</Tag>
+		<English>Akkad</English>
+		<French>Akkad</French>
+		<German>Akkad</German>
+		<Italian>Akkad</Italian>
+		<Spanish>Akkad</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_SUMERIA_AKKADIAN</Tag>
+		<English>Akkadian</English>
+		<French>Akkadian</French>
+		<German>Akkadian</German>
+		<Italian>Akkadian</Italian>
+		<Spanish>Akkadian</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_SUMERIA_SEALAND</Tag>
+		<English>Sealand</English>
+		<French>Sealand</French>
+		<German>Sealand</German>
+		<Italian>Sealand</Italian>
+		<Spanish>Sealand</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_SUMERIA_SEALANDER</Tag>
+		<English>Sealander</English>
+		<French>Sealander</French>
+		<German>Sealander</German>
+		<Italian>Sealander</Italian>
+		<Spanish>Sealander</Spanish>
+	</TEXT>
+
+
+	<TEXT>
+		<Tag>TXT_KEY_CIV_SUMERIA_EMPIRE</Tag>
+		<English>%s2 Empire</English>
+		<French>%s2 Empire</French>
+		<German>%s2 Empire</German>
+		<Italian>%s2 Empire</Italian>
+		<Spanish>%s2 Empire</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_SUMERIA_NEOEMPIRE</Tag>
+		<English>Neo-%s2 Empire</English>
+		<French>Neo-%s2 Empire</French>
+		<German>Neo-%s2 Empire</German>
+		<Italian>Neo-%s2 Empire</Italian>
+		<Spanish>Neo-%s2 Empire</Spanish>
+	</TEXT>
+
+	<TEXT>
+		<Tag>TXT_KEY_CIV_SUMERIA_REPUBLIC</Tag>
+		<English>Republic of %s1</English>
+		<English>Republic of %s1</English>
+		<French>Republic of %s1</French>
+		<German>Republic of %s1</German>
+		<Italian>Republic of %s1</Italian>
+		<Spanish>Republic of %s1</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_SUMERIA_COMMUNIST</Tag>
+		<English>Socialist Republic of %s1</English>
+		<English>Socialist Republic of %s1</English>
+		<French>Socialist Republic of %s1</French>
+		<German>Socialist Republic of %s1</German>
+		<Italian>Socialist Republic of %s1</Italian>
+		<Spanish>Socialist Republic of %s1</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_SUMERIA_FASCIST</Tag>
+		<English>Supreme State of %s1</English>
+		<English>Supreme State of %s1</English>
+		<French>Supreme State of %s1</French>
+		<German>Supreme State of %s1</German>
+		<Italian>Supreme State of %s1</Italian>
+		<Spanish>Supreme State of %s1</Spanish>
+	</TEXT>
+</Civ4GameText>

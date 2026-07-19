@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Minoa -->
+<Civ4GameText xmlns="http://www.firaxis.com">
+	<TEXT>
+		<Tag>TXT_KEY_CIV_SOUTH_AFRICA_DESC</Tag>
+		<English>The South Africans</English>
+		<French>The South Africans</French>
+		<German>The South Africans</German>
+		<Italian>The South Africans</Italian>
+		<Spanish>The South Africans</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_SOUTH_AFRICA_PEOPLES</Tag>
+		<English>South African Peoples</English>
+		<French>South African Peoples</French>
+		<German>South African Peoples</German>
+		<Italian>South African Peoples</Italian>
+		<Spanish>South African Peoples</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_SOUTH_AFRICA_ADJECTIVE</Tag>
+		<English>South African</English>
+		<French>South African</French>
+		<German>South African</German>
+		<Italian>South African</Italian>
+		<Spanish>South African</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_SOUTH_AFRICA_SHORT_DESC</Tag>
+		<English>South Africa</English>
+		<French>South Africa</French>
+		<German>South Africa</German>
+		<Italian>South Africa</Italian>
+		<Spanish>South Africa</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_SOUTH_AFRICA_DEFAULT</Tag>
+		<English>Kingdom of %s1</English>
+		<French>Kingdom of %s1</French>
+		<German>Kingdom of %s1</German>
+		<Italian>Kingdom of %s1</Italian>
+		<Spanish>Kingdom of %s1</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_SOUTH_AFRICA_COLONY</Tag>
+		<English>%s2 Colony</English>
+		<French>%s2 Colony</French>
+		<German>%s2 Colony</German>
+		<Italian>%s2 Colony</Italian>
+		<Spanish>%s2 Colony</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_SOUTH_AFRICA_UNION_OF</Tag>
+		<English>Union of %s1</English>
+		<French>Union of %s1</French>
+		<German>Union of %s1</German>
+		<Italian>Union of %s1</Italian>
+		<Spanish>Union of %s1</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_SOUTH_AFRICA_CAPE</Tag>
+		<English>Cape</English>
+		<French>Cape</French>
+		<German>Cape</German>
+		<Italian>Cape</Italian>
+		<Spanish>Cape</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_SOUTH_AFRICA_EMPIRE</Tag>
+		<English>Crown Colony of Africa</English>
+		<French>Crown Colony of Africa</French>
+		<German>Crown Colony of Africa</German>
+		<Italian>Crown Colony of Africa</Italian>
+		<Spanish>Crown Colony of Africa</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_SOUTH_AFRICA_REPUBLIC</Tag>
+		<English>Republic of %s1</English>
+		<English>Republic of %s1</English>
+		<French>Republic of %s1</French>
+		<German>Republic of %s1</German>
+		<Italian>Republic of %s1</Italian>
+		<Spanish>Republic of %s1</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_SOUTH_AFRICA_COMMUNIST</Tag>
+		<English>%s2 Union</English>
+		<English>%s2 Union</English>
+		<French>%s2 Union</French>
+		<German>%s2 Union</German>
+		<Italian>%s2 Union</Italian>
+		<Spanish>%s2 Union</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_SOUTH_AFRICA_FASCIST</Tag>
+		<English>National Republic of %s1</English>
+		<English>National Republic of %s1</English>
+		<French>National Republic of %s1</French>
+		<German>National Republic of %s1</German>
+		<Italian>National Republic of %s1</Italian>
+		<Spanish>National Republic of %s1</Spanish>
+	</TEXT>
+</Civ4GameText>

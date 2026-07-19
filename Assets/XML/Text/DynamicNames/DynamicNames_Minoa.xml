@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Minoa -->
+<Civ4GameText xmlns="http://www.firaxis.com">
+	<TEXT>
+		<Tag>TXT_KEY_CIV_MINOA_DESC</Tag>
+		<English>The Minoans</English>
+		<French>The Minoans</French>
+		<German>The Minoans</German>
+		<Italian>The Minoans</Italian>
+		<Spanish>The Minoans</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_MINOA_PEOPLES</Tag>
+		<English>Minoan Peoples</English>
+		<French>Minoan Peoples</French>
+		<German>Minoan Peoples</German>
+		<Italian>Minoan Peoples</Italian>
+		<Spanish>Minoan Peoples</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_MINOA_ADJECTIVE</Tag>
+		<English>Minoan</English>
+		<French>Minoan</French>
+		<German>Minoan</German>
+		<Italian>Minoan</Italian>
+		<Spanish>Minoan</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_MINOA_SHORT_DESC</Tag>
+		<English>Minoa</English>
+		<French>Minoa</French>
+		<German>Minoa</German>
+		<Italian>Minoa</Italian>
+		<Spanish>Minoa</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_MINOA_DEFAULT</Tag>
+		<English>Kingdom of %s1</English>
+		<French>Kingdom of %s1</French>
+		<German>Kingdom of %s1</German>
+		<Italian>Kingdom of %s1</Italian>
+		<Spanish>Kingdom of %s1</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_MINOA_CRETE</Tag>
+		<English>Crete</English>
+		<French>Crete</French>
+		<German>Crete</German>
+		<Italian>Crete</Italian>
+		<Spanish>Crete</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_MINOA_CRETAN_DESC</Tag>
+		<English>Cretan</English>
+		<French>Cretan</French>
+		<German>Cretan</German>
+		<Italian>Cretan</Italian>
+		<Spanish>Cretan</Spanish>
+	</TEXT>
+
+	<TEXT>
+		<Tag>TXT_KEY_CIV_MINOA_DORIC_EMPIRE</Tag>
+		<English>Doric Empire</English>
+		<French>Doric Empire</French>
+		<German>Doric Empire</German>
+		<Italian>Doric Empire</Italian>
+		<Spanish>Doric Empire</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_MINOA_REPUBLIC</Tag>
+		<English>Republic of %s1</English>
+		<English>Republic of %s1</English>
+		<French>Republic of %s1</French>
+		<German>Republic of %s1</German>
+		<Italian>Republic of %s1</Italian>
+		<Spanish>Republic of %s1</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_MINOA_COMMUNIST</Tag>
+		<English>Socialist Republic of Crete</English>
+		<English>Socialist Republic of Crete</English>
+		<French>Socialist Republic of Crete</French>
+		<German>Socialist Republic of Crete</German>
+		<Italian>Socialist Republic of Crete</Italian>
+		<Spanish>Socialist Republic of Crete</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_MINOA_FASCIST</Tag>
+		<English>National Republic of Greater Crete</English>
+		<English>National Republic of Greater Crete</English>
+		<French>National Republic of Greater Crete</French>
+		<German>National Republic of Greater Crete</German>
+		<Italian>National Republic of Greater Crete</Italian>
+		<Spanish>National Republic of Greater Crete</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_MINOA_CITY_STATES</Tag>
+		<English>City States of %s1</English>
+		<French>City States of %s1</French>
+		<German>City States of %s1</German>
+		<Italian>City States of %s1</Italian>
+		<Spanish>City States of %s1</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_MINOA_DESPOTATE</Tag>
+		<English>Despotate of %s1</English>
+		<French>Despotate of %s1</French>
+		<German>Despotate of %s1</German>
+		<Italian>Despotate of %s1</Italian>
+		<Spanish>Despotate of %s1</Spanish>
+	</TEXT>
+
+
+
+
+
+
+	<TEXT>
+		<Tag>TXT_KEY_CIV_EGYPTIAN_MINOA</Tag>
+		<English>Egyptian tributary of Crete</English>
+		<French>Egyptian tributary of Crete</French>
+		<German>Egyptian tributary of Crete</German>
+		<Italian>Egyptian tributary of Crete</Italian>
+		<Spanish>Egyptian tributary of Crete</Spanish>
+	</TEXT>
+	
+
+</Civ4GameText>

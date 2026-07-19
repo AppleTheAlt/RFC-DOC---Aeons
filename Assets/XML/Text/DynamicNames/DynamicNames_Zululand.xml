@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Minoa -->
+<Civ4GameText xmlns="http://www.firaxis.com">
+	<TEXT>
+		<Tag>TXT_KEY_CIV_ZULU_DESC</Tag>
+		<English>The Zulus</English>
+		<French>The Zulus</French>
+		<German>The Zulus</German>
+		<Italian>The Zulus</Italian>
+		<Spanish>The Zulus</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_ZULULAND_PEOPLES</Tag>
+		<English>Mtetwa Peoples</English>
+		<French>Mtetwa Peoples</French>
+		<German>Mtetwa Peoples</German>
+		<Italian>Mtetwa Peoples</Italian>
+		<Spanish>Mtetwa Peoples</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_ZULULAND_ADJECTIVE</Tag>
+		<English>Zulu</English>
+		<French>Zulu</French>
+		<German>Zulu</German>
+		<Italian>Zulu</Italian>
+		<Spanish>Zulu</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_ZULU_SHORT_DESC</Tag>
+		<English>Zululand</English>
+		<French>Zululand</French>
+		<German>Zululand</German>
+		<Italian>Zululand</Italian>
+		<Spanish>Zululand</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_ZULULAND_DEFAULT</Tag>
+		<English>%s2 Kingdom</English>
+		<French>%s2 Kingdom</French>
+		<German>%s2 Kingdom</German>
+		<Italian>%s2 Kingdom</Italian>
+		<Spanish>%s2 Kingdom</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_ZULU_MTETWA</Tag>
+		<English>Mtetwa Paramountcy</English>
+		<French>Mtetwa Paramountcy</French>
+		<German>Mtetwa Paramountcy</German>
+		<Italian>Mtetwa Paramountcy</Italian>
+		<Spanish>Mtetwa Paramountcy</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_ZULU_EMPIRE</Tag>
+		<English>%s2 Empire</English>
+		<French>%s2 Empire</French>
+		<German>%s2 Empire</German>
+		<Italian>%s2 Empire</Italian>
+		<Spanish>%s2 Empire</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_ZULULAND_REPUBLIC</Tag>
+		<English>United %s2 Republic</English>
+		<English>United %s2 Republic</English>
+		<French>United %s2 Republic</French>
+		<German>United %s2 Republic</German>
+		<Italian>United %s2 Republic</Italian>
+		<Spanish>United %s2 Republic</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_ZULULAND_COMMUNIST</Tag>
+		<English>%s2 Workers' Kingdom</English>
+		<English>%s2 Workers' Kingdom</English>
+		<French>%s2 Workers' Kingdom</French>
+		<German>%s2 Workers' Kingdom</German>
+		<Italian>%s2 Workers' Kingdom</Italian>
+		<Spanish>%s2 Workers' Kingdom</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_ZULULAND_FASCIST</Tag>
+		<English>Paramount State of South Africa</English>
+		<English>Paramount State of South Africa</English>
+		<French>Paramount State of South Africa</French>
+		<German>Paramount State of South Africa</German>
+		<Italian>Paramount State of South Africa</Italian>
+		<Spanish>Paramount State of South Africa</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_ENGLISH_ZULU</Tag>
+		<English>KwaZulu Bantustan</English>
+		<English>KwaZulu Bantustan</English>
+		<French>KwaZulu Bantustan</French>
+		<German>KwaZulu Bantustan</German>
+		<Italian>KwaZulu Bantustan</Italian>
+		<Spanish>KwaZulu Bantustan</Spanish>
+	</TEXT>
+</Civ4GameText>

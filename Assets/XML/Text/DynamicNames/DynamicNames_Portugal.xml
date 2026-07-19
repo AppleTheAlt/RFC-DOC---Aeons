@@ -154,6 +154,14 @@
 		<Spanish>Portugal and the Algarves</Spanish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_CIV_PORTUGUESE_MOORS</Tag>
+		<English>African Algarve</English>
+		<French>African Algarve</French>
+		<German>African Algarve</German>
+		<Italian>African Algarve</Italian>
+		<Spanish>African Algarve</Spanish>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_CIV_PORTUGUESE_INDIA</Tag>
 		<English>Viceroyalty of %s2 %s1</English>
 		<French>
@@ -176,14 +184,6 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</Spanish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CIV_PORTUGUESE_MOORS</Tag>
-		<English>African Algarve</English>
-		<French>African Algarve</French>
-		<German>African Algarve</German>
-		<Italian>African Algarve</Italian>
-		<Spanish>African Algarve</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIV_PORTUGUESE_JAVA</Tag>
@@ -221,7 +221,7 @@
 		<Italian>%s2 Gold Coast</Italian>
 		<Spanish>%s2 Gold Coast</Spanish>
 	</TEXT>
-	<TEXT>
+		<TEXT>
 		<Tag>TXT_KEY_CIV_PORTUGUESE_SWAHILI</Tag>
 		<English>%s2 East Africa</English>
 		<French>

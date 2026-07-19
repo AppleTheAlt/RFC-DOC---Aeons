@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Minoa -->
+<Civ4GameText xmlns="http://www.firaxis.com">
+	<TEXT>
+		<Tag>TXT_KEY_CIV_SAMANIDS_DESC</Tag>
+		<English>The Samanids</English>
+		<French>The Samanids</French>
+		<German>The Samanids</German>
+		<Italian>The Samanids</Italian>
+		<Spanish>The Samanids</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_SAMANIDS_PEOPLES</Tag>
+		<English>Transoxian Peoples</English>
+		<French>Transoxian Peoples</French>
+		<German>Transoxian Peoples</German>
+		<Italian>Transoxian Peoples</Italian>
+		<Spanish>Transoxian Peoples</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_SAMANIDS_ADJECTIVE</Tag>
+		<English>Samanid</English>
+		<French>Samanid</French>
+		<German>Samanid</German>
+		<Italian>Samanid</Italian>
+		<Spanish>Samanid</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_SAMANIDS_SHORT_DESC</Tag>
+		<English>Samanids</English>
+		<French>Samanids</French>
+		<German>Samanids</German>
+		<Italian>Samanids</Italian>
+		<Spanish>Samanids</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_SAMANIDS_DEFAULT</Tag>
+		<English>%s2 Emirate</English>
+		<French>%s2 Emirate</French>
+		<German>%s2 Emirate</German>
+		<Italian>%s2 Emirate</Italian>
+		<Spanish>%s2 Emirate</Spanish>
+	</TEXT>
+
+	<TEXT>
+		<Tag>TXT_KEY_CIV_SAMANIDS_EMPIRE</Tag>
+		<English>%s2 Empire</English>
+		<French>%s2 Empire</French>
+		<German>%s2 Empire</German>
+		<Italian>%s2 Empire</Italian>
+		<Spanish>%s2 Empire</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_SAMANIDS_REPUBLIC</Tag>
+		<English>Republic of %s1</English>
+		<English>Republic of %s1</English>
+		<French>Republic of %s1</French>
+		<German>Republic of %s1</German>
+		<Italian>Republic of %s1</Italian>
+		<Spanish>Republic of %s1</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_SAMANIDS_COMMUNIST</Tag>
+		<English>%s2 Socialist Republic</English>
+		<English>%s2 Socialist Republic</English>
+		<French>%s2 Socialist Republic</French>
+		<German>%s2 Socialist Republic</German>
+		<Italian>%s2 Socialist Republic</Italian>
+		<Spanish>%s2 Socialist Republic</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_SAMANIDS_FASCIST</Tag>
+		<English>National %s2 Republic</English>
+		<English>National %s2 Republic</English>
+		<French>National %s2 Republic</French>
+		<German>National %s2 Republic</German>
+		<Italian>National %s2 Republic</Italian>
+		<Spanish>National %s2 Republic</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_SAMANIDS_TAJIKISTAN</Tag>
+		<English>Tajikistan</English>
+		<English>Tajikistan</English>
+		<French>Tajikistan</French>
+		<German>Tajikistan</German>
+		<Italian>Tajikistan</Italian>
+		<Spanish>Tajikistan</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_SAMANIDS_TAJIKISTANI</Tag>
+		<English>Tajikistani</English>
+		<English>Tajikistani</English>
+		<French>Tajikistani</French>
+		<German>Tajikistani</German>
+		<Italian>Tajikistani</Italian>
+		<Spanish>Tajikistani</Spanish>
+	</TEXT>
+
+
+</Civ4GameText>

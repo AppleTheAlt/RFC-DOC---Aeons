@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Minoa -->
+<Civ4GameText xmlns="http://www.firaxis.com">
+	<TEXT>
+		<Tag>TXT_KEY_CIV_SOMALIA_DESC</Tag>
+		<English>The Somalis</English>
+		<French>The Somalis</French>
+		<German>The Somalis</German>
+		<Italian>The Somalis</Italian>
+		<Spanish>The Somalis</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_SOMALIA_PEOPLES</Tag>
+		<English>Somali Peoples</English>
+		<French>Somali Peoples</French>
+		<German>Somali Peoples</German>
+		<Italian>Somali Peoples</Italian>
+		<Spanish>Somali Peoples</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_SOMALIA_ADJECTIVE</Tag>
+		<English>Somali</English>
+		<French>Somali</French>
+		<German>Somali</German>
+		<Italian>Somali</Italian>
+		<Spanish>Somali</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_SOMALIA_SHORT_DESC</Tag>
+		<English>Somalia</English>
+		<French>Somalia</French>
+		<German>Somalia</German>
+		<Italian>Somalia</Italian>
+		<Spanish>Somalia</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_SOMALIA_DEFAULT</Tag>
+		<English>%s2 Chiefdoms</English>
+		<French>%s2 Chiefdoms</French>
+		<German>%s2 Chiefdoms</German>
+		<Italian>%s2 Chiefdoms</Italian>
+		<Spanish>%s2 Chiefdoms</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_SOMALIA_EMPIRE</Tag>
+		<English>%s2 Empire</English>
+		<French>%s2 Empire</French>
+		<German>%s2 Empire</German>
+		<Italian>%s2 Empire</Italian>
+		<Spanish>%s2 Empire</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_SOMALIA_MOGADISHU</Tag>
+		<English>Mogadishu</English>
+		<French>Mogadishu</French>
+		<German>Mogadishu</German>
+		<Italian>Mogadishu</Italian>
+		<Spanish>Mogadishu</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_SOMALIA_AJURAN</Tag>
+		<English>Ajuran</English>
+		<French>Ajuran</French>
+		<German>Ajuran</German>
+		<Italian>Ajuran</Italian>
+		<Spanish>Ajuran</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_SOMALIA_GELEDI</Tag>
+		<English>Geledi</English>
+		<French>Geledi</French>
+		<German>Geledi</German>
+		<Italian>Geledi</Italian>
+		<Spanish>Geledi</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_SOMALIA_REPUBLIC</Tag>
+		<English>Federal Republic of %s1</English>
+		<English>Federal Republic of %s1</English>
+		<French>Federal Republic of %s1</French>
+		<German>Federal Republic of %s1</German>
+		<Italian>Federal Republic of %s1</Italian>
+		<Spanish>Federal Republic of %s1</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_SOMALIA_COMMUNIST</Tag>
+		<English>%s2 Revolutionary Socialist Republic</English>
+		<English>%s2 Revolutionary Socialist Republic</English>
+		<French>%s2 Revolutionary Socialist Republic</French>
+		<German>%s2 Revolutionary Socialist Republic</German>
+		<Italian>%s2 Revolutionary Socialist Republic</Italian>
+		<Spanish>%s2 Revolutionary Socialist Republic</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_SOMALIA_FASCIST</Tag>
+		<English>%s2 National State</English>
+		<English>%s2 National State</English>
+		<French>%s2 National State</French>
+		<German>%s2 National State</German>
+		<Italian>%s2 National State</Italian>
+		<Spanish>%s2 National State</Spanish>
+	</TEXT>
+</Civ4GameText>

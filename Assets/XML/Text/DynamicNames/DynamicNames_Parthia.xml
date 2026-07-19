@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Minoa -->
+<Civ4GameText xmlns="http://www.firaxis.com">
+	<TEXT>
+		<Tag>TXT_KEY_CIV_PARTHIA_DESC</Tag>
+		<English>The Parthians</English>
+		<French>The Parthians</French>
+		<German>The Parthians</German>
+		<Italian>The Parthians</Italian>
+		<Spanish>The Parthians</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_PARTHIA_PEOPLES</Tag>
+		<English>Parthian Peoples</English>
+		<French>Parthian Peoples</French>
+		<German>Parthian Peoples</German>
+		<Italian>Parthian Peoples</Italian>
+		<Spanish>Parthian Peoples</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_PARTHIA_ADJECTIVE</Tag>
+		<English>Parthian</English>
+		<French>Parthian</French>
+		<German>Parthian</German>
+		<Italian>Parthian</Italian>
+		<Spanish>Parthian</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_PARTHIA_SHORT_DESC</Tag>
+		<English>Parthia</English>
+		<French>Parthia</French>
+		<German>Parthia</German>
+		<Italian>Parthia</Italian>
+		<Spanish>Parthia</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_PARTHIA_DEFAULT</Tag>
+		<English>%s2 Shahdom</English>
+		<French>%s2 Shahdom</French>
+		<German>%s2 Shahdom</German>
+		<Italian>%s2 Shahdom</Italian>
+		<Spanish>%s2 Shahdom</Spanish>
+	</TEXT>
+
+	<TEXT>
+		<Tag>TXT_KEY_CIV_PARTHIA_EMPIRE</Tag>
+		<English>%s2 Empire</English>
+		<French>%s2 Empire</French>
+		<German>%s2 Empire</German>
+		<Italian>%s2 Empire</Italian>
+		<Spanish>%s2 Empire</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_PARTHIA_REPUBLIC</Tag>
+		<English>Republic of %s1</English>
+		<English>Republic of %s1</English>
+		<French>Republic of %s1</French>
+		<German>Republic of %s1</German>
+		<Italian>Republic of %s1</Italian>
+		<Spanish>Republic of %s1</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_PARTHIA_COMMUNIST</Tag>
+		<English>%s2 Peoples' Republic</English>
+		<English>%s2 Peoples' Republic</English>
+		<French>%s2 Peoples' Republic</French>
+		<German>%s2 Peoples' Republic</German>
+		<Italian>%s2 Peoples' Republic</Italian>
+		<Spanish>%s2 Peoples' Republic</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_PARTHIA_FASCIST</Tag>
+		<English>National %s2 Republic</English>
+		<English>National %s2 Republic</English>
+		<French>National %s2 Republic</French>
+		<German>National %s2 Republic</German>
+		<Italian>National %s2 Republic</Italian>
+		<Spanish>National %s2 Republic</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_PARTHIA_SASSANID</Tag>
+		<English>Sassanid</English>
+		<English>Sassanid</English>
+		<French>Sassanid</French>
+		<German>Sassanid</German>
+		<Italian>Sassanid</Italian>
+		<Spanish>Sassanid</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_PARTHIA_SASSANIAN</Tag>
+		<English>Sasanian</English>
+		<English>Sasanian</English>
+		<French>Sasanian</French>
+		<German>Sasanian</German>
+		<Italian>Sasanian</Italian>
+		<Spanish>Sasanian</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_ARABIAN_PARTHIA</Tag>
+		<English>Tahirid Emirate</English>
+		<English>Tahirid Emirate</English>
+		<French>Tahirid Emirate</French>
+		<German>Tahirid Emirate</German>
+		<Italian>Tahirid Emirate</Italian>
+		<Spanish>Tahirid Emirate</Spanish>
+	</TEXT>
+</Civ4GameText>

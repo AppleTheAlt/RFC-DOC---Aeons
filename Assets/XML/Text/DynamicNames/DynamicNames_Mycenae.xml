@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Harappa -->
+<Civ4GameText xmlns="http://www.firaxis.com">
+	<TEXT>
+		<Tag>TXT_KEY_CIV_MYCENAE_DESC</Tag>
+		<English>The Mycenaeans</English>
+		<French>
+			<Text>The Mycenaeans</Text>
+			<Gender>Male</Gender>
+			<Plural>1</Plural>
+		</French>
+		<German>The Mycenaeans</German>
+		<Italian>The Mycenaeans</Italian>
+		<Spanish>The Mycenaeans</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_MYCENAE_PEOPLES</Tag>
+		<English>Mycenaean Peoples</English>
+		<French>
+			<Text>Mycenaean Peoples</Text>
+			<Gender>Female</Gender>
+			<Plural>1</Plural>
+		</French>
+		<German>Mycenaean Peoples</German>
+		<Italian>Mycenaean Peoples</Italian>
+		<Spanish>Mycenaean Peoples</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_MYCENAE_DEFAULT</Tag>
+		<English>%s2 City States</English>
+		<French>
+			<Text>%s2 City States</Text>
+			<Gender>Female</Gender>
+			<Plural>1</Plural>
+		</French>
+		<German>%s2 City States</German>
+		<Italian>%s2 City States</Italian>
+		<Spanish>%s2 City States</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_MYCENAE_REPUBLIC</Tag>
+		<English>%s2 Republic</English>
+		<French>
+			<Text>%s2 Republic</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>%s2 Republic</German>
+		<Italian>%s2 Republic</Italian>
+		<Spanish>%s2 Republic</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_MYCENAE_COMMUNIST</Tag>
+		<English>%2 Peoples' Republic</English>
+		<French>
+			<Text>%2 Peoples' Republic</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>%2 Peoples' Republic</German>
+		<Italian>%2 Peoples' Republic</Italian>
+		<Spanish>%2 Peoples' Republic</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_MYCENAE_FASCIST</Tag>
+		<English>National Republic of %s1</English>
+		<French>
+			<Text>National Republic of %s1</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>National Republic of %s1</German>
+		<Italian>National Republic of %s1</Italian>
+		<Spanish>National Republic of %s1</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_MYCENAE_ADJECTIVE</Tag>
+		<English>Mycenaean</English>
+		<French>
+			Mycenaean
+		</French>
+		<German>Mycenaean</German>
+		<Italian>Mycenaean</Italian>
+		<Spanish>Mycenaean</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_MYCENAE_DESC</Tag>
+		<English>The Mycenaeans</English>
+		<French>
+			<Text>The Mycenaeans</Text>
+			<Gender>Male</Gender>
+			<Plural>1</Plural>
+		</French>
+		<German>The Mycenaeans</German>
+		<Italian>The Mycenaeans</Italian>
+		<Spanish>The Mycenaeans</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_MYCENAE_SHORT_DESC</Tag>
+		<English>Mycenae</English>
+		<French>
+			<Text>Mycenae</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>Mycenae</German>
+		<Italian>Mycenae</Italian>
+		<Spanish>Mycenae</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_MYCENAE_EMPIRE</Tag>
+		<English>%s2 Empire</English>
+		<French>
+			<Text>%s2 Empire</Text>
+		</French>
+		<German>%s2 Empire</German>
+		<Italian>%s2 Empire</Italian>
+		<Spanish>%s2 Empire</Spanish>
+	</TEXT>
+
+</Civ4GameText>

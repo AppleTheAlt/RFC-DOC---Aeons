@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Minoa -->
+<Civ4GameText xmlns="http://www.firaxis.com">
+	<TEXT>
+		<Tag>TXT_KEY_CIV_MAMLUKS_DESC</Tag>
+		<English>The Misri</English>
+		<French>The Misri</French>
+		<German>The Misri</German>
+		<Italian>The Misri</Italian>
+		<Spanish>The Misri</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_MISR_PEOPLES</Tag>
+		<English>Misri Peoples</English>
+		<French>Misri Peoples</French>
+		<German>Misri Peoples</German>
+		<Italian>Misri Peoples</Italian>
+		<Spanish>Misri Peoples</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_MAMLUKS_ADJECTIVE</Tag>
+		<English>Misri</English>
+		<French>Misri</French>
+		<German>Misri</German>
+		<Italian>Misri</Italian>
+		<Spanish>Misri</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_MAMLUKS_SHORT_DESC</Tag>
+		<English>Misr</English>
+		<French>Misr</French>
+		<German>Misr</German>
+		<Italian>Misr</Italian>
+		<Spanish>Misr</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_MISR_DEFAULT</Tag>
+		<English>%s2 Sultanate</English>
+		<French>%s2 Sultanate</French>
+		<German>%s2 Sultanate</German>
+		<Italian>%s2 Sultanate</Italian>
+		<Spanish>%s2 Sultanate</Spanish>
+	</TEXT>
+
+	<TEXT>
+		<Tag>TXT_KEY_CIV_MAMLUKS_CALIPHATE</Tag>
+		<English>%s2 Caliphate</English>
+		<French>%s2 Caliphate</French>
+		<German>%s2 Caliphate</German>
+		<Italian>%s2 Caliphate</Italian>
+		<Spanish>%s2 Caliphate</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_MAMLUKS_REPUBLIC</Tag>
+		<English>%s2 Republic</English>
+		<English>%s2 Republic</English>
+		<French>%s2 Republic</French>
+		<German>%s2 Republic</German>
+		<Italian>%s2 Republic</Italian>
+		<Spanish>%s2 Republic</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_MAMLUKS_COMMUNIST</Tag>
+		<English>%s2 Peoples' Republic</English>
+		<English>%s2 Peoples' Republic</English>
+		<French>%s2 Peoples' Republic</French>
+		<German>%s2 Peoples' Republic</German>
+		<Italian>%s2 Peoples' Republic</Italian>
+		<Spanish>%s2 Peoples' Republic</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_MAMLUKS_FASCIST</Tag>
+		<English>National Republic of Misr</English>
+		<English>National Republic of Misr</English>
+		<French>National Republic of Misr</French>
+		<German>National Republic of Misr</German>
+		<Italian>National Republic of Misr</Italian>
+		<Spanish>National Republic of Misr</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_MAMLUKS_KINGDOM</Tag>
+		<English>%s2 Kingdom</English>
+		<English>%s2 Kingdom</English>
+		<French>%s2 Kingdom</French>
+		<German>%s2 Kingdom</German>
+		<Italian>%s2 Kingdom</Italian>
+		<Spanish>%s2 Kingdom</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_MAMLUKS_AYYUBID</Tag>
+		<English>Ayyubid</English>
+		<English>Ayyubid</English>
+		<French>Ayyubid</French>
+		<German>Ayyubid</German>
+		<Italian>Ayyubid</Italian>
+		<Spanish>Ayyubid</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_MAMLUKS_AYYUBIDS</Tag>
+		<English>Ayyubids</English>
+		<English>Ayyubids</English>
+		<French>Ayyubids</French>
+		<German>Ayyubids</German>
+		<Italian>Ayyubids</Italian>
+		<Spanish>Ayyubids</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_MAMLUKS_FATIMIDS</Tag>
+		<English>Fatimids</English>
+		<English>Fatimids</English>
+		<French>Fatimids</French>
+		<German>Fatimids</German>
+		<Italian>Fatimids</Italian>
+		<Spanish>Fatimids</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_MAMLUKS_MAMLUK</Tag>
+		<English>Mamluk</English>
+		<English>Mamluk</English>
+		<French>Mamluk</French>
+		<German>Mamluk</German>
+		<Italian>Mamluk</Italian>
+		<Spanish>Mamluk</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_MAMLUKS_MAMLUKS</Tag>
+		<English>Mamluks</English>
+		<English>Mamluks</English>
+		<French>Mamluks</French>
+		<German>Mamluks</German>
+		<Italian>Mamluks</Italian>
+		<Spanish>Mamluks</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_MAMLUKS_FATIMID</Tag>
+		<English>Fatimid</English>
+		<English>Fatimid</English>
+		<French>Fatimid</French>
+		<German>Fatimid</German>
+		<Italian>Fatimid</Italian>
+		<Spanish>Fatimid</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_MAMLUKS_EGYPT</Tag>
+		<English>Egypt</English>
+		<English>Egypt</English>
+		<French>Egypt</French>
+		<German>Egypt</German>
+		<Italian>Egypt</Italian>
+		<Spanish>Egypt</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_MAMLUKS_EGYPTIAN</Tag>
+		<English>Egyptian</English>
+		<English>Egyptian</English>
+		<French>Egyptian</French>
+		<German>Egyptian</German>
+		<Italian>Egyptian</Italian>
+		<Spanish>Egyptian</Spanish>
+	</TEXT>
+</Civ4GameText>

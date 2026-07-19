@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Mali -->
+<Civ4GameText xmlns="http://www.firaxis.com">
+	<TEXT>
+		<Tag>TXT_KEY_CIV_SONGHAI_DESC</Tag>
+		<English>The Songhai</English>
+		<French>The Songhai</French>
+		<German>The Songhai</German>
+		<Italian>The Songhai</Italian>
+		<Spanish>The Songhai</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_SONGHAI_ADJECTIVE</Tag>
+		<English>Songhai</English>
+		<French>
+			<Text>Songhai</Text>
+			<Gender>Male:Female:Male:Female</Gender>
+			<Plural>0:0:1:1</Plural>
+		</French>
+		<German>Songhai</German>
+		<Italian>Songhai</Italian>
+		<Spanish>Songhai</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_SONGHAI_ADJECTIVE</Tag>
+		<English>Songhai</English>
+		<French>
+			<Text>songha&#239;:songha&#239;:songha&#239;s:songha&#239;s</Text>
+			<Gender>Male:Female:Male:Female</Gender>
+			<Plural>0:0:1:1</Plural>
+		</French>
+		<German>Songhai</German>
+		<Italian>Songhai</Italian>
+		<Spanish>Songhai</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_SONGHAI_SHORT_DESC</Tag>
+		<English>Songhai</English>
+		<French>
+			<Text>Songha&#239;s</Text>
+			<Gender>Male</Gender>
+			<Plural>1</Plural>
+		</French>
+		<German>Songhai</German>
+		<Italian>Songhai</Italian>
+		<Spanish>Songhai</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_SONGHAI_DEFAULT</Tag>
+		<English>%s1 Empire</English>
+		<French>Empire %s2</French>
+		<German>%s1 Empire</German>
+		<Italian>%s1 Empire</Italian>
+		<Spanish>%s1 Empire</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_SONGHAI_PEOPLES</Tag>
+		<English>Songhai Peoples</English>
+		<French>
+			<Text>Peuplades mandingues</Text>
+			<Gender>Female</Gender>
+			<Plural>1</Plural>
+		</French>
+		<German>Songhai Peoples</German>
+		<Italian>Songhai Peoples</Italian>
+		<Spanish>Songhai Peoples</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_SONGHAI_FASCIST</Tag>
+		<English>Military Committee of %s1</English>
+		<French>
+			<Text>Comit&#233; militaire du %s1</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>Military Committee of %s1</German>
+		<Italian>Military Committee of %s1</Italian>
+		<Spanish>Military Committee of %s1</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_NIGER</Tag>
+		<English>Niger</English>
+		<French>
+			<Text>Niger</Text>
+			<Gender>Female</Gender>
+			<Plural>1</Plural>
+		</French>
+		<German>Niger</German>
+		<Italian>Niger</Italian>
+		<Spanish>Niger</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_NIGER_ADJECTIVE</Tag>
+		<English>Nigerien</English>
+		<French>
+			<Text>Nigerien</Text>
+			<Gender>Female</Gender>
+			<Plural>1</Plural>
+		</French>
+		<German>Nigerien</German>
+		<Italian>Nigerien</Italian>
+		<Spanish>Nigerien</Spanish>
+	</TEXT>
+</Civ4GameText>
