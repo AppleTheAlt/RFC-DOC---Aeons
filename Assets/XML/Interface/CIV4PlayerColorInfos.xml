@@ -7,6 +7,318 @@
 <Civ4PlayerColorInfos xmlns="x-schema:CIV4InterfaceSchema.xml">
 	<PlayerColorInfos>
 		<PlayerColorInfo>
+ 			<Type>PLAYERCOLOR_LIGHT_RED_GREEN</Type> <!-- Morocco -->
+ 			<ColorTypePrimary>COLOR_PLAYER_LESS_BRIGHT_RED</ColorTypePrimary>
+ 			<ColorTypeSecondary>COLOR_PLAYER_DARK_GREEN</ColorTypeSecondary>
+ 			<TextColorType>COLOR_PLAYER_BRIGHT_RED_TEXT</TextColorType>
+ 		</PlayerColorInfo>
+		<PlayerColorInfo>
+			<Type>PLAYERCOLOR_MADAGASCAR_GREENWHITE</Type> <!-- Magagascar -->
+			<ColorTypePrimary>COLOR_PLAYER_MADAGASCAR_GREEN</ColorTypePrimary>
+			<ColorTypeSecondary>COLOR_PLAYER_WHITE</ColorTypeSecondary>
+			<TextColorType>COLOR_PLAYER_MADAGASCAR_GREEN</TextColorType>
+		</PlayerColorInfo>
+		<PlayerColorInfo>
+			<Type>PLAYERCOLOR_SOMALIA_BLUEBLUE</Type> <!-- Somalia -->
+			<ColorTypePrimary>COLOR_PLAYER_SOMALIA_DARKBLUE</ColorTypePrimary>
+			<ColorTypeSecondary>COLOR_PLAYER_SOMALIA_BLUE</ColorTypeSecondary>
+			<TextColorType>COLOR_PLAYER_SOMALIA_DARKBLUE</TextColorType>
+		</PlayerColorInfo>
+		<PlayerColorInfo>
+			<Type>PLAYERCOLOR_ADAL_REDBLUE</Type> <!-- Adal -->
+			<ColorTypePrimary>COLOR_PLAYER_ADAL_RED</ColorTypePrimary>
+			<ColorTypeSecondary>COLOR_PLAYER_ADAL_BLUE</ColorTypeSecondary>
+			<TextColorType>COLOR_PLAYER_ADAL_RED</TextColorType>
+		</PlayerColorInfo>
+		<PlayerColorInfo>
+			<Type>PLAYERCOLOR_FUNJ_GREYYELLOW</Type> <!-- Funj -->
+			<ColorTypePrimary>COLOR_PLAYER_FUNJ_GREY</ColorTypePrimary>
+			<ColorTypeSecondary>COLOR_PLAYER_FUNJ_YELLOW</ColorTypeSecondary>
+			<TextColorType>COLOR_PLAYER_FUNJ_GREY</TextColorType>
+		</PlayerColorInfo>
+		<PlayerColorInfo>
+			<Type>PLAYERCOLOR_BUGANDA_GREENYELLOW</Type> <!-- Buganda -->
+			<ColorTypePrimary>COLOR_PLAYER_BUGANDA_GREEN</ColorTypePrimary>
+			<ColorTypeSecondary>COLOR_PLAYER_BUGANDA_YELLOW</ColorTypeSecondary>
+			<TextColorType>COLOR_PLAYER_BUGANDA_GREEN</TextColorType>
+		</PlayerColorInfo>
+		<PlayerColorInfo>
+			<Type>PLAYERCOLOR_KATANGA_PURPLEMAGENTA</Type> <!-- Katanga -->
+			<ColorTypePrimary>COLOR_PLAYER_KATANGA_PURPLE</ColorTypePrimary>
+			<ColorTypeSecondary>COLOR_PLAYER_KATANGA_MAGENTA</ColorTypeSecondary>
+			<TextColorType>COLOR_PLAYER_KATANGA_PURPLE</TextColorType>
+		</PlayerColorInfo>
+		<PlayerColorInfo>
+			<Type>PLAYERCOLOR_SOUTH_AFRICA_REDWHITE</Type> <!-- South Africa -->
+			<ColorTypePrimary>COLOR_PLAYER_SOUTH_AFRICA_RED</ColorTypePrimary>
+			<ColorTypeSecondary>COLOR_PLAYER_WHITE</ColorTypeSecondary>
+			<TextColorType>COLOR_PLAYER_SOUTH_AFRICA_RED</TextColorType>
+		</PlayerColorInfo>
+		<PlayerColorInfo>
+			<Type>PLAYERCOLOR_BOER_ORANGEYELLOW</Type> <!-- Boers -->
+			<ColorTypePrimary>COLOR_PLAYER_BOER_ORANGE</ColorTypePrimary>
+			<ColorTypeSecondary>COLOR_PLAYER_BOER_YELLOW</ColorTypeSecondary>
+			<TextColorType>COLOR_PLAYER_BOER_ORANGE</TextColorType>
+		</PlayerColorInfo>
+		<PlayerColorInfo>
+			<Type>PLAYERCOLOR_ZIMBABWE_REDYELLOW</Type> <!-- Zimbabwe -->
+			<ColorTypePrimary>COLOR_PLAYER_ZIMBABWE_RED</ColorTypePrimary>
+			<ColorTypeSecondary>COLOR_PLAYER_ZIMBABWE_YELLOW</ColorTypeSecondary>
+			<TextColorType>COLOR_PLAYER_ZIMBABWE_RED</TextColorType>
+		</PlayerColorInfo>
+		<PlayerColorInfo>
+			<Type>PLAYERCOLOR_ZULU_BROWNWHITE</Type> <!-- Zulu -->
+			<ColorTypePrimary>COLOR_PLAYER_ZULU_BROWN</ColorTypePrimary>
+			<ColorTypeSecondary>COLOR_PLAYER_WHITE</ColorTypeSecondary>
+			<TextColorType>COLOR_PLAYER_ZULU_BROWN</TextColorType>
+		</PlayerColorInfo>
+		<PlayerColorInfo>
+			<Type>PLAYERCOLOR_ASHANTI_PINKPURPLE</Type> <!-- Ashanti -->
+			<ColorTypePrimary>COLOR_PLAYER_ASHANTI_PINK</ColorTypePrimary>
+			<ColorTypeSecondary>COLOR_PLAYER_ASHANTI_PURPLE</ColorTypeSecondary>
+			<TextColorType>COLOR_PLAYER_ASHANTI_PINK</TextColorType>
+		</PlayerColorInfo>
+		<PlayerColorInfo>
+			<Type>PLAYERCOLOR_HAUSA_WHITEGREEN</Type> <!-- Hausa -->
+			<ColorTypePrimary>COLOR_PLAYER_WHITE</ColorTypePrimary>
+			<ColorTypeSecondary>COLOR_PLAYER_DARK_GREEN</ColorTypeSecondary>
+			<TextColorType>COLOR_PLAYER_GREYISH_GREEN_TEXT</TextColorType>
+		</PlayerColorInfo>
+		<PlayerColorInfo>
+			<Type>PLAYERCOLOR_BENIN_GREENGREEN</Type> <!-- Benin -->
+			<ColorTypePrimary>COLOR_PLAYER_BENIN_GREEN</ColorTypePrimary>
+			<ColorTypeSecondary>COLOR_PLAYER_BENIN_DARKGREEN</ColorTypeSecondary>
+			<TextColorType>COLOR_PLAYER_BENIN_DARKGREEN</TextColorType>
+		</PlayerColorInfo>
+		<PlayerColorInfo>
+			<Type>PLAYERCOLOR_KANEM_BORNU_BLUEBLUE</Type> <!-- Kanem Bornu -->
+			<ColorTypePrimary>COLOR_PLAYER_KANEM_BORNU_BLUE</ColorTypePrimary>
+			<ColorTypeSecondary>COLOR_PLAYER_KANEM_BORNU_BLUE_DARK</ColorTypeSecondary>
+			<TextColorType>COLOR_PLAYER_KANEM_BORNU_BLUE_DARK</TextColorType>
+		</PlayerColorInfo>
+
+
+		<PlayerColorInfo>
+			<Type>PLAYERCOLOR_GHANA_YELLOWRED</Type> <!-- Ghana -->
+			<ColorTypePrimary>COLOR_PLAYER_GHANA_YELLOW</ColorTypePrimary>
+			<ColorTypeSecondary>COLOR_PLAYER_GHANA_RED</ColorTypeSecondary>
+			<TextColorType>COLOR_PLAYER_GHANA_YELLOW</TextColorType>
+		</PlayerColorInfo>
+
+
+		<PlayerColorInfo>
+			<Type>PLAYERCOLOR_KHAZAR_YELLOWBLACK</Type> <!-- Khazars -->
+			<ColorTypePrimary>COLOR_PLAYER_KHAZAR_YELLOW</ColorTypePrimary>
+			<ColorTypeSecondary>COLOR_PLAYER_BLACK</ColorTypeSecondary>
+			<TextColorType>COLOR_PLAYER_KHAZAR_YELLOW</TextColorType>
+		</PlayerColorInfo>
+
+
+		<PlayerColorInfo>
+			<Type>PLAYERCOLOR_SKY_BLUE</Type> <!-- None, currently -->
+			<ColorTypePrimary>COLOR_PLAYER_SKY_BLUE</ColorTypePrimary>
+			<ColorTypeSecondary>COLOR_PLAYER_WHITE</ColorTypeSecondary>
+			<TextColorType>COLOR_PLAYER_SKY_BLUE_TEXT</TextColorType>
+		</PlayerColorInfo>
+
+		<PlayerColorInfo>
+			<Type>PLAYERCOLOR_GHORID_ORANGERED</Type> 
+			<ColorTypePrimary>COLOR_PLAYER_GHORID_ORANGE</ColorTypePrimary>
+			<ColorTypeSecondary>COLOR_PLAYER_GHORID_RED</ColorTypeSecondary>
+			<TextColorType>COLOR_PLAYER_GHORID_ORANGE</TextColorType>
+		</PlayerColorInfo>
+
+
+		<PlayerColorInfo>
+			<Type>PLAYERCOLOR_MUGHAL_GREENRED</Type> 
+			<ColorTypePrimary>COLOR_PLAYER_MUGHAL_GREEN</ColorTypePrimary>
+			<ColorTypeSecondary>COLOR_PLAYER_MUGHAL_RED</ColorTypeSecondary>
+			<TextColorType>COLOR_PLAYER_MUGHAL_GREEN</TextColorType>
+		</PlayerColorInfo>
+
+
+		<PlayerColorInfo>
+			<Type>PLAYERCOLOR_DARK_RED_BLACK</Type>
+			<ColorTypePrimary>COLOR_PLAYER_DARK_RED</ColorTypePrimary>
+			<ColorTypeSecondary>COLOR_PLAYER_BLACK</ColorTypeSecondary>
+			<TextColorType>COLOR_PLAYER_LIGHT_BLACK_TEXT</TextColorType>
+		</PlayerColorInfo>
+
+
+		<PlayerColorInfo>
+			<Type>PLAYERCOLOR_GEORGIA_MAGENTAWHITE</Type>
+			<ColorTypePrimary>COLOR_PLAYER_GEORGIA_MAGENTA</ColorTypePrimary>
+			<ColorTypeSecondary>COLOR_PLAYER_GEORGIA_WHITE</ColorTypeSecondary>
+			<TextColorType>COLOR_PLAYER_GEORGIA_MAGENTA</TextColorType>
+		</PlayerColorInfo>
+
+
+		<PlayerColorInfo>
+			<Type>PLAYERCOLOR_JERUSALEM_WHITEYELLOW</Type>
+			<ColorTypePrimary>COLOR_PLAYER_JERUSALEM_WHITE</ColorTypePrimary>
+			<ColorTypeSecondary>COLOR_PLAYER_JERUSALEM_YELLOW</ColorTypeSecondary>
+			<TextColorType>COLOR_PLAYER_JERUSALEM_WHITE</TextColorType>
+		</PlayerColorInfo>
+
+		<PlayerColorInfo>
+			<Type>PLAYERCOLOR_OMAN_BLUEYELLOW</Type>
+			<ColorTypePrimary>COLOR_PLAYER_OMAN_BLUE</ColorTypePrimary>
+			<ColorTypeSecondary>COLOR_PLAYER_OMAN_YELLOW</ColorTypeSecondary>
+			<TextColorType>COLOR_PLAYER_OMAN_BLUE</TextColorType>
+		</PlayerColorInfo>
+
+
+		<PlayerColorInfo>
+			<Type>PLAYERCOLOR_YEMEN_REDWHITE</Type>
+			<ColorTypePrimary>COLOR_PLAYER_YEMEN_RED</ColorTypePrimary>
+			<ColorTypeSecondary>COLOR_PLAYER_WHITE</ColorTypeSecondary>
+			<TextColorType>COLOR_PLAYER_YEMEN_RED</TextColorType>
+		</PlayerColorInfo>
+
+		<PlayerColorInfo>
+			<Type>PLAYERCOLOR_TUNIS_GREENBROWN</Type>
+			<ColorTypePrimary>COLOR_PLAYER_TUNIS_GREEN</ColorTypePrimary>
+			<ColorTypeSecondary>COLOR_PLAYER_TUNIS_BROWN</ColorTypeSecondary>
+			<TextColorType>COLOR_PLAYER_TUNIS_GREEN</TextColorType>
+		</PlayerColorInfo>
+
+		<PlayerColorInfo>
+			<Type>PLAYERCOLOR_GOKTURK_PURPLEBLUE</Type>
+			<ColorTypePrimary>COLOR_PLAYER_GOKTURK_PURPLE</ColorTypePrimary>
+			<ColorTypeSecondary>COLOR_PLAYER_GOKTURK_BLUE</ColorTypeSecondary>
+			<TextColorType>COLOR_PLAYER_GOKTURK_PURPLE</TextColorType>
+		</PlayerColorInfo>
+
+
+		<PlayerColorInfo>
+			<Type>PLAYERCOLOR_SAMANID_BLUEPURPLE</Type>
+			<ColorTypePrimary>COLOR_PLAYER_SAMANID_BLUE</ColorTypePrimary>
+			<ColorTypeSecondary>COLOR_PLAYER_SAMANID_PURPLE</ColorTypeSecondary>
+			<TextColorType>COLOR_PLAYER_SAMANID_BLUE</TextColorType>
+		</PlayerColorInfo>
+
+		<PlayerColorInfo>
+			<Type>PLAYERCOLOR_BUYID_GREENBLUE</Type>
+			<ColorTypePrimary>COLOR_PLAYER_BUYID_GREEN</ColorTypePrimary>
+			<ColorTypeSecondary>COLOR_PLAYER_BUYID_BLUE</ColorTypeSecondary>
+			<TextColorType>COLOR_PLAYER_BUYID_GREEN</TextColorType>
+		</PlayerColorInfo>
+
+		<PlayerColorInfo>
+			<Type>PLAYERCOLOR_MAMLUK_YELLOWWHITE</Type>
+			<ColorTypePrimary>COLOR_PLAYER_MAMLUK_YELLOW</ColorTypePrimary>
+			<ColorTypeSecondary>COLOR_PLAYER_GRAY</ColorTypeSecondary>
+			<TextColorType>COLOR_PLAYER_MAMLUK_YELLOW</TextColorType>
+		</PlayerColorInfo>
+
+		<PlayerColorInfo>
+			<Type>PLAYERCOLOR_PARTHIA_YELLOWRED</Type>
+			<ColorTypePrimary>COLOR_PLAYER_PARTHIA_YELLOW</ColorTypePrimary>
+			<ColorTypeSecondary>COLOR_PLAYER_PARTHIA_RED</ColorTypeSecondary>
+			<TextColorType>COLOR_PLAYER_PARTHIA_YELLOW</TextColorType>
+		</PlayerColorInfo>
+
+		<PlayerColorInfo>
+			<Type>PLAYERCOLOR_ARMENIA_PINKYELLOW</Type>
+			<ColorTypePrimary>COLOR_PLAYER_ARMENIA_PINK</ColorTypePrimary>
+			<ColorTypeSecondary>COLOR_PLAYER_ARMENIA_YELLOW</ColorTypeSecondary>
+			<TextColorType>COLOR_PLAYER_ARMENIA_PINK</TextColorType>
+		</PlayerColorInfo>
+
+		<PlayerColorInfo>
+			<Type>PLAYERCOLOR_SCYTHIA_GREENGREEN</Type>
+			<ColorTypePrimary>COLOR_PLAYER_SCYTHIA_GREEN</ColorTypePrimary>
+			<ColorTypeSecondary>COLOR_PLAYER_SCYTHIA_DARKGREEN</ColorTypeSecondary>
+			<TextColorType>COLOR_PLAYER_SCYTHIA_GREEN</TextColorType>
+		</PlayerColorInfo>
+
+		<PlayerColorInfo>
+			<Type>PLAYERCOLOR_NUMIDIA_ORANGERED</Type>
+			<ColorTypePrimary>COLOR_PLAYER_NUMIDIA_ORANGE</ColorTypePrimary>
+			<ColorTypeSecondary>COLOR_PLAYER_NUMIDIA_RED</ColorTypeSecondary>
+			<TextColorType>COLOR_PLAYER_NUMIDIA_ORANGE</TextColorType>
+		</PlayerColorInfo>
+
+
+		<PlayerColorInfo>
+			<Type>PLAYERCOLOR_VANDAL_GREEN</Type>
+			<ColorTypePrimary>COLOR_PLAYER_VANDAL_GREEN</ColorTypePrimary>
+			<ColorTypeSecondary>COLOR_PLAYER_VANDAL_DARKGREEN</ColorTypeSecondary>
+			<TextColorType>COLOR_PLAYER_VANDAL_GREEN</TextColorType>
+		</PlayerColorInfo>
+
+		<PlayerColorInfo>
+			<Type>PLAYERCOLOR_HUN_RED</Type>
+			<ColorTypePrimary>COLOR_PLAYER_HUN_RED</ColorTypePrimary>
+			<ColorTypeSecondary>COLOR_PLAYER_HUN_LIGHTRED</ColorTypeSecondary>
+			<TextColorType>COLOR_PLAYER_HUN_LIGHTRED</TextColorType>
+		</PlayerColorInfo>
+
+		<PlayerColorInfo>
+			<Type>PLAYERCOLOR_GOTH_PURPLEBLUE</Type>
+			<ColorTypePrimary>COLOR_PLAYER_GOTH_PURPLE</ColorTypePrimary>
+			<ColorTypeSecondary>COLOR_PLAYER_GOTH_BLUE</ColorTypeSecondary>
+			<TextColorType>COLOR_PLAYER_GOTH_PURPLE</TextColorType>
+		</PlayerColorInfo>
+
+		<PlayerColorInfo>
+			<Type>PLAYERCOLOR_GERMANIA_GREENBROWN</Type>
+			<ColorTypePrimary>COLOR_PLAYER_GERMANIA_GREEN</ColorTypePrimary>
+			<ColorTypeSecondary>COLOR_PLAYER_GERMANIA_BROWN</ColorTypeSecondary>
+			<TextColorType>COLOR_PLAYER_GERMANIA_TEXT</TextColorType>
+		</PlayerColorInfo>
+
+		<PlayerColorInfo>
+			<Type>PLAYERCOLOR_MACEDON_BLUEYELLOW</Type> <!-- Macedon -->
+			<ColorTypePrimary>COLOR_PLAYER_MACEDON_BLUE</ColorTypePrimary>
+			<ColorTypeSecondary>COLOR_PLAYER_MACEDON_YELLOW</ColorTypeSecondary>
+			<TextColorType>COLOR_PLAYER_MACEDON_BLUE</TextColorType>
+		</PlayerColorInfo>
+
+
+		<PlayerColorInfo>
+			<Type>PLAYERCOLOR_SPARTA_REDWHITE</Type> <!-- Sparta -->
+			<ColorTypePrimary>COLOR_PLAYER_SPARTA_RED</ColorTypePrimary>
+			<ColorTypeSecondary>COLOR_PLAYER_SPARTA_WHITE</ColorTypeSecondary>
+			<TextColorType>COLOR_PLAYER_SPARTA_RED</TextColorType>
+		</PlayerColorInfo>
+
+		
+		<PlayerColorInfo>
+			<Type>PLAYERCOLOR_MYCENAE_LIMEBLUE</Type> <!-- Mycenae -->
+			<ColorTypePrimary>COLOR_PLAYER_MYCENAE_LIME</ColorTypePrimary>
+			<ColorTypeSecondary>COLOR_PLAYER_MYCENAE_BLUE</ColorTypeSecondary>
+			<TextColorType>COLOR_PLAYER_MYCENAE_LIME_TEXT</TextColorType>
+		</PlayerColorInfo>
+
+
+		<PlayerColorInfo>
+			<Type>PLAYERCOLOR_ELAMITE_ORANGEBLUE</Type> <!-- Elam -->
+			<ColorTypePrimary>COLOR_PLAYER_ELAMITE_ORANGE</ColorTypePrimary>
+			<ColorTypeSecondary>COLOR_PLAYER_ELAMITE_SKYBLUE</ColorTypeSecondary>
+			<TextColorType>COLOR_PLAYER_ELAMITE_ORANGE_TEXT</TextColorType>
+		</PlayerColorInfo>
+
+		<PlayerColorInfo>
+			<Type>PLAYERCOLOR_SUMERIAN_GREYYELLOW</Type> <!-- Sumeria -->
+			<ColorTypePrimary>COLOR_PLAYER_SUMERIA_GREY</ColorTypePrimary>
+			<ColorTypeSecondary>COLOR_PLAYER_SUMERIA_YELLOW</ColorTypeSecondary>
+			<TextColorType>COLOR_PLAYER_SUMERIA_GREY_TEXT</TextColorType>
+		</PlayerColorInfo>
+		<PlayerColorInfo>
+			<Type>PLAYERCOLOR_JUDAH_BLUEYELLOW</Type> <!-- Judah -->
+			<ColorTypePrimary>COLOR_PLAYER_JUDAH_BLUE</ColorTypePrimary>
+			<ColorTypeSecondary>COLOR_PLAYER_JUDAH_YELLOW</ColorTypeSecondary>
+			<TextColorType>COLOR_PLAYER_JUDAH_BLUE_TEXT</TextColorType>
+		</PlayerColorInfo>
+		<PlayerColorInfo>
+			<Type>PLAYERCOLOR_ROSEBLUE</Type> <!-- Minoan -->
+			<ColorTypePrimary>COLOR_PLAYER_MINOAN_BLUE</ColorTypePrimary>
+			<ColorTypeSecondary>COLOR_PLAYER_MINOAN_ROSE</ColorTypeSecondary>
+			<TextColorType>COLOR_MINOAN_BLUE_TEXT</TextColorType>
+		</PlayerColorInfo>
+
+		<PlayerColorInfo>
 			<Type>PLAYERCOLOR_BLACK</Type> <!-- Barbarians -->
 			<ColorTypePrimary>COLOR_PLAYER_BLACK</ColorTypePrimary>
 			<ColorTypeSecondary>COLOR_PLAYER_WHITE</ColorTypeSecondary>
@@ -247,7 +559,7 @@
 			<TextColorType>COLOR_PLAYER_DARK_DARK_GREEN_TEXT</TextColorType>
 		</PlayerColorInfo>
 		<PlayerColorInfo>
-			<Type>PLAYERCOLOR_DARK_INDIGO</Type> <!-- Phoenicia and Sumeria -->
+			<Type>PLAYERCOLOR_DARK_INDIGO</Type> <!-- Phoenicia -->
 			<ColorTypePrimary>COLOR_PLAYER_DARK_INDIGO</ColorTypePrimary>
 			<ColorTypeSecondary>COLOR_PLAYER_YELLOW</ColorTypeSecondary>
 			<TextColorType>COLOR_PLAYER_DARK_INDIGO_TEXT</TextColorType>
@@ -545,7 +857,7 @@
 			<ColorTypePrimary>COLOR_PLAYER_DRAB_GREEN</ColorTypePrimary>
 			<ColorTypeSecondary>COLOR_PLAYER_WHITE</ColorTypeSecondary>
 			<TextColorType>COLOR_PLAYER_DRAB_GREEN_TEXT</TextColorType>
-		</PlayerColorInfo>
+	</PlayerColorInfo>
 		<PlayerColorInfo>
 			<Type>PLAYERCOLOR_BEIGE</Type> <!-- Tatars -->
 			<ColorTypePrimary>COLOR_PLAYER_BEIGE</ColorTypePrimary>
