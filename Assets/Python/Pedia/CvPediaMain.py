@@ -410,20 +410,63 @@ class CvPediaMain(CvPediaScreen.CvPediaScreen):
 
 
 
+	#def placeCivs(self):
+	#	lCivilizations = []
+	#	for iCivilization in xrange(gc.getNumCivilizationInfos()):
+	#		CivilizationInfo = gc.getCivilizationInfo(iCivilization)
+	#		
+	#		if not CivilizationInfo.isPlayable():
+	#			continue
+	#		
+	#		lCivilizations.append((CivilizationInfo.getText(), iCivilization))
+#
+	#	#lCivilizations.sort()
+#
+	#	# Aeons - Sort civs by birth date instead of alphabetically
+	#	lCivilizations.sort(key=lambda x: gc.getCivilizationInfo(x[1]).getStartingYear()) 
+#
+#
+	#	self.list = lCivilizations
+	#	self.placeItems(WidgetTypes.WIDGET_PEDIA_JUMP_TO_CIV, gc.getCivilizationInfo)
+
 	def placeCivs(self):
-		lCivilizations = []
+		lCivs = []
+		dCivs = dict((iEra, []) for iEra in range(iNumEras))
+		
 		for iCivilization in xrange(gc.getNumCivilizationInfos()):
-			CivilizationInfo = gc.getCivilizationInfo(iCivilization)
-			
-			if not CivilizationInfo.isPlayable():
+			if not gc.getCivilizationInfo(iCivilization).isPlayable():
 				continue
+			iEra = iAncient 
+			if gc.getCivilizationInfo(iCivilization).getStartingYear() >= -600:
+				iEra = iClassical
+			if gc.getCivilizationInfo(iCivilization).getStartingYear() >= 400:
+				iEra = iMedieval
+			if gc.getCivilizationInfo(iCivilization).getStartingYear() >= 1500:
+				iEra = iRenaissance
+			if gc.getCivilizationInfo(iCivilization).getStartingYear() >= 1800:
+				iEra = iIndustrial
+			if gc.getCivilizationInfo(iCivilization).getStartingYear() >= 1920:
+				iEra = iGlobal
+			if gc.getCivilizationInfo(iCivilization).getStartingYear() >= 1980:
+				iEra = iDigital
+			szDescription = gc.getCivilizationInfo(iCivilization).getDescription()
+			dCivs[iEra].append((szDescription, iCivilization))
+
+		lCivs.sort(key=lambda x: gc.getCivilizationInfo(x[1]).getStartingYear())
+		
+		for iEra in range(iNumEras):
+			if not dCivs[iEra]:
+				continue
+			if lCivs:
+				lCivs.append(("", -1))
+			lCivs.append((gc.getEraInfo(iEra).getDescription(), -1))
 			
-			lCivilizations.append((CivilizationInfo.getText(), iCivilization))
+			for szDescription, iCivilization in sorted(dCivs[iEra]):
+				lCivs.append((szDescription, iCivilization))
+		
 
-		lCivilizations.sort()
-		self.list = lCivilizations
+		self.list = lCivs
 		self.placeItems(WidgetTypes.WIDGET_PEDIA_JUMP_TO_CIV, gc.getCivilizationInfo)
-
 
 
 
@@ -524,13 +567,14 @@ class CvPediaMain(CvPediaScreen.CvPediaScreen):
 
 	def placeTechs(self):
 		lTechs = []
-		dTechs = dict((iX, []) for iX in range(23))
+		# Aeons - Tech updated to 24 rows, if it increases further, the const needs to be changed
+		dTechs = dict((iX, []) for iX in range(24))
 		
 		for iTech in range(gc.getNumTechInfos()):
 			techInfo = gc.getTechInfo(iTech)
 			dTechs[techInfo.getGridX()].append((techInfo.getGridY(), techInfo.getDescription(), iTech))
 		
-		for iX in range(23):
+		for iX in range(24):
 			if lTechs:
 				lTechs.append(("", -1))
 			
@@ -685,7 +729,6 @@ class CvPediaMain(CvPediaScreen.CvPediaScreen):
 		for iEra in range(iNumEras):
 			if not dBuildings[iEra]:
 				continue
-			
 			if lBuildings:
 				lBuildings.append(("", -1))
 			lBuildings.append((gc.getEraInfo(iEra).getDescription(), -1))
@@ -693,6 +736,7 @@ class CvPediaMain(CvPediaScreen.CvPediaScreen):
 			for szDescription, iBuilding in sorted(dBuildings[iEra]):
 				lBuildings.append((szDescription, iBuilding))
 		
+
 		self.list = lBuildings
 		self.placeItems(WidgetTypes.WIDGET_PEDIA_JUMP_TO_BUILDING, gc.getBuildingInfo)
 
@@ -740,7 +784,6 @@ class CvPediaMain(CvPediaScreen.CvPediaScreen):
 			
 			for szDescription, iBuilding in sorted(dBuildings[iEra]):
 				lBuildings.append((szDescription, iBuilding))
-		
 		self.list = lBuildings
 		self.placeItems(WidgetTypes.WIDGET_PEDIA_JUMP_TO_BUILDING, gc.getBuildingInfo)
 		
@@ -791,10 +834,8 @@ class CvPediaMain(CvPediaScreen.CvPediaScreen):
 			
 			for szDescription, iBuilding in sorted(dWonders[iEra]):
 				lBuildings.append((szDescription, iBuilding))
-		
 		self.list = lBuildings
 		self.placeItems(WidgetTypes.WIDGET_PEDIA_JUMP_TO_BUILDING, gc.getBuildingInfo)
-
 
 	def placeCivics(self):
 		lCivics = []
@@ -811,7 +852,6 @@ class CvPediaMain(CvPediaScreen.CvPediaScreen):
 
 		self.list = lCivics
 		self.placeItems(WidgetTypes.WIDGET_PEDIA_JUMP_TO_CIVIC, gc.getCivicInfo)
-
 
 
 	def placeProjects(self):

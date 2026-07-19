@@ -148,6 +148,11 @@ class CvPediaBuilding:
 		elif iHealth < 0:
 			szStats += u"+%d%c  " % (abs(iHealth), CyGame().getSymbolID(FontSymbols.UNHEALTHY_CHAR))
 
+		# Aeons - Immigration desire
+		iImmigrationDesire = BuildingInfo.getImmigrationDesireBuildings()
+		if iImmigrationDesire != 0:
+			szStats += u"+%d%c  " % (iImmigrationDesire, CyGame().getSymbolID(FontSymbols.IMMIGRATION_CHAR))
+
 		screen.appendListBoxString(panel, u"<font=3>" + szStats + u"</font>", WidgetTypes.WIDGET_GENERAL, 0, 0, CvUtil.FONT_LEFT_JUSTIFY)
 
 		# Cost
