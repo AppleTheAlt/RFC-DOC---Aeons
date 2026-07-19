@@ -130,6 +130,13 @@ class PlayerData:
 		self.iLastTurnAlive = 0
 		
 		self.resetStability()
+
+		# Aeons - Decadence
+		self.resetDecadence()
+
+	# Aeons
+	def resetDecadence(self):
+		self.iDecadence = 0
 		
 	def resetStability(self):
 		self.iStabilityLevel = iStabilityShaky
@@ -174,7 +181,6 @@ class PlayerData:
 			
 	def pushHappinessTrend(self, iValue):
 		self.lHappinessTrend.append(iValue)
-		
 		if len(self.lHappinessTrend) > 10:
 			self.lHappinessTrend.pop(0)
 			
@@ -241,9 +247,17 @@ class GameData:
 		# Rise
 		
 		self.births = []
+
+		# Aeons Mediterranean Hegemony - For Byzantium
+		self.iMediterraneanHegemon = iRome
 		
 		self.dFirstContactConquerors = dict((iCiv, False) for iCiv in lBioNewWorld)
-		self.dFirstContactMongols = dict((iCiv, True) for iCiv in lMongolCivs)
+		#self.dFirstContactMongols = dict((iCiv, True) for iCiv in lMongolCivs)
+		#self.dFirstContactArabia = dict((iCiv, True) for iCiv in lArabiaCivs)
+		#self.dFirstContactMisr = dict((iCiv, True) for iCiv in lFatimidCivs)
+		self.dFirstContactMongols = dict((iCiv, True) for iCiv in range(iNumCivs))
+		self.dFirstContactArabia = dict((iCiv, True) for iCiv in range(iNumCivs))
+		self.dFirstContactMisr = dict((iCiv, True) for iCiv in range(iNumCivs))
 		self.lTradingCompanyConquerorsTargets = appenddict()
 		
 		self.iBeforeObserverSlot = -1
@@ -278,12 +292,12 @@ class GameData:
 		self.iCongressTurn = -1
 		
 		self.bNoCongressOption = False
-		
+
 		self.dLastClaims = {}
 		
 		# Plague
 		
-		self.lGenericPlagueTurns = [-1] * 5
+		self.lGenericPlagueDates = [-1] * 4
 		
 		self.bNoPlagues = False
 		
@@ -336,6 +350,20 @@ class GameData:
 		
 	def setFirstContactMongols(self, iCiv, bValue):
 		self.dFirstContactMongols[iCiv] = bValue
+
+	def isFirstContactArabia(self, iCiv):
+		return self.dFirstContactArabia[iCiv]
+		
+	def setFirstContactArabia(self, iCiv, bValue):
+		self.dFirstContactArabia[iCiv] = bValue
+
+	def isFirstContactMisr(self, iCiv):
+		return self.dFirstContactMisr[iCiv]
+		
+	def setFirstContactMisr(self, iCiv, bValue):
+		self.dFirstContactMisr[iCiv] = bValue
+
+
 		
 	def getStabilityLevel(self, iPlayer):
 		return self.players[iPlayer].iStabilityLevel

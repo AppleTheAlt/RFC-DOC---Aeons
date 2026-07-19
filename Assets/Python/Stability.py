@@ -4,8 +4,10 @@ from Civics import *
 from Resurrection import *
 from Secession import *
 from Collapse import *
+from Decadence import * # Aeons
 
 from Events import handler, events
+
 
 import Periods as periods
 import Logging as log
@@ -18,6 +20,15 @@ import math
 tEraAdministrationModifier = (
 	100, # ancient
 	200, # classical
+
+	# Aeons - Leoreth's changes weakened admin bonuses
+	# Courthouse change to admin mod partially makes up for it though
+	#200, # medieval
+	#250, # renaissance
+	#300, # industrial
+	#350, # modern
+	#400, # future
+
 	150, # medieval
 	200, # renaissance
 	250, # industrial
@@ -26,13 +37,18 @@ tEraAdministrationModifier = (
 )
 
 dCivilizationAdministrationModifier = CivDict({
-	iNubia: -100,
 	iChina: -50,
-	iRome: 50,
-	iMisr: -50,
-	iOttomans: -50,
-	iTatars: -50,
+	iNubia: -100,
+	# Aeons - All made era-based
+	#iArabia: 50, #Aeons - Arabia gets a mild boost to delay their collapse to after Misr spawn.
+	#iByzantium: 50, #Aeons - Assist Byz in not collapsing before Arabs.
+	#iRome: 150, #Aeons - Rome gets extra admin modifier to prevent collapse - May weaken later
+	#iPortugal: 50, #Aeons - Help not collapse due to colonies
+	#iSpain: 50, #Aeons - Help not collapse due to colonies
+	iMisr: -50, 
 	iManchuria: -50,
+	iTatars: -50,
+	iOttomans: -50,
 }, 0)
 
 
@@ -83,7 +99,7 @@ def checkLostCitiesCollapses():
 
 @handler("BeginGameTurn")
 def updateHumanStability(iGameTurn):
-	if iGameTurn >= year(dBirth[active()]):
+	if iGameTurn >= year(dBirth[civ(active())]):
 		data.iHumanStability = calculateStability(active())[0]
 
 
@@ -101,6 +117,8 @@ def triggerCrisis(iPlayer):
 		return
 	
 	changeCrisisCountdown(iPlayer, turns(10))
+	
+	bFall = since(year(dFall[civ(iPlayer)])) >= 0
 	
 	# help AI to not immediately collapse
 	if not player(iPlayer).isHuman() and not isDecline(iPlayer):
@@ -136,7 +154,8 @@ def onCityRazed(city, iPlayer):
 	if player(iOwner).isBarbarian():
 		return
 
-	if player(iPlayer).isHuman() and civ(iPlayer) != iMongols:
+	# Aeons - Buganda and Elam can also safely raze cities
+	if player(iPlayer).isHuman() and civ(iPlayer) != iMongols and civ(iPlayer) != iBuganda and civ(iPlayer) != iElam:
 		iRazePenalty = -10
 		if city.getHighestPopulation() < 5 and not city.isCapital():
 			iRazePenalty = -2 * city.getHighestPopulation()
@@ -170,10 +189,9 @@ def onChangeWar(bWar, iTeam, iOtherTeam):
 				for iAttacker, iDefender in permutations(teamPlayers, otherTeamPlayers):
 					startWar(iAttacker, iDefender)
 					startWar(iDefender, iAttacker)
-
 		checkStability(iTeam, not bWar)
 		checkStability(iOtherTeam, not bWar)
-		
+
 @handler("revolution")
 def onRevolution(iPlayer):
 	checkStability(iPlayer)
@@ -310,7 +328,7 @@ def determineStabilityThreshold(iPlayer, iCurrentLevel):
 	if isDecline(iPlayer): 
 		iThreshold += 10
 		
-		# not that decline already reduces impact by 1
+		# note that decline already reduces impact by 1
 		if getImpact(iPlayer) == iImpactMarginal:
 			iThreshold += 5
 	
@@ -352,6 +370,7 @@ def checkStability(iPlayer, bPositive = False, iMaster = -1):
 	iStability, lStabilityTypes, lParameters = calculateStability(iPlayer)
 	iStabilityLevel = stability(iPlayer)
 	bHuman = player(iPlayer).isHuman()
+	#bFall = isDecline(iPlayer)
 	
 	iNewStabilityLevel = determineStabilityLevel(iPlayer, iStabilityLevel, iStability)
 	
@@ -396,7 +415,7 @@ def domesticCrisis(iPlayer):
 			city.changeOccupationTimer(iCrisisTurns)
 			
 		message(iPlayer, 'TXT_KEY_STABILITY_DOMESTIC_CRISIS', iCrisisTurns, color=iRed)
-		
+
 def calculatePlayerAdministration(iPlayer):
 	return cities.owner(iPlayer).sum(calculateAdministration) + 10
 
@@ -406,20 +425,50 @@ def calculateAdministration(city):
 	if not city.isPlayerCore(iPlayer):
 		return 0
 	
-	iPopulation = city.getPopulation()
+	iPopulation = city.getPopulation() + (city.getHurryPercentAnger() + city.getConscriptPercentAnger()) * city.getPopulation() / 1000
 	iAdministrationModifier = getAdministrationModifier(iPlayer)
-	
+
 	for plot in plots.city_radius(city):
 		if plot.getImprovementType() in [iVillage, iTown]:
 			workingCity = plot.getWorkingCity()
 			if workingCity and not workingCity.isNone() and workingCity.getID() == city.getID():
 				iPopulation += 1
-	
+
+	# Aeons - Trajan's Column effect - Reduced overextension stability effect
+	if player(city.getOwner()).isHasBuildingEffect(iTrajansColumn):
+		iAdministrationModifier += 50
+
+
 	if city.hasBuilding(unique_building(iPlayer, iCourthouse)):
 		iAdministrationModifier += 50
-	
+
+	# Aeons - Council
+	if city.hasBuilding(unique_building(iPlayer, iCouncil)):
+		iAdministrationModifier += 50
+
 	if civ(iPlayer) == iOttomans and player(iPlayer).getCurrentEra() in [iMedieval, iRenaissance]:
 		iAdministrationModifier += 100
+
+	# Aeons - Help colonisers not collapse
+	if civ(iPlayer) in [iPortugal,iSpain] and player(iPlayer).getCurrentEra() == iRenaissance:
+		iAdministrationModifier += 50
+	if civ(iPlayer) == iEngland and player(iPlayer).getCurrentEra() in [iRenaissance, iIndustrial]:
+		iAdministrationModifier += 50
+		
+	# Extra Help for AI England and Portugal
+	#if civ(iPlayer) == iEngland and player(iPlayer).getCurrentEra() == iIndustrial and not player(iPlayer).isHuman():
+	#	iAdministrationModifier += 50
+	if civ(iPlayer) == iPortugal and player(iPlayer).getCurrentEra() == iRenaissance and not player(iPlayer).isHuman():
+		iAdministrationModifier += 50
+	
+	# Aeons - Help Rome and Byz maintain empires for at least a while
+	if civ(iPlayer) == iRome and player(iPlayer).getCurrentEra() == iClassical:
+		iAdministrationModifier += 50
+	# Extra for AI Rome
+	if civ(iPlayer) == iRome and player(iPlayer).getCurrentEra() == iClassical and not player(iPlayer).isHuman():
+		iAdministrationModifier += 100
+	if civ(iPlayer) == iByzantium and player(iPlayer).getCurrentEra() in [iClassical, iMedieval]:
+		iAdministrationModifier += 50
 
 	iAdministration = iAdministrationModifier * iPopulation / 100
 	
@@ -427,6 +476,7 @@ def calculateAdministration(city):
 		iAdministration += iPopulation
 	
 	return iAdministration
+
 
 def calculatePlayerSeparatism(iPlayer):
 	return cities.owner(iPlayer).sum(calculateSeparatism)
@@ -441,6 +491,7 @@ def getSeparatismModifier(iPlayer, city):
 	
 	bHistorical = plot.getPlayerSettlerValue(iPlayer) > 0
 	bConquest = plot.getPlayerWarValue(iPlayer) > 1
+	#bFall = since(year(dFall[iCiv])) >= 0
 	bTotalitarianism = civic.iSociety == iTotalitarianism
 	bExpansionExceptions = (bHistorical and iCiv in [iTurks, iMongols, iManchuria] and not isDecline(iPlayer)) or bTotalitarianism
 	
@@ -449,7 +500,7 @@ def getSeparatismModifier(iPlayer, city):
 	iCulturePercent = iTotalCulture != 0 and 100 * plot.getCulture(iPlayer) / iTotalCulture or 0
 	
 	iTurnsOwned = since(city.getGameTurnAcquired())
-	
+
 	# recent conquests in conquest area
 	if bConquest and city.getOriginalCiv() != iCiv and iTurnsOwned <= turns(10):
 		return 0
@@ -503,7 +554,7 @@ def calculateSeparatism(city):
 		return 0
 	
 	iModifier = getSeparatismModifier(iPlayer, city)
-	iPopulation = city.getPopulation() + (city.getHurryPercentAnger() + city.getConscriptPercentAnger()) * city.getPopulation() / 1000
+	iPopulation = city.getPopulation()
 	
 	if city.isOccupation():
 		iPopulation -= city.getTotalPopulationLoss()
@@ -545,9 +596,9 @@ def calculateStability(iPlayer):
 	
 	iAdministration = calculatePlayerAdministration(iPlayer)
 	iSeparatism = calculatePlayerSeparatism(iPlayer)
-	
+
 	bDecline = isDecline(iPlayer)
-	
+
 	iRecentConquestTurns = 20
 	if iElective in civics:
 		iRecentConquestTurns = 30
@@ -584,6 +635,7 @@ def calculateStability(iPlayer):
 			if bNonStateReligion: 
 				if iStateReligion >= 0 and city.isHasReligion(iStateReligion): iDifferentReligionPopulation += iPopulation / 2
 				else: iDifferentReligionPopulation += iPopulation
+				
 	
 	iCurrentPower = pPlayer.getPower()
 	iPreviousPower = pPlayer.getPowerHistory(since(turns(10)))
@@ -674,6 +726,18 @@ def calculateStability(iPlayer):
 	lParameters[iParameterHappiness] = iHappinessStability
 	
 	iDomesticStability += iHappinessStability
+
+	# Aeons - Decadence
+	iDecadenceStability = -data.players[iPlayer].iDecadence
+
+	# Ignore first three Decadence stab hits
+	if 	data.players[iPlayer].iDecadence < 4:
+		iDecadenceStability = 0
+
+	lParameters[iParameterDecadence] = iDecadenceStability
+
+	iDomesticStability += iDecadenceStability
+
 	
 	# Civics (combinations)
 	iCivicCombinationStability = getCivicStability(iPlayer)
@@ -693,34 +757,34 @@ def calculateStability(iPlayer):
 	if iDeification in civics:
 		if iCurrentEra <= iClassical: iCivicEraTechStability += 2
 		else: iCivicEraTechStability -= 2 * (iCurrentEra - iClassical)
-	
+		
 	if iRepublic in civics:
 		if iCurrentEra <= iClassical: iCivicEraTechStability += 2
 		elif iCurrentEra >= iIndustrial: iCivicEraTechStability -= 5
-	
+		
 	if iIsolationism in civics:
-		if iCurrentEra >= iGlobal: iCivicEraTechStability -= (iCurrentEra - iRenaissance) * 4
-	
+		if iCurrentEra >= iGlobal: iCivicEraTechStability -= (iCurrentEra - iRenaissance) * 3
+		
 	if tPlayer.isHasTech(iRepresentation):
 		if (iRepublic, iDemocracy) not in civics and (iStratocracy, iConstitution) not in civics: iCivicEraTechStability -= 5
-	
+		
 	if tPlayer.isHasTech(iCivilRights):
 		if (iSlavery, iManorialism, iCasteSystem) in civics: iCivicEraTechStability -= 5
-	
+		
 	if tPlayer.isHasTech(iEconomics):
 		if (iReciprocity, iRedistribution, iMerchantTrade) in civics: iCivicEraTechStability -= 5
-	
+		
 	if tPlayer.isHasTech(iNationalism):
 		if (iNationhood, iMultilateralism) not in civics: iCivicEraTechStability -= 2
 		if (iHegemony, iThalassocracy) in civics: iCivicEraTechStability -= 3
-	
+		
 	if tPlayer.isHasTech(iDoctrine):
 		if (iAnimism, iDeification) in civics: iCivicEraTechStability -= 5
 	
 	if tPlayer.isHasTech(iStatecraft):
 		if (iPersonalism, iCitizenship, iVassalage) in civics: iCivicEraTechStability -= 3
 
-	
+
 	if iCurrentEra <= iMedieval:
 		if iStateReligion == iHinduism:
 			if iCasteSystem in civics: iCivicEraTechStability += 3
@@ -737,12 +801,10 @@ def calculateStability(iPlayer):
 			
 		elif iStateReligion == iBuddhism:
 			if iMonasticism in civics: iCivicEraTechStability += 2
-	
-		
+
 	if iThalassocracy in civics:
 		if cities.owner(iPlayer).coastal().count() * 2 < player(iPlayer).getNumCities():
 			iCivicEraTechStability -= 4
-	
 		
 	if not player(iPlayer).isHuman() and iCivicEraTechStability < 0: iCivicEraTechStability /= 2
 	
@@ -786,9 +848,8 @@ def calculateStability(iPlayer):
 			if iTheocracy in civics:
 				iOnlyStateReligionRatio = 100 * iOnlyStateReligionPopulation / iTotalPopulation
 				iReligionStability += (iOnlyStateReligionRatio - iOnlyStateReligionThreshold) / 10
-	
-	iReligionStability = max(-iNumCities, min(iNumCities, iReligionStability))
-	
+
+	iReligionStability = max(-iNumCities, min(iNumCities, iReligionStability))	
 	lParameters[iParameterReligion] = iReligionStability
 		
 	iDomesticStability += iReligionStability
@@ -903,7 +964,7 @@ def calculateStability(iPlayer):
 	iWarSuccessStability = 0 # war success (conquering cities and defeating units)
 	iWarWearinessStability = 0 # war weariness in comparison to war length
 	iBarbarianLossesStability = 0 # like previously
-	
+
 	lEnemyWarTrends = []
 	
 	iOurSuccess = 0
@@ -939,15 +1000,14 @@ def calculateStability(iPlayer):
 	elif iBaseWarSuccessStability < 0 and iOurSuccess > iTheirSuccess: iBaseWarSuccessStability /= 2
 	
 	if iBaseWarSuccessStability > 0: iBaseWarSuccessStability /= 2
-	
 	iWarSuccessStability += iBaseWarSuccessStability
 			
 	# war weariness stability
 	iBaseWarWearinessStability = (iTheirWarWeariness - iOurWarWeariness) / (4000 * (iDurationModifier + 1))
 	if iBaseWarWearinessStability > 0: iBaseWarWearinessStability = 0
-	
+
 	iWarWearinessStability += iBaseWarWearinessStability
-			
+
 	lParameters[iParameterWarSuccess] = iWarSuccessStability
 	lParameters[iParameterWarWeariness] = iWarWearinessStability
 	
@@ -1291,4 +1351,5 @@ def isDecline(iPlayer):
 		return False
 	
 	return True
+
 		

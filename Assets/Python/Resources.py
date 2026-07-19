@@ -37,7 +37,7 @@ def setup():
 	
 	global dRemovedFeatures
 	dRemovedFeatures = TileDict(dRemovedFeaturesDict, year)
-	
+
 	global dTerrains
 	dTerrains = TileDict(dTerrainsDict, year)
 	
@@ -54,7 +54,6 @@ def setup():
 
 dResourcesDict = {
 	(103, 42) : (-1000, iHorse),	# Gujarat
-	(90, 54)  : (-800,  iIron),     # Caucasus
 	(78, 44)  : (-600,  iCotton),	# Egypt
 	(92, 52)  : (-400,  iRice),     # Mazandaran
 	(127, 44) : (-200,  iRice),     # South China
@@ -62,7 +61,6 @@ dResourcesDict = {
 	(125, 45) : (-200,  iCitrus),   # South China
 	(129, 47) : (-200,  iCitrus),   # South China
 	(124, 46) : (-200,  iSilk),     # South China
-	(124, 43) : (-200,  iSilk),     # South China
 	(128, 50) : (-200,  iClam),     # South China
 	(85, 51)  : (200,   iCitrus),   # Levant
 	(83, 45)  : (200,   iCitrus),   # Levant
@@ -101,6 +99,7 @@ dResourcesDict = {
 	(83, 19)  : (1100,  iSugar),	# Mozambique
 	(92, 60)  : (1200,  iSilk),     # Volga Delta
 	(121, 47) : (1200,  iOpium),    # Sichuan
+	(87, 33)  : (1250, iIron),		# Aeons - Somalia (Adal Spawn)
 	(52, 44)  : (1400,  iSugar),	# Madeira
 	(112, 43) : (1400,  iCotton),   # Bengal
 	(130, 48) : (1400,  iFish),     # South China
@@ -123,7 +122,7 @@ dResourcesDict = {
 	(33, 37)  : (1600,  iCow),      # Venezuela
 	(24, 50)  : (1600,  iCow),      # Alabama
 	(15, 46)  : (1600,  iCow),      # Mexico
-	(36, 9)   : (1600,  iCow),      # Argentina
+	(36, 9)  : (1600,  iCow),       # Argentina
 	(39, 11)  : (1600,  iCow),      # Argentina
 	(16, 48)  : (1600,  iHorse),    # Mexico
 	(28, 53)  : (1600,  iHorse),    # Carolinas
@@ -142,8 +141,8 @@ dResourcesDict = {
 	(46, 30)  : (1650,  iCotton),   # Northern Brazil
 	(47, 25)  : (1650,  iCocoa),    # Northern Brazil
 	(17, 53)  : (1700,  iWheat),    # Nebraska
-	(19, 63)  : (1700,  iWheat),    # Manitoba
-	(14, 64)  : (1700,  iWheat),    # Alberta
+ 	(19, 63)  : (1700,  iWheat),    # Manitoba
+ 	(14, 64)  : (1700,  iWheat),    # Alberta
 	(20, 56)  : (1700,  iWheat),    # Iowa
 	(37, 13)  : (1700,  iWheat),    # Argentina
 	(126, 52) : (1700,  iCorn),     # China
@@ -169,7 +168,7 @@ dResourcesDict = {
 	(33, 35)  : (1700,  iHorse),    # Venezuela
 	(37, 12)  : (1700,  iHorse),    # Argentina
 	(79, 70)  : (1700,  iFish),     # Ingria
-	(81, 30)  : (1700,  iBanana),   # Central Africa
+	(81, 30)  : (600,   iBanana),   # Central Africa
 	(21, 41)  : (1700,  iBanana),   # Guatemala
 	(33, 42)  : (1700,  iCoffee),   # Hispaniola
 	(46, 25)  : (1700,  iCoffee),	# Eastern Brazil
@@ -181,9 +180,11 @@ dResourcesDict = {
 	(78, 55)  : (1700,  iTobacco),  # Thrace
 	(103, 38) : (1700,  iTobacco),  # India
 	(131, 44) : (1700,  iTea),      # Taiwan
+	(78, 11)  : (1600,  iWheat),    # South Africa
 	(87, 62)  : (1750,  iWheat),    # Don
 	(58, 66)  : (1750,  iPotato),   # England
 	(60, 62)  : (1750,  iPotato),   # France
+	(66, 35)  : (1750,  iRice),   	# Aeons - Nigeria (Buff Sokoto, and simulate population growth in nigeria)
 	(69, 64)  : (1750,  iPotato),   # Germany
 	(74, 64)  : (1750,  iPotato),   # Poland
 	(25, 51)  : (1750,  iCotton),	# Georgia
@@ -192,8 +193,10 @@ dResourcesDict = {
 	(23, 51)  : (1750,  iCotton),	# Alabama
 	(73, 11)  : (1750,  iWine),     # South Africa
 	(41, 17)  : (1750,  iWine),     # Southern Brazil
+	(68, 32)  : (1750,  iCocoa),    # Nigeria
+	(76, 15)  : (1800,  iHorse),    # Aeons - Horses for Boers, removed cow that was previously there
 	(128, 62) : (1800,  iCorn),     # Manchuria
-	(82, 69)  : (1800,  iPotato),   # Russia
+	(80, 69)  : (1800,  iPotato),   # Russia
 	(87, 65)  : (1800,  iPotato),   # Russia
 	(124, 51) : (1800,  iPotato),   # China
 	(139, 11) : (1800,  iSheep),    # Australia
@@ -219,8 +222,8 @@ dResourcesDict = {
 	(137, 62) : (1850,  iCow),      # Hokkaido
 	(84, 61)  : (1850,  iIron),     # Donbas
 	(8, 53)   : (1850,  iCow),      # California
-	(142, 17) : (1850,  iCow),		# Queensland
 	(138, 12) : (1850,  iHorse),	# Australia
+	(142, 17) : (1850,  iCow),		# Queensland
 	(8, 52)   : (1850,  iSheep),    # California
 	(8, 54)   : (1850,  iCitrus),   # California
 	(12, 57)  : (1850,  iPotato),	# Idaho
@@ -231,8 +234,9 @@ dResourcesDict = {
 	(83, 27)  : (1850,  iCoffee),   # Kenya
 	(81, 24)  : (1850,  iCoffee),   # Tanzania
 	(58, 32)  : (1850,  iCocoa),    # Ivory Coast
-	(61, 32)  : (1850,  iCocoa),    # Ghana
-	(68, 32)  : (1850,  iCocoa),    # Nigeria
+	(60, 31)  : (1800,  iCocoa),    # Ghana
+	(62, 31)  : (1800,  iCocoa),    # Ghana
+	(68, 32)  : (1800,  iCocoa),    # Nigeria
 	(69, 29)  : (1850,  iCocoa),    # Cameroon
 	(82, 20)  : (1850,  iTobacco),  # Malawi
 	(122, 48) : (1850,  iTobacco),  # Sichuan
@@ -257,7 +261,7 @@ dResourcesDict = {
 	(77, 27)  : (1880,  iCocoa),    # Congo
 	(77, 29)  : (1880,  iCoffee),	# Congo
 	(90, 61)  : (1900,  iPotato),	# Volga
-	(11, 52)  : (1900,  iCow),      # Arizona
+	(11, 52)  : (1900,  iCow),		# Arizona
 	(138, 9)  : (1900,  iWheat),    # Victoria
 	(26, 49)  : (1900,  iCitrus),   # Florida
 	(83, 29)  : (1900,  iTea),      # Kenya
@@ -287,9 +291,14 @@ dSpawnResourcesDict = {
 }
 
 dRemovedResourcesDict = {
+	(78, 48)  : -1300, # Aeons - Stone in Crete
+	(89, 46)  : -1200, # Aeons - Copper in Sumer
+	(79, 48)  : -1100, # Aeons - Fish in Crete
+	(91, 43)  : -800,  # Aeons - Fish in Mesopotamia - In the past the Persian Gulf was larger, but Ur became inland
 	(88, 51)  : -200, # Olives in Assyria
 	(75, 51)  :  -50, # Silver in Greece
 	(82, 39)  :  -50, # Gold in Nubia
+	(77, 55)  :  -50, # Gold in Macedonia
 	(74, 44)  :  200, # Spices (silphium) in Cyrenaica
 	(87, 49)  :  200, # Horses in Syria
 	(125, 53) :  200, # Copper in North China
@@ -317,8 +326,15 @@ dRemovedResourcesDict = {
 	(32, 42)  : 1650, # Gold in Hispaniola
 	(47, 24)  : 1650, # Dye (brazilwood) in Brazil
 	(110, 49) : 1750, # Gold in Tibet
-	(83, 55)  : 1850, # Spices (saffron) in Anatolia
-	(84, 55)  : 1850, # Spices (saffron) in Anatolia
+	(83, 58)  : 1850, # Spices (saffron) in Anatolia
+	(30, 22) : 1890, # Fertilizer (Guano), Peru
+	(32, 38) : 1890, # Fertilizer (Guano), Peru
+	(33, 17) : 1900, # Fertilizer (Guano), Peru
+	(66, 51) : 1910, # Fertilizer (Guano), Italy
+	(72, 15) : 1910, # Fertilizer (Guano), Namibia
+	(75, 11) : 1910, # Fertilizer (Guano), South Africa
+	(81, 43) : 1910, # Fertilizer (Guano), Egypt
+
 }
 
 dFeaturesDict = {
@@ -372,19 +388,18 @@ dConquerorPlotTypesDict = {
 }
 
 dCivGroupResourcesDict = {
-	(63, 56) : ((iGreece, iRome, iFrance), iOlives, 490),
-	(63, 55) : ((iGreece, iRome, iFrance), iWine, 490),
-	(60, 56) : ((iGreece, iRome, iFrance), iWine, 490),
-	(63, 59) : ((iGreece, iRome, iFrance), iWine, 490),
-	(65, 60) : ((iGreece, iRome, iFrance), iWine, 490),
-	(72, 59) : ((iGreece, iRome, iFrance), iWine, 490),
+	(63, 56) : (iCivGroupMediterranean, iOlives, 490),
+	(63, 55) : (iCivGroupMediterranean, iWine, 490),
+	(60, 56) : (iCivGroupMediterranean, iWine, 490),
+	(63, 59) : (iCivGroupMediterranean, iWine, 490),
+	(65, 60) : (iCivGroupMediterranean, iWine, 490),
+	(72, 59) : (iCivGroupMediterranean, iWine, 490),
 }
-
 
 @handler("BeginGameTurn")
 def removeResources():
-	for x, y in dRemovedResources[game.getGameTurn()]:
-		removeResource(x, y)
+ 	for x, y in dRemovedResources[game.getGameTurn()]:
+ 		removeResource(x, y)
 
 
 @handler("BeginGameTurn")
@@ -392,14 +407,12 @@ def createResources():
 	for (x, y), iResource in dResources[game.getGameTurn()]:
 		createResource(x, y, iResource)
 
-
 @handler("BeginGameTurn")
 def createCivGroupResources():
 	for _, lResources in dCivGroupResources:
 		for (x, y), iResource, iYear in lResources:
 			if year(iYear) == game.getGameTurn():
 				createResource(x, y, iResource)
-
 
 @handler("prepareBirth")
 def createResourcesBeforeBirth(iCiv):
@@ -419,12 +432,10 @@ def removeColombianJungle(iPlayer):
 	if civ(iPlayer) == iColombia:
 		plot(28, 31).setFeatureType(-1, 0)
 
-
 @handler("BeginGameTurn")
 def createTerrains():
 	for tile, iTerrain in dTerrains[game.getGameTurn()]:
 		plot(tile).setTerrainType(iTerrain, True, True)
-
 
 @handler("BeginGameTurn")
 def createFeatures():
@@ -444,7 +455,6 @@ def changeConquerorPlotTypes(iConquerorPlayer, iTargetPlayer):
 	for tile, type in dConquerorPlotTypes[iTargetCiv]:
 		plot(tile).setPlotType(type, True, True)
 
-
 @handler("BeginGameTurn")
 def changeConquerorPlotTypesLate(iGameTurn):
 	if iGameTurn == year(1650):
@@ -453,11 +463,10 @@ def changeConquerorPlotTypesLate(iGameTurn):
 				for tile, type in dConquerorPlotTypes[iCiv]:
 					plot(tile).setPlotType(type, True, True)
 
-
 @handler("cityAcquired")
 def spreadCivGroupResourcesOnConquest(iOwner, iPlayer, city, bConquest):
-	if bConquest:
-		spreadCivGroupResources(city)
+ 	if bConquest:
+ 		spreadCivGroupResources(city)
 
 
 @handler("cityBuilt")
@@ -466,8 +475,8 @@ def spreadCivGroupResourcesOnFounding(city):
 
 
 def spreadCivGroupResources(city):
-	for tCivs, lResources in dCivGroupResources:
-		if city.getCivilizationType() in tCivs:
+	for iCivGroup, lResources in dCivGroupResources:
+		if city.getCivilizationType() in dCivGroups[iCivGroup]:
 			for (x, y), iResource, _ in lResources:
 				if city.getRegionID() == plot(x, y).getRegionID():
 					createResource(x, y, iResource)
@@ -477,10 +486,12 @@ def setupScenarioResources():
 	setup()
 	iStartTurn = scenarioStartTurn()
 	
+
 	for iTurn, lResources in dResources:
 		if iTurn <= iStartTurn:
 			for (x, y), iResource in lResources:
 				createResource(x, y, iResource)
+
 	
 	for iCiv, lResources in dSpawnResources:
 		if year(dBirth[iCiv]) <= iStartTurn and any(iEnd >= iStartTurn for iStart, iEnd in dResurrections[iCiv]):
@@ -506,12 +517,12 @@ def setupScenarioResources():
 		if iTurn <= iStartTurn:
 			for x, y in lFeatures:
 				plot(x, y).setFeatureType(-1, 0)
-				
+	
 	for iTurn, lTerrains in dTerrains:
 		if iTurn <= iStartTurn:
 			for (x, y), iTerrain in lTerrains:
 				plot(x, y).setTerrainType(iTerrain, True, True)
-	
+
 	if year(700) <= iStartTurn:
 		plot(41, 58).setFeatureType(-1, 0)
 				
@@ -521,37 +532,35 @@ def setupScenarioResources():
 				plot(x, y).setPlotType(iPlotType, True, True)
 	
 
-
 def createAllResources():
-	for lResources in dResources.values():
-		for (x, y), iResource in lResources:
-			createResource(x, y, iResource)
-	
+ 	for lResources in dResources.values():
+ 		for (x, y), iResource in lResources:
+ 			createResource(x, y, iResource)
 	
 
 # Leoreth: bonus removal alerts by edead
 def createResource(iX, iY, iBonus, createTextKey="TXT_KEY_MISC_DISCOVERED_NEW_RESOURCE", removeTextKey="TXT_KEY_MISC_EVENT_RESOURCE_EXHAUSTED"):
 	"""Creates a bonus resource and alerts the plot owner"""
-	
+
 	# Java special case
 	if (iX, iY) == (125, 24):
 		if plot_(iX, iY).isCity():
 			iX, iY = 126, 25
-	
+
 	plot = plot_(iX, iY)
 	
 	iRemovedBonus = plot.getBonusType(-1) # for alert
 	
 	if iRemovedBonus == iBonus:
 		return
-		
+
 	iBonusVariety = plot.getBaseBonusVarietyType()
 	
 	plot.setBonusType(iBonus)
-	
+			
 	if iBonusVariety >= 0 and iRemovedBonus == -1:
 		plot.setBonusVarietyType(iBonusVariety)
-			
+
 	if iBonus == -1:
 		iImprovement = plot.getImprovementType()
 		if iImprovement >= 0:

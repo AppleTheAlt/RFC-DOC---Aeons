@@ -29,13 +29,13 @@ def secedeCities(iPlayer, secedingCities, bRazeMinorCities = False):
 	
 	for city in destroyedCities:
 		cityPlot = plot(city)
-		cn.clearChanges(city)
 		player(iBarbarian).disband(city)
 		cityPlot.setCulture(iPlayer, 0, True)
 		
 		# free up ruins for Indraprastha spawn
 		if location(cityPlot) == tDelhi:
 			cityPlot.setImprovementType(-1)
+		cn.clearChanges(city)
 	
 	# determine who has the best claim on each city
 	dClaimedCities = appenddict()
@@ -44,8 +44,9 @@ def secedeCities(iPlayer, secedingCities, bRazeMinorCities = False):
 		dClaimedCities[iClaim].append(city)
 		
 	lMinorCities = dClaimedCities.pop(-1, [])
-	
+		
 	for iClaimant, claimedCities in dClaimedCities.items():
+		game.setUpdatePlotGroups(False)
 		# assign cities to living civs
 		if player(iClaimant).isExisting():
 			for city in claimedCities:
@@ -60,13 +61,22 @@ def secedeCities(iPlayer, secedingCities, bRazeMinorCities = False):
 		# else cities go to minors
 		else:
 			lMinorCities.extend(claimedCities)
-			
+		
+		game.setUpdatePlotGroups(True)
+		for p in plots.owner(iClaimant):
+			p.updatePlotGroup()
+	
 	# secede remaining cities to minors
 	lPossibleMinors = getPossibleMinors(iPlayer)
 	for iMinor, minorCities in cities.of(lMinorCities).divide(lPossibleMinors):
+		game.setUpdatePlotGroups(False)
 		for city in minorCities:
 			secedeCity(city, iMinor, not bComplete, iArmyPercent)
-	
+			
+		game.setUpdatePlotGroups(True)
+		for p in plots.owner(iMinor):
+			p.updatePlotGroup()
+		
 	# notify for partial secessions
 	if not bComplete and player().canContact(iPlayer):
 		message(active(), 'TXT_KEY_STABILITY_CITIES_SECEDED', fullname(iPlayer), len(secedingCities))
@@ -81,8 +91,13 @@ def canBeRazed(city):
 	if city.getNumActiveWorldWonders() > 0:
 		return False
 
+
 	# always raze Harappan, Hittite cities, except holy city
-	if city.getCivilizationType() in [iHarappa, iHittites] and city.getOriginalCiv() in [iHarappa, iHittites] and not player(city).isHuman():
+	if city.getCivilizationType() in [iHarappa, iHittites, iScythia, iGoths, iVandals] and city.getOriginalCiv() in [iHarappa, iHittites, iScythia, iGoths, iVandals] and not player(city).isHuman():
+		return True
+
+	# ALL Hunnic cities are razed, even if not originally founded by Huns
+	if civ(city) == iHuns and not player(city).isHuman():
 		return True
 	
 	if city.getPopulation() >= 10:
@@ -106,7 +121,12 @@ def canBeRazed(city):
 
 def getCityClaim(city):
 	iOwner = city.getOwner()
-	possibleClaims = players.major().existing().without(iOwner).past_birth().before_fall()
+	# exclude fallen civs that are NOT resurrected versions
+	possibleClaims = players.major().existing().without(iOwner).past_birth().where(lambda p: year() < year(dFall[civ(p)]) or data.civs[civ(p)].iResurrections > 0)
+
+	# exclude Iran from getting any Timurid cities other than from its spawn-flip, during the partial collapse to Mughal Indian phase
+	if civ(iOwner) == iTimurids and year() < year(1650):
+		possibleClaims = possibleClaims.where(lambda p: civ(p) != iIran)
 	
 	# claim based on core territory
 	coreClaims = possibleClaims.where(lambda p: city.isPlayerCore(p))
@@ -133,15 +153,15 @@ def getCityClaim(city):
 		iWarClaim = warClaims.maximum(lambda p: team(p).AI_getWarSuccess(team(iOwner).getID()) - team(iOwner).AI_getWarSuccess(team(p).getID()))
 		return civ(iWarClaim)
 	
-	# claim for dead civilisation that can be resurrected
-	resurrections = civs.major().before_fall().without(iOwner).where(canRespawn).where(lambda c: city in cities.respawn(c))
+	# claim for dead civilisation that can be resurrected --> ignore whether the civ is "fallen" or not, due to respawn/reskins
+	resurrections = civs.major().without(iOwner).where(canRespawn).where(lambda c: city in cities.respawn(c))
 	if resurrections:
 		return resurrections.maximum(lambda c: (city.isCore(c), plot(city).getSettlerValue(c)))
 	
 	# holy cities are always assigned to independents
 	if city.isHolyCity():
 		return iIndependent
-	
+
 	return -1
 
 def hasWarClaim(iPlayer, city):

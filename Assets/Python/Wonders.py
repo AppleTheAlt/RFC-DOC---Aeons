@@ -4,6 +4,7 @@ from Locations import *
 from Events import handler
 
 
+
 @handler("techTraded")
 def universityOfSankoreEffect(iFromPlayer, iToPlayer, iTech):
 	if player(iToPlayer).isHasBuildingEffect(iUniversityOfSankore):
@@ -33,6 +34,16 @@ def escorialEffect(iPlayer, city):
 			player(iPlayer).changeGold(iGold)
 
 
+# Aeons
+@handler("cityBuilt")
+def royalRovaFoundCity(city):
+	iPlayer = city.getOwner()
+	if player(iPlayer).isHasBuildingEffect(iRoyalRova):
+			createRoleUnit(iPlayer, city.plot(), iDefend, 1)
+			createRoleUnit(iPlayer, city.plot(), iWork, 1)
+
+
+
 @handler("combatResult")
 def brandenburgGateEffect(winningUnit, losingUnit):
 	if player(losingUnit).isHasBuildingEffect(iBrandenburgGate):
@@ -51,13 +62,26 @@ def motherlandCallsEffect(winningUnit, losingUnit):
 				player(iLoser).changeConscriptCount(-1)
 				message(iLoser, 'TXT_KEY_BUILDING_MOTHERLAND_CALLS_EFFECT', losingUnit.getName(), city.getName())
 
+#Narekavank - gain great prophet points when you lose a unit
+@handler("combatResult")
+def narekavankEffect(winningUnit, losingUnit):
+	iLoser = losingUnit.getOwner()
+	if player(iLoser).isHasBuildingEffect(iNarekavank):
+		wonder_city = cities.owner(player(iLoser)).building(iNarekavank).one()
+		if wonder_city:
+			iGreatPeoplePoints = 12
+				
+			wonder_city.changeGreatPeopleProgress(iGreatPeoplePoints)
+			wonder_city.changeGreatPeopleUnitProgress(iGreatProphet, iGreatPeoplePoints)
+
+
 
 @handler("EndPlayerTurn")
 def orientalPearlTowerOnEndPlayerTurn(iGameTurn, iPlayer):
-	if player(iPlayer).isHasBuildingEffect(iOrientalPearlTower):
-		wonder_city = cities.owner(iPlayer).building(iOrientalPearlTower).one()
-		if wonder_city:
-			orientalPearlTowerEffect(wonder_city)
+ 	if player(iPlayer).isHasBuildingEffect(iOrientalPearlTower):
+ 		wonder_city = cities.owner(iPlayer).building(iOrientalPearlTower).one()
+ 		if wonder_city:
+ 			orientalPearlTowerEffect(wonder_city)
 
 
 @handler("buildingBuilt")
@@ -97,7 +121,7 @@ def spaceElevatorEffect(city, unit):
 			city.changeBuildingYieldChange(infos.building(iSpaceElevator).getBuildingClassType(), YieldTypes.YIELD_COMMERCE, 1)
 
 
-# Space Elevator effect: +5 commerce per space project built
+# Space Elevator effect: +5 commerce per space project Built
 @handler("projectBuilt")
 def spaceElevatorProjectEffect(city, iProject):
 	if infos.project(iProject).isSpaceship():
@@ -114,11 +138,10 @@ def porcelainTowerEffect(city, iBuilding):
 
 @handler("EndPlayerTurn")
 def empireStateBuildingOnEndTurn(iGameTurn, iPlayer):
-	if player(iPlayer).isHasBuildingEffect(iEmpireStateBuilding):
-		wonder_city = cities.owner(iPlayer).building(iEmpireStateBuilding).one()
-		if wonder_city:
-			empireStateBuildingEffect(wonder_city)
-	
+ 	if player(iPlayer).isHasBuildingEffect(iEmpireStateBuilding):
+ 		wonder_city = cities.owner(iPlayer).building(iEmpireStateBuilding).one()
+ 		if wonder_city:
+ 			empireStateBuildingEffect(wonder_city)	
 
 @handler("buildingBuilt")
 def empireStateBuildingWhenBuilt(city, iBuilding):
@@ -128,6 +151,41 @@ def empireStateBuildingWhenBuilt(city, iBuilding):
 
 def empireStateBuildingEffect(city):
 	city.setBuildingCommerceChange(infos.building(iEmpireStateBuilding).getBuildingClassType(), CommerceTypes.COMMERCE_GOLD, city.getPopulation())
+
+@handler("EndPlayerTurn")
+def alhambraOnEndPlayerTurn(iGameTurn, iPlayer):
+ 	if player(iPlayer).isHasBuildingEffect(iAlhambra):
+ 		wonder_city = cities.owner(iPlayer).building(iAlhambra).one()
+ 		if wonder_city:
+ 			alhambraEffect(wonder_city)
+	
+
+@handler("buildingBuilt")
+def alhambraWhenBuilt(city, iBuilding):
+	if iBuilding == iAlhambra:
+		alhambraEffect(city)
+	
+
+def alhambraEffect(city):
+	city.setBuildingYieldChange(infos.building(iAlhambra).getBuildingClassType(), YieldTypes.YIELD_PRODUCTION, city.getPopulation()/2)
+
+@handler("EndPlayerTurn")
+def abuSimbelOnEndPlayerTurn(iGameTurn, iPlayer):
+ 	if player(iPlayer).isHasBuildingEffect(iAbuSimbel):
+ 		wonder_city = cities.owner(iPlayer).building(iAbuSimbel).one()
+ 		if wonder_city:
+ 			abuSimbelEffect(wonder_city)
+	
+
+@handler("buildingBuilt")
+def abuSimbelWhenBuilt(city, iBuilding):
+	if iBuilding == iAbuSimbel:
+		abuSimbelEffect(city)
+	
+
+def abuSimbelEffect(city):
+	city.setBuildingYieldChange(infos.building(iAbuSimbel).getBuildingClassType(), YieldTypes.YIELD_COMMERCE, city.getPopulation()/2)
+
 
 
 # Burj Khalifa effect: +1 commerce per corporation in the world
@@ -163,6 +221,14 @@ def greatWallEffect(city, iBuilding):
 	if iBuilding == iGreatWall:
 		for plot in plots.all().owner(city.getOwner()).where(lambda plot: not plot.isWater()):
 			plot.setWithinGreatWall(True)
+
+#Rose Garden Palace: Free great Statesman when you build a wonder in this city.
+@handler("buildingBuilt")
+def roseGardenPalaceEffect(city, iBuilding):
+	if infos.building(iBuilding).isTeamShare() and player(city.getOwner()).isHasBuildingEffect(iRoseGardenPalace):
+		wonder_city = cities.owner(player(city.getOwner())).building(iRoseGardenPalace).one()
+ 		if wonder_city:
+			player(city.getOwner()).createGreatPeople(iGreatStatesman, False, False, city.getX(), city.getY())
 
 
 # Silver Tree Fountain effect: free Great Person whenever a Great General is born
@@ -213,20 +279,6 @@ def westminsterPalaceInit(city, iBuilding, iChange):
 def westminsterPalaceOnCityAcquired(iOwner, iPlayer, city):
 	wonderCity = getBuildingCity(iWestminsterPalace)
 	if wonderCity and wonderCity.getOwner() == iPlayer and city.isColony():
-		wonderCity.changeBuildingCommerceChange(infos.building(iWestminsterPalace).getBuildingClassType(), CommerceTypes.COMMERCE_GOLD, 1)
-
-
-@handler("cityBuilt")
-def westminsterPalaceOnCityBuilt(city):
-	wonderCity = getBuildingCity(iWestminsterPalace)
-	if wonderCity and wonderCity.getOwner() == city.getOwner() and city.isColony():
-		wonderCity.changeBuildingCommerceChange(infos.building(iWestminsterPalace).getBuildingClassType(), CommerceTypes.COMMERCE_GOLD, 1)
-
-
-@handler("cityLost")
-def westminsterPalaceOnCityLost(city):
-	wonderCity = getBuildingCity(iWestminsterPalace)
-	if wonderCity and wonderCity.getOwner() == city.getOwner() and city.isColony():
 		wonderCity.changeBuildingCommerceChange(infos.building(iWestminsterPalace).getBuildingClassType(), CommerceTypes.COMMERCE_GOLD, -1)
 
 
@@ -245,7 +297,6 @@ def pantheonOnPaganTempleChange(city, iBuilding, iChange):
 		if wonderCity and wonderCity.getOwner() == city.getOwner():
 			wonderCity.changeBuildingCommerceChange(infos.building(iPantheon).getBuildingClassType(), CommerceTypes.COMMERCE_GOLD, iChange)
 
-
 # Suez Canal effect: place Canal on Suez tile
 @handler("projectBuilt")
 def suezCanalEffect(city, iProject):
@@ -259,3 +310,26 @@ def panamaCanalEffect(city, iProject):
 	if iProject == iPanamaCanal:
 		for plot in plots.of(lPanamaStraits):
 			plot.setFeatureType(iStrait, 0)
+
+@handler("cityBuilt")
+def westminsterPalaceOnCityBuilt(city):
+	wonderCity = getBuildingCity(iWestminsterPalace)
+	if wonderCity and wonderCity.getOwner() == city.getOwner() and city.isColony():
+		wonderCity.changeBuildingCommerceChange(infos.building(iWestminsterPalace).getBuildingClassType(), CommerceTypes.COMMERCE_GOLD, 1)
+
+
+@handler("cityLost")
+def westminsterPalaceOnCityLost(city):
+	wonderCity = getBuildingCity(iWestminsterPalace)
+	if wonderCity and wonderCity.getOwner() == city.getOwner() and city.isColony():
+		wonderCity.changeBuildingCommerceChange(infos.building(iWestminsterPalace).getBuildingClassType(), CommerceTypes.COMMERCE_GOLD, -1)
+
+# Aeons - Tomb of Askia - 2 Light and heavy cav when you do a trade mission
+@handler("tradeMission")
+def tombOfAskiaEffect(unit, iPlayer):
+	city = getBuildingCity(iTombOfAskia)
+	if city:
+		if city.getOwner() == iPlayer:
+			createRoleUnit(iPlayer, city.plot(), iShock, 2)
+			createRoleUnit(iPlayer, city.plot(), iHarass, 2)
+		

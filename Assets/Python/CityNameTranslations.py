@@ -1,7 +1,7 @@
 # coding: utf-8
 
 from Consts import iAncient, iClassical, iMedieval, iRenaissance, iIndustrial, iGlobal, iDigital
-from Consts import iHinduism, iZoroastrianism, iBuddhism, iConfucianism, iTaoism, iJudaism, iOrthodoxy, iCatholicism, iProtestantism, iIslam
+from Consts import iHinduism, iZoroastrianism, iBuddhism, iConfucianism, iTaoism, iJudaism, iOrthodoxy, iCatholicism, iProtestantism, iIslam, iShia
 from Consts import iPeriodDenmark, iPeriodNorway, iPeriodPtolemaicEgypt
 from Core import player, is_minor, cities, listify, none, game, city_
 from StoredData import data
@@ -10,15 +10,15 @@ from Civics import isCommunist, isFascist, isRepublic, isAutocratic
 
 ### CONSTANTS ###
 
-iNumLanguages = 61
+iNumLanguages = 70
 lLanguages = (
-	iAmerican, iArabic, iArgentinian, iAssyrian, iBabylonian, iBerber, iBrazilian, iBurmese, iByzantine, iCeltic, 
+	iAmerican, iArabic, iArgentinian, iArmenian, iAssyrian, iBabylonian, iBerber, iBrazilian, iBurmese, iByzantine, iCeltic, 
 	iChinese, iCongolese, iCoptic, iDravidian, iDutch, iEgyptian, iEgyptianArabic, iEnglish, iEthiopian, iFrench, 
-	iGerman, iGreek, iHarappan, iHittite, iIndian, iItalian, iJapanese, iJavanese, iKhmerian, iKiswahili, 
-	iKorean, iKushan, iLatin, iLocal, iMalay, iManchu, iMande, iMayan, iMexican, iModernGreek, 
+	iGerman, iGothic, iGreek, iHarappan, iHittite, iHunnic, iIndian, iItalian, iJapanese, iJavanese, iKhmerian, iKiswahili, 
+	iKorean, iKushan, iLatin, iLocal, iLubaKatanga, iMalay, iManchu, iMande, iMayan, iMexican, iModernGreek, 
 	iMongol, iNahuatl, iNordic, iNubian, iOttoman, iPersian, iPhoenician, iPolish, iPolynesian, iPortuguese, 
-	iQuechua, iUkrainian, iRussian, iSomali, iSpanish, iSwedish, iThai, iTibetan, iToltec, iTurkish, 
-	iVietnamese,
+	iQuechua, iUkrainian, iRussian, iSomali, iSonghaiL, iSpanish, iShona, iSumerian, iSwedish, iThai, iTibetan, iToltec, iTurkish, 
+	iVandalic, iVietnamese, iZuluL,
 ) = range(iNumLanguages)
 
 
@@ -748,6 +748,7 @@ name_translations = {
 		iMalay: "Basra",
 		iPersian: (
 			translate("Basrah", iReligion=iIslam),
+			translate("Basrah", iReligion=iShia),
 			"Vaheshtabad-Ardashir",
 		),
 		iPortuguese: u"Baçorá",
@@ -877,6 +878,7 @@ name_translations = {
 		iArabic: _,
 		iPersian: (
 			relocate("Amarkot", iReligion=iIslam),
+			relocate("Amarkot", iReligion=iShia),
 			"Mansura",
 		),
 	},
@@ -900,6 +902,7 @@ name_translations = {
 		iLocal: "Musil", # Kurdish
 		iPersian: (
 			translate("Musil", iReligion=iIslam),
+			translate("Musil", iReligion=iShia),
 			"Budh-Ardashir",
 		),
 		iPolish: "Mosul",
@@ -1602,7 +1605,7 @@ name_translations = {
 		iTurkish: "Erbil",
 	},
 	"Ardabil": {
-		# iArmenian: "Artawil",
+		iArmenian: "Artawil",
 		iDravidian: "Arutapil",
 		iPersian: _,
 		iRussian: "Ardebil",
@@ -2166,7 +2169,7 @@ name_translations = {
 		iPortuguese: u"Babilónia",
 		iRussian: "Vavilon",
 		iSpanish: "Babilonia",
-		# iSumerian: "Kandigirak",
+		iSumerian: "Kandigirak",
 	},
 	"Bagaw": {  # renamed from Hongsawatoi
 		iBurmese: _,
@@ -2174,7 +2177,7 @@ name_translations = {
 	},
 	"Baktra": {
 		iArabic: "Balkh",
-		# iArmenian: "Bahl",
+		iArmenian: "Bahl",
 		iGreek: _,
 		iIndian: "Bahlika",
 		iLatin: "Bactra",
@@ -2497,6 +2500,7 @@ name_translations = {
 		iPersian: (
 			translate("Kerman", iAfter=iRenaissance),
 			translate("Kerman", iReligion=iIslam),
+			translate("Kerman", iReligion=iShia),
 			_,
 		),
 	},
@@ -2966,6 +2970,7 @@ name_translations = {
 	"Bhuj": {
 		iIndian: _,
 		iPersian: translate("Suleiman Nagar", iReligion=iIslam),
+		iPersian: translate("Suleiman Nagar", iReligion=iShia),
 	},
 	"Bibracte": {  # founded on Nevers
 		iCeltic: _,
@@ -3075,6 +3080,7 @@ name_translations = {
 	"Birnin Kebbi": {
 		iLocal: (
 			relocate("Sakkwato", iReligion=iIslam),
+			relocate("Sakkwato", iReligion=iShia),
 			_,
 		),
 	},
@@ -4170,6 +4176,7 @@ name_translations = {
 		),
 		iPersian: (
 			translate("Ismailpur", iReligion=iIslam),
+			translate("Ismailpur", iReligion=iShia),
 			"Gird-e-Bandar",
 		),
 		iPortuguese: "Bacola",
@@ -4252,6 +4259,7 @@ name_translations = {
 		iLocal: "Chatigaon",
 		iPersian: (
 			translate("Islamabad", iReligion=iIslam, iBefore=iIndustrial),
+			translate("Islamabad", iReligion=iShia, iBefore=iIndustrial),
 			"Chatgam",
 		),
 		iPortuguese: u"Chatigão",
@@ -4932,6 +4940,7 @@ name_translations = {
 		iRussian: "Gdansk",
 		iSpanish: _,
 		iUkrainian: "Hdansk",
+		iGothic: "Gothiscandza",
 	},
 	"Dar es Salaam": {  # relocated from Mzizima
 		iArabic: "Dar as-Salam",
@@ -5486,7 +5495,8 @@ name_translations = {
 	"Durban": {
 		iDutch: found("Pietermaritzburg"),
 		iEnglish: _,
-		iLocal: "eThekwini", # Zulu
+		#iLocal: "eThekwini", # Zulu
+		iZuluL: "kwaBulawayo" # Aeons
 	},
 	"Durine": {
 		iArabic: relocate("Al-Basrah"),
@@ -5821,6 +5831,7 @@ name_translations = {
 		iArabic: relocate("Sirajis"),
 		iPersian: (
 			relocate("Sirajis", iReligion=iIslam),
+			relocate("Sirajis", iReligion=iShia),
 			_,
 		),
 	},
@@ -5856,6 +5867,8 @@ name_translations = {
 		iPolish: u"Kozlów",
 		iTurkish: u"Gözleve",
 		iUkrainian: "Yevpatoriia",
+		iGothic: "Oium",
+		iHunnic: "Oium",
 	},
 	"Evansville": {
 		iEnglish: _,
@@ -6154,6 +6167,7 @@ name_translations = {
 	},
 	"Fort Victoria": { # founded on Zimbabwe
 		iEnglish: _,
+		iShona: "Masvingo",
 		iLocal: "Masvingo",
 	},
 	"Fort Wayne": {
@@ -6237,6 +6251,8 @@ name_translations = {
 		iPortuguese: "Francoforte",
 		iRussian: _,
 		iSpanish: u"Fráncfort",
+		iLatin: "Heidetrank Oppidum",
+		iCeltic: "Heidetrank Oppidum",
 		iTurkish: _,
 	},
 	"Fredericton": {
@@ -7099,6 +7115,7 @@ name_translations = {
 		iIndian: "Kalaburagi",
 		iPersian: (
 			translate("Hasanabad", iBefore=iRenaissance, iReligion=iIslam),
+			translate("Hasanabad", iBefore=iRenaissance, iReligion=iShia),
 			_,
 		),
 	},
@@ -7253,11 +7270,13 @@ name_translations = {
 	},
 	"Hakata": {
 		iChinese: "Fugang",
+		iDutch: found("Hirado"),
 		iJapanese: (
 			translate("Fukuoka", iAfter=iIndustrial),
 			_,
 		),
 		iKorean: "Boggang",
+		iPortuguese: found("Hirado"),
 	},
 	"Hakodate": {
 		iChinese: "Hanguan",
@@ -7904,8 +7923,8 @@ name_translations = {
 			found("Hailar"),
 			"Hulunbu'er",
 		),
-		iManchu: found("Hailar"),
 		iMongol: _,
+		iManchu: found("Hailar"),
 	},
 	"Hurghada": {  # founded on Gebtu
 		iArabic: "Al-Ghardaqah",
@@ -8149,6 +8168,7 @@ name_translations = {
 		iHarappan: found("Rakhigarhi"),
 		iIndian: _,
 		iPersian: rename("Delhi", iReligion=iIslam),
+		iPersian: rename("Delhi", iReligion=iShia),
 	},
 	"Indrapura": {
 		iChinese: "Foshicheng",
@@ -8182,7 +8202,7 @@ name_translations = {
 	},
 	"Ingalawa": {  # founded on Amida
 		iArabic: "Akil",
-		# iArmenian: "Karkatiokert", # Armenian
+		iArmenian: "Karkatiokert", # Armenian
 		iBabylonian: "Ashipalis",
 		iByzantine: "Basileon Phrourion",
 		iGreek: "Epiphania",
@@ -9109,6 +9129,7 @@ name_translations = {
 		iGreek: "Kapisi",
 		iKushan: _,
 		iPersian: relocate("Bagram", iReligion=iIslam),
+		iPersian: relocate("Bagram", iReligion=iShia),
 	},
 	"Karaman": {  # founded on Silifke
 		iArabic: "Qarman",
@@ -9223,6 +9244,10 @@ name_translations = {
 		iRussian: _,
 	},
 	"Kasongo": {
+		iLubaKatanga: (
+			translate("Kalemie", iAfter=iGlobal),
+			_,
+		),
 		iCongolese: (
 			translate("Kalemie", iAfter=iGlobal),
 			_,
@@ -9328,7 +9353,7 @@ name_translations = {
 	"Kayes": {  # relocated from Diakaba
 		iFrench: _,
 		iMande: "Kayi",
-		# iSonghai: "Xaayi",
+		iSonghaiL: "Xaayi",
 	},
 	"Kazan": {
 		iArabic: "Qazan",
@@ -9467,7 +9492,7 @@ name_translations = {
 	},
 	"Kersa": {
 		iArabic: (
-			relocate("Sannar", iAfter=iRenaissance),
+			relocate("Sannar", iAfter=iMedieval), # Aeons - Change to Medieval since Funj starts pre-Renaissance
 			"Gezira",
 		),
 		iNubian: _,
@@ -9506,6 +9531,7 @@ name_translations = {
 		iLatin: "Albania",
 		iPersian: (
 			relocate("Kermanshah", iReligion=iIslam),
+			relocate("Kermanshah", iReligion=iShia),
 			"Peroz Kavadh",
 		),
 	},
@@ -9631,8 +9657,8 @@ name_translations = {
 			"Chersoneso",
 		),
 		iLatin: "Chersonesus",
-		iMongol: found(u"Baghçasaray"),
 		iPolish: "Chersonez",
+		iMongol: found(u"Baghçasaray"),
 		iRussian: (
 			found("Sevastopol"),
 			"Khersones",
@@ -9688,6 +9714,10 @@ name_translations = {
 		iHarappan: found("Togau"),
 	},
 	"Kiambi": {
+		iLubaKatanga: (
+			translate("Kirungu", iAfter=iIndustrial),
+			_,
+		),
 		iCongolese: (
 			translate("Kirungu", iAfter=iIndustrial),
 			_,
@@ -9979,6 +10009,7 @@ name_translations = {
 		iArabic: "Qum",
 		iPersian: (
 			translate("Qom", iReligion=iIslam),
+			translate("Qom", iReligion=iShia),
 			_,
 		),
 		iTurkish: "Kum",
@@ -9987,6 +10018,7 @@ name_translations = {
 		iGreek: "Hekatompylos",
 		iPersian: (
 			relocate("Damghan", iReligion=iIslam),
+			relocate("Damghan", iReligion=iShia),
 			translate("Qumis", iAfter=iMedieval),
 			_,
 		),
@@ -10119,6 +10151,7 @@ name_translations = {
 		iJapanese: "Kurakufu",
 		iKorean: "Keurakupeu",
 		iLatin: "Cracovia",
+		iGothic: "Reidgotland",
 		iPolish: _,
 		iPortuguese: u"Cracóvia",
 		iRussian: "Krakov",
@@ -10153,6 +10186,7 @@ name_translations = {
 	},
 	"Kryvyi Rih": {
 		iMongol: found("Kakhovka", iReligion=iIslam),
+		iMongol: found("Kakhovka", iReligion=iShia),
 		iRussian: "Krivoy Rog",
 		iUkrainian: _,
 	},
@@ -10444,6 +10478,7 @@ name_translations = {
 		iLatin: "Cyropolis",
 		iPersian: (
 			relocate("Rasht", iReligion=iIslam),
+			relocate("Rasht", iReligion=iShia),
 			"Kurushkatha",
 		),
 	},
@@ -11309,7 +11344,6 @@ name_translations = {
 		iPortuguese: u"Leópolis",
 		iRussian: "Lvov",
 		iSpanish: u"Leópolis",
-		iTurkish: "Ilbav",
 		iUkrainian: _,
 	},
 	"Lwanda": {
@@ -11925,6 +11959,7 @@ name_translations = {
 		iGreek: "Methora",
 		iIndian: _,
 		iPersian: relocate("Agra", iReligion=iIslam),
+		iPersian: relocate("Agra", iReligion=iShia),
 	},
 	"Matlosana": {
 		iDutch: "Klerksdorp",
@@ -11980,7 +12015,7 @@ name_translations = {
 	},
 	"Mazaka": {
 		iArabic: "Qaisariyah",
-		# iArmenian: "Mazhak",
+		iArmenian: "Mazhak",
 		iBabylonian: found("Kanesh"),
 		iByzantine: "Kaisareia",
 		iFrench: u"Césarée",
@@ -12043,6 +12078,11 @@ name_translations = {
 		iGreek: "Meroe",
 		iNubian: (
 			relocate("Shendi", iAfter=iMedieval),
+			_,
+		),
+		iLocal: ( # Aeons
+			relocate("Shendi", iReligion=iIslam),
+			relocate("Shendi", iReligion=iShia),
 			_,
 		),
 	},
@@ -12173,7 +12213,7 @@ name_translations = {
 	},
 	"Meliddu": {
 		iArabic: "Malatiyah",
-		# iArmenian: "Malatia",
+		iArmenian: "Malatia",
 		iBabylonian: _,
 		iByzantine: "Rhomanopolis",
 		iFrench: u"Mélitène",
@@ -12406,7 +12446,7 @@ name_translations = {
 			found("Witbank"),
 			"Machadodorp",
 		),
-		iLocal: (
+		iShona: (
 			translate("eNtokozweni", iAfter=iGlobal),
 			_,
 		),
@@ -12699,6 +12739,7 @@ name_translations = {
 		iKiswahili: _,
 	},
 	"Mwimbele": {
+		iLubaKatanga: _,
 		iCongolese: found("Kamina"),
 		iDutch: relocate("Kamina"),
 		iFrench: relocate("Kamina"),
@@ -12823,7 +12864,7 @@ name_translations = {
 		iEnglish: "Nagapattinam",
 		iPortuguese: u"Negapatão",
 	},
-	"Nagasaki": {  # relocated from Hirado
+	"Nagasaki": { # relocated from Hirado
 		iChinese: "Changqi",
 		iJapanese: _,
 		iKorean: "Jang-gi",
@@ -13079,6 +13120,7 @@ name_translations = {
 		iDutch: found("Nizampatnam"),
 		iPersian: (
 			found("Nizampatnam", iReligion=iIslam),
+			found("Nizampatnam", iReligion=iShia),
 			"Nellaur",
 		),
 	},
@@ -13360,7 +13402,7 @@ name_translations = {
 	},
 	"Nisibis": {
 		iArabic: "Nasibin",
-		#iArmenian: "Mtsbin", # Armenian
+		iArmenian: "Mtsbin", # Armenian
 		iAssyrian: "Nasibina",
 		iBabylonian: "Nirbo",
 		iByzantine: _,
@@ -13932,6 +13974,7 @@ name_translations = {
 		iDravidian: _,
 		iEnglish: "Warangal",
 		iPersian: translate("Sultanpur", iReligion=iIslam),
+		iPersian: translate("Sultanpur", iReligion=iShia),
 	},
 	"Oruro": {  # renamed from Pariya
 		iLocal: "Uru Uru",
@@ -14243,7 +14286,7 @@ name_translations = {
 		iMongol: found("Solkhat"),
 		iPolish: "Kercz",
 		iRussian: "Kerch",
-		iTurkish: u"Keriç",
+		iTurkish: "Kerch",
 	},
 	"Panyu": {
 		iChinese: (
@@ -14365,6 +14408,7 @@ name_translations = {
 		iGreek: "Persepolis",
 		iPersian: (
 			relocate("Sirajis", iReligion=iIslam),
+			relocate("Sirajis", iReligion=iShia),
 			relocate("Estakhr", bReconquest=True),
 			_,
 		),
@@ -14445,6 +14489,7 @@ name_translations = {
 		iGreek: "Palibothra",
 		iIndian: _,
 		iPersian: translate("Azimabad", iReligion=iIslam),
+		iPersian: translate("Azimabad", iReligion=iShia),
 		iTibetan: "Gron Khyer Me Tog",
 	},
 	"Patuanak": {
@@ -14634,6 +14679,7 @@ name_translations = {
 		iLocal: "Pishaur", # Punjabi
 		iPersian: (
 			translate("Peshawar", iReligion=iIslam),
+			translate("Peshawar", iReligion=iShia),
 			"Peskabvar",
 		),
 		iThai: "Petwa",
@@ -15394,6 +15440,7 @@ name_translations = {
 	"Qana": {
 		iArabic: (
 			translate("Bi'r Ali", iReligion=iIslam),
+			translate("Bi'r Ali", iReligion=iShia),
 			_,
 		),
 		iGreek: "Kane",
@@ -15620,7 +15667,7 @@ name_translations = {
 	},
 	"Rahad Tendelti": {
 		iArabic: (
-			relocate("Al-Fashir", iAfter=iRenaissance),
+			relocate("Al-Fashir", iAfter=iMedieval), # Aeons - Change to Medieval
 			_,
 		),
 	},
@@ -16126,7 +16173,7 @@ name_translations = {
 	},
 	"Sagunto": {  # founded on Valencia
 		iArabic: rename("Morviedro"),
-		# iArmenian: "Sagunt",
+		iArmenian: "Sagunt",
 		iCeltic: "Arse",
 		iGerman: "Sagunt",
 		iGreek: "Zakinthos",
@@ -16408,6 +16455,7 @@ name_translations = {
 		iArabic: _,
 		iEnglish: "Sennar",
 		iTurkish: "Sennar",
+		iArabic: relocate("Khartoum", iAfter=iIndustrial), # Aeons - It's not the exact tile but it's close enough
 	},
 	"Sanshan": {
 		iChinese: _,
@@ -16951,6 +16999,7 @@ name_translations = {
 		iGreek: found("Kossaia"),
 		iPersian: (
 			rename("Khorramabad", iReligion=iIslam),
+			rename("Khorramabad", iReligion=iShia),
 			_,
 		),
 	},
@@ -17291,6 +17340,7 @@ name_translations = {
 		iPersian: (
 			translate("Shiraz", iAfter=iRenaissance),
 			translate("Shiraz", iReligion=iIslam),
+			translate("Shiraz", iReligion=iShia),
 			_,
 		),
 		iTurkish: "Siraz",
@@ -17764,6 +17814,7 @@ name_translations = {
 		iChinese: "Dongwanlu",
 		iMalay: (
 			relocate("Pontianak", iReligion=iIslam),
+			relocate("Pontianak", iReligion=iShia),
 			_,
 		),
 	},
@@ -17810,6 +17861,7 @@ name_translations = {
 		iDutch: rename("Jayakarta"),
 		iJavanese: (
 			rename("Jayakarta", iReligion=iIslam),
+			rename("Jayakarta", iReligion=iShia),
 			"Sunda Kelapa",
 		),
 		iMalay: _,
@@ -18069,6 +18121,7 @@ name_translations = {
 		iIndian: _,
 		iPersian: (
 			relocate("Islamabad", iReligion=iIslam, iAfter=iGlobal),
+			relocate("Islamabad", iReligion=iShia, iAfter=iGlobal),
 			relocate("Rawalpindi", iAfter=iMedieval),
 		),
 	},
@@ -18281,7 +18334,7 @@ name_translations = {
 	"Tarsos": {
 		iArabic: "Tarsus",
 		iBabylonian: "Tarsisi",
-		# iArmenian: "Tarson",
+		iArmenian: "Tarson",
 		iEnglish: "Tarsus",
 		iFrench: "Tarse",
 		iGreek: _,
@@ -18940,7 +18993,7 @@ name_translations = {
 	},
 	"Trapezous": {
 		iArabic: "Tarabizun",
-		# iArmenian: "Trapizon",
+		iArmenian: "Trapizon",
 		iByzantine: "Trapezounta",
 		iDravidian: "Tirapcan",
 		iEnglish: "Trebizond",
@@ -19330,7 +19383,7 @@ name_translations = {
 			relocate("Baghdad"),
 			"Taysafun",
 		),
-		# iArmenian: "Tizbon",
+		iArmenian: "Tizbon",
 		iGreek: "Ktesiphon",
 		iLatin: "Ctesiphon",
 		iPersian: (
@@ -19493,6 +19546,14 @@ name_translations = {
 		iMalay: (
 			relocate("Kendari", iAfter=iIndustrial),
 			relocate("Baubau", iReligion=iIslam),
+			relocate("Baubau", iReligion=iShia),
+		),
+	},
+	"Katsina": { # Aeons
+		iLocal: (
+			relocate("Sakkwato", iAfter=iMedieval),
+			relocate("Sakkwato", iAfter=iMedieval),
+			_,
 		),
 	},
 	"Unalakleet": {
@@ -19963,6 +20024,7 @@ name_translations = {
 		iEnglish: "Vizagapatnam",
 		iIndian: _,
 		iPersian: translate("Ishakapatnam", iReligion=iIslam),
+		iPersian: translate("Ishakapatnam", iReligion=iShia),
 	},
 	"Viseu": {  # founded on Cidade Rodrigo
 		iCeltic: u"Vissaîegobor",
@@ -20464,6 +20526,7 @@ name_translations = {
 		iPortuguese: u"Breslávia",
 		iRussian: "Vrotslav",
 		iSpanish: "Breslavia",
+		iVandalic: "Lugii Dun",
 	},
 	"Wu": {
 		iChinese: (
@@ -20844,6 +20907,7 @@ name_translations = {
 		),
 		iPersian: (
 			translate("Qods", iReligion=iIslam),
+			translate("Qods", iReligion=iShia),
 			"Orshalim",
 		),
 		iPolish: "Jerozolima",
@@ -20896,6 +20960,7 @@ name_translations = {
 		iJapanese: "Jokujakaruta",
 		iJavanese: (
 			translate("Kotagede", bCapital=True, iReligion=iIslam, iBefore=iRenaissance),
+			translate("Kotagede", bCapital=True, iReligion=iShia, iBefore=iRenaissance),
 			_,
 		),
 		iPersian: "Jogjakarta",
@@ -21201,7 +21266,10 @@ name_translations = {
 	},
 	"Zimbabwe": {
 		iEnglish: found("Fort Victoria"),
-		iLocal: _,
+		iShona: (
+			translate("Dananmombe", iAfter=iMedieval),
+			_,
+		),
 	},
 	"Ziwa": {
 		iEnglish: relocate("Salisbury"),

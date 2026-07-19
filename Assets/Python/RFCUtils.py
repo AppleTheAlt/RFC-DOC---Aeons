@@ -105,10 +105,10 @@ def updateMinorTechs(iMinorCiv, iMajorCiv):
 	
 	if civ(iMinorCiv) == iNative:
 		techs = techs.where(lambda iTech: all(iEnabledTech in techs for iEnabledTech in getEnabledTechs(iTech)))
-		
+
 		nativePlayers = players.of(*lBioNewWorld)
-		if nativePlayers:
-			techs = techs.where(lambda iTech: nativePlayers.all(lambda p: team(p).isHasTech(iTech)))
+ 		if nativePlayers:
+ 			techs = techs.where(lambda iTech: nativePlayers.all(lambda p: team(p).isHasTech(iTech)))
 
 	for iTech in techs:
 		team(iMinorCiv).setHasTech(iTech, True, iMinorCiv, False, False)
@@ -218,7 +218,7 @@ def spreadMajorCulture(iMajorCiv, tPlot):
 def convertPlotCulture(tPlot, iPlayer, iPercent, bOwner):
 	plot = plot_(tPlot)
 	city = city_(tPlot)
-	
+
 	if bOwner:
 		plot.setRevealed(player(iPlayer).getTeam(), True, False, player(iPlayer).getTeam())
 	
@@ -314,10 +314,11 @@ def colonialConquest(iPlayer, tPlot):
 	if not targetPlot:
 		return
 	
-	if iCiv in [iSpain, iPortugal, iNetherlands]:
-		iNumUnits = 2
-	elif iCiv in [iFrance, iEngland]:
+	# Aeons - Increase by 1, colonies are failing to conquest
+	if iCiv in [iSpain, iPortugal, iNetherlands, iOman]:
 		iNumUnits = 3
+	elif iCiv in [iFrance, iEngland]:
+		iNumUnits = 4
 		
 	iExperience = not player(iPlayer).isHuman() and 2 or 0
 	
@@ -332,7 +333,7 @@ def colonialConquest(iPlayer, tPlot):
 def colonialAcquisition(iPlayer, tPlot):
 	iCiv = civ(iPlayer)
 
-	if iCiv in [iSpain, iPortugal]:
+	if iCiv in [iSpain, iPortugal, iOman]:
 		iNumUnits = 1
 	elif iCiv in [iFrance, iEngland, iNetherlands]:
 		iNumUnits = 2
@@ -368,10 +369,11 @@ def getColonialTargets(iPlayer, bEmpty=False):
 	iCiv = civ(iPlayer)
 	
 	dNumCities = {
+		iOman: 2,
 		iFrance: 2,
 		iSpain: 1,
-		iEngland: 4,
-		iPortugal: 5,
+		iEngland: 5, # Aeons - Was 4
+		iPortugal: 6, # Aeons - Was 5
 		iNetherlands: 4,
 	}
 	
@@ -382,6 +384,9 @@ def getColonialTargets(iPlayer, bEmpty=False):
 	lColonialRegions = [iRegion for iRegion in lAsia if iRegion != rLevant]
 	if iCiv == iPortugal:
 		lColonialRegions += lSubSaharanAfrica
+	if iCiv == iOman:
+		lColonialRegions += lAfrica
+	
 		
 	targetPlots = plots.all().coastal().regions(*lColonialRegions)
 	
@@ -392,7 +397,7 @@ def getColonialTargets(iPlayer, bEmpty=False):
 		nearbyCityPlots, settlePlots = emptyPlots.split(lambda p: plots.surrounding(p).any(CyPlot.isCity))
 		
 		targetPlots = settlePlots.where(lambda p: p.getSettlerValue(iCiv) > 0).sample_priority(iNumCities - len(targetCities), lambda p: p.getSettlerValue(iCiv))
-		targetPlots += nearbyCityPlots.expand(1).where(lambda p: p.isCity() and p.getOwner() != iPlayer).sample_priority(iNumCities - len(targetCities) - len(targetPlots), lambda p: p.getSettlerValue(iCiv))
+ 		targetPlots += nearbyCityPlots.expand(1).where(lambda p: p.isCity() and p.getOwner() != iPlayer).sample_priority(iNumCities - len(targetCities) - len(targetPlots), lambda p: p.getSettlerValue(iCiv))
 		
 		return targetCities + targetPlots
 	
@@ -541,11 +546,11 @@ def isUnitOfRole(iUnit, iRole):
 	elif iRole == iDefend:
 		return (iCombatType == UnitCombatTypes.UNITCOMBAT_ARCHER and unit.getCityDefenseModifier() > 0) or iCombatType == UnitCombatTypes.UNITCOMBAT_GUN or unit.isOnlyDefensive() or base_unit(iUnit) == iMilitia
 	elif iRole in [iAttack, iCityAttack]:
-		return iCombatType in [UnitCombatTypes.UNITCOMBAT_MELEE, UnitCombatTypes.UNITCOMBAT_GUN]
+		return iCombatType in [UnitCombatTypes.UNITCOMBAT_MELEE, UnitCombatTypes.UNITCOMBAT_GUN] and iUnit != iWarriorMonk and iUnit != iFidai and iUnit != iMujahid
 	elif iRole == iCounter:
 		return (iCombatType == UnitCombatTypes.UNITCOMBAT_MELEE and unit.getUnitCombatModifier(UnitCombatTypes.UNITCOMBAT_HEAVY_CAVALRY) > 0) or (iCombatType == UnitCombatTypes.UNITCOMBAT_GUN and (infos.unitClasses().any(lambda u: unit.getUnitClassAttackModifier(u) > 10 or unit.getUnitClassDefenseModifier(u) > 10) or infos.unitCombats().any(lambda u: unit.getUnitCombatModifier(u) > 10)))
 	elif iRole in [iShock, iShockCity]:
-		return iCombatType == UnitCombatTypes.UNITCOMBAT_HEAVY_CAVALRY and iUnit != iWarElephant or iUnit == iKeshik
+		return iCombatType == UnitCombatTypes.UNITCOMBAT_HEAVY_CAVALRY and iUnit != iWarElephant and iUnit != iCrusader or iUnit == iKeshik
 	elif iRole == iHarass:
 		return iCombatType == UnitCombatTypes.UNITCOMBAT_LIGHT_CAVALRY and not iUnit == iKeshik
 	elif iRole == iWorkerSea:
@@ -561,7 +566,7 @@ def isUnitOfRole(iUnit, iRole):
 	elif iRole in [iSiege, iCitySiege]:
 		return iCombatType == UnitCombatTypes.UNITCOMBAT_SIEGE
 	elif iRole == iSkirmish:
-		return iCombatType in [UnitCombatTypes.UNITCOMBAT_ARCHER, UnitCombatTypes.UNITCOMBAT_GUN] and unit.getCollateralDamage() > 0
+		return iCombatType in [UnitCombatTypes.UNITCOMBAT_ARCHER, UnitCombatTypes.UNITCOMBAT_GUN] and unit.getCollateralDamage() > 0 and iUnit != iKshatriya
 	elif iRole == iLightEscort:
 		return iDomainType == DomainTypes.DOMAIN_SEA and unit.getWithdrawalProbability() > 0
 	elif iRole == iWork:
@@ -675,7 +680,7 @@ def updateStartingCulture():
 	for plot in plots.surrounding(capital_city, radius=capital_city.getCultureLevel()):
 		plot.updateCulture()
 		
-# used: Stability
+# used: Stability, Wonders
 def isGreatBuilding(iBuilding):
 	if isWorldWonderClass(infos.building(iBuilding).getBuildingClassType()):
 		return True
@@ -723,9 +728,9 @@ def createSettlers(iPlayer, iTargetCities, bGrantCapital=True):
 def createMissionaries(iPlayer, iNumUnits, iReligion=None):
 	if not iReligion:
 		iReligion = player(iPlayer).getStateReligion()
-	
+		
 	if iReligion < 0:
-		iNumUnits = 0	
+		iNumUnits = 0
 	elif not game.isReligionFounded(iReligion):
 		iNumUnits = 0
 	
@@ -737,21 +742,137 @@ def exclusive(iCiv, *civs):
 # used: CvScreensInterface, Stability
 # TODO: should move to stability
 def canRespawn(iCiv):
-	# only dead civ needs to check for resurrection
+
+	# only dead civ need to check for resurrection
 	if player(iCiv).isAlive():
-		return False
-	
-	# cannot respawn if it has not spawned yet
-	if until(year(dBirth[iCiv])) > 0:
 		return False
 		
 	# check if only recently died
-	if data.civs[iCiv].iLastTurnAlive > turn() - turns(20):
+	# Aeons -> Raise to 30 turns
+	if data.civs[iCiv].iLastTurnAlive > turn() - turns(30):
 		return False
 	
 	# check if the civ can be reborn at this date
-	if none(year().between(iStart, iEnd) for iStart, iEnd in dResurrections[iCiv]):
+	if none(year().between(iStart, iEnd) for iStart, iEnd in dResurrections[iCiv]) and none(year().between(iStart, iEnd) for iStart, iEnd in dInstantResurrections[iCiv]):
 		return False
+
+	# Jerusalem requires a Catholic owner for a Levantine city
+	if iCiv == iJerusalem:
+		if cities.region(rLevant).none(lambda city: player(city).getStateReligion()==iCatholicism):
+			return False
+
+	# South Africa requires no other civs to have "South Africa" period
+	if iCiv == iSouthAfrica:
+		if player(iBoers).getPeriod() == iPeriodSouthAfricaUnion:
+			return False
+		if player(iZulu).getPeriod() == iPeriodSouthAfricaUnion:
+			return False
+
+	# Italy requires Goths to not be Ostrogothic
+	if iCiv == iItaly:
+		if player(iGoths).getPeriod() == iPeriodOstrogoths:
+			return False
+
+	# No Parthia - Persia
+	if exclusive(iCiv, iPersia, iParthia):
+		return False
+
+	# No Uzbeks (Turk respawn) if Samanids and vice-versa, (prevent core-overlap)
+	if exclusive(iCiv, iTurks, iSamanids):
+		return False
+
+	# No Timmies if Samnids still alive and vice-versa, (prevent core-overlap)
+	if exclusive(iCiv, iTimurids, iSamanids):
+		return False
+
+	# No Greece if Mycenae
+	if exclusive(iCiv, iGreece, iMycenae):
+		return False
+
+	# No Sparta if Mycenae
+	if exclusive(iCiv, iSparta, iMycenae):
+		return False
+
+	# Byzantium requires that Byzantium previously had land on Greece.
+	if iCiv == iByzantium:
+		if cities.region(rGreece).none(lambda city: iByzantium in [city.getPreviousCiv()]):
+			return False
+
+	# Moors requires Arabia to have taken an Iberian city.
+	if iCiv == iMoors:
+		if cities.region(rIberia).none(lambda city: iArabia in [city.getCivilizationType(), city.getPreviousCiv()]):
+			return False
+
+	# Spain RESPAWN requires that Moors or Goths don't hold Iberia anymore.
+	if iCiv == iSpain:
+		if not cities.region(rIberia).none(lambda city: iMoors in [city.getCivilizationType()]):
+			return False
+		if not cities.region(rIberia).none(lambda city: iGoths in [city.getCivilizationType()]):
+			return False
+
+	# Goths won't respawn if Iberia has been owned by Spain or Italy by Italy
+	if iCiv == iGoths:
+		if not cities.region(rIberia).none(lambda city: iSpain in [city.getCivilizationType(), city.getPreviousCiv()]):
+			return False
+		if not cities.region(rItaly).none(lambda city: iItaly in [city.getCivilizationType(), city.getPreviousCiv()]):
+			return False
+
+	# Germania won't respawn if HRE existed in Germany
+	if iCiv == iGermania:
+		if not cities.region(rLowerGermany).none(lambda city: iHolyRome in [city.getCivilizationType(), city.getPreviousCiv()]):
+			return False
+
+
+	# Morocco respawn requires that Moors hold a city in Iberia
+	#if iCiv == iMorocco:
+	#	if cities.region(rIberia).none(lambda city: iMoors in [city.getCivilizationType()]):
+	#		return False
+
+	# Holy Rome requires that the French managed to conquer at least one city in the Germany region and that Rome doesn't exist.
+	if iCiv == iHolyRome:
+		if not cities.region(rLowerGermany).ever_owned(iFrance):
+			return False
+		if player(iRome).isExisting():
+			return False
+
+	# Arabia must've conquered a city in Transoxiana or Khorasan for Samanids
+	if iCiv == iSamanids:
+		if cities.regions(rKhorasan, rTransoxiana).ever_owned(iArabia):
+			return False
+
+	# Arabia must've conquered a Persian city for Buyids
+	if iCiv == iBuyids:
+		if cities.regions(rPersia).ever_owned(iArabia):
+			return False
+
+
+	# Arabia must've conquered an Egyptian or Maghrebi city for Misr
+	if iCiv == iMisr:
+		if cities.regions(rMaghreb, rEgypt).ever_owned(iArabia):
+			return False
+
+	# Misr cannot respawn when Egypt is alive and cive versa
+	if exclusive(iCiv, iMisr, iEgypt):
+		return False
+	
+
+	# Misr must've conquered an Egyptian city for Tunis and Carthage must not exist
+	if iCiv == iTunis:
+			if player(iMisr).isExisting():
+				if player(iMisr).getPeriod() == iPeriodMisrEgypt:
+					return False
+			if player(iCarthage).isExisting():
+				if player(iCarthage).getPeriod() == iPeriodCarthage:
+					return False
+
+
+	# Ottoman respawn requires that the Turks or Timurids or themselves managed to conquer at least one city in the Near East
+	# Ottomans require that the Turks managed to conquer at least one city in Anatolia
+	# Aeons - Was previously Anatolia, Caucasus, Levant and Mesopotamia and forced the player to not own Anatolia, but I loosened to help Byzantium a bit
+	if iCiv == iOttomans:
+		if not cities.regions(rAnatolia).ever_owned(iTurks):
+			return False
+		#if cities.birth(iOttomans).none(CyCity.isHuman) and cities.regions(rAnatolia, rCaucasus).none(lambda city: iTurks in [city.getCivilizationType(), city.getPreviousCiv()] or iMongols in [city.getCivilizationType(), city.getPreviousCiv()]): return False
 				
 	# Thailand cannot respawn when Khmer is alive and vice versa
 	if exclusive(iCiv, iKhmer, iThailand):
@@ -760,31 +881,81 @@ def canRespawn(iCiv):
 	# Rome cannot respawn when Italy is alive and vice versa
 	if exclusive(iCiv, iRome, iItaly):
 		return False
-	
-	# Greece cannot respawn when Byzantium is alive and vice versa
-	if exclusive(iCiv, iGreece, iByzantium):
+
+	# Katanga and Congo are mutually exclusive for respanws
+	if exclusive(iCiv, iCongo, iKatanga):
 		return False
-		
-	# Misr cannot respawn when Egypt is alive and cive versa
-	if exclusive(iCiv, iMisr, iEgypt):
-		return False
+
+	# Aeons - Italy can't respawn if it hasn't held any land in Italy before.
+	if iCiv == iItaly:
+		if cities.regions(rItaly).ever_owned(iItaly):
+			return False
 	
-	# Iran cannot respawn if Persia is alive and vice versa
+	# Greek civs cannot respawn when Byzantium is alive and vice versa - Aeons - Only when Byzantium has held land in Greece.
+	if not cities.region(rGreece).none(lambda city: iByzantium in [city.getCivilizationType(), city.getPreviousCiv()]):
+		if exclusive(iCiv, iGreece, iByzantium):
+			return False
+		if exclusive(iCiv, iSparta, iByzantium):
+			return False
+		if exclusive(iCiv, iMycenae, iByzantium):
+			return False
+	
+	# Iran mutually exclusive with Persia, Parthia, Buyids
 	if exclusive(iCiv, iPersia, iIran):
+		return False
+	if exclusive(iCiv, iParthia, iIran):
+		return False
+	if exclusive(iCiv, iBuyids, iIran):
 		return False
 	
 	# Mexico cannot respawn if Aztecs are alive and vice versa
 	if exclusive(iCiv, iAztecs, iMexico):
 		return False
 	
-	# India cannot respawn when Mughals are alive (not vice versa -> Pakistan)
-	if iCiv == iIndia and player(iMughals).isAlive():
+	# India cannot respawn when Timurids are alive (not vice versa -> Pakistan)
+	if iCiv == iIndia and player(iTimurids).isAlive():
 		return False
+
+	# Aeons - China can't resurrect until Manchuria/Mongols are unstable
+	if iCiv == iChina:
+		if player(iManchuria).isExisting() and player(iManchuria).getPeriod() == iPeriodQing and stability(iManchuria) >= iStabilityShaky:
+			return False
+		if player(iMongols).isExisting() and player(iMongols).getPeriod() == iPeriodYuan and stability(iMongols) >= iStabilityShaky:
+			return False
 	
 	# Exception during Japanese UHV
 	if player(iJapan).isHuman() and year().between(1920, 1945):
 		if iCiv in [iChina, iKorea, iMalays, iJava, iThailand]:
 			return False
+
+
+	#End with impact-based conditions.
+
+	#Aeons - Prevent super-marginal impact civs from spawning if not neighbours or influences
+	if not civ() in dNeighbours[iCiv] and not civ() in dInfluences[iCiv] and infos.civ(iCiv).getImpact() <= iImpactSuperMarginal:
+		return False
+
+	#Aeons - Prevent marginal impact civs from spawning if not neighbours, influences or same civ group.
+	if not civ() in dNeighbours[iCiv] and not civ() in dInfluences[iCiv] and infos.civ(iCiv).getImpact() <= iImpactMarginal:
+		if civ() in dCivGroups[iCivGroupEurope] and iCiv in dCivGroups[iCivGroupEurope]:
+			return True
+		if civ() in dCivGroups[iCivGroupEastAsia] and iCiv in dCivGroups[iCivGroupEastAsia]:
+			return True
+		if civ() in dCivGroups[iCivGroupSouthAsia] and iCiv in dCivGroups[iCivGroupSouthAsia]:
+			return True
+		if civ() in dCivGroups[iCivGroupMiddleEast] and iCiv in dCivGroups[iCivGroupMiddleEast]:
+			return True
+		if civ() in dCivGroups[iCivGroupMediterranean] and iCiv in dCivGroups[iCivGroupMediterranean]:
+			return True
+		if civ() in dCivGroups[iCivGroupAfrica] and iCiv in dCivGroups[iCivGroupAfrica]:
+			return True
+		if civ() in dCivGroups[iCivGroupAmerica] and iCiv in dCivGroups[iCivGroupAmerica]:
+			return True
+		if civ() in dCivGroups[iCivGroupOceania] and iCiv in dCivGroups[iCivGroupOceania]:
+			return True
+		if civ() in dCivGroups[iCivGroupNorthAfrica] and iCiv in dCivGroups[iCivGroupNorthAfrica]:
+			return True
+		return False
 			
 	return True
 	
@@ -793,7 +964,14 @@ def canEverRespawn(iCiv, iGameTurn = None):
 	if iGameTurn is None:
 		iGameTurn = turn()
 		
-	return any(turn(iEnd) >= iGameTurn for _, iEnd in dResurrections[iCiv])
+	return any(turn(iEnd) > iGameTurn for _, iEnd in dResurrections[iCiv])
+
+# used: CvScreensInterface, MapDrawer, RFCUtils
+def canEverRespawnInstant(iCiv, iGameTurn = None):
+	if iGameTurn is None:
+		iGameTurn = turn()
+		
+	return any(turn(iEnd) >= iGameTurn for _, iEnd in dInstantResurrections[iCiv])
 	
 # used: Barbs
 def evacuate(iPlayer, tPlot):
@@ -854,7 +1032,7 @@ def toggleStabilityOverlay(iPlayer = -1):
 
 	bDebug = game.isDebugMode()
 
-	othercivs = civs.major().without(iPlayer).where(lambda iCiv: player(iCiv).isAlive() or canEverRespawn(iCiv))
+	othercivs = civs.major().without(iPlayer).where(lambda iCiv: player(iCiv).isAlive() or canEverRespawn(iCiv) or canEverRespawnInstant(iCiv))
 
 	# apply the highlight
 	for plot in plots.all().land():
@@ -1041,6 +1219,7 @@ def getDawnOfManText(iPlayer):
 	
 	fullKey = baseKey
 	if iScenario == i600AD: fullKey += "_600AD"
+	elif iScenario == i1100AD: fullKey += "_1100AD"
 	elif iScenario == i1500AD: fullKey += "_1500AD"
 	elif iScenario == i1700AD: fullKey += "_1700AD"
 	elif iScenario == i1815AD: fullKey += "_1815AD"
@@ -1128,14 +1307,14 @@ def endObserverMode():
 def breakObserverMode(message = None):
 	if data.iBeforeObserverSlot == -1:
 		return
-	
+
 	game.setAIAutoPlay(0)
 	events.fireEvent("autoplayEnded")
-	
+
 	if message:
 		show(message)
 
-# used: Congresses, RFCUtils
+# used: Congresses
 def isIsland(tile):
 	return plot(tile).area().getNumTiles() == 1
 
@@ -1160,7 +1339,6 @@ def possibleSpawnsBetween(origin, target, iDistance):
 			.passable()
 			.where(lambda p: p.getOwner() in [plot(origin).getOwner(), plot(target).getOwner(), -1])
 			.where(lambda p: map.getArea(p.getArea()).getNumCities() > 0)
-			.where(lambda p: p.getArea() == target.getArea())
 			.where(lambda p: distance(p, target) >= iDistance)
 			.where(lambda p: not p.isVisibleEnemyUnit(origin.getOwner()))
 			.where(lambda p: not cities.surrounding(p).notowner(origin.getOwner()))
@@ -1209,6 +1387,29 @@ def downgradeAreaCottages(iPlayer, area):
 		plot.setUpgradeProgress(0)
 
 
+# used: DynamicCivs, Periods
+def getColumn(iPlayer):
+	lTechs = [infos.tech(iTech).getGridX() for iTech in range(iNumTechs) if team(iPlayer).isHasTech(iTech)]
+	if not lTechs: return 0
+	return max(lTechs)
+
+def placeArtStyleUnits(iCiv):
+	lUnits = [
+		iAntiTank, iArcher, iArquebusier, iArtillery, iAxeman, iBombard, iCannon, iCaravel, iCatapult, iCavalry, 
+		iChariot, iCog, iCrossbowman, iCuirassier, iDragoon, iExplorer, iFrigate, iGalleass, iGalleon, iGalley, 
+		iGreatArtist,iGreatEngineer, iGreatGeneral, iGreatMerchant, iGreatProphet, iGreatScientist, iGreatSpy, iGreatStatesman, iGrenadier, iHeavyGalley, 
+		iHeavySpearman, iHeavySwordsman, iHorseArcher, iHorseman, iHussar, iInfantry, iLabourer, iLancer, iLightSwordsman, iLongbowman, 
+		iMachineGun, iMarine, iMilitia, iMusketeer, iParatrooper, iPikeman, iPistolier, iRifleman, iSamInfantry, iScout, 
+		iSettler, iShipOfTheLine, iSkirmisher, iSpearman, iSpy, iSwordsman, iWarElephant, iWarGalley, iWarrior, iWorker
+	]
+	
+	tile = (105, 17)
+	
+	for index, iUnit in enumerate(lUnits):
+		x, y = tile
+		print "Place art style unit: %s" % infos.unit(iUnit).getText()
+		makeUnit(iCiv, iUnit, (x + index % 8, y + index / 8))
+
 # used: Rules
 def downgradeCityCottages(city):
 	for plot in plots.city_radius(city):
@@ -1227,27 +1428,6 @@ def downgradeCityCottages(city):
 				
 				plot.setUpgradeProgress(0)
 
-
-# used: DynamicCivs, Periods
-def getColumn(iPlayer):
-	lTechs = [infos.tech(iTech).getGridX() for iTech in range(iNumTechs) if team(iPlayer).isHasTech(iTech)]
-	if not lTechs: return 0
-	return max(lTechs)
-
-
-def placeArtStyleUnits(iCiv):
-	lUnits = [
-		iAntiTank, iArcher, iArquebusier, iArtillery, iAxeman, iBombard, iCannon, iCaravel, iCatapult, iCavalry, 
-		iChariot, iCog, iCrossbowman, iCuirassier, iDragoon, iExplorer, iFrigate, iGalleass, iGalleon, iGalley, 
-		iGreatArtist,iGreatEngineer, iGreatGeneral, iGreatMerchant, iGreatProphet, iGreatScientist, iGreatSpy, iGreatStatesman, iGrenadier, iHeavyGalley, 
-		iHeavySpearman, iHeavySwordsman, iHorseArcher, iHorseman, iHussar, iInfantry, iLabourer, iLancer, iLightSwordsman, iLongbowman, 
-		iMachineGun, iMarine, iMilitia, iMusketeer, iParatrooper, iPikeman, iPistolier, iRifleman, iSamInfantry, iScout, 
-		iSettler, iShipOfTheLine, iSkirmisher, iSpearman, iSpy, iSwordsman, iWarElephant, iWarGalley, iWarrior, iWorker
-	]
-	
-	tile = (105, 17)
-	
-	for index, iUnit in enumerate(lUnits):
-		x, y = tile
-		print "Place art style unit: %s" % infos.unit(iUnit).getText()
-		makeUnit(iCiv, iUnit, (x + index % 8, y + index / 8))
+# used: Congresses, RFCUtils
+def isIsland(tile):
+	return plot(tile).area().getNumTiles() == 1

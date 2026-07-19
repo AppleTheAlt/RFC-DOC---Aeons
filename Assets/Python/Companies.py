@@ -16,15 +16,19 @@ dCompanyTechs = {
 	iLuxuryIndustry     : (iEconomics, iConsumerism),
 	iAutomobileIndustry : (iEconomics, iInfrastructure),
 	iComputerIndustry   : (iEconomics, iComputers),
+	iHanseaticLeague  :   (iGuilds,),
+ 	iKnightsTemplar   :   (iFeudalism,),
 }
 
-tCompaniesLimit = (20, 25, 30, 20, 25, 25, 15, 20, 20, 25) # kind of arbitrary currently, see how this plays out
+tCompaniesLimit = (20, 25, 30, 20, 25, 25, 15, 20, 20, 25, 12, 12) # kind of arbitrary currently, see how this plays out
 
 dCompanyExpiry = defaultdict({
 	iSilkRoute : 1500,
+	iKnightsTemplar: 1500,
+ 	iHanseaticLeague: 1660,
 	iTradingCompany : 1800,
 	iTextileIndustry : 1920,
-}, 2025)
+}, 2026)
 					
 	
 @handler("cityAcquired")
@@ -122,10 +126,24 @@ def getCityValue(city, iCompany):
 	# Merchant Trade increases likeliness for silk route
 	if iCompany == iSilkRoute and has_civic(owner, iMerchantTrade):
 		iValue += 2
+		
+	# Merchant Trade increases likeliness for Hanseatic League
+ 	if iCompany == iHanseaticLeague and has_civic(owner, iMerchantTrade):
+ 		iValue += 2
 
 	# Free Enterprise increases likeliness for all companies
 	if has_civic(owner, iFreeEnterprise):
 		iValue += 1
+
+	if iCompany == iKnightsTemplar:
+ 		if has_civic(owner, iVassalage):
+ 			iValue += 1
+ 		if has_civic(owner, iMonarchy):
+ 			iValue += 1
+ 		if has_civic(owner, iClergy):
+ 			iValue += 1	
+ 		if has_civic(owner, iMonasticism):
+ 			iValue += 1
 
 	# civilization requirements
 	if iCompany == iTradingCompany:
@@ -154,17 +172,30 @@ def getCityValue(city, iCompany):
 	
 		if city.getRegionID() == rCaribbean:
 			iValue += 1
+
+	elif iCompany == iHanseaticLeague:
+ 		if city.getRegionID() in [rLowerGermany, rScandinavia, rPoland, rBaltics]:
+ 			iValue += 3
+ 		elif city.getRegionID() not in [rBritain, rFrance, rRuthenia]:
+ 			return -1
+ 	elif iCompany == iKnightsTemplar:
+ 		if city.getRegionID() in [rFrance, rIberia, rItaly, rGreece, rAnatolia, rLevant, rEgypt, rMaghreb, rBalkans]:
+ 			iValue += 4
 	
 	# fishing industry - coastal cities only
 	if iCompany == iFishingIndustry:
 		if not city.isCoastal(20):
 			return -1
-	
+
+	elif iCompany == iHanseaticLeague:
+ 		if city.isCoastal(20):
+ 			iValue += 2
+
 	# automobile industry - only with oil
 	if iCompany == iAutomobileIndustry:
 		if city.getNumBonuses(iOil) == 0:
 			return -1
-	
+		
 	# penalty for silk route if coastal (mitigatable by harbor)
 	if iCompany == iSilkRoute:
 		if city.isCoastal(20):
@@ -174,6 +205,12 @@ def getCityValue(city, iCompany):
 	if iCompany == iSilkRoute:
 		if owner.getStateReligion() in [iProtestantism, iCatholicism, iOrthodoxy]:
 			iValue -= 1
+	if iCompany == iHanseaticLeague:
+ 		if owner.getStateReligion() in [iProtestantism, iCatholicism, iOrthodoxy]:
+ 			iValue += 1
+ 	if iCompany == iKnightsTemplar:
+ 		if not owner.getStateReligion() in [iCatholicism]:
+ 			return -1
 	
 	# various bonuses
 	if iCompany == iSilkRoute:
@@ -182,7 +219,7 @@ def getCityValue(city, iCompany):
 		if city.hasBuilding(unique_building(iOwner, iStable)): iValue += 1
 		if city.hasBuilding(unique_building(iOwner, iHarbor)): iValue += 1
 		if city.hasBuilding(unique_building(iOwner, iPostOffice)): iValue += 1
-		
+
 		if city.isHasBuildingEffect(iSalsalBuddha): iValue += 2
 		
 		if owner.isHasBuildingEffect(iSalsalBuddha): iValue += 1
@@ -197,7 +234,7 @@ def getCityValue(city, iCompany):
 		if city.hasBuilding(unique_building(iOwner, iBank)): iValue += 1
 		if city.hasBuilding(unique_building(iOwner, iWarehouse)): iValue += 1
 		if city.hasBuilding(unique_building(iOwner, iTradingCompanyBuilding)): iValue += 2
-		
+
 		if city.isHasBuildingEffect(iBourse): iValue += 2
 		if city.isHasBuildingEffect(iTorreDeBelem): iValue += 2
 		
@@ -210,7 +247,7 @@ def getCityValue(city, iCompany):
 		if city.hasBuilding(unique_building(iOwner, iGrainSilo)): iValue += 1
 		if city.hasBuilding(unique_building(iOwner, iSupermarket)): iValue += 1
 		if city.hasBuilding(unique_building(iOwner, iVerticalFarm)): iValue += 1
-		
+
 		if city.isHasBuildingEffect(iFloralisGenerica): iValue += 2
 		if city.isHasBuildingEffect(iGlobalSeedVault): iValue += 2
 		
@@ -224,7 +261,7 @@ def getCityValue(city, iCompany):
 		if city.hasBuilding(unique_building(iOwner, iAbattoir)): iValue += 1
 		if city.hasBuilding(iColdStoragePlant): iValue += 1
 		if city.hasBuilding(unique_building(iOwner, iSupermarket)): iValue += 1
-		
+
 		if city.isHasBuildingEffect(iBellRockLighthouse): iValue += 2
 		if city.isHasBuildingEffect(iTsukijiFishMarket): iValue += 2
 		
@@ -243,8 +280,9 @@ def getCityValue(city, iCompany):
 		if city.hasBuilding(unique_building(iOwner, iCoalPlant)): iValue += 1
 		if city.hasBuilding(unique_building(iOwner, iRailwayStation)): iValue += 1
 		if city.hasBuilding(unique_building(iOwner, iIndustrialPark)): iValue += 1
+		if city.hasBuilding(iGasPlant): iValue += 1
 		if city.hasBuilding(unique_building(iOwner, iIronworks)): iValue += 3
-		
+
 		if city.isHasBuildingEffect(iEiffelTower): iValue += 2
 		if city.isHasBuildingEffect(iCrystalPalace): iValue += 2
 		if city.isHasBuildingEffect(iAtomium): iValue += 2
@@ -257,10 +295,9 @@ def getCityValue(city, iCompany):
 		if city.hasBuilding(unique_building(iOwner, iBank)): iValue += 1
 		if city.hasBuilding(unique_building(iOwner, iDistillery)): iValue += 1
 		if city.hasBuilding(unique_building(iOwner, iIndustrialPark)): iValue += 1
-		if city.hasBuilding(iOilDepot): iValue += 1
 		if city.hasBuilding(unique_building(iOwner, iContainerTerminal)): iValue += 1
 		if city.hasBuilding(unique_building(iOwner, iStockExchange)): iValue += 3
-		
+
 		if city.isHasBuildingEffect(iBurjKhalifa): iValue += 2
 		
 		if owner.isHasBuildingEffect(iBurjKhalifa): iValue += 1
@@ -273,7 +310,7 @@ def getCityValue(city, iCompany):
 		if city.hasBuilding(iMall): iValue += 1
 		if city.hasBuilding(unique_building(iOwner, iHotel)): iValue += 1
 		if city.hasBuilding(unique_building(iOwner, iNationalGallery)): iValue += 3
-	
+
 	elif iCompany == iAutomobileIndustry:
 		if city.hasBuilding(unique_building(iOwner, iFactory)): iValue += 1
 		if city.hasBuilding(unique_building(iOwner, iIndustrialPark)): iValue += 2
@@ -304,6 +341,21 @@ def getCityValue(city, iCompany):
 	
 	if city.isHasBuildingEffect(iWorldTradeCenter): iValue += 2
 	if owner.isHasBuildingEffect(iWorldTradeCenter): iValue += 1
+
+	elif iCompany == iHanseaticLeague:
+ 		if city.hasBuilding(unique_building(iOwner, iLighthouse)): iValue += 1
+ 		if city.hasBuilding(unique_building(iOwner, iHarbor)): iValue += 1
+ 		if city.hasBuilding(unique_building(iOwner, iWharf)): iValue += 1
+ 		if city.hasBuilding(unique_building(iOwner, iCustomsHouse)): iValue += 1
+ 		if city.hasBuilding(unique_building(iOwner, iBank)): iValue += 1
+ 		if city.hasBuilding(unique_building(iOwner, iWarehouse)): iValue += 1
+ 
+ 	elif iCompany == iKnightsTemplar:
+ 		if city.hasBuilding(unique_building(iOwner, iCatholicShrine)): iValue += 4
+ 		if city.hasBuilding(unique_building(iOwner, iCatholicTemple)): iValue += 1
+ 		if city.hasBuilding(unique_building(iOwner, iCatholicCathedral)): iValue += 2
+ 		if city.hasBuilding(unique_building(iOwner, iKrakDesChevaliers)): iValue += 4
+ 		if city.hasBuilding(unique_building(iOwner, iCastle)): iValue += 1
 	
 	# needs at least a few requirements
 	if iValue <= 0:
@@ -318,7 +370,8 @@ def getCityValue(city, iCompany):
 		iBonus = infos.corporation(iCompany).getPrereqBonus(i)
 		if iBonus > -1:
 			if city.getNumBonuses(iBonus) > 0: 
-				if iCompany in [iFishingIndustry, iCerealIndustry, iTextileIndustry]:
+				bFound = True
+				if iCompany in [iFishingIndustry, iCerealIndustry, iTextileIndustry, iKnightsTemplar]:
 					iResourceValue += city.getNumBonuses(iBonus)
 				elif iCompany == iOilIndustry:
 					iResourceValue += city.getNumBonuses(iBonus) * 4
@@ -334,16 +387,16 @@ def getCityValue(city, iCompany):
 						iResourceValue += city.getNumBonuses(iBonus) * 2
 				else:
 					iResourceValue += city.getNumBonuses(iBonus) * 2
-	
+		
 	if iCompany == iAutomobileIndustry:
 		iResourceValue += city.getNumBonuses(iOil)
 				
 	if iResourceValue == 0: 
 		return -1
-		
+	
 	iCompanyCount = player(iOwner).countCorporations(iCompany)
 	iCompanyLimit = getCompanyLimit(iCompany)
-	
+
 	iResourceValue -= iCompanyCount
 	
 	iValue += iResourceValue
@@ -360,10 +413,10 @@ def getCityValue(city, iCompany):
 	# threshold
 	if iValue < 4:
 		return -1
-	
+		
 	iCompanyExcess = max(0, iCompanyCount - iCompanyLimit / 2)
 	
 	iValue *= 10
 	iValue /= 10 + iCompanyExcess
-		
+	
 	return iValue

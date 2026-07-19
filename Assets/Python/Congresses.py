@@ -57,7 +57,7 @@ def getCongressInterval():
 	if game.getBuildingClassCreatedCount(infos.building(iPalaceOfNations).getBuildingClassType()) > 0:
 		return turns(4)
 		
-	return turns(15)
+	return turns(8) # Aeons - Increase congress frequency from every 15 to 8 turns
 	
 def scheduleCongress():
 	if data.iCongressTurn <= turn():
@@ -269,6 +269,7 @@ class Congress:
 			event = self.vote_claim.text("TXT_KEY_CONGRESS_REQUEST_SETTLE_FOREIGN", name(iClaimant), adjective(plot), plot.getRegionName(), cn.getDisplayName(iClaimant, (x, y)))
 		else:
 			event = self.vote_claim.text("TXT_KEY_CONGRESS_REQUEST_SETTLE_EMPTY", name(iClaimant), plot.getRegionName(), cn.getDisplayName(iClaimant, (x, y)))
+
 			
 		event.approveClaim().abstainClaim().denyClaim().launch(iClaimant, plot.getOwner())
 		
@@ -619,9 +620,9 @@ class Congress:
 				else:
 					iOtherClaimant, iVotes = dResults[(x, y)]
 					if self.dVotes[iClaimant] > iVotes: dResults[(x, y)] = (iClaimant, self.dVotes[iClaimant])
-			
-			data.dLastClaims[iClaimant] = (x, y)
 					
+			data.dLastClaims[iClaimant] = (x, y)
+
 		for (x, y), (iClaimant, iVotes) in dResults.items():
 			plot = plot_(x, y)
 			
@@ -679,7 +680,7 @@ class Congress:
 			killUnits(defenders)
 		
 		flipped = completeCityFlip(assignedCity, iPlayer, iOwner, 80, False, False, True, bPermanentCultureChange=False)
-		
+
 		bLimitedDefenders = player(iPlayer).isHuman() or isIsland(flipped)
 		iNumDefenders = bLimitedDefenders and 2 or max(2, player(iPlayer).getCurrentEra()-1)
 		ensureDefenders(iPlayer, flipped, iNumDefenders)
@@ -865,6 +866,7 @@ class Congress:
 		if civ(iClaimant) == iFrance: iClaimValidity += 5
 		
 		if not bRecolonise:
+		
 			# plot factors
 			# plot culture
 			if bOwner:
@@ -873,9 +875,11 @@ class Congress:
 				# after wars: claiming from a non-participant has less legitimacy unless its your own claim
 				if self.bPostWar and not bOwnClaim and iOwner not in self.losers:
 					iClaimValidity -= 10
-					
+				
 				# reluctant to assign capitals
-				if bCity and city.isCapital():
+				# Aeons - Exception for Late colonial regions
+				# This makes it so smaller civs like Ashanti or Oman or Katanga can still be claimed
+				if bCity and city.isCapital() and not plot.getRegionID() in lLateColonialRegions:
 					iClaimValidity -= 5
 				
 			# generic settler map bonus
@@ -890,9 +894,9 @@ class Congress:
 				if player(iClaimant).getCurrentEra() == iIndustrial and plot.getPlayerSettlerValue(iClaimant) > 0:
 					iClaimValidity += 10
 				
-					if plot.getRegionID() in lAfrica:
+					if plot.getRegionID() in lAfrica and not plot.getOwner() in [iSouthAfrica, iBoers, iZulu]:
 						iClaimValidity += 5
-					if plot.getRegionID() in lSubSaharanAfrica:
+					if plot.getRegionID() in lSubSaharanAfrica and not plot.getOwner() in [iSouthAfrica, iBoers, iZulu]:
 						iClaimValidity += 5
 							
 			# vote to support settler maps for civs from your own group
@@ -935,21 +939,20 @@ class Congress:
 			if not bRecolonise:
 				# previous ownership
 				if city.isEverOwned(iClaimant): iClaimValidity += 5
+				
+				if plot.getRegionID() in lAfrica and not plot.getOwner() in [iSouthAfrica, iBoers, iZulu]: iClaimValidity += 3	# Aeons - Claiming Africa in congresses is considered fine.
 			
 				# city culture, see plot culture
-				if city.getCulture(iClaimant) == 0: iClaimValidity -= 10
+				if city.getCulture(iClaimant) == 0 and not plot.getRegionID() in lAfrica: iClaimValidity -= 10	# Aeons - African colonisation is considered acceptable.
 			
 			# close borders
 			for i in range(21):
 				if city.getCityIndexPlot(i).getOwner() == iClaimant:
 					iClaimValidity += 1
-					
-			# capital
-			if city.isCapital(): iClaimValidity -= 10
 			
 			# core area
 			if plot.isPlayerCore(iClaimant): iClaimValidity += 10
-			if plot.isPlayerCore(iOwner): iClaimValidity -= 15
+			if plot.isPlayerCore(iOwner) and not plot.getRegionID() in lAfrica and not plot.getOwner() in [iSouthAfrica, iBoers, iZulu]: iClaimValidity -= 15	# Aeons - claiming African core is considered fine.
 			
 			# immediately reclaiming lost cities is only valid in post war congress
 			if not self.bPostWar:
@@ -1057,7 +1060,7 @@ class Congress:
 		if not self.dPossibleClaims[iPlayer]: return
 		x, y, iValue = find_max(self.dPossibleClaims[iPlayer], lambda claim: claim[2]).result
 		self.dCityClaims[iPlayer] = (x, y, iValue)
-	
+		
 	def canClaim(self, iPlayer):
 		if not self.bPostWar: return True
 		
@@ -1066,7 +1069,7 @@ class Congress:
 		if iPlayer in self.losers: return True
 		
 		return False
-	
+			
 	def getSettlerClaimValue(self, iSettlerMapValue):
 		iValue = 0
 		
@@ -1075,7 +1078,7 @@ class Congress:
 		if iSettlerMapValue >= 10: iValue += 2
 		
 		return iValue
-			
+		
 	def selectClaims(self, iPlayer):
 		pPlayer = player(iPlayer)
 		iGameTurn = turn()
@@ -1098,7 +1101,7 @@ class Congress:
 			# recently spawned
 			if since(player(iLoopPlayer).getLastBirthTurn()) <= turns(10):
 				continue
-			
+
 			# never met
 			if not team(iPlayer).isHasEverMet(player(iLoopPlayer).getTeam()):
 				continue
@@ -1115,6 +1118,14 @@ class Congress:
 			# Palace of Nations effect
 			if player(iLoopPlayer).isHasBuildingEffect(iPalaceOfNations): 
 				continue
+
+			# Aeons - No claiming Zulu cities until 1880 so South Africa gets a chance
+			if civ(iLoopPlayer) == iZulu:
+				continue
+
+			# Aeons - Can't demand cities from post-Industrial African civs unless African yourself
+			if not civ(iPlayer) in dCivGroups[iCivGroupAfrica] and civ(iLoopPlayer) in dCivGroups[iCivGroupAfrica] and player(iLoopPlayer).getCurrentEra() >= iIndustrial:
+				continue
 			
 			for city in cities.owner(iLoopPlayer):
 				plot = plot_(city)
@@ -1126,6 +1137,9 @@ class Congress:
 				
 				if player(iPlayer).isHuman() and not plot.isRevealed(iPlayer, False): continue
 				if not player(iPlayer).isHuman() and location(plot) == data.dLastClaims.get(iPlayer): continue
+
+				# Aeons - I think this was added with the Belgium patch - will want to check
+				#if city.isCapital() and not plot.getRegionID() in lAfrica: continue 	# Aeons - AI is willing to claim African capitals
 				
 				# after a war: losers can only claim previously owned cities
 				if self.bPostWar and iPlayer in self.losers:
@@ -1149,24 +1163,36 @@ class Congress:
 				# own core
 				if plot.isPlayerCore(iPlayer):
 					iValue += 5
+
+				
+				# Aeons - Increased priority for colonising Sub-Saharan Africans. (Except Russia)
+				if civ(iLoopPlayer) in dCivGroups[iCivGroupEurope] and civ(iLoopPlayer) != iRussia:
+					if civ(city) in dCivGroups[iCivGroupAfrica] and not civ(city) in [iSouthAfrica, iBoers, iZulu]:
+						iValue += 5
+					elif civ(city) in dCivGroups[iCivGroupNorthAfrica]:
+						iValue += 3
 							
 				# colonies
 				if not bRecolonise and city.getPreviousCiv() != civ(iPlayer):
 					if civ(iPlayer) in dCivGroups[iCivGroupEurope]:
 						if is_minor(iLoopPlayer) or (civ(iLoopPlayer) not in dCivGroups[iCivGroupEurope] and stability(iLoopPlayer) <= iStabilityShaky) or (civ(iLoopPlayer) in dCivGroups[iCivGroupEurope] and not player(iLoopPlayer).isHuman() and pPlayer.AI_getAttitude(iLoopPlayer) < AttitudeTypes.ATTITUDE_PLEASED):
 							if plot.getRegionID() in lLateColonialRegions or (plot.getRegionID() in lAmerica and civ(iLoopPlayer) in dCivGroups[iCivGroupEurope]):
-								if iSettlerMapValue > 0:
-									iValue += self.getSettlerClaimValue(iSettlerMapValue)
-									iValue += plot.getPlayerWarValue(iPlayer)
+								if plot.getRegionID() in lAfrica and civ(iLoopPlayer) != iRussia:
+									iValue += 3			# Aeons - All the European powers now want to colonise Africa, except Russia.
+									if iSettlerMapValue > 0:
+										iValue += iSettlerMapValue
+										iValue += self.getSettlerClaimValue(iSettlerMapValue)
+										iValue += plot.getPlayerWarValue(iPlayer)
 									
-									if civ(iLoopPlayer) in dTechGroups[iTechGroupWestern]:
-										iValue /= 2
-									elif player(iPlayer).getCurrentEra() == iIndustrial and plot.getRegionID() in lSubSaharanAfrica:
-										iValue += 5
+										if civ(iLoopPlayer) in dTechGroups[iTechGroupWestern]:
+											iValue /= 2
+										elif player(iPlayer).getCurrentEra() == iIndustrial and plot.getRegionID() in lSubSaharanAfrica:
+											iValue += 5
 									
 				# weaker and collapsing empires
 				if not is_minor(iLoopPlayer):
 					if game.getPlayerRank(iPlayer) > iNumPlayersAlive / 2 and game.getPlayerRank(iLoopPlayer) < iNumPlayersAlive / 2:
+						iValue += 2 	# Aeons
 						if data.players[iLoopPlayer].iStabilityLevel == iStabilityCollapsing:
 							if iSettlerMapValue > 0:
 								iValue += self.getSettlerClaimValue(iSettlerMapValue)
@@ -1196,7 +1222,7 @@ class Congress:
 				if civ(iPlayer) == iCanada:
 					if city in plots.rectangle(tNewfoundland):
 						iValue += 5
-				
+					
 				if iValue > 0:
 					lPlots.append((city.getX(), city.getY(), iValue))
 		
@@ -1217,7 +1243,7 @@ class Congress:
 		lPlots = self.filterSettledPlots(iPlayer, lPlots)
 		
 		return lPlots[:10]
-	
+		
 	def filterSettledPlots(self, iPlayer, lPlots):
 		lFiltered = []
 		for index, (x, y, value) in enumerate(lPlots):
@@ -1234,10 +1260,10 @@ class Congress:
 				continue
 		
 		return lFiltered
-				
+
 	def getHighestRankedPlayers(self, lPlayers, iNumPlayers):
 		return players.of(lPlayers).highest(iNumPlayers, game.getPlayerRank)
-	
+
 	def additionalInvites(self):
 		invites = []
 		

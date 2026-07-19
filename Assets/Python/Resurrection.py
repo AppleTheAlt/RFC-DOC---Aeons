@@ -22,6 +22,19 @@ RESURRECTION_POPUP = (
 
 @handler("BeginGameTurn")
 def checkResurrection():
+
+	#Aeons - Guaranteed resurrection dates.
+	if every(3):
+		if not isResurrectionPossible():
+			return
+
+		possibleResurrections = civs.major().where(canRespawn).sort(lambda c: (-getImpact(c), data.civs[c].iLastTurnAlive))
+		for iCiv in possibleResurrections:
+			if not none(year().between(iStart, iEnd) for iStart, iEnd in dInstantResurrections[iCiv]):
+				resurrectionCities = getResurrectionCities(iCiv, False, True)
+				if canResurrectFromCities(iCiv, resurrectionCities):
+					doResurrection(iCiv, resurrectionCities)
+
 	if every(10):
 		if not isResurrectionPossible():
 			return
@@ -36,15 +49,16 @@ def checkResurrection():
 					resurrectionCities = getResurrectionCities(iCiv)
 					if canResurrectFromCities(iCiv, resurrectionCities):
 						doResurrection(iCiv, resurrectionCities)
-						return
-						
+						#return # Aeons - let multiple resurrections happen per turn
+
 			# otherwise minimum amount of cities and random chance are required
 			for iCiv in possibleResurrections:
 				if rand(100) - iNationalismModifier + 10 < dResurrectionProbability[iCiv]:
 					resurrectionCities = getResurrectionCities(iCiv)
 					if canResurrectFromCities(iCiv, resurrectionCities):
 						doResurrection(iCiv, resurrectionCities)
-						return
+						#return # Aeons - let multiple resurrections happen per turn
+
 
 
 @handler("releasedCivilization")
@@ -62,9 +76,11 @@ def isResurrectionPossible():
 	return countAvailableSlots() > 1
 
 						
-def getResurrectionCities(iCiv, bFromCollapse=False):
+def getResurrectionCities(iCiv, bFromCollapse=False, bInstantResurrection=False):
 	potentialCities = cities.respawn(iCiv)
-	resurrectionCities = potentialCities.where(lambda city: isPartOfResurrection(iCiv, city, len(potentialCities) == 1))
+
+	if bInstantResurrection == true: resurrectionCities = potentialCities.where(lambda city: isPartOfResurrection(iCiv, city, len(potentialCities) == 1, True))
+	else: resurrectionCities = potentialCities.where(lambda city: isPartOfResurrection(iCiv, city, len(potentialCities) == 1))
 
 	# if capital exists and not part of the resurrection, it fails, unless from collapse
 	capital = cities.respawnCapital(iCiv)
@@ -84,10 +100,16 @@ def getResurrectionCities(iCiv, bFromCollapse=False):
 		if iNumCities - iNumFlippedCities < 2:
 			retainedCities = resurrectionCities.owner(iOwner).highest(2 - (iNumCities - iNumFlippedCities), lambda city: (city.isCapital(), city.plot().getPlayerSettlerValue(iOwner)))
 			resurrectionCities = resurrectionCities.without(retainedCities)
+
+	# Aeons - flip all of Manchu outside of Manchuria for China's resurrection and all of China belonging to Mongolia
+	if iCiv == iChina:
+		resurrectionCities += cities.owner(iManchuria).where(lambda city: city.getRegionID() != rManchuria)
+		resurrectionCities += cities.owner(iMongols).where(lambda city: city.getRegionID() in [rNorthChina, rSouthChina])
+		resurrectionCities = resurrectionCities.unique()
 	
 	return resurrectionCities.entities()
 					
-def isPartOfResurrection(iCiv, city, bOnlyOne):
+def isPartOfResurrection(iCiv, city, bOnlyOne, bInstantResurrection=False):
 	iOwner = city.getOwner()
 	
 	# for humans: not for recently conquered cities to avoid annoying reflips
@@ -106,8 +128,12 @@ def isPartOfResurrection(iCiv, city, bOnlyOne):
 	bCapital = city.atPlot(plots.respawnCapital(iCiv))
 	
 	# flips are less likely before Nationalism
-	if game.countKnownTechNumTeams(iNationalism) == 0:
+	if game.countKnownTechNumTeams(iNationalism) == 0 and not bInstantResurrection:
 		iOwnerStability += 1
+
+	# flips are more likely if Instant Resurrection
+	if bInstantResurrection:
+		iOwnerStability -= 1
 	
 	# flips are more likely between AIs to make the world more dynamic
 	# TODO: maybe restore this during autoplay?
@@ -135,7 +161,7 @@ def canResurrectFromCities(iCiv, resurrectionCities):
 	# minors cannot resurrect
 	if is_minor(iCiv):
 		return False
-	
+
 	# cannot resurrect without cities
 	if not resurrectionCities:
 		return False
@@ -164,7 +190,7 @@ def doResurrection(iCiv, lCityList, bAskFlip=True, bDisplay=False):
 	iCiv = civ(iPlayer)
 	
 	pPlayer.setAlive(True, False)
-	
+
 	data.players[iPlayer].iStabilityLevel = iStabilityStable
 	data.players[iPlayer].iNumPreviousCities = 0
 	data.players[iPlayer].lEconomyTrend = [0] * 10
@@ -180,6 +206,8 @@ def doResurrection(iCiv, lCityList, bAskFlip=True, bDisplay=False):
 			
 		if team(iOtherPlayer).isVassal(iPlayer):
 			teamPlayer.freeVassal(iOtherPlayer)
+		
+	data.players[iPlayer].iNumPreviousCities = 0
 	
 	pPlayer.AI_reset()
 	
@@ -199,10 +227,11 @@ def doResurrection(iCiv, lCityList, bAskFlip=True, bDisplay=False):
 	pPlayer.setLastBirthTurn(turn())
 		
 	# add former colonies that are still free
-	for city in players.minor().existing().cities().where(lambda city: city.isOriginalOwner(iPlayer)):
-		if plot(city).getPlayerSettlerValue(iPlayer) > 0:
-			if city not in resurrectionCities:
-				resurrectionCities = resurrectionCities.including(city)
+	# Aeons - Remove this - It leads to weird outcomes like Mongols flipping Russia
+	#for city in players.minor().existing().cities().where(lambda city: city.isOriginalOwner(iPlayer)):
+	#	if plot(city).getPlayerSettlerValue(iPlayer) > 0:
+	#		if city not in resurrectionCities:
+	#			resurrectionCities = resurrectionCities.including(city)
 
 	lOwners = []
 	dRelocatedUnits = appenddict()
@@ -214,6 +243,8 @@ def doResurrection(iCiv, lCityList, bAskFlip=True, bDisplay=False):
 	if iNewStateReligion >= 0:
 		pPlayer.setLastStateReligion(iNewStateReligion)
 	
+	game.setUpdatePlotGroups(False)
+
 	for city in resurrectionCities:
 		iOwner = city.getOwner()
 		pOwner = player(iOwner)
@@ -265,11 +296,11 @@ def doResurrection(iCiv, lCityList, bAskFlip=True, bDisplay=False):
 	# give the new civ a starting army
 	capital = pPlayer.getCapitalCity()
 	
-	dStartingUnits = {
-		iAttack: 2 * iArmySize + iNumCities,
-		iShock: iArmySize,
-		iCounter: iArmySize,
-		iSiege: iArmySize + iNumCities,
+	dStartingUnits = { #Aeons - Nerf respawn units. (Approx. Halved.)
+		iAttack: iArmySize/2 + iNumCities,
+		iShock: iArmySize/3,
+		iCounter: iArmySize/3,
+		iSiege: iArmySize/2,
 	}
 	createRoleUnits(iPlayer, capital, dStartingUnits.items())
 	
@@ -285,6 +316,10 @@ def doResurrection(iCiv, lCityList, bAskFlip=True, bDisplay=False):
 	data.players[iPlayer].iPlagueCountdown = -10
 	clearPlague(iPlayer)
 	convertBackCulture(iPlayer)
+
+	game.setUpdatePlotGroups(True)
+	for p in plots.owner(iPlayer):
+		p.updatePlotGroup()
 	
 	# resurrection leaders
 	if iCiv in dResurrectionLeaders:

@@ -13,12 +13,15 @@ SHRINES = "TXT_KEY_VICTORY_NAME_SHRINES"
 FIRST_SECULAR_GOAL = "TXT_KEY_VICTORY_GOAL_SECULAR_1"
 PESEDJET_GOAL = "TXT_KEY_VICTORY_GOAL_PESEDJET"
 
+# Area descriptions
+AFRICA = "TXT_KEY_VICTORY_NAME_AFRICA"
+
 
 dGoals = {
 	iHinduism: (
 		CityDifferentGreatPeopleCount(holy_city(iHinduism), 5),
 		GoldenAges(3),
-		BestPopulationCities(5, subject=STATE_RELIGION, iReligion=iHinduism)
+		BestPopulationCities(5, subject=STATE_RELIGION, iReligion=iHinduism),
 	),
 	iZoroastrianism: (
 		ResourceCount(iIncense, 6),
@@ -61,12 +64,17 @@ dGoals = {
 	iIslam: (
 		ReligionSpreadPercent(iIslam, 40),
 		CitySpecialistCount(holy_city(iIslam), great_people(), 7, subject=STATE_RELIGION),
-		BuildingCount(religious_buildings(shrine).named(SHRINES), 5),
+		BuildingCount(religious_buildings(shrine).named(SHRINES), 6),
 	),
 	iProtestantism: (
 		FirstDiscover(iCivilLiberties, iSocialContract, iEconomics),
 		SpecialistCount((iSpecialistGreatMerchant, 5), (iSpecialistGreatEngineer, 5), subject=STATE_RELIGION, iReligion=iProtestantism),
 		StateReligionPercent(iProtestantism, 50, bSecular=True),
+	),
+	iShia: (
+		NoStateReligion(iIslam),
+		HappyCityPopulation(100),
+		SpecialistCount(sum(iSpecialistGreatProphet), 10, subject=STATE_RELIGION, iReligion=iShia),
 	),
 	iPaganVictory: (
 		BuildingCount(iPaganTemple, 25, subject=WORLD),
@@ -113,6 +121,8 @@ dAdditionalPaganGoal = {
 	iTeotlAztec: SacrificeGoldenAges(10),
 	iVedism: CelebrateTurns(100),
 	iYoruba: ResourceCount((iIvory, 8), (iGems, 6)),
+	iFombaGasy: ImprovementCount((iForestPreserve, 30)),
+	iBantu: Control(plots.regions(*lAfrica).named(AFRICA), subject=ALLIES),
 }
 
 

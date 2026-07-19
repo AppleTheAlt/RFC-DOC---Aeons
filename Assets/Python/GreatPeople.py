@@ -66,13 +66,64 @@ def getPrimary(iCiv):
 	elif iCiv == iIran: return iPersia
 	elif iCiv == iManchuria: return iChina
 	elif iCiv == iSaudis: return iArabia
+
+	# Aeons - Add new civs here - Will probably add real names later
+
+	# 1.0
+	if iCiv == iMinoa: return iGreece
+	if iCiv == iSparta: return iGreece
+	if iCiv == iMycenae: return iGreece
+	if iCiv == iMinoa: return iGreece
+	if iCiv == iSumeria: return iBabylonia
+	if iCiv == iJudah: return iBabylonia # Could definitely use some unique ones
+	if iCiv == iElam: return iBabylonia
+
+	# 1.1 
+	if iCiv == iGoths: return iRome
+	if iCiv == iGermania: return iHolyRome
+	if iCiv == iVandals: return iHolyRome
+	if iCiv == iParthia: return iPersia
+	if iCiv == iScythia: return iPersia
+	if iCiv == iHuns: return iTurks
+	if iCiv == iArmenia: return iPersia # Needs unique ones too
+
+	# 1.2
+	if iCiv == iYemen: return iArabia	# Wants unique
+	if iCiv == iOman: return iArabia	# Wants unique
+	if iCiv == iKhazars: return iTurks
+	if iCiv == iJerusalem: return iHolyRome
+	if iCiv == iGhorids: return iTimurids
+	if iCiv == iTunis: return iMorocco	# Wants unique
+	if iCiv == iBuyids: return iPersia
+	if iCiv == iSamanids: return iPersia
+	if iCiv == iGeorgia: return iByzantium # Wants unique
+
+	# 1.3
+	if iCiv == iAshanti: return iMali	# Wants unique
+	if iCiv == iHausa: return iMali 	# Wants unique
+	if iCiv == iBenin: return iMali     # Wants unique (can be shared with Hausa)
+	if iCiv == iSonghai: return iMali
+	if iCiv == iKanemBornu: return iMali # Wants unique (potentially shareable with Hausa)
+	if iCiv == iGhana: return iMali
+
+	# 1.4
+	if iCiv == iSomalia: return iSwahili # Wants unique
+	if iCiv == iAdal: return iEthiopia # Wants unique if enough can be found
+	if iCiv == iFunj: return iNubia
+	if iCiv == iBuganda: return iSwahili # Wants unique - Swahili isn't very accurate
+	if iCiv == iZimbabwe: return iSwahili # Wants unique
+	if iCiv == iBoers: return iNetherlands # Wants unique
+	if iCiv == iZulu: return iSwahili # Wants unique
+	if iCiv == iSouthAfrica: return iEngland # Wants unique
+	if iCiv == iKatanga: return iCongo
 	
 	return iCiv
 
 def getNameCivs(iCiv):
 	yield getPrimary(iCiv)
 	
-	for iSimilarCiv in civs.of(*(dNeighbours[iCiv] + dInfluences[iCiv])).sort(lambda c: any(iCiv in group and c in group for group in dCivGroups.values())):
+	# Aeons - neighbours only, no influences here
+	for iSimilarCiv in civs.of(*(dNeighbours[iCiv])).sort(lambda c: any(iCiv in group and c in group for group in dCivGroups.values())):
 		yield iSimilarCiv
 	
 def getType(iUnit):
@@ -700,7 +751,6 @@ dGreatPeople = {
 		iGreatGeneral : (
 			"Hektor", # legendary
 			iClassical,
-			"Leonidas", # 6th BC
 			"Themistokles", # 5th BC
 			"Lysandros", # 5th BC
 			"Philippos", # 4th BC
@@ -1885,6 +1935,7 @@ dGreatPeople = {
 			"Ioannis Tzimiskes", # 10th
 			"Nikephoros Phokas", # 10th
 			"Ioannis Kourkouas", # 10th 
+			"Basileios Bulgaroktonos", # 11th
 			"Georgios Maniakes", # 11th
 			"Michael Palaiologos", # 12th
 			"Nikephoros Bryennios", # 12th
@@ -2279,6 +2330,7 @@ dGreatPeople = {
 			u"Haraldr Hárfagri", # 9th Norwegian
 			u"Eiríkr Blóðøx", # 10th norwegian
 			u"Sveinn Tjúguskegg", # 10th danish
+			u"Knútr inn Ríki", # 11th Danish
 			u"Harald Harðráði", # 11th norwegian
 			"Knutr", # 11th danish
 			u"Sigurðr Jórsalafari", # 12th Norwegian
@@ -3655,6 +3707,7 @@ dGreatPeople = {
 			"Danylo Halytskyy", # 13th
 			iRenaissance,
 			"Petro Sahaydachnyy", # 16th
+			"Bohdan Khmelnytskyy", # 17th
 			"Pylyp Orlyk", # 18th
 			iGlobal,
 			"Mykhailo Hrushevskyi", # 20th
@@ -3945,6 +3998,7 @@ dGreatPeople = {
 			"Adam Jerzy Czartoryski", # 19th
 			iGlobal,
 			"Ignacy Daszynski", # 20th
+			"Jozef Pilsudski", # 20th
 			"Wladyslaw Sikorski", # 20th
 		),
 		iGreatGeneral : (
@@ -4334,6 +4388,7 @@ dGreatPeople = {
 		iGreatProphet : (
 			"Qiu Chuji", # 12th (also Chinese)
 			"Berke", # 13th
+			u"Özbeg", # 13th
 			"Adud al-Din al-Iji", # 13th
 			u"Drogön Chögyal Phagpa", # 13th
 			iRenaissance,
@@ -4478,7 +4533,7 @@ dGreatPeople = {
 			"Qualpopoca", # 15th
 		),
 	},
-	iMughals : {
+	iTimurids : {
 		iGreatProphet : (
 			"Guru Ram Das", # 16th
 			"Guru Arjan", # 16th

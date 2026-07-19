@@ -1,23 +1,20 @@
 ### Areas ###
 
 # Congresses
-
 tAmericanClaims = ((7, 48),	(25, 62))
 lAmericanClaimsExceptions = [(7, 62), (10, 48), (10, 49), (10, 50), (11, 50), (12, 48), (12, 49), (12, 50), (13, 48), (13, 49), (13, 50), (13, 62), (14, 48), (14, 49), (14, 50), (14, 62), (15, 48), (15, 49), (15, 62), (16, 48), (16, 62), (17, 62), (18, 62), (19, 62), (20, 62), (21, 62), (22, 62), (24, 62), (25, 61), (25, 62)]
-
 tNewfoundland = ((38, 62), (40, 64))
 
 # DynamicCivs
 
 iTurkicEastWestBorder = 106
 
-tSumatra = ((115, 26), (121, 31))
+# History
+
 tKalimantan = ((123, 28), (128, 33))
 tSulawesi = ((129, 27), (131, 30))
-
+tSumatra = ((115, 26), (121, 31))
 tNorway = ((65, 71), (74, 78))
-
-# History
 
 tMesoamericanContactZone = ((11, 36), (38, 49))
 tAndeanContactZone = ((21, 13), (34, 33))
@@ -29,7 +26,7 @@ lKushanRoad = [(99, 51), (100, 50), (101, 49)]
 lHejazRoad = [(84, 44), (84, 43), (85, 42), (85, 41), (86, 40)]
 lStraitOfGibraltar = [(56, 47), (57, 47), (58, 47), (59, 48), (60, 49)]
 
-# Minors
+## Minors
 
 tIonia = ((79, 51), (84, 55))
 
@@ -44,12 +41,8 @@ lPhoenicianItalyExceptions = [(65, 48), (66, 48), (67, 48), (72, 55)]
 tHawaii = ((0, 40), (4, 43))
 tNewZealandEast = ((0, 6), (2, 12))
 tNewZealandWest = ((148, 4), (149, 7))
-tMarquesas = ((13, 27),	(13, 27))
+tMarquesas = ((14, 26),	(14, 26))
 tEasterIsland = ((20, 18),	(20, 18))
-
-# second Celtic goal: settle three out of Ireland, Britain, Iberia, Pannonia, and Anatolia by 150 BC
-tPannonia = ((70, 57),	(77, 62))
-lPannoniaExceptions = [(70, 57), (73, 62), (74, 62), (75, 62), (76, 62), (77, 62)]
 
 # second Dravidian goal: control or vassalize the Deccan and Srivijaya in 1000 AD
 tSrivijaya = ((115, 26), (121, 34))
@@ -82,35 +75,42 @@ lDzungariaExceptions = [(104, 61), (105, 61), (106, 61), (107, 60), (107, 61), (
 tScandinavia = ((65, 67),	(73, 77))
 lScandinaviaExceptions = [(69, 70), (69, 71), (70, 68), (70, 69), (70, 70), (70, 72), (70, 73), (71, 68), (71, 69), (71, 71), (71, 72), (71, 73), (71, 74), (72, 69), (72, 70), (72, 71), (72, 72), (72, 73), (72, 74), (72, 75), (73, 71), (73, 73), (73, 74), (73, 75)]
 
+# Madagascar UHV 2
+tBorneo = ((123,28), (128,34))
+
 # second Canadian goal: control all cities and 90% of the territory in Canada without ever conquering a city by 1950 AD
 iCanadaSouthernBorder = 62
 iCanadaWesternBorder = 8
 iCanadaEasternBorder = 40
-
 
 # Wonders
 
 tSuez = (82, 44)
 lPanamaStraits = [(26, 37), (27, 36)]
 
-
 ### Tiles ###
-
+tLondon = (58, 64)
+tGades = (56, 48)
+tVenice = (69, 56)
+tLisbon = (54, 50)
+tBenin = (66, 32)
+tRome = (68, 53)
 tAngkor = (121, 37)
 tAtlanta = (25, 52)
 tBabylon = (89, 47)
 tBaghdad = (89, 47)
 tBeijing = (125, 56)
 tBeloHorizonte = (45, 23)
+tCape = (72, 11)
 tCairo = (79, 43)
 tCalcutta = (111, 42)
 tCarthage = (67, 48)
 tChangan = (121, 52)
 tConstantinople = (79, 55)
 tCopenhagen = (68, 67)
-tDelhi = (105, 46)
-tEsfahan = (93, 48)
+tMadrid = (57, 51)
 tGdansk = (74, 65)
+tMozambique = (84, 19)
 tJerusalem = (84, 45)
 tKoenigsberg = (76, 65)
 tKunming = (119, 44)
@@ -118,11 +118,13 @@ tMadrid = (57, 51)
 tMecca = (86, 39)
 tMemel = (76, 66)
 tMilan = (66, 57)
+tMubende = (80, 29)
 tMunich = (68, 59)
 tNewYork = (31, 56)
 tRome = (68, 53)
 tPataliputra = (110, 45)
 tPersepolis = (94, 45)
+tPretoria = (78, 15)
 tStockholm = (73, 71)
 tTehran = (93, 51)
 tTenochtitlan = (17, 43)
@@ -131,3 +133,8 @@ tTokyo = (140, 54)
 tVienna = (71, 59)
 tVijayanagara = (105, 37)
 tWarsaw = (76, 63)
+tEupatoria = (83, 59)
+tMycenae = (75, 50)
+tDelhi = (105, 46)
+tEsfahan = (93, 48)
+tVaranasi = (108, 44)

@@ -29,7 +29,7 @@ def checkAvailableSlots():
 	iRequiredSlots = len(nextBirths) - iAvailableSlots
 	for iCiv in nextBirths[:iRequiredSlots]:
 		freeSlotFor(iCiv)
-		
+			
 
 def freeSlotFor(iCiv):
 	iCivImpact = getImpact(iCiv)
@@ -49,8 +49,7 @@ def freeSlotFor(iCiv):
 	iSlot = availableSlots.where(lambda p: stability(p) == iStabilityUnstable and getImpact(civ(p)) < iCivImpact).minimum(metric)
 	if iSlot is not None:
 		completeCollapse(iSlot)
-		return
-	
+
 	if iCivImpact > 1:
 		iSlot = availableSlots.where(lambda p: since(year(dFall[p])) >= 0 and getImpact(civ(p)) == 0).minimum(stability)
 		if iSlot is not None:
@@ -59,6 +58,12 @@ def freeSlotFor(iCiv):
 	
 	if iCivImpact > 2:
 		iSlot = availableSlots.where(lambda p: since(year(dFall[p])) >= 0 and getImpact(civ(p)) == 1).minimum(stability)
+		if iSlot is not None:
+			completeCollapse(iSlot)
+			return
+
+	if iCivImpact > 3:
+		iSlot = availableSlots.where(lambda p: since(year(dFall[p])) >= 0 and getImpact(civ(p)) == 2).minimum(stability)
 		if iSlot is not None:
 			completeCollapse(iSlot)
 			return
@@ -113,9 +118,9 @@ def downgradeImprovements(iPlayer):
 			plot.setImprovementType(iCottage)
 		else:
 			plot.setImprovementType(-1)
-		
+						
 	message(iPlayer, 'TXT_KEY_STABILITY_DOWNGRADE_IMPROVEMENTS', color=iRed)
-	
+		
 def getPartialCollapseCities(iPlayer):
 	respawnCities = cities.respawn(iPlayer).owner(iPlayer)
 	coreCities = cities.core(iPlayer).owner(iPlayer)
@@ -124,7 +129,7 @@ def getPartialCollapseCities(iPlayer):
 		return respawnCities
 	
 	return coreCities
-		
+
 def collapseToCore(iPlayer):
 	retainedCities = getPartialCollapseCities(iPlayer)
 	secededCities = cities.owner(iPlayer).without(retainedCities)

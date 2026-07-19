@@ -10,7 +10,7 @@ MAPS_PATH = "Assets/Maps"
 
 
 def getPath(file_name):
-	return "%s\Mods\\RFC Dawn of Civilization\\Assets\\Maps\\%s" % (os.getcwd(), file_name)
+	return "%s\Mods\\RFC Aeons\\Assets\\Maps\\%s" % (os.getcwd(), file_name)
 
 
 class UnicodeWriter:
@@ -76,15 +76,12 @@ class FileMap(object):
 		file.close()
 	
 	@staticmethod
-	def write(rows, file_path, bReverse=True):
+	def write(rows, file_path):
 		file = open(getPath(file_path), "wb")
 		writer = UnicodeWriter(file)
 		
-		if bReverse:
-			rows = reversed(rows)
-		
 		try:
-			for row in rows:
+			for row in reversed(rows):
 				row = [cell and cell or u"" for cell in row]
 				writer.writerow(row)
 		finally:

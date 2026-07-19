@@ -13,6 +13,7 @@ import CvDebugTools
 import PyHelpers
 import Popup as PyPopup
 import CvCameraControls
+#import CvTopCivs
 import sys
 import CvAdvisorUtils
 import CvPlatyBuilderSettings
@@ -151,6 +152,7 @@ class CvEventManager(object):
 			'revolution'			: self.onRevolution,
 			'cityCaptureGold'		: self.onCityCaptureGold,
 			'tradeMission'			: self.onTradeMission,
+			'diplomaticMission'		: self.onDiplomaticMission,
 			'playerSlaveTrade'		: self.onPlayerSlaveTrade,
 			'releasedPlayer'		: self.onReleasedPlayer,
 			'blockade'			: self.onBlockade,
@@ -604,6 +606,9 @@ class CvEventManager(object):
 		
 	def onTradeMission(self, argsList):
 		iUnitType, iPlayer, iX, iY, iGold = argsList
+	
+	def onDiplomaticMission(self, argsList):
+		iUnitType, iPlayer, iX, iY = argsList
 		
 	def onPlayerSlaveTrade(self, argsList):
 		iPlayer, iGold = argsList

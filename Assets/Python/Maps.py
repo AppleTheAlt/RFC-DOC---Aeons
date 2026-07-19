@@ -137,7 +137,7 @@ def exportCSV():
 
 
 def exportScenario():
-	full_path = "Mods/RFC Dawn of Civilization/PrivateMaps/%s_WB" % getScenario().fileName
+	full_path = "Mods/RFC Aeons/PrivateMaps/%s_WB" % getScenario().fileName
 	CvWBDesc().write(full_path, bDevelopmentOnly=True)
 
 
@@ -239,7 +239,6 @@ def exportBaseSettlerMap():
 	map.update(values)
 	map.export()
 
-
 def exportPlotMap(name, func):
 	map = FileMap("%s.csv" % name)
 	
@@ -254,23 +253,6 @@ def exportPlotMap(name, func):
 	map.create(values)
 	map.export()
 
-
-def exportEarthMaps():
-	maps = (
-		("Bonus", lambda p: p.getBonusType(-1)),
-		("BonusVariety", lambda p: p.getBonusVarietyType(-1)),
-		("Continent", CyPlot.getContinentArea),
-		("Feature", CyPlot.getFeatureType),
-		("FeatureVariety", CyPlot.getFeatureVariety),
-		("Landmass", CyPlot.getArea),
-		("Plot", CyPlot.getPlotType),
-		("Terrain", CyPlot.getTerrainType),
-	)
-	
-	for name, func in maps:
-		exportPlotMap(name, func)
-
-
 def exportScenarioMap():
 	def plot_civ(p):
 		if p.isWater():
@@ -281,7 +263,6 @@ def exportScenarioMap():
 		return player(iOwner).getCivilizationType()
 	
 	exportPlotMap(getScenario().fileName, plot_civ)
-
 
 def markUnnamedTiles():
 	for (x, y), name in city_names:
@@ -342,18 +323,16 @@ def markResourceSpawns(iResource):
 def markAllResourceSpawns():
 	for iResource in range(iNumBonuses):
 		markResourceSpawns(iResource)
-	
+
 	for tile, (tCivs, iResource, iYear) in dCivGroupResourcesDict.items():
 		createLandmark(tile, "%s %s %s" % (infos.bonus(iResource).getText(), " ".join([infos.civ(iCiv).getDescription() for iCiv in tCivs]), iYear))
 	
 	for tile, (iCiv, iResource) in dSpawnResourcesDict.items():
 		createLandmark(tile, "%s %s" % (infos.bonus(iResource).getText(), infos.civ(iCiv).getDescription()))
 
-
 def markMinorCities():
 	for minor_city in minor_cities:
 		createLandmark(minor_city.tile, "%s %s" % (minor_city.name, minor_city.iYear))
-
 
 def markTerrainSpawns():
 	for tile, (iYear, iResource) in dResourcesDict.items():
@@ -519,7 +498,6 @@ def markCitySites(identifier):
 		
 		createLandmark(plot, "%s (%d): %d" % (name(identifier), index, plot.getFoundValue(player(identifier).getID())))
 		index += 1
-
 
 def markExpansion(identifier):
 	for unit in units.owner(identifier).where(lambda u: u.canFound()):

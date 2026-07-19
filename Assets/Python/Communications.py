@@ -44,6 +44,11 @@ def decay(iPlayer):
 	
 	# remove all vassals, vassals where the master contact cannot be cut need to be removed -> other vassals contact will be cut along with their masters
 	contacts = contacts.where(lambda p: not team(p).isAVassal())
+
+	# Aeons - Keep commonwealth in contact
+	#if civ(iEngland).isExisting() and civ(iSouthAfrica).isExisting():
+	#	if civ(iPlayer) in [iSouthAfrica, iEngland, iCanada, iAustralia]:
+	#		contacts = contacts.where(lambda p: not civ(p) in [iEngland, iSouthAfrica, iCanada, iAustralia])
 	
 	# choose up to four random contacts to cut
 	for iContact in contacts.sample(4):

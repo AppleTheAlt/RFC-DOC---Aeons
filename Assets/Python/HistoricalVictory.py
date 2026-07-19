@@ -3,9 +3,10 @@ from Locations import *
 
 
 lHappinessResources = [iResource for iResource in infos.bonuses() if infos.bonus(iResource).getHappiness() > 0]
+lResources = [iResource for iResource in infos.bonuses()]
 
-# third Phoenician goal: reveal 50% of the African coast by 1 AD
-lAfricanCoastRegions = [rRegion for rRegion in lAfrica if rRegion != rMadagascar]
+# second Phoenician goal: reveal 50% of the African coast by 1 AD
+lAfricanCoastRegions = [rRegion for rRegion in lAfrica if rRegion != rMadagascar] 
 
 # first Norse goal: control a European core in 1050 AD
 lNorseTargets = [plots.core(iCiv) for iCiv in dCivGroups[iCivGroupEurope] if iCiv not in (iCelts, iNorse) and dBirth[iCiv] <= 1050] + [plots.core(iCelts, iPeriod=iPeriodInsularCelts)]
@@ -16,38 +17,65 @@ lIndianTradeRegions = [rArabia, rSindh, rRajputana, rDeccan, rDravida, rHornOfAf
 # second Portuguese goal: acquire 12 colonial resources by 1650 AD
 lColonialResources = [iBanana, iSpices, iSugar, iCoffee, iTea, iTobacco, iCocoa]
 
+# Third Ghana goal
+lWestAfricaRegions = [rSahel, rGuinea]
+
 # third Aztec goal: control a European core by 1750 AD
 lAztecTargets = [plots.core(iCiv) for iCiv in dCivGroups[iCivGroupEurope]]
 
 # third Thai goal: allow no foreign powers in South Asia in 1900 AD
-lSouthAsianCivs = [iIndia, iDravidia, iVietnam, iMalays, iJava, iKhmer, iBurma, iMughals, iThailand]
+lSouthAsianCivs = [iHarappa, iIndia, iDravidia, iVietnam, iMalays, iJava, iKhmer, iBurma, iTimurids, iThailand, iGhorids]
+
+# Ethiopia and Kanem-Bornu
+lAfricanCivs = [iCiv for iCiv in dCivGroups[iCivGroupAfrica]]
+lAfricanCivs.extend(iCiv for iCiv in dCivGroups[iCivGroupNorthAfrica])
 
 # first Russian goal: control three Orthodox Cathedrals and three Orthodox wonders by 1550 AD
 lOrthodoxWonders = [iBuilding for iBuilding in infos.buildings() if isWonder(iBuilding) and iOrthodoxy in [infos.building(iBuilding).getPrereqReligion(), infos.building(iBuilding).getOrPrereqReligion()]]
 
+# State religion wonders
+lCatholicWonders = [iBuilding for iBuilding in infos.buildings() if isWonder(iBuilding) and iCatholicism in [infos.building(iBuilding).getPrereqReligion(), infos.building(iBuilding).getOrPrereqReligion()]]
+
+lZoroastrianWonders = [iBuilding for iBuilding in infos.buildings() if isWonder(iBuilding) and iZoroastrianism in [infos.building(iBuilding).getPrereqReligion(), infos.building(iBuilding).getOrPrereqReligion()]]
+
+lIslamicWonders = [iBuilding for iBuilding in infos.buildings() if isWonder(iBuilding) and iIslam in [infos.building(iBuilding).getPrereqReligion(), infos.building(iBuilding).getOrPrereqReligion()]]
+
 # first Saudi goal: allow only Arab civilizations in the Arab World
-lArabCivs = [iArabia, iMoors, iMisr, iSaudis]
+lArabCivs = [iArabia, iMoors, iMisr, iSaudis, iMorocco]
 
 # city names
 AMSTERDAM = "TXT_KEY_VICTORY_NAME_AMSTERDAM"
 ANGKOR = "TXT_KEY_VICTORY_NAME_ANGKOR"
 AYUTTHAYA = "TXT_KEY_VICTORY_NAME_AYUTTHAYA"
 BABYLON = "TXT_KEY_VICTORY_NAME_BABYLON"
+BAGHDAD = "TXT_KEY_VICTORY_NAME_BAGHDAD"
 BERLIN = "TXT_KEY_VICTORY_NAME_BERLIN"
 BRUSSELS = "TXT_KEY_VICTORY_NAME_BRUSSELS"
 BUENOS_AIRES = "TXT_KEY_VICTORY_NAME_BUENOS_AIRES"
-CAIRO = "TXT_KEY_VICTORY_NAME_CAIRO"
 CARTHAGE = "TXT_KEY_VICTORY_NAME_CARTHAGE"
+CAIRO = "TXT_KEY_VICTORY_NAME_CAIRO"
 CONSTANTINOPLE = "TXT_KEY_VICTORY_NAME_CONSTANTINOPLE"
 CORDOBA = "TXT_KEY_VICTORY_NAME_CORDOBA"
 LHASA = "TXT_KEY_VICTORY_NAME_LHASA"
 MEXICO_CITY = "TXT_KEY_VICTORY_NAME_MEXICO_CITY"
 MOSCOW = "TXT_KEY_VICTORY_NAME_MOSCOW"
+MUBENDE = "TXT_KEY_VICTORY_NAME_MUBENDE"
 PARIS = "TXT_KEY_VICTORY_NAME_PARIS"
+SUSA = "TXT_KEY_VICTORY_NAME_SUSA"
 PERSEPOLIS = "TXT_KEY_VICTORY_NAME_PERSEPOLIS"
 TENOCHTITLAN = "TXT_KEY_VICTORY_NAME_TENOCHTITLAN"
 TOLLAN = "TXT_KEY_VICTORY_NAME_TOLLAN"
 VIENNA = "TXT_KEY_VICTORY_NAME_VIENNA"
+SELEUCIA = "TXT_KEY_VICTORY_NAME_SELEUCIA"
+TOLEDO = "TXT_KEY_VICTORY_NAME_TOLEDO"
+ROME = "TXT_KEY_VICTORY_NAME_ROME"
+ARTASHAT = "TXT_KEY_VICTORY_NAME_ARTASHAT"
+JERUSALEM = "TXT_KEY_VICTORY_NAME_JERUSALEM"
+LISBON = "TXT_KEY_VICTORY_NAME_LISBON"
+VENICE = "TXT_KEY_VICTORY_NAME_VENICE"
+BEIJING = "TXT_KEY_VICTORY_NAME_BEIJING"
+MOGADISHU = "TXT_KEY_VICTORY_NAME_MOGADISHU"
+MWIMBELE = "TXT_KEY_VICTORY_NAME_MWIMBELE"
 
 # city descriptors
 ANOTHER_CAPITAL = "TXT_KEY_VICTORY_NAME_ANOTHER_CAPITAL"
@@ -55,6 +83,10 @@ CAPITAL = "TXT_KEY_VICTORY_NAME_CAPITAL"
 DIFFERENT_CAPITAL = "TXT_KEY_VICTORY_NAME_DIFFERENT_CAPITAL"
 ITS_CITY = "TXT_KEY_VICTORY_NAME_ITS_CITY"
 MALAYAN_CITY = "TXT_KEY_VICTORY_NAME_MALAYAN_CITY"
+BENIN_CITY = "TXT_KEY_VICTORY_NAME_BENIN_CITY"
+MOZAMBIQUE = "TXT_KEY_VICTORY_NAME_MOZAMBIQUE"
+CAPE_TOWN = "TXT_KEY_VICTORY_NAME_CAPE_TOWN"
+PRETORIA = "TXT_KEY_VICTORY_NAME_PRETORIA"
 
 # area names
 AFRICA = "TXT_KEY_VICTORY_NAME_AFRICA"
@@ -65,6 +97,7 @@ ATLANTIC_COAST = "TXT_KEY_VICTORY_NAME_ATLANTIC_COAST"
 AMERICAS = "TXT_KEY_VICTORY_NAME_AMERICAS"
 ANATOLIA = "TXT_KEY_VICTORY_NAME_ANATOLIA"
 ASIA = "TXT_KEY_VICTORY_NAME_ASIA"
+BACTRIA = "TXT_KEY_VICTORY_NAME_BACTRIA"
 BALKANS = "TXT_KEY_VICTORY_NAME_BALKANS"
 BRAZIL = "TXT_KEY_VICTORY_NAME_BRAZIL"
 BRITAIN = "TXT_KEY_VICTORY_NAME_BRITAIN"
@@ -78,6 +111,7 @@ DZUNGARIA = "TXT_KEY_VICTORY_NAME_DZUNGARIA"
 EASTER_ISLAND = "TXT_KEY_VICTORY_NAME_EASTER_ISLAND"
 EASTERN_EUROPE = "TXT_KEY_VICTORY_NAME_EASTERN_EUROPE"
 EGYPT = "TXT_KEY_VICTORY_NAME_EGYPT"
+EGYPT_COASTAL = "TXT_KEY_VICTORY_NAME_EGYPT_COASTAL"
 EUROPE = "TXT_KEY_VICTORY_NAME_EUROPE"
 EUROPE_OR_NORTH_AMERICA = "TXT_KEY_VICTORY_NAME_EUROPE_OR_NORTH_AMERICA"
 GAUL = "TXT_KEY_VICTORY_NAME_GAUL"
@@ -86,6 +120,8 @@ GUAYANAS = "TXT_KEY_VICTORY_NAME_GUAYANAS"
 HAWAII = "TXT_KEY_VICTORY_NAME_HAWAII"
 IBERIA = "TXT_KEY_VICTORY_NAME_IBERIA"
 INDIA = "TXT_KEY_VICTORY_NAME_INDIA"
+THE_MIDDLE_EAST = "TXT_KEY_VICTORY_NAME_THE_MIDDLE_EAST"
+INDUSVALLEY = "TXT_KEY_VICTORY_NAME_INDUSVALLEY"
 INDOCHINA = "TXT_KEY_VICTORY_NAME_INDOCHINA"
 INDONESIA = "TXT_KEY_VICTORY_NAME_INDONESIA"
 ITALY = "TXT_KEY_VICTORY_NAME_ITALY"
@@ -123,19 +159,32 @@ SUDAN = "TXT_KEY_VICTORY_NAME_SUDAN"
 SYRIA = "TXT_KEY_VICTORY_NAME_SYRIA"
 TRANSOXIANA = "TXT_KEY_VICTORY_NAME_TRANSOXIANA"
 WEST_AFRICA = "TXT_KEY_VICTORY_NAME_WEST_AFRICA"
+GREECE_AND_ANATOLIA = "TXT_KEY_VICTORY_NAME_GREECE_ANATOLIA"
+CITIES_SURROUNDING_MOUNTAINS = "TXT_KEY_VICTORY_NAME_CITIES_SURROUNDING_MOUNTAINS"
 
 # area descriptors
-ANDEAN_COAST = "TXT_KEY_VICTORY_NAME_ANDEAN_COAST"
 ARAB_WORLD = "TXT_KEY_VICTORY_NAME_ARAB_WORLD"
+ANDEAN_COAST = "TXT_KEY_VICTORY_NAME_ANDEAN_COAST"
 BALTIC_SEA_REGION = "TXT_KEY_VICTORY_NAME_BALTIC_SEA_REGION"
+RED_SEA_REGION = "TXT_KEY_VICTORY_NAME_RED_SEA_REGION"
+PERSIAN_GULF = "TXT_KEY_VICTORY_NAME_PERSIAN_GULF"
 CANADIAN_TERRITORY = "TXT_KEY_VICTORY_NAME_CANADIAN_TERRITORY"
 CITIES_IN_CANADA = "TXT_KEY_VICTORY_NAME_CITIES_IN_CANADA"
 CITY_IN_CHINA = "TXT_KEY_VICTORY_NAME_CITY_IN_CHINA"
+CITY_IN_PERSIA = "TXT_KEY_VICTORY_NAME_CITY_IN_PERSIA"
 COLONIAL = "TXT_KEY_VICTORY_NAME_COLONIAL"
 INDIAN_TRADE_ROUTE = "TXT_KEY_VICTORY_NAME_INDIAN_TRADE_ROUTE"
 MEDITERRANEAN_PORT = "TXT_KEY_VICTORY_NAME_MEDITERRANEAN_PORT"
 NILE = "TXT_KEY_VICTORY_NAME_NILE"
 WORLD_COASTLINES = "TXT_KEY_VICTORY_NAME_WORLD_COASTLINES"
+THE_WORLD = "TXT_KEY_VICTORY_NAME_THE_WORLD"
+WEST_AFRICA = "TXT_KEY_VICTORY_NAME_WEST_AFRICA"
+SOUTHERN_AFRICA = "TXT_KEY_VICTORY_NAME_SOUTHERN_AFRICA"
+AFRICAN_LAKES = "TXT_KEY_VICTORY_NAME_AFRICAN_LAKES"
+BANTU_REGIONS = "TXT_KEY_VICTORY_NAME_BANTU_REGIONS"
+EAST_AFRICA = "TXT_KEY_VICTORY_NAME_EAST_AFRICA"
+MALAYA = "TXT_KEY_VICTORY_NAME_MALAYA"
+BORNEO = "TXT_KEY_VICTORY_NAME_BORNEO"
 
 # building descriptors
 SHRINES = "TXT_KEY_VICTORY_NAME_SHRINES"
@@ -143,8 +192,16 @@ TEMPLES = "TXT_KEY_VICTORY_NAME_TEMPLES"
 CHRISTIAN_CATHEDRALS = "TXT_KEY_VICTORY_NAME_CHRISTIAN_CATHEDRALS"
 STATE_RELIGION_CATHEDRAL = "TXT_KEY_VICTORY_NAME_STATE_RELIGION_CATHEDRAL"
 ORTHODOX_WONDERS = "TXT_KEY_VICTORY_NAME_ORTHODOX_WONDERS"
+ORTHODOX_WONDER = "TXT_KEY_VICTORY_NAME_ORTHODOX_WONDER"
+CATHOLIC_WONDER = "TXT_KEY_VICTORY_NAME_CATHOLIC_WONDER"
+ZOROASTRIAN_WONDER = "TXT_KEY_VICTORY_NAME_ZOROASTRIAN_WONDER"
+ISLAMIC_WONDER = "TXT_KEY_VICTORY_NAME_ISLAMIC_WONDER"
+ISLAMIC_CATHEDRAL = "TXT_KEY_VICTORY_NAME_ISLAMIC_CATHEDRAL"
+ISLAMIC_CATHEDRALS = "TXT_KEY_VICTORY_NAME_ISLAMIC_CATHEDRALS"
+CATHEDRALS = "TXT_KEY_VICTORY_NAME_CATHEDRALS"
 
 # resource descriptors
+UNIQUE_RESOURCES = "TXT_KEY_VICTORY_NAME_UNIQUE_RESOURCES"
 DIFFERENT_HAPPINESS_RESOURCES = "TXT_KEY_VICTORY_NAME_DIFFERENT_HAPPINESS_RESOURCES"
 HAPPINESS_RESOURCES = "TXT_KEY_VICTORY_NAME_HAPPINESS_RESOURCES"
 TRADING_COMPANY_RESOURCES = "TXT_KEY_VICTORY_NAME_TRADING_COMPANY_RESOURCES"
@@ -157,12 +214,16 @@ LAND_BASED_TRADE = "TXT_KEY_VICTORY_NAME_LAND_BASED_TRADE"
 
 # civilization descriptors
 AFRICAN = "TXT_KEY_VICTORY_NAME_AFRICAN"
+NORTH_AFRICAN = "TXT_KEY_VICTORY_NAME_NORTH_AFRICAN"
+AFRICAN_CIVS = "TXT_KEY_VICTORY_NAME_AFRICAN_CIVS"
 ALL_EUROPEAN = "TXT_KEY_VICTORY_NAME_ALL_EUROPEAN"
 ARAB = "TXT_KEY_VICTORY_NAME_ARAB"
 CHRISTIAN = "TXT_KEY_VICTORY_NAME_CHRISTIAN"
 EUROPEAN = "TXT_KEY_VICTORY_NAME_EUROPEAN"
-LOCAL = "TXT_KEY_VICTORY_NAME_LOCAL"
 OLD_WORLD_CIVILIZATION = "TXT_KEY_VICTORY_NAME_OLD_WORLD_CIVILIZATION"
+LOCAL = "TXT_KEY_VICTORY_NAME_LOCAL"
+OTHER_TURKIC = "TXT_KEY_VICTORY_NAME_OTHER_TURKIC"
+OTHER_TURKISH_MONGOL_OR_PERSIAN = "TXT_KEY_VICTORY_NAME_OTHER_TURKISH_MONGOL_OR_PERSIAN"
 
 # separators
 OR = "TXT_KEY_OR"
@@ -171,8 +232,513 @@ OR = "TXT_KEY_OR"
 FIRST_NORSE_GOAL = "TXT_KEY_VICTORY_GOAL_NORSE_1"
 THIRD_AZTEC_GOAL = "TXT_KEY_VICTORY_GOAL_AZTECS_3"
 
+ISLAMIC = "TXT_KEY_VICTORY_NAME_ISLAMIC"
+
+
+
 
 dGoals = {
+
+	iSouthAfrica: (
+		All(
+			PoweredCitiesCount(5),
+			BuildingCount(iAgriculturalFactory, 5),
+			by=1910,
+		),
+		UnitCount(iICBM, 6, by=1980),
+		AreaPercent(plots.regions(*lAfrica).named(AFRICA), 80, subject=ALLIES),
+	),
+
+	iBoers: (
+		TradeMissionCount(start(iNetherlands).named(AMSTERDAM), 4, by=1860),
+		All(
+			RouteConnection([iRouteRailroad], city(tCape).named(CAPE_TOWN), plots.regions(rSwahiliCoast).named(EAST_AFRICA)),
+			CityBuilding(city(tCape).named(CAPE_TOWN), iRailwayStation),
+			CityBuilding(city(tPretoria).named(PRETORIA), iRailwayStation),
+			by=1900,
+		),
+		All(
+			AveragePopulation(15),
+			AreaPopulationPercent(plots.regions(rCape).named(SOUTH_AFRICA), 4),
+			by=1930,
+		),
+	),
+
+	iZulu: (
+		All(
+			Discover(iGeneralship, by=1800),
+			UnitLevelCount(6, 3, by=1880),
+			LargerArmyThanPopulationTurns(100, by=1950),
+		),
+		UnitCount(iArtillery, 2, by=1900),
+		BuildingCount((iFactory, 10), (iSewer, 8), (iUniversity, 8), (iLevee, 5), (iPark, 5), by=1980),
+	),
+
+	iKatanga: (
+		BuildingCount(iChokweSculpture, 1, by=1700),
+		CultureCover(plots.region(rCongo), by=1900),
+		CityPopulation(start(iKatanga).named(MWIMBELE), 15, by=1940),
+	),
+
+	iMadagascar: (
+		AllContacted(by=1700),
+		All(
+			SettledCityCount(plots.regions(*lOceania).named(OCEANIA), 3),
+			Control(
+				plots.rectangle(tBorneo).named(BORNEO),
+			    plots.rectangle(tMalaya).named(MALAYA),
+				subject=VASSALS,
+			),
+			by=1850,
+		),
+		ControlledResourceCount(different(happiness_resources()).named(DIFFERENT_HAPPINESS_RESOURCES), 10, by=1900),
+	),
+
+	iFunj: (
+		All(
+			BuildingCount((iIslamicCathedral, 1)),
+			AreaNoReligion(plots.regions(rNubia, rSahel, rEthiopia, rSwahiliCoast, rMadagascar, rZambezi).named(EAST_AFRICA), iOrthodoxy),
+			by=1750,
+		),
+		RiverPopulationCount(60, by=1900),
+		All(
+			TechsTraded(10),
+			BestTechPlayers(3, subject=ISLAMIC_RELIGIONS),	
+			by=1960,
+		),
+	),
+	iAdal: (
+		 BuildingCount(wonders(), 4, by=1550),
+		 All(
+			ResourceCount(different(resources()).named(UNIQUE_RESOURCES), 15),
+			TradeRouteCount(15),
+			by=1600,
+		 ),
+		 All(
+			FirstDiscover(iSociology),
+		 	FirstDefensivePact(),
+		 ),
+	),
+	iBuganda: (
+		All(
+			BestPopulationCityTurns(city(tMubende).named(MUBENDE), 3),
+			FoundedCultureAmount(2000),
+			by=1500,
+		),
+		All(
+			PlotCount(plots.regions(rChad, rTana, rTurkana, rNyanza, rMwitanzege, rRweru, rTanganyika, rBangweulu, rRukwa, rMalawi, rMaiNdombe).named(AFRICAN_LAKES), 15),
+			RazeCount(2),
+			SlaveTradeGold(800),
+			by=1820,
+		),
+		All(
+			PopulationCityCount(5, 5, by=1850),
+			BuildingCount(religious_buildings(cathedral).named(CATHEDRALS), 4, by=1930),
+		),
+	),
+	iZimbabwe: (
+		BuildingCount(iZimbabweBuilding, 1, by=1450),
+		PopulationCount(30, by=1750),
+		RaidGold(600, by=1770),
+	),
+	iSomalia: (
+		All(
+			FirstDiscoverCivs(civs(*lAfricanCivs).named(AFRICAN_CIVS), iExploration),
+		),
+		All(
+			TradeMissionRegion(plots.all().adjacent_region(rMediterraneanSea).named(MEDITERRANEAN), 3),
+			DiplomaticMissionRegion(plots.all().adjacent_region(rMediterraneanSea).named(MEDITERRANEAN), 1),
+			TradeMissionRegion(plots.regions(rNorthChina, rSouthChina).named(CHINA), 3),
+			DiplomaticMissionRegion(plots.regions(rNorthChina, rSouthChina).named(CHINA), 1),
+			by=1600
+		),
+		All(
+			TerrainCount(iCoast, 50),
+			SpecialistCount(great_people(), 6),
+			by=1800
+		),
+	),
+
+	iAshanti: (
+		All(
+			CityCultureLevel(capital().named(CAPITAL), iCultureLevelRefined, by=1800),
+			CityCultureLevel(capital().named(CAPITAL), iCultureLevelInfluential, by=1900),
+			CityCultureLevel(capital().named(CAPITAL), iCultureLevelLegendary, by=2026),	
+		),
+		ResourceCount(sum(lHappinessResources).named(HAPPINESS_RESOURCES), 10, by=1900),
+		All(
+			CompleteEra(iIndustrial),
+			LifeExpectancyTurns(60, 100),
+			by=1980
+		),
+	),
+
+	iBenin: (
+		All(
+			CityBuildingCount(start(iBenin).named(BENIN_CITY), anyBuildings(), 15, by=1400),
+			Wonder(iIyanuwo, by=1500),
+		),
+		All(
+			CommerceRegion(plots.region(rGuinea), 3500),
+			TradeMissionCount(city(tLisbon).named(LISBON), 1),
+			by=1650
+	
+		),
+		All(
+			Wonder(iOsunOsogbo),
+			BuildingCount(iPaganTemple, 6),
+			DefeatedUndiscoveredUnits(10),
+			by=1700
+		),
+																																																													
+	),
+
+	iHausa: (
+			PopulationCityCount(6, 7, by=1650),
+			All(
+				AreaNoStateReligion(plots.regions(*lWestAfricaRegions).named(WEST_AFRICA), sum(iOrthodoxy, iCatholicism, iProtestantism).named(CHRISTIAN)),
+				VassalCount(2, civs=civs(*lAfricanCivs).named(AFRICA), iStateReligion=iIslam),
+				at=1850,
+			),
+			All(
+				Wonder(iHollywood),
+				CorporationCount(iOilIndustry, 3),
+				TeamRank(5),
+				by=1960,
+			),
+	),
+
+	iKanemBornu: (
+			All(
+				AcquiredCities(2),
+				TerrainCount(iDesert, 15),
+				by=1000,
+			),
+			All(
+				TradeGold(5000),
+				AllAttitude(AttitudeTypes.ATTITUDE_FRIENDLY, civs=group(iCivGroupNorthAfrica).named(NORTH_AFRICAN)),
+				at=1500,
+			),
+			FirstDiscoverCivs(civs(*lAfricanCivs).named(AFRICAN_CIVS), iFirearms),
+	),
+
+	iSonghai: (
+		All(
+			Wonder(iTombOfAskia),
+			UnitLevelCount(4, 5),
+			by=1500,
+		),
+		All(
+			Wonder(iGreatAdobeMosque),
+			ResourceCount(different(happiness_resources()).named(DIFFERENT_HAPPINESS_RESOURCES), 5),
+			by=1580,
+		),
+		All(
+			Wonder(iUniversityOfSankore),
+			CitySpecialistCount(wonder(iUniversityOfSankore).named(ITS_CITY), great_people(), 2),
+			by=1620,
+		),
+	),
+
+
+	iGhana: (
+		All(
+			ContactCount(3, by=400),
+			TradeRouteCount(3, by=650),
+		),
+		All(
+			SlaveTradeGold(500),
+			UnitCount(iLancer, 10),
+			by=1200,
+		),
+		All(
+			TradeRouteCommerce(3000),
+			AreaPercent(plots.regions(*lWestAfricaRegions).named(WEST_AFRICA), 50),
+			by=1400,
+		),
+	),
+
+
+	iJerusalem: (
+		All(
+			AttitudeCount(AttitudeTypes.ATTITUDE_PLEASED, 10, iStateReligion=sum(iOrthodoxy, iCatholicism, iProtestantism).named(CHRISTIAN)),
+			CompleteEra(iMedieval),
+			by=1500,
+		),
+		All(
+			CityCulture(city(tJerusalem).named(JERUSALEM), 5000),
+			CultureAmountRegion(plots.region(rEgypt), 5000),
+			by=1500,
+		),
+		All(
+			AreaNoStateReligion(plots.all().adjacent_region(rMediterraneanSea).named(MEDITERRANEAN), iIslam),
+			AreaNoStateReligion(plots.all().adjacent_region(rMediterraneanSea).named(MEDITERRANEAN), iShia),
+			by=1600,
+		),
+	),
+
+
+	iGeorgia: (
+		StateReligionSurpassCount(iOrthodoxy, 2, at=1220),
+		GoldenAgeTurns(20, by=1450),
+		PopulationCountRegion((plots.all().where(lambda pl: pl.isPeak())).expand(1).named(CITIES_SURROUNDING_MOUNTAINS), 20, at=1490),
+	),
+
+
+	iGokturks: (
+		DifferentCities(
+			CityCultureLevel(capital().named(CAPITAL), iCultureLevelDeveloping, by=700),
+			CityCultureLevel(capital().named(DIFFERENT_CAPITAL), iCultureLevelRefined, by=900),
+			CityCultureLevel(capital().named(ANOTHER_CAPITAL), iCultureLevelInfluential, by=1100),
+		),
+		All(
+			PillageCount(20),
+			RouteConnection(NamedList(iRouteRoad).named(LAND_BASED_TRADE), plots.regions(rNorthChina, rSouthChina).named(CITY_IN_CHINA), plots.regions(rPersia, rKhorasan).named(CITY_IN_PERSIA)),
+			by=900,
+		),
+		All(
+			UnitCount(iLancer, 5),
+			BestArmy(by=1100),
+		),
+	),
+
+	iTunis: (
+		CitySpecialistCount(capital().named(CAPITAL), iSpecialistSlave, 10, by=1400),
+		AreaPercent(plots.all().adjacent_region(rMediterraneanSea).named(MEDITERRANEAN), 15, by=1500),
+		PopulationCityCount(15, 3, by=1600),
+	),
+
+	iKhazars: (
+		All(
+			AttitudeCount(AttitudeTypes.ATTITUDE_PLEASED, 1, civs=group(iCivGroupEurope).named(EUROPE)),
+			AttitudeCount(AttitudeTypes.ATTITUDE_PLEASED, 1, civs=civs(iChina).named(CHINA)),
+			AttitudeCount(AttitudeTypes.ATTITUDE_PLEASED, 1, civs=group(iCivGroupMiddleEast).named(THE_MIDDLE_EAST)),
+			by=970,
+		),
+		TradeRouteCount(12, by=970),
+ 		BuildingCount(iJewishCathedral, 1, by=1350),
+	),
+
+	iOman: (
+		CultureCover(plots.region(rPersianGulf).named(PERSIAN_GULF), by=1400),
+		ConqueredCities(3, civs=group(iCivGroupEurope).named(EUROPEAN), outside=plots.regions(*lEurope).named(EUROPE), by=1750),
+		TradeRouteCount(35, by=1750),
+	),
+
+	iYemen: (
+		All(
+			AveragePopulation(12),
+			CityCount(plots.all().adjacent_region(rRedSea).land().named(RED_SEA_REGION), 2),
+			at=1250,
+		),
+		CultureAmountRegion(plots.region(rArabia), 5000, by=1500),
+		All(
+			ResourceCount(iCoffee, 4),
+			ResourceCount(iIncense, 4),
+			ResourceCount(iSpices, 2),
+			by=1600,
+		),
+	),
+
+	iSamanids: (
+		All(
+			GoldenAges(1),
+			GreatGenerals(2),
+			by=1050,
+		),
+		CultureCityCount(500, 5, by=1200),
+		ControlTurns(plots.regions(rPersia, rKhorasan).named(PERSIA), 30, by=1300),
+	),
+
+
+	iBuyids: (
+		All(
+			BestPopulationCity(city(tBabylon).named(BAGHDAD)),
+			BestCultureCity(city(tBabylon).named(BAGHDAD)),
+			at=1200,
+		),
+		BuildingCount(religious_buildings(shrine).named(SHRINES), 5, by=1200),
+		FirstEnterEraX(iIndustrial),
+	),
+
+
+	iMisr: (
+		All(
+			CityBuilding(city(tCairo).named(CAIRO), iPalace, iAlAzhar),
+			ReligionSpreadCount(iShia, 10),
+			by=1150,
+		),
+		All(
+			AreaPopulationCount(plots.rectangle(tNile).without(lNileExceptions).named(NILE), 40),
+			TradeRouteCommerce(3000),
+			BuildingCount(religious_buildings(shrine).named(SHRINES), 3),
+			by=1250
+		),
+		All(
+			ReligionSpreadPercent(iIslam, 20),
+			UnitCount(iHandCannon, 10),
+			TradeGold(10000),
+			at=1550,
+		),
+	),
+
+
+	iArmenia: (
+			All(
+				BuildingCount(
+					(sum(*lZoroastrianWonders).named(ZOROASTRIAN_WONDER), 1),
+					(iZoroastrianCathedral, 1),
+					by=250,
+				),
+				BuildingCount(
+					(sum(*lOrthodoxWonders).named(ORTHODOX_WONDERS), 3),
+					(iOrthodoxCathedral, 1), 
+					by=1200,
+				),
+			),
+			CityDifferentGreatPeopleCount(start(iArmenia).named(ARTASHAT), 5, by=600),
+			All(
+				CityBuildingCount(start(iArmenia).named(ARTASHAT), anyBuildings(), 20, by=600),
+				CityCultureLevel(start(iArmenia).named(ARTASHAT), iCultureLevelLegendary, at=1650),
+			),
+	),
+
+
+	iParthia: (
+			Control(
+			plots.region(rLevant).named(LEVANT),
+			plots.region(rMesopotamia),
+			plots.region(rPersia),
+			at=200,
+			),
+			EraFirstDiscover((iMedieval, 8)),
+			Control(
+			plots.region(rArabia),
+			plots.region(rAnatolia),
+			plots.region(rEgypt),
+			plots.regions(rTransoxiana, rKhorasan).named(BACTRIA),
+			by=600,
+			),
+	),
+
+	iScythia: (
+			DefeatedUnits(civs(iPersia), 15, by=-350),
+			LandPercent(3, by=-350),
+			CultureCover(plots.all().region(rPonticSteppe).land().named(PONTIC_STEPPE), by=-300),
+	),
+
+	iNumidia: (
+			All(
+				CityCount(plots.region(rIberia), 1),
+				CityCount(plots.region(rItaly), 1),
+				CityCount(plots.region(rMaghreb).named(AFRICA), 4),
+			at=200,
+			),
+			AveragePopulation(8, at=200),
+			TradeMissionCount(city(tRome).named(ROME), 2, by=300),
+	),
+
+	iHuns: (
+			CityCount(
+			(plots.region(rItaly), 2),
+			(plots.region(rFrance).named(GAUL), 2),
+			by=450,
+			),
+			RazeCount(3, by=500),
+			GoldAmount(3000, by=500),
+	),
+	
+	iGoths: (
+			FirstDiscover(iFeudalism),
+			All(
+				Control(plots.region(rItaly), by=500),
+				RaidGold(1000, by=600),
+		  	 ),
+			All(
+				Control(plots.region(rIberia), by=500),
+				CultureAmountRegion(plots.region(rIberia), 3000, by=1000),
+		  	 ),
+	),
+
+
+	iVandals: (
+			PillageCount(20, by=500),
+			Control(plots.region(rMaghreb).named(MAGHREB), by=500),
+			CityPopulation(city(tCarthage).named(CARTHAGE), 15, by=750),
+	),
+
+
+	iGermania: (
+			 DefeatedUnits(civs(iRome), 10, by=150),
+			 CityCount(plots.region(rBritain), 2, by=500),
+			 BuildingCount(
+			 	(sum(*lCatholicWonders).named(CATHOLIC_WONDER), 1), 
+				by=1100
+			),
+	),
+	iMycenae: (
+			All(
+				CityCount(plots.regions(rGreece, rAnatolia).named(GREECE_AND_ANATOLIA), 4),
+				NoCityLost(),
+				by=-800,
+		  	 ),
+			 BuildingCount(wonders(), 3, by=-700),
+			 CitySpecialistCount(capital().named(CAPITAL), great_people(), 4, by=-550),
+	),
+	iSparta: (
+			 All(
+			 CityCount(plots.regions(rGreece, rAnatolia).named(GREECE_AND_ANATOLIA), 4),
+			 CityCount(plots.region(rItaly), 1),
+			 at=-400,
+			 ),
+			 UnitLevelCount(5, 10, by=-300),
+			 BuildingCount((iBarracks, 5), (iArena, 5), (iPaganTemple, 5), by=-300),
+	),
+	iMacedon: (
+			Control(
+			plots.region(rAnatolia),
+			plots.region(rLevant).named(LEVANT),
+			plots.region(rMesopotamia),
+			plots.region(rPersia),
+			plots.region(rEgypt),
+			at=-300,
+			),
+			All(
+				Control(
+					plots.regions(rTransoxiana, rKhorasan).named(BACTRIA),
+					plots.regions(rHinduKush, rPunjab, rSindh).named(INDUSVALLEY),
+					),
+				CitySpecialistCount(city(tBabylon).named(SELEUCIA), great_people(), 5),
+				by=-250,	
+			),
+			Wonders(iGreatLibrary, iGreatLighthouse, by=-200),	
+	),
+
+
+	iElam: (
+		ContactCount(4, by=-1825),
+		All(
+			TradeRouteCommerce(150, by=-1000),
+			TradeRouteCommerce(400, by=-800),
+		),
+		RazeCount(2, by=-800),
+	),
+
+
+	iSumeria: (
+		CompleteEra(iAncient, by=-600),
+		All(
+		CityCount(plots.region(rMesopotamia).named(MESOPOTAMIA), 3, at=-2100),
+		CityCount(plots.region(rMesopotamia).named(MESOPOTAMIA), 3, at=-1000),
+		CityCount(plots.region(rMesopotamia).named(MESOPOTAMIA), 3, at=-320),
+		),
+		All(
+			AveragePopulation(3, at=-2100),
+			AveragePopulation(5, at=-1000),
+			AveragePopulation(10, at=-320),
+		),
+	),
+
 	iEgypt: (
 		All(
 			Wonders(iGreatSphinx, iPyramids),
@@ -187,16 +753,16 @@ dGoals = {
 		All(
 			Wonders(iGreatLibrary, iGreatLighthouse),
 			CultureAmount(5000),
-			by=-200,
+			by=-300,
 		),
 	),
 	iBabylonia: (
-		FirstDiscover(iConstruction, iArithmetics, iWriting, iCalendar, iContract),
-		CityBuildingCount(city(tBabylon).named(BABYLON), wonders(), 3, by=-850),
+		EraFirstDiscover((iClassical, 8)),
+		CityBuildingCount(city(tBabylon).named(BABYLON), wonders(), 3, by=-600),
 		All(
 			CityPopulation(city(tBabylon).named(BABYLON), 12),
 			CityCultureLevel(city(tBabylon).named(BABYLON), iCultureLevelRefined),
-			by=-700,
+			by=-600,
 		),
 	),
 	iHarappa: (
@@ -204,20 +770,42 @@ dGoals = {
 		BuildingCount((iReservoir, 3), (iGranary, 2), (iWeaver, 2), by=-1500),
 		PopulationCount(45, by=-800),
 	),
+
+	iMinoa: (
+		All(
+			PopulationInAreaPercent(plots.regions(*lEuropeProper).named(EUROPE), 60, at=-1300),
+			PopulationInAreaPercent(plots.regions(*lEuropeProper).named(EUROPE), 60, at=-540),
+		),
+		OpenBorderCount(5, by=-1000),
+		AreaPercent(plots.all().adjacent_region(rMediterraneanSea).named(MEDITERRANEAN), 20, by=-550),
+	),
+
+
 	iAssyria: (
 		All(
-			CityCaptureGold(250),
-			UnitLevelCount(3, 5),
-			by=-1200,
+			Control(
+			plots.region(rMesopotamia).named(MESOPOTAMIA),
+			),
+			UnitLevelCount(3, 3),
+			by=-1000,
 		),
 		Control(
 			plots.region(rMesopotamia).named(MESOPOTAMIA),
-			plots.region(rPersia).named(PERSIA),
 			plots.region(rLevant).named(LEVANT),
 			plots.region(rEgypt).named(EGYPT),
-			by=-900,
+			by=-650,
 		),
-		CitySpecialistCount(capital().named(CAPITAL), great_people(), 3, by=-600),
+		CitySpecialistCount(capital().named(CAPITAL), great_people(), 3, by=-630),
+	),
+	iChina: (
+		BuildingCount((iConfucianCathedral, 4), (iTaoistCathedral, 3), by=1000),
+		FirstDiscover(iCompass, iPaper, iGunpowder, iPrinting),
+		GoldenAges(4, by=1800),
+	),
+	iHittites: (
+		ResourceCount(sum(iCopper, iIron), 4, by=-900),
+		Production(1200, by=-800),
+		FirstTribute(),
 	),
 	iNubia: (
 		All(
@@ -232,27 +820,13 @@ dGoals = {
 			TradeNetworkReligionCityCount(iOrthodoxy, 24, by=1200),
 		),
 	),
-	iChina: (
-		BuildingCount((iConfucianCathedral, 4), (iTaoistCathedral, 3), by=1000),
-		FirstDiscover(iCompass, iPaper, iGunpowder, iPrinting),
-		GoldenAges(4, by=1800),
-	),
-	iHittites: (
-		ResourceCount(sum(iCopper, iIron), 4, by=-900),
-		Production(1200, by=-800),
-		FirstTribute(),
-	),
 	iGreece: (
-		FirstDiscover(iMathematics, iLiterature, iAesthetics, iPhilosophy, iMedicine),
-		Control(
-			plots.region(rAnatolia),
-			plots.region(rLevant).named(LEVANT),
-			plots.region(rMesopotamia),
-			plots.region(rPersia),
-			plots.region(rEgypt),
-			at=-330,
+		Wonders(iParthenon, iColossus, iTempleOfArtemis, by=-400),
+		ControlledResourceCount(
+			(improvement_resources(iFishingBoats, iHarvestBoats), 6),
+			by=-400
 		),
-		Wonders(iParthenon, iColossus, iStatueOfZeus, iTempleOfArtemis, by=-250),
+		CompleteEra(iClassical, by=200),
 	),
 	iIndia: (
 		BuildingCount((iHinduShrine, 1), (iBuddhistShrine, 1), at=-100),
@@ -263,6 +837,7 @@ dGoals = {
 		All(
 			ControlledResourceCount(iDye, 5),
 			TradeRouteCount(15),
+			RevealedPercent(plots.all().sea().adjacent_regions(*lAfricanCoastRegions).named(AFRICAN_COAST), 25),
 			by=-300
 		),
 		All(
@@ -273,8 +848,23 @@ dGoals = {
 				at=-150
 			),
 		),
-		RevealedPercent(plots.all().sea().adjacent_regions(*lAfricanCoastRegions).named(AFRICAN_COAST), 60, by=1),
+		All(
+		CultureAmountRegion(plots.region(rLevant).named(LEVANT), 300, by=-600),
+		CultureAmountRegion(plots.region(rMaghreb).named(AFRICA), 1500, by=-300),
+		CultureAmountRegion(plots.rectangle(tPhoenicianItaly).without(lPhoenicianItalyExceptions).named(ITALY), 3000, by=1),
+		),
 	),
+
+	iJudah: (
+		All(
+			BuildingCount(iJewishShrine, 1, at=-500),
+			BuildingCount(iOrthodoxShrine, 1, at=350),
+		),
+		BuildingCount((iJewishCathedral, 1), by=400),
+		CultureAmount(10000, by=600),
+		
+	),
+
 	iPolynesia: (
 		Settle(
 			plots.rectangle(tHawaii).named(HAWAII),
@@ -295,32 +885,25 @@ dGoals = {
 	),
 	iPersia: (
 		RouteConnection([iRouteRoad], city(tPersepolis).named(PERSEPOLIS), plots.region(rAnatolia), by=-500),
-		All(
-			BuildingCount(wonders(), 10),
-			PopulationPercent(35),
-			at=-300,
-		),
-		All(
-			BuildingCount(iZoroastrianCathedral, 2),
-			CultureLevelCityCount(iCultureLevelRefined, 8),
-			by=600,
-		),
+		BuildingCount(wonders(), 14, by=-300),
+		PopulationPercent(25, at=-300),
 	),
 	iCelts: (
-		ConqueredCities(2, bControl=False, by=-150),
+		ConqueredCities(2, bControl=False, by=-400),
 		All(
 			CityCount(plots.region(rFrance).named(GAUL), 3),
 			Settle(
 				plots.region(rIreland),
 				plots.region(rBritain),
 				plots.region(rIberia),
-				plots.rectangle(tPannonia).without(lPannoniaExceptions).named(PANNONIA),
-				plots.region(rAnatolia),
-				required=3,
+				plots.region(rCentralEurope).named(PANNONIA),
 			),
-			by=-150,
+			by=-400,
 		),
-		ReligionSpreadCount(sum(iOrthodoxy, iCatholicism).separated(OR), 12, by=1000),
+		Control(
+			plots.region(rGreece),
+			at=-275,
+		),
 	),
 	iRome: (
 		BuildingCount((iBarracks, 8), (iAqueduct, 6), (iArena, 5), (iForum, 4), by=-50),
@@ -334,7 +917,7 @@ dGoals = {
 			(plots.region(rLevant).named(LEVANT), 2),
 			at=100,
 		),
-		FirstDiscover(iArchitecture, iPolitics, iScholarship, iMachinery, iCivilService),
+		TeamRank(1, at=476),
 	),
 	iMaya: (
 		All(
@@ -346,8 +929,8 @@ dGoals = {
 	),
 	iDravidia: (
 		All(
-			GoldAmount(5000, at=600),
 			CultureAmount(7500, at=600),
+			GoldAmount(5000, at=600),
 			TradeGold(7500, by=1200),
 		),
 		Control(
@@ -370,7 +953,7 @@ dGoals = {
 		),
 		All(
 			LiberatedCities(plots.regions(*lAfrica).named(AFRICA), group(iCivGroupAfrica).named(AFRICAN), 12),
-			AllAttitude(AttitudeTypes.ATTITUDE_FRIENDLY, civs=group(iCivGroupAfrica).named(AFRICAN)),
+			AllAttitude(AttitudeTypes.ATTITUDE_PLEASED, civs=civs(*lAfricanCivs).named(AFRICAN)),
 			at=1930,
 		),
 	),
@@ -428,16 +1011,11 @@ dGoals = {
 	),
 	iMali: (
 		All(
-			GoldAmount(2000, by=1000),
-			GoldAmount(5000, by=1200),
-			GoldAmount(15000, by=1500),
+			Wonder(iUniversityOfSankore, by=1400),
+			TechsTraded(8, by=1500),
 		),
-		TradeMissionCount(holy_city(), 2, by=1250),
-		All(
-			Wonder(iUniversityOfSankore),
-			CitySpecialistCount(wonder(iUniversityOfSankore).named(ITS_CITY), iSpecialistGreatProphet, 1),
-			by=1350,
-		),
+		TradeMissionCount(holy_city(), 1, by=1450),
+		GoldAmount(10000, by=1650),
 	),
 	iByzantium: (
 		GoldAmount(5000, by=1000),
@@ -496,34 +1074,63 @@ dGoals = {
 		RaidGold(3000, by=1250),
 	),
 	iTurks: (
-		All(
-			LandPercent(6),
-			PillageCount(20),
-			by=900,
+		Control(
+				plots.regions(rLevant, rMesopotamia).named(MESOPOTAMIA),
+				plots.region(rTransoxiana),
+				plots.regions(rPersia, rKhorasan).named(PERSIA),
+				plots.region(rAnatolia),
+				by=1150,
+			),
+		Constructed(
+			(iNationalCollege, 1),
+			(iAcademy, 2),
+			by=1250,
 		),
 		All(
-			RouteConnection(NamedList(iRouteRoad).named(LAND_BASED_TRADE), plots.regions(rNorthChina, rSouthChina).named(CITY_IN_CHINA), plots.regions(rEgypt, rLevant, rAnatolia).coastal().named(MEDITERRANEAN_PORT), start_owners=True),
-			CorporationCount(iSilkRoute, 14),
-			by=1100,
-		),
-		DifferentCities(
-			CityCultureLevel(capital().named(CAPITAL), iCultureLevelDeveloping, by=900),
-			CityCultureLevel(capital().named(DIFFERENT_CAPITAL), iCultureLevelRefined, by=1100),
-			CityCultureLevel(capital().named(ANOTHER_CAPITAL), iCultureLevelInfluential, by=1400),
+			AllowNone(
+				civs(iOttomans, iTimurids, iGokturks, iGhorids).named(OTHER_TURKIC),
+				plots.all().named(THE_WORLD),
+			),
+			PopulationPercent(15),
+			by=1450,
 		),
 	),
-	iArabia: (
-		CompleteEra(iMedieval, by=1200),
-		Control(
-			plots.region(rEgypt).named(EGYPT),
-			plots.region(rMaghreb).named(MAGHREB),
-			plots.region(rIberia).named(IBERIA),
-			plots.regions(rLevant, rMesopotamia).named(MESOPOTAMIA),
-			plots.regions(rPersia, rKhorasan).named(PERSIA),
-			subject=VASSALS,
-			at=1300,
+	iMorocco: (
+ 		All(
+ 			Control(plots.region(rMaghreb).named(MAGHREB)),
+ 			ConqueredCities(3, inside=plots.region(rIberia).named(IBERIA)),
+ 			ConqueredCities(2, inside=plots.rectangle(tWestAfrica).named(WEST_AFRICA)),
+ 			by=1350,
+ 		),
+		All(
+			Wonder(iAitBenhaddou, by=1300),	
+			BuildingCount(wonders(), 5, by=1500),
 		),
-		ReligionSpreadPercent(iIslam, 30),
+		All(
+ 			DefeatedUnits(civs(iSpain, iPortugal, iFrance), 30, by=1900),
+ 			ReligionSpreadPercent(iIslam, 30, by=1900),
+		),
+ 	),
+	iArabia: (
+		Control(
+				plots.region(rArabia),
+				plots.region(rEgypt).named(EGYPT),
+				plots.regions(rLevant, rMesopotamia).named(MESOPOTAMIA),
+				plots.region(rMaghreb).named(MAGHREB),
+				plots.regions(rPersia, rKhorasan).named(PERSIA),
+				plots.rectangle(tAndalusia).named(ANDALUSIA),
+				at=700,
+			),
+		CompleteEra(iMedieval, by=1200),
+		All(
+			ControlTurns(plots.region(rArabia), 150),
+			ControlTurns(plots.region(rEgypt).named(EGYPT), 150),
+			ControlTurns(plots.regions(rLevant, rMesopotamia).named(MESOPOTAMIA), 150),
+			ControlTurns(plots.region(rMaghreb).named(MAGHREB), 100),
+			ControlTurns(plots.regions(rPersia, rKhorasan).named(PERSIA), 100),
+			ControlTurns(plots.region(rIberia).named(IBERIA), 50),
+			by=1850,
+		),	
 	),
 	iTibet: (
 		AcquiredCities(7, by=1000),
@@ -532,17 +1139,24 @@ dGoals = {
 	),
 	iMoors: (
 		All(
-			CityCount(plots.region(rMaghreb).named(MAGHREB), 4),
-			ConqueredCities(3, inside=plots.region(rIberia).named(IBERIA)),
-			ConqueredCities(2, inside=plots.rectangle(tWestAfrica).named(WEST_AFRICA)),
-			at=1200,
+ 			CityCount(plots.region(rMaghreb).named(MAGHREB), 3),
+ 			Control(
+ 				plots.region(rIberia).named(IBERIA),
+ 				subject=VASSALS,
+ 				by=909,
+ 			),
 		),
 		All(
-			Wonder(iMezquita),
-			CitySpecialistCount(start(iMoors).named(CORDOBA), sum(iSpecialistGreatProphet, iSpecialistGreatScientist, iSpecialistGreatEngineer), 4),
-			by=1300,
+			Wonders(iMezquita, iAlhambra),
+			CitySpecialistCount(start(iMoors).named(CORDOBA), sum(iSpecialistGreatProphet, iSpecialistGreatScientist, iSpecialistGreatEngineer), 6),
+			by=1350,
 		),
-		PiracyGold(3000, by=1650),
+		All(
+			FirstSettle(plots.regions(*lAmerica).named(AMERICAS), allowed=dCivGroups[iCivGroupAmerica]),
+			RevealedPercent(plots.all().sea().where(lambda p: p.getTerrainType() in [iCoast, iArcticCoast]).named(WORLD_COASTLINES), 55),
+			PiracyGold(1500),
+			by=1550
+		),
 	),
 	iJava: (
 		Wonders(iPrambanan, iBorobudur, by=1100),
@@ -602,7 +1216,7 @@ dGoals = {
 	),
 	iRus: (
 		ReligionPopulationCount(iOrthodoxy, 30, by=1200),
-		DefeatedUnits(civs(iBarbarian), 25, by=1250),
+		DefeatedUnits(civs(iBarbarian, iMongols, iKhazars), 25, by=1280),
 		All(
 			ImprovementCount((iCamp, 6), (iQuarry, 3)),
 			TradeRouteCount(20),
@@ -615,33 +1229,21 @@ dGoals = {
 		CultureLevelCityCount(iCultureLevelInfluential, 3, by=1700),
 	),
 	iSwahili: (
-		ImportCount(sum(lHappinessResources).named(HAPPINESS_RESOURCES), 100, by=1300),
+		All(
+			ImportCount(sum(lHappinessResources).named(HAPPINESS_RESOURCES), 100, by=1250),
+			TradeRouteCount(25, by=1500),
+		),
 		RevealedPercent(plots.all().sea().where(lambda p: p.getTerrainType() in [iCoast, iArcticCoast]).named(WORLD_COASTLINES), 35, by=1400),
-		TradeRouteCount(25, by=1500),
-	),
-	iMisr: (
-		All(
-			BuildingCount(religious_buildings(shrine).named(SHRINES), 3),
-			CitySpecialistCount(start(iMisr).named(CAIRO), iSpecialistGreatProphet, 2),
-			by=1250,
-		),
-		All(
-			AreaPopulationCount(plots.rectangle(tNile).without(lNileExceptions).named(NILE), 50),
-			TradeRouteCommerce(5000),
-			by=1500,
-		),
-		All(
-			EraDiscoverCount(iIndustrial, 7),
-			CityCount(
-				(plots.region(rMaghreb).named(NORTH_AFRICA), 3),
-				(plots.rectangle(tSudan).without(lSudanExceptions).named(SUDAN), 3),
-				(plots.region(rArabia), 3),
-				(plots.region(rLevant).named(SYRIA), 3),
-				(plots.region(rAnatolia), 3),
-				(plots.region(rGreece), 3),
-			),
-			at=1840,
-		),
+		Control(
+ 			plots.region(rCape),
+			plots.birth(iOman),
+ 			plots.region(rEthiopia),
+			plots.region(rHornOfAfrica),
+			plots.region(rMadagascar),
+			plots.region(rGreatLakes),
+			required=3,
+ 			by=1500,
+ 		),
 	),
 	iPoland: (
 		PopulationCityCount(12, 3, by=1400),
@@ -693,10 +1295,31 @@ dGoals = {
 		SacrificeGoldenAges(16, by=1650),
 		Control(required=1, by=1750, desc_key=THIRD_AZTEC_GOAL, *lAztecTargets)
 	),
-	iMughals: (
-		BuildingCount(iIslamicCathedral, 3, by=1500),
+	iGhorids: (
+		All(
+			BuildingCount(iIslamicCathedral, 3),
+			SpecialistCount(iSpecialistSlave, 12),
+			by=1200,
+		),	
+		All(
+			AreaNoReligion(plots.regions(*lIndia).named(INDIA), iHinduism),	
+			AreaNoReligion(plots.regions(*lIndia).named(INDIA), iBuddhism),
+        	by=1400,
+		),
+		AllowNone(
+			civs(iTurks, iTimurids, iMongols, iParthia, iPersia, iBuyids, iSamanids).named(OTHER_TURKISH_MONGOL_OR_PERSIAN),
+			plots.regions(*lIndia).named(INDIA),
+			at=1500,
+		),	
+	),
+	iTimurids: (
+		All(
+			LandPercent(5),
+			PopulationPercent(10),
+			by=1500
+		),
 		Wonders(iRedFort, iShalimarGardens, iTajMahal, by=1660),
-		CultureAmount(50000, at=1750),
+		CultureAmount(50000, by=1750),
 	),
 	iThailand: (
 		OpenBorderCount(10, at=1650),
@@ -765,8 +1388,8 @@ dGoals = {
 		SpecialistCount(sum(iSpecialistGreatGeneral, iSpecialistGreatArtist, iSpecialistGreatStatesman), 12, by=1800),
 	),
 	iCongo: (
-		ReligiousVotePercent(12, by=1650),
-		SlaveTradeGold(1000, by=1800),
+		ReligiousVotePercent(20, by=1750),
+		SlaveTradeGold(1200, by=1800),
 		EnterEraBefore(iIndustrial, iGlobal),
 	),
 	iIran: (
@@ -904,7 +1527,7 @@ dGoals = {
 		),
 		All(
 			Control((plots.regions(rMaritimes, rQuebec, rOntario) + plots.regions(rGreatPlains, rCascadia).where(lambda p: p.getY() >= iCanadaSouthernBorder) + plots.region(rAmericanArctic).where(lambda p: iCanadaWesternBorder <= p.getX() <= iCanadaEasternBorder)).named(CITIES_IN_CANADA)),
-			AreaPercent((plots.regions(rMaritimes, rQuebec, rOntario) + plots.regions(rGreatPlains, rCascadia).where(lambda p: p.getY() >= iCanadaSouthernBorder) + plots.region(rAmericanArctic).where(lambda p: iCanadaWesternBorder <= p.getX() <= iCanadaEasternBorder)).named(CANADIAN_TERRITORY), 50),
+ 			AreaPercent((plots.regions(rMaritimes, rQuebec, rOntario) + plots.regions(rGreatPlains, rCascadia).where(lambda p: p.getY() >= iCanadaSouthernBorder) + plots.region(rAmericanArctic).where(lambda p: iCanadaWesternBorder <= p.getX() <= iCanadaEasternBorder)).named(CANADIAN_TERRITORY), 50),
 			NoCityConquered(),
 			by=1950,
 		),

@@ -16,6 +16,7 @@ import Collapse
 import Communications
 import Companies
 import Congresses
+import Decadence # Aeons
 import DynamicCivs
 import EventSigns
 import GreatPeople

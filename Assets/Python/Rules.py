@@ -2,6 +2,9 @@ from Core import *
 from Locations import *
 from RFCUtils import *
 from Events import handler
+from Secession import *
+from Civics import * #Aeons - Needed for immigration
+#from Plague import * #Aeons - Needed for immigration plague spread
 
 
 ### CONSTANTS ###
@@ -41,7 +44,7 @@ def restoreCapital(iOwner, iPlayer, city):
 	
 	capital = plots.capital(iPlayer)
 	
-	if data.civs[iPlayer].iResurrections > 0 or player(iPlayer).getPeriod() != -1:
+	if data.civs[civ(iPlayer)].iResurrections > 0 or player(iPlayer).getPeriod() != -1:
 		capital = plots.respawnCapital(iPlayer)
 		
 	if at(city, capital):
@@ -88,12 +91,10 @@ def spreadCultureOnConquest(iPlayer, city):
 		else:
 			convertTemporaryCulture(plot, iPlayer, 25, True)
 
-
 @handler("cityAcquiredAndKept")
 def revealCity(iPlayer, city):
 	"""Sometimes birth flips can flip a city before its tile is revealed."""
 	city.setRevealed(player(iPlayer).getTeam(), True)
-
 
 ### CITY BUILT ###
 
@@ -134,14 +135,13 @@ def americanPioneerAbility(city):
 
 
 ### CITY GIFTED ###
-
-
+ 
+ 
 @handler("cityGifted")
 def giftedCityDefenders(city):
-	if not player(city).isHuman():
-		iNumDefenders = max(2, 1 + player(city).getCurrentEra() / 2)
-		createGarrisons(city, city.getOwner(), iNumDefenders)
-
+ 	if not player(city).isHuman():
+ 		iNumDefenders = max(2, 1 + player(city).getCurrentEra() / 2)
+ 		createGarrisons(city, city.getOwner(), iNumDefenders)
 
 ### COMBAT RESULT ###
 		
@@ -153,18 +153,51 @@ def captureSlaves(winningUnit, losingUnit):
 	if civ(winningUnit) == iAztecs:
 		captureUnit(losingUnit, winningUnit, iAztecSlave, 50)
 		return
+
 	
-	if civ(losingUnit) == iNative and winningUnit.getUnitType() == iBandeirante and player(winningUnit).canUseSlaves():
-		captureUnit(losingUnit, winningUnit, iSlave, 100)
-		return
+	iSlaveType = iSlave
+	if civ(winningUnit) == iGhana:
+		iSlaveType = iJonow
+	if civ(winningUnit) == iBenin:
+		iSlaveType = iBenineseSlave
+
+	if civ(losingUnit) == iNative and winningUnit.getUnitType() == iBandeirante or winningUnit.getUnitType() == iSlaveHunter or winningUnit.getUnitType() == iAbambowa:
+		if player(winningUnit).canUseSlaves():
+			captureUnit(losingUnit, winningUnit, iSlaveType, 100)
+			return
 	
-	if players.major().existing().none(lambda p: team(p).isHasTech(iCompass)):
-		return
+	# Can now capture slaves without compass.
+	#if players.major().existing().none(lambda p: team(p).isHasTech(iCompass)):
+	#	return
 		
 	if civ(losingUnit) == iNative:
 		if civ(winningUnit) not in lBioNewWorld or any(data.dFirstContactConquerors.values()):
 			if player(winningUnit).isSlavery() or player(winningUnit).isColonialSlavery():
-				captureUnit(losingUnit, winningUnit, iSlave, 50)
+				captureUnit(losingUnit, winningUnit, iSlaveType, 50)
+				return
+
+	# also enslave barbarians but at a lesser rate - Credit - Cross Overhaul
+	if civ(losingUnit) == iBarbarian:
+
+		if civ(winningUnit) == iGokturks:	#Gokturk UP - Won't capture slaves from barb light and heavy cavalry.
+			if losingUnit.getUnitCombatType() == 2 or losingUnit.getUnitCombatType() == 3:
+					return
+		elif player(winningUnit).isSlavery() or player(winningUnit).isColonialSlavery():
+			captureUnit(losingUnit, winningUnit, iSlaveType, 15)
+			return
+
+	# Small general chance of capturing slaves if slavery is enabled (eg. Roman, Middle Eastern slavery.)
+	if player(winningUnit).isSlavery():
+		#Can't capture slaves of same religion, unless pagan.
+		if player(winningUnit).getStateReligion() > 0 and player(winningUnit).getStateReligion() == player(losingUnit).getStateReligion():
+			return
+		else:
+			if winningUnit.getUnitType() == iBarbaryPirate: 
+				captureUnit(losingUnit, winningUnit, iSlaveType, 100)
+				return
+			else:
+				captureUnit(losingUnit, winningUnit, iSlaveType, 10)
+				return
 
 
 @handler("combatResult")
@@ -180,6 +213,20 @@ def mayanHolkanAbility(winningUnit, losingUnit):
 				message(iWinner, 'TXT_KEY_MAYA_HOLKAN_EFFECT', adjective(losingUnit), losingUnit.getName(), iFood, city.getName())
 				
 				events.fireEvent("combatFood", iWinner, winningUnit, iFood)
+
+@handler("combatResult")
+def assegaiAbility(winningUnit, losingUnit):
+	if winningUnit.getUnitType() == iAssegaiWielder:
+		iWinner = winningUnit.getOwner()
+		if player(iWinner).getNumCities() > 0:
+			city = closestCity(winningUnit, iWinner)
+			if city and distance(winningUnit, city) <= 10:
+				iProduction = scale(5)
+				city.changeProduction(iProduction)
+				
+				message(iWinner, 'TXT_KEY_ZIMBABWEAN_ASSEGAI_WIELDER_EFFECT', adjective(losingUnit), losingUnit.getName(), iProduction, city.getName())
+				
+				#events.fireEvent("combatFood", iWinner, winningUnit, iProduction)
 
 
 @handler("combatResult")
@@ -202,6 +249,44 @@ def manchuBannermanAbility(winningUnit, losingUnit):
 			
 			message(iWinner, "TXT_KEY_MANCHU_BANNERMAN_EFFECT", adjective(iLoser), losingUnit.getName(), city.getName())
 			message(iLoser, "TXT_KEY_MANCHU_BANNERMAN_EFFECT_TARGET", losingUnit.getName(), adjective(iWinner), city.getName())
+
+# Aeons - Zulu UP: 50% chance to capture military units whose tech you haven't discovered
+@handler("combatResult")
+def zuluUP(winningUnit, losingUnit):
+	if civ(winningUnit) == iZulu and losingUnit.canFight() and not team(player(winningUnit)).isHasTech(infos.unit(losingUnit).getPrereqAndTech()):
+		iWinner = winningUnit.getOwner()
+		iLoser = losingUnit.getOwner()
+		
+		if rand(0, 2) == 0: # 50/50 chance
+			losingUnit.setDamage(losingUnit.maxHitPoints() * 8 / 10, iWinner)
+			
+			capturedUnit = makeUnit(iWinner, losingUnit.getUnitType(), winningUnit)
+			capturedUnit.convert(losingUnit)
+			capturedUnit.finishMoves()
+			
+			city = closestCity(losingUnit)
+			
+			message(iWinner, "TXT_KEY_ZULU_UP_EFFECT", adjective(iLoser), losingUnit.getName(), city.getName())
+			message(iLoser, "TXT_KEY_ZULU_UP_EFFECT_TARGET", losingUnit.getName(), adjective(iWinner), city.getName())
+
+# Aeons - Hausa UP: 50% chance to capture natives
+@handler("combatResult")
+def hausaUP(winningUnit, losingUnit):
+	if civ(winningUnit) == iHausa and losingUnit.canFight() and civ(losingUnit) == iNative:
+		iWinner = winningUnit.getOwner()
+		iLoser = losingUnit.getOwner()
+		
+		if rand(0, 2) == 0: # 50/50 chance
+			losingUnit.setDamage(losingUnit.maxHitPoints() * 8 / 10, iWinner)
+			
+			capturedUnit = makeUnit(iWinner, losingUnit.getUnitType(), winningUnit)
+			capturedUnit.convert(losingUnit)
+			capturedUnit.finishMoves()
+			
+			city = closestCity(losingUnit)
+			
+			message(iWinner, "TXT_KEY_HAUSA_UP_EFFECT", adjective(iLoser), losingUnit.getName(), city.getName())
+
 
 
 ### REVOLUTION ###
@@ -267,14 +352,15 @@ def brazilianMadeireiroAbility(plot, city, iFeature):
 
 @handler("BeginGameTurn")
 def checkImmigration(iGameTurn):
-	if iGameTurn < year(dBirth[iAmerica]) + turns(5):
+	#AEONS - Immigration now starts from year -1000
+	if iGameTurn < year(-1000):
 		return
 
 	data.iImmigrationTimer -= 1
 	
 	if data.iImmigrationTimer == 0:
 		immigration()
-		data.iImmigrationTimer = turns(3 + rand(5))
+		data.iImmigrationTimer = turns(5 + rand(10)) # Aeons - immigration on average every 10 turns.
 
 
 ### TECH ACQUIRED ###
@@ -306,7 +392,16 @@ def updateLastTurnAlive(iPlayer, bAlive):
 		return
 
 	if not bAlive and not (player(iPlayer).isHuman() and autoplay()):
-		data.civs[iPlayer].iLastTurnAlive = game.getGameTurn()
+		data.civs[civ(iPlayer)].iLastTurnAlive = game.getGameTurn()
+
+### INTEGRATE ###
+
+@handler("playerIntegrate")
+def secedeIntegratedPlayerCities(iPlayer1, iPlayer2):
+	for city in cities.owner(iPlayer1):
+		secedeCity(city, iPlayer2, 0, 0)
+
+	
 
 
 ### IMPLEMENTATIONS ###
@@ -372,91 +467,207 @@ def doUnitBribes(spy):
 	x, y = location(spy)
 	bribePopup.cancel().launch(spy.getOwner(), x, y)
 
+# AEONS - Immigration overhaul - No longer requires New World. More dynamic conditions.
+def immigration():
+	selectPlayers = players.major().existing().where(lambda p: not player(p).isBirthProtected())
+	
+	# Number of migraations is the total number of players * 2/3
+	# In other words, with 40 players this is 20 migrations on average every 10 turns or so
+	iNumMigrations = selectPlayers.count() / 2
+
+	sourceCities = selectPlayers.cities().where(lambda city: city.getPopulation() > 1).lowest(iNumMigrations, getImmigrationValue)
+	
+	for sourceCity in sourceCities:
+		iSourcePlayer = sourceCity.getOwner()
+
+		
+		iDistance = 999 # In other words, infinite...
+
+		if player(iSourcePlayer).getCurrentEra() == iAncient:
+			iDistance = 10
+		elif player(iSourcePlayer).getCurrentEra() == iClassical:
+			iDistance = 20
+		elif player(iSourcePlayer).getCurrentEra() == iMedieval:
+			iDistance = 20
+		elif player(iSourcePlayer).getCurrentEra() == iRenaissance:
+			iDistance = 50
+
+		validPlayers = players.major().existing().where(lambda p: (team(player(sourceCity)).isOpenBorders(p) and team(player(sourceCity)).canContact(p)) or p == iSourcePlayer)
+		targetCity = validPlayers.cities().where(lambda p: distance(p, sourceCity)<iDistance).maximum(getImmigrationValue)
+		
+
+		iTargetPlayer = targetCity.getOwner()	
+		selectedTarget = targetCity
+		selectedSource = sourceCity
+
+		bInternalMigration = false
+		bForcedKillMigrant = false
+		#bBroughtPlague = false
+
+		if iTargetPlayer == iSourcePlayer:
+			bInternalMigration = true
+
+		# If the target city doesn't have open borders, choose an internal city instead - encourages more internal migration in the early game.
+		if not bInternalMigration:
+			if not player(sourceCity).canExternalMigrate():	
+				bForcedKillMigrant = true
+			elif not player(targetCity).canExternalMigrate():
+				selectedTarget = cities.owner(iSourcePlayer).maximum(getImmigrationValue)
+				bInternalMigration = true
+
+
+		# Cancel if same city or if immigration value difference isn't large enough.
+		if selectedTarget.getID() == selectedSource.getID():
+			continue
+		if getImmigrationValue(selectedTarget) - getImmigrationValue(selectedSource) < 10:
+			continue
+
+
+		iTargetPlayer = selectedTarget.getOwner()
+		iSourcePlayer = selectedSource.getOwner()
+
+		iPopulation = getMigrantNum(selectedSource, iTargetPlayer)
+	
+		selectedSource.changePopulation(-iPopulation)
+
+
+		if not bForcedKillMigrant:
+			selectedTarget.changePopulation(iPopulation)
+			
+			# extra cottage growth for target city's vicinity
+			for pCurrent in plots.surrounding(selectedTarget, radius=2):
+				if pCurrent.getWorkingCity() == selectedTarget:
+					pCurrent.changeUpgradeProgress(turns(10))
+					
+			# migration brings culture
+			targetPlot = plot(selectedTarget)
+
+			# It can also bring plagues...
+			# Test this to make sure that this doesn't perpetuate plagues forever...
+			#if selectedSource.isHasRealBuilding(iPlague) and not selectedTarget.isHasRealBuilding(iPlague):
+			#	infectCity(selectedSource)
+			#	bBroughtPlague = true
+
+			iCultureChange = 0
+
+			iCultureChange += targetPlot.getCulture(iTargetPlayer) / selectedTarget.getPopulation()
+			targetPlot.changeCulture(iSourcePlayer, iCultureChange, False)
+
+			iCultureChange = 0
+			
+			iCultureChange += selectedTarget.getCulture(iTargetPlayer) / selectedTarget.getPopulation()
+			selectedTarget.changeCulture(iSourcePlayer, iCultureChange, False)
+		
+			# chance to spread religions in source city
+			lReligions = [iReligion for iReligion in range(iNumReligions) if selectedSource.isHasReligion(iReligion) and not selectedTarget.isHasReligion(iReligion)]
+			if player(iSourcePlayer).getStateReligion() in lReligions:
+				lReligions.append(player(iSourcePlayer).getStateReligion())
+		
+			if rand(1, 10) <= len(lReligions):	# Aeons - Bring back religion immigration as 1/10, rather than 1/4.
+				selectedTarget.setHasReligion(random_entry(lReligions), True, True, True)
+			
+			# Aeons - Boer UP: Get Trekker Specialsit
+			if civ(iTargetPlayer) == iBoers:
+				iNumTrekkers = selectedTarget.getFreeSpecialistCount(iSpecialistTrekker)
+				selectedTarget.setFreeSpecialistCount(iSpecialistTrekker, iNumTrekkers+1)
+
+			if bInternalMigration:
+				message(iSourcePlayer, 'TXT_KEY_UP_INTERNAL_MIGRATION_AEONS', selectedSource.getName(), selectedTarget.getName(), event=InterfaceMessageTypes.MESSAGE_TYPE_MINOR_EVENT, button='Art/Interface/Buttons/Actions/migrationbutton.dds', color=iYellow, location=selectedSource)
+
+
+			else: 
+				message(iSourcePlayer, 'TXT_KEY_UP_EMIGRATION_AEONS', selectedSource.getName(), selectedTarget.getName(), event=InterfaceMessageTypes.MESSAGE_TYPE_MINOR_EVENT, button='Art/Interface/Buttons/Actions/emmigrationbutton.dds', color=iYellow, location=selectedSource)
+				message(iTargetPlayer, 'TXT_KEY_UP_IMMIGRATION_AEONS', selectedSource.getName(), selectedTarget.getName(), event=InterfaceMessageTypes.MESSAGE_TYPE_MINOR_EVENT, button='Art/Interface/Buttons/Actions/immigrationbutton.dds', color=iYellow, location=selectedTarget)
+
+
+			#if bBroughtPlague:
+			#	message(iTargetPlayer, 'TXT_KEY_UP_IMMIGRATION_PLAGUE', selectedSource.getName(), selectedTarget.getName(), event=InterfaceMessageTypes.MESSAGE_TYPE_MINOR_EVENT, button=infos.unit(iSettler).getButton(), color=iYellow, location=selectedTarget)
+
+
+		if bForcedKillMigrant:
+			iCultureChange = 0
+			message(iSourcePlayer, 'TXT_KEY_UP_EMIGRATION_AEONS_DIRTY_TRAITORS', selectedSource.getName(), event=InterfaceMessageTypes.MESSAGE_TYPE_MINOR_EVENT, button=infos.unit(iSpy).getButton(), color=iYellow, location=selectedSource)
+
+
+		events.fireEvent("immigration", selectedSource, selectedTarget, iPopulation, iCultureChange)
+
+
+def getMigrantNum(city, iTargetPlayer):
+	iPopulation = 1
+	if city.getPopulation() >= 9:
+		iPopulation += 1
+	if player(city).getCurrentEra() >= iIndustrial:
+		iPopulation += 1
+	#if player(city).getCurrentEra() >= iGlobal:
+	#	iPopulation += 1
+
+	# Boers UP: Double pop from migration
+	#if civ(iTargetPlayer) == iBoers:	
+	#		iPopulation *= 2
+
+	if iPopulation >= city.getPopulation():
+		iPopulation = city.getPopulation() - 1
+
+
+	return iPopulation
 
 def getImmigrationValue(city):
-	iFoodDifference = city.foodDifference(False)
-	iHappinessDifference = city.happyLevel() - city.unhappyLevel(0)
-	
-	if iFoodDifference < 0:
-		return iFoodDifference
-	
-	iValue = 0
-	
-	iValue += max(0, iHappinessDifference)
-	iValue += max(0, iFoodDifference / 2)
-	iValue += city.getPopulation() / 2
-	
-	if city.getRegionID() in lNorthAmerica:
-		iValue += 5
-	
-	if iValue > 0:
-		iValue += rand(0, 2)
-	
-	return iValue
-	
-	
+	iImmigrationDesire = city.immigrationDesire(true)
+	return iImmigrationDesire
+
 def getEmigrationValue(city):
-	iFoodDifference = city.foodDifference(False)
-	iHappinessDifference = city.happyLevel() - city.unhappyLevel(0)
+	iImmigrationDesire = city.immigrationDesire(false)
+	return iImmigrationDesire
 	
-	iValue = 0
-	
-	iValue -= min(0, iHappinessDifference)
-	iValue -= min(0, iFoodDifference / 2)
-	
-	if iValue > 0:
-		iValue += city.getPopulation() / 5
-		iValue += rand(0, 2)
-	
-	return iValue
+
+### CHANGE STATE RELIGION ### Aeons
+
+# Aeons - Remove religious UU's when changing religion and replace with normal variants
+@handler("playerChangeStateReligion")
+def replaceReligiousUnits(iPlayer):
+	bFoundReligionFlipUnit = false
+	for unit in units.owner(iPlayer): 
+		if unit.getUnitType() == iCrusader or unit.getUnitType() == iHospitaller and not player(iPlayer).getStateReligion() == iCatholicism:
+			if not bFoundReligionFlipUnit: message(iPlayer, "TXT_KEY_MESSAGE_RELIGION_FLIP_UNIT")
+			tPlot = plot(unit)
+			unit.kill(-1, False)
+			bFoundReligionFlipUnit = true
+			makeUnits(iPlayer, iLancer, tPlot, 1, UnitAITypes.UNITAI_ATTACK_CITY)
+		if unit.getUnitType() == iMujahid and not player(iPlayer).getStateReligion() == iIslam:
+			if not bFoundReligionFlipUnit: message(iPlayer, "TXT_KEY_MESSAGE_RELIGION_FLIP_UNIT")
+			tPlot = plot(unit)
+			unit.kill(-1, False)
+			makeUnits(iPlayer, iHeavySwordsman, tPlot, 1, UnitAITypes.UNITAI_ATTACK_CITY)
+			bFoundReligionFlipUnit = true
+		if unit.getUnitType() == iKshatriya and not player(iPlayer).getStateReligion() == iHinduism:
+			if not bFoundReligionFlipUnit: message(iPlayer, "TXT_KEY_MESSAGE_RELIGION_FLIP_UNIT")
+			tPlot = plot(unit)
+			unit.kill(-1, False)
+			makeUnits(iPlayer, iShortbowman, tPlot, 1, UnitAITypes.UNITAI_ATTACK_CITY)
+			bFoundReligionFlipUnit = true
+		if unit.getUnitType() == iWarriorMonk and not player(iPlayer).getStateReligion() == iBuddhism:
+			if not bFoundReligionFlipUnit: message(iPlayer, "TXT_KEY_MESSAGE_RELIGION_FLIP_UNIT")
+			tPlot = plot(unit)
+			unit.kill(-1, False)
+			makeUnits(iPlayer, iSwordsman, tPlot, 1, UnitAITypes.UNITAI_ATTACK_CITY)
+			bFoundReligionFlipUnit = true
+		if unit.getUnitType() == iFidai and not player(iPlayer).getStateReligion() == iShia:
+			if not bFoundReligionFlipUnit: message(iPlayer, "TXT_KEY_MESSAGE_RELIGION_FLIP_UNIT")
+			tPlot = plot(unit)
+			unit.kill(-1, False)
+			makeUnits(iPlayer, iSwordsman, tPlot, 1, UnitAITypes.UNITAI_ATTACK_CITY)
+			bFoundReligionFlipUnit = true
 
 
-def immigration():
-	sourcePlayers = players.major().existing().where(lambda p: not player(p).isBirthProtected()).where(lambda p: player(p).getCapitalCity().getRegionID() not in lNewWorld).where(lambda p: cities.owner(p).any(lambda city: getEmigrationValue(city) > 0))
-	targetPlayers = players.major().existing().where(lambda p: player(p).getCapitalCity().getRegionID() in lNewWorld).where(lambda p: cities.owner(p).any(lambda city: getImmigrationValue(city) > 0))
-	
-	iNumMigrations = min(sourcePlayers.count(), targetPlayers.count())
-	
-	sourceCities = sourcePlayers.cities().where(lambda city: city.getRegionID() not in lNewWorld).where(lambda city: city.getPopulation() > 1).highest(iNumMigrations, getEmigrationValue)
-	targetCities = targetPlayers.cities().regions(*lNewWorld).highest(iNumMigrations, getImmigrationValue)
-	
-	for sourceCity, targetCity in zip(sourceCities, targetCities):
-		iPopulation = 1
-		if sourceCity.getPopulation() >= 9 and targetCity.foodDifference(False) >= 2:
-			iPopulation += 1
-	
-		sourceCity.changePopulation(-iPopulation)
-		targetCity.changePopulation(iPopulation)
-			
-		# extra cottage growth for target city's vicinity
-		for pCurrent in plots.surrounding(targetCity, radius=2):
-			if pCurrent.getWorkingCity() == targetCity:
-				pCurrent.changeUpgradeProgress(turns(10))
-					
-		# migration brings culture
-		targetPlot = plot(targetCity)
-		iTargetPlayer = targetCity.getOwner()
-		iSourcePlayer = sourceCity.getOwner()
-		
-		iCultureChange = targetPlot.getCulture(iTargetPlayer) / targetCity.getPopulation()
-		targetPlot.changeCulture(iSourcePlayer, iCultureChange, False)
-		
-		iCultureChange = targetCity.getCulture(iTargetPlayer) / targetCity.getPopulation()
-		targetCity.changeCulture(iSourcePlayer, iCultureChange, False)
-		
-		# chance to spread religions in source city
-		#lReligions = [iReligion for iReligion in range(iNumReligions) if sourceCity.isHasReligion(iReligion) and not targetCity.isHasReligion(iReligion)]
-		#if player(iSourcePlayer).getStateReligion() in lReligions:
-		#	lReligions.append(player(iSourcePlayer).getStateReligion())
-		
-		#if rand(1, 4) <= len(lReligions):
-		#	targetCity.setHasReligion(random_entry(lReligions), True, True, True)
-					
-		# notify affected players
-		message(iSourcePlayer, 'TXT_KEY_UP_EMIGRATION', sourceCity.getName(), event=InterfaceMessageTypes.MESSAGE_TYPE_MINOR_EVENT, button=infos.unit(iSettler).getButton(), color=iYellow, location=sourceCity)
-		message(iTargetPlayer, 'TXT_KEY_UP_IMMIGRATION', targetCity.getName(), event=InterfaceMessageTypes.MESSAGE_TYPE_MINOR_EVENT, button=infos.unit(iSettler).getButton(), color=iYellow, location=targetCity)
+### AEONS - CHANGE WAR ###
 
-		events.fireEvent("immigration", sourceCity, targetCity, iPopulation, iCultureChange)
+# Aeons - Release vassals who declare war on their overlord
+@handler("changeWar")
+def independenceWar(bWar, iAttacker, iDefender, bFromDefensivePact):
+	if team(iAttacker).isVassal(player(iDefender).getTeam()):
+		team(iAttacker).setVassal(iDefender, False, False)
+		message(iAttacker, 'TXT_KEY_INDEPENDENCE_WAR', adjective(iDefender))
+		message(iDefender, 'TXT_KEY_INDEPENDENCE_WAR_DEFENDER', adjective(self.iPlayer))
 
 
 ### POPUPS ###

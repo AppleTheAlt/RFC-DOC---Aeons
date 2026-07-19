@@ -23,10 +23,10 @@ def findMinorSlot(iCiv):
 def availableSlot(iSlot):
 	if civ(iSlot) == -1:
 		return True
-	
+
 	if civ(iSlot) == iNative and since(year(1900)) > 0 and player(iSlot).getNumCities() == 0 and player(iSlot).getNumUnits() == 0:
 		return True
-	
+
 	if player(iSlot).isAlive():
 		return False
 	
@@ -88,8 +88,10 @@ def getImpact(iCiv):
 	
 	iImpact = infos.civ(iCiv).getImpact()
 	
-	if not canEverRespawn(iCiv):
-		iImpact -= 1
+	# Aeons - Don't do this -> It causes more conditional spawns than necessary
+	# Eg. Germania never spawns in autoplay which means no HRE
+	#if not canEverRespawn(iCiv):
+	#	iImpact -= 1
 	
 	if isOutdated(iCiv):
 		iImpact -= 1
@@ -107,14 +109,14 @@ def isOutdated(iCiv):
 	iFirstResurrectionStart = lResurrections[0][0]
 	iLastResurrectionEnd = lResurrections[-1][1]
 		
-	if iLastResurrectionEnd < 2025:
+	if iLastResurrectionEnd < 2026:
 		return True
 		
 	if iFirstResurrectionStart > dFall[iCiv]:
 		return True
 	
 	return False
-	
+
 def getBirthsForTurn(iTurn):
 	births = [iCiv for iCiv, iYear in dBirth.items() if year(iYear) == iTurn]
 	return civs.of(*births).sort(getImpact, reverse=True)
@@ -131,16 +133,16 @@ def countAvailableSlots():
 	return count(1 for iSlot in range(iNumPlayers) if availableSlot(iSlot))
 
 def countUnavailableSlots():
-	return count(1 for iSlot in range(iNumPlayers) if not availableSlot(iSlot))
+	return count(1 for iSlot in range(iNumPlayers) if availableSlot(iSlot))
 
-
+ 
 def quickSpawn(iCiv):
-	iPlayer = findSlot(iCiv)
-	updateCivilization(iPlayer, iCiv)
-	capital = plots.capital(iCiv)
-	player(iPlayer).found(*location(capital))
-	city(capital).setPopulation(20)
-	game.setActivePlayer(iPlayer, False)
-
+ 	iPlayer = findSlot(iCiv)
+ 	updateCivilization(iPlayer, iCiv)
+ 	capital = plots.capital(iCiv)
+ 	player(iPlayer).found(*location(capital))
+ 	city(capital).setPopulation(20)
+ 	game.setActivePlayer(iPlayer, False)
+ 
 def advanceEra(iCiv):
-	player(iCiv).setCurrentEra(player(iCiv).getCurrentEra()+1)
+ 	player(iCiv).setCurrentEra(player(iCiv).getCurrentEra()+1)

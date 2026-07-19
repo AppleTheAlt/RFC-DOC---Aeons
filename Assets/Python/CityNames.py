@@ -16,6 +16,56 @@ city_names = FileMap("Cities.csv")
 ### CONSTANTS ###
 
 dBaseLanguages = {
+	# 1.0
+	iMinoa: (iGreek,),
+	iElam: (iGreek,),
+	iSparta: (iGreek,),
+	iMacedon: (iGreek,),
+	iSumeria: (iBabylonian,),
+	iJudah: (iLocal,),
+
+	# 1.1
+	iGermania: (iLatin, iGerman,),
+	iScythia: (iPersian, iRussian,),
+	iArmenia: (iArmenian, iPersian, iArabic,),
+	iHuns: (iHunnic, iLatin, iGothic, iTurkish),
+	iParthia: (iPersian,),
+	iGoths: (iLatin, iSpanish, iItalian, iGerman,),
+	iVandals: (iLatin, iBerber, iGerman,),
+	iNumidia: (iBerber, iLatin,),
+	
+	# 1.2
+	iGhorids: (iPersian, iIndian, iDravidian,),
+	iKhazars: (iTurkish, iRussian, iMongol,),
+	iGokturks: (iTurkish, iMongol, iPersian,),
+	iGeorgia: (iArmenian, iByzantine, iGreek, iLatin,),
+	iTunis: (iArabic, iBerber,),
+	iOman: (iArabic,),
+	iYemen: (iArabic,),
+	iBuyids: (iPersian, iTurkish, iArabic,),
+	iSamanids: (iTurkish, iPersian, iArabic,),
+
+	# 1.3
+	iSonghai: (iSonghaiL, iMande, iArabic,),
+	iGhana: (iMande,),
+	iKanemBornu: (iMande,),
+	iHausa: (iLocal,),
+	iBenin: (iLocal,),
+	iAshanti: (iLocal,),
+
+	# 1.4
+	iBoers: (iDutch, iEnglish,),
+	iZulu: (iZuluL,),
+	iMadagascar: (iLocal,),
+	iKatanga: (iLocal, iLubaKatanga),
+	iBuganda: (iLocal,),
+	iSomalia: (iSomali, iKiswahili, iArabic,),
+	iFunj: (iEgyptianArabic, iArabic, iNubian),
+	iAdal: (iArabic, iCoptic,),
+	iSouthAfrica: (iEnglish, iDutch,),
+	iZimbabwe: (iShona,),
+	iMorocco: (iArabic, iBerber,),
+
 	iEgypt: (iEgyptian,),
 	iBabylonia: (iBabylonian,),
 	iHarappa: (iHarappan, iIndian),
@@ -63,8 +113,9 @@ dBaseLanguages = {
 	iItaly: (iItalian,),
 	iMongols: (iMongol, iTurkish),
 	iAztecs: (iNahuatl, iMayan),
-	iMughals: (iPersian, iIndian, iDravidian),
 	iTatars: (iMongol, iTurkish),
+	#iMughals: (iPersian, iIndian, iDravidian),
+	iTimurids: (iPersian, iIndian, iDravidian),
 	iRussia: (iRussian,),
 	iOttomans: (iOttoman, iTurkish),
 	iThailand: (iThai,),
@@ -93,7 +144,6 @@ lUniqueSuffixes = [
 	"Laodicea",
 	"Santiago",
 ]
-
 
 ### EVENT HANDLERS ###
 
@@ -163,6 +213,7 @@ def setupScenario():
 			"Kalhu": "Al-Mawsil",
 			"Kandarpapura": "Indrapura",
 			"Mayapan": "Uuc Yabnal",
+			"Ninua": "Al-Mawsil",
 			"Messana": "Syracusae",
 			"Parsa": "Estakhr",
 			"Pella": "Thessaloniki",
@@ -181,7 +232,6 @@ def setupScenario():
 			"Jiaohe": "Turpan",
 			"Khersonesos": "Kaffa",
 			"Mayapan": "Uuc Yabnal",
-			"Ninua": "Al-Mawsil",
 			"Oguaa": "Elmina",
 			"Pagan": "Awa",
 			"Patala": "Thatta",
@@ -239,7 +289,6 @@ def setupScenario():
 			"Chalchihuites": "Guadalajara",
 			"Chan Chan": "Truhillu",
 			"Fuerte Recabarren": u"Concepción",
-			"Hulunbuir": "Hailar",
 			"Juneau": "Sitka",
 			"Kalhu": "Al-Mawsil",
 			"Khersonesos": "Sevastopol",
@@ -552,7 +601,7 @@ def applyName(city, translation, bNotify=False):
 	if translation.bRenaming:
 		applyRenaming(city, translation.name)
 		return
-		
+	
 	name = translation.name
 	
 	# remove specific suffixes from names if not needed (e.g. Alexandria ad Issum -> Alexandria)
@@ -563,13 +612,13 @@ def applyName(city, translation, bNotify=False):
 	# add region suffix for duplicate names (e.g. Qart-Hadasht -> Qart-Hadasht, Iberia)
 	if cities.owner(city).without(city).any(lambda other: other.getName() == name):
 		name += " (%s)" % plot(city).getRegionName()
-	
+		
 	current_name = city.getName()	
 	if current_name == name:
 		return
 	
 	city.setName(name, False)
-	
+
 	if bNotify:
 		message(city.getOwner(), "TXT_KEY_MESSAGE_CITY_NAME_CHANGE", current_name, name, location=city, button='Art/Interface/Buttons/Actions/FoundCity.dds')
 
@@ -628,7 +677,7 @@ def getDisplayNameForName(identifier, tile, tile_names, bFound=True):
 def getNameEvolution(identifier, tile):
 	tile_names = getTileNames(tile)
 	bFound = not plot_(tile).isCity()
-	
+
 	for translation, preceding in getApplicablePrecedingTranslations(identifier, tile, tile_names, bFound=bFound):
 		sequence = [t.name for t in preceding if t.isEraSpecific(bFound=bFound)] + [translation.name]
 		if sequence:

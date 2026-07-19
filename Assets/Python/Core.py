@@ -33,6 +33,10 @@ map = gc.getMap()
 
 
 def civ_name(iCiv):
+	if iCiv == iMisr:
+		return "Misr"
+	elif iCiv == iSaudis: return "Saudis"
+
 	return infos.civ(iCiv).getShortDescription(0).replace(" ", "_")
 
 
@@ -61,8 +65,7 @@ def current_time():
 
 
 def unique(iterable):
-	elements = list(iterable)
-	return sorted(set(elements), key=elements.index)
+	return [key for key, value in groupby(iterable)]
 
 
 def until(iTurn):
@@ -127,15 +130,10 @@ def concat(*lists):
 def isWonder(iBuilding):
 	return isWorldWonderClass(infos.building(iBuilding).getBuildingClassType())
 
-
 def log_with_trace(context = ""):
-	if context:
-		print "%s called near:" % context
-	stacktrace()
-
-
-def log_named(statement, **kwargs):
-	print "%s: %s" % (statement, ", ".join("%s=%s" % (key, value) for key, value in kwargs.items()))
+ 	if context:
+ 		print "%s called near:" % context
+ 	stacktrace()
 
 
 # TODO: is there a right equal or right not equal to add to Civ so we can do iPlayer == iEgypt and convert iPlayer to Civ implicitly?
@@ -175,8 +173,8 @@ def stacktrace():
 	print '\n'.join('File "%s", line %d, in %s' % (line[0], line[1], line[2]) for line in extract_stack())
 
 
-def itemize(iterable, format_func=lambda x: x, item_char=bullet, linebreak_char=newline):
-	return item_char + (linebreak_char + item_char).join(format_func(i) for i in iterable)
+def itemize(iterable, format_func = lambda x: x, item_char = bullet):
+	return item_char + (newline + item_char).join(format_func(i) for i in iterable)
 
 
 def autoplay():
@@ -428,10 +426,8 @@ def flatten(iterables):
 		for element in iterable:
 			yield element
 
-
 def interleave(*iterables):
 	return chain(*zip(*iterables))
-
 
 def move(unit, destination):
 	if destination is None:
@@ -466,7 +462,6 @@ def scenarioStart():
 def scenarioStartTurn():
 	if not game.isFinalInitialized():
 		return getGameTurnForYear(scenarioStartYear(), -3000, game.getCalendar(), game.getGameSpeedType())
-	
 	return getTurnForYear(scenarioStartYear())
 
 
@@ -601,10 +596,8 @@ def encode(text):
 		return str(text.encode('utf-8'))
 	return text
 
-
 def latin1(text):
 	return text.encode("latin-1", "xmlcharrefreplace")
-
 
 def text(key, *format):
 	return translator.getText(str(key), tuple(format))
@@ -861,8 +854,8 @@ def period(identifier):
 	
 def active():
 	return gc.getGame().getActivePlayer()
-
-
+	
+	
 class FindResult(object):
 
 	def __init__(self, result, index, value):
@@ -996,24 +989,24 @@ class EntityCollection(object):
 		iSampleSize = min(iSampleSize, len(self))
 		if iSampleSize <= 0: return self.empty()
 		return self.copy(random.sample(self._keys, iSampleSize))
-	
+
 	def sample_priority(self, iSampleSize, priority_func):
-		if not self:
-			return self.empty()
-		
-		iSampleSize = min(iSampleSize, len(self))
-		result = self.empty()
-		
-		for key, group in self.grouped(priority_func):
-			if iSampleSize <= 0:
-				return result
-			
-			sampled = group.sample(iSampleSize)
-			
-			iSampleSize -= len(sampled)
-			result += sampled
-		
-		return result		
+ 		if not self:
+ 			return self.empty()
+ 		
+ 		iSampleSize = min(iSampleSize, len(self))
+ 		result = self.empty()
+ 		
+ 		for key, group in self.grouped(priority_func):
+ 			if iSampleSize <= 0:
+ 				return result
+ 			
+ 			sampled = group.sample(iSampleSize)
+ 			
+ 			iSampleSize -= len(sampled)
+ 			result += sampled
+ 		
+ 		return result		
 		
 	def buckets(self, *conditions):
 		rest = lambda e: not any(condition(e) for condition in conditions)
@@ -1060,14 +1053,14 @@ class EntityCollection(object):
 		
 	def minimum(self, metric):
 		return find_min(self.entities(), metric).result
-		
+
 	def where_maximum(self, metric):
-		iMaximum = find_max(self.entities(), metric).value
-		return self.where(lambda e: metric(e) == iMaximum)
-	
-	def where_minimum(self, metric):
-		iMinimum = find_min(self.entities(), metric).value
-		return self.where(lambda e: metric(e) == iMinimum)
+ 		iMaximum = find_max(self.entities(), metric).value
+ 		return self.where(lambda e: metric(e) == iMaximum)
+ 	
+ 	def where_minimum(self, metric):
+ 		iMinimum = find_min(self.entities(), metric).value
+ 		return self.where(lambda e: metric(e) == iMinimum)
 		
 	def rank(self, key, metric):
 		sorted_keys = sort(self._keys, lambda k: metric(self._factory(k)), True)
@@ -1146,7 +1139,7 @@ class EntityCollection(object):
 	
 	def map(self, func):
 		return self.copy([self._keyify(mapped) for mapped in self.get(func)])
-	
+
 	def proportion(self, func):
 		return 1.0 * self.count(func) / self.count()
 	
@@ -1339,10 +1332,10 @@ class Locations(EntityCollection):
 			
 		permutations = [(x, y) for x in self.shuffle().entities() for y in locations.shuffle().entities()]
 		result = find_min(permutations, lambda (x, y): distance(x, y)).result
-		if not result:
-			return None, None
-		
-		return result
+ 		if not result:
+ 			return None, None
+ 		
+ 		return result
 	
 	def closest_all(self, locations):
 		closest = self.closest_pair(locations)
@@ -1478,10 +1471,10 @@ class Plots(Locations):
 	
 	def edge(self):
 		return self.where(lambda p: plots.surrounding(p).any(lambda sp: sp not in self))
-	
+
 	def owned(self):
 		return self.where(CyPlot.isOwned)
-	
+
 	def notowned(self):
 		return self.where(lambda p: not p.isOwned())
 
@@ -1658,7 +1651,7 @@ class Cities(Locations):
 	
 	def plots(self):
 		return self.transform(Plots, map = lambda key: plot(self._factory(key)))
-	
+
 	def ever_owned(self, *civs):
 		civs = variadic(*civs)
 		return any(city.isEverOwnedCiv(iCiv) for city in self for iCiv in civs)
@@ -1887,13 +1880,13 @@ class Players(EntityCollection):
 		return self.where(lambda p: not team(p).isAVassal())
 	
 	def past_birth(self):
-		return self.where(lambda p: year() >= year(dBirth[p]))
+		return self.where(lambda p: year() >= year(dBirth[civ(p)]))
 		
 	def before_birth(self):
-		return self.where(lambda p: year() < year(dBirth[p]))
+		return self.where(lambda p: year() < year(dBirth[civ(p)]))
 	
 	def before_fall(self):
-		return self.where(lambda p: year() < year(dFall[p]))
+		return self.where(lambda p: year() < year(dFall[civ(p)]))
 
 	def civs(self, *civs):
 		return self.where(lambda p: civ(p) in civs)
@@ -1970,7 +1963,7 @@ class Civilizations(EntityCollection):
 	
 	def before_fall(self):
 		return self.where(lambda c: year() < year(dFall[c]))
-	
+
 	def group(self, iGroup):
 		return self.where(lambda c: c in dCivGroups[iGroup])
 	
@@ -2009,7 +2002,6 @@ class CreatedUnits(object):
 	def __add__(self, other):
 		if isinstance(other, CyUnit):
 			return CreatedUnits(self._units + [other])
-		
 		return CreatedUnits(self._units + other._units)
 		
 	def adjective(self, adjective):
@@ -2278,7 +2270,7 @@ class Infos:
 	
 	def routes(self):
 		return InfoCollection.type(gc.getRouteInfo, gc.getNumRouteInfos())
-		
+	
 	def specialBuilding(self, identifier):
 		return gc.getSpecialBuildingInfo(identifier)
 	

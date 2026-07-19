@@ -5,6 +5,7 @@ from Locations import *
 from RFCUtils import *
 from Slots import *
 from Scenarios import *
+from Periods import * # Aeons - For dynamic Byzantium spawn
 from Files import *
 from Periods import *
 
@@ -22,22 +23,40 @@ MainOpt = BugCore.game.MainInterface
 
 
 lExpandedFlipCivs = [
-	iByzantium
+	#iByzantium
 ]
 
 lExpansionCivs = [
 	iPersia,
 	iRome,
+	iMacedon,
 	iKushans,
 	iTurks,
 	iArabia,
-	iSpain,
 	iMongols,
-	iMughals,
+	iTimurids,
 	iOttomans,
+	iBuyids,
+	iSamanids,
+	iGhorids,
 	iManchuria,
 ]
 
+# Aeons - These civs can only spawn if their birth area is empty - These are essentially civs that must spawn from the ground up
+lNoCitySpawns = [
+	iGhana,
+	iHausa,
+	iBenin,
+	iSomalia,
+	iSwahili,
+	iBuganda,
+	iZimbabwe,
+	iCongo,
+	iKatanga,
+	iAshanti,
+]
+
+#Aeons - independence civs list expanded considerably
 lIndependenceCivs = [
 	iByzantium,
 	iTatars,
@@ -46,7 +65,14 @@ lIndependenceCivs = [
 	iColombia,
 	iBrazil,
 	iAustralia,
-	iCanada
+	iCanada,
+	iFrance,
+	iTimurids,
+	iGhorids,
+	iBuyids,
+	iMoors,
+	iMisr,
+	iSouthAfrica,
 ]
 
 lDynamicReligionCivs = [
@@ -57,7 +83,8 @@ lDynamicReligionCivs = [
 	iColombia,
 	iBrazil,
 	iAustralia,
-	iCanada
+	iCanada,
+	iSouthAfrica
 ]
 
 lInvasionCivs = [
@@ -66,12 +93,19 @@ lInvasionCivs = [
 
 dClearedForBirth = {
 	iIndia: iHarappa,
+	iGreece: iMycenae,
 	iByzantium: iGreece,
 	iItaly: iRome,
 	iAztecs: iToltecs,
 	iRussia: iRus,
 	iMexico: iAztecs,
 	iBelgium: iNetherlands,
+	iParthia: iPersia,
+	iBuyids: iParthia,
+	iSpain: iGoths,
+	iMoors: iGoths,
+	iArmenia: iMacedon,	# Macedon can destroy a player Armenia or Parthia...
+	iParthia: iMacedon,
 }
 
 lAlwaysClear = [
@@ -80,12 +114,25 @@ lAlwaysClear = [
 ]
 
 lBirthWars = [
+	(iPersia, iElam),
+	(iMacedon, iSparta),
+	(iMacedon, iGreece),
 	(iArabia, iEgypt),
 	(iArabia, iBabylonia),
 	(iArabia, iPersia),
 	(iMongols, iChina),
 	(iOttomans, iByzantium),
 	(iManchuria, iChina),
+	(iParthia, iMacedon),
+	(iBuyids, iArabia),
+	(iSamanids, iArabia),
+	(iSamanids, iPersia),
+	(iTurks, iArabia),
+	(iTurks, iBuyids),
+	(iTurks, iSamanids),
+	(iTurks, iGhorids),
+	(iSouthAfrica, iBoers),
+	(iSouthAfrica, iZulu),
 ]
 
 
@@ -102,7 +149,7 @@ def showDawnOfMan(iGameTurn):
 def initBirths():
 	data.births = [Birth(iCiv) for iCiv in lBirthOrder]
 	
-	for birth in data.births:
+	for birth in data.births:		
 		birth.check()
 
 
@@ -116,20 +163,17 @@ def initCamera():
 			
 		plot(city).cameraLookAt()
 		return
-	
 	plots.capital(active()).cameraLookAt()
 
 
 @handler("GameStart")
 def cleanupGreatWall():
-	getScenario().greatWall.cleanup()
-
+ 	getScenario().greatWall.cleanup()
 
 @handler("BeginGameTurn")
 def checkBirths():
 	for birth in data.births:
 		birth.check()
-
 
 @handler("playerCivAssigned")
 def updateMapsOnActive(iPlayer, iCivilization):
@@ -140,7 +184,6 @@ def updateMapsOnActive(iPlayer, iCivilization):
 @handler("periodChange")
 def updateMapsOnPeriodChange(iCivilization, iPeriod):
 	applyMaps(iCivilization, iPeriod)
-
 
 @handler("changeWar")
 def ensureAdditionalDefenders(bWar, iAttacker, iDefender, bFromDefensivePact):
@@ -290,11 +333,11 @@ def createExpansionArmies(bWar, iAttacker, iDefender):
 			
 			if not player(iAttacker).isHuman():
 				iExtraAI = 1
-		
+
 		createExpansionUnits(iAttacker, iDefender, spawn, defender_closest, iExtraAI, iExtraTargets)
 
-
 def createExpansionUnits(iAttacker, iDefender, tile, closest, iExtraAI, iExtraTargets):
+		
 	dExpansionUnits = {
 		iCityAttack: 2 + iExtraAI + iExtraTargets,
 		iSiege: 1 + 2*iExtraAI + iExtraTargets,
@@ -302,7 +345,6 @@ def createExpansionUnits(iAttacker, iDefender, tile, closest, iExtraAI, iExtraTa
 	createRoleUnits(iAttacker, tile, dExpansionUnits.items()).promotion(iVolunteer)
 	
 	message(iDefender, "TXT_KEY_MESSAGE_EXPANSION_UNITS", player(iAttacker).getCivilizationDescription(0), closest.getName(), color=iRed, location=tile, button=infos.civ(player(iAttacker).getCivilizationType()).getButton())
-
 
 def deleteExpansionUnits(iPlayer):
 	if players.major().existing().any(lambda p: team(player(iPlayer)).isAtWar(player(p).getTeam())):
@@ -314,7 +356,6 @@ def deleteExpansionUnits(iPlayer):
 	for unit in units.owner(iPlayer).where(lambda u: u.isHasPromotion(iVolunteer)):
 		unit.kill(False, -1)
 
-
 @handler("changeWar")
 def endExpansionOnPeace(bWar, iPlayer1, iPlayer2):
 	if not bWar:
@@ -323,7 +364,7 @@ def endExpansionOnPeace(bWar, iPlayer1, iPlayer2):
 		
 		for plot in plots.owner(iPlayer2).where(lambda plot: plot.getExpansion() == iPlayer1):
 			plot.resetExpansion()
-		
+
 		deleteExpansionUnits(iPlayer1)
 		deleteExpansionUnits(iPlayer2)
 
@@ -364,11 +405,12 @@ def restorePreservedWonders(city):
 
 @handler("playerDestroyed")
 def preserveCivilizationAttributes(iPlayer):
-	data.civs[iPlayer].iGreatGeneralsCreated = player(iPlayer).getGreatGeneralsCreated()
-	data.civs[iPlayer].iGreatPeopleCreated = player(iPlayer).getGreatPeopleCreated()
-	data.civs[iPlayer].iGreatSpiesCreated = player(iPlayer).getGreatSpiesCreated()
-	data.civs[iPlayer].iNumUnitGoldenAges = player(iPlayer).getNumUnitGoldenAges()
-
+	iCiv = civ(iPlayer)
+	data.civs[iCiv].iGreatGeneralsCreated = player(iPlayer).getGreatGeneralsCreated()
+	data.civs[iCiv].iGreatPeopleCreated = player(iPlayer).getGreatPeopleCreated()
+	data.civs[iCiv].iGreatSpiesCreated = player(iPlayer).getGreatSpiesCreated()
+	data.civs[iCiv].iNumUnitGoldenAges = player(iPlayer).getNumUnitGoldenAges()
+	
 
 ### MAPS ###
 
@@ -402,10 +444,10 @@ def initMaps():
 
 ### BIRTH ###
 
-
 def getBirth(iCiv):
 	return next(birth for birth in data.births if birth.iCiv == iCiv)
 	
+
 
 class Birth(object):
 
@@ -453,7 +495,7 @@ class Birth(object):
 		if self.iPlayer is None:
 			return "Unassigned civ: %s" % infos.civ(self.iCiv).getText()
 		return name(self.iPlayer)
-	
+
 	@property
 	def spawn(self):
 		return plot_(self.location)
@@ -464,7 +506,7 @@ class Birth(object):
 	
 	@property
 	def switchPopup(self):
-		return popup.text("TXT_KEY_POPUP_SWITCH").cancel("TXT_KEY_POPUP_NO", button=event_bullet).option(self.yesSwitch, "TXT_KEY_POPUP_YES").build()
+		return popup.text("TXT_KEY_POPUP_SWITCH").option(self.noSwitch, "TXT_KEY_POPUP_NO").option(self.yesSwitch, "TXT_KEY_POPUP_YES").build()
 	
 	def isHuman(self):
 		if self.iPlayer is None:
@@ -473,6 +515,9 @@ class Birth(object):
 	
 	def isIndependence(self):
 		return self.iCiv in lIndependenceCivs
+
+	def isNoCity(self):
+		return self.iCiv in lNoCitySpawns
 	
 	def startAutoplay(self):
 		iAutoplayTurns = self.iTurn - scenarioStartTurn()
@@ -550,11 +595,11 @@ class Birth(object):
 			if player(iMongols).isExisting():
 				self.area += plots.owner(iMongols).regions(*lEurope)
 				self.area = self.area.unique()
-		
+
 		if self.iCiv == iManchuria:
 			if player(iChina).isExisting() and player(iChina).isHuman() and stability(iChina) >= iStabilityStable:
 				self.area = self.area.where(lambda p: p not in plots.core(iChina))
-		
+
 		if self.iCiv == iMexico:
 			self.area = self.area.where(lambda p: p.isPlayerCore(self.iPlayer) or not owner(p, iAmerica))
 		
@@ -633,7 +678,7 @@ class Birth(object):
 		if peers.count() > 2:
 			peerRevealed += plots.all().where(isPeerRevealed).expand(1)
 		
-		bCanNeighbourReveal = revealed.intersect(neighbourRevealed)
+		bCanNeighbourReveal = revealed.intersect(neighbourRevealed) 
 		bCanPeerReveal = revealed.intersect(peerRevealed)
 		
 		revealed += independenceRevealed
@@ -648,10 +693,10 @@ class Birth(object):
 			revealed += peerRevealed
 		
 		# for AI, reveal nearby settler and expansion targets to improve settler AI and help with expansion
-		if not self.isHuman():
-			region_plots = plots.all().land().where(lambda p: (p.getRegionID() in lNewWorld) == (self.spawn.getRegionID in lNewWorld))
-			revealed += region_plots.where(lambda p: p.getSettlerValue(self.iCiv) >= 10).where(lambda p: distance(self.location, p) <= 15).expand(2)
-			revealed += region_plots.where(lambda p: p.getExpansion() == self.iPlayer).expand(1)
+ 		if not self.isHuman():
+ 			region_plots = plots.all().land().where(lambda p: (p.getRegionID() in lNewWorld) == (self.spawn.getRegionID in lNewWorld))
+ 			revealed += region_plots.where(lambda p: p.getSettlerValue(self.iCiv) >= 10).where(lambda p: distance(self.location, p) <= 15).expand(2)
+ 			revealed += region_plots.where(lambda p: p.getExpansion() == self.iPlayer).expand(1)
 		
 		# reveal tiles
 		for plot in revealed:
@@ -660,11 +705,17 @@ class Birth(object):
 	def createUnits(self):
 		bInvasionCiv = self.iCiv in lInvasionCivs
 		
-		createRoleUnits(self.iPlayer, self.location, getStartingUnits(self.iPlayer), bCreateSettlers=not bInvasionCiv)
+
+		# Aeons - Add Byzantium due to dynamic capital.
+		createRoleUnits(self.iPlayer, self.location, getStartingUnits(self.iPlayer), bCreateSettlers=not bInvasionCiv and not self.iCiv == iByzantium) 
 		
 		# if invader but no cities in birth, still grant a settler now
 		if bInvasionCiv and not cities.birth(self.iPlayer):
 			createRoleUnit(self.iPlayer, self.location, iSettle)
+
+		# Aeons - Dynamic capital Byzantium
+		if self.iCiv == iByzantium:
+			makeUnit(self.iPlayer, iSettler, self.location, UnitAITypes.UNITAI_SETTLE)
 		
 		# only create units if coming from autoplay, otherwise after the switch
 		if self.iPlayer == active():
@@ -680,35 +731,38 @@ class Birth(object):
 		for plot in plots.all():
 			plot.updateRevealedOwner(self.team.getID())
 	
-	def prepareCity(self, city):		
-		city.rebuild(-1)
-		
-		iMinPopulation = self.player.getCurrentEra() + 1
-		city.setPopulation(max(iMinPopulation, city.getPopulation()))
-		
-		if since(scenarioStartTurn()):
-			ensureDefenders(self.iPlayer, city, 2)
-	
+	def setCommonwealth(self):
+		if self.iCiv in [iCanada, iAustralia, iSouthAfrica]:
+			iMaster = self.getMajorityCiv()
+			if iMaster is not None:
+				if self.iCiv == iBoers and iMaster == iSouthAfrica:
+					return
+				self.team.setVassal(iMaster, True, False)
+				#setDesc(self.iPlayer, desc(self.iPlayer, title(self.iPlayer))) # Set vassal title here since it doesn't set during peoples stage
+
+	# If more than half of the cities in the birth area are controlled by a Civ
+	# Canada/Australia/South Africa will become a vassal to that civ
+	def getMajorityCiv(self):
+		for iPlayer in players.major().without(self.iPlayer):
+			if cities.birth(self.iCiv).proportion(lambda city: city.getOwner() == iPlayer) > 0.5:
+				return iPlayer
+			
+
 	def prepareCapital(self):
 		expelUnits(self.iPlayer, plots.surrounding(self.location), self.flippedArea())
-		
-		capital = None
 	
 		if plot_(self.location).isCity():
-			capital = completeCityFlip(self.location, self.iPlayer, city_(self.location).getOwner(), 100, bCreateGarrisons=False)
+			completeCityFlip(self.location, self.iPlayer, city_(self.location).getOwner(), 100, bCreateGarrisons=False)
 		
 		if self.iCiv not in lInvasionCivs:
 			for city in cities.ring(self.location):
 				if city.isHolyCity():
-					capital = completeCityFlip(city, self.iPlayer, city.getOwner(), 100)
+					completeCityFlip(city, self.iPlayer, city.getOwner(), 100)
 				else:
 					self.data.lPreservedWonders += [iWonder for iWonder in infos.buildings() if isWonder(iWonder) and city.isHasRealBuilding(iWonder)]
 				
 					plot_(city).eraseAIDevelopment()
 					plot_(city).setImprovementType(iCityRuins)
-		
-		if capital:
-			self.prepareCity(capital)
 		
 		for plot in plots.surrounding(self.location):
 			convertPlotCulture(plot, self.iPlayer, 100, bOwner=True)
@@ -742,6 +796,8 @@ class Birth(object):
 				unit.kill(False, -1)
 	
 	def check(self):
+		
+		
 		if self.canceled:
 			return
 		
@@ -749,9 +805,13 @@ class Birth(object):
 			return
 	
 		iUntilBirth = until(self.iTurn)
+	
 		
-		if iUntilBirth == turns(5) or (scenarioStart() and self.iTurn - turns(5) < scenarioStartTurn()):
+		if iUntilBirth == turns(3) or (scenarioStart() and self.iTurn - turns(3) < scenarioStartTurn()):
 			if not self.canSpawn():
+				self.canceled = True
+				return
+			if self.lowImpactCancel():
 				self.canceled = True
 				return
 			
@@ -765,18 +825,19 @@ class Birth(object):
 			self.expansion()
 			self.announce()
 		
-		if self.iPlayer is None:
-			return
-		
-		if iUntilBirth == 2:
+		elif iUntilBirth == 2:
 			if self.cancelSpawn():
-				log.rise("BIRTH CANCELED: condition not satisfied at spawn: %s", infos.civ(self.iCiv).getText())
 				self.cancel()
 				return
 			self.askSwitch()
 		elif iUntilBirth == 1:
-			self.birth()
 			self.checkSwitch()
+			self.birth()
+
+		#elif iUntilBirth == 0 and not scenarioStart():
+		#	self.flip()
+		#	self.wars()
+
 		elif -turns(3) <= iUntilBirth <= 0 and not scenarioStart():
 			self.checkFlip()
 			
@@ -794,35 +855,128 @@ class Birth(object):
 		
 		if not infos.civ(self.iCiv).isAIPlayable():
 			return False
+
+		# Aeons - Certain civs can't spawn if their birth area is occupied
+		if self.isNoCity():
+			if cities.birth(self.iCiv):
+				return False
+
+		# Aeons - Rome is opposite and requires at least one city in birth area
+		if self.iCiv == iRome:
+			if not cities.birth(self.iCiv):
+				return False
 		
+
 		if autoplay():
 			if getImpact(self.iCiv) <= iImpactLimited:
-				if year(dBirth[active()]) > year(dFall[self.iCiv]) + turns(20):
+				if year(dBirth[civ(active())]) > year(dFall[self.iCiv]) + turns(20):
 					return False
 		
+		
 		# Byzantium requires Rome to be alive and Greece to be dead (human Rome can avoid Byzantine spawn by being solid)
+		# Aeons - Remove due to Dynamic Byzantium
+		#if self.iCiv == iByzantium:
+			#if not player(iRome).isExisting():
+				#return False
+			#elif player(iGreece).isExisting():
+				#return False
+			#elif player(iSparta).isExisting():
+				#return False
+			#elif player(iMycenae).isExisting():
+				#return False
+			#elif player(iRome).isHuman() and stability(iRome) == iStabilitySolid:
+				#return False
+
+		# Aeons - Byzantium requires that the Mediterranean hegemon holds land in Italy/Greece
 		if self.iCiv == iByzantium:
-			if not player(iRome).isExisting():
+			validHegemons = players.major().existing().where(lambda p: plots.capital(p) in plots.region(rMediterraneanSea).expand(2))
+			if validHegemons == None:
 				return False
-			elif player(iGreece).isExisting():
+			else:
+				data.iMediterraneanHegemon = civ(validHegemons.maximum(lambda p: player(p).getNumMilitaryUnits()))
+				if player(data.iMediterraneanHegemon).isHuman() and stability(data.iMediterraneanHegemon) == iStabilitySolid:
+					return False
+				if plots.capital(data.iMediterraneanHegemon).getX() >= 73:
+					if cities.region(rItaly).none(lambda city: data.iMediterraneanHegemon in [city.getCivilizationType()]):
+						return False
+				else:
+					if cities.region(rGreece).none(lambda city: data.iMediterraneanHegemon in [city.getCivilizationType()]):
+						return False
+
+
+		# Athens requires Mycenae to be dead
+		if self.iCiv == iGreece:
+			if player(iMycenae).isExisting():
 				return False
-			elif player(iRome).isHuman() and stability(iRome) == iStabilitySolid:
+
+		# Sparta requires Mycenae to be dead
+		if self.iCiv == iSparta:
+			if player(iMycenae).isExisting():
 				return False
-		
-		# Misr requires Egypt to be dead and Arabia to be shaky or worse
+
+		# Moors, Morocco, Spain requires Arabia to take an Iberian city.
+		if self.iCiv == iMorocco or self.iCiv == iSpain:
+			if not cities.regions(rIberia).ever_owned(iArabia):
+				return False
+
+		# Holy Rome requires that the French managed to conquer at least one city in Germany and that Rome doesn't exist.
+		if self.iCiv == iHolyRome:
+			if not cities.region(rLowerGermany).owner(iFrance):
+				return False
+			if player(iRome).isExisting():
+				return False
+
+		# Arabia must've conquered a city in Persia for Samanids
+		if self.iCiv == iSamanids:
+			if not cities.regions(rPersia).ever_owned(iArabia):
+				return False
+
+		# If Gokturks own a city in Persia or Khorasan, Turks won't spawn.
+		if self.iCiv == iTurks:
+			if cities.regions(rPersia, rKhorasan).owner(iGokturks):
+				return False
+
+		# Arabia must've conquered a Persian city for Buyids
+		if self.iCiv == iBuyids:
+			if not cities.regions(rPersia).ever_owned(iArabia):
+				return False
+
+
+		# Arabia must've conquered an Egyptian or Maghrebi city for Misr and Carthage must not exist
 		if self.iCiv == iMisr:
-			if player(iEgypt).isExisting():
+			if not cities.regions(rMaghreb, rEgypt).ever_owned(iArabia):
 				return False
-			if stability(iArabia) >= iStabilityStable:
-				return False
+			if player(iCarthage).isExisting():
+				if player(iCarthage).getPeriod() == iPeriodCarthage:
+					return False
+			if self.iCiv == iMisr:
+				if player(iEgypt).isExisting():
+					return False
+	
+
+		# Fatimids must've moved beyond Tunisia for Tunis
+		# And Carthage must not exist
+		if self.iCiv == iTunis:
+			if player(iMisr).isExisting():
+				if player(iMisr).getPeriod() == iPeriodMisrEgypt:
+					return False
+			if player(iCarthage).isExisting():
+				if player(iCarthage).getPeriod() == iPeriodCarthage:
+					return False
+
 		
-		# Italy requires Rome to be dead and sufficient minor cities in Italy
+		# Italy requires Rome to be dead and sufficient minor or HRE cities in Italy
 		if self.iCiv == iItaly:
 			if player(iRome).isExisting():
 				return False
-			
-			if cities.region(rItaly).proportion(is_minor) < 0.5:
+			if cities.region(rItaly).proportion(lambda city: city.getOwner() in players.minor() or civ(city) == iHolyRome) < 0.5:
 				return False
+			#if player(iGoths).isExisting():
+			#	return False
+			#if cities.region(rItaly).proportion(lambda city: is_minor(city) or city.getOwner() == iHolyRome) < 0.5:
+			#	return False
+			#if cities.regions(rItaly).none(lambda city: iByzantium in [city.getCivilizationType()]):
+			#	return False
 		
 		# Aztecs require Toltecs to be dead
 		if self.iCiv == iAztecs:
@@ -830,14 +984,25 @@ class Birth(object):
 			if player(iToltecs).isExisting() and stability(iToltecs) >= iRequiredStability:
 				return False
 		
-		# Ottomans require that the Turks managed to conquer at least one city in the Near East
+		# Ottomans require that the Turks managed to conquer at least one city in Anatolia
+		# Aeons - Was previously Anatolia, Caucasus, Levant and Mesopotamia, but loosened to help Byzantium a bit
 		if self.iCiv == iOttomans:
-			if cities.birth(iOttomans).none(CyCity.isHuman) and not cities.regions(rAnatolia, rCaucasus, rLevant, rMesopotamia).ever_owned(iTurks):
+			if cities.birth(iOttomans).none(CyCity.isHuman) and not cities.regions(rAnatolia).ever_owned(iTurks):
 				return False
+			#if cities.birth(iOttomans).none(CyCity.isHuman) and cities.regions(rAnatolia, rCaucasus).none(lambda city: iTurks in [city.getCivilizationType(), city.getPreviousCiv()] or iMongols in [city.getCivilizationType(), city.getPreviousCiv()]): return False
 		
-		# Iran requires Persia to be dead
+		# Parthia requires Persia to be dead or unstable
+		if self.iCiv == iParthia:
+			if player(iPersia).isExisting() and stability(iPersia) >= iStabilityShaky:
+				return False
+
+		# Iran requires Persia, Parthia, Buyids to be dead
 		if self.iCiv == iIran:
 			if player(iPersia).isExisting():
+				return False
+			if player(iParthia).isExisting():
+				return False
+			if player(iBuyids).isExisting():
 				return False
 		
 		# Saudis require Arabia to be dead and no player in its birth area to be stable
@@ -847,7 +1012,7 @@ class Birth(object):
 			
 			if cities.birth(iSaudis).owners().major().all_if_any(lambda p: stability(p) >= iStabilityStable):
 				return False
-		
+
 		# Argentina requires any Old World civilization in Andes or Southern Cone
 		if self.iCiv == iArgentina:
 			if not cities.regions(rAndes, rSouthernCone).ever_owned(lBioOldWorld):
@@ -857,7 +1022,7 @@ class Birth(object):
 		if self.iCiv == iMexico:
 			if player(iAztecs).isExisting():
 				return False
-		
+
 			if not cities.regions(rMesoamerica, rCentralAmerica).ever_owned(lBioOldWorld):
 				return False
 		
@@ -870,29 +1035,51 @@ class Birth(object):
 		if self.iCiv == iBrazil:
 			if not cities.regions(rBrazil, rAmazonia).ever_owned(lBioOldWorld):
 				return False
-		
+
 		# Belgium requires Netherlands not to exist, not controlling its core, or being collapsing
 		if self.iCiv == iBelgium:
-			if player(iNetherlands).isExisting() and cities.core(iNetherlands).owner(iNetherlands) and stability(iNetherlands) > iStabilityCollapsing:
-				return False
-		
+			if not player(iCongo).isHuman() and not player(iKatanga).isHuman(): # Aeons - Always spawn Belgium if human owned Congo.
+				if player(iNetherlands).isExisting() and cities.core(iNetherlands).owner(iNetherlands) and stability(iNetherlands) > iStabilityCollapsing:
+					return False
+
 		# Australia requires any cities in Australia
 		if self.iCiv == iAustralia:
 			if not cities.region(rAustralia):
 				return False
+
+		# Jerusalem requires a Catholic owner for a Levantine city
+		if self.iCiv == iJerusalem:
+			if cities.region(rLevant).none(lambda city: player(city).getStateReligion()==iCatholicism):
+				return False
+
+		# Boers/Zulu must not be in South African Union period for South Africa to spawn
+		if self.iCiv == iSouthAfrica:
+			if player(iBoers).isExisting():
+				if player(iBoers).getPeriod() == iPeriodSouthAfricaUnion:
+					return False
+			if player(iZulu).isExisting():
+				if player(iZulu).getPeriod() == iPeriodSouthAfricaUnion:
+					return False
+
+		# Buyids and Ghurids always spawn so long as Persia exists, as Saffarids respawn at high stability.
+		if self.iCiv == iBuyids or self.iCiv == iGhorids:
+			if player(iPersia).isExisting():
+				return True
+
 	
-		# independence civs require all players controlling cities in their area to be stable or worse
+		# independence civs require all players controlling cities in their area to be stable or worse, solid or worse from 1750 onwards
 		if self.isIndependence():
 			birthCities = plots.birth(self.iCiv).cities()
-			if players.major().where(lambda p: civ(p) != self.iCiv).where(lambda p: birthCities.owner(p).any()).all_if_any(lambda p: stability(p) >= iStabilitySolid):
+			if players.major().where(lambda p: civ(p) != self.iCiv).where(lambda p: birthCities.owner(p).any()).all_if_any(lambda p: stability(p) >= iStabilitySolid) and year(dBirth[self.iCiv]>=1750):
+				return False
+			if players.major().where(lambda p: civ(p) != self.iCiv).where(lambda p: birthCities.owner(p).any()).all_if_any(lambda p: stability(p) >= iStabilityStable):
 				return False
 		
 		return True
-	
+
 	def cancelSpawn(self):
 		if self.isHuman():
 			return False
-		
 		if self.iCiv == iTatars:
 			if not cities.owner(iMongols).regions(*lEurope):
 				return True
@@ -917,7 +1104,6 @@ class Birth(object):
 				self.canceled = True
 				log.rise("BIRTH CANCELED: skipping %s slot to keep it free", infos.civ(self.iCiv).getText())
 				return
-			
 			self.iPlayer = findSlot(self.iCiv)
 			
 		if self.iPlayer < 0:
@@ -941,7 +1127,8 @@ class Birth(object):
 		events.fireEvent("prepareBirth", self.iCiv)
 	
 	def protect(self):
-		self.protectionEnd = self.iTurn + turns(10)
+		# 5 turns of protection after it spawns since this event fires 2 turns before true birth
+		self.protectionEnd = self.iTurn + turns(7)
 		self.player.setBirthProtected(True)
 	
 		for plot in self.area:
@@ -954,7 +1141,7 @@ class Birth(object):
 		
 		for plot in self.area:
 			plot.resetBirthProtected()
-	
+
 	def cancel(self):
 		self.canceled = True
 		self.resetProtection()
@@ -971,20 +1158,20 @@ class Birth(object):
 
 			self.iExpansionDelay = rand(turns(5)) + 1
 			self.iExpansionTurns = turns(30)
-	
+
 	def isExpansionPlot(self, plot):
 		if plot.isPeak():
 			return False
-		
+
 		if plot.getPlayerWarValue(self.iPlayer) < 5:
 			return False
-		
+
 		if plot.getContinentArea() == self.spawn.getContinentArea():
 			return True
-		
+
 		if distance(plot, self.location) > 32:
 			return False
-		
+
 		return (plot.getRegionID() in lNewWorld) == (self.spawn.getRegionID() in lNewWorld)
 	
 	def checkExpansion(self):
@@ -993,7 +1180,7 @@ class Birth(object):
 		
 		if self.player.getNumCities() == 0:
 			return
-		
+				
 		if self.iExpansionTurns < 0:
 			return
 		
@@ -1006,22 +1193,22 @@ class Birth(object):
 		if self.iExpansionTurns == 0:
 			for plot in expansionPlots:
 				plot.resetExpansion()
-				
-				deleteExpansionUnits(self.iPlayer)
+
+		deleteExpansionUnits(self.iPlayer)
 		
 		self.iExpansionDelay -= 1
 		self.iExpansionTurns -= 1
-		
+
 		if self.team.isAVassal():
-			return
+ 			return
 		
 		if self.iExpansionDelay >= 0:
 			return
-			
+		
 		if not self.isHuman() and expansionCities:
 			minors, majors = expansionCities.owners().without(self.iPlayer).split(is_minor)
-			
-			majors = majors.where(self.team.canDeclareWar).where(self.player.canContact).where(lambda p: not player(p).isBirthProtected())
+ 			
+ 			majors = majors.where(self.team.canDeclareWar).where(self.player.canContact).where(lambda p: not player(p).isBirthProtected())
 		
 			for iMinor in minors.where(lambda p: not self.team.isAtWar(p)):
 				self.team.declareWar(player(iMinor).getTeam(), False, WarPlanTypes.WARPLAN_LIMITED)
@@ -1029,19 +1216,19 @@ class Birth(object):
 			if majors and self.team.getAtWarCount(True) > 0:
 				target = expansionCities.where(lambda city: not is_minor(city)).closest_all(cities.owner(self.iPlayer))
 				self.team.declareWar(target.getTeam(), True, WarPlanTypes.WARPLAN_TOTAL)
-				
+
 				self.iExpansionDelay = rand(turns(5)) + 1
-			
-			elif minors:
-				target, attacker_closest = expansionCities.where(is_minor).where_surrounding(lambda city: not units.at(city).owner(self.iPlayer)).where_maximum(lambda city: plot_(city).getPlayerWarValue(self.iPlayer)).closest_pair(cities.owner(self.iPlayer))
-				
-				if target:
-					spawn = possibleSpawnsBetween(attacker_closest, target, 1).closest(target)
-		
-					createExpansionUnits(self.iPlayer, target.getOwner(), spawn, target, iExtraAI=0, iExtraTargets=0)
-				
-					self.iExpansionDelay = 2
-				
+ 			
+ 			elif minors:
+ 				target, attacker_closest = expansionCities.where(is_minor).where_surrounding(lambda city: not units.at(city).owner(self.iPlayer)).where_maximum(lambda city: plot_(city).getPlayerWarValue(self.iPlayer)).closest_pair(cities.owner(self.iPlayer))
+ 				
+ 				if target:
+ 					spawn = possibleSpawnsBetween(attacker_closest, target, 1).closest(target)
+ 		
+ 					createExpansionUnits(self.iPlayer, target.getOwner(), spawn, target, iExtraAI=0, iExtraTargets=0)
+ 				
+ 					self.iExpansionDelay = 2
+
 	def checkIncompatibleCivs(self):
 		if self.iCiv not in dClearedForBirth:
 			return
@@ -1073,7 +1260,41 @@ class Birth(object):
 			self.assignAdditionalTechs()
 			return
 
-		self.switchPopup.text(adjective(self.iPlayer)).cancel().yesSwitch().launch()
+		self.switchPopup.text(adjective(self.iPlayer)).noSwitch().yesSwitch().launch()
+
+	def lowImpactCancel(self):
+		
+		if civ() == self.iCiv:
+			return False
+
+		#Aeons - Prevent super-marginal impact civs from spawning if not neighbours or influences
+		if not civ() in dNeighbours[self.iCiv] and not civ() in dInfluences[self.iCiv] and infos.civ(self.iCiv).getImpact() <= iImpactSuperMarginal:
+			return True
+
+		#Aeons - Prevent marginal impact civs from spawning if not neighbours, influences or same civ group.
+		if not civ() in dNeighbours[self.iCiv] and not civ() in dInfluences[self.iCiv] and infos.civ(self.iCiv).getImpact() <= iImpactMarginal:
+			if civ() in dCivGroups[iCivGroupEurope] and self.iCiv in dCivGroups[iCivGroupEurope]:
+				return False
+			if civ() in dCivGroups[iCivGroupEastAsia] and self.iCiv in dCivGroups[iCivGroupEastAsia]:
+				return False
+			if civ() in dCivGroups[iCivGroupSouthAsia] and self.iCiv in dCivGroups[iCivGroupSouthAsia]:
+				return False
+			if civ() in dCivGroups[iCivGroupMiddleEast] and self.iCiv in dCivGroups[iCivGroupMiddleEast]:
+				return False
+			if civ() in dCivGroups[iCivGroupMediterranean] and self.iCiv in dCivGroups[iCivGroupMediterranean]:
+				return False
+			if civ() in dCivGroups[iCivGroupAfrica] and self.iCiv in dCivGroups[iCivGroupAfrica]:
+				return False
+			if civ() in dCivGroups[iCivGroupAmerica] and self.iCiv in dCivGroups[iCivGroupAmerica]:
+				return False
+			if civ() in dCivGroups[iCivGroupOceania] and self.iCiv in dCivGroups[iCivGroupOceania]:
+				return False
+			if civ() in dCivGroups[iCivGroupNorthAfrica] and self.iCiv in dCivGroups[iCivGroupNorthAfrica]:
+				return False
+			return True		
+
+		return False
+		
 	
 	def canSwitch(self):
 		if not MainOpt.isSwitchPopup():
@@ -1081,11 +1302,11 @@ class Birth(object):
 	
 		if game.getAIAutoPlay() > 0:
 			return False
-		
+
 		if scenarioStart():
 			return False
 		
-		if civ() in dNeighbours[self.iPlayer] and since(year(dBirth[active()])) < turns(25):
+		if civ() in dNeighbours[self.iPlayer] and since(year(dBirth[civ(active())])) < turns(25):
 			return False
 	
 		return True
@@ -1095,13 +1316,17 @@ class Birth(object):
 		
 		game.doControl(ControlTypes.CONTROL_FORCEENDTURN)
 	
+	def noSwitch(self):
+		if not self.isHuman():
+			self.assignAdditionalTechs()
+			createRoleUnits(self.iPlayer, self.location, getAIStartingUnits(self.iPlayer))
+		
+		createSpecificUnits(self.iPlayer, self.location)
+	
 	def checkSwitch(self):
 		if self.bSwitch:
+			self.bSwitch = False
 			self.switch()
-		elif not self.isHuman():
-			self.setupWithoutSwitch()
-		
-		self.bSwitch = False
 	
 	def switch(self):
 		iPreviousPlayer = active()
@@ -1147,13 +1372,6 @@ class Birth(object):
 		data.dUnitsLost = dict((iUnit, iNumUnits) for iUnit, iNumUnits in dUnitsLost.items() if iNumUnits > 0)
 		data.dBuildingsBuilt = dict((iBuilding, iNumBuildings) for iBuilding, iNumBuildings in dBuildingsBuilt.items() if iNumBuildings > 0)
 	
-	def setupWithoutSwitch(self):
-		if not self.isHuman():
-			self.assignAdditionalTechs()
-			createRoleUnits(self.iPlayer, self.location, getAIStartingUnits(self.iPlayer))
-		
-		createSpecificUnits(self.iPlayer, self.location)		
-	
 	def birth(self):
 		# reset AI
 		self.reset()
@@ -1167,9 +1385,26 @@ class Birth(object):
 		# assign civilization attributes
 		self.assignAttributes()
 		
+
+		#Aeons - Dynamic Byzantium starting plot
+		if self.iCiv == iByzantium:
+			validHegemons = players.major().existing().where(lambda p: plots.capital(p) in plots.region(rMediterraneanSea).expand(2))
+			if validHegemons == None:
+				area = plots.birth(self.iPlayer)
+			else:
+				data.iMediterraneanHegemon = civ(validHegemons.maximum(lambda p: player(p).getNumMilitaryUnits()))
+				if plots.capital(data.iMediterraneanHegemon).getX() >= 73:
+					setPeriod(iByzantium, iPeriodByzantiumRoman)
+					startingPlot = plots.capital(iRome)
+					self.player.setStartingPlot(startingPlot, False)
+					self.location = location(plots.capital(iRome))
+
 		# reveal territory
-		self.revealTerritory()
-		
+		self.revealTerritory()		
+
+		# Aeons - Set Australia, Canada, South Africa as vassals of their previous owner
+		self.setCommonwealth()
+
 		# flip capital
 		self.prepareCapital()
 		
@@ -1192,12 +1427,13 @@ class Birth(object):
 			self.team.AI_setAtWarCounter(player(iOwner).getTeam(), 0)
 			return
 		
+		iRefusalModifier = dWarOnFlipProbability[iOwner]
 		if chance(dWarOnFlipProbability[iOwner]):
-			player(iOwner).AI_changeMemoryCount(self.iPlayer, MemoryTypes.MEMORY_STOPPED_TRADING_RECENT, 1)
+ 			player(iOwner).AI_changeMemoryCount(self.iPlayer, MemoryTypes.MEMORY_STOPPED_TRADING_RECENT, 1)
 	
 	def declareWarOnFlip(self, iOwner):
 		team(iOwner).declareWar(self.player.getTeam(), False, WarPlanTypes.WARPLAN_ATTACKED_RECENT)
-	
+
 	def checkFlip(self):
 		if not self.bFlip and (self.player.getNumCities() > 0 or self.iCiv in lInvasionCivs):
 			self.flip()
@@ -1207,9 +1443,44 @@ class Birth(object):
 	
 	def flippedArea(self):
 		if self.iCiv == iEngland and not self.isHuman():
-			area = plots.birth(self.iPlayer) + plots.region(rBritain).where(lambda p: not p.isOwned() or is_minor(p.getOwner()))
+ 			area = plots.birth(self.iPlayer) + plots.region(rBritain).where(lambda p: not p.isOwned() or is_minor(p.getOwner()))
+ 			return area.unique()
+
+		#Aeons - remove Byzantium from expanded flips, but make it flip all of Rome east of Italy
+		if self.iCiv == iByzantium:
+			validHegemons = players.major().existing().where(lambda p: plots.capital(p) in plots.region(rMediterraneanSea).expand(2))
+			if validHegemons == None:
+				area = plots.birth(self.iPlayer)
+				return area.unique()
+			else:
+				data.iMediterraneanHegemon = civ(validHegemons.maximum(lambda p: player(p).getNumMilitaryUnits()))
+				if plots.capital(data.iMediterraneanHegemon).getX() >= 73:
+					setPeriod(iByzantium, iPeriodByzantiumRoman)
+					startingPlot = plots.capital(iRome)
+					self.player.setStartingPlot(startingPlot, False)
+					self.location = location(plots.capital(iRome))
+					area = plots.birth(iRome) + plots.all().where(lambda p: p.getX() < 73 and p.isOwned() and civ(p.getOwner()) == data.iMediterraneanHegemon)
+ 					return area.unique()
+				else:
+ 					area = plots.birth(self.iPlayer) + plots.all().where(lambda p: p.getX() >= 73 and p.isOwned() and civ(p.getOwner()) == data.iMediterraneanHegemon)
+ 					return area.unique()
+			
+		# Aeons - Holy Rome birth area is the French birth area in Germany, Central Europe and Italy
+		# Ignore for human player
+		if self.iCiv == iHolyRome and not self.isHuman():
+			area = plots.regions(rLowerGermany, rCentralEurope, rItaly).where(lambda p: p.isOwned() and civ(p.getOwner()) == iFrance)
 			return area.unique()
 		
+		# Flip all of western Timurid land as Iran.
+		# Technically it was controlled by the Aq Qoyunlu before the Safavids
+		# But we can't really fit such a civ in the timeline
+		# This will force the Timurids out into India
+		if self.iCiv == iIran:
+			area = plots.birth(self.iPlayer) + plots.all().where(lambda p: p.getX() <= 98 and p.isOwned() and civ(p.getOwner()) == iTimurids)
+			return area.unique()
+		
+
+	
 		return self.isIndependence() and self.area or plots.birth(self.iPlayer)
 	
 	def flip(self):
@@ -1229,8 +1500,13 @@ class Birth(object):
 		
 		for city in flippedCities:
 			city = completeCityFlip(city, self.iPlayer, city.getOwner(), 100, bFlipUnits=True)
+			city.rebuild(-1)
 			
-			self.prepareCity(city)
+			iMinPopulation = self.player.getCurrentEra() + 1
+			city.setPopulation(max(iMinPopulation, city.getPopulation()))
+			
+			if since(scenarioStartTurn()):
+				ensureDefenders(self.iPlayer, city, 2)
 		
 		convertSurroundingPlotCulture(self.iPlayer, flippedPlots.land())
 		convertSurroundingPlotCulture(self.iPlayer, flippedPlots.water().where(lambda p: p.getPlayerCityRadiusCount(self.iPlayer) > 0))
@@ -1263,4 +1539,5 @@ class Birth(object):
 				if player(iTarget).isHuman():
 					for plot in expansionArea.owner(iTarget).core(iTarget):
 						plot.resetExpansion()
+
 		

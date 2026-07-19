@@ -3,7 +3,6 @@ from RFCUtils import *
 from Core import *
 from Locations import *
 from Stability import *
-from AIWars import iAlexanderYear
 from Popups import popup
 from Scenarios import SCENARIOS
 
@@ -13,13 +12,21 @@ dRelocatedCapitals = CivDict({
 	iMongols : tBeijing,
 	iOttomans : tConstantinople,
 	iManchuria : tBeijing,
+	iVandals : tCarthage,
+	iArabia : tBaghdad,
+	iMisr : tCairo,
+	iGhorids: tDelhi,
+	iTimurids: tDelhi,
+	iMacedon: tBabylon
 })
 
 dCapitalInfrastructure = CivDict({
 	iPhoenicia : (3, [], [], 0),
+	iZulu : (2, [iWalls], [], 0),
 	iByzantium : (5, [iBarracks, iWalls, iLibrary, iMarket, iGranary, iHarbor, iForge], [temple], 0),
 	iPortugal : (5, [iLibrary, iMarket, iHarbor, iLighthouse, iForge, iWalls], [temple], 0),
 	iItaly : (7, [iLibrary, iMarket, iArtStudio, iAqueduct, iJail, iWalls], [temple], 0),
+	iFunj : (3, [iBarracks, iWalls, iLibrary, iMarket], [], 0),
 	iNetherlands : (9, [iLibrary, iMarket, iWharf, iLighthouse, iBarracks, iPharmacy, iBank, iArena, iTheatre], [temple], 0),
 	iBelgium : (11, [iBath, iArena, iSewer], [temple], 2000),
 })
@@ -37,11 +44,9 @@ def updateCulture():
 def relocateAcquiredCapital(iOwner, iPlayer, city):
 	relocateCapitals(iPlayer, city)
 
-
 @handler("cityAcquired")
 def buildAcquiredCapitalInfrastructure(iOwner, iPlayer, city):
 	buildCapitalInfrastructure(iPlayer, city)
-
 
 @handler("cityAcquired")
 def openGibraltar(iOwner, iPlayer, city):
@@ -50,25 +55,21 @@ def openGibraltar(iOwner, iPlayer, city):
 			if cities.surrounding(tile, radius=2).owner(iPlayer):
 				convertPlotCulture(tile, slot(iSpain), 100, True) 
 
-
 @handler("cityAcquired")
 def conquistadorCapital(iOwner, iPlayer, city):
 	if city.getRegionID() in lAmerica and civ(iOwner) in lBioNewWorld and civ(iPlayer) not in lBioNewWorld and data.dFirstContactConquerors[civ(iOwner)]:
 		if cities.regions(*lAmerica).none(lambda c: c.isHasRealBuilding(iAdministrativeCenter)):
 			city.setHasRealBuilding(iAdministrativeCenter, True)
 
-
 @handler("cityAcquired")
 def helpConstantinople(iOwner, iPlayer):
 	if player(iPlayer).isHuman():
 		return
-	
 	constantinople = city(tConstantinople)
 	if constantinople and constantinople.getOwner() == iPlayer:
 		for plot in plots.city_radius(constantinople):
 			if plot.getOwner() == iPlayer:
 				plot.setWorkingCity(constantinople)
-
 
 ### FIRST CITY ###
 
@@ -124,20 +125,6 @@ def createEgyptianDefenses(city):
 	if civ(city) == iEgypt and player(city.getOwner()).getNumCities() == 2 and player(iNubia).isHuman():
 		makeUnit(city.getOwner(), iArcher, city)
 	
-	
-@handler("cityBuilt")
-def createCarthaginianDefenses(city):
-	if at(city, tCarthage) and civ(city) == iPhoenicia and not player(city).isHuman():					
-		makeUnit(iPhoenicia, iWorkboat, tCarthage, UnitAITypes.UNITAI_WORKER_SEA)
-		makeUnit(iPhoenicia, iGalley, direction(tCarthage, DirectionTypes.DIRECTION_NORTHWEST), UnitAITypes.UNITAI_SETTLER_SEA)
-		makeUnit(iPhoenicia, iSettler, direction(tCarthage, DirectionTypes.DIRECTION_NORTHWEST), UnitAITypes.UNITAI_SETTLE)
-		
-		if player(iRome).isHuman():
-			city.setHasRealBuilding(iWalls, True)
-			
-			makeUnits(iPhoenicia, iArcher, tCarthage, 2, UnitAITypes.UNITAI_CITY_DEFENSE)
-			makeUnits(iPhoenicia, iNumidianCavalry, tCarthage, 3)
-			makeUnits(iPhoenicia, iWarElephant, tCarthage, 2, UnitAITypes.UNITAI_CITY_COUNTER)
 
 
 @handler("cityBuilt")
@@ -165,6 +152,12 @@ def grantSettlerSea(city, unit):
 				if iBestTransport is not None:
 					makeUnit(city.getOwner(), iBestTransport, city, UnitAITypes.UNITAI_SETTLER_SEA)
 
+# Aeons - Do we still need this???
+@handler("BeginGameTurn")
+def createMacedonianRoad():
+	if year() == year(-340) and not player(iMacedon).isHuman():
+		for plot in plots.of(lMacedonianRoad):
+			plot.setRouteType(iRouteRoad)
 
 ### BEGIN GAME TURN ###
 
@@ -177,29 +170,56 @@ def placeGoodyHuts(iGameTurn):
 					placeTribalVillage(tTL, tBR)
 
 
+# Aeons - Remove this, Carthage does just fine
+#@handler("BeginGameTurn")
+#def createCarthaginianSettler(iGameTurn):
+#	if not player(iPhoenicia).isHuman() and iGameTurn == year(-820) - (data.iSeed % 10):
+#		return
+#		#makeUnit(iPhoenicia, iSettler, tCarthage)
+#		#makeUnits(iPhoenicia, iArcher, tCarthage, 2)
+#		#makeUnits(iPhoenicia, iWorker, tCarthage, 2)
+#		#makeUnits(iPhoenicia, iWarElephant, tCarthage, 2)
+
 @handler("BeginGameTurn")
-def createCarthaginianSettler(iGameTurn):
-	if not player(iPhoenicia).isHuman() and iGameTurn == year(-820) - (data.iSeed % 10):
-		makeUnit(iPhoenicia, iSettler, tCarthage)
-		makeUnits(iPhoenicia, iArcher, tCarthage, 2)
-		makeUnits(iPhoenicia, iWorker, tCarthage, 2)
-		makeUnits(iPhoenicia, iWarElephant, tCarthage, 2)
+def createPonticSettler(iGameTurn):
+	if not player(iScythia).isHuman() and iGameTurn == year(-600) - (data.iSeed % 10):
+		makeUnits(iScythia, iSettler, tEupatoria, 2)
+		makeUnits(iScythia, iArcher, tEupatoria, 2)
+		makeUnits(iScythia, iAspabarata, tEupatoria, 2)
 
 
-# TODO: revisit how this works
+
 @handler("BeginGameTurn")
 def checkEarlyColonists():
-	dEarlyColonistYears = {
-		-850 : iGreece,
-		-700 : iCarthage,
-		-400 : iRome,
-	}
+	offset = turns(data.iSeed % 3)
+	# the foundation of Carthage
+	if year() > year(200):
+		return
+	if year() < year(-1000):
+		return
+
+	if year() == year(-800) - offset:
+		pPlayer = player(iPhoenicia)
+		if pPlayer.isExisting():
+			message(active(), 'TXT_KEY_EVENT_EARLY_COLONIZERS', adjective(pPlayer))
+
+			if not pPlayer.isHuman():
+				# Aeons - Remove this Cross Overhaul addition
+				# Carthage does fine with all the extra turns
+				#makeUnit(iPhoenicia, iSettler, tGades)
+				#makeUnits(iPhoenicia, iArcher, tGades, 1)
+				#makeUnits(iPhoenicia, iWorker, tGades, 1, UnitAITypes.UNITAI_WORKER)
+				makeUnits(iPhoenicia, iArcher, tCarthage, 1)
+				makeUnit(iPhoenicia, iSettler, tCarthage)
+				makeUnits(iPhoenicia, iWorker, tCarthage, 1, UnitAITypes.UNITAI_WORKER)
+
+	elif year() == year(-700) - offset:
+		giveEarlyColonists(iGreece)
+	elif year() == year(-650) - offset:
+		giveEarlyColonists(iSparta)
+	elif year() == year(50) - offset:
+		giveEarlyColonists(iRome, tLondon) # Aeons
 	
-	iYear = game.getGameTurnYear()
-	if iYear in dEarlyColonistYears:
-		iCiv = dEarlyColonistYears[iYear]
-		giveEarlyColonists(iCiv)
-		
 		
 @handler("BeginGameTurn")
 def checkLateColonists():
@@ -208,7 +228,9 @@ def checkLateColonists():
 			if player(iCiv).isExisting():
 				iPlayer = slot(iCiv)
 				if data.players[iPlayer].iExplorationTurn >= 0:
-					if turn() == data.players[iPlayer].iExplorationTurn + 1 + data.players[iPlayer].iColonistsAlreadyGiven * 8:
+					#if turn() == data.players[iPlayer].iExplorationTurn + 1 + data.players[iPlayer].iColonistsAlreadyGiven * 8:
+					# Aeons - Raise colony frequency
+					if turn() == data.players[iPlayer].iExplorationTurn + 1 + data.players[iPlayer].iColonistsAlreadyGiven * 6:
 						giveColonists(iPlayer)
 
 
@@ -225,16 +247,7 @@ def createSilkRoute():
 		for plot in plots.of(lSilkRoute):
 			plot.setRouteType(iRouteRoad)
 
-
-@handler("BeginGameTurn")
-def createMacedonianRoad():
-	if year() == year(iAlexanderYear) and not player(iGreece).isHuman():
-		for plot in plots.of(lMacedonianRoad):
-			plot.setRouteType(iRouteRoad)
-
-
 ### BEGIN PLAYER TURN ###
-
 
 @handler("BeginPlayerTurn")
 def earlyArmies(iGameTurn, iPlayer):
@@ -242,11 +255,11 @@ def earlyArmies(iGameTurn, iPlayer):
 		if not player(iPlayer).isHuman():
 			if civ(iPlayer) == iHittites:
 				createRoleUnit(iPlayer, capital(iPlayer), iShockCity, 2)
-			elif civ(iPlayer) == iAssyria:
-				createRoleUnit(iPlayer, capital(iPlayer), iDefend)
-				createRoleUnit(iPlayer, capital(iPlayer), iCityAttack)
-				createRoleUnit(iPlayer, capital(iPlayer), iSiege)
-
+			# Aeons - We have conquerors for Assyria so this isn't needed
+			#elif civ(iPlayer) == iAssyria:
+			#	createRoleUnit(iPlayer, capital(iPlayer), iDefend)
+			#	createRoleUnit(iPlayer, capital(iPlayer), iCityAttack)
+			#	createRoleUnit(iPlayer, capital(iPlayer), iSiege)
 
 @handler("BeginPlayerTurn")
 def nativeConquerors(iGameTurn, iPlayer):
@@ -269,13 +282,12 @@ def nativeConquerors(iGameTurn, iPlayer):
 	
 
 def checkNativeConquerors(iPlayer, tContactZone):
-	newWorldPlots = plots.rectangle(tContactZone).without(lContactZoneExceptions)
+	newWorldPlots = plots.rectangle(tContactZone)
 	
 	if newWorldPlots.owners().major():
 		return
 	
 	return conquistadors(iPlayer, slot(iNative), newWorldPlots)
-
 
 ### FIRST CONTACT ###
 
@@ -299,21 +311,20 @@ def firstContactConquistadors(iTeamX, iHasMetTeamY):
 					return
 				
 				bAlreadyContacted = data.dFirstContactConquerors[iNewWorldCiv]
-				
+					
 				if not bAlreadyContacted:
 					if iNewWorldCiv in [iMaya, iToltecs, iAztecs]:
 						tContactZone = tMesoamericanContactZone
 					elif iNewWorldCiv == iInca:
 						tContactZone = tAndeanContactZone
-
+						
 					data.dFirstContactConquerors[iNewWorldCiv] = True
 					
 					if iNewWorldCiv in [iToltecs, iAztecs]:
 						data.dFirstContactConquerors[iToltecs] = True
 						data.dFirstContactConquerors[iAztecs] = True
 					
-					newWorldPlots = plots.rectangle(tContactZone)
-					
+					newWorldPlots = plots.rectangle(tContactZone).without(lContactZoneExceptions)
 					conquistadors(iOldWorldPlayer, iNewWorldPlayer, newWorldPlots)
 
 
@@ -345,7 +356,7 @@ def conquistadors(iOldWorldPlayer, iNewWorldPlayer, newWorldPlots):
 		if year() < year(dBirth[active()]):
 			iModifier1 += 1
 			iModifier2 += 1
-		
+			
 		if not team(iOldWorldPlayer).isAtWar(iNewWorldPlayer):
 			team(iOldWorldPlayer).declareWar(iNewWorldPlayer, True, WarPlanTypes.WARPLAN_TOTAL)
 		
@@ -387,67 +398,182 @@ def conquistadors(iOldWorldPlayer, iNewWorldPlayer, newWorldPlots):
 			
 		message(iNewWorldPlayer, 'TXT_KEY_FIRST_CONTACT_NEWWORLD')
 		message(iOldWorldPlayer, 'TXT_KEY_FIRST_CONTACT_OLDWORLD')
-		
+
 		return True
+					
+
 
 
 @handler("firstContact")
-def firstContactMongolConquerors(iTeamX, iHasMetTeamY):
-	if not scenarioStart() and civ(iHasMetTeamY) == iMongols and civ() != iMongols and since(player(iMongols).getLastBirthTurn()) >= 1:
+def firstContactConquerors(iTeamX, iHasMetTeamY):
+	if not scenarioStartTurn() and civ(iHasMetTeamY) == iMongols and not player(iMongols).isHuman() and since(player(iMongols).getLastBirthTurn()) >= 1:
 		mongolConquerors(iTeamX)
-
+	if civ(iHasMetTeamY) == iArabia:
+		arabiaConquerors(iTeamX)
+	if civ(iHasMetTeamY) == iMisr:
+		fatimidConquerors(iTeamX)
 
 @handler("flip")
-def flipMongolConquerors(iPlayer):
+def flipConquerors(iPlayer):
 	if civ(iPlayer) == iMongols and not player(iPlayer).isHuman():
-		for iOtherPlayer in players.major().existing().without(iPlayer):
-			if player(iPlayer).canContact(iOtherPlayer):
+		for iOtherPlayer in players.all().existing().without(iPlayer):
+			if player(iPlayer).canContact(iOtherPlayer) or civ(iOtherPlayer) == iIndependent or civ(iOtherPlayer) == iIndependent2:
 				mongolConquerors(player(iOtherPlayer).getTeam())
+	elif civ(iPlayer) == iArabia:
+		for iOtherPlayer in players.all().existing().without(iPlayer):
+			if player(iPlayer).canContact(iOtherPlayer):
+				arabiaConquerors(player(iOtherPlayer).getTeam())
+	elif civ(iPlayer) == iMisr:
+		for iOtherPlayer in players.all().existing().without(iPlayer) or civ(iOtherPlayer) == iIndependent  or civ(iOtherPlayer) == iIndependent2:
+			fatimidConquerors(player(iOtherPlayer).getTeam())
+
+
 
 
 def mongolConquerors(iTargetTeam):
 	iTargetCiv = civ(iTargetTeam)
 
-	if iTargetCiv in lMongolCivs:
-		if year() < year(1500) and player(iMongols).getNumCities() > 0 and data.isFirstContactMongols(iTargetCiv):
-			data.setFirstContactMongols(iTargetCiv, False)
+	#if iTargetCiv in lMongolCivs:
+	if year() < year(1350) and player(iMongols).getNumCities() > 0 and data.isFirstContactMongols(iTargetCiv):
+		data.setFirstContactMongols(iTargetCiv, False)
+		teamTarget = team(iTargetTeam)
+		
+		mongol_area = plots.rectangle((70, 39), (86, 66))
+		
+		mongol_cities = cities.owner(iMongols)
+		target_cities = mongol_area.cities().owner(iTargetCiv)
+		lTargetCities = [(mongol_cities.closest(target_city), target_city) for target_city in target_cities]
+		if player(iTargetCiv).isMinorCiv(): # Aeons - Unlimited conquerors for barbs/independents
+			lSelectedTargets = sorted(lTargetCities, key=lambda (mongol_city, target_city): distance(mongol_city, target_city))
+		else:
+			lSelectedTargets = sorted(lTargetCities, key=lambda (mongol_city, target_city): distance(mongol_city, target_city))[:8]
+		
+		if not lSelectedTargets:
+			return
+		team(iMongols).declareWar(iTargetTeam, True, WarPlanTypes.WARPLAN_TOTAL)
+		
+		iHandicap = 0
+		if teamtype(iTargetTeam).isHuman():
+			iHandicap = game.getHandicapType() / 2
+		
+		for mongol_city, target_city in lSelectedTargets:
+			# Aeons - Lower distance in-between from 3 to 2 because we don't want the Mongols attacking Byz
+			# Instead of Kiev
+			tSpawn = possibleSpawnsBetween(mongol_city, target_city, iDistance=2).closest(target_city)
+			
+			makeUnits(iMongols, iKeshik, tSpawn, 4 + iHandicap, UnitAITypes.UNITAI_ATTACK_CITY)
+			makeUnits(iMongols, iMangudai, tSpawn, 2 + 2 * iHandicap, UnitAITypes.UNITAI_ATTACK_CITY)
+			makeUnits(iMongols, iTrebuchet, tSpawn, 2 + iHandicap, UnitAITypes.UNITAI_ATTACK_CITY)
+		# Abandon Seljuk volunteers
+		if iTargetCiv == iTurks:
+			for unit in units.owner(iTargetCiv):
+				if unit.isHasPromotion(iVolunteer):
+					unit.kill(False, -1)
+			
+			for city in cities.owner(iTargetCiv):
+				ensureDefenders(iTargetCiv, city, 2)
+			
+		message(iTargetTeam, 'TXT_KEY_MONGOL_HORDE_HUMAN')
+		if team().canContact(iTargetTeam):
+			message(active(), 'TXT_KEY_MONGOL_HORDE', adjective(iTargetTeam))
 
-			teamTarget = team(iTargetTeam)
-			
-			lMongolRegions = [rLevant, rMesopotamia, rAnatolia, rCaucasus, rPersia, rKhorasan, rPonticSteppe, rRuthenia]
-			
-			mongol_cities = cities.owner(iMongols)
-			target_cities = cities.regions(*lMongolRegions).owner(iTargetCiv)
-			lTargetCities = [(mongol_cities.closest(target_city), target_city) for target_city in target_cities]
-			lSelectedTargets = sorted(lTargetCities, key=lambda (mongol_city, target_city): distance(mongol_city, target_city))[:3]
-			
-			if not lSelectedTargets:
-				return
 
-			team(iMongols).declareWar(iTargetTeam, True, WarPlanTypes.WARPLAN_TOTAL)
+def arabiaConquerors(iTargetTeam):
+	iTargetCiv = civ(iTargetTeam)
+
+	#if iTargetCiv in lArabiaCivs:
+	if year() < year(900) and player(iArabia).getNumCities() > 0 and data.isFirstContactArabia(iTargetCiv):
+		data.setFirstContactArabia(iTargetCiv, False)
+		teamTarget = team(iTargetTeam)
+		
+		arabia_area = plots.rectangle((54, 41), (98, 49))
+		
+		arabia_cities = cities.owner(iArabia)
+		target_cities = arabia_area.cities().owner(iTargetCiv)
+		lTargetCities = [(arabia_cities.closest(target_city), target_city) for target_city in target_cities]
+		if player(iTargetCiv).isMinorCiv(): # Aeons - Unlimited conquerors for barbs/independents
+			lSelectedTargets = sorted(lTargetCities, key=lambda (arabia_city, target_city): distance(arabia_city, target_city))
+		else:
+			lSelectedTargets = sorted(lTargetCities, key=lambda (arabia_city, target_city): distance(arabia_city, target_city))[:6]
+		
+		if not lSelectedTargets:
+			return
 			
+		if iTargetCiv == iByzantium or iTargetCiv == iNubia:
+			team(iArabia).declareWar(iTargetTeam, True, WarPlanTypes.WARPLAN_LIMITED)
+		else:
+			team(iArabia).declareWar(iTargetTeam, True, WarPlanTypes.WARPLAN_TOTAL)
+		
+		iHandicap = 1
+		if player(iArabia).isHuman():
 			iHandicap = 0
-			if teamtype(iTargetTeam).isHuman():
-				iHandicap = game.getHandicapType() / 2
+		
+		for arabia_city, target_city in lSelectedTargets:
+			tSpawn = possibleSpawnsBetween(arabia_city, target_city, iDistance=1).closest(target_city)
 			
-			for mongol_city, target_city in lSelectedTargets:
-				tSpawn = possibleSpawnsBetween(mongol_city, target_city, iDistance=3).closest(target_city)
-				
-				makeUnits(iMongols, iKeshik, tSpawn, 2 + iHandicap, UnitAITypes.UNITAI_ATTACK_CITY)
-				makeUnits(iMongols, iMangudai, tSpawn, 1 + 2 * iHandicap, UnitAITypes.UNITAI_ATTACK_CITY)
-				makeUnits(iMongols, iTrebuchet, tSpawn, 1 + iHandicap, UnitAITypes.UNITAI_ATTACK_CITY)
+			units = makeUnits(iArabia, iMobileGuard, tSpawn, 2, UnitAITypes.UNITAI_ATTACK_CITY)
+			units += makeUnits(iArabia, iGhazi, tSpawn, 1, UnitAITypes.UNITAI_ATTACK_CITY)
+			units += makeUnits(iArabia, iMujahid, tSpawn, 1, UnitAITypes.UNITAI_ATTACK_CITY)
+			units += makeUnits(iArabia, iCatapult, tSpawn, 1, UnitAITypes.UNITAI_ATTACK_CITY)
+			if scenario() == i3000BC:	#Extra units to defeat stronger 3000BC Byz and Parthia.
+				units += makeUnits(iArabia, iMobileGuard, tSpawn, iHandicap, UnitAITypes.UNITAI_ATTACK_CITY) # AI only
+				units += makeUnits(iArabia, iGhazi, tSpawn, 1, UnitAITypes.UNITAI_ATTACK_CITY)
+				units += makeUnits(iArabia, iMujahid, tSpawn, 1, UnitAITypes.UNITAI_ATTACK_CITY)
+				units += makeUnits(iArabia, iCatapult, tSpawn, iHandicap, UnitAITypes.UNITAI_ATTACK_CITY) # AI only
+			units.promotion(iVolunteer)
 			
-			if iTargetCiv == iTurks:
-				for unit in units.owner(iTargetCiv):
-					if unit.isHasPromotion(iVolunteer):
-						unit.kill(False, -1)
-				
-				for city in cities.owner(iTargetCiv):
-					ensureDefenders(iTargetCiv, city, 2)
-				
-			message(iTargetTeam, 'TXT_KEY_MONGOL_HORDE_HUMAN')
-			if team().canContact(iTargetTeam):
-				message(active(), 'TXT_KEY_MONGOL_HORDE', adjective(iTargetTeam))
+		message(iTargetTeam, 'TXT_KEY_ARAB_HORDE_HUMAN')
+		if team().canContact(iTargetTeam) and not player(iArabia).isHuman():
+			message(active(), 'TXT_KEY_ARAB_HORDE', adjective(iTargetTeam))
+
+
+def fatimidConquerors(iTargetTeam):
+	iTargetCiv = civ(iTargetTeam)
+
+	#if iTargetCiv in lFatimidCivs:
+	if year() < year(1000) and player(iMisr).getNumCities() > 0 and data.isFirstContactMisr(iTargetCiv):
+		data.setFirstContactMisr(iTargetCiv, False)
+		teamTarget = team(iTargetTeam)
+		
+		fatimid_area = plots.region(rEgypt)
+		
+		fatimid_cities = cities.owner(iMisr)
+		target_cities = fatimid_area.cities().owner(iTargetCiv)
+		lTargetCities = [(fatimid_cities.closest(target_city), target_city) for target_city in target_cities]
+		if player(iTargetCiv).isMinorCiv(): # Aeons - Unlimited conquerors for barbs/independents
+			lSelectedTargets = sorted(lTargetCities, key=lambda (fatimid_city, target_city): distance(fatimid_city, target_city))
+		else: 
+			lSelectedTargets = sorted(lTargetCities, key=lambda (fatimid_city, target_city): distance(fatimid_city, target_city))[:3]
+		
+		if not lSelectedTargets:
+			return
+		
+		team(iMisr).declareWar(iTargetTeam, True, WarPlanTypes.WARPLAN_TOTAL)
+		
+		iHandicap = 0
+		if teamtype(iTargetTeam).isHuman():
+			iHandicap = game.getHandicapType() / 2
+		
+		for fatimid_city, target_city in lSelectedTargets:
+			tSpawn = possibleSpawnsBetween(fatimid_city, target_city, iDistance=1).closest(target_city)
+			
+			makeUnits(iMisr, iMamluk, tSpawn, 3 + iHandicap, UnitAITypes.UNITAI_ATTACK_CITY)
+			makeUnits(iMisr, iFidai, tSpawn, 2 + 2 * iHandicap, UnitAITypes.UNITAI_ATTACK_CITY)
+			makeUnits(iMisr, iTrebuchet, tSpawn, 2 + iHandicap, UnitAITypes.UNITAI_ATTACK_CITY)
+			makeUnits(iMisr, iShiaMissionary, tSpawn, 1)
+		# Abandon Arabian volunteers
+		if iTargetCiv == iArabia:
+			# Tell the player that the volunteers have left them
+			message(iTargetTeam, 'TXT_KEY_FATIMID_HORDE_ARABIA_ABANDON')
+			for unit in units.owner(iTargetCiv):
+				if unit.isHasPromotion(iVolunteer):
+					unit.kill(False, -1)
+			
+		message(iTargetTeam, 'TXT_KEY_FATIMID_HORDE_HUMAN')
+		if team().canContact(iTargetTeam) and not player(iMisr).isHuman():
+			message(active(), 'TXT_KEY_FATIMID_HORDE', adjective(iTargetTeam))
+
+
 
 
 ### TECH ACQUIRED ###
@@ -455,21 +581,19 @@ def mongolConquerors(iTargetTeam):
 @handler("techAcquired")
 def recordExplorationTurn(iTech, iTeam, iPlayer):
 	if iTech == iExploration:
-		data.players[iPlayer].iExplorationTurn = game.getGameTurn()
-
+		data.players[civ(iPlayer)].iExplorationTurn = game.getGameTurn()
 
 @handler("techAcquired")
 def spanishExplorers(iTech, iTeam, iPlayer):
 	if scenarioStart():
 		return
-	
-	if iTech in [iCartography, iGunpowder]:
-		if civ(iPlayer) == iSpain and not player(iPlayer).isHuman():
-			if team(iTeam).isHasTech(iCartography) and team(iTeam).isHasTech(iGunpowder):
+ 	if iTech in [iCartography, iGunpowder]:
+ 		if civ(iPlayer) == iSpain and not player(iPlayer).isHuman():
+ 			if team(iTeam).isHasTech(iCartography) and team(iTeam).isHasTech(iGunpowder):
 				city = cities.owner(iPlayer).coastal().minimum(CyCity.getX)
 				if city:
 					caravel = makeUnit(iPlayer, iCaravel, city, UnitAITypes.UNITAI_EXPLORE_SEA)
-
+ 
 
 @handler("techAcquired")
 def americanWestCoastSettlement(iTech, iTeam, iPlayer):
@@ -522,7 +646,7 @@ def russianSiberianSettlement(iTech, iTeam, iPlayer):
 def earlyTradingCompany(iTech, iTeam, iPlayer):
 	if turn() == scenarioStartTurn():
 		return
-	
+
 	if data.civs[iPlayer].iResurrections > 0:
 		return
 
@@ -545,11 +669,11 @@ def checkEarlyTradingCompany(iPlayer):
 	
 	if team(iPlayer).isAVassal():
 		return
-	
-	lCivs = [iSpain, iPortugal]
+
+	lCivs = [iSpain, iPortugal, iOman]
 	if civ(iPlayer) not in lCivs:
 		return
-	
+
 	lTechs = [iExploration, iFirearms]
 	if not all(team(iPlayer).isHasTech(iTech) for iTech in lTechs):
 		return
@@ -561,7 +685,7 @@ def checkEarlyTradingCompany(iPlayer):
 def lateTradingCompany(iTech, iTeam, iPlayer):
 	if turn() == scenarioStartTurn():
 		return
-	
+
 	if data.civs[iPlayer].iResurrections > 0:
 		return
 
@@ -573,14 +697,12 @@ def lateTradingCompany(iTech, iTeam, iPlayer):
 			if not player(iPlayer).isHuman() and not team(iTeam).isAVassal():
 				handleColonialConquest(iPlayer)
 
-
 @handler("techAcquired")
 def minorNativeStates(iTech):
 	if iTech == iNationalism and game.countKnownTechNumTeams(iNationalism) == 6:
 		for iMinor, minorCities in cities.owner(iNative).divide([iIndependent, iIndependent2]):
 			for city in minorCities:
 				completeCityFlip(city, iMinor, iNative, 100, bFlipUnits=True)
-
 
 ### COLLAPSE ###
 
@@ -597,7 +719,7 @@ def romanRelations(iPlayer):
 	if civ(iPlayer) == iByzantium and player(iRome).isExisting():
 		iRomePlayer = slot(iRome)
 		player(iRomePlayer).AI_changeMemoryCount(iPlayer, MemoryTypes.MEMORY_EVENT_GOOD_TO_US, 4)
-
+		
 
 @handler("birth")
 def stabilizeAustria(iPlayer):
@@ -609,49 +731,6 @@ def stabilizeAustria(iPlayer):
 			
 
 ### FLIP ###
-
-@handler("flip")
-def createArabArmies(iPlayer):
-	if civ(iPlayer) == iArabia:
-		bBaghdad = civ(plot(tBaghdad)) == iArabia
-		bCairo = civ(plot(tCairo)) == iArabia
-
-		lCities = []
-
-		if bBaghdad: lCities.append(tBaghdad)
-		if bCairo: lCities.append(tCairo)
-
-		tCapital = random_entry(lCities)
-
-		if tCapital:
-			if not player(iArabia).isHuman():
-				relocateCapital(iArabia, tCapital)
-				makeUnits(iArabia, iMobileGuard, tCapital, 3)
-				makeUnits(iArabia, iGhazi, tCapital, 2)
-			makeUnits(iArabia, iMobileGuard, tCapital, 2)
-			makeUnits(iArabia, iGhazi, tCapital, 2)
-
-		if bBaghdad:
-			makeUnit(iArabia, iSettler, tBaghdad)
-			makeUnit(iArabia, iWorker, tBaghdad)
-
-		if bCairo:
-			makeUnit(iArabia, iSettler, tCairo)
-			makeUnit(iArabia, iWorker, tCairo)
-			
-		if len(lCities) < 2:
-			makeUnits(iArabia, iSettler, tMecca, 2 - len(lCities))
-			makeUnits(iArabia, iWorker, tMecca, 2 - len(lCities))
-
-		if not player(iArabia).isHuman() and bBaghdad:
-			makeUnits(iArabia, iSpearman, tBaghdad, 2)
-		
-		coastal_city = cities.owner(iArabia).coastal().adjacent_region(rMediterraneanSea).random()
-		if coastal_city:
-			createRoleUnit(iArabia, coastal_city, iEscort, 2)
-			createRoleUnit(iArabia, coastal_city, iExploreSea, 1)
-			createRoleUnit(iArabia, coastal_city, iFerry, 1)
-	
 
 @handler("flip")
 def flipMoorishMaghreb(iPlayer):
@@ -672,6 +751,28 @@ def stabilizeRomeAfterByzantium(iPlayer):
 		if player(iRome).isExisting():
 			data.players[iRome].iNumPreviousCities = player(iRome).getNumCities()
 
+# Aeons
+@handler("flip")
+def stabilizeFranceAfterHRE(iPlayer):
+	if civ(iPlayer) == iHolyRome:
+		if player(iFrance).isExisting():
+			data.players[iFrance].iNumPreviousCities = player(iFrance).getNumCities()
+		
+
+# Aeons
+@handler("flip")
+def stabilizeMughalsAfterIran(iPlayer):
+	if civ(iPlayer) == iIran:
+		if player(iTimurids).isExisting():
+			data.players[iTimurids].iNumPreviousCities = player(iTimurids).getNumCities()
+
+# Aeons - Not sure how much this'll help but whatever
+@handler("flip")
+def stabilizeGhoridsAfterSeljuks(iPlayer):
+	if civ(iPlayer) == iTurks:
+		if player(iGhorids).isExisting():
+			data.players[iGhorids].iNumPreviousCities = player(iGhorids).getNumCities()
+
 
 @handler("flip")
 def westernMongolExplorers(iPlayer):
@@ -679,7 +780,7 @@ def westernMongolExplorers(iPlayer):
 		if not player(iPlayer).isHuman():
 			for plot in plots.region(rPonticSteppe).notowned().where(lambda p: not plots.surrounding(p).owned()).sample(3):
 				makeUnit(iPlayer, iMangudai, plot, UnitAITypes.UNITAI_EXPLORE)
-				
+				makeUnit(iPlayer, iMangudai, plot, UnitAITypes.UNITAI_EXPLORE) # Aeons - Add another Mangudai to make Tatars more likely
 
 @handler("flip")
 def removeBarbariansForMongols(iPlayer):
@@ -687,10 +788,9 @@ def removeBarbariansForMongols(iPlayer):
 		lRegions = [rManchuria, rMongolia, rSiberia]
 		if not player(iPlayer).isHuman():
 			lRegions += [rCentralAsianSteppe, rUrals, rPonticSteppe]
-		
+
 		for unit in plots.regions(*lRegions).notowned().units().owner(iBarbarian):
 			unit.kill(False, -1)
-
 
 @handler("flip")
 def removeWesternMongolExpansion(iPlayer):
@@ -700,8 +800,8 @@ def removeWesternMongolExpansion(iPlayer):
 			if iExpansionPlayer >= 0 and civ(iExpansionPlayer) == iMongols:
 				plot.resetExpansion()
 
-
 ### PERIOD CHANGE ###
+
 
 @handler("playerPeriodChange")
 def relocateCelts(iPlayer, iPeriod):
@@ -752,7 +852,7 @@ def relocateCapitals(iPlayer, city):
 
 def buildCapitalInfrastructure(iPlayer, city):
 	if iPlayer in dCapitalInfrastructure:
-		if at(city, plots.capital(iPlayer)) and year() <= year(dBirth[iPlayer]) + turns(5):
+		if at(city, plots.capital(iPlayer)) and year() <= year(dBirth[civ(iPlayer)]) + turns(5):
 			iPopulation, lBuildings, lReligiousBuildings, iCulture = dCapitalInfrastructure[iPlayer]
 			
 			if city.getPopulation() < iPopulation:
@@ -765,36 +865,35 @@ def buildCapitalInfrastructure(iPlayer, city):
 			if iStateReligion >= 0:
 				for religiosBuilding in lReligiousBuildings:
 					city.setHasRealBuilding(religiosBuilding(iStateReligion), True)
-			
+
 			if iCulture > 0:
 				city.changeCulture(iPlayer, scale(iCulture), True)
 				city.doPlotCulture(True, iPlayer, scale(iCulture), False)
-					
-					
-def giveEarlyColonists(iCiv):
-	pPlayer = player(iCiv)
-	
-	if pPlayer.isExisting() and not pPlayer.isHuman():
-		capital = pPlayer.getCapitalCity()
 
-		if iCiv == iRome:
-			city = cities.owner(iCiv).region(rIberia).random()
-			if city:
-				capital = city
-			
-		if capital:
-			tSeaPlot = findSeaPlots(capital, 1, iCiv)
+					
+	
+
+def giveEarlyColonists(iCiv, overridePlot = None):
+	pPlayer = player(iCiv)
+	pPlot = overridePlot
+	if pPlayer.isExisting() and not pPlayer.isHuman():
+		message(active(), 'TXT_KEY_EVENT_EARLY_COLONIZERS', adjective(pPlayer))
+		if pPlot is None:
+			pPlot = pPlayer.getCapitalCity()
+		if pPlot:
+			tSeaPlot = findSeaPlots(pPlot, 1, iCiv)
 			if tSeaPlot:
 				makeUnit(iCiv, iGalley, tSeaPlot, UnitAITypes.UNITAI_SETTLER_SEA)
-				makeUnit(iCiv, iSettler, tSeaPlot)
-				makeUnit(iCiv, iArcher, tSeaPlot)
+				makeUnit(iCiv, iGalley, tSeaPlot, UnitAITypes.UNITAI_SETTLER_SEA)
+				makeUnit(iCiv, iSettler, tSeaPlot, UnitAITypes.UNITAI_SETTLE)
+				createRoleUnit(iCiv, tSeaPlot, iDefend, 2)
 
 
 def giveColonists(iPlayer):
 	pPlayer = player(iPlayer)
 	pTeam = team(iPlayer)
 	iCiv = civ(iPlayer)
-	
+
 	iMiddleAtlantic = 45
 	
 	if pPlayer.isExisting() and not pPlayer.isHuman() and iCiv in dMaxColonists:
