@@ -146,7 +146,7 @@
 				<FeatureStruct>
 					<FeatureType>FEATURE_RAINFOREST</FeatureType>
 					<PrereqTech>TECH_ALLOYS</PrereqTech>
-					<iTime>600</iTime>
+					<iTime>800</iTime>
 					<iProduction>0</iProduction>
 					<bRemove>0</bRemove>
 				</FeatureStruct>
@@ -264,7 +264,7 @@
 				<FeatureStruct>
 					<FeatureType>FEATURE_RAINFOREST</FeatureType>
 					<PrereqTech>TECH_ALLOYS</PrereqTech>
-					<iTime>600</iTime>
+					<iTime>800</iTime>
 					<iProduction>0</iProduction>
 					<bRemove>0</bRemove>
 				</FeatureStruct>
@@ -382,7 +382,7 @@
 		<BuildInfo>
 			<Type>BUILD_LUMBERMILL</Type>
 			<Description>TXT_KEY_BUILD_LUMBERMILL</Description>
-			<PrereqTech>TECH_STEEL</PrereqTech>
+			<PrereqTech>TECH_SPRING_STEEL</PrereqTech>
 			<iTime>800</iTime>
 			<ImprovementType>IMPROVEMENT_LUMBERMILL</ImprovementType>
 			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
@@ -456,7 +456,7 @@
 		<BuildInfo>
 			<Type>BUILD_WATERMILL</Type>
 			<Description>TXT_KEY_BUILD_WATERMILL</Description>
-			<PrereqTech>TECH_MACHINERY</PrereqTech>
+			<PrereqTech>TECH_SPRING_STEEL</PrereqTech>
 			<iTime>800</iTime>
 			<ImprovementType>IMPROVEMENT_WATERMILL</ImprovementType>
 			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
@@ -522,14 +522,14 @@
 				<FeatureStruct>
 					<FeatureType>FEATURE_JUNGLE</FeatureType>
 					<PrereqTech>TECH_CROP_ROTATION</PrereqTech>
-					<iTime>600</iTime>
+					<iTime>800</iTime>
 					<iProduction>0</iProduction>
 					<bRemove>0</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_RAINFOREST</FeatureType>
 					<PrereqTech>TECH_ALLOYS</PrereqTech>
-					<iTime>600</iTime>
+					<iTime>800</iTime>
 					<iProduction>0</iProduction>
 					<bRemove>0</bRemove>
 				</FeatureStruct>
@@ -612,7 +612,7 @@
 				<FeatureStruct>
 					<FeatureType>FEATURE_RAINFOREST</FeatureType>
 					<PrereqTech>TECH_ALLOYS</PrereqTech>
-					<iTime>600</iTime>
+					<iTime>800</iTime>
 					<iProduction>0</iProduction>
 					<bRemove>0</bRemove>
 				</FeatureStruct>
@@ -663,7 +663,7 @@
 				<FeatureStruct>
 					<FeatureType>FEATURE_RAINFOREST</FeatureType>
 					<PrereqTech>TECH_ALLOYS</PrereqTech>
-					<iTime>600</iTime>
+					<iTime>800</iTime>
 					<iProduction>0</iProduction>
 					<bRemove>0</bRemove>
 				</FeatureStruct>
@@ -791,14 +791,14 @@
 				<FeatureStruct>
 					<FeatureType>FEATURE_JUNGLE</FeatureType>
 					<PrereqTech>TECH_CROP_ROTATION</PrereqTech>
-					<iTime>600</iTime>
+					<iTime>800</iTime>
 					<iProduction>0</iProduction>
 					<bRemove>0</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_RAINFOREST</FeatureType>
 					<PrereqTech>TECH_ALLOYS</PrereqTech>
-					<iTime>600</iTime>
+					<iTime>800</iTime>
 					<iProduction>0</iProduction>
 					<bRemove>0</bRemove>
 				</FeatureStruct>
@@ -856,7 +856,7 @@
 				<FeatureStruct>
 					<FeatureType>FEATURE_RAINFOREST</FeatureType>
 					<PrereqTech>TECH_ALLOYS</PrereqTech>
-					<iTime>600</iTime>
+					<iTime>800</iTime>
 					<iProduction>0</iProduction>
 					<bRemove>0</bRemove>
 				</FeatureStruct>
@@ -914,7 +914,7 @@
 				<FeatureStruct>
 					<FeatureType>FEATURE_RAINFOREST</FeatureType>
 					<PrereqTech>TECH_ALLOYS</PrereqTech>
-					<iTime>600</iTime>
+					<iTime>800</iTime>
 					<iProduction>0</iProduction>
 					<bRemove>0</bRemove>
 				</FeatureStruct>
@@ -973,7 +973,7 @@
 				<FeatureStruct>
 					<FeatureType>FEATURE_JUNGLE</FeatureType>
 					<PrereqTech>TECH_CROP_ROTATION</PrereqTech>
-					<iTime>600</iTime>
+					<iTime>800</iTime>
 					<iProduction>0</iProduction>
 					<bRemove>0</bRemove>
 				</FeatureStruct>
@@ -1177,7 +1177,7 @@
 				<FeatureStruct>
 					<FeatureType>FEATURE_TAIGA</FeatureType>
 					<PrereqTech>TECH_ECOLOGY</PrereqTech>
-					<iTime>600</iTime>
+					<iTime>800</iTime>
 					<iProduction>40</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
@@ -1199,7 +1199,7 @@
 				<FeatureStruct>
 					<FeatureType>FEATURE_JUNGLE</FeatureType>
 					<PrereqTech>TECH_MICROBIOLOGY</PrereqTech>
-					<iTime>600</iTime>
+					<iTime>800</iTime>
 					<iProduction>40</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
@@ -1221,7 +1221,7 @@
 				<FeatureStruct>
 					<FeatureType>FEATURE_RAINFOREST</FeatureType>
 					<PrereqTech>TECH_MICROBIOLOGY</PrereqTech>
-					<iTime>600</iTime>
+					<iTime>800</iTime>
 					<iProduction>40</iProduction>
 					<bRemove>1</bRemove>
 				</FeatureStruct>
@@ -1235,27 +1235,27 @@
 			<bGraphicalOnly>1</bGraphicalOnly>
 		</BuildInfo>
 		<BuildInfo>
-			<Type>BUILD_DEFORESTATION_SAVANNA</Type>
-			<Description>TXT_KEY_BUILD_REMOVE_SAVANNA</Description>
-			<iTime>0</iTime>
-			<EntityEvent>ENTITY_EVENT_CHOP</EntityEvent>
-			<FeatureStructs>
-				<FeatureStruct>
-					<FeatureType>FEATURE_SAVANNA</FeatureType>
-					<PrereqTech>TECH_ALLOYS</PrereqTech>
-					<iTime>200</iTime>
-					<iProduction>30</iProduction>
-					<bRemove>1</bRemove>
-				</FeatureStruct>
-			</FeatureStructs>
-			<HotKey>KB_C</HotKey>
-			<bAltDown>1</bAltDown>
-			<bShiftDown>0</bShiftDown>
-			<bCtrlDown>0</bCtrlDown>
-			<iHotKeyPriority>0</iHotKeyPriority>
-			<Button>,Art/Interface/Buttons/Builds/BuildChopDown.dds,Art/Interface/Buttons/Actions_Builds_LeaderHeads_Specialists_Atlas.dds,7,8</Button>
-			<bGraphicalOnly>1</bGraphicalOnly>
-		</BuildInfo>
+ 			<Type>BUILD_DEFORESTATION_SAVANNA</Type>
+ 			<Description>TXT_KEY_BUILD_REMOVE_SAVANNA</Description>
+ 			<iTime>0</iTime>
+ 			<EntityEvent>ENTITY_EVENT_CHOP</EntityEvent>
+ 			<FeatureStructs>
+ 				<FeatureStruct>
+ 					<FeatureType>FEATURE_SAVANNA</FeatureType>
+ 					<PrereqTech>TECH_ALLOYS</PrereqTech>
+ 					<iTime>200</iTime>
+ 					<iProduction>30</iProduction>
+ 					<bRemove>1</bRemove>
+ 				</FeatureStruct>
+ 			</FeatureStructs>
+ 			<HotKey>KB_C</HotKey>
+ 			<bAltDown>1</bAltDown>
+ 			<bShiftDown>0</bShiftDown>
+ 			<bCtrlDown>0</bCtrlDown>
+ 			<iHotKeyPriority>0</iHotKeyPriority>
+ 			<Button>,Art/Interface/Buttons/Builds/BuildChopDown.dds,Art/Interface/Buttons/Actions_Builds_LeaderHeads_Specialists_Atlas.dds,7,8</Button>
+ 			<bGraphicalOnly>1</bGraphicalOnly>
+ 		</BuildInfo>
 		<BuildInfo>
 			<Type>BUILD_FARM_DEFORESTATION</Type>
 			<Description>TXT_KEY_BUILD_FARM</Description>
@@ -1399,7 +1399,7 @@
 				<FeatureStruct>
 					<FeatureType>FEATURE_RAINFOREST</FeatureType>
 					<PrereqTech>TECH_ALLOYS</PrereqTech>
-					<iTime>600</iTime>
+					<iTime>800</iTime>
 					<iProduction>0</iProduction>
 					<bRemove>0</bRemove>
 				</FeatureStruct>
@@ -1614,14 +1614,14 @@
 				<FeatureStruct>
 					<FeatureType>FEATURE_JUNGLE</FeatureType>
 					<PrereqTech>TECH_CROP_ROTATION</PrereqTech>
-					<iTime>600</iTime>
+					<iTime>800</iTime>
 					<iProduction>40</iProduction>
 					<bRemove>0</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_RAINFOREST</FeatureType>
 					<PrereqTech>TECH_ALLOYS</PrereqTech>
-					<iTime>600</iTime>
+					<iTime>800</iTime>
 					<iProduction>0</iProduction>
 					<bRemove>0</bRemove>
 				</FeatureStruct>
@@ -1673,7 +1673,7 @@
 				<FeatureStruct>
 					<FeatureType>FEATURE_RAINFOREST</FeatureType>
 					<PrereqTech>TECH_ALLOYS</PrereqTech>
-					<iTime>600</iTime>
+					<iTime>800</iTime>
 					<iProduction>0</iProduction>
 					<bRemove>0</bRemove>
 				</FeatureStruct>
@@ -1826,16 +1826,16 @@
 				<FeatureStruct>
 					<FeatureType>FEATURE_JUNGLE</FeatureType>
 					<PrereqTech>TECH_CROP_ROTATION</PrereqTech>
-					<iTime>600</iTime>
+					<iTime>800</iTime>
 					<iProduction>40</iProduction>
 					<bRemove>0</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_RAINFOREST</FeatureType>
-					<PrereqTech>TECH_ALLOYS</PrereqTech>
-					<iTime>600</iTime>
+					<PrereqTech>TECH_MICROBIOLOGY</PrereqTech>
+					<iTime>800</iTime>
 					<iProduction>40</iProduction>
-					<bRemove>0</bRemove>
+					<bRemove>1</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_FOREST</FeatureType>
@@ -1885,7 +1885,7 @@
 				<FeatureStruct>
 					<FeatureType>FEATURE_RAINFOREST</FeatureType>
 					<PrereqTech>TECH_ALLOYS</PrereqTech>
-					<iTime>600</iTime>
+					<iTime>800</iTime>
 					<iProduction>0</iProduction>
 					<bRemove>0</bRemove>
 				</FeatureStruct>

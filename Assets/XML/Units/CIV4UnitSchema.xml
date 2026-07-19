@@ -369,6 +369,9 @@
 	<ElementType name="iHillsDefense" content="textOnly" dt:type="int"/>
 	<ElementType name="iPlainsAttack" content="textOnly" dt:type="int"/>
 	<ElementType name="iPlainsDefense" content="textOnly" dt:type="int"/>
+	<ElementType name="iHeathenStrength" content="textOnly" dt:type="int"/>
+	<ElementType name="iUnityStrength" content="textOnly" dt:type="int"/>
+	<ElementType name="iUnityRequired" content="textOnly" dt:type="int"/>
 	<ElementType name="iKamikazePercent" content="textOnly" dt:type="int"/>
 	<ElementType name="iRevoltProtection" content="textOnly" dt:type="int"/>
 	<ElementType name="iCollateralDamageProtection" content="textOnly" dt:type="int"/>
@@ -438,6 +441,13 @@
 	</ElementType>
 	<ElementType name="UnitClassDefenseMods" content="eltOnly">
 		<element type="UnitClassDefenseMod" minOccurs="0" maxOccurs="*"/>
+	</ElementType>
+	<ElementType name="UnityClass" content="eltOnly">
+		<element type="UnitClassType"/>
+		<element type="iUnitClassMod"/>
+	</ElementType>
+	<ElementType name="UnityClasses" content="eltOnly">
+		<element type="UnityClass" minOccurs="0" maxOccurs="*"/>
 	</ElementType>
 	<ElementType name="UnitCombatType" content="textOnly"/>
 	<ElementType name="iUnitCombatMod" content="textOnly" dt:type="int"/>
@@ -652,6 +662,9 @@
 		<element type="iHillsDefense" minOccurs="0"/>
 		<element type="iPlainsAttack" minOccurs="0"/>
 		<element type="iPlainsDefense" minOccurs="0"/>
+		<element type="iHeathenStrength" minOccurs="0"/>
+		<element type="iUnityStrength" minOccurs="0"/>
+		<element type="iUnityRequired" minOccurs="0"/>
 		<element type="TerrainNatives" minOccurs="0"/>
 		<element type="FeatureNatives" minOccurs="0"/>
 		<element type="TerrainAttacks" minOccurs="0"/>
@@ -660,6 +673,7 @@
 		<element type="FeatureDefenses" minOccurs="0"/>
 		<element type="UnitClassAttackMods" minOccurs="0"/>
 		<element type="UnitClassDefenseMods" minOccurs="0"/>
+		<element type="UnityClasses" minOccurs="0"/>
 		<element type="UnitCombatMods" minOccurs="0"/>
 		<element type="UnitCombatCollateralImmunes" minOccurs="0"/>
 		<element type="DomainMods" minOccurs="0"/>
