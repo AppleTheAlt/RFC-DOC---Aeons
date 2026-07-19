@@ -133,7 +133,7 @@
 			<iDisappearance>0</iDisappearance>
 			<iGrowth>0</iGrowth>
 			<iTurnDamage>0</iTurnDamage>
-			<iGlobalWarmingDefense>2</iGlobalWarmingDefense>
+			<iGlobalWarmingDefense>0</iGlobalWarmingDefense>
 			<bNoCoast>0</bNoCoast>
 			<bNoRiver>0</bNoRiver>
 			<bNoAdjacent>0</bNoAdjacent>
@@ -248,7 +248,7 @@
 			<iDisappearance>0</iDisappearance>
 			<iGrowth>0</iGrowth>
 			<iTurnDamage>0</iTurnDamage>
-			<iGlobalWarmingDefense>0</iGlobalWarmingDefense>
+			<iGlobalWarmingDefense>3</iGlobalWarmingDefense>
 			<bMakesPassable>1</bMakesPassable>
 			<bNoCoast>1</bNoCoast>
 			<bNoRiver>1</bNoRiver>

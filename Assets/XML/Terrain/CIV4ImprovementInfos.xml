@@ -1741,6 +1741,17 @@
 						<iYieldChange>2</iYieldChange>
 					</YieldChanges>
 				</BonusTypeStruct>
+				<BonusTypeStruct>
+					<BonusType>BONUS_FERTILIZER</BonusType>
+					<bBonusMakesValid>1</bBonusMakesValid>
+					<bBonusTrade>1</bBonusTrade>
+					<iDiscoverRand>0</iDiscoverRand>
+					<YieldChanges>
+						<iYieldChange>1</iYieldChange>
+						<iYieldChange>-1</iYieldChange>
+						<iYieldChange>3</iYieldChange>
+					</YieldChanges>
+				</BonusTypeStruct>
 			</BonusTypeStructs>
 			<ImprovementPillage/>
 			<ImprovementUpgrade/>
@@ -2061,7 +2072,7 @@
 			<iAirBombDefense>10</iAirBombDefense>
 			<iDefenseModifier>0</iDefenseModifier>
 			<iHappinessPercent>0</iHappinessPercent>
-			<iPillageGold>20</iPillageGold>
+			<iPillageGold>10</iPillageGold>
 			<bOutsideBorders>0</bOutsideBorders>
 			<TerrainMakesValids/>
 			<FeatureMakesValids/>
@@ -2247,7 +2258,7 @@
 			<iAirBombDefense>5</iAirBombDefense>
 			<iDefenseModifier>0</iDefenseModifier>
 			<iHappinessPercent>0</iHappinessPercent>
-			<iPillageGold>15</iPillageGold>
+			<iPillageGold>10</iPillageGold>
 			<bOutsideBorders>0</bOutsideBorders>
 			<TerrainMakesValids>
 				<TerrainMakesValid>

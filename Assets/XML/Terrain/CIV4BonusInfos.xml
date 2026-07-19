@@ -1671,6 +1671,53 @@
 			<bUseLSystem>1</bUseLSystem>
 		</BonusInfo>
 		<BonusInfo>
+			<Type>BONUS_FERTILIZER</Type>
+			<Description>TXT_KEY_BONUS_FERTILIZER</Description>
+			<Civilopedia>TXT_KEY_BONUS_FERTILIZER_PEDIA</Civilopedia>
+			<BonusClassType>BONUSCLASS_GENERAL</BonusClassType>
+			<ArtDefineTag>ART_DEF_BONUS_FERTILIZER</ArtDefineTag>
+			<TechReveal>TECH_HYDRAULICS</TechReveal>
+			<TechCityTrade>TECH_MINING</TechCityTrade>
+			<YieldChanges>
+				<iYieldChange>1</iYieldChange>
+			</YieldChanges>
+			<iHealth>2</iHealth>
+			<iAffectedCities>2</iAffectedCities>
+			<iPlacementOrder>5</iPlacementOrder>
+			<iConstAppearance>50</iConstAppearance>
+			<iMinAreaSize>3</iMinAreaSize>
+			<iMinLatitude>20</iMinLatitude>
+			<iMaxLatitude>50</iMaxLatitude>
+			<Rands>
+				<iRandApp1>25</iRandApp1>
+				<iRandApp2>25</iRandApp2>
+				<iRandApp3>0</iRandApp3>
+				<iRandApp4>0</iRandApp4>
+			</Rands>
+			<iPlayer>100</iPlayer>
+			<iGroupRange>1</iGroupRange>
+			<iGroupRand>50</iGroupRand>
+			<bArea>1</bArea>
+			<bHills>1</bHills>
+			<bFlatlands>1</bFlatlands>
+			<bNormalize>1</bNormalize>
+			<TerrainBooleans>
+				<TerrainBoolean>
+					<TerrainType>TERRAIN_PLAINS</TerrainType>
+					<bTerrain>1</bTerrain>
+				</TerrainBoolean>
+				<TerrainBoolean>
+					<TerrainType>TERRAIN_DESERT</TerrainType>
+					<bTerrain>1</bTerrain>
+				</TerrainBoolean>
+				<TerrainBoolean>
+					<TerrainType>TERRAIN_SEMIDESERT</TerrainType>
+					<bTerrain>1</bTerrain>
+				</TerrainBoolean>
+			</TerrainBooleans>
+			<bUseLSystem>1</bUseLSystem>
+		</BonusInfo>
+		<BonusInfo>
 			<Type>BONUS_OPIUM</Type>
 			<Description>TXT_KEY_BONUS_OPIUM</Description>
 			<Civilopedia>TXT_KEY_BONUS_OPIUM_PEDIA</Civilopedia>
