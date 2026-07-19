@@ -95,6 +95,10 @@
 			<Description>UNITAI_SPY</Description>
 		</UnitAIInfo>
 		<UnitAIInfo>
+			<Type>UNITAI_TREKKER</Type>
+			<Description>UNITAI_TREKKER</Description>
+		</UnitAIInfo>
+		<UnitAIInfo>
 			<Type>UNITAI_ICBM</Type>
 			<Description>UNITAI_ICBM</Description>
 		</UnitAIInfo>
