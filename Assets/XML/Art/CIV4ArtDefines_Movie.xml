@@ -227,6 +227,62 @@
 			<Path>Art/Movies/Wonders/pisa.bik</Path>
 		</MovieArtInfo>
 		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_KNOSSOS_PALACE</Type>
+			<Path>Art/Movies/Wonders/KnossosPalace.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_ROSE_GARDEN_PALACE</Type>
+			<Path>Art/Movies/Wonders/RoseGardenPalace.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_AL_AZHAR</Type>
+			<Path>Art/Movies/Wonders/alazhar.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_AIT_BENHADDOU</Type>
+			<Path>Art/Movies/Wonders/Benhaddou.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_ALHAMBRA</Type>
+			<Path>Art/Movies/Wonders/alhambra.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_NAREKAVANK</Type>
+			<Path>Art/Movies/Wonders/Narekavank.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_IYANUWO</Type>
+			<Path>Art/Movies/Wonders/BeninWalls.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_OUADANE_KSOUR</Type>
+			<Path>Art/Movies/Wonders/OuadaneKsour.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_PROPHETS_MOSQUE</Type>
+			<Path>Art/Movies/Wonders/ProphetsMosque.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_GREAT_ENCLOSURE</Type>
+			<Path>Art/Movies/Wonders/GreatEnclosure.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_HARAR_GATES</Type>
+			<Path>Art/Movies/Wonders/HararGates.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_ROYAL_KRAAL</Type>
+			<Path>Art/Movies/Wonders/RoyalKraal.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_STONETOWN_FORT</Type>
+			<Path>Art/Movies/Wonders/StonetownFort.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_KULUMBIMBI</Type>
+			<Path>Art/Movies/Wonders/Kulumbimbi.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
 			<Type>ART_DEF_MOVIE_GREAT_COTHON</Type>
 			<Path>Art/Movies/Wonders/Carthage_Port.bik</Path>
 		</MovieArtInfo>
@@ -700,8 +756,48 @@
 			<Path>Art/Movies/Wonders/Great_Adobe_Mosque.bik</Path>
 		</MovieArtInfo>
 		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_TOMB_OF_ASKIA</Type>
+			<Path>Art/Movies/Wonders/TombOfAskia.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
 			<Type>ART_DEF_MOVIE_PANTHEON</Type>
 			<Path>Art/Movies/Wonders/Pantheon.bik</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_TEMPLE_OF_AMUN</Type>
+			<Path>Art/Movies/Wonders/TempleOfAmun.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_NURI</Type>
+			<Path>Art/Movies/Wonders/Nuri.dds</Path>
+		</MovieArtInfo>
+			<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_ETEMENAKI</Type>
+			<Path>Art/Movies/Wonders/babel.bik</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_ABU_SIMBEL</Type>
+			<Path>Art/Movies/Wonders/AbuSimbel.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_TRAJANS_COLUMN</Type>
+			<Path>Art/Movies/Wonders/trajancolumn.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_CIRCUS_MAXIMUS</Type>
+			<Path>Art/Movies/Wonders/CircusMaximus.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_KASUBI_TOMBS</Type>
+			<Path>Art/Movies/Wonders/KasubiTombs.dds</Path>
+		</MovieArtInfo>
+		<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_ROYAL_ROVA</Type>
+			<Path>Art/Movies/Wonders/RoyalRova.dds</Path>
+		</MovieArtInfo>
+			<MovieArtInfo>
+			<Type>ART_DEF_MOVIE_FRONTIER</Type>
+			<Path>Art/Movies/Wonders/Frontier.dds</Path>
 		</MovieArtInfo>
 	</MovieArtInfos>
 </Civ4ArtDefines>

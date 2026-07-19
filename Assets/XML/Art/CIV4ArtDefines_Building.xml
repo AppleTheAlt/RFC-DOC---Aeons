@@ -57,6 +57,26 @@
 			<Button>,Art/Interface/Buttons/Buildings/Wall.dds,Art/Interface/Buttons/Warlords_Atlas_1.dds,8,3</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
+			<Type>ART_DEF_BUILDING_YEMENI_TOWER_HOUSE</Type>
+			<LSystem>LSYSTEM_1x1</LSystem>
+			<bAnimated>0</bAnimated>
+			<fScale>1.0</fScale>
+			<fInterfaceScale>0.42</fInterfaceScale>
+			<NIF>Art/Structures/Buildings/tower house/tower_house.nif</NIF>
+			<KFM/>
+			<Button>,Art/Interface/Buttons/Buildings/tower_house.dds,Art/Interface/Buttons/soi_buildings.dds,5,7</Button>
+		</BuildingArtInfo>
+		<BuildingArtInfo>
+			<Type>ART_DEF_BUILDING_JUDEAN_KOTEL</Type>
+			<LSystem>LSYSTEM_HIGH_WALLS</LSystem>
+			<bAnimated>0</bAnimated>
+			<fScale>1.0</fScale>
+			<fInterfaceScale>0.4</fInterfaceScale>
+			<NIF>Art/Structures/Buildings/Kotel/Tall_Wall_Civilopedia.nif</NIF>
+			<KFM/>
+			<Button>,Art/Structures/Buildings/Kotel/Kotel.dds,Art/Structures/Buildings/Kotel/Israel_Atlas.dds,3,1</Button>
+		</BuildingArtInfo>
+		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_CASTLE</Type>
 			<LSystem>LSYSTEM_3x3</LSystem>
 			<bAnimated>0</bAnimated>
@@ -77,6 +97,27 @@
 			<Button>,Art/Interface/Buttons/Buildings/Castle.dds,Art/Interface/Buttons/Warlords_Atlas_1.dds,6,3</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
+			<Type>ART_DEF_BUILDING_GEORGIAN_TSIKHE</Type>
+			<LSystem>LSYSTEM_3x3</LSystem>
+			<bAnimated>0</bAnimated>
+			<fScale>1.38</fScale>
+			<fInterfaceScale>0.5</fInterfaceScale>
+			<NIF>Art/Structures/Buildings/Spanish_Citadel/Spanish_Citadel.nif</NIF>
+			<KFM/>
+			<Button>Art/Interface/Buttons/Buildings/Tsikhe.dds</Button>
+		</BuildingArtInfo>
+		<BuildingArtInfo>
+			<Type>ART_DEF_BUILDING_TUNISIAN_KASBAH</Type>
+			<LSystem>LSYSTEM_3x3</LSystem>
+			<bAnimated>0</bAnimated>
+			<fScale>1.38</fScale>
+			<fInterfaceScale>0.5</fInterfaceScale>
+			<NIF>Art/Structures/Buildings/Spanish_Citadel/Spanish_Citadel.nif</NIF>
+			<KFM/>
+			<Button>Art/Interface/Buttons/Buildings/Kasbah.dds</Button>
+		</BuildingArtInfo>
+
+		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_BARRACKS</Type>
 			<LSystem>LSYSTEM_2x2</LSystem>
 			<bAnimated>0</bAnimated>
@@ -85,6 +126,16 @@
 			<NIF>Art/Structures/Buildings/Barracks/Barracks.nif</NIF>
 			<KFM/>
 			<Button>,Art/Interface/Buttons/Buildings/Barracks.dds,Art/Interface/Buttons/Buildings_Atlas.dds,6,1</Button>
+		</BuildingArtInfo>
+		<BuildingArtInfo>
+			<Type>ART_DEF_BUILDING_SPARTAN_AGOGE_BARRACKS</Type>
+			<LSystem>LSYSTEM_2x2</LSystem>
+			<bAnimated>0</bAnimated>
+			<fScale>1.4</fScale>
+			<fInterfaceScale>1.4</fInterfaceScale>
+			<NIF>Art/Structures/Buildings/Forts American/fort_american_1.nif</NIF>
+			<KFM/>
+			<Button>Art/Interface/Buttons/Buildings/Agoge_Barracks.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_ZULU_IKHANDA</Type>
@@ -106,6 +157,17 @@
 			<KFM/>
 			<Button>,Art/Interface/Buttons/Buildings/Barracks.dds,Art/Interface/Buttons/Warlords_Atlas_1.dds,7,1</Button>
 		</BuildingArtInfo>
+		<BuildingArtInfo>
+			<Type>ART_DEF_BUILDING_HUNNIC_SILK_TENT</Type>
+			<LSystem>LSYSTEM_2x2</LSystem>
+			<bAnimated>0</bAnimated>
+			<fScale>0.88</fScale>
+			<fInterfaceScale>0.75</fInterfaceScale>
+			<NIF>Art/Structures/Buildings/Yert_ger/Yurt_Ger.nif</NIF>
+			<KFM/>
+			<Button>Art/Interface/Buttons/Buildings/SilkTent.dds</Button>
+		</BuildingArtInfo>
+
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_MONGOLIAN_ORTEGE</Type>
 			<LSystem>LSYSTEM_2x2</LSystem>
@@ -145,6 +207,16 @@
 			<NIF>Art/Structures/Buildings/Granary/Granary.nif</NIF>
 			<KFM/>
 			<Button>,Art/Interface/Buttons/Buildings/Granary.dds,Art/Interface/Buttons/Buildings_Atlas.dds,1,3</Button>
+		</BuildingArtInfo>
+		<BuildingArtInfo>
+			<Type>ART_DEF_BUILDING_VANDAL_BAKERY</Type>
+			<LSystem>LSYSTEM_1x1</LSystem>
+			<bAnimated>0</bAnimated>
+			<fScale>1.26</fScale>
+			<fInterfaceScale>0.5</fInterfaceScale>
+			<NIF>Art/Structures/Buildings/Granary/Granary.nif</NIF>
+			<KFM/>
+			<Button>Art/Interface/Buttons/Buildings/Bakery.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_INCAN_TAMBO</Type>
@@ -218,6 +290,26 @@
 			<Button>,Art/Interface/Buttons/Buildings/Lighthouse.dds,Art/Interface/Buttons/Buildings_Atlas.dds,6,4</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
+			<Type>ART_DEF_BUILDING_OMANI_COASTAL_OUTPOST</Type>
+			<LSystem>LSYSTEM_HARBOR</LSystem>
+			<bAnimated>0</bAnimated>
+			<fScale>0.9</fScale>
+			<fInterfaceScale>1.5</fInterfaceScale>
+			<NIF>Art/Structures/Buildings/Coastal Outpost/Harbor.nif</NIF>
+			<KFM/>
+			<Button>,Art/Interface/Buttons/Buildings/omani_port.dds,Art/Interface/Buttons/soi_buildings.dds,3,6</Button>
+		</BuildingArtInfo>
+		<BuildingArtInfo>
+			<Type>ART_DEF_BUILDING_ELAMITE_HIGHLAND_OUTPOST</Type>
+			<LSystem>LSYSTEM_4x2</LSystem>
+			<bAnimated>0</bAnimated>
+			<fScale>0.5</fScale>
+			<fInterfaceScale>1.0</fInterfaceScale>
+			<NIF>Art/Structures/Buildings/Souk/arab_col.nif</NIF>
+			<KFM/>
+			<Button>Art/Interface/Buttons/Buildings/Highland_Outpost.dds</Button>
+		</BuildingArtInfo>
+		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_NORSE_TRADING_POST</Type>
 			<LSystem>LSYSTEM_COAST</LSystem>
 			<bAnimated>0</bAnimated>
@@ -236,16 +328,6 @@
 			<NIF>Art/Structures/Buildings/Harbor/Harbor.nif</NIF>
 			<KFM/>
 			<Button>,Art/Interface/Buttons/Buildings/Harbor.dds,Art/Interface/Buttons/Buildings_Atlas.dds,3,11</Button>
-		</BuildingArtInfo>
-		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_CARTHAGE_COTHON</Type>
-			<LSystem>LSYSTEM_HARBOR</LSystem>
-			<bAnimated>0</bAnimated>
-			<fScale>1.0</fScale>
-			<fInterfaceScale>1.1</fInterfaceScale>
-			<NIF>Art/Structures/Buildings/Cartheginian Cothon/Cothon.nif</NIF>
-			<KFM/>
-			<Button>,Art/Interface/Buttons/Buildings/Harbor.dds,Art/Interface/Buttons/Warlords_Atlas_1.dds,7,3</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_CUSTOMS_HOUSE</Type>
@@ -578,14 +660,84 @@
 			<Button>,Art/Interface/Buttons/Buildings/Supermarket.dds,Art/Interface/Buttons/Warlords_Atlas_1.dds,8,1</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
+			<Type>ART_DEF_BUILDING_NUMIDIAN_GRAIN_MARKET</Type>
+			<LSystem>LSYSTEM_4x2</LSystem>
+			<bAnimated>0</bAnimated>
+			<fScale>0.5</fScale>
+			<fInterfaceScale>1.0</fInterfaceScale>
+			<NIF>Art/Structures/Buildings/Souk/arab_col.nif</NIF>
+			<KFM/>
+			<Button>Art/Interface/Buttons/Buildings/GrainMarket.dds</Button>
+		</BuildingArtInfo>
+		<BuildingArtInfo>
+			<Type>ART_DEF_BUILDING_MASRYEEN_SOUK</Type>
+			<LSystem>LSYSTEM_2x2</LSystem>
+			<bAnimated>0</bAnimated>
+			<fScale>15.00</fScale>
+			<fInterfaceScale>1.0</fInterfaceScale>
+			<NIF>Art/Structures/Buildings/Souk/humanbazaar.nif</NIF>
+			<KFM/>
+			<Button>Art/Structures/Buildings/Souk/souk.dds</Button>
+		</BuildingArtInfo>
+		<BuildingArtInfo>
+			<Type>ART_DEF_BUILDING_GAS_PLANT</Type>
+			<LSystem>LSYSTEM_3x2</LSystem>
+			<bAnimated>0</bAnimated>
+			<fScale>1.0</fScale>
+			<fInterfaceScale>0.55</fInterfaceScale>
+			<NIF>Art/Structures/Buildings/Gas_Plant/gasplant.nif</NIF>
+			<KFM/>
+			<Button>Art/Structures/Buildings/Gas_Plant/gas_plant_button.dds</Button>
+		</BuildingArtInfo>
+		<BuildingArtInfo>
+			<Type>ART_DEF_BUILDING_GAS_PLANT</Type>
+			<LSystem>LSYSTEM_2x2</LSystem>
+			<bAnimated>0</bAnimated>
+			<fScale>0.75</fScale>
+			<fInterfaceScale>0.5</fInterfaceScale>
+			<NIF>Art/Structures/Buildings/Gas_Plant/gasplant.nif</NIF>
+			<KFM/>
+			<Button>Art/Structures/Buildings/Gas_Plant/Gas_Plant.dds</Button>
+		</BuildingArtInfo>
+		<BuildingArtInfo>
+			<Type>ART_DEF_BUILDING_BELGIAN_CHOCOLATERIE</Type>
+			<LSystem>LSYSTEM_2x2</LSystem>
+			<bAnimated>0</bAnimated>
+			<fScale>1.05</fScale>
+			<fInterfaceScale>0.45</fInterfaceScale>
+			<NIF>Art/Structures/Buildings/Tavern/Tavern.nif</NIF>
+			<KFM/>
+			<Button>Art/Structures/Buildings/Tavern/Chocolaterie.dds</Button>
+		</BuildingArtInfo>
+		<BuildingArtInfo>
+			<Type>ART_DEF_BUILDING_SAUDI_OIL_DEPOT</Type>
+			<LSystem>LSYSTEM_4x4</LSystem>
+			<bAnimated>1</bAnimated>
+			<fScale>1.0</fScale>
+			<fInterfaceScale>0.44</fInterfaceScale>
+			<NIF> Art/Structures/Buildings/Oil_Depot/depot.nif</NIF>
+			<KFM/>
+			<Button>Art/Structures/Buildings/Oil_Depot/depot_button.dds</Button>
+		</BuildingArtInfo>
+		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_MARKET</Type>
 			<LSystem>LSYSTEM_4x2</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>0.5</fScale>
 			<fInterfaceScale>1.0</fInterfaceScale>
-			<NIF>Art/Structures/Buildings/Market_New/arab_col.nif</NIF>
+			<NIF>Art/Structures/Buildings/Souk/arab_col.nif</NIF>
 			<KFM/>
 			<Button>,Art/Interface/Buttons/Buildings/Market.dds,Art/Interface/Buttons/Buildings_Atlas.dds,3,3</Button>
+		</BuildingArtInfo>
+		<BuildingArtInfo>
+			<Type>ART_DEF_BUILDING_PARTHIAN_CARAVANSERAI</Type>
+			<LSystem>LSYSTEM_3x2</LSystem>
+			<bAnimated>0</bAnimated>
+			<fScale>1.50</fScale>
+			<fInterfaceScale>0.666</fInterfaceScale>
+			<NIF>Art/Structures/Buildings/Caravanserai/j-palace.nif</NIF>
+			<KFM/>
+			<Button>Art/Interface/Buttons/Buildings/caravanserai.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_PHOENICIAN_GLASSMAKER</Type>
@@ -596,6 +748,16 @@
 			<NIF>Art/Structures/Buildings/Glassmaker/ironworks.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/Buildings/Glass.dds</Button>
+		</BuildingArtInfo>
+		<BuildingArtInfo>
+			<Type>ART_DEF_BUILDING_MACEDONIAN_AGORA</Type>
+			<LSystem>LSYSTEM_2x3</LSystem>
+			<bAnimated>0</bAnimated>
+			<fScale>1.5</fScale>
+			<fInterfaceScale>0.4</fInterfaceScale>
+			<NIF>Art/Structures/Buildings/Roman Forum/Forum.nif</NIF>
+			<KFM/>
+			<Button>Art/Interface/Buttons/Buildings/Agora.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_ROMAN_FORUM</Type>
@@ -676,6 +838,26 @@
 			<NIF>Art/Structures/Buildings/Courthouse/Courthouse.nif</NIF>
 			<KFM/>
 			<Button>,Art/Interface/Buttons/Buildings/Courthouse.dds,Art/Interface/Buttons/Buildings_Atlas.dds,4,2</Button>
+		</BuildingArtInfo>
+		<BuildingArtInfo>
+			<Type>ART_DEF_BUILDING_GREAT_ICON</Type>
+			<LSystem>LSYSTEM_3x2</LSystem>
+			<bAnimated>0</bAnimated>
+			<fScale>1.8</fScale>
+			<fInterfaceScale>0.55</fInterfaceScale>
+			<NIF>Art/Structures/Buildings/Scriptorium/Court.nif</NIF>
+			<KFM/>
+			<Button>,Art/Interface/Buttons/Buildings/iconer.dds,Art/Interface/Buttons/soi_buildings.dds,1,5</Button>
+		</BuildingArtInfo>
+		<BuildingArtInfo>
+			<Type>ART_DEF_BUILDING_JERUSALEMITE_CHANCERY</Type>
+			<LSystem>LSYSTEM_3x2</LSystem>
+			<bAnimated>0</bAnimated>
+			<fScale>1.8</fScale>
+			<fInterfaceScale>0.55</fInterfaceScale>
+			<NIF>Art/Structures/Buildings/Scriptorium/Court.nif</NIF>
+			<KFM/>
+			<Button>,Art/Interface/Buttons/Buildings/Chancery.dds,Art/Interface/Buttons/soi_buildings.dds,2,4</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_CANADIAN_ROYAL_MOUNTED_POLICE</Type>
@@ -936,6 +1118,46 @@
 			<NIF>Art/Structures/Wonders/kaaba/kaaba.nif</NIF>
 			<KFM/>
 			<Button>Art/Structures/Wonders/kaaba/kaaba_button.dds</Button>
+		</BuildingArtInfo>
+				<BuildingArtInfo>
+			<Type>ART_DEF_BUILDING_SHIA_TEMPLE</Type>
+			<LSystem>LSYSTEM_2x2</LSystem>
+			<bAnimated>1</bAnimated>
+			<fScale>2.35</fScale>
+			<fInterfaceScale>0.65</fInterfaceScale>
+			<NIF>Art/Structures/Buildings/Temple/islamic/shia_temple.nif</NIF>
+			<KFM/>
+			<Button>,Art/Interface/Buttons/Buildings/Temple_Shia.dds,Art/Interface/Buttons/soi_buildings.dds,6,2</Button>
+		</BuildingArtInfo>
+		<BuildingArtInfo>
+			<Type>ART_DEF_BUILDING_SHIA_CATHEDRAL</Type>
+			<LSystem>LSYSTEM_4x4</LSystem>
+			<bAnimated>0</bAnimated>
+			<fScale>1.58</fScale>
+			<fInterfaceScale>0.57</fInterfaceScale>
+			<NIF>Art/Structures/Buildings/Cathedrals/shia_cathedral.nif</NIF>
+			<KFM/>
+			<Button>,Art/Interface/Buttons/Buildings/Cathedral_Shia.dds,Art/Interface/Buttons/soi_buildings.dds,8,2</Button>
+		</BuildingArtInfo>
+		<BuildingArtInfo>
+			<Type>ART_DEF_BUILDING_SHIA_MONASTERY</Type>
+			<LSystem>LSYSTEM_3x1</LSystem>
+			<bAnimated>1</bAnimated>
+			<fScale>2.5</fScale>
+			<fInterfaceScale>0.56</fInterfaceScale>
+			<NIF>Art/Structures/Buildings/Monastery/Islamic/shia_monastery.nif</NIF>
+			<KFM/>
+			<Button>,Art/Interface/Buttons/Buildings/Monastery_Shia.dds,Art/Interface/Buttons/soi_buildings.dds,7,2</Button>
+		</BuildingArtInfo>
+		<BuildingArtInfo>
+			<Type>ART_DEF_BUILDING_SHIA_SHRINE</Type>
+			<LSystem>LSYSTEM_3x2</LSystem>
+			<bAnimated>0</bAnimated>
+			<fScale>4.4</fScale>
+			<fInterfaceScale>0.4</fInterfaceScale>
+			<NIF>Art/Structures/Buildings/Imam Ali Mosque/Ali.nif</NIF>
+			<KFM/>
+			<Button>,Art/Interface/Buttons/Buildings/Shrine_Shia.dds,Art/Interface/Buttons/soi_buildings.dds,4,2</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_HINDU_TEMPLE</Type>
@@ -1358,6 +1580,36 @@
 			<Button>,Art/Interface/Buttons/Buildings/SpiralMinaret.dds,Art/Interface/Buttons/Buildings_Atlas.dds,2,9</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
+			<Type>ART_DEF_BUILDING_PROPHETS_MOSQUE</Type>
+			<LSystem>LSYSTEM_4x4</LSystem>
+			<bAnimated>0</bAnimated>
+			<fScale>0.55</fScale>
+			<fInterfaceScale>0.5</fInterfaceScale>
+			<NIF>Art/Structures/Buildings/Mosque Prophet/OldMosque.nif</NIF>
+			<KFM/>
+			<Button>,Art/Interface/Buttons/Buildings/prophets_mosque.dds,Art/Interface/Buttons/soi_buildings.dds,5,13</Button>
+		</BuildingArtInfo>
+		<BuildingArtInfo>
+			<Type>ART_DEF_BUILDING_AL_AZHAR</Type>
+			<LSystem>LSYSTEM_4x4</LSystem>
+			<bAnimated>0</bAnimated>
+			<fScale>0.4</fScale>
+			<fInterfaceScale>0.5</fInterfaceScale>
+			<NIF>Art/Structures/Buildings/mosque_of_kairouan/mosque_of_kairouan.nif</NIF>
+			<KFM/>
+			<Button>Art/Interface/Buttons/Buildings/alazhar.dds</Button>
+		</BuildingArtInfo>
+		<BuildingArtInfo>
+			<Type>ART_DEF_BUILDING_ALHAMBRA</Type>
+			<LSystem>LSYSTEM_4x4</LSystem>
+			<bAnimated>0</bAnimated>
+			<fScale>1.3</fScale>
+			<fInterfaceScale>0.6</fInterfaceScale>
+			<NIF>Art/Structures/Wonders/Alhambra/alhambra.nif</NIF>
+			<KFM/>
+			<Button>Art/Interface/Buttons/Buildings/alhambra.dds</Button>
+		</BuildingArtInfo>
+		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_NOTRE_DAME</Type>
 			<LSystem>LSYSTEM_2x4</LSystem>
 			<bAnimated>0</bAnimated>
@@ -1516,6 +1768,26 @@
 			<NIF>Art/Structures/Buildings/Temple/Temple.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/Buildings/Temple.dds</Button>
+		</BuildingArtInfo>
+		<BuildingArtInfo>
+			<Type>ART_DEF_BUILDING_MYCENAEAN_THOLOS</Type>
+			<LSystem>LSYSTEM_2x3</LSystem>
+			<bAnimated>0</bAnimated>
+			<fScale>1.0</fScale>
+			<fInterfaceScale>0.35</fInterfaceScale>
+			<NIF>Art/Structures/Buildings/Tholos/Burial_SA.nif</NIF>
+			<KFM/>
+			<Button>Art/Interface/Buttons/Buildings/Tholos.dds</Button>
+		</BuildingArtInfo>	
+		<BuildingArtInfo>
+			<Type>ART_DEF_BUILDING_SCYTHIAN_KURGAN</Type>
+			<LSystem>LSYSTEM_2x3</LSystem>
+			<bAnimated>0</bAnimated>
+			<fScale>1.0</fScale>
+			<fInterfaceScale>0.35</fInterfaceScale>
+			<NIF>Art/Structures/Buildings/Tholos/Burial_SA.nif</NIF>
+			<KFM/>
+			<Button>Art/Interface/Buttons/Buildings/Kurgan.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_ETHIOPIAN_STELE</Type>
@@ -2178,6 +2450,16 @@
 			<Button>Art/Structures/Buildings/Weaver/Button_Weaver.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
+			<Type>ART_DEF_BUILDING_ARMENIAN_CARPET_WORKSHOP</Type>
+			<LSystem>LSYSTEM_2x2</LSystem>
+			<bAnimated>0</bAnimated>
+			<fScale>1.0</fScale>
+			<fInterfaceScale>0.5</fInterfaceScale>
+			<NIF>Art/Structures/Buildings/Carpetworkshop/carpet.nif</NIF>
+			<KFM/>
+			<Button>Art/Structures/Buildings/Carpetworkshop/Button_Carpet_Workshop.dds</Button>
+		</BuildingArtInfo>
+		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_BATH</Type>
 			<LSystem>LSYSTEM_2x1</LSystem>
 			<bAnimated>0</bAnimated>
@@ -2318,6 +2600,26 @@
 			<Button>,Art/Interface/Buttons/Buildings/Obelisk.dds,Art/Interface/Buttons/Warlords_Atlas_1.dds,6,4</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
+			<Type>ART_DEF_BUILDING_GOKTURK_ORKHON_INSCRIPTION</Type>
+			<LSystem>LSYSTEM_1x1</LSystem>
+			<bAnimated>0</bAnimated>
+			<fScale>4.0</fScale>
+			<fInterfaceScale>0.4</fInterfaceScale>
+			<NIF>Art/Structures/Buildings/EthiopianStele/EthiopianStele.nif</NIF>
+			<KFM/>
+			<Button>Art/Interface/Buttons/Buildings/OrkhonInscription.dds</Button>
+		</BuildingArtInfo>
+		<BuildingArtInfo>
+			<Type>ART_DEF_BUILDING_GERMANIC_RUNESTONE</Type>
+			<LSystem>LSYSTEM_1x1</LSystem>
+			<bAnimated>0</bAnimated>
+			<fScale>5.0</fScale>
+			<fInterfaceScale>0.4</fInterfaceScale>
+			<NIF>Art/Structures/Buildings/EthiopianStele/EthiopianStele.nif</NIF>
+			<KFM/>
+			<Button>Art/Interface/Buttons/Buildings/Runestone.dds</Button>
+		</BuildingArtInfo>
+		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_ESTATE</Type>
 			<LSystem>LSYSTEM_2x2</LSystem>
 			<bAnimated>0</bAnimated>
@@ -2378,6 +2680,16 @@
 			<Button>Art/Interface/Buttons/Buildings/Star_Fort.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
+ 			<Type>ART_DEF_BUILDING_MOROCCAN_CASTLE_MOSQUE</Type>
+ 			<LSystem>LSYSTEM_2x2</LSystem>
+ 			<bAnimated>0</bAnimated>
+ 			<fScale>2.7</fScale>
+ 			<fInterfaceScale>1.0</fInterfaceScale>
+ 			<NIF>Art/Structures/Buildings/EU4_Forts/Forts Mideastern/fort2.nif</NIF>
+ 			<KFM/>
+ 			<Button>Art/Structures/Buildings/EU4_Forts/Forts Mideastern/kasbah.dds</Button>
+ 		</BuildingArtInfo>
+		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_MUSEUM</Type>
 			<LSystem>LSYSTEM_3x2</LSystem>
 			<bAnimated>0</bAnimated>
@@ -2436,6 +2748,46 @@
 			<NIF>Art/Structures/Buildings/Edubba/Edubba.nif</NIF>
 			<KFM/>
 			<Button>Art/Structures/Buildings/Edubba/Edubba.dds</Button>
+		</BuildingArtInfo>
+		<BuildingArtInfo>
+			<Type>ART_DEF_BUILDING_BUYID_SUFI_SHRINE</Type>
+			<LSystem>LSYSTEM_2x2</LSystem>
+			<bAnimated>0</bAnimated>
+			<fScale>0.6</fScale>
+			<fInterfaceScale>0.6</fInterfaceScale>
+			<NIF>Art/Structures/Buildings/Sufi Shrine/midpalace.nif</NIF>
+			<KFM/>
+			<Button>,Art/Interface/Buttons/Buildings/sufi_shrine.dds,Art/Interface/Buttons/soi_buildings.dds,1,7</Button>
+		</BuildingArtInfo>
+		<BuildingArtInfo>
+			<Type>ART_DEF_BUILDING_GOTHIC_STONE_HERMITAGE</Type>
+			<LSystem>LSYSTEM_2x2</LSystem>
+			<bAnimated>0</bAnimated>
+			<fScale>1.5</fScale>
+			<fInterfaceScale>1.2</fInterfaceScale>
+			<NIF>Art/Structures/Buildings/Edubba/Edubba.nif</NIF>
+			<KFM/>
+			<Button>Art/Interface/Buttons/Buildings/StoneHermitage.dds</Button>
+		</BuildingArtInfo>
+		<BuildingArtInfo>
+			<Type>ART_DEF_BUILDING_MINOAN_POTTERY_HOUSE</Type>
+			<LSystem>LSYSTEM_2x2</LSystem>
+			<bAnimated>0</bAnimated>
+			<fScale>1.0</fScale>
+			<fInterfaceScale>1.2</fInterfaceScale>
+			<NIF>Art/Structures/Buildings/Edubba/Edubba.nif</NIF>
+			<KFM/>
+			<Button>Art/Interface/Buttons/Buildings/Pottery_House.dds</Button>
+		</BuildingArtInfo>
+		<BuildingArtInfo>
+			<Type>ART_DEF_BUILDING_SUMERIAN_MUDBRICK_HOUSE</Type>
+			<LSystem>LSYSTEM_2x2</LSystem>
+			<bAnimated>0</bAnimated>
+			<fScale>1.0</fScale>
+			<fInterfaceScale>1.2</fInterfaceScale>
+			<NIF>Art/Structures/Buildings/Edubba/Edubba.nif</NIF>
+			<KFM/>
+			<Button>Art/Interface/Buttons/Buildings/Mudbrick_House.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_PESEDJET_TEMPLE</Type>
@@ -2608,6 +2960,16 @@
 			<Button>,Art/Interface/Buttons/Buildings/Lighthouse.dds,Art/Interface/Buttons/Warlords_Atlas_1.dds,3,1</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
+			<Type>ART_DEF_BUILDING_TURKIC_DIVAN</Type>
+			<LSystem>LSYSTEM_2x2</LSystem>
+			<bAnimated>0</bAnimated>
+			<fScale>1.1</fScale>
+			<fInterfaceScale>0.5</fInterfaceScale>
+			<NIF>Art/Structures/Buildings/Courthouse/Middle_East_Courthouse/divan.nif</NIF>
+			<KFM/>
+			<Button>,Art/Interface/Buttons/Buildings/nizamiyya.dds,Art/Interface/Buttons/mem_buildings_atlas.dds,3,4</Button>
+		</BuildingArtInfo>
+		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_BIDAIST_TEMPLE</Type>
 			<LSystem>LSYSTEM_1x1</LSystem>
 			<bAnimated>1</bAnimated>
@@ -2628,14 +2990,34 @@
 			<Button>Art/Structures/Buildings/Yoruba_Temple/yoruba_temple.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_TURKIC_DIVAN</Type>
+			<Type>ART_DEF_BUILDING_FOMBA_GASY_TEMPLE</Type>
+			<LSystem>LSYSTEM_1x1</LSystem>
+			<bAnimated>1</bAnimated>
+			<fScale>1.0</fScale>
+			<fInterfaceScale>1.0</fInterfaceScale>
+			<NIF>Art/Structures/Buildings/Yoruba_Temple/sacred.nif</NIF>
+			<KFM/>
+			<Button>Art/Structures/Buildings/Yoruba_Temple/yoruba_temple.dds</Button>
+		</BuildingArtInfo>
+		<BuildingArtInfo>
+			<Type>ART_DEF_BUILDING_BANTU_TEMPLE</Type>
+			<LSystem>LSYSTEM_1x1</LSystem>
+			<bAnimated>1</bAnimated>
+			<fScale>1.0</fScale>
+			<fInterfaceScale>1.0</fInterfaceScale>
+			<NIF>Art/Structures/Buildings/Yoruba_Temple/sacred.nif</NIF>
+			<KFM/>
+			<Button>Art/Structures/Buildings/Yoruba_Temple/yoruba_temple.dds</Button>
+		</BuildingArtInfo>
+		<BuildingArtInfo>
+			<Type>ART_DEF_BUILDING_KNOSSOS_PALACE</Type>
 			<LSystem>LSYSTEM_2x2</LSystem>
 			<bAnimated>0</bAnimated>
-			<fScale>1.8</fScale>
-			<fInterfaceScale>0.5</fInterfaceScale>
-			<NIF>Art/Structures/Buildings/Madrassa/Madrassa.nif</NIF>
+			<fScale>1.65</fScale>
+			<fInterfaceScale>0.45</fInterfaceScale>
+			<NIF>Art/Structures/Wonders/ApadanaPalace/Anahita.nif</NIF>
 			<KFM/>
-			<Button>,Art/Interface/Buttons/Buildings/nizamiyya.dds,Art/Interface/Buttons/mem_buildings_atlas.dds,3,4</Button>
+			<Button>Art/Interface/Buttons/Buildings/Knossos_Palace.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_APADANA_PALACE</Type>
@@ -3568,6 +3950,16 @@
 			<Button>Art/Structures/Buildings/Mudbrick_Pyramid/Nuri_Button.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
+			<Type>ART_DEF_BUILDING_SAMANID_KILN</Type>
+			<LSystem>LSYSTEM_1x1</LSystem>
+			<bAnimated>0</bAnimated>
+			<fScale>0.6</fScale>
+			<fInterfaceScale>0.7</fInterfaceScale>
+			<NIF>Art/Structures/Buildings/PotteryShop/PotteryShop.nif</NIF>
+			<KFM/>
+			<Button>,Art/Interface/Buttons/Buildings/pottery.dds,Art/Interface/Buttons/soi_buildings.dds,4,6</Button>
+		</BuildingArtInfo>
+		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_HITTITE_BLOOMERY</Type>
 			<LSystem>LSYSTEM_2x1</LSystem>
 			<bAnimated>1</bAnimated>
@@ -3703,9 +4095,9 @@
 			<bAnimated>0</bAnimated>
 			<fScale>1.0</fScale>
 			<fInterfaceScale>0.5</fInterfaceScale>
-			<NIF>Art/Structures/Buildings/Ostrog/east_war_college.nif</NIF>
+			<NIF>Art/Structures/Buildings/Katorga/east_war_college.nif</NIF>
 			<KFM/>
-			<Button>Art/Structures/Buildings/Ostrog/Ostrog.dds</Button>
+			<Button>Art/Structures/Buildings/Katorga/Katorga.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_DRAVIDIAN_GOPURAM</Type>
@@ -3768,6 +4160,416 @@
 			<Button>Art/Structures/Wonders/GreatAdobeMosque/Djenne.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
+			<Type>ART_DEF_BUILDING_SLAVE_BARRACKS</Type>
+			<LSystem>LSYSTEM_2x2</LSystem>
+			<bAnimated>1</bAnimated>
+			<fScale>0.25</fScale>
+			<fInterfaceScale>0.62</fInterfaceScale>
+			<NIF>Art/Structures/Buildings/Huskarl_Barracks/Barracks.nif</NIF>
+			<KFM/>
+			<Button>,Art/Interface/Buttons/Buildings/Armory.dds,Art/Interface/Buttons/mem_buildings_atlas.dds,4,3</Button>
+		</BuildingArtInfo>
+		<BuildingArtInfo>
+			<Type>ART_DEF_BUILDING_ARCHERY_RANGE</Type>
+			<LSystem>LSYSTEM_2x2</LSystem>
+			<bAnimated>0</bAnimated>
+			<fScale>1.36</fScale>
+			<fInterfaceScale>0.64</fInterfaceScale>
+			<NIF>Art/Structures/Buildings/Archery_Range/archery_range.nif</NIF>
+			<KFM/>
+			<Button>,-,Art/Interface/Buttons/RFCE_Atlas_buildings.dds,7,1</Button>
+		</BuildingArtInfo>
+		<BuildingArtInfo>
+			<Type>ART_DEF_BUILDING_MANOR</Type>
+			<LSystem>LSYSTEM_3x2</LSystem>
+			<bAnimated>0</bAnimated>
+			<fScale>1.22</fScale>
+			<fInterfaceScale>0.56</fInterfaceScale>
+			<NIF>Art/Structures/Buildings/French_Chateau/an_palace_eu.nif</NIF>
+			<KFM/>
+			<Button>,-,Art/Interface/Buttons/RFCE_Atlas_buildings.dds,4,2</Button>
+		</BuildingArtInfo>
+		<BuildingArtInfo>
+			<Type>ART_DEF_BUILDING_SCHOOL</Type>
+			<LSystem>LSYSTEM_2x2</LSystem>
+			<bAnimated>0</bAnimated>
+			<fScale>1.2</fScale>
+			<fInterfaceScale>0.5</fInterfaceScale>
+			<NIF>Art/Structures/Buildings/Agora/Agora.nif</NIF>
+			<KFM/>
+			<Button>Art/Interface/Buttons/Buildings/School.dds</Button>
+		</BuildingArtInfo>
+		<BuildingArtInfo>
+			<Type>ART_DEF_BUILDING_FAIRGROUND</Type>
+			<LSystem>LSYSTEM_2x2</LSystem>
+			<bAnimated>1</bAnimated>
+			<fScale>0.15</fScale>
+			<fInterfaceScale>0.7</fInterfaceScale>
+			<NIF>Art/Structures/Buildings/Fairground/fest_mid_tentbig.nif</NIF>
+			<KFM/>
+			<Button>,Art/Interface/Buttons/Buildings/Fairground.dds,Art/Interface/Buttons/soi_buildings.dds,5,4</Button>
+		</BuildingArtInfo>
+		<BuildingArtInfo>
+			<Type>ART_DEF_BUILDING_RELIQUARY</Type>
+			<LSystem>LSYSTEM_1x1</LSystem>
+			<bAnimated>1</bAnimated>
+			<fScale>1.68</fScale>
+			<fInterfaceScale>0.54</fInterfaceScale>
+			<NIF>Art/Structures/Buildings/Catholic_Belfry/christian temple.nif</NIF>
+			<KFM/>
+			<Button>,-,Art/Interface/Buttons/rfce_atlas_buildings.dds,5,6</Button>
+		</BuildingArtInfo>
+		<BuildingArtInfo>
+			<Type>ART_DEF_BUILDING_RACING_TRACK</Type>
+			<LSystem>LSYSTEM_3x3</LSystem>
+			<bAnimated>0</bAnimated>
+			<fScale>0.77</fScale>
+			<fInterfaceScale>0.55</fInterfaceScale>
+			<NIF>Art/Structures/Buildings/Racing Track/arab_col.nif</NIF>
+			<KFM/>
+			<Button>,Art/Interface/Buttons/Buildings/RacingTrack.dds,Art/Interface/Buttons/soi_buildings.dds,5,6</Button>
+		</BuildingArtInfo>
+		<BuildingArtInfo>
+			<Type>ART_DEF_BUILDING_INN</Type>
+			<LSystem>LSYSTEM_2x2</LSystem>
+			<bAnimated>0</bAnimated>
+			<fScale>0.8</fScale>
+			<fInterfaceScale>0.6</fInterfaceScale>
+			<NIF>Art/Structures/Buildings/Inn/medieval_house1.nif</NIF>
+			<KFM/>
+			<Button>,-,Art/Interface/Buttons/RFCE_Atlas_buildings.dds,3,1</Button>
+		</BuildingArtInfo>
+		<BuildingArtInfo>
+			<Type>ART_DEF_BUILDING_INFIRMARY</Type>
+			<LSystem>LSYSTEM_2x2</LSystem>
+			<bAnimated>0</bAnimated>
+			<fScale>1.25</fScale>
+			<fInterfaceScale>.6</fInterfaceScale>
+			<NIF>Art/Structures/Buildings/Infirmary/hospital.nif</NIF>
+			<KFM/>
+			<Button>,Art/Interface/Buttons/Buildings/infirmary.dds,Art/Interface/Buttons/soi_buildings.dds,2,5</Button>
+		</BuildingArtInfo>
+		<BuildingArtInfo>
+			<Type>ART_DEF_BUILDING_GUILD_HALL</Type>
+			<LSystem>LSYSTEM_3x2</LSystem>
+			<bAnimated>0</bAnimated>
+			<fScale>0.7</fScale>
+			<fInterfaceScale>0.5</fInterfaceScale>
+			<NIF>Art/Structures/Buildings/Guild_Hall/guild06.nif</NIF>
+			<KFM/>
+			<Button>,Art/Interface/Buttons/Buildings/guild_hall.dds,Art/Interface/Buttons/soi_buildings.dds,7,4</Button>
+		</BuildingArtInfo>
+		<BuildingArtInfo>
+			<Type>ART_DEF_BUILDING_KHAZARS_SILK_ROAD_TRADE_PORT</Type>
+			<LSystem>LSYSTEM_COAST</LSystem>
+			<bAnimated>0</bAnimated>
+			<fScale>0.7</fScale>
+			<fInterfaceScale>0.6</fInterfaceScale>
+			<NIF>Art/Structures/Buildings/Khazar_Lighthouse_EU3_Tax_Assessor/east_tax_assessor.nif</NIF>
+			<KFM/>
+			<Button>Art/Structures/Buildings/Khazar_Lighthouse_EU3_Tax_Assessor/khazar_lighthouse.dds</Button>
+		</BuildingArtInfo>
+		<BuildingArtInfo>
+			<Type>ART_DEF_BUILDING_AIT_BENHADDOU</Type>
+			<LSystem>LSYSTEM_2x3</LSystem>
+			<bAnimated>0</bAnimated>
+			<fScale>1.2</fScale>
+			<fInterfaceScale>0.35</fInterfaceScale>
+			<NIF>Art/Structures/Buildings/Tholos/Burial_SA.nif</NIF>
+			<KFM/>
+			<Button>Art/Interface/Buttons/Buildings/AitBenhaddou.dds</Button>
+		</BuildingArtInfo>
+		<BuildingArtInfo>
+			<Type>ART_DEF_BUILDING_ROSE_GARDEN_PALACE</Type>
+			<LSystem>LSYSTEM_2x3</LSystem>
+			<bAnimated>0</bAnimated>
+			<fScale>1.2</fScale>
+			<fInterfaceScale>0.35</fInterfaceScale>
+			<NIF>Art/Structures/Wonders/Alhambra/alhambra.nif</NIF>
+			<KFM/>
+			<Button>Art/Interface/Buttons/Buildings/RoseGardenPalace.dds</Button>
+		</BuildingArtInfo>
+		<BuildingArtInfo>
+			<Type>ART_DEF_BUILDING_ITCHAN_KHALA</Type>
+			<LSystem>LSYSTEM_2x3</LSystem>
+			<bAnimated>0</bAnimated>
+			<fScale>0.6</fScale>
+			<fInterfaceScale>0.35</fInterfaceScale>
+			<NIF>Art/Structures/Buildings/Mosque Prophet/OldMosque.nif</NIF>
+			<KFM/>
+			<Button>Art/Interface/Buttons/Buildings/ItchanKhala.dds</Button>
+		</BuildingArtInfo>
+		<BuildingArtInfo>
+			<Type>ART_DEF_BUILDING_NAREKAVANK</Type>
+			<LSystem>LSYSTEM_2x2</LSystem>
+			<bAnimated>0</bAnimated>
+			<fScale>1.5</fScale>
+			<fInterfaceScale>0.52</fInterfaceScale>
+			<NIF>Art/Structures/Buildings/Narekavank/StGregoryChurch.nif</NIF>
+			<KFM/>
+			<Button>,Art/Interface/Buttons/Buildings/Narekavank.dds,Art/Interface/Buttons/soi_buildings.dds,3,13</Button>
+		</BuildingArtInfo>
+		<BuildingArtInfo>
+			<Type>ART_DEF_BUILDING_GHANAIAN_TREASURY</Type>
+			<LSystem>LSYSTEM_1x1</LSystem>
+			<bAnimated>0</bAnimated>
+			<fScale>1.0</fScale>
+			<fInterfaceScale>0.7</fInterfaceScale>
+			<NIF>Art/Structures/Buildings/Temple/Temple.nif</NIF>
+			<KFM/>
+			<Button>Art/Interface/Buttons/Buildings/Treasury.dds</Button>
+		</BuildingArtInfo>
+		<BuildingArtInfo>
+			<Type>ART_DEF_BUILDING_SONGHAI_JULLA_GUILD</Type>
+			<LSystem>LSYSTEM_4x2</LSystem>
+			<bAnimated>0</bAnimated>
+			<fScale>0.5</fScale>
+			<fInterfaceScale>1.0</fInterfaceScale>
+			<NIF>Art/Structures/Buildings/Souk/arab_col.nif</NIF>
+			<KFM/>
+			<Button>Art/Interface/Buttons/Buildings/JullaGuild.dds</Button>
+		</BuildingArtInfo>
+		<BuildingArtInfo>
+			<Type>ART_DEF_BUILDING_KANEM_BORNUAN_RIBAT</Type>
+			<LSystem>LSYSTEM_3x2</LSystem>
+			<bAnimated>0</bAnimated>
+			<fScale>1.50</fScale>
+			<fInterfaceScale>0.666</fInterfaceScale>
+			<NIF>Art/Structures/Buildings/Caravanserai/j-palace.nif</NIF>
+			<KFM/>
+			<Button>,Art/Interface/Buttons/Buildings/Caravanserai.dds,Art/Interface/Buttons/soi_buildings.dds,1,4</Button>
+		</BuildingArtInfo>
+		<BuildingArtInfo>
+			<Type>ART_DEF_BUILDING_BENINESE_EARTH_MOAT</Type>
+			<LSystem>LSYSTEM_3x2</LSystem>
+			<bAnimated>0</bAnimated>
+			<fScale>1.11</fScale>
+			<fInterfaceScale>0.88</fInterfaceScale>
+			<NIF>Art/Structures/Buildings/Qanat/sewer.nif</NIF>
+			<KFM/>
+			<Button>Art/Interface/Buttons/Buildings/EarthMoat.dds</Button>
+		</BuildingArtInfo>
+		<BuildingArtInfo>
+			<Type>ART_DEF_BUILDING_HAUSAN_JUJUHALL</Type>
+			<LSystem>LSYSTEM_2x2</LSystem>
+			<bAnimated>0</bAnimated>
+			<fScale>0.6</fScale>
+			<fInterfaceScale>1.11</fInterfaceScale>
+			<NIF>Art/Structures/Buildings/JuJuHall/ThievesGuild.nif</NIF>
+			<KFM/>
+			<Button>Art/Structures/Buildings/JuJuHall/JuJuHall.dds</Button>
+		</BuildingArtInfo>
+		<BuildingArtInfo>
+			<Type>ART_DEF_BUILDING_ASHANTI_DRUMMING_STATION</Type>
+			<LSystem>LSYSTEM_2x2</LSystem>
+			<bAnimated>1</bAnimated>
+			<fScale>1.75</fScale>
+			<fInterfaceScale>1.04</fInterfaceScale>
+			<NIF>Art/Structures/Buildings/DrummingStation/Apothecary.nif</NIF>
+			<KFM/>
+			<Button>Art/Structures/Buildings/DrummingStation/Drumstation.dds</Button>
+		</BuildingArtInfo>
+		<BuildingArtInfo>
+			<Type>ART_DEF_BUILDING_IYANUWO</Type>
+			<LSystem>LSYSTEM_2x2</LSystem>
+            	<bAnimated>1</bAnimated>
+           		<fScale>0.17</fScale>
+            	<fInterfaceScale>0.3</fInterfaceScale>
+            	<NIF>Art/Structures/Buildings/BeninWalls/beninwalls.nif</NIF>
+            	<KFM/>
+           		<Button>Art/Structures/Buildings/BeninWalls/BeninButton.dds</Button>
+		</BuildingArtInfo>
+		<BuildingArtInfo>
+			<Type>ART_DEF_BUILDING_OUADANE_KSOUR</Type>
+			<LSystem>LSYSTEM_2x2</LSystem>
+            		<bAnimated>1</bAnimated>
+           		<fScale>1.0</fScale>
+            		<fInterfaceScale>1.0</fInterfaceScale>
+            		<NIF>Art/Structures/Buildings/carthage/temple.nif</NIF>
+            		<KFM/>
+           		<Button>Art/Interface/Buttons/Buildings/OuadaneKsour.dds</Button>
+		</BuildingArtInfo>
+		<BuildingArtInfo>
+			<Type>ART_DEF_BUILDING_TOMB_OF_ASKIA</Type>
+			<LSystem>LSYSTEM_2x2</LSystem>
+            		<bAnimated>1</bAnimated>
+           		<fScale>0.6</fScale>
+            		<fInterfaceScale>0.6</fInterfaceScale>
+            		<NIF>Art/Structures/Buildings/Africa/Warcollege/afr_warcollege.nif</NIF>
+            		<KFM/>
+           		<Button>Art/Interface/Buttons/Buildings/TombOfAskia.dds</Button>
+		</BuildingArtInfo>
+		<BuildingArtInfo>
+			<Type>ART_DEF_BUILDING_OSUN_OSOGBO</Type>
+			<LSystem>LSYSTEM_2x2</LSystem>
+			<bAnimated>0</bAnimated>
+			<fScale>1.0</fScale>
+			<fInterfaceScale>0.4</fInterfaceScale>
+			<NIF>Art/Structures/Buildings/Osun-Osogbo/Osun.nif</NIF>
+			<KFM/>
+			<Button>Art/Structures/Buildings/Osun-Osogbo/Button_OsunOsogbo.dds</Button>
+		</BuildingArtInfo>
+		<BuildingArtInfo>
+			<Type>ART_DEF_BUILDING_CARAVAN_SUPPLY</Type>
+			<LSystem>LSYSTEM_2x3</LSystem>
+			<bAnimated>0</bAnimated>
+			<fScale>25</fScale>
+			<fInterfaceScale>0.5</fInterfaceScale>
+			<NIF>Art/Structures/Buildings/caravan/Market.nif</NIF>
+			<KFM/>
+			<Button>Art/Structures/Buildings/caravan/Souq.dds</Button>
+		</BuildingArtInfo>
+		<BuildingArtInfo>
+			<Type>ART_DEF_BUILDING_ZIMBABWEAN_ZIMBABWE</Type>
+			<LSystem>LSYSTEM_3x3</LSystem>
+			<bAnimated>0</bAnimated>
+			<fScale>1.61</fScale>
+			<fInterfaceScale>0.4</fInterfaceScale>
+			<NIF>Art/Structures/Buildings/Zimba/castle.nif</NIF>
+			<KFM/>
+			<Button>Art/Structures/Buildings/Zimba/Zimba.dds</Button>
+		</BuildingArtInfo>
+		<BuildingArtInfo>
+			<Type>ART_DEF_BUILDING_BOER_LAAGER_CAMP</Type>
+			<LSystem>LSYSTEM_1x1</LSystem>
+			<bAnimated>0</bAnimated>
+			<fScale>0.55</fScale>
+			<fInterfaceScale>0.75</fInterfaceScale>
+			<NIF>Art/Structures/Buildings/LaagerCamp/FinnishSauna.nif</NIF>
+			<KFM/>
+			<Button>Art/Structures/Buildings/LaagerCamp/Braai.dds</Button>
+		</BuildingArtInfo>
+		<BuildingArtInfo>
+			<Type>ART_DEF_BUILDING_FRONTIER</Type>
+			<LSystem>LSYSTEM_1x1</LSystem>
+			<bAnimated>0</bAnimated>
+			<fScale>0.55</fScale>
+			<fInterfaceScale>0.75</fInterfaceScale>
+			<NIF>Art/Structures/Buildings/Eu3WestEurope/Marketplace/west_market.nif</NIF>
+			<KFM/>
+			<Button>Art/Interface/Buttons/Buildings/frontier.dds</Button>
+		</BuildingArtInfo>
+		<BuildingArtInfo>
+			<Type>ART_DEF_BUILDING_SOMALI_GUM_WORKSHOP</Type>
+			<LSystem>LSYSTEM_2x2</LSystem>
+			<bAnimated>0</bAnimated>
+			<fScale>15</fScale>
+			<fInterfaceScale>1.0</fInterfaceScale>
+			<NIF>Art/Structures/Buildings/Zimbabwe/oriental_house.nif</NIF>
+			<KFM/>
+			<Button>Art/Structures/Buildings/Zimbabwe/Poro.dds</Button>
+		</BuildingArtInfo>	
+		<BuildingArtInfo>
+			<Type>ART_DEF_BUILDING_KATANGESE_CHOKWE_SCULPTURE</Type>
+			<LSystem>LSYSTEM_2x2</LSystem>
+			<bAnimated>0</bAnimated>
+			<fScale>1.0</fScale>
+			<fInterfaceScale>0.5</fInterfaceScale>
+			<NIF>Art/Structures/Unique/Ziara/Ziara.nif</NIF>
+			<KFM/>
+			<Button>Art/Interface/Buttons/Buildings/ChokweSculpture.dds</Button>
+		</BuildingArtInfo>
+		<BuildingArtInfo>
+			<Type>ART_DEF_BUILDING_CARTHAGE_COTHON</Type>
+			<LSystem>LSYSTEM_HARBOR</LSystem>
+			<bAnimated>0</bAnimated>
+			<fScale>1.0</fScale>
+			<fInterfaceScale>1.1</fInterfaceScale>
+			<NIF>Art/Structures/Buildings/Cartheginian Cothon/Cothon.nif</NIF>
+			<KFM/>
+			<Button>,Art/Interface/Buttons/Buildings/Harbor.dds,Art/Interface/Buttons/Warlords_Atlas_1.dds,7,3</Button>
+		</BuildingArtInfo>
+		<BuildingArtInfo>
+			<Type>ART_DEF_BUILDING_BUGANDAN_ROYAL_FORGE</Type>
+			<LSystem>LSYSTEM_2x2</LSystem>
+			<bAnimated>0</bAnimated>
+			<fScale>1.2</fScale>
+			<fInterfaceScale>0.5</fInterfaceScale>
+			<NIF>Art/Structures/Buildings/NAmerica/Tax/NA_tax.nif</NIF>
+			<KFM/>
+			<Button>Art/Interface/Buttons/Buildings/RoyalForge.dds</Button>
+		</BuildingArtInfo>
+		<BuildingArtInfo>
+			<Type>ART_DEF_BUILDING_FUNJ_ARABIC_SCHOOL</Type>
+			<LSystem>LSYSTEM_2x2</LSystem>
+			<bAnimated>0</bAnimated>
+			<fScale>1.8</fScale>
+			<fInterfaceScale>0.47</fInterfaceScale>
+			<NIF>Art/Structures/Buildings/Madrassa/Madrassa.nif</NIF>
+			<KFM/>
+			<Button>,Art/Interface/Buttons/Buildings/Library.dds,Art/Interface/Buttons/Warlords_Atlas_1.dds,1,2</Button>
+		</BuildingArtInfo>
+		<BuildingArtInfo>
+			<Type>ART_DEF_BUILDING_MALAGASY_AMULET_WORKSHOP</Type>
+			<LSystem>LSYSTEM_3x2</LSystem>
+			<bAnimated>0</bAnimated>
+			<fScale>22.0</fScale>
+			<fInterfaceScale>0.5</fInterfaceScale>
+			<NIF>Art/structures/buildings/Bahmanid_Bidrimaker/Jewelsmith.nif</NIF>
+			<KFM/>
+			<Button>Art/structures/buildings/Bahmanid_Bidrimaker/JewelSmith_BT.dds</Button>
+		</BuildingArtInfo>
+		<BuildingArtInfo>
+			<Type>ART_DEF_BUILDING_SOUTH_AFRICAN_RUGBY_STADIUM</Type>
+			<LSystem>LSYSTEM_2x3</LSystem>
+			<bAnimated>0</bAnimated>
+			<fScale>0.55</fScale>
+			<fInterfaceScale>0.8</fInterfaceScale>
+			<NIF>Art/Structures/Buildings/Stadium/veterans04.nif</NIF>
+			<KFM/>
+			<Button>Art/Interface/Buttons/Buildings/RugbyStadium.dds</Button>
+		</BuildingArtInfo>
+		<BuildingArtInfo>
+			<Type>ART_DEF_BUILDING_ROYAL_KRAAL</Type>
+			<LSystem>LSYSTEM_4x4</LSystem>
+			<bAnimated>0</bAnimated>
+			<fScale>0.6</fScale>
+			<fInterfaceScale>0.4</fInterfaceScale>
+			<NIF>Art/Structures/Buildings/Maswinga/great_zimbabwe.nif</NIF>
+			<KFM/>
+			<Button>Art/Structures/Buildings/Maswinga/Maswinga_Button.dds</Button>
+		</BuildingArtInfo>
+		<BuildingArtInfo>
+			<Type>ART_DEF_BUILDING_STONETOWN_FORT</Type>
+			<LSystem>LSYSTEM_3x2</LSystem>
+			<bAnimated>0</bAnimated>
+			<fScale>1.75</fScale>
+			<fInterfaceScale>0.6</fInterfaceScale>
+			<NIF>Art/Structures/Buildings/Mji Mkongwe/Ctesiphon.nif</NIF>
+			<KFM/>
+			<Button>Art/Structures/Buildings/Mji Mkongwe/MjiMkongwe_Button.dds</Button>
+		</BuildingArtInfo>
+		<BuildingArtInfo>
+			<Type>ART_DEF_BUILDING_HARAR_GATES</Type>
+			<LSystem>LSYSTEM_3x3</LSystem>
+			<bAnimated>0</bAnimated>
+			<fScale>2.0</fScale>
+			<fInterfaceScale>0.6</fInterfaceScale>
+			<NIF>Art/Structures/Buildings/Ezida/darius.nif</NIF>
+			<KFM/>
+			<Button>Art/Interface/Buttons/Buildings/HararGates.dds</Button>
+		</BuildingArtInfo>
+		<BuildingArtInfo>
+			<Type>ART_DEF_BUILDING_GREAT_ENCLOSURE</Type>
+			<LSystem>LSYSTEM_3x3</LSystem>
+			<bAnimated>0</bAnimated>
+			<fScale>4.0</fScale>
+			<fInterfaceScale>0.6</fInterfaceScale>
+			<NIF>Art/Structures/Buildings/Forts American/fort_american_2.nif</NIF>
+			<KFM/>
+			<Button>Art/Interface/Buttons/Buildings/GreatEnclosure.dds</Button>
+		</BuildingArtInfo>
+		<BuildingArtInfo>
+			<Type>ART_DEF_BUILDING_KULUMBIMBI</Type>
+			<LSystem>LSYSTEM_2x2</LSystem>
+			<bAnimated>0</bAnimated>
+			<fScale>8.4</fScale>
+			<fInterfaceScale>0.48</fInterfaceScale>
+			<NIF>Art/Structures/Wonders/Cluny_Abbey/cluny.nif</NIF>
+			<KFM/>
+			<Button>,-,Art/Interface/Buttons/RFCE_Atlas_wonders.dds,4,5</Button>
+		</BuildingArtInfo>
+		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_PANTHEON</Type>
 			<LSystem>LSYSTEM_2x4</LSystem>
 			<bAnimated>0</bAnimated>
@@ -3818,56 +4620,6 @@
 			<Button>Art/Structures/Buildings/Piaohao/Piaohao.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_MASRYEEN_SOUK</Type>
-			<LSystem>LSYSTEM_2x2</LSystem>
-			<bAnimated>0</bAnimated>
-			<fScale>15.00</fScale>
-			<fInterfaceScale>1.0</fInterfaceScale>
-			<NIF>Art/Structures/Buildings/Souk/humanbazaar.nif</NIF>
-			<KFM/>
-			<Button>Art/Structures/Buildings/Souk/souk.dds</Button>
-		</BuildingArtInfo>
-		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_GAS_PLANT</Type>
-			<LSystem>LSYSTEM_3x2</LSystem>
-			<bAnimated>0</bAnimated>
-			<fScale>1.0</fScale>
-			<fInterfaceScale>0.55</fInterfaceScale>
-			<NIF>Art/Structures/Buildings/Gas_Plant/gasplant.nif</NIF>
-			<KFM/>
-			<Button>Art/Structures/Buildings/Gas_Plant/gas_plant_button.dds</Button>
-		</BuildingArtInfo>
-		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_GAS_PLANT</Type>
-			<LSystem>LSYSTEM_2x2</LSystem>
-			<bAnimated>0</bAnimated>
-			<fScale>0.75</fScale>
-			<fInterfaceScale>0.5</fInterfaceScale>
-			<NIF>Art/Structures/Buildings/Gas_Plant/gasplant.nif</NIF>
-			<KFM/>
-			<Button>Art/Structures/Buildings/Gas_Plant/Gas_Plant.dds</Button>
-		</BuildingArtInfo>
-		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_BELGIAN_CHOCOLATERIE</Type>
-			<LSystem>LSYSTEM_2x2</LSystem>
-			<bAnimated>0</bAnimated>
-			<fScale>1.05</fScale>
-			<fInterfaceScale>0.45</fInterfaceScale>
-			<NIF>Art/Structures/Buildings/Tavern/Tavern.nif</NIF>
-			<KFM/>
-			<Button>Art/Structures/Buildings/Tavern/Chocolaterie.dds</Button>
-		</BuildingArtInfo>
-		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_SAUDI_OIL_DEPOT</Type>
-			<LSystem>LSYSTEM_4x4</LSystem>
-			<bAnimated>1</bAnimated>
-			<fScale>1.0</fScale>
-			<fInterfaceScale>0.44</fInterfaceScale>
-			<NIF> Art/Structures/Buildings/Oil_Depot/depot.nif</NIF>
-			<KFM/>
-			<Button>Art/Structures/Buildings/Oil_Depot/depot_button.dds</Button>
-		</BuildingArtInfo>
-		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_WATERWORKS</Type>
 			<LSystem>LSYSTEM_2x2</LSystem>
 			<bAnimated>0</bAnimated>
@@ -3896,6 +4648,116 @@
 			<NIF>Art/Structures/Buildings/Basqaq/med_Courthouse.nif</NIF>
 			<KFM/>
 			<Button>Art/Structures/Buildings/Basqaq/Basqaq.dds</Button>
+		</BuildingArtInfo>
+		<BuildingArtInfo>
+			<Type>ART_DEF_BUILDING_TEMPLE_OF_AMUN</Type>
+			<LSystem>LSYSTEM_3x3</LSystem>
+			<bAnimated>0</bAnimated>
+			<fScale>1.2</fScale>
+			<fInterfaceScale>0.6</fInterfaceScale>
+			<NIF>Art/Structures/Wonders/TempleOfAmun/NubianPyramid.nif</NIF>
+			<KFM/>
+			<Button>Art/Structures/Wonders/TempleOfAmun/pesedjet_mortuary_button.dds</Button>
+		</BuildingArtInfo>
+		<BuildingArtInfo>
+			<Type>ART_DEF_BUILDING_NURI</Type>
+			<LSystem>LSYSTEM_3x3</LSystem>
+			<bAnimated>0</bAnimated>
+			<fScale>0.4</fScale>
+			<fInterfaceScale>0.6</fInterfaceScale>
+			<NIF>Art/Structures/Wonders/Nuri/NubianPyramid.nif</NIF>
+			<KFM/>
+			<Button>Art/Structures/Wonders/Nuri/Nuri_Button.dds</Button>
+		</BuildingArtInfo>
+		<BuildingArtInfo>
+			<Type>ART_DEF_BUILDING_ETEMENAKI</Type>
+			<LSystem>LSYSTEM_2x3</LSystem>
+			<bAnimated>0</bAnimated>
+			<fScale>1.4</fScale>
+			<fInterfaceScale>0.5</fInterfaceScale>
+			<NIF>Art/Structures/Buildings/Sumerian_Ziggurat/Sumerian_Ziggurat.nif</NIF>
+			<KFM/>
+			<Button>art/Interface/Buttons/Buildings/Babel.dds</Button>
+		</BuildingArtInfo>
+		<BuildingArtInfo>
+			<Type>ART_DEF_BUILDING_ABU_SIMBEL</Type>
+			<LSystem>LSYSTEM_3x3</LSystem>
+			<bAnimated>0</bAnimated>
+			<fScale>1.0</fScale>
+			<fInterfaceScale>0.6</fInterfaceScale>
+			<NIF>Art/Structures/Buildings/abu_simbel/abusimbel11.nif</NIF>
+			<KFM/>
+			<Button>Art/Structures/Buildings/abu_simbel/abu_simbel_button.dds</Button>
+		</BuildingArtInfo>
+		<BuildingArtInfo>
+			<Type>ART_DEF_BUILDING_TRAJANS_COLUMN</Type>
+			<LSystem>LSYSTEM_2x2</LSystem>
+			<bAnimated>0</bAnimated>
+			<fScale>2.0</fScale>
+			<fInterfaceScale>0.7</fInterfaceScale>
+			<NIF>Art/Structures/Wonders/trajan/trajan.nif</NIF>
+			<KFM/>
+			<Button>Art/Interface/Buttons/Wonders/trajans_column.dds</Button>
+		</BuildingArtInfo>
+		<BuildingArtInfo>
+			<Type>ART_DEF_BUILDING_CIRCUS_MAXIMUS</Type>
+			<LSystem>LSYSTEM_3x3</LSystem>
+			<bAnimated>0</bAnimated>
+			<fScale>1.2</fScale>
+			<fInterfaceScale>0.55</fInterfaceScale>
+			<NIF>Art/Structures/Wonders/CircusMaximus/CM05.nif</NIF>
+			<KFM/>
+			<Button>Art/Interface/Buttons/Buildings/CircusMaximus.dds</Button>
+		</BuildingArtInfo>
+		<BuildingArtInfo>
+			<Type>ART_DEF_BUILDING_KASUBI_TOMBS</Type>
+			<LSystem>LSYSTEM_2x2</LSystem>
+			<bAnimated>0</bAnimated>
+			<fScale>1.5</fScale>
+			<fInterfaceScale>0.5</fInterfaceScale>
+			<NIF>Art/Structures/Buildings/Africa/Courthouse/afr_courthouse.nif</NIF>
+			<KFM/>
+			<Button>Art/Interface/Buttons/Buildings/KasubiTombs.dds</Button>
+		</BuildingArtInfo>
+		<BuildingArtInfo>
+			<Type>ART_DEF_BUILDING_ROYAL_ROVA</Type>
+			<LSystem>LSYSTEM_2x2</LSystem>
+			<bAnimated>0</bAnimated>
+			<fScale>1.3</fScale>
+			<fInterfaceScale>0.5</fInterfaceScale>
+			<NIF>Art/Structures/Buildings/Africa/Constable/afr_constable.nif</NIF>
+			<KFM/>
+			<Button>Art/Interface/Buttons/Wonders/RoyalRova.dds</Button>
+		</BuildingArtInfo>
+		<BuildingArtInfo>
+			<Type>ART_DEF_BUILDING_COUNCIL</Type>
+			<LSystem>LSYSTEM_2x2</LSystem>
+			<bAnimated>0</bAnimated>
+			<fScale>1.3</fScale>
+			<fInterfaceScale>0.5</fInterfaceScale>
+			<NIF>Art/Structures/Buildings/Eu3WestEurope/Courthouse/west_courthouse.nif</NIF>
+			<KFM/>
+			<Button>Art/Interface/Buttons/Buildings/Council.dds</Button>
+		</BuildingArtInfo>
+		<BuildingArtInfo>
+			<Type>ART_DEF_BUILDING_AGRICULTURAL_FACTORY</Type>
+			<LSystem>LSYSTEM_2x2</LSystem>
+			<bAnimated>0</bAnimated>
+			<fScale>2.0</fScale>
+			<fInterfaceScale>0.5</fInterfaceScale>
+			<NIF>Art/Structures/Buildings/AgriculturalFactory/chem_plant.nif</NIF>
+			<KFM/>
+			<Button>Art/Structures/Buildings/AgriculturalFactory/agriculturalfactory.dds</Button>
+		</BuildingArtInfo>
+		<BuildingArtInfo>
+			<Type>ART_DEF_BUILDING_AMMONIA_PLANT</Type>
+			<LSystem>LSYSTEM_2x2</LSystem>
+			<bAnimated>0</bAnimated>
+			<fScale>0.5</fScale>
+			<fInterfaceScale>0.5</fInterfaceScale>
+			<NIF>Art/Structures/Buildings/AmmoniaPlant/NabooPalace.nif</NIF>
+			<KFM/>
+			<Button>Art/Structures/Buildings/AmmoniaPlant/ammoniaplant.dds</Button>
 		</BuildingArtInfo>
 	</BuildingArtInfos>
 </Civ4ArtDefines>

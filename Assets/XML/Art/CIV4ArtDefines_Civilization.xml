@@ -7,6 +7,66 @@
 <Civ4ArtDefines xmlns="x-schema:CIV4ArtDefinesSchema.xml">
 	<CivilizationArtInfos>
 		<CivilizationArtInfo>
+ 			<Type>ART_DEF_CIVILIZATION_MOROCCO</Type>
+ 			<Button>Art/Interface/Buttons/Civilizations/morocco.dds</Button>
+ 			<Path>Art/Interface/TeamColor/FlagDECAL_Morocco.dds</Path>
+ 			<bWhiteFlag>0</bWhiteFlag>
+ 		</CivilizationArtInfo>
+		<CivilizationArtInfo>
+			<Type>ART_DEF_CIVILIZATION_BUGANDA</Type>
+			<Button>Art/Interface/Buttons/Civilizations/buganda.dds</Button>
+			<Path>Art/Interface/TeamColor/FlagDECAL_Buganda.dds</Path>
+			<bWhiteFlag>0</bWhiteFlag>
+		</CivilizationArtInfo>
+		<CivilizationArtInfo>
+			<Type>ART_DEF_CIVILIZATION_BOERS</Type>
+			<Button>Art/Interface/Buttons/Civilizations/boers.dds</Button>
+			<Path>Art/Interface/TeamColor/flagdecal_boers.dds</Path>
+			<bWhiteFlag>0</bWhiteFlag>
+		</CivilizationArtInfo>
+		<CivilizationArtInfo>
+			<Type>ART_DEF_CIVILIZATION_ADAL</Type>
+			<Button>Art/Interface/Buttons/Civilizations/adal.dds</Button>
+			<Path>Art/Interface/TeamColor/FlagDECAL_Adal.dds</Path>
+			<bWhiteFlag>0</bWhiteFlag>
+		</CivilizationArtInfo>
+		<CivilizationArtInfo>
+			<Type>ART_DEF_CIVILIZATION_FUNJ</Type>
+			<Button>Art/Interface/Buttons/Civilizations/funj.dds</Button>
+			<Path>Art/Interface/TeamColor/FlagDECAL_Funj.dds</Path>
+			<bWhiteFlag>0</bWhiteFlag>
+		</CivilizationArtInfo>
+		<CivilizationArtInfo>
+			<Type>ART_DEF_CIVILIZATION_KATANGA</Type>
+			<Button>Art/Interface/Buttons/Civilizations/katanga.dds</Button>
+			<Path>Art/Interface/TeamColor/FlagDECAL_Basin.dds</Path>
+			<bWhiteFlag>0</bWhiteFlag>
+		</CivilizationArtInfo>
+		<CivilizationArtInfo>
+			<Type>ART_DEF_CIVILIZATION_ZIMBABWE</Type>
+			<Button>Art/Interface/Buttons/Civilizations/zimbabwe.dds</Button>
+			<Path>Art/Interface/TeamColor/FlagZimbab.dds</Path>
+			<bWhiteFlag>0</bWhiteFlag>
+		</CivilizationArtInfo>
+		<CivilizationArtInfo>
+			<Type>ART_DEF_CIVILIZATION_SOMALIA</Type>
+			<Button>Art/Interface/Buttons/Civilizations/somalia.dds</Button>
+			<Path>Art/Interface/TeamColor/flagdecal_somalia.dds</Path>
+			<bWhiteFlag>0</bWhiteFlag>
+		</CivilizationArtInfo>
+		<CivilizationArtInfo>
+			<Type>ART_DEF_CIVILIZATION_SOUTH_AFRICA</Type>
+			<Button>Art/Interface/Buttons/Civilizations/southafrica.dds</Button>
+			<Path>Art/Interface/TeamColor/FlagDECAL_SouthAfrica.dds</Path>
+			<bWhiteFlag>0</bWhiteFlag>
+		</CivilizationArtInfo>
+		<CivilizationArtInfo>
+			<Type>ART_DEF_CIVILIZATION_MADAGASCAR</Type>
+			<Button>Art/Interface/Buttons/Civilizations/madagascar.dds</Button>
+			<Path>Art/Interface/TeamColor/flagdecal_malagasy.dds</Path>
+			<bWhiteFlag>0</bWhiteFlag>
+		</CivilizationArtInfo>
+		<CivilizationArtInfo>
 			<Type>ART_DEF_CIVILIZATION_AMERICA</Type>
 			<Button>,Art/Interface/Buttons/Civilizations/America.dds,Art/Interface/Buttons/Civics_Civilizations_Religions_Atlas.dds,1,5</Button>
 			<Path>Art/Interface/TeamColor/FlagDECAL_13Stars.dds</Path>
@@ -28,12 +88,6 @@
 			<Type>ART_DEF_CIVILIZATION_BABYLON</Type>
 			<Button>Art/Interface/Buttons/Civilizations/Babylonia.dds</Button>
 			<Path>Art/Interface/TeamColor/FlagDECAL_Lamassu.dds</Path>
-			<bWhiteFlag>0</bWhiteFlag>
-		</CivilizationArtInfo>
-		<CivilizationArtInfo>
-			<Type>ART_DEF_CIVILIZATION_BELGIUM</Type>
-			<Button>Art/Interface/Buttons/Civilizations/Belgium.dds</Button>
-			<Path>Art/Interface/TeamColor/FlagDECAL_LeoBelgicus.dds</Path>
 			<bWhiteFlag>0</bWhiteFlag>
 		</CivilizationArtInfo>
 		<CivilizationArtInfo>
@@ -70,6 +124,12 @@
 			<Type>ART_DEF_CIVILIZATION_EGYPT</Type>
 			<Button>,Art/Interface/Buttons/Civilizations/Egypt.dds,Art/Interface/Buttons/Civics_Civilizations_Religions_Atlas.dds,6,5</Button>
 			<Path>Art/Interface/TeamColor/FlagDECAL_EyeOfRa.dds</Path>
+			<bWhiteFlag>0</bWhiteFlag>
+		</CivilizationArtInfo>
+		<CivilizationArtInfo>
+			<Type>ART_DEF_CIVILIZATION_ELAM</Type>
+			<Button>Art/Interface/Buttons/Civilizations/Elam.dds</Button>
+			<Path>Art/Interface/TeamColor/FlagDECAL_Elam.dds</Path>
 			<bWhiteFlag>0</bWhiteFlag>
 		</CivilizationArtInfo>
 		<CivilizationArtInfo>
@@ -212,19 +272,13 @@
 		</CivilizationArtInfo>
 		<CivilizationArtInfo>
 			<Type>ART_DEF_CIVILIZATION_SUMERIA</Type>
-			<Button>,Art/Interface/Buttons/Civilizations/India.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,2,5</Button>
+			<Button>Art/Interface/Buttons/Civilizations/Sumeria.dds</Button>
 			<Path>Art/Interface/TeamColor/FlagDECAL_Sumeria.dds</Path>
 			<bWhiteFlag>0</bWhiteFlag>
 		</CivilizationArtInfo>
 		<CivilizationArtInfo>
-			<Type>ART_DEF_CIVILIZATION_TATARS</Type>
-			<Button>Art/Interface/Buttons/Civilizations/Tatars.dds</Button>
-			<Path>Art/Interface/TeamColor/FlagDECAL_GoldenHorde.dds</Path>
-			<bWhiteFlag>0</bWhiteFlag>
-		</CivilizationArtInfo>
-		<CivilizationArtInfo>
 			<Type>ART_DEF_CIVILIZATION_ZULU</Type>
-			<Button>,Art/Interface/Buttons/Civilizations/Spain.dds,Art/Interface/Buttons/Warlords_Atlas_2.dds,6,1</Button>
+			<Button>Art/Interface/Buttons/Civilizations/zulus.dds</Button>
 			<Path>Art/Interface/TeamColor/FlagDECAL_ZuluShield.dds</Path>
 			<bWhiteFlag>0</bWhiteFlag>
 		</CivilizationArtInfo>
@@ -265,7 +319,7 @@
 			<bWhiteFlag>0</bWhiteFlag>
 		</CivilizationArtInfo>
 		<CivilizationArtInfo>
-			<Type>ART_DEF_CIVILIZATION_MUGHALS</Type>
+			<Type>ART_DEF_CIVILIZATION_GHORIDS</Type>
 			<Button>Art/Interface/Buttons/Civilizations/Mughals.dds</Button>
 			<Path>Art/Interface/TeamColor/FlagDECAL_Mughals.dds</Path>
 			<bWhiteFlag>0</bWhiteFlag>
@@ -322,6 +376,12 @@
 			<Type>ART_DEF_CIVILIZATION_MEXICO</Type>
 			<Button>Art/Interface/Buttons/Civilizations/Mexico.dds</Button>
 			<Path>Art/Interface/TeamColor/FlagDECAL_GoldenEagle.dds</Path>
+			<bWhiteFlag>0</bWhiteFlag>
+		</CivilizationArtInfo>
+		<CivilizationArtInfo>
+			<Type>ART_DEF_CIVILIZATION_MINOA</Type>
+			<Button>Art/Interface/Buttons/Civilizations/Minoa.dds</Button>
+			<Path>Art/Interface/TeamColor/FlagDECAL_Minoa.dds</Path>
 			<bWhiteFlag>0</bWhiteFlag>
 		</CivilizationArtInfo>
 		<CivilizationArtInfo>
@@ -397,6 +457,12 @@
 			<bWhiteFlag>0</bWhiteFlag>
 		</CivilizationArtInfo>
 		<CivilizationArtInfo>
+			<Type>ART_DEF_CIVILIZATION_JUDAH</Type>
+			<Button>Art/Interface/Buttons/Civilizations/Judah.dds</Button>
+			<Path>Art/Interface/TeamColor/FlagDECAL_Judah.dds</Path>
+			<bWhiteFlag>0</bWhiteFlag>
+		</CivilizationArtInfo>
+		<CivilizationArtInfo>
 			<Type>ART_DEF_CIVILIZATION_BURMA</Type>
 			<Button>Art/Interface/Buttons/Civilizations/Burma.dds</Button>
 			<Path>Art/Interface/TeamColor/FlagDECAL_Peacock.dds</Path>
@@ -427,9 +493,69 @@
 			<bWhiteFlag>0</bWhiteFlag>
 		</CivilizationArtInfo>
 		<CivilizationArtInfo>
-			<Type>ART_DEF_CIVILIZATION_MANCHU</Type>
-			<Button>Art/Interface/Buttons/Civilizations/Manchu.dds</Button>
-			<Path>Art/Interface/TeamColor/FlagDECAL_Dragon3.dds</Path>
+			<Type>ART_DEF_CIVILIZATION_MYCENAE</Type>
+			<Button>Art/Interface/Buttons/Civilizations/Mycenae.dds</Button>
+			<Path>Art/Interface/TeamColor/FlagDECAL_Mycenae.dds</Path>
+			<bWhiteFlag>0</bWhiteFlag>
+		</CivilizationArtInfo>
+		<CivilizationArtInfo>
+			<Type>ART_DEF_CIVILIZATION_SPARTA</Type>
+			<Button>Art/Interface/Buttons/Civilizations/Sparta.dds</Button>
+			<Path>Art/Interface/TeamColor/FlagDECAL_Sparta.dds</Path>
+			<bWhiteFlag>0</bWhiteFlag>
+		</CivilizationArtInfo>
+		<CivilizationArtInfo>
+			<Type>ART_DEF_CIVILIZATION_MACEDON</Type>
+			<Button>Art/Interface/Buttons/Civilizations/Macedon.dds</Button>
+			<Path>Art/Interface/TeamColor/FlagDECAL_Macedon.dds</Path>
+			<bWhiteFlag>0</bWhiteFlag>
+		</CivilizationArtInfo>
+		<CivilizationArtInfo>
+			<Type>ART_DEF_CIVILIZATION_GERMANIA</Type>
+			<Button>Art/Interface/Buttons/Civilizations/Germania.dds</Button>
+			<Path>Art/Interface/TeamColor/FlagDECAL_Germania.dds</Path>
+			<bWhiteFlag>0</bWhiteFlag>
+		</CivilizationArtInfo>
+		<CivilizationArtInfo>
+			<Type>ART_DEF_CIVILIZATION_GOTHS</Type>
+			<Button>Art/Interface/Buttons/Civilizations/Goths.dds</Button>
+			<Path>Art/Interface/TeamColor/FlagDECAL_Goths.dds</Path>
+			<bWhiteFlag>0</bWhiteFlag>
+		</CivilizationArtInfo>
+		<CivilizationArtInfo>
+			<Type>ART_DEF_CIVILIZATION_HUNS</Type>
+			<Button>Art/Interface/Buttons/Civilizations/Huns.dds</Button>
+			<Path>Art/Interface/TeamColor/FlagDECAL_Huns.dds</Path>
+			<bWhiteFlag>0</bWhiteFlag>
+		</CivilizationArtInfo>
+		<CivilizationArtInfo>
+			<Type>ART_DEF_CIVILIZATION_VANDALS</Type>
+			<Button>Art/Interface/Buttons/Civilizations/Vandals.dds</Button>
+			<Path>Art/Interface/TeamColor/FlagDECAL_Vandals.dds</Path>
+			<bWhiteFlag>0</bWhiteFlag>
+		</CivilizationArtInfo>
+		<CivilizationArtInfo>
+			<Type>ART_DEF_CIVILIZATION_NUMIDIA</Type>
+			<Button>Art/Interface/Buttons/Civilizations/Numidia.dds</Button>
+			<Path>Art/Interface/TeamColor/FlagDECAL_Numidia.dds</Path>
+			<bWhiteFlag>0</bWhiteFlag>
+		</CivilizationArtInfo>
+		<CivilizationArtInfo>
+			<Type>ART_DEF_CIVILIZATION_SCYTHIA</Type>
+			<Button>Art/Interface/Buttons/Civilizations/Scythia.dds</Button>
+			<Path>Art/Interface/TeamColor/FlagDECAL_Scythia.dds</Path>
+			<bWhiteFlag>0</bWhiteFlag>
+		</CivilizationArtInfo>
+		<CivilizationArtInfo>
+			<Type>ART_DEF_CIVILIZATION_ARMENIA</Type>
+			<Button>Art/Interface/Buttons/Civilizations/Armenia.dds</Button>
+			<Path>Art/Interface/TeamColor/FlagDECAL_Armenia.dds</Path>
+			<bWhiteFlag>0</bWhiteFlag>
+		</CivilizationArtInfo>
+		<CivilizationArtInfo>
+			<Type>ART_DEF_CIVILIZATION_PARTHIA</Type>
+			<Button>Art/Interface/Buttons/Civilizations/Parthia.dds</Button>
+			<Path>Art/Interface/TeamColor/FlagDECAL_Parthia.dds</Path>
 			<bWhiteFlag>0</bWhiteFlag>
 		</CivilizationArtInfo>
 		<CivilizationArtInfo>
@@ -439,9 +565,123 @@
 			<bWhiteFlag>0</bWhiteFlag>
 		</CivilizationArtInfo>
 		<CivilizationArtInfo>
+			<Type>ART_DEF_CIVILIZATION_BUYIDS</Type>
+			<Button>Art/Interface/Buttons/Civilizations/Buyids.dds</Button>
+			<Path>Art/Interface/TeamColor/FlagDECAL_Buyids.dds</Path>
+			<bWhiteFlag>0</bWhiteFlag>
+		</CivilizationArtInfo>
+		<CivilizationArtInfo>
+			<Type>ART_DEF_CIVILIZATION_SAMANIDS</Type>
+			<Button>Art/Interface/Buttons/Civilizations/Samanids.dds</Button>
+			<Path>Art/Interface/TeamColor/FlagDECAL_Samanids.dds</Path>
+			<bWhiteFlag>0</bWhiteFlag>
+		</CivilizationArtInfo>
+		<CivilizationArtInfo>
+			<Type>ART_DEF_CIVILIZATION_GOKTURKS</Type>
+			<Button>Art/Interface/Buttons/Civilizations/Gokturks.dds</Button>
+			<Path>Art/Interface/TeamColor/FlagDECAL_Uyghur.dds</Path>
+			<bWhiteFlag>0</bWhiteFlag>
+		</CivilizationArtInfo>
+		<CivilizationArtInfo>
+			<Type>ART_DEF_CIVILIZATION_TUNIS</Type>
+			<Button>Art/Interface/Buttons/Civilizations/Tunis.dds</Button>
+			<Path>Art/Interface/TeamColor/FlagDECAL_Tunis.dds</Path>
+			<bWhiteFlag>0</bWhiteFlag>
+		</CivilizationArtInfo>
+		<CivilizationArtInfo>
+			<Type>ART_DEF_CIVILIZATION_YEMEN</Type>
+			<Button>Art/Interface/Buttons/Civilizations/Yemen.dds</Button>
+			<Path>Art/Interface/TeamColor/FlagDECAL_Yemen.dds</Path>
+			<bWhiteFlag>0</bWhiteFlag>
+		</CivilizationArtInfo>
+		<CivilizationArtInfo>
+			<Type>ART_DEF_CIVILIZATION_OMAN</Type>
+			<Button>Art/Interface/Buttons/Civilizations/Oman.dds</Button>
+			<Path>Art/Interface/TeamColor/FlagDECAL_Oman.dds</Path>
+			<bWhiteFlag>0</bWhiteFlag>
+		</CivilizationArtInfo>
+		<CivilizationArtInfo>
+			<Type>ART_DEF_CIVILIZATION_JERUSALEM</Type>
+			<Button>Art/Interface/Buttons/Civilizations/Jerusalem.dds</Button>
+			<Path>Art/Interface/TeamColor/FlagDECAL_Jerusalem.dds</Path>
+			<bWhiteFlag>0</bWhiteFlag>
+		</CivilizationArtInfo>
+		<CivilizationArtInfo>
+			<Type>ART_DEF_CIVILIZATION_GEORGIA</Type>
+			<Button>Art/Interface/Buttons/Civilizations/Georgia.dds</Button>
+			<Path>Art/Interface/TeamColor/FlagDECAL_Georgia.dds</Path>
+			<bWhiteFlag>0</bWhiteFlag>
+		</CivilizationArtInfo>
+		<CivilizationArtInfo>
+			<Type>ART_DEF_CIVILIZATION_TIMURIDS</Type>
+			<Button>Art/Interface/Buttons/Civilizations/timurids.dds</Button>
+			<Path>Art/Interface/TeamColor/FlagDECAL_Shamshir.dds</Path>
+			<bWhiteFlag>0</bWhiteFlag>
+		</CivilizationArtInfo>
+		<CivilizationArtInfo>
+			<Type>ART_DEF_CIVILIZATION_KHAZARS</Type>
+			<Button>Art/Interface/Buttons/Civilizations/Khazars.dds</Button>
+			<Path>Art/Interface/TeamColor/FlagDECAL_Khazars.dds</Path>
+			<bWhiteFlag>0</bWhiteFlag>
+		</CivilizationArtInfo>
+		<CivilizationArtInfo>
+			<Type>ART_DEF_CIVILIZATION_SONGHAI</Type>
+			<Button>Art/Interface/Buttons/Civilizations/Songhai.dds</Button>
+			<Path>Art/Interface/TeamColor/FlagDECAL_Mande.dds</Path>
+			<bWhiteFlag>0</bWhiteFlag>
+		</CivilizationArtInfo>
+		<CivilizationArtInfo>
+			<Type>ART_DEF_CIVILIZATION_GHANA</Type>
+			<Button>Art/Interface/Buttons/Civilizations/Ghana.dds</Button>
+			<Path>Art/Interface/TeamColor/FlagDECAL_Camel.dds</Path>
+			<bWhiteFlag>0</bWhiteFlag>
+		</CivilizationArtInfo>
+		<CivilizationArtInfo>
+			<Type>ART_DEF_CIVILIZATION_KANEM_BORNU</Type>
+			<Button>Art/Interface/Buttons/Civilizations/KanemBornu.dds</Button>
+			<Path>Art/Interface/TeamColor/FlagDECAL_KanemBornu.dds</Path>
+			<bWhiteFlag>0</bWhiteFlag>
+		</CivilizationArtInfo>
+		<CivilizationArtInfo>
+			<Type>ART_DEF_CIVILIZATION_BENIN</Type>
+			<Button>Art/Interface/Buttons/Civilizations/Benin.dds</Button>
+			<Path>Art/Interface/TeamColor/FlagDECAL_Benin.dds</Path>
+			<bWhiteFlag>0</bWhiteFlag>
+		</CivilizationArtInfo>
+		<CivilizationArtInfo>
+			<Type>ART_DEF_CIVILIZATION_HAUSA</Type>
+			<Button>Art/Interface/Buttons/Civilizations/Hausa.dds</Button>
+			<Path>Art/Interface/TeamColor/FlagDECAL_Mask.dds</Path>
+			<bWhiteFlag>0</bWhiteFlag>
+		</CivilizationArtInfo>
+		<CivilizationArtInfo>
+			<Type>ART_DEF_CIVILIZATION_ASHANTI</Type>
+			<Button>Art/Interface/Buttons/Civilizations/Ashanti.dds</Button>
+			<Path>Art/Interface/TeamColor/FlagDECAL_Ashanti.dds</Path>
+			<bWhiteFlag>0</bWhiteFlag>
+		</CivilizationArtInfo>
+		<CivilizationArtInfo>
+			<Type>ART_DEF_CIVILIZATION_MANCHU</Type>
+			<Button>Art/Interface/Buttons/Civilizations/Manchu.dds</Button>
+			<Path>Art/Interface/TeamColor/FlagDECAL_Dragon3.dds</Path>
+			<bWhiteFlag>0</bWhiteFlag>
+		</CivilizationArtInfo>
+		<CivilizationArtInfo>
 			<Type>ART_DEF_CIVILIZATION_SAUDI</Type>
 			<Button>Art/Interface/Buttons/Civilizations/Saudi.dds</Button>
 			<Path>Art/Interface/TeamColor/FlagDECAL_PalmTree.dds</Path>
+			<bWhiteFlag>0</bWhiteFlag>
+		</CivilizationArtInfo>
+		<CivilizationArtInfo>
+			<Type>ART_DEF_CIVILIZATION_BELGIUM</Type>
+			<Button>Art/Interface/Buttons/Civilizations/Belgium.dds</Button>
+			<Path>Art/Interface/TeamColor/FlagDECAL_LeoBelgicus.dds</Path>
+			<bWhiteFlag>0</bWhiteFlag>
+		</CivilizationArtInfo>
+		<CivilizationArtInfo>
+			<Type>ART_DEF_CIVILIZATION_TATARS</Type>
+			<Button>Art/Interface/Buttons/Civilizations/Tatars.dds</Button>
+			<Path>Art/Interface/TeamColor/FlagDECAL_GoldenHorde.dds</Path>
 			<bWhiteFlag>0</bWhiteFlag>
 		</CivilizationArtInfo>
 	</CivilizationArtInfos>

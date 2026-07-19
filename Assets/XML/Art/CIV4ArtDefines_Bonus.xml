@@ -395,6 +395,15 @@
 			<FontButtonIndex>41</FontButtonIndex>
 		</BonusArtInfo>
 		<BonusArtInfo>
+			<Type>ART_DEF_BONUS_FERTILIZER</Type>
+			<fScale>1.0</fScale>
+			<fInterfaceScale>1.0</fInterfaceScale>
+			<NIF>Art/Terrain/Resources/Fertilizer/Salt.nif</NIF>
+			<KFM/>
+			<Button>Art/Interface/Buttons/Resources/Fertilizer.dds</Button>
+			<FontButtonIndex>54</FontButtonIndex>
+		</BonusArtInfo>
+		<BonusArtInfo>
 			<Type>ART_DEF_BONUS_POTATO</Type>
 			<fScale>0.8</fScale>
 			<fInterfaceScale>1.0</fInterfaceScale>
