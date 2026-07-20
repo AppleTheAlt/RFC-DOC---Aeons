@@ -885,7 +885,7 @@ dGoals = {
 	),
 	iPersia: (
 		RouteConnection([iRouteRoad], city(tPersepolis).named(PERSEPOLIS), plots.region(rAnatolia), by=-500),
-		BuildingCount(wonders(), 14, by=-300),
+		BuildingCount(wonders(), 12, by=-300),
 		PopulationPercent(25, at=-300),
 	),
 	iCelts: (
