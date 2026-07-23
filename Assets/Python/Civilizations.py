@@ -712,7 +712,7 @@ lCivilizations = [
 	Civilization(
 		iZimbabwe,
 		iGold=100,
-		lCivics=[iDespotism, iSlavery, iRedistribution],
+		lCivics=[iDespotism, iSlavery],
 		techs=techs.column(2).including(iAlloys).without(iSeafaring, iShipbuilding)
 	),
 	Civilization(
