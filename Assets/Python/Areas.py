@@ -165,6 +165,7 @@ iOttomans :	(79, 55),	# Istanbul
 ### Birth Area ###
 
 dBirthArea = CivDict({  
+iKanemBornu:		((70, 34),	(71, 37)),
 iMorocco :		((56, 42),  (59, 49)),
 iSouthAfrica :		((72, 11), 	(79, 14)),
 iHausa :		((65, 34),	(67, 37)),
