@@ -3577,23 +3577,24 @@ BeginPlot
 	RouteType=ROUTE_ROAD
 	BeginUnit
 		UnitType=UNIT_SHORTBOWMAN
-		UnitOwner=CIVILIZATION_RUS
+		UnitOwner=CIVILIZATION_INDEPENDENT
 	EndUnit
 	BeginUnit
 		UnitType=UNIT_SHORTBOWMAN
-		UnitOwner=CIVILIZATION_RUS
+		UnitOwner=CIVILIZATION_INDEPENDENT
 	EndUnit
 	BeginCity
-		CityOwner=CIVILIZATION_RUS
+		CityOwner=CIVILIZATION_INDEPENDENT
 		CityName=Minsk
 		CityPopulation=5
 		BuildingType=BUILDING_BARRACKS
 		BuildingType=BUILDING_GRANARY
 		BeginCulture
-			Civilization=CIVILIZATION_RUS, Culture=100
+			Civilization=CIVILIZATION_INDEPENDENT, Culture=50
 		EndCulture
 		YearFounded=900
-		YearAcquired=900
+		YearAcquired=1050
+		PreviousOwner=CIVILIZATION_RUS
 	EndCity
 EndPlot
 BeginPlot
@@ -3742,14 +3743,14 @@ BeginPlot
 	RouteType=ROUTE_ROAD
 	BeginUnit
 		UnitType=UNIT_RUS_DRUZHINA
-		UnitOwner=CIVILIZATION_RUS
+		UnitOwner=CIVILIZATION_INDEPENDENT2
 	EndUnit
 	BeginUnit
 		UnitType=UNIT_SHORTBOWMAN
-		UnitOwner=CIVILIZATION_RUS
+		UnitOwner=CIVILIZATION_INDEPENDENT2
 	EndUnit
 	BeginCity
-		CityOwner=CIVILIZATION_RUS
+		CityOwner=CIVILIZATION_INDEPENDENT2
 		CityName=Novgorod
 		CityPopulation=4
 		BuildingType=BUILDING_GRANARY
@@ -3763,9 +3764,11 @@ BeginPlot
 		BuildingType=BUILDING_ORTHODOX_MONASTERY
 		ReligionType=RELIGION_ORTHODOXY
 		BeginCulture
-			Civilization=CIVILIZATION_RUS, Culture=100
+			Civilization=CIVILIZATION_INDEPENDENT2, Culture=100
 		EndCulture
 		YearFounded=870
+		YearAcquired=1060
+		PreviousOwner=CIVILIZATION_RUS
 	EndCity
 EndPlot
 BeginPlot
