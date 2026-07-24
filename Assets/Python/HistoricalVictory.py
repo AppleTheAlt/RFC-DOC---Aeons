@@ -921,8 +921,8 @@ dGoals = {
 	),
 	iMaya: (
 		All(
-			Discover(iCalendar, by=-100),
-			Discover(iArithmetics, by=100),
+			Discover(iCalendar, by=-250),
+			Discover(iArithmetics, by=-150),
 		),
 		Wonder(iTempleOfKukulkan, by=600),
 		ContactBeforeRevealed(civs(*lBioOldWorld).named(OLD_WORLD_CIVILIZATION), plots.regions(*lAmerica).named(AMERICAS)),
