@@ -24326,8 +24326,8 @@
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_MACHINE</FormationType>
 		</UnitInfo>
-				<UnitInfo>
-			<Class>UNITCLASS_COG</Class>
+		<UnitInfo>
+			<Class>UNITCLASS_HEAVY_GALLEY</Class>
 			<Type>UNIT_SOMALI_BEDEN</Type>
 			<Combat>UNITCOMBAT_NAVAL</Combat>
 			<Domain>DOMAIN_SEA</Domain>
