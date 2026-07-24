@@ -8827,7 +8827,7 @@
 			</Buildings>
 			<Units>
 				<Unit>
-					<UnitClassType>UNITCLASS_COG</UnitClassType>
+					<UnitClassType>UNITCLASS_HEAVY_GALLEY</UnitClassType>
 					<UnitType>UNIT_SOMALI_BEDEN</UnitType>
 				</Unit>
 				<Unit>
