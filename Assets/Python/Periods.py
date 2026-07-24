@@ -177,6 +177,9 @@ def onBirth(iPlayer):
 
 @handler("collapse")
 def onCollapse(iPlayer):
+	if civ(iPlayer) == iArabia:
+		setPeriod(iArabia, iPeriodHejaz)
+
 	if civ(iPlayer) == iChina:
 		setPeriod(iMongols, iPeriodYuan)
 
