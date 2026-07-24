@@ -1127,7 +1127,7 @@ class TradeMissionRegion(TrackRequirement):
 		
 		self.handle("tradeMission", self.check_trade_mission)
 		
-	def check_trade_mission(self, goal, (x, y), iGold):
+	def check_trade_mission(self, goal, iGold, (x, y)):
 		validCities = cities.all().where(lambda city: city in self.area)
 		if city((x,y)) in validCities:
 			self.increment()
