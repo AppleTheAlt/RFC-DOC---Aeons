@@ -57,4 +57,12 @@
 		<Italian>Toltecs</Italian>
 		<Spanish>Toltecs</Spanish>
 	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_TOLTECS_ALTEPETL</Tag>
+		<English>%s2 Altepetl</English>
+		<French>%s2 Altepetl</French>
+		<German>%s2 Altepetl</German>
+		<Italian>%s2 Altepetl</Italian>
+		<Spanish>%s2 Altepetl</Spanish>
+	</TEXT>
 </Civ4GameText>
