@@ -171,11 +171,11 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UP_SOM</Tag>
-		<English>-1 [ICON_COMMERCE], -1 [ICON_PRODUCTION] from water tiles, but +1 [ICON_COMMERCE], +1 [ICON_PRODUCTION] from specialists in coastal cities</English>
-		<French>-1 [ICON_COMMERCE], -1 [ICON_PRODUCTION] from water tiles, but +1 [ICON_COMMERCE], +1 [ICON_PRODUCTION] from specialists in coastal cities</French>
-		<German>-1 [ICON_COMMERCE], -1 [ICON_PRODUCTION] from water tiles, but +1 [ICON_COMMERCE], +1 [ICON_PRODUCTION] from specialists in coastal cities</German>
-		<Italian>-1 [ICON_COMMERCE], -1 [ICON_PRODUCTION] from water tiles, but +1 [ICON_COMMERCE], +1 [ICON_PRODUCTION] from specialists in coastal cities</Italian>
-		<Spanish>-1 [ICON_COMMERCE], -1 [ICON_PRODUCTION] from water tiles, but +1 [ICON_COMMERCE], +1 [ICON_PRODUCTION] from specialists in coastal cities</Spanish>
+		<English>-1 [ICON_FOOD], -1 [ICON_COMMERCE] from water tiles, but +1 [ICON_FOOD], +1 [ICON_COMMERCE] from specialists in coastal cities</English>
+		<French>-1 [ICON_FOOD], -1 [ICON_COMMERCE] from water tiles, but +1 [ICON_FOOD], +1 [ICON_COMMERCE] from specialists in coastal cities</French>
+		<German>-1 [ICON_FOOD], -1 [ICON_COMMERCE] from water tiles, but +1 [ICON_FOOD], +1 [ICON_COMMERCE] from specialists in coastal cities</German>
+		<Italian>-1 [ICON_FOOD], -1 [ICON_COMMERCE] from water tiles, but +1 [ICON_FOOD], +1 [ICON_COMMERCE] from specialists in coastal cities</Italian>
+		<Spanish>-1 [ICON_FOOD], -1 [ICON_COMMERCE] from water tiles, but +1 [ICON_FOOD], +1 [ICON_COMMERCE] from specialists in coastal cities</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UP_ASH_TITLE</Tag>
