@@ -3866,11 +3866,12 @@ BeginPlot
 		CityOwner=CIVILIZATION_SWAHILI
 		CityName=Kilwa
 		CityPopulation=3
+		BuildingType=BUILDING_PALACE
 		BuildingType=BUILDING_GRANARY
 		BuildingType=BUILDING_HARBOR
 		BuildingType=BUILDING_LIGHTHOUSE
-		BuildingType=BUILDING_SHIA_TEMPLE
-		ReligionType=RELIGION_SHIA
+		BuildingType=BUILDING_ISLAMIC_TEMPLE
+		ReligionType=RELIGION_ISLAM
 		BeginCulture
 			Civilization=CIVILIZATION_SWAHILI, Culture=50
 		EndCulture

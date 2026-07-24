@@ -219,7 +219,7 @@ lCivilizations = [
 		iSwahili,
 		iGold=200,
 		iAdvancedStartPoints=50,
-		iStateReligion=iShia,
+		iStateReligion=iIslam,
 		lCivics=[iElective, iCitizenship, iSlavery, iMerchantTrade, iClergy, iThalassocracy],
 		techs=techs.column(6).including(iLateenSails, iAlchemy, iFeudalism, iNobility)
 	),
