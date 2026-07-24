@@ -920,7 +920,7 @@ class Birth(object):
 				return False
 
 		# Holy Rome requires that the French managed to conquer at least one city in Germany and that Rome doesn't exist.
-		if self.iCiv == iHolyRome:
+		if self.iCiv == iHolyRome and not self.isHuman() and not player(iFrance).isHuman():
 			if not cities.region(rLowerGermany).owner(iFrance):
 				return False
 			if player(iRome).isExisting():
@@ -1467,7 +1467,7 @@ class Birth(object):
 			
 		# Aeons - Holy Rome birth area is the French birth area in Germany, Central Europe and Italy
 		# Ignore for human player
-		if self.iCiv == iHolyRome and not self.isHuman():
+		if self.iCiv == iHolyRome and not self.isHuman() and not player(iFrance).isHuman():
 			area = plots.regions(rLowerGermany, rCentralEurope, rItaly).where(lambda p: p.isOwned() and civ(p.getOwner()) == iFrance)
 			return area.unique()
 		
