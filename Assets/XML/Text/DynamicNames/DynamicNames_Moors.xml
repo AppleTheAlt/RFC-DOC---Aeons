@@ -26,7 +26,7 @@
 		<Spanish>Andalusian Peoples</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_CIV_MOORS_DEFAULT</Tag>
+		<Tag>TXT_KEY_CIV_ANDALUSIA_DEFAULT</Tag>
 		<English>Kingdom of %s1</English>
 		<French>
 			<Text>Royaume du %s1</Text>
