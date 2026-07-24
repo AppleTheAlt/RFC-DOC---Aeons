@@ -616,7 +616,7 @@ lCivilizations = [
 		iSwahili,
 		iGold=200,
 		iAdvancedStartPoints=50,
-		iStateReligion=iShia,
+		iStateReligion=iIslam,
 		lCivics=[iElective, iCitizenship, iSlavery, iMerchantTrade, iClergy, iThalassocracy],
 		techs=techs.column(6).including(iLateenSails, iAlchemy)
 	),
@@ -2309,6 +2309,8 @@ def createSpecificUnits(iPlayer, tile):
 		makeUnits(iPlayer, iWarElephant, tile, 5)
 	elif iCiv == iKorea:
 		makeUnit(iPlayer, iConfucianMissionary, tile)
+	elif iCiv == iSwahili:
+		makeUnit(iPlayer, iShiaMissionary, tile)
 	elif iCiv == iDravidia:
 		makeUnit(iPlayer, iWarElephant, tile)
 	elif iCiv == iEthiopia:
