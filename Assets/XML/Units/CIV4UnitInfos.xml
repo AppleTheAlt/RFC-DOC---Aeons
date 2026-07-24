@@ -24375,6 +24375,9 @@
 				</UnitAI>
 			</UnitAIs>
 			<PrereqTech>TECH_LATEEN_SAILS</PrereqTech>
+			<TechTypes>
+			    <PrereqTech>TECH_SHIPBUILDING</PrereqTech>
+			</TechTypes>
 			<iCost>90</iCost>
 			<iAdvancedStartCost>100</iAdvancedStartCost>
 			<iMinAreaSize>20</iMinAreaSize>
@@ -24816,86 +24819,6 @@
 				<UnitMeshGroup>
 					<iRequired>1</iRequired>
 					<EarlyArtDefineTag>ART_DEF_UNIT_COG</EarlyArtDefineTag>
-				</UnitMeshGroup>
-			</UnitMeshGroups>
-			<FormationType>FORMATION_TYPE_MACHINE</FormationType>
-		</UnitInfo>
-		<UnitInfo>
-			<Class>UNITCLASS_COG</Class>
-			<Type>UNIT_SOMALI_BEDEN</Type>
-			<Combat>UNITCOMBAT_NAVAL</Combat>
-			<Domain>DOMAIN_SEA</Domain>
-			<DefaultUnitAI>UNITAI_ASSAULT_SEA</DefaultUnitAI>
-			<Description>TXT_KEY_UNIT_SOMALI_BEDEN</Description>
-			<Civilopedia>TXT_KEY_UNIT_SOMALI_BEDEN_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_SOMALI_BEDEN_STRATEGY</Strategy>
-			<Help>TXT_KEY_UNIT_KANEM_BORNUAN_CARAVAN_HELP</Help>
-			<Advisor>ADVISOR_MILITARY</Advisor>
-			<bRivalTerritory>1</bRivalTerritory>
-			<bMilitarySupport>1</bMilitarySupport>
-			<bMilitaryProduction>1</bMilitaryProduction>
-			<bPillage>1</bPillage>
-			<bMechanized>1</bMechanized>
-			<bRenderBelowWater>1</bRenderBelowWater>
-			<iWithdrawalProb>25</iWithdrawalProb>
-			<UnitClassUpgrades>
-				<UnitClassUpgrade>
-					<UnitClassUpgradeType>UNITCLASS_CARAVEL</UnitClassUpgradeType>
-					<bUnitClassUpgrade>1</bUnitClassUpgrade>
-				</UnitClassUpgrade>
-				<UnitClassUpgrade>
-					<UnitClassUpgradeType>UNITCLASS_GALLEON</UnitClassUpgradeType>
-					<bUnitClassUpgrade>1</bUnitClassUpgrade>
-				</UnitClassUpgrade>
-			</UnitClassUpgrades>
-			<iBaseTrade>75</iBaseTrade>
-			<iTradeMultiplier>200</iTradeMultiplier>
-			<UnitAIs>
-				<UnitAI>
-					<UnitAIType>UNITAI_ASSAULT_SEA</UnitAIType>
-					<bUnitAI>1</bUnitAI>
-				</UnitAI>
-			</UnitAIs>
-			<PrereqTech>TECH_LATEEN_SAILS</PrereqTech>
-			<iCost>90</iCost>
-			<iAdvancedStartCost>100</iAdvancedStartCost>
-			<iMinAreaSize>20</iMinAreaSize>
-			<iMoves>4</iMoves>
-			<iNukeRange>-1</iNukeRange>
-			<TerrainImpassables>
-				<TerrainImpassable>
-					<TerrainType>TERRAIN_OCEAN</TerrainType>
-					<bTerrainImpassable>1</bTerrainImpassable>
-				</TerrainImpassable>
-			</TerrainImpassables>
-			<FeatureImpassables>
-				<FeatureImpassable>
-					<FeatureType>FEATURE_CAPE</FeatureType>
-					<bFeatureImpassable>1</bFeatureImpassable>
-				</FeatureImpassable>
-			</FeatureImpassables>
-			<FeaturePassableTechs>
-				<FeaturePassableTech>
-					<FeatureType>FEATURE_CAPE</FeatureType>
-					<PassableTech>TECH_COMPASS</PassableTech>
-				</FeaturePassableTech>
-			</FeaturePassableTechs>
-			<iCombat>5</iCombat>
-			<iCombatLimit>100</iCombatLimit>
-			<iXPValueAttack>4</iXPValueAttack>
-			<iXPValueDefense>2</iXPValueDefense>
-			<DomainCargo>DOMAIN_LAND</DomainCargo>
-			<iAsset>2</iAsset>
-			<iPower>5</iPower>
-			<UnitMeshGroups>
-				<iGroupSize>1</iGroupSize>
-				<fMaxSpeed>2.25</fMaxSpeed>
-				<fPadTime>1</fPadTime>
-				<iMeleeWaveSize>1</iMeleeWaveSize>
-				<iRangedWaveSize>1</iRangedWaveSize>
-				<UnitMeshGroup>
-					<iRequired>1</iRequired>
-					<EarlyArtDefineTag>ART_DEF_UNIT_SOMALI_BEDEN</EarlyArtDefineTag>
 				</UnitMeshGroup>
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_MACHINE</FormationType>
