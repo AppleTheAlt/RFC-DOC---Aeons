@@ -2750,7 +2750,7 @@ int CvTeam::getResearchCost(TechTypes eTech, bool bModifiers) const
 		int iModifier = 100;
 
 		iModifier += getPopulationResearchModifier();
-		//iModifier += getTechLeaderModifier();
+		iModifier += getTechLeaderModifier();
 		//iModifier += getTechDifferenceModifier();		// Aeons: Remove tech divergence in favour of modernisation.
 		iModifier += getSpreadResearchModifier(eTech);
 		iModifier += getTurnResearchModifier();
