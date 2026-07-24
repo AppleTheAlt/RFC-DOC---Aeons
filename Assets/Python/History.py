@@ -438,7 +438,7 @@ def mongolConquerors(iTargetTeam):
 		data.setFirstContactMongols(iTargetCiv, False)
 		teamTarget = team(iTargetTeam)
 		
-		mongol_area = plots.rectangle((70, 39), (86, 66))
+		mongol_area = plots.rectangle((78, 39), (86, 66))
 		
 		mongol_cities = cities.owner(iMongols)
 		target_cities = mongol_area.cities().owner(iTargetCiv)
