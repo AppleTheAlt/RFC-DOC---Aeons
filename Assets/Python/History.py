@@ -50,7 +50,7 @@ def buildAcquiredCapitalInfrastructure(iOwner, iPlayer, city):
 
 @handler("cityAcquired")
 def openGibraltar(iOwner, iPlayer, city):
-	if at(city, plots.capital(iMoors)) and civ(iPlayer) in dCivGroups[iCivGroupEurope] and civ(iOwner) == iMoors:
+	if at(city, plots.capital(iMoors)) and civ(iPlayer) in dCivGroups[iCivGroupEurope] and (civ(iOwner) == iMoors or civ(iOwner) == iMorocco):
 		for tile in lStraitOfGibraltar:
 			if cities.surrounding(tile, radius=2).owner(iPlayer):
 				convertPlotCulture(tile, slot(iSpain), 100, True) 

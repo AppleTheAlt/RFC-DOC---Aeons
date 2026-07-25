@@ -585,7 +585,7 @@ def spawnConquerors(iPlayer, iPreferredTarget, tTL, tBR, iNumTargets, iYear, iIn
 			units += makeUnits(iSelectedPlayer, iTrebuchet, tPlot, 1, UnitAITypes.UNITAI_ATTACK_CITY)
 
 		elif iCiv == iSpain:
-			units += makeUnits(iSelectedPlayer, iCrusader, tPlot, 3, UnitAITypes.UNITAI_ATTACK_CITY)
+			units += makeUnits(iSelectedPlayer, iCrusader, tPlot, 2, UnitAITypes.UNITAI_ATTACK_CITY)
 		
 		elif iCiv == iGhorids:
 			units += makeUnits(iSelectedPlayer, iMujahideenSpearman, tPlot, 1, UnitAITypes.UNITAI_ATTACK_CITY)
