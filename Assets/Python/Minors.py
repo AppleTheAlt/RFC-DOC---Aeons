@@ -609,7 +609,7 @@ barbarians = [
 	Barbarians(-400, -150, {iAspabarata: 3}, ((96, 42), (105, 49)), 9, INVADERS, target_area=((98, 42), (112, 49)), adjective="TXT_KEY_ADJECTIVE_INDO_SCYTHIAN"),
 	Barbarians(-350, 200, {iLightSwordsman: 1}, ((113, 47), (117, 54)), 10, MINORS, adjective="TXT_KEY_ADJECTIVE_XIRONG"),
 	Barbarians(-300, 100, {iHorseArcher: 3}, ((113, 55), (128, 62)), 7, INVADERS, target_area=((117, 46), (129, 59)), adjective="TXT_KEY_ADJECTIVE_XIONGNU", promotions=(iDesertAdaptation, iSteppeAdaptation)),
-	Barbarians(-300, 300, {iBedouinSheikh: 1}, ((86, 38), (91, 45)), 10, NOMADS, target_area=((77, 39), (91, 50))),
+	Barbarians(-100, 300, {iBedouinSheikh: 1}, ((86, 38), (91, 45)), 10, NOMADS, target_area=((77, 39), (91, 50))),
 	Barbarians(-250, 300, {iGermanicWarrior: 1}, ((64, 59), (69, 65)), 8, INVADERS, target_area=((58, 52), (71, 62)), iAlternativeCiv=iGermania, adjective="TXT_KEY_ADJECTIVE_GERMANIC"),
 	Barbarians(100, 400, {iHorseArcher: 5}, ((113, 55), (128, 62)), 7, INVADERS, target_area=((117, 46), (129, 59)), adjective="TXT_KEY_ADJECTIVE_XIONGNU", promotions=(iDesertAdaptation, iSteppeAdaptation)),
 	Barbarians(-250, 300, {iGermanicWarrior: 1}, ((64, 59), (75, 65)), 10, INVADERS, target_area=((58, 52), (71, 62)), iAlternativeCiv=iGermania, adjective="TXT_KEY_ADJECTIVE_GERMANIC"),
