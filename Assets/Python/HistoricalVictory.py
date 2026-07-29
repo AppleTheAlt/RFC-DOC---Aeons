@@ -1302,7 +1302,7 @@ dGoals = {
 		),
 	),
 	iMongols: (
-		Control(plots.regions(rNorthChina, rSouthChina).named(CHINA), at=1350),
+		Control(plots.regions(rNorthChina, rSouthChina).named(CHINA), at=1320),
 		All(
 			SackCount(20),
 			LandPercent(16),
