@@ -1002,16 +1002,16 @@ dGoals = {
 	),
 	iKhmer: (
 		All(
-			CultureAmount(2000, by=600),
-			CultureAmount(12000, by=1400),
+			CultureAmount(3000, by=600),
+			CultureAmount(20000, by=1400),
 		),
 		All(
-			BuildingCount((iHinduMonastery, 4), (iBuddhistMonastery, 4)),
+			BuildingCount((iHinduMonastery, 5), (iBuddhistMonastery, 5)),
 			Wonder(iWatPreahPisnulok),
-			at=1200,
+			at=1150,
 		),
 		All(
-			AveragePopulation(12, at=1200),
+			AveragePopulation(12, at=1000),
 			AveragePopulation(15, by=1400),
 			BestPopulationCity(city(tAngkor).named(ANGKOR), at=1400),
 		),
