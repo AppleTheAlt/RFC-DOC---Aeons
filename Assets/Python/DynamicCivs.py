@@ -3150,7 +3150,7 @@ def specificTitle(iPlayer, lPreviousOwners=[]):
 			if bWar:
 				return "TXT_KEY_CIV_GREECE_LEAGUE"
 				
-			return "TXT_KEY_GREECE_CITY_STATE_OF"
+			return "TXT_KEY_CIV_GREECE_CITY_STATE_OF"
 			
 	elif iCiv == iPersia:
 		if bEmpire:
