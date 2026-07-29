@@ -3719,7 +3719,7 @@
 			<FreeStartEra>ERA_INDUSTRIAL</FreeStartEra>
 			<PrereqTech>TECH_CURRENCY</PrereqTech>
 			<iCost>100</iCost>
-			<iMaintenanceModifier>-50</iMaintenanceModifier>
+			<iMaintenanceModifier>-25</iMaintenanceModifier>
 			<iAdvancedStartCost>100</iAdvancedStartCost>
 			<iMinAreaSize>-1</iMinAreaSize>
 			<iConquestProb>60</iConquestProb>
