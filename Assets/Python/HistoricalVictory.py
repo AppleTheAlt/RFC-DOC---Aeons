@@ -1247,7 +1247,7 @@ dGoals = {
 			BuildingCount(iConfucianMonastery, 4),
 			by=1600,
 		),
-		CultureLevelCityCount(iCultureLevelInfluential, 3, by=1700),
+		CultureLevelCityCount(iCultureLevelInfluential, 3, by=1650),
 	),
 	iSwahili: (
 		All(
