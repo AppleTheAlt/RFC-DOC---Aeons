@@ -1353,7 +1353,10 @@ dGoals = {
 	iSweden: (
 		StateReligionCount(group(iCivGroupEurope).named(EUROPEAN), iProtestantism, 6, by=1650),
 		CultureCover(plots.all().adjacent_region(rBalticSea).land().named(BALTIC_SEA_REGION), by=1700),
-		HappiestTurns(50, by=1980),
+		All(
+			BestTechPlayer(at=1980),
+			HappiestTurns(50, by=1980),
+		),
 	),
 	iTatars: (
 		All(
