@@ -501,11 +501,11 @@
 			<iMaxLatitude>90</iMaxLatitude>
 			<iAsset>2</iAsset>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
-			<YieldModifiers>
+			<YieldChanges>
 				<iYield>0</iYield>
 				<iYield>0</iYield>
-				<iYield>15</iYield>
-			</YieldModifiers>
+				<iYield>2</iYield>
+			</YieldChanges>
 			<ObsoleteSafeCommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
