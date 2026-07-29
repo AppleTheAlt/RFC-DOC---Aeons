@@ -11558,6 +11558,10 @@ BeginPlot
 		UnitOwner=CIVILIZATION_YEMEN
 	EndUnit
 	BeginUnit
+		UnitType=UNIT_ARQUEBUSIER
+		UnitOwner=CIVILIZATION_YEMEN
+	EndUnit
+	BeginUnit
 		UnitType=UNIT_WORKER
 		UnitOwner=CIVILIZATION_ASHANTI
 	EndUnit

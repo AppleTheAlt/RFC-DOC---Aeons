@@ -8677,6 +8677,10 @@ BeginPlot
 		UnitType=UNIT_ARQUEBUSIER
 		UnitOwner=CIVILIZATION_YEMEN
 	EndUnit
+	BeginUnit
+		UnitType=UNIT_ARQUEBUSIER
+		UnitOwner=CIVILIZATION_YEMEN
+	EndUnit
 	BeginCity
 		CityOwner=CIVILIZATION_YEMEN
 		CityName=Sanaa
