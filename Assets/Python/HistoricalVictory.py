@@ -1133,7 +1133,7 @@ dGoals = {
 				plots.rectangle(tAndalusia).named(ANDALUSIA),
 				at=700,
 			),
-		CompleteEra(iMedieval, by=1200),
+		CompleteEra(iMedieval, by=1350),
 		All(
 			ControlTurns(plots.region(rArabia), 150),
 			ControlTurns(plots.region(rEgypt).named(EGYPT), 150),
@@ -1141,7 +1141,7 @@ dGoals = {
 			ControlTurns(plots.region(rMaghreb).named(MAGHREB), 100),
 			ControlTurns(plots.regions(rPersia, rKhorasan).named(PERSIA), 100),
 			ControlTurns(plots.region(rIberia).named(IBERIA), 50),
-			by=1850,
+			by=1800,
 		),	
 	),
 	iTibet: (
