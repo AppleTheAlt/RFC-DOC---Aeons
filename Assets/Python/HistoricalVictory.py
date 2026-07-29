@@ -814,10 +814,10 @@ dGoals = {
 			ResourceCount(sum(lHappinessResources).named(HAPPINESS_RESOURCES), 5),
 			by=-900,
 		),
-		HappyCityPopulation(40, by=-300),
+		HappyCityPopulation(40, by=-500),
 		All(
-			TradeNetworkReligionCityCount(iOrthodoxy, 12, by=600),
-			TradeNetworkReligionCityCount(iOrthodoxy, 24, by=1200),
+			TradeNetworkReligionCityCount(iOrthodoxy, 12, by=500),
+			TradeNetworkReligionCityCount(iOrthodoxy, 24, by=1000),
 		),
 	),
 	iGreece: (
