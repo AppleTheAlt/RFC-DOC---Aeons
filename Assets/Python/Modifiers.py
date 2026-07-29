@@ -350,7 +350,7 @@ dResearchCostMods = CivDict({
 	iChina: 130, # Aeons - Advancing too much due to stability - was 120
 	iHittites: 125,
 	iNubia: 150,
-	iGreece: 140,
+	iGreece: 110,
 	iMacedon: 115,
 	iAssyria: 120,
 	iIndia: 145, # Aeons - Advancing too much due to stability - was 130
@@ -1487,7 +1487,7 @@ dGreatPeopleThresholdMods = CivDict({
 	iChina: 125,
 	iHittites: 140,
 	iNubia: 140,
-	iGreece: 160,
+	iGreece: 130,
 	iMacedon: 110,
 	iAssyria: 120,
 	iIndia: 125,
