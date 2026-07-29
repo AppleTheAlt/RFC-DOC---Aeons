@@ -11971,7 +11971,7 @@
 					<iUnitClassMod>50</iUnitClassMod>
 				</UnitClassAttackMod>
 			</UnitClassAttackMods>
-			<iFirstStrikes>5</iFirstStrikes>
+			<iFirstStrikes>3</iFirstStrikes>
 			<iHillsDefense>25</iHillsDefense>
 			<iCultureGarrison>4</iCultureGarrison>
 			<iAsset>1</iAsset>
