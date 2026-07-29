@@ -966,14 +966,14 @@ dGoals = {
 	),
 	iToltecs: (
 		All(
-			CityPopulation(city(tTenochtitlan).named(TOLLAN), 10),
-			CityCulture(city(tTenochtitlan).named(TOLLAN), 200),
+			CityPopulation(city(tTenochtitlan).named(TOLLAN), 12),
+			CityCulture(city(tTenochtitlan).named(TOLLAN), 400),
 			by=200,
 		),
 		GoldenAges(1, by=550),
 		All(
-			PopulationCount(40),
-			CultureAmount(2000),
+			PopulationCount(50),
+			CultureAmount(5000),
 			by=1000,
 		),
 	),
