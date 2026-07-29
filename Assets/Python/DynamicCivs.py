@@ -1496,8 +1496,8 @@ def specificName(iPlayer):
 			else:
 				return "TXT_KEY_CIV_MISR_AYYUBID"
 
-			if iReligion in [iOrthodoxy, iCatholicism, iProtestantism]:
-				return "TXT_KEY_CIV_EGYPT_COPTIC"
+			#if iReligion in [iOrthodoxy, iCatholicism, iProtestantism]:
+			#	return "TXT_KEY_CIV_EGYPT_COPTIC"
 
 	elif iCiv == iSwahili:
 		if iEra <= iIndustrial:
