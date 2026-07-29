@@ -947,7 +947,11 @@ dGoals = {
 		PopulationCity(25, by=1500),
 	),
 	iEthiopia: (
-		ResourceCount(iIncense, 5, by=400),
+		All(
+			Discover(iMedicine),
+			ResourceCount(iIncense, 5),
+			by=300,
+		),
 		All(
 			StateReligion(iOrthodoxy, mode=STATELESS),
 			SpecialistCount(iSpecialistGreatProphet, 5),
