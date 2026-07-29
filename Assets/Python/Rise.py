@@ -111,6 +111,7 @@ dClearedForBirth = {
 lAlwaysClear = [
 	iHarappa,
 	iToltecs,
+	iMinoa,
 ]
 
 lBirthWars = [
