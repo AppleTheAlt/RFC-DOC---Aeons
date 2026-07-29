@@ -663,8 +663,16 @@ dGoals = {
 
 	iVandals: (
 			PillageCount(20, by=500),
-			Control(plots.region(rMaghreb).named(MAGHREB), by=500),
-			CityPopulation(city(tCarthage).named(CARTHAGE), 15, by=750),
+			All(
+				Control(plots.region(rMaghreb).named(MAGHREB), by=500),
+				CityPopulation(city(tCarthage).named(CARTHAGE), 12, by=650),
+			),
+			All(
+				ConqueredCities(2, inside=plots.region(rIberia).named(IBERIA)),
+				ConqueredCities(1, inside=plots.region(rItaly).named(ITALY)),
+				SackCount(4),
+				by=600,
+			),
 	),
 
 
