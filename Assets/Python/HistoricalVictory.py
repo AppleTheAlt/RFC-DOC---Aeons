@@ -927,7 +927,7 @@ dGoals = {
 			Discover(iCalendar, by=-250),
 			Discover(iArithmetics, by=-150),
 		),
-		Wonder(iTempleOfKukulkan, by=600),
+		Wonder(iTempleOfKukulkan, by=400),
 		ContactBeforeRevealed(civs(*lBioOldWorld).named(OLD_WORLD_CIVILIZATION), plots.regions(*lAmerica).named(AMERICAS)),
 	),
 	iDravidia: (
