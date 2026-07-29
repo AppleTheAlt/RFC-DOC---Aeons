@@ -1389,7 +1389,7 @@ dGoals = {
 	),
 	iCongo: (
 		ReligiousVotePercent(20, by=1750),
-		SlaveTradeGold(1200, by=1800),
+		SlaveTradeGold(1200, by=1500),
 		EnterEraBefore(iIndustrial, iGlobal),
 	),
 	iIran: (
