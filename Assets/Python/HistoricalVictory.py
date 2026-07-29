@@ -41,7 +41,7 @@ lZoroastrianWonders = [iBuilding for iBuilding in infos.buildings() if isWonder(
 lIslamicWonders = [iBuilding for iBuilding in infos.buildings() if isWonder(iBuilding) and iIslam in [infos.building(iBuilding).getPrereqReligion(), infos.building(iBuilding).getOrPrereqReligion()]]
 
 # first Saudi goal: allow only Arab civilizations in the Arab World
-lArabCivs = [iArabia, iMoors, iMisr, iSaudis, iMorocco]
+lArabCivs = [iArabia, iMoors, iMisr, iSaudis, iMorocco, iOman, iYemen]
 
 # city names
 AMSTERDAM = "TXT_KEY_VICTORY_NAME_AMSTERDAM"
