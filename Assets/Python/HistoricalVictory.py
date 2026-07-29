@@ -1290,7 +1290,7 @@ dGoals = {
 			Route(plots.region(rAndes).coastal().passable().without(lAndeanRoadExceptions).named(ANDEAN_COAST), [iRouteRoad]),
 			by=1480,
 		),
-		GoldAmount(2500, by=1500),
+		GoldAmount(3000, by=1500),
 		PopulationInAreaPercent(plots.regions(*lSouthAmerica).named(SOUTH_AMERICA), 90, at=1775),
 	),
 	iItaly: (
