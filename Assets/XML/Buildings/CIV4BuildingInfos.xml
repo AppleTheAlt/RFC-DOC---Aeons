@@ -3340,7 +3340,7 @@
 			<DomainFreeExperiences>
 				<DomainFreeExperience>
 					<DomainType>DOMAIN_LAND</DomainType>
-					<iExperience>3</iExperience>
+					<iExperience>2</iExperience>
 				</DomainFreeExperience>
 			</DomainFreeExperiences>
 			<ConstructSound>AS2D_BUILD_FORGE</ConstructSound>
