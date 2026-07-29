@@ -627,11 +627,11 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UP_MAC</Tag>
-		<English>Gain 2 free companions in conquered cities until the end of the Classical Era</English>
-		<French>Gain 2 free companions in conquered cities until the end of the Classical Era</French>
-		<German>Gain 2 free companions in conquered cities until the end of the Classical Era</German>
-		<Italian>Gain 2 free companions in conquered cities until the end of the Classical Era</Italian>
-		<Spanish>Gain 2 free companions in conquered cities until the end of the Classical Era</Spanish>
+		<English>Gain 2 free companions in conquered cities with 5 or more population until the end of the Classical Era</English>
+		<French>Gain 2 free companions in conquered cities with 5 or more population until the end of the Classical Era</French>
+		<German>Gain 2 free companions in conquered cities with 5 or more population until the end of the Classical Era</German>
+		<Italian>Gain 2 free companions in conquered cities with 5 or more population until the end of the Classical Era</Italian>
+		<Spanish>Gain 2 free companions in conquered cities with 5 or more population until the end of the Classical Era</Spanish>
 	</TEXT>
 
 	<TEXT>

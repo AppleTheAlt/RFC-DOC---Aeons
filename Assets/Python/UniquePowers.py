@@ -39,11 +39,12 @@ def VandalPower(iOwner, iPlayer, city, bConquest):
 			makeUnits(iVandals, iFlotilla, city, 1, UnitAITypes.UNITAI_SETTLER_SEA)
 
 
-@handler("cityAcquired") #2 free companions when you conquer a city.
+@handler("cityAcquired") #2 free companions when you conquer a city with 5 or more population
 def MacedonianPower(iOwner, iPlayer, city, bConquest):
 	iEra = player(iPlayer).getCurrentEra()
 	if civ(iPlayer) == iMacedon and bConquest and iEra < iMedieval:
-		makeUnits(iMacedon, iCompanion, city, 2, UnitAITypes.UNITAI_ATTACK_CITY)
+		if city.getPopulation() >= 5:
+			makeUnits(iMacedon, iCompanion, city, 2, UnitAITypes.UNITAI_ATTACK_CITY)
 
 
 @handler("cityAcquired") # Next tech comes with a bonus tech after conquering a city until the medieval era
