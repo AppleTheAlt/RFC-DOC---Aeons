@@ -682,8 +682,8 @@ dGoals = {
 				NoCityLost(),
 				by=-800,
 		  	 ),
-			 BuildingCount(wonders(), 3, by=-700),
-			 CitySpecialistCount(capital().named(CAPITAL), great_people(), 4, by=-550),
+			 BuildingCount(wonders(), 4, by=-700),
+			 CitySpecialistCount(capital().named(CAPITAL), great_people(), 4, by=-700),
 	),
 	iSparta: (
 			 All(
