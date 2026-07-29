@@ -656,7 +656,7 @@ dGoals = {
 		  	 ),
 			All(
 				Control(plots.region(rIberia), by=500),
-				CultureAmountRegion(plots.region(rIberia), 3000, by=1000),
+				CultureAmountRegion(plots.region(rIberia), 3000, by=800),
 		  	 ),
 	),
 
