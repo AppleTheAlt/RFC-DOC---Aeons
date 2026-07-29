@@ -1296,7 +1296,10 @@ dGoals = {
 	iItaly: (
 		Wonders(iSanMarcoBasilica, iSistineChapel, iSantaMariaDelFiore, by=1500),
 		CultureLevelCityCount(iCultureLevelInfluential, 4, by=1600),
-		AreaPercent(plots.all().adjacent_region(rMediterraneanSea).named(MEDITERRANEAN), 65, by=1930),
+		All(
+			CityCount(plots.region(rGreece), 2, by=1450),
+			AreaPercent(plots.all().adjacent_region(rMediterraneanSea).named(MEDITERRANEAN), 65, by=1930),
+		),
 	),
 	iMongols: (
 		Control(plots.regions(rNorthChina, rSouthChina).named(CHINA), at=1350),
