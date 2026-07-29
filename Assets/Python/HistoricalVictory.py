@@ -748,11 +748,7 @@ dGoals = {
 	),
 
 	iEgypt: (
-		All(
-			Wonders(iGreatSphinx, iPyramids),
-			CultureAmount(500),
-			by=-1200,
-		),
+		Wonders(iGreatSphinx, iPyramids, iAbuSimbel, iTempleOfAmun, iNuri),
 		Control(
 			plots.region(rNubia).named(NUBIA),
 			plots.region(rLevant).named(LEVANT),
