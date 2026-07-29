@@ -369,7 +369,7 @@ dGoals = {
 		All(
 			CompleteEra(iIndustrial),
 			LifeExpectancyTurns(60, 100),
-			by=1980
+			by=1980,
 		),
 	),
 

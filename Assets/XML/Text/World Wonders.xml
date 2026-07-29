@@ -67,11 +67,11 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_TRAJANS_COLUMN_HELP</Tag>
-		<English>[ICON_BULLET]Reduced stability impact from overextension</English>
-		<French>[ICON_BULLET]Reduced stability impact from overextension</French>
-		<German>[ICON_BULLET]Reduced stability impact from overextension</German>
-		<Italian>[ICON_BULLET]Reduced stability impact from overextension</Italian>
-		<Spanish>[ICON_BULLET]Reduced stability impact from overextension</Spanish>
+		<English>[ICON_BULLET]Reduced stability impact from overextension[NEWLINE][ICON_BULLET]Reduces Decadence by 3 when built</English>
+		<French>[ICON_BULLET]Reduced stability impact from overextension[NEWLINE][ICON_BULLET]Reduces Decadence by 3 when built</French>
+		<German>[ICON_BULLET]Reduced stability impact from overextension[NEWLINE][ICON_BULLET]Reduces Decadence by 3 when built</German>
+		<Italian>[ICON_BULLET]Reduced stability impact from overextension[NEWLINE][ICON_BULLET]Reduces Decadence by 3 when built</Italian>
+		<Spanish>[ICON_BULLET]Reduced stability impact from overextension[NEWLINE][ICON_BULLET]Reduces Decadence by 3 when built</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_TRAJANS_COLUMN</Tag>
