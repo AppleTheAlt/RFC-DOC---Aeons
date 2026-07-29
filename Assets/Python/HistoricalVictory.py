@@ -1328,18 +1328,13 @@ dGoals = {
 		All(
 			BuildingCount(iIslamicCathedral, 3),
 			SpecialistCount(iSpecialistSlave, 16),
-			by=1200,
+			by=1250,
 		),	
 		All(
-			AreaNoReligion(plots.regions(*lIndia).named(INDIA), iHinduism),	
-			AreaNoReligion(plots.regions(*lIndia).named(INDIA), iBuddhism),
-        	by=1400,
+			Control(plots.regions(*lIndia).named(INDIA), at=1300),
+			Control(plots.regions(*lIndia).named(INDIA), at=1550),
 		),
-		AllowNone(
-			civs(iTurks, iTimurids, iMongols, iParthia, iPersia, iBuyids, iSamanids).named(OTHER_TURKISH_MONGOL_OR_PERSIAN),
-			plots.regions(*lIndia).named(INDIA),
-			at=1500,
-		),	
+		AreaNoStateReligion(plots.regions(rDravida, rDeccan, rBengal, rIndochina, rIndonesia, rSindh, rPunjab, rRajputana, rHindustan).named(SOUTH_ASIA), sum(iHinduism, iBuddhism, iCatholicism, iOrthodoxy, iProtestantism).named(HINDU_BUDDHIST_OR_CHRISTIAN), at=1650),
 	),
 	iTimurids: (
 		All(
