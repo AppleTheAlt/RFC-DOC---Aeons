@@ -3966,6 +3966,14 @@
 		<Spanish></Spanish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_VICTORY_NAME_EAST_ASIA</Tag>
+		<English>East Asia</English>
+		<French></French>
+		<German></German>
+		<Italian></Italian>
+		<Spanish></Spanish>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_VICTORY_NAME_INDOCHINA</Tag>
 		<English>Indochina</English>
 		<French></French>

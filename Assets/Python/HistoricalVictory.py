@@ -121,6 +121,7 @@ HAWAII = "TXT_KEY_VICTORY_NAME_HAWAII"
 IBERIA = "TXT_KEY_VICTORY_NAME_IBERIA"
 INDIA = "TXT_KEY_VICTORY_NAME_INDIA"
 THE_MIDDLE_EAST = "TXT_KEY_VICTORY_NAME_THE_MIDDLE_EAST"
+EAST_ASIA = "TXT_KEY_VICTORY_NAME_EAST_ASIA"
 INDUSVALLEY = "TXT_KEY_VICTORY_NAME_INDUSVALLEY"
 INDOCHINA = "TXT_KEY_VICTORY_NAME_INDOCHINA"
 INDONESIA = "TXT_KEY_VICTORY_NAME_INDONESIA"
@@ -510,13 +511,13 @@ dGoals = {
 
 	iKhazars: (
 		All(
-			AttitudeCount(AttitudeTypes.ATTITUDE_PLEASED, 1, civs=group(iCivGroupEurope).named(EUROPE)),
-			AttitudeCount(AttitudeTypes.ATTITUDE_PLEASED, 1, civs=civs(iChina).named(CHINA)),
-			AttitudeCount(AttitudeTypes.ATTITUDE_PLEASED, 1, civs=group(iCivGroupMiddleEast).named(THE_MIDDLE_EAST)),
+			AttitudeCount(AttitudeTypes.ATTITUDE_PLEASED, 2, civs=group(iCivGroupEurope).named(EUROPE)),
+			AttitudeCount(AttitudeTypes.ATTITUDE_PLEASED, 2, civs=civs(iCivGroupEastAsia).named(EAST_ASIA)),
+			AttitudeCount(AttitudeTypes.ATTITUDE_PLEASED, 2, civs=group(iCivGroupMiddleEast).named(THE_MIDDLE_EAST)),
 			by=970,
 		),
-		TradeRouteCount(12, by=970),
- 		BuildingCount(iJewishCathedral, 1, by=1350),
+		TradeRouteCount(16, by=1050),
+ 		BuildingCount(iJewishCathedral, 1, by=1100),
 	),
 
 	iOman: (
