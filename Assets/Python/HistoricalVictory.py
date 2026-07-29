@@ -1060,11 +1060,11 @@ dGoals = {
 	),
 	iMalays: (
 		All(
-			TradeRouteCommerce(1600, by=1000),
-			TradeRouteCommerce(8000, by=1500),
+			TradeRouteCommerce(1600, by=850),
+			TradeRouteCommerce(8000, by=1200),
 		),
 		ResourceCount(different(happiness_resources()).named(DIFFERENT_HAPPINESS_RESOURCES), 12, by=1300),
-		CityBuilding(area_city(tMalaya).named(MALAYAN_CITY), iHinduCathedral, iBuddhistCathedral, iIslamicCathedral, by=1500),
+		CityBuilding(area_city(tMalaya).named(MALAYAN_CITY), iHinduCathedral, iBuddhistCathedral, iIslamicCathedral, by=1450),
 	),
 	iJapan: (
 		FoundedCultureAmount(30000, by=1600),
