@@ -860,8 +860,8 @@ dGoals = {
 			BuildingCount(iJewishShrine, 1, at=-500),
 			BuildingCount(iOrthodoxShrine, 1, at=350),
 		),
-		BuildingCount((iJewishCathedral, 1), by=400),
-		CultureAmount(10000, by=600),
+		BuildingCount((iJewishCathedral, 1), by=200),
+		FoundedCultureAmount(10000, by=400),
 		
 	),
 
