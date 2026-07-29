@@ -1025,7 +1025,12 @@ dGoals = {
 		GoldAmount(10000, by=1650),
 	),
 	iByzantium: (
-		GoldAmount(5000, by=1000),
+		All(
+			AverageCultureAmount(300),
+			GoldAmount(6000),
+			TradeRouteCount(40),
+			by=1000
+		),
 		All(
 			BestPopulationCity(city(tConstantinople).named(CONSTANTINOPLE)),
 			BestCultureCity(city(tConstantinople).named(CONSTANTINOPLE)),
