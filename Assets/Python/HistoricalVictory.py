@@ -1187,9 +1187,9 @@ dGoals = {
 	iEngland: (
 		All(
 			CityCount(
-				(plots.regions(*lNorthAmerica).named(NORTH_AMERICA), 6),
+				(plots.regions(*lNorthAmerica).named(NORTH_AMERICA), 8),
 				(plots.regions(*(lSouthAmerica + lCentralAmerica)).named(SOUTH_CENTRAL_AMERICA), 4),
-				(plots.regions(*lAfrica).named(AFRICA), 3),
+				(plots.regions(*lAfrica).named(AFRICA), 5),
 			),
 			UnitCombatLevelCount(UnitCombatTypes.UNITCOMBAT_NAVAL, 3, 25),
 			by=1770,
@@ -1203,7 +1203,11 @@ dGoals = {
 			RouteConnection([iRouteRailroad], plots.regions(rEgypt, rMaghreb).coastal().named(NORTH_AFRICA), plots.regions(rCape).named(SOUTH_AFRICA)),
 			by=1880,
 		),
-		EraFirstDiscover((iRenaissance, 8), (iIndustrial, 8)),
+		All(
+			BuildingCount((iFactory, 20), (iAgriculturalFactory, 15), by=1850),
+			ResourceCount(iFertilizer, 5, by=1850),
+			EraFirstDiscover((iRenaissance, 8), (iIndustrial, 8)),
+		)
 	),
 	iHolyRome: (
 		All(
