@@ -1223,8 +1223,8 @@ dGoals = {
 		),
 	),
 	iBurma: (
-		GoldAmount(3000, by=1300),
-		GoldenAges(3, by=1700),
+		GoldAmount(3000, by=1150),
+		GoldenAges(3, by=1600),
 		All(
 			Control(plots.region(rIndochina), at=1580),
 			Control(plots.region(rIndochina), at=1760),
