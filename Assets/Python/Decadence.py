@@ -9,6 +9,7 @@ from RFCUtils import *
 from operator import itemgetter
 from Events import handler
 from Modifiers import *
+from Civics import *
 
 from Locations import *
 from Core import *
@@ -57,6 +58,12 @@ def raiseDecadenceFromFirstTech(iTech, iTeam, iPlayer):
 def lowerDecadenceTick(iGameTurn, iPlayer):
     if(rand(turns(20)) == 1):
         changeDecadence(iPlayer, -1)
+        civic = civics(iPlayer)
+        
+        # Monasticism doubles decadence decrease tick
+        if civic.iReligion == iMonasticism:
+             changeDecadence(iPlayer, -1)
+
 
 # Statesmen can purge corruption to lower decadence by 3
 def statesmanLowerDecadence(iPlayer):

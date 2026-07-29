@@ -238,6 +238,12 @@
 					<iProductionModifier>100</iProductionModifier>
 				</BuildingProductionModifier>
 			</BuildingProductionModifiers>
+			<SpecialistCounts>
+ 				<SpecialistCount>
+ 					<SpecialistType>SPECIALIST_STATESMAN</SpecialistType>
+ 					<iCount>1</iCount>
+ 				</SpecialistCount>
+ 			</SpecialistCounts>
 			<Hurrys>
 				<Hurry>
 					<HurryType>HURRY_GOLD_UNITS</HurryType>

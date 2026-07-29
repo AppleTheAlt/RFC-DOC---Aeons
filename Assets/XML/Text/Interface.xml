@@ -4289,6 +4289,14 @@
 		<Spanish>Prevents external [COLOR_HIGHLIGHT_TEXT]Migration[COLOR_REVERT]</Spanish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_CIVIC_MONASTICISM</Tag>
+		<English>Doubles Decadence decay per turn</English>
+		<French>Doubles Decadence decay per turn</French>
+		<German>Doubles Decadence decay per turn</German>
+		<Italian>Doubles Decadence decay per turn</Italian>
+		<Spanish>Doubles Decadence decay per turn</Spanish>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_MISC_EMIGRATION_DESIRE</Tag>
 		<English>[ICON_BULLET]Emigration Desire: %d1</English>
 		<French>[ICON_BULLET]Emigration Desire: %d1</French>

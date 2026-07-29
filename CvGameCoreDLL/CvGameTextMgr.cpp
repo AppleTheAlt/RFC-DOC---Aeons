@@ -8281,6 +8281,13 @@ void CvGameTextMgr::parseCivicInfo(CvWStringBuffer &szHelpText, CivicTypes eCivi
 		szHelpText.append(gDLL->getText("TXT_KEY_IMMIGRATION_NONE_EXTERNAL"));
 	}
 
+	// Aeons - Double decadence tick
+	if (eCivic == CIVIC_MONASTICISM)
+	{
+		szHelpText.append(NEWLINE);
+		szHelpText.append(gDLL->getText("TXT_KEY_CIVIC_MONASTICISM"));
+	}
+
 	//Rhye - start stability
 	/*if (eCivic == UNIVERSAL_SUFFRAGE) //Leoreth - Parliament
 	{
