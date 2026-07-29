@@ -1167,7 +1167,7 @@ dGoals = {
 			FirstSettle(plots.regions(*lAmerica).named(AMERICAS), allowed=dCivGroups[iCivGroupAmerica]),
 			RevealedPercent(plots.all().sea().where(lambda p: p.getTerrainType() in [iCoast, iArcticCoast]).named(WORLD_COASTLINES), 55),
 			PiracyGold(1500),
-			by=1550
+			by=1550,
 		),
 	),
 	iJava: (
@@ -1177,7 +1177,7 @@ dGoals = {
 	),
 	iSpain: (
 		FirstSettle(plots.regions(*lAmerica).named(AMERICAS), allowed=dCivGroups[iCivGroupAmerica]),
-		ControlledResourceCount(sum(iSilver, iGold), 12, subject=VASSALS, by=1650),
+		ControlledResourceCount(sum(iSilver, iGold), 15, subject=VASSALS, by=1650),
 		All(
 			ReligionSpreadPercent(iCatholicism, 30),
 			AreaNoStateReligion(plots.regions(*lEuropeProper).named(EUROPE), iProtestantism),
