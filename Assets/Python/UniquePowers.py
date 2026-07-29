@@ -203,7 +203,7 @@ def ashantiUP(winningUnit, losingUnit):
 		city = cities.owner(player(iLoser)).building(iPalace).one()
 		if city:
 			iCost = infos.unit(losingUnit).getProductionCost()
-			city.changeCulture(city.getOwner(), iCost, True)
+			city.changeCulture(city.getOwner(), iCost*3, True)
 
 # Jerusalem UP: receives 50% of building cost as culture when completing catholic buildings or wonders.
 @handler("buildingBuilt")

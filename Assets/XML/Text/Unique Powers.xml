@@ -187,11 +187,11 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UP_ASH</Tag>
-		<English>Losing a unit gives [ICON_CULTURE] in the capital equal to its [ICON_PRODUCTION] cost</English>
-		<French>Losing a unit gives [ICON_CULTURE] in the capital equal to its [ICON_PRODUCTION] cost</French>
-		<German>Losing a unit gives [ICON_CULTURE] in the capital equal to its [ICON_PRODUCTION] cost</German>
-		<Italian>Losing a unit gives [ICON_CULTURE] in the capital equal to its [ICON_PRODUCTION] cost</Italian>
-		<Spanish>Losing a unit gives [ICON_CULTURE] in the capital equal to its [ICON_PRODUCTION] cost</Spanish>
+		<English>Losing a unit gives [ICON_CULTURE] in the capital equal to thrice its [ICON_PRODUCTION] cost</English>
+		<French>Losing a unit gives [ICON_CULTURE] in the capital equal to thrice its [ICON_PRODUCTION] cost</French>
+		<German>Losing a unit gives [ICON_CULTURE] in the capital equal to thrice its [ICON_PRODUCTION] cost</German>
+		<Italian>Losing a unit gives [ICON_CULTURE] in the capital equal to thrice its [ICON_PRODUCTION] cost</Italian>
+		<Spanish>Losing a unit gives [ICON_CULTURE] in the capital equal to thrice its [ICON_PRODUCTION] cost</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UP_HAU_TITLE</Tag>
