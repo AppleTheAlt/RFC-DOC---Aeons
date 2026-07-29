@@ -1145,9 +1145,9 @@ dGoals = {
 		),	
 	),
 	iTibet: (
-		AcquiredCities(7, by=1000),
+		AcquiredCities(8, by=1000),
 		ReligionSpreadPopulationCount(iBuddhism, 60, by=1400),
-		CitySpecialistCount(start(iTibet).named(LHASA), iSpecialistGreatProphet, 7, by=1700),
+		CitySpecialistCount(start(iTibet).named(LHASA), iSpecialistGreatProphet, 8, by=1700),
 	),
 	iMoors: (
 		All(
