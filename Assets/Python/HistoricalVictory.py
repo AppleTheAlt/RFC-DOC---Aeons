@@ -1081,8 +1081,8 @@ dGoals = {
 		EraFirstDiscover((iGlobal, 8), (iDigital, 8)),
 	),
 	iNorse: (
-		Control(required=2, at=1050, desc_key=FIRST_NORSE_GOAL, *lNorseTargets),
-		FirstSettle(plots.regions(*lAmerica).named(AMERICAS), allowed=dCivGroups[iCivGroupAmerica], by=1100),
+		Control(required=2, at=1000, desc_key=FIRST_NORSE_GOAL, *lNorseTargets),
+		FirstSettle(plots.regions(*lAmerica).named(AMERICAS), allowed=dCivGroups[iCivGroupAmerica], by=1000),
 		RaidGold(3000, by=1250),
 	),
 	iTurks: (
