@@ -987,12 +987,12 @@ dGoals = {
 		All(
 			CorporationCount(iSilkRoute, 8),
 			ReligionSpreadCount(iBuddhism, 12),
-			by=500,
+			by=450,
 		),
 		All(
 			GoldAmount(6000),
 			CultureAmount(6000),
-			by=700,
+			by=600,
 		),
 	),
 	iKorea: (
