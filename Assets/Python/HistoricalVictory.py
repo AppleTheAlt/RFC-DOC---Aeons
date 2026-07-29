@@ -707,7 +707,7 @@ dGoals = {
 				Control(
 					plots.regions(rTransoxiana, rKhorasan).named(BACTRIA),
 					plots.regions(rHinduKush, rPunjab, rSindh).named(INDUSVALLEY),
-					),
+				),
 				CitySpecialistCount(city(tBabylon).named(SELEUCIA), great_people(), 5),
 				by=-250,	
 			),
@@ -829,8 +829,8 @@ dGoals = {
 		CompleteEra(iClassical, by=200),
 	),
 	iIndia: (
-		BuildingCount((iHinduShrine, 1), (iBuddhistShrine, 1), at=-100),
-		BuildingCount(religious_buildings(temple).named(TEMPLES), 25, by=700),
+		BuildingCount((iHinduShrine, 1), (iBuddhistShrine, 1), at=-250),
+		BuildingCount(religious_buildings(temple).named(TEMPLES), 30, by=600),
 		PopulationPercent(20, at=1200),
 	),
 	iPhoenicia: (
