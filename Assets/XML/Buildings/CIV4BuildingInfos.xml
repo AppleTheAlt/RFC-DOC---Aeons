@@ -2528,7 +2528,8 @@
 			<iAdvancedStartCost>100</iAdvancedStartCost>
 			<iMinAreaSize>15</iMinAreaSize>
 			<iConquestProb>60</iConquestProb>
-			<iTradeRoutes>3</iTradeRoutes>
+			<iTradeRoutes>2</iTradeRoutes>
+			<iDifferentReligionTradeRouteModifier>50</iDifferentReligionTradeRouteModifier>
 			<iAsset>4</iAsset>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<ConstructSound>AS2D_BUILD_LIGHTHOUSE</ConstructSound>
