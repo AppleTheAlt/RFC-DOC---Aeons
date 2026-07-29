@@ -1213,13 +1213,13 @@ dGoals = {
 		All(
 			BuildingCount(iCatholicShrine, 1, at=1000),
 			BuildingCount(iOrthodoxShrine, 1, at=1200),
-			BuildingCount(iProtestantShrine, 1, at=1550),
+			BuildingCount(iProtestantShrine, 1, at=1500),
 		),
 		VassalCount(3, civs=group(iCivGroupEurope).named(EUROPE), iStateReligion=iCatholicism, by=1650),
 		All(
 			CitySpecialistCount(city(tVienna).named(VIENNA), sum(iSpecialistGreatArtist, iSpecialistGreatStatesman), 10),
 			AttitudeCount(AttitudeTypes.ATTITUDE_PLEASED, 8, civs=group(iCivGroupEurope).named(EUROPE), bIndependent=True),
-			at=1850,
+			at=1806,
 		),
 	),
 	iBurma: (
