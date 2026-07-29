@@ -9463,10 +9463,10 @@ int CvCity::getFreeSpecialist() const
 		iTotalFreeSpecialists += 1;
 	}
 
-	// Armenian UP: 3 free specialists in the Capital
+	// Armenian UP: 2 free specialists in the Capital
 	if (getCivilizationType() == ARMENIA && isCapital())
 	{
-		iTotalFreeSpecialists += 3;
+		iTotalFreeSpecialists += 2;
 	}
 
 	// Leoreth: most cultured cities free specialists civic effect
