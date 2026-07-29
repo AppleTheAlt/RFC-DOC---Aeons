@@ -1267,9 +1267,9 @@ dGoals = {
  		),
 	),
 	iPoland: (
-		PopulationCityCount(12, 3, by=1400),
+		PopulationCityCount(12, 4, by=1350),
 		FirstDiscover(iCivilLiberties),
-		BuildingCount(sum(iOrthodoxCathedral, iCatholicCathedral, iProtestantCathedral).named(CHRISTIAN_CATHEDRALS), 5, by=1600),
+		BuildingCount(sum(iOrthodoxCathedral, iCatholicCathedral, iProtestantCathedral).named(CHRISTIAN_CATHEDRALS), 6, by=1600),
 	),
 	iPortugal: (
 		WaterAreaPercent(plots.regions(*lIndianTradeRegions).expand(1).regions(rAtlanticOcean, rIndianOcean, rArabianSea).named(INDIAN_TRADE_ROUTE), 35, by=1550),
