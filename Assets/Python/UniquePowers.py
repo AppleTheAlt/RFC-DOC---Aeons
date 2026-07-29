@@ -205,13 +205,13 @@ def ashantiUP(winningUnit, losingUnit):
 			iCost = infos.unit(losingUnit).getProductionCost()
 			city.changeCulture(city.getOwner(), iCost*3, True)
 
-# Jerusalem UP: receives 50% of building cost as culture when completing catholic buildings or wonders.
+# Jerusalem UP: receives 300% of building cost as culture when completing catholic buildings or wonders.
 @handler("buildingBuilt")
 def jerusalemUP(city, iBuilding):
 	if civ(city) == iJerusalem:
 		if iCatholicism in [infos.building(iBuilding).getPrereqReligion(), infos.building(iBuilding).getOrPrereqReligion()]:
 			iCost = player(city).getBuildingProductionNeeded(iBuilding)
-			city.changeCulture(city.getOwner(), iCost * 2, True)
+			city.changeCulture(city.getOwner(), iCost * 3, True)
 
 
 # Timurid UP: receives 50% of building cost as culture when building is completed
