@@ -1231,12 +1231,12 @@ dGoals = {
 		),
 	),
 	iRus: (
-		ReligionPopulationCount(iOrthodoxy, 30, by=1200),
-		DefeatedUnits(civs(iBarbarian, iMongols, iKhazars), 25, by=1280),
+		ReligionPopulationCount(iOrthodoxy, 40, by=1200),
+		DefeatedUnits(civs(iBarbarian, iMongols), 25, by=1280),
 		All(
-			ImprovementCount((iCamp, 6), (iQuarry, 3)),
-			TradeRouteCount(20),
-			by=1450,
+			ImprovementCount((iCamp, 8), (iQuarry, 3)),
+			TradeRouteCount(25),
+			by=1400,
 		),
 	),
 	iVietnam: (
