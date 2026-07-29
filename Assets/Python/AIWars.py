@@ -60,7 +60,7 @@ tConquestRomeCarthageAgain = (39, iRome, iCarthage, tRomeCarthageTL, tRomeCartha
 tConquestRomeItaly = (40, iRome, iCelts, tRomeItalyTL, tRomeItalyBR, 3, iRomeItalyYear, 10)
 
 iAlexanderYear = -340
-tGreeceMesopotamiaTL = (81, 45)
+tGreeceMesopotamiaTL = (84, 45)
 tGreeceMesopotamiaBR = (90, 55)
 tGreeceEgyptTL = (76, 40)
 tGreeceEgyptBR = (82, 45)
@@ -107,19 +107,19 @@ tMongolsPersiaBR = (98, 52)
 tConquestMongolsPersia = (13, iMongols, iTurks, tMongolsPersiaTL, tMongolsPersiaBR, 7, iMongolsPersiaYear, 10)
 
 iAssyriaMesopotamiaYear = -730
-tAssyriaMesopotamiaTL = (82, 44)
+tAssyriaMesopotamiaTL = (84, 44)
 tAssyriaMesopotamiaBR = (90, 50)
 
 tConquestAssyriaMesopotamia = (15, iAssyria, iBabylonia, tAssyriaMesopotamiaTL, tAssyriaMesopotamiaBR, 4, iAssyriaMesopotamiaYear, 10)
 
 iBabyloniaMesopotamiaYear = -630
-tBabyloniaMesopotamiaTL = (82, 44)
+tBabyloniaMesopotamiaTL = (84, 44)
 tBabyloniaMesopotamiaBR = (90, 50)
 
 tConquestBabyloniaMesopotamia = (16, iBabylonia, iAssyria, tBabyloniaMesopotamiaTL, tBabyloniaMesopotamiaBR, 4, iBabyloniaMesopotamiaYear, 10)
 
 iPersiaMesopotamiaYear = -570
-tPersiaMesopotamiaTL = (82, 44)
+tPersiaMesopotamiaTL = (84, 44)
 tPersiaMesopotamiaBR = (90, 50)
 
 tConquestPersiaMesopotamia = (17, iPersia, iBabylonia, tPersiaMesopotamiaTL, tPersiaMesopotamiaBR, 6, iPersiaMesopotamiaYear, 10)
