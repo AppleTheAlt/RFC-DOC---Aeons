@@ -932,9 +932,9 @@ dGoals = {
 	),
 	iDravidia: (
 		All(
-			CultureAmount(7500, at=600),
-			GoldAmount(5000, at=600),
-			TradeGold(7500, by=1200),
+			CultureAmount(10000, at=600),
+			GoldAmount(7500, at=600),
+			TradeGold(10000, by=1200),
 		),
 		Control(
 			plots.regions(rDravida, rDeccan, rRajputana).named(DECCAN),
