@@ -1240,8 +1240,13 @@ dGoals = {
 		),
 	),
 	iVietnam: (
-		GreatPeople(iGreatGeneral, 2, by=1500),
-		BuildingCount(iConfucianCathedral, 1, by=1600),
+		GreatPeople(iGreatGeneral, 2, by=1450),
+		All(
+			BuildingCount(iConfucianCathedral, 1),
+			BuildingCount(iSchool, 4),
+			BuildingCount(iConfucianMonastery, 4),
+			by=1600,
+		),
 		CultureLevelCityCount(iCultureLevelInfluential, 3, by=1700),
 	),
 	iSwahili: (
