@@ -520,7 +520,7 @@ dGoals = {
 	),
 
 	iOman: (
-		CultureCover(plots.region(rPersianGulf).named(PERSIAN_GULF), by=1400),
+		CultureCover(plots.region(rPersianGulf).named(PERSIAN_GULF), by=1450),
 		ConqueredCities(3, civs=group(iCivGroupEurope).named(EUROPEAN), outside=plots.regions(*lEurope).named(EUROPE), by=1750),
 		TradeRouteCount(35, by=1750),
 	),
