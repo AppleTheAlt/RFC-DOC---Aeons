@@ -1322,7 +1322,7 @@ dGoals = {
 	iGhorids: (
 		All(
 			BuildingCount(iIslamicCathedral, 3),
-			SpecialistCount(iSpecialistSlave, 12),
+			SpecialistCount(iSpecialistSlave, 16),
 			by=1200,
 		),	
 		All(
