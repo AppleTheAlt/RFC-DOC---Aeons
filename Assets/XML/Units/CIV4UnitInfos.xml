@@ -16941,7 +16941,7 @@
 			<iCost>80</iCost>
 			<iAdvancedStartCost>100</iAdvancedStartCost>
 			<iMinAreaSize>-1</iMinAreaSize>
-			<iMoves>3</iMoves>
+			<iMoves>2</iMoves>
 			<iNukeRange>-1</iNukeRange>
 			<TerrainImpassables>
 				<TerrainImpassable>
