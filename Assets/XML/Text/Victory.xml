@@ -4682,6 +4682,14 @@
 		<Spanish></Spanish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_VICTORY_NAME_HINDU_BUDDHIST_OR_CHRISTIAN</Tag>
+		<English>Hindu, Buddhist or Christian</English>
+		<French></French>
+		<German></German>
+		<Italian></Italian>
+		<Spanish></Spanish>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_VICTORY_NAME_EUROPEAN</Tag>
 		<English>European</English>
 		<French></French>
