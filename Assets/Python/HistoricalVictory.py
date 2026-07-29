@@ -917,7 +917,10 @@ dGoals = {
 			(plots.region(rLevant).named(LEVANT), 2),
 			at=100,
 		),
-		TeamRank(1, at=476),
+		All(
+			FirstDiscover(iArchitecture, iPolitics, iScholarship, iMachinery, iCivilService),
+			TeamRank(1, at=476),
+		),
 	),
 	iMaya: (
 		All(
