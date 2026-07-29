@@ -996,9 +996,9 @@ dGoals = {
 		),
 	),
 	iKorea: (
-		BuildingCount((iBuddhistCathedral, 1), (iConfucianCathedral, 1), by=1000),
+		BuildingCount((iBuddhistCathedral, 1), (iConfucianCathedral, 1), by=800),
 		FirstDiscover(iEducation, iPrinting, iFirearms, iStatecraft),
-		SunkShips(20),
+		SunkShips(20, by=1700),
 	),
 	iKhmer: (
 		All(
