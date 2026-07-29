@@ -43,7 +43,6 @@ def VandalPower(iOwner, iPlayer, city, bConquest):
 def MacedonianPower(iOwner, iPlayer, city, bConquest):
 	iEra = player(iPlayer).getCurrentEra()
 	if civ(iPlayer) == iMacedon and bConquest and iEra < iMedieval:
-		city.setOccupationTimer(0)
 		makeUnits(iMacedon, iCompanion, city, 2, UnitAITypes.UNITAI_ATTACK_CITY)
 
 
