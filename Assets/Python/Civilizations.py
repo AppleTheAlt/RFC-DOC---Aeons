@@ -267,7 +267,7 @@ lCivilizations = [
 		iGold=150,
 		iAdvancedStartPoints=200,
 		lCivics=[iRepublic, iSlavery, iDeification, iRedistribution, iThalassocracy],
-		techs=techs.column(4).without(iRiding, iContract)
+		techs=techs.column(4).including(iPhilosophy).without(iRiding, iContract)
 	),
 	Civilization(
 		iPolynesia,
