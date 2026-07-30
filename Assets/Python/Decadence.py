@@ -41,12 +41,12 @@ def changeDecadence(iPlayer, iAmount):
 # Building a Wonder raises decadence
 @handler("buildingBuilt")
 def raiseDecadenceFromWonder(city, iBuilding):
-	if iBuilding == iCouncil:
+    if iBuilding == iCouncil:
         changeDecadence(city.getOwner(), -1)
     elif iBuilding == iTrajansColumn:
         changeDecadence(city.getOwner(), -3)
-	elif infos.building(iBuilding).isTeamShare():
-		changeDecadence(city.getOwner(), 1)
+    elif infos.building(iBuilding).isTeamShare():
+        changeDecadence(city.getOwner(), 1)
 
 # Being first to discover tech - 50% chance of decadence increase
 @handler("techAcquired")
