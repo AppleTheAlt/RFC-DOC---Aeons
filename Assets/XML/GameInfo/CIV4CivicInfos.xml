@@ -121,6 +121,7 @@
 			<Description>TXT_KEY_CIVIC_ELECTIVE</Description>
 			<Civilopedia>TXT_KEY_CIVIC_ELECTIVE_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_CIVIC_ELECTIVE_STRATEGY</Strategy>
+			<Help>TXT_KEY_CIVIC_ELECTIVE_EFFECT</Help>
 			<TechPrereq>TECH_POLITICS</TechPrereq>
 			<Button>,Art/Interface/Buttons/Civics/Elective.dds</Button>
 			<iAnarchyLength>1</iAnarchyLength>
@@ -257,6 +258,7 @@
 			<Description>TXT_KEY_CIVIC_VASSALAGE</Description>
 			<Civilopedia>TXT_KEY_CIVIC_VASSALAGE_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_CIVIC_VASSALAGE_STRATEGY</Strategy>
+			<Help>TXT_KEY_CIVIC_VASSALAGE_EFFECT</Help>
 			<TechPrereq>TECH_FEUDALISM</TechPrereq>
 			<Button>,Art/Interface/Buttons/Civics/Vassalage.dds</Button>
 			<iAnarchyLength>1</iAnarchyLength>
@@ -292,6 +294,7 @@
 			<Description>TXT_KEY_CIVIC_THEOCRACY</Description>
 			<Civilopedia>TXT_KEY_CIVIC_THEOCRACY_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_CIVIC_THEOCRACY_STRATEGY</Strategy>
+			<Help>TXT_KEY_CIVIC_THEOCRACY_EFFECT</Help>
 			<TechPrereq>TECH_THEOLOGY</TechPrereq>
 			<Button>,Art/Interface/Buttons/Civics/Theocracy.dds</Button>
 			<iAnarchyLength>1</iAnarchyLength>
@@ -574,6 +577,7 @@
 			<Description>TXT_KEY_CIVIC_TOTALITARIANISM</Description>
 			<Civilopedia>TXT_KEY_CIVIC_TOTALITARIANISM_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_CIVIC_TOTALITARIANISM_STRATEGY</Strategy>
+			<Help>TXT_KEY_CIVIC_TOTALITARIANISM_EFFECT</Help>
 			<TechPrereq>TECH_PSYCHOLOGY</TechPrereq>
 			<Button>,Art/Interface/Buttons/Civics/Totalitarianism.dds</Button>
 			<iAnarchyLength>1</iAnarchyLength>
@@ -751,6 +755,7 @@
 			<Description>TXT_KEY_CIVIC_FREE_ENTERPRISE</Description>
 			<Civilopedia>TXT_KEY_CIVIC_FREE_ENTERPRISE_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_CIVIC_FREE_ENTERPRISE_STRATEGY</Strategy>
+			<Help>TXT_KEY_CIVIC_FREE_ENTERPRISE_EFFECT</Help>
 			<TechPrereq>TECH_ECONOMICS</TechPrereq>
 			<Button>,Art/Interface/Buttons/Civics/Free Enterprise.dds</Button>
 			<iAnarchyLength>1</iAnarchyLength>
@@ -849,6 +854,7 @@
 			<Description>TXT_KEY_CIVIC_PUBLIC_WELFARE</Description>
 			<Civilopedia>TXT_KEY_CIVIC_PUBLIC_WELFARE_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_CIVIC_PUBLIC_WELFARE_STRATEGY</Strategy>
+			<Help>TXT_KEY_CIVIC_PUBLIC_WELFARE_EFFECT</Help>
 			<TechPrereq>TECH_SOCIAL_SERVICES</TechPrereq>
 			<Button>,Art/Interface/Buttons/Civics/Public Welfare.dds</Button>
 			<iAnarchyLength>1</iAnarchyLength>
@@ -940,6 +946,7 @@
 			<Description>TXT_KEY_CIVIC_SYNCRETISM</Description>
 			<Civilopedia>TXT_KEY_CIVIC_SYNCRETISM_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_CIVIC_SYNCRETISM_STRATEGY</Strategy>
+			<Help>TXT_KEY_CIVIC_SYNCRETISM_EFFECT</Help>
 			<TechPrereq>TECH_PHILOSOPHY</TechPrereq>
 			<Button>,Art/Interface/Buttons/Civics/Syncretism.dds</Button>
 			<iAnarchyLength>1</iAnarchyLength>
@@ -994,6 +1001,7 @@
 			<Description>TXT_KEY_CIVIC_FANATICISM</Description>
 			<Civilopedia>TXT_KEY_CIVIC_FANATICISM_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_CIVIC_FANATICISM_STRATEGY</Strategy>
+			<Help>TXT_KEY_CIVIC_FANATICISM_EFFECT</Help>
 			<TechPrereq>TECH_DOCTRINE</TechPrereq>
 			<Button>,Art/Interface/Buttons/Civics/Fanaticism.dds</Button>
 			<iAnarchyLength>1</iAnarchyLength>
@@ -1151,6 +1159,7 @@
 			<Description>TXT_KEY_CIVIC_HEGEMONY</Description>
 			<Civilopedia>TXT_KEY_CIVIC_HEGEMONY_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_CIVIC_HEGEMONY_STRATEGY</Strategy>
+			<Help>TXT_KEY_CIVIC_HEGEMONY_EFFECT</Help>
 			<TechPrereq>TECH_GENERALSHIP</TechPrereq>
 			<Button>,Art/Interface/Buttons/Civics/Hegemony.dds</Button>
 			<iAnarchyLength>1</iAnarchyLength>
@@ -1187,6 +1196,7 @@
 			<Description>TXT_KEY_CIVIC_ISOLATIONISM</Description>
 			<Civilopedia>TXT_KEY_CIVIC_ISOLATIONISM_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_CIVIC_ISOLATIONISM_STRATEGY</Strategy>
+			<Help>TXT_KEY_CIVIC_ISOLATIONISM_EFFECT</Help>
 			<TechPrereq>TECH_HERITAGE</TechPrereq>
 			<Button>,Art/Interface/Buttons/Civics/Isolationism.dds</Button>
 			<iAnarchyLength>1</iAnarchyLength>
@@ -1210,6 +1220,7 @@
 			<Description>TXT_KEY_CIVIC_COLONIALISM</Description>
 			<Civilopedia>TXT_KEY_CIVIC_COLONIALISM_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_CIVIC_COLONIALISM_STRATEGY</Strategy>
+			<Help>TXT_KEY_CIVIC_COLONIALISM_EFFECT</Help>
 			<TechPrereq>TECH_EXPLORATION</TechPrereq>
 			<Button>,Art/Interface/Buttons/Civics/Colonialism.dds</Button>
 			<iAnarchyLength>1</iAnarchyLength>
@@ -1280,6 +1291,7 @@
 			<Description>TXT_KEY_CIVIC_MULTILATERALISM</Description>
 			<Civilopedia>TXT_KEY_CIVIC_MULTILATERALISM_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_CIVIC_MULTILATERALISM_STRATEGY</Strategy>
+			<Help>TXT_KEY_CIVIC_MULTILATERALISM_EFFECT</Help>
 			<TechPrereq>TECH_GEOPOLITICS</TechPrereq>
 			<Button>,Art/Interface/Buttons/Civics/Multilateralism.dds</Button>
 			<iAnarchyLength>1</iAnarchyLength>

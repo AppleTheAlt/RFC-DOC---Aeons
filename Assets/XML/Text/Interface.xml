@@ -4305,6 +4305,110 @@
 		<Spanish>Obtain no Decadence from building Wonders but double Decadence from discovering technologies</Spanish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_CIVIC_VASSALAGE_EFFECT</Tag>
+		<English>Increased stability from Vassals</English>
+		<French>Increased stability from Vassals</French>
+		<German>Increased stability from Vassals</German>
+		<Italian>Increased stability from Vassals</Italian>
+		<Spanish>Increased stability from Vassals</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIVIC_SYNCRETISM_EFFECT</Tag>
+		<English>Reduced stability from religious unity but no religious disunity</English>
+		<French>Reduced stability from religious unity but no religious disunity</French>
+		<German>Reduced stability from religious unity but no religious disunity</German>
+		<Italian>Reduced stability from religious unity but no religious disunity</Italian>
+		<Spanish>Reduced stability from religious unity but no religious disunity</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIVIC_THEOCRACY_EFFECT</Tag>
+		<English>Religious stability affected by whether cities exclusively follow your state religion</English>
+		<French>Religious stability affected by whether cities exclusively follow your state religion</French>
+		<German>Religious stability affected by whether cities exclusively follow your state religion</German>
+		<Italian>Religious stability affected by whether cities exclusively follow your state religion</Italian>
+		<Spanish>Religious stability affected by whether cities exclusively follow your state religion</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIVIC_FANATICISM_EFFECT</Tag>
+		<English>Increased instability from religious disunity[NEWLINE]Gain stability from fighting heathens and instability from fighting same religion</English>
+		<French>Increased instability from religious disunity[NEWLINE]Gain stability from fighting heathens and instability from fighting same religion</French>
+		<German>Increased instability from religious disunity[NEWLINE]Gain stability from fighting heathens and instability from fighting same religion</German>
+		<Italian>Increased instability from religious disunity[NEWLINE]Gain stability from fighting heathens and instability from fighting same religion</Italian>
+		<Spanish>Increased instability from religious disunity[NEWLINE]Gain stability from fighting heathens and instability from fighting same religion</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIVIC_TOTALITARIANISM_EFFECT</Tag>
+		<English>Reduced expansion instability from conquest</English>
+		<French>Reduced expansion instability from conquest</French>
+		<German>Reduced expansion instability from conquest</German>
+		<Italian>Reduced expansion instability from conquest</Italian>
+		<Spanish>Reduced expansion instability from conquest</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIVIC_MULTILATERALISM_EFFECT</Tag>
+		<English>Increased stability from defensive pacts[NEWLINE]Gain instability from wars</English>
+		<French>Increased stability from defensive pacts[NEWLINE]Gain instability from wars</French>
+		<German>Increased stability from defensive pacts[NEWLINE]Gain instability from wars</German>
+		<Italian>Increased stability from defensive pacts[NEWLINE]Gain instability from wars</Italian>
+		<Spanish>Increased stability from defensive pacts[NEWLINE]Gain instability from wars</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIVIC_NATIONHOOD_EFFECT</Tag>
+		<English>Increased stability from fighting neighbours</English>
+		<French>Increased stability from fighting neighbours</French>
+		<German>Increased stability from fighting neighbours</German>
+		<Italian>Increased stability from fighting neighbours</Italian>
+		<Spanish>Increased stability from fighting neighbours</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIVIC_ISOLATIONISM_EFFECT</Tag>
+		<English>No instability from bad relations and reduced stability from good relations[NEWLINE]Increased stability when not expanding beyond Core Area</English>
+		<French>No instability from bad relations and reduced stability from good relations[NEWLINE]Increased stability when not expanding beyond Core Area</French>
+		<German>No instability from bad relations and reduced stability from good relations[NEWLINE]Increased stability when not expanding beyond Core Area</German>
+		<Italian>No instability from bad relations and reduced stability from good relations[NEWLINE]Increased stability when not expanding beyond Core Area</Italian>
+		<Spanish>No instability from bad relations and reduced stability from good relations[NEWLINE]Increased stability when not expanding beyond Core Area</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIVIC_COLONIALISM_EFFECT</Tag>
+		<English>Reduced instability from historical colonies until the Global Era</English>
+		<French>Reduced instability from historical colonies until the Global Era</French>
+		<German>Reduced instability from historical colonies until the Global Era</German>
+		<Italian>Reduced instability from historical colonies until the Global Era</Italian>
+		<Spanish>Reduced instability from historical colonies until the Global Era</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIVIC_ELECTIVE_EFFECT</Tag>
+		<English>Stability from recent conquest lasts longer</English>
+		<French>Stability from recent conquest lasts longer</French>
+		<German>Stability from recent conquest lasts longer</German>
+		<Italian>Stability from recent conquest lasts longer</Italian>
+		<Spanish>Stability from recent conquest lasts longer</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIVIC_HEGEMONY_EFFECT</Tag>
+		<English>Increased stability from recent conquest</English>
+		<French>Increased stability from recent conquest</French>
+		<German>Increased stability from recent conquest</German>
+		<Italian>Increased stability from recent conquest</Italian>
+		<Spanish>Increased stability from recent conquest</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIVIC_FREE_ENTERPRISE_EFFECT</Tag>
+		<English>Stability changes from economic growth and recession increased</English>
+		<French>Stability changes from economic growth and recession increased</French>
+		<German>Stability changes from economic growth and recession increased</German>
+		<Italian>Stability changes from economic growth and recession increased</Italian>
+		<Spanish>Stability changes from economic growth and recession increased</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIVIC_PUBLIC_WELFARE_EFFECT</Tag>
+		<English>Stability changes from economic growth and recession decreased</English>
+		<French>Stability changes from economic growth and recession decreased</French>
+		<German>Stability changes from economic growth and recession decreased</German>
+		<Italian>Stability changes from economic growth and recession decreased</Italian>
+		<Spanish>Stability changes from economic growth and recession decreased</Spanish>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_MISC_EMIGRATION_DESIRE</Tag>
 		<English>[ICON_BULLET]Emigration Desire: %d1</English>
 		<French>[ICON_BULLET]Emigration Desire: %d1</French>
