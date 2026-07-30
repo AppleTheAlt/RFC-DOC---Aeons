@@ -25,6 +25,30 @@
 		<Spanish></Spanish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_VICTORY_TITLE_MOR1</Tag>
+		<English>Caliphate of Al-Andalus</English>
+		<French>Le califat d'Al-Andalus </French>
+		<German>Kaliphat von Al-Andalus</German>
+		<Italian>Caliphate of Al-Andalus</Italian>
+		<Spanish>Caliphate of Al-Andalus</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_VICTORY_TITLE_MOR2</Tag>
+		<English>The Trans-Saharan Trade</English>
+		<French>The Trans-Saharan Trade</French>
+		<German>The Trans-Saharan Trade</German>
+		<Italian>The Trans-Saharan Trade</Italian>
+		<Spanish>The Trans-Saharan Trade</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_VICTORY_TITLE_MOR3</Tag>
+		<English>Morisco Resistance</English>
+		<French>Morisco Resistance</French>
+		<German>Morisco Resistance</German>
+		<Italian>Morisco Resistance</Italian>
+		<Spanish>Morisco Resistance</Spanish>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_VICTORY_TITLE_SOU1</Tag>
 		<English>Industrial Africa</English>
 		<French>Industrial Africa</French>
@@ -911,11 +935,11 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_VICTORY_TITLE_GHO3</Tag>
-		<English>Dar-Al Islam</English>
-		<French>Dar-Al Islam</French>
-		<German>Dar-Al Islam</German>
-		<Italian>Dar-Al Islam</Italian>
-		<Spanish>Dar-Al Islam</Spanish>
+		<English>Asian Islamization</English>
+		<French>Asian Islamization</French>
+		<German>Asian Islamization</German>
+		<Italian>Asian Islamization</Italian>
+		<Spanish>Asian Islamization</Spanish>
 	</TEXT>
 
 	<TEXT>

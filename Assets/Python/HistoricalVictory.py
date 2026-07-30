@@ -383,14 +383,13 @@ dGoals = {
 		All(
 			CommerceRegion(plots.region(rGuinea), 3500),
 			TradeMissionCount(city(tLisbon).named(LISBON), 1),
-			by=1650
-	
+			by=1650,
 		),
 		All(
 			Wonder(iOsunOsogbo),
 			BuildingCount(iPaganTemple, 6),
 			DefeatedUndiscoveredUnits(10),
-			by=1700
+			by=1700,
 		),
 																																																													
 	),
@@ -1121,12 +1120,17 @@ dGoals = {
  			by=1350,
  		),
 		All(
-			Wonder(iAitBenhaddou, by=1300),	
-			BuildingCount(wonders(), 5, by=1500),
+			CommerceRegion(plots.region(rSahara), 1500),
+			CommerceRegion(plots.region(rSahel), 4000),
+			by=1700,
 		),
 		All(
- 			DefeatedUnits(civs(iSpain, iPortugal, iFrance), 30, by=1900),
- 			ReligionSpreadPercent(iIslam, 30, by=1900),
+			AreaReligionSpreadCount(plots.regions(*lNorthAmerica).named(NORTH_AMERICA), iIslam, 6),
+			AreaReligionSpreadCount(plots.regions(*lSouthAmerica).named(SOUTH_AMERICA), iIslam, 6),
+			AreaReligionSpreadCount(plots.regions(*lEuropeProper).named(EUROPE), iIslam, 6),
+			AreaReligionSpreadCount(plots.regions(*lAfrica).named(AFRICA), iIslam, 6),
+			DefeatedUndiscoveredUnits(20),
+			by=1850,
 		),
  	),
 	iArabia: (
