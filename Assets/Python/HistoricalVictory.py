@@ -1181,8 +1181,8 @@ dGoals = {
 		),
 	),
 	iJava: (
-		Wonders(iPrambanan, iBorobudur, by=1100),
-		HappyCityPopulation(75, by=1350),
+		Wonders(iPrambanan, iBorobudur, by=1000),
+		HappyCityPopulation(75, by=1250),
 		BuildingCount(iIslamicCathedral, 3, by=1500),
 	),
 	iSpain: (
