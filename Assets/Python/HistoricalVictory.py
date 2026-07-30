@@ -1016,7 +1016,7 @@ dGoals = {
 			at=1150,
 		),
 		All(
-			AveragePopulation(12, at=1000),
+			AveragePopulation(12, at=1150),
 			AveragePopulation(15, by=1400),
 			BestPopulationCity(city(tAngkor).named(ANGKOR), at=1400),
 		),
