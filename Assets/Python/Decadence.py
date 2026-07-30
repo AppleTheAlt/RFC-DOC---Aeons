@@ -42,7 +42,7 @@ def changeDecadence(iPlayer, iAmount):
 # Deification negates this effect
 @handler("buildingBuilt")
 def raiseDecadenceFromWonder(city, iBuilding):
-    civic = civics(iPlayer)
+    civic = civics(city.getOwner())
     if iBuilding == iCouncil:
         changeDecadence(city.getOwner(), -1)
     elif iBuilding == iTrajansColumn:
