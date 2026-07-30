@@ -38,22 +38,28 @@ def changeDecadence(iPlayer, iAmount):
         for iModifier in (iModifierResearchCost, iModifierCitiesMaintenance, iModifierBuildingCost, iModifierUnitCost, iModifierWonderCost, iModifierCivicUpkeep):
             changeModifier(iPlayer, iModifier, 10*iModifierAdjustment)
 
-# Building a Wonder raises decadence
+# Building a Wonder raises decadence - Building a Council reduces it
+# Deification negates this effect
 @handler("buildingBuilt")
 def raiseDecadenceFromWonder(city, iBuilding):
+    civic = civics(iPlayer)
     if iBuilding == iCouncil:
         changeDecadence(city.getOwner(), -1)
     elif iBuilding == iTrajansColumn:
         changeDecadence(city.getOwner(), -3)
-    elif infos.building(iBuilding).isTeamShare():
+    elif infos.building(iBuilding).isTeamShare() and not civic.iReligion == iDeification:
         changeDecadence(city.getOwner(), 1)
 
 # Being first to discover tech - 50% chance of decadence increase
+# 100% with Deification
 @handler("techAcquired")
 def raiseDecadenceFromFirstTech(iTech, iTeam, iPlayer):
     if scenarioStart() or game.getGameTurn() <= year(dBirth[civ(iPlayer)]):
 		return
-    if game.countKnownTechNumTeams(iTech) == 1:
+    civic = civics(iPlayer)
+    if civic.iReligion == iDeification:
+        changeDecadence(iPlayer, 1)
+    elif game.countKnownTechNumTeams(iTech) == 1:
         if rand(2) == 1:
             changeDecadence(iPlayer, 1)
 

@@ -4297,6 +4297,14 @@
 		<Spanish>Doubles Decadence decay per turn</Spanish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_CIVIC_DEIFICATION</Tag>
+		<English>Obtain no Decadence from building Wonders but double Decadence from discovering technologies</English>
+		<French>Obtain no Decadence from building Wonders but double Decadence from discovering technologies</French>
+		<German>Obtain no Decadence from building Wonders but double Decadence from discovering technologies</German>
+		<Italian>Obtain no Decadence from building Wonders but double Decadence from discovering technologies</Italian>
+		<Spanish>Obtain no Decadence from building Wonders but double Decadence from discovering technologies</Spanish>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_MISC_EMIGRATION_DESIRE</Tag>
 		<English>[ICON_BULLET]Emigration Desire: %d1</English>
 		<French>[ICON_BULLET]Emigration Desire: %d1</French>
