@@ -57,7 +57,7 @@ def raiseDecadenceFromFirstTech(iTech, iTeam, iPlayer):
     if scenarioStart() or game.getGameTurn() <= year(dBirth[civ(iPlayer)]):
 		return
     civic = civics(iPlayer)
-    if civic.iReligion == iDeification:
+    if game.countKnownTechNumTeams(iTech) == 1 and civic.iReligion == iDeification:
         changeDecadence(iPlayer, 1)
     elif game.countKnownTechNumTeams(iTech) == 1:
         if rand(2) == 1:
