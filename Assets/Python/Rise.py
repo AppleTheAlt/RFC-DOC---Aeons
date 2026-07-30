@@ -104,6 +104,7 @@ dClearedForBirth = {
 	iBuyids: iParthia,
 	iSpain: iGoths,
 	iMoors: iGoths,
+	iFunj: iNubia,
 	iArmenia: iMacedon,	# Macedon can destroy a player Armenia or Parthia...
 	iParthia: iMacedon,
 }
@@ -1014,6 +1015,7 @@ class Birth(object):
 			if cities.birth(iSaudis).owners().major().all_if_any(lambda p: stability(p) >= iStabilityStable):
 				return False
 
+
 		# Argentina requires any Old World civilization in Andes or Southern Cone
 		if self.iCiv == iArgentina:
 			if not cities.regions(rAndes, rSouthernCone).ever_owned(lBioOldWorld):
@@ -1035,6 +1037,11 @@ class Birth(object):
 		# Brazil requires any Old World civilization in Brazil or Amazonia
 		if self.iCiv == iBrazil:
 			if not cities.regions(rBrazil, rAmazonia).ever_owned(lBioOldWorld):
+				return False
+
+		# Funj requires Nubia not to exist, not be controlling its core, or being unstable
+		if self.iCiv == iFunj:
+			if player(iNubia).isExisting() and cities.core(iNubia).owner(iNubia) and stability(iNubia) > iStabilityUnstable:
 				return False
 
 		# Belgium requires Netherlands not to exist, not controlling its core, or being collapsing
