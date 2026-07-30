@@ -240,6 +240,30 @@ def checkRaiders():
 		if turn() % turns(10) == 9:
 			giveRaiders(iNorse)
 
+# Aeons
+@handler("BeginGameTurn")
+def abandonVolunteers():
+	if year() >= year(-650) and year() <= year(-630):
+		for unit in units.owner(iAssyria):
+				if unit.isHasPromotion(iVolunteer):
+					unit.kill(False, -1)
+	elif year() >= year(-570) and year() <= year(-550):
+		for unit in units.owner(iBabylonia):
+				if unit.isHasPromotion(iVolunteer):
+					unit.kill(False, -1)
+	elif year() >= year(-400) and year() <= year(-380):
+		for unit in units.owner(iPersia):
+				if unit.isHasPromotion(iVolunteer):
+					unit.kill(False, -1)
+	elif year() >= year(-200) and year() <= year(-180):
+		for unit in units.owner(iMacedon):
+				if unit.isHasPromotion(iVolunteer):
+					unit.kill(False, -1)
+	elif year() >= year(100) and year() <= year(120):
+		for unit in units.owner(iRome):
+				if unit.isHasPromotion(iVolunteer):
+					unit.kill(False, -1)
+
 
 @handler("BeginGameTurn")
 def createSilkRoute():

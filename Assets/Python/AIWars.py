@@ -561,7 +561,7 @@ def spawnConquerors(iPlayer, iPreferredTarget, tTL, tBR, iNumTargets, iYear, iIn
 		
 
 		if iCiv == iHuns:
-			units += makeUnits(iSelectedPlayer, iHeavyHorseArcher, tPlot, 2, UnitAITypes.UNITAI_ATTACK_CITY)
+			units += makeUnits(iSelectedPlayer, iHeavyHorseArcher, tPlot, 1, UnitAITypes.UNITAI_ATTACK_CITY)
 
 		# Aeons - Give Rome some extras
 		elif iCiv == iRome:
