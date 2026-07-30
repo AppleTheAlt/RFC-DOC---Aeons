@@ -6508,6 +6508,10 @@ bool CvPlayer::canConstruct(BuildingTypes eBuilding, bool bContinue, bool bTestV
 		else if (isHumanVictoryWonder(eBuilding, EIFFEL_TOWER, FRANCE)) return false;
 		else if (isHumanVictoryWonder(eBuilding, STATUE_OF_LIBERTY, FRANCE)) return false;
 
+		else if (isHumanVictoryWonder(eBuilding, PARTHENON, GREECE)) return false; // Aeons
+		else if (isHumanVictoryWonder(eBuilding, COLOSSUS, GREECE)) return false; // Aeons
+		else if (isHumanVictoryWonder(eBuilding, TEMPLE_OF_ARTEMIS, GREECE)) return false; // Aeons
+
 		else if (isHumanVictoryWonder(eBuilding, BLUE_MOSQUE, OTTOMANS)) return false;
 		else if (isHumanVictoryWonder(eBuilding, TOPKAPI_PALACE, OTTOMANS)) return false;
 
@@ -6522,6 +6526,7 @@ bool CvPlayer::canConstruct(BuildingTypes eBuilding, bool bContinue, bool bTestV
 		else if (isHumanVictoryWonder(eBuilding, UNIVERSITY_OF_SANKORE, MALI)) return false;
 
 		else if (isHumanVictoryWonder(eBuilding, MEZQUITA, MOORS)) return false;
+		else if (isHumanVictoryWonder(eBuilding, ALHAMBRA, MOORS)) return false;
 
 		else if (isHumanVictoryWonder(eBuilding, GREAT_COTHON, CARTHAGE)) return false;
 
@@ -6537,6 +6542,8 @@ bool CvPlayer::canConstruct(BuildingTypes eBuilding, bool bContinue, bool bTestV
 
 		else if (isHumanVictoryWonder(eBuilding, SHWEDAGON_PAYA, BURMA)) return false;
 
+		else if (isHumanVictoryWonder(eBuilding, WAT_PREAH_PISNULOK, KHMER)) return false; // Aeons
+
 		else if (isHumanVictoryWonder(eBuilding, BOROBUDUR, JAVA)) return false;
 		else if (isHumanVictoryWonder(eBuilding, PRAMBANAN, JAVA)) return false;
 
@@ -6544,7 +6551,12 @@ bool CvPlayer::canConstruct(BuildingTypes eBuilding, bool bContinue, bool bTestV
 		else if (isHumanVictoryWonder(eBuilding, TOMB_OF_ASKIA, SONGHAI)) return false;
 		else if (isHumanVictoryWonder(eBuilding, GREAT_ADOBE_MOSQUE, SONGHAI)) return false;
 
-		else if (isHumanVictoryWonder(eBuilding, AIT_BENHADDOU, MOROCCO)) return false;
+		//else if (isHumanVictoryWonder(eBuilding, AIT_BENHADDOU, MOROCCO)) return false;
+
+		else if (isHumanVictoryWonder(eBuilding, IYANUWO, BENIN)) return false;
+		else if (isHumanVictoryWonder(eBuilding, OSUN_OSOGBO, BENIN)) return false;
+
+		else if (isHumanVictoryWonder(eBuilding, UNIVERSITY_OF_SANKORE, MALI)) return false; // Aeons
 
 		else if (isHumanVictoryWonder(eBuilding, GREAT_LIGHTHOUSE, MACEDON)) return false;
 		else if (isHumanVictoryWonder(eBuilding, GREAT_LIBRARY, MACEDON)) return false;
