@@ -3245,7 +3245,15 @@ dBuildingPreferences = {
 		iNuri: -30,
 		iOracle: -60,
 	},
-
+	iMinoa: {
+		iKnossosPalace: 50,
+		iOracle: 10,
+		iPyramids: -50,
+		iAbuSimbel: -50,
+		iGreatCothon: -50,
+		iColossus: -50,
+		iTempleOfAmun: -50,
+	},
 	iAssyria : {
 		iHangingGardens: 30,
 		iIshtarGate: 30,
