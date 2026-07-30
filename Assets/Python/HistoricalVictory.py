@@ -803,7 +803,11 @@ dGoals = {
 		CitySpecialistCount(capital().named(CAPITAL), great_people(), 3, by=-630),
 	),
 	iChina: (
-		BuildingCount((iConfucianCathedral, 4), (iTaoistCathedral, 4), by=900),
+		All(
+			PopulationCityCount(5, 15),
+			BuildingCount((iConfucianCathedral, 4), (iTaoistCathedral, 4), by=900),
+			by=900
+		),
 		FirstDiscover(iCompass, iPaper, iGunpowder, iPrinting),
 		GoldenAges(4, by=1800),
 	),
