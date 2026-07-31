@@ -9477,7 +9477,10 @@ int CvCity::getFreeSpecialist() const
 
 	if(GET_PLAYER(getOwnerINLINE()).isHasBuildingEffect(TEMPLE_OF_AMUN))
 	{
-		iTotalFreeSpecialists += getNumActiveWorldWonders();
+		if (getNumActiveWorldWonders() > 0)
+		{
+			iTotalFreeSpecialists += 1;
+		}
 	}
 
 	return iTotalFreeSpecialists;

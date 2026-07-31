@@ -147,11 +147,11 @@
 	</TEXT>
 	<TEXT>
  		<Tag>TXT_KEY_BUILDING_TEMPLE_OF_AMUN_HELP</Tag>
- 		<English>[ICON_BULLET]+1 free specialist per active World Wonder in all cities</English>
- 		<French>[ICON_BULLET]+1 free specialist per active World Wonder in all cities</French>
- 		<German>[ICON_BULLET]+1 free specialist per active World Wonder in all cities</German>
- 		<Italian>[ICON_BULLET]+1 free specialist per active World Wonder in all cities</Italian>
- 		<Spanish>[ICON_BULLET]+1 free specialist per active World Wonder in all cities</Spanish>
+ 		<English>[ICON_BULLET]+1 free specialist in all cities with an active World Wonder</English>
+ 		<French>[ICON_BULLET]+1 free specialist in all cities with an active World Wonder</French>
+ 		<German>[ICON_BULLET]+1 free specialist in all cities with an active World Wonder</German>
+ 		<Italian>[ICON_BULLET]+1 free specialist in all cities with an active World Wonder</Italian>
+ 		<Spanish>[ICON_BULLET]+1 free specialist in all cities with an active World Wonder</Spanish>
  	</TEXT>
 	<TEXT>
  		<Tag>TXT_KEY_BUILDING_TEMPLE_OF_AMUN</Tag>
