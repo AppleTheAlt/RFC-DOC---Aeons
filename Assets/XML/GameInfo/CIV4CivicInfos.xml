@@ -981,7 +981,7 @@
 			<Description>TXT_KEY_CIVIC_MONASTICISM</Description>
 			<Civilopedia>TXT_KEY_CIVIC_MONASTICISM_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_CIVIC_MONASTICISM_STRATEGY</Strategy>
-			<Help>TXT_KEY_CIVIC_MONASTICISM_EFFECT</Help>
+			<!-- <Help>TXT_KEY_CIVIC_MONASTICISM_EFFECT</Help> -->
 			<TechPrereq>TECH_ETHICS</TechPrereq>
 			<Button>,Art/Interface/Buttons/Civics/Monasticism.dds</Button>
 			<iAnarchyLength>1</iAnarchyLength>
