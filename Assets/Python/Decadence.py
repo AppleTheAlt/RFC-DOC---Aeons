@@ -71,8 +71,8 @@ def lowerDecadenceTick(iGameTurn, iPlayer):
         civic = civics(iPlayer)
         
         # Monasticism doubles decadence decrease tick
-        if civic.iReligion == iMonasticism:
-             changeDecadence(iPlayer, -1)
+        #if civic.iReligion == iMonasticism:
+        #     changeDecadence(iPlayer, -1)
 
 
 # Statesmen can purge corruption to lower decadence by 3
