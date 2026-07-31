@@ -1174,7 +1174,7 @@ class Congress:
 							
 				# colonies
 				if not bRecolonise and city.getPreviousCiv() != civ(iPlayer):
-					if civ(iPlayer) in dCivGroups[iCivGroupEurope]:
+					if civ(iPlayer) in dCivGroups[iCivGroupEurope] and civ(iLoopPlayer) != iRussia:
 						if is_minor(iLoopPlayer) or (civ(iLoopPlayer) not in dCivGroups[iCivGroupEurope] and stability(iLoopPlayer) <= iStabilityShaky) or (civ(iLoopPlayer) in dCivGroups[iCivGroupEurope] and not player(iLoopPlayer).isHuman() and pPlayer.AI_getAttitude(iLoopPlayer) < AttitudeTypes.ATTITUDE_PLEASED):
 							if plot.getRegionID() in lLateColonialRegions or (plot.getRegionID() in lAmerica and civ(iLoopPlayer) in dCivGroups[iCivGroupEurope]):
 								if plot.getRegionID() in lAfrica and civ(iLoopPlayer) != iRussia:
@@ -1228,7 +1228,7 @@ class Congress:
 		
 		# extra spots for colonial civs -> will be settled
 		# not available after wars because these congresses are supposed to reassign cities
-		if civ(iPlayer) in dCivGroups[iCivGroupEurope] and not self.bPostWar:
+		if civ(iPlayer) in dCivGroups[iCivGroupEurope] and not civ(iPlayer) == iRussia and not self.bPostWar:
 			for plot in plots.all().notowner(iPlayer).regions(*(lSubSaharanAfrica + lOceania)).where(lambda p: not p.isCity() and not p.isPeak() and not p.isWater() and pPlayer.canFound(p.getX(), p.getY())):
 				if pPlayer.isHuman() and not plot.isRevealed(iPlayer, False): continue
 				iSettlerMapValue = plot.getPlayerSettlerValue(iPlayer)
