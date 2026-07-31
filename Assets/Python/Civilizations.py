@@ -3203,6 +3203,7 @@ dDefaultWonderPreferences = {
 	iScythia: -30,
 	iArmenia: -15,
 	iMorocco: -10,
+	iMinoa: -30,
 }
 
 dBuildingPreferences = {
