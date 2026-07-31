@@ -6831,7 +6831,7 @@
 			<Description>TXT_KEY_LEADER_TAIZONG</Description>
 			<Civilopedia>TXT_KEY_LEADER_TAIZONG_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_LEADER_TAIZONG</ArtDefineTag>
-			<iWonderConstructRand>50</iWonderConstructRand>
+			<iWonderConstructRand>30</iWonderConstructRand>
 			<iBaseAttitude>1</iBaseAttitude>
 			<iBasePeaceWeight>8</iBasePeaceWeight>
 			<iPeaceWeightRand>3</iPeaceWeightRand>
@@ -6842,7 +6842,7 @@
 			<iTechTradeKnownPercent>30</iTechTradeKnownPercent>
 			<iMaxGoldTradePercent>10</iMaxGoldTradePercent>
 			<iMaxGoldPerTurnTradePercent>10</iMaxGoldPerTurnTradePercent>
-			<iMaxWarRand>200</iMaxWarRand>
+			<iMaxWarRand>150</iMaxWarRand>
 			<iMaxWarNearbyPowerRatio>90</iMaxWarNearbyPowerRatio>
 			<iMaxWarDistantPowerRatio>60</iMaxWarDistantPowerRatio>
 			<iMaxWarMinAdjacentLandPercent>0</iMaxWarMinAdjacentLandPercent>
@@ -6854,7 +6854,7 @@
 			<iDemandRebukedSneakProb>0</iDemandRebukedSneakProb>
 			<iDemandRebukedWarProb>20</iDemandRebukedWarProb>
 			<iRazeCityProb>0</iRazeCityProb>
-			<iBuildUnitProb>5</iBuildUnitProb>
+			<iBuildUnitProb>30</iBuildUnitProb>
 			<iBaseAttackOddsChange>0</iBaseAttackOddsChange>
 			<iAttackOddsChangeRand>8</iAttackOddsChangeRand>
 			<iWorseRankDifferenceAttitudeChange>0</iWorseRankDifferenceAttitudeChange>
