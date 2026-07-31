@@ -1401,7 +1401,7 @@ class Birth(object):
 				area = plots.birth(self.iPlayer)
 			else:
 				data.iMediterraneanHegemon = civ(validHegemons.maximum(lambda p: player(p).getNumMilitaryUnits()))
-				if plots.capital(data.iMediterraneanHegemon).getX() >= 73:
+				if plots.capital(data.iMediterraneanHegemon).getX() >= 74:
 					setPeriod(iByzantium, iPeriodByzantiumRoman)
 					startingPlot = plots.capital(iRome)
 					self.player.setStartingPlot(startingPlot, False)
