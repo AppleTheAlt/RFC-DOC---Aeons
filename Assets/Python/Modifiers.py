@@ -329,7 +329,7 @@ dResearchCostMods = CivDict({
 	iGokturks: 100,
 	iSamanids: 120,
 	iBuyids: 100,
-	iMisr: 120,
+	iMisr: 130, # Aeons - was 120
 	iParthia: 125,
 	iArmenia: 115,
 	iScythia: 100,
@@ -347,7 +347,7 @@ dResearchCostMods = CivDict({
 	iSumeria: 130,
 	iBabylonia: 140,
 	iHarappa: 125,
-	iChina: 130, # Aeons - Advancing too much due to stability - was 120
+	iChina: 150, # Aeons - Advancing too much due to stability - was 120
 	iHittites: 125,
 	iNubia: 150,
 	iGreece: 110,
@@ -671,7 +671,7 @@ dCitiesMaintenanceMods = CivDict({
 	iGokturks: 60,
 	iSamanids: 100,
 	iBuyids: 140,
-	iMisr: 130,
+	iMisr: 150,
 	iParthia: 90,
 	iArmenia: 120,
 	iScythia: 50,
@@ -689,7 +689,7 @@ dCitiesMaintenanceMods = CivDict({
 	iSumeria: 130,
 	iBabylonia: 130,
 	iHarappa: 125,
-	iChina: 125,
+	iChina: 150,
 	iHittites: 125,
 	iNubia: 150,
 	iGreece: 125,
