@@ -304,7 +304,7 @@ lCivilizations = [
 		iGold=100,
 		iAdvancedStartPoints=300,
 		lCivics=[iRepublic, iSlavery, iRedistribution],
-		techs=techs.column(4).including(iGeneralship,iCurrency).without(iRiding, iShipbuilding, iNavigation)
+		techs=techs.column(4).including(iGeneralship, iCurrency, iEngineering).without(iRiding, iShipbuilding, iNavigation)
 	),
 	Civilization(
 		iGermania,
