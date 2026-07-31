@@ -15479,7 +15479,7 @@
 					<iUnitClassMod>20</iUnitClassMod>
 				</UnityClass>
 			</UnityClasses>
-			<iCombat>7</iCombat>
+			<iCombat>6</iCombat>
 			<iCombatLimit>100</iCombatLimit>
 			<iXPValueAttack>4</iXPValueAttack>
 			<iXPValueDefense>2</iXPValueDefense>
@@ -15582,7 +15582,7 @@
 					<iUnitClassMod>20</iUnitClassMod>
 				</UnityClass>
 			</UnityClasses>
-			<iCombat>7</iCombat>
+			<iCombat>6</iCombat>
 			<iCombatLimit>100</iCombatLimit>
 			<iXPValueAttack>4</iXPValueAttack>
 			<iXPValueDefense>2</iXPValueDefense>
@@ -16010,7 +16010,7 @@
 					<iUnitClassMod>20</iUnitClassMod>
 				</UnityClass>
 			</UnityClasses>
-			<iCombat>7</iCombat>
+			<iCombat>6</iCombat>
 			<iCombatLimit>100</iCombatLimit>
 			<iXPValueAttack>4</iXPValueAttack>
 			<iXPValueDefense>2</iXPValueDefense>
@@ -16220,7 +16220,7 @@
 					<bFeatureImpassable>1</bFeatureImpassable>
 				</FeatureImpassable>
 			</FeatureImpassables>
-			<iCombat>6</iCombat>
+			<iCombat>5</iCombat>
 			<iCombatLimit>100</iCombatLimit>
 			<iXPValueAttack>4</iXPValueAttack>
 			<iXPValueDefense>2</iXPValueDefense>
@@ -16349,7 +16349,7 @@
 					<iUnitClassMod>20</iUnitClassMod>
 				</UnityClass>
 			</UnityClasses>
-			<iCombat>7</iCombat>
+			<iCombat>6</iCombat>
 			<iCombatLimit>100</iCombatLimit>
 			<iXPValueAttack>4</iXPValueAttack>
 			<iXPValueDefense>2</iXPValueDefense>
