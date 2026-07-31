@@ -1055,7 +1055,7 @@ dUnitCostMods = CivDict({
 	iFrance: 90,
 	iMalays: 100,
 	iJapan: 100,
-	iSpain: 90,
+	iSpain: 80, # Aeons - was 90
 	iNorse: 85,
 	iTurks: 80,
 	iArabia: 100,
