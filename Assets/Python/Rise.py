@@ -899,9 +899,18 @@ class Birth(object):
 				if player(data.iMediterraneanHegemon).isHuman() and stability(data.iMediterraneanHegemon) == iStabilitySolid:
 					return False
 				if plots.capital(data.iMediterraneanHegemon).getX() >= 73:
+					# Aeons - Eastern Byzantium requires all the other Italian civs to be dead
+					if player(iRome).isExisting():
+						return False
+
 					if cities.region(rItaly).none(lambda city: data.iMediterraneanHegemon in [city.getCivilizationType()]):
 						return False
 				else:
+					# Aeons - Eastern Byzantium requires all the other Greek civs to be dead
+					# This includes Macedon
+					if player(iMinoa).isExisting() or player(iMycenae).isExisting() or player(iGreece).isExisting() or player(iSparta).isExisting() or player(iMacedon).isExisting():
+						return False
+
 					if cities.region(rGreece).none(lambda city: data.iMediterraneanHegemon in [city.getCivilizationType()]):
 						return False
 
