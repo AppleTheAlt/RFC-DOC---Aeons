@@ -156,7 +156,7 @@ tVandalsRomeBR = (70, 48)
 tConquestVandalsRome = (22, iVandals, iRome, tVandalsRomeTL, tVandalsRomeBR, 4, iVandalsRomeYear, 3)
 
 iGermaniaEnglandYear = 400
-tGermaniaEnglandTL = (51, 62)
+tGermaniaEnglandTL = (55, 62)
 tGermaniaEnglandBR = (59, 66)
 
 tConquestGermaniaEngland = (41, iGermania, iRome, tGermaniaEnglandTL, tGermaniaEnglandBR, 4, iGermaniaEnglandYear, 2)
