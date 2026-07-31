@@ -442,20 +442,34 @@ def onTechAcquired(iTech, iTeam, iPlayer):
 			setPeriod(iNubia, iPeriodSouthSudan)
 		elif iEra == iMedieval:
 			setPeriod(iNubia, iPeriodMakuria)
+
+	elif iCiv == iMinoa:
+		if iColumn >= 6:
+			if not player(iMycenae).isExisting() or (player(iMinoa).isExisting() and cities.owner(iMinoa).region(rGreece).none()):
+				if not player(iGreece).isExisting() or (player(iGreece).isExisting() and cities.owner(iGreece).region(rGreece).none()):
+					if not player(iSparta).isExisting() or (player(iSparta).isExisting() and cities.owner(iSparta).region(rGreece).none()):
+						if not player(iMacedon).isExisting() or (player(iMacedon).isExisting() and cities.owner(iMacedon).region(rGreece).none()):
+						setPeriod(iMinoa, iPeriodUnitedGreece)
+
+	elif iCiv == iMycenae:
+		if iColumn >= 6:
+			if not player(iMinoa).isExisting() or (player(iMinoa).isExisting() and cities.owner(iMinoa).region(rGreece).none()):
+					if not player(iMacedon).isExisting() or (player(iMacedon).isExisting() and cities.owner(iMacedon).region(rGreece).none()):
+						setPeriod(iMycenae, iPeriodUnitedGreece)
     
 	elif iCiv == iGreece:
 		if iColumn >= 6:
-			if not player(iSparta).isExisting():
-				setPeriod(iGreece, iPeriodUnitedGreece)
-			if  player(iSparta).isExisting() and cities.owner(iSparta).region(rGreece).none():
-				setPeriod(iGreece, iPeriodUnitedGreece)
+			if not player(iMinoa).isExisting() or (player(iMinoa).isExisting() and cities.owner(iMinoa).region(rGreece).none()):
+				if not player(iSparta).isExisting() or (player(iSparta).isExisting() and cities.owner(iSparta).region(rGreece).none()):
+					if not player(iMacedon).isExisting() or (player(iMacedon).isExisting() and cities.owner(iMacedon).region(rGreece).none()):
+						setPeriod(iGreece, iPeriodUnitedGreece)
 
 	elif iCiv == iSparta:
 		if iColumn >= 6:
-			if not player(iGreece).isExisting():
-				setPeriod(iSparta, iPeriodUnitedGreece)
-			if  player(iGreece).isExisting() and cities.owner(iGreece).region(rGreece).none():
-				setPeriod(iSparta, iPeriodUnitedGreece)
+			if not player(iMinoa).isExisting() or (player(iMinoa).isExisting() and cities.owner(iMinoa).region(rGreece).none()):
+				if not player(iGreece).isExisting() or (player(iGreece).isExisting() and cities.owner(iGreece).region(rGreece).none()):
+					if not player(iMacedon).isExisting() or (player(iMacedon).isExisting() and cities.owner(iMacedon).region(rGreece).none()):
+						setPeriod(iSparta, iPeriodUnitedGreece)
 
 
 	elif iCiv == iSpain:

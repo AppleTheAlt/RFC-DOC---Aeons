@@ -2231,6 +2231,8 @@ dCivPeriods = {
 	iGermany : (iPeriodModernGermany,),
 
 	# Aeons
+	iMycenae: (iPeriodUnitedGreece),
+	iMinoa: (iPeriodUnitedGreece),
 	iSparta: (iPeriodUnitedGreece),
 	iScythia: (iPeriodPonticScythia),
 	iMacedon : (iPeriodSeleucids),
