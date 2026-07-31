@@ -3072,6 +3072,10 @@ dTechPreferences = {
 		iGunpowder: -30,
 		iFirearms: -30,
 	},
+	iPersia : {
+		iFission: 15,
+		iRepresentation: -40,
+	},
 	iFunj : {
 		iPaper: 30,
 
