@@ -449,7 +449,7 @@ def onTechAcquired(iTech, iTeam, iPlayer):
 				if not player(iGreece).isExisting() or (player(iGreece).isExisting() and cities.owner(iGreece).region(rGreece).none()):
 					if not player(iSparta).isExisting() or (player(iSparta).isExisting() and cities.owner(iSparta).region(rGreece).none()):
 						if not player(iMacedon).isExisting() or (player(iMacedon).isExisting() and cities.owner(iMacedon).region(rGreece).none()):
-						setPeriod(iMinoa, iPeriodUnitedGreece)
+							setPeriod(iMinoa, iPeriodUnitedGreece)
 
 	elif iCiv == iMycenae:
 		if iColumn >= 6:
