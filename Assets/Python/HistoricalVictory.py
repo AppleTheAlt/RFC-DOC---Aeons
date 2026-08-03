@@ -1041,8 +1041,8 @@ dGoals = {
 			by=1000
 		),
 		All(
-			BestPopulationCity(city(tConstantinople).named(CONSTANTINOPLE)),
-			BestCultureCity(city(tConstantinople).named(CONSTANTINOPLE)),
+			BestPopulationCity(capital().named(CAPITAL)),
+			BestCultureCity(capital().named(CAPITAL)),
 			at=1200,
 		),
 		Control(
