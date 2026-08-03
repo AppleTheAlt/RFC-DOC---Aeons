@@ -422,7 +422,7 @@ lCivilizations = [
 		iGold=300,
 		iAdvancedStartPoints=100,
 		lCivics=[iDespotism, iSlavery, iHegemony],
-		techs=techs.column(4).including(iGeneralship, iRecurveBow, iSteel).without(iSeafaring, iNavigation)
+		techs=techs.column(4).including(iGeneralship, iRecurveBow, iSteel).without(iSeafaring, iShipbuilding, iNavigation)
 	),
 	Civilization(
 		iFrance,
