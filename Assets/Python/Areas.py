@@ -434,6 +434,7 @@ iByzantium: [(81, 48), (82, 48), (83, 48), (84, 48), (85, 48), (86, 48), (87, 48
 }, [])
 
 dPeriodCoreArea = {
+iPeriodUnitedGreece :               ((74, 48),	(78, 54)),
 iPeriodMakuria :					((78, 37),	(80, 39)),
 iPeriodTanzania :					((82, 21),	(85, 25)),
 iPeriodSouthSudan :					((79, 31), 	(81, 32)),
@@ -479,6 +480,7 @@ iPeriodSouthAfricaUnion :		        ((72, 11), 	(79, 16)),
 }
 
 dPeriodCoreAreaExceptions = appenddict({
+iPeriodUnitedGreece :           [(74, 54)],
 iPeriodSeleucids :					[(87, 49), (87, 50), (88, 49), (88, 50), (89, 49), (89, 50)],
 iPeriodMakuria :				[(78, 37)],
 iPeriodVandalAfrica :				[(64, 45), (64, 46), (65, 45), (65, 46), (70, 48)],
