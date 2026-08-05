@@ -479,7 +479,7 @@ def freeSlaves(city, iPlayer):
 	iNumSlaves = city.getFreeSpecialistCount(iSpecialistSlave)
 	if iNumSlaves:
 		city.setFreeSpecialistCount(iSpecialistSlave, 0)
-		makeUnits(iPlayer, base_unit(iSlave), city, iNumSlaves)
+		#makeUnits(iPlayer, base_unit(iSlave), city, iNumSlaves)
 	
 # used: GreatPeople
 def replace(unit, iUnitType):
