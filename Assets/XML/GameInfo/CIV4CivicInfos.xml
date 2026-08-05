@@ -404,8 +404,8 @@
 			<TechPrereq>TECH_MASONRY</TechPrereq>
 			<Button>,Art/Interface/Buttons/Civics/Slavery.dds</Button>
 			<iAnarchyLength>1</iAnarchyLength>
-			<iImmigrationDesire>-2</iImmigrationDesire>
-			<Upkeep>UPKEEP_LOW</Upkeep>
+			<iImmigrationDesire>-3</iImmigrationDesire>
+			<Upkeep>UPKEEP_MEDIUM</Upkeep>
 			<bSlavery>1</bSlavery>
 			<ImprovementYieldChanges>
 				<ImprovementYieldChange>
@@ -425,14 +425,6 @@
 				</ImprovementYieldChange>
 				<ImprovementYieldChange>
 					<ImprovementType>IMPROVEMENT_SLAVE_PLANTATION</ImprovementType>
-					<ImprovementYields>
-						<iYield>0</iYield>
-						<iYield>0</iYield>
-						<iYield>1</iYield>
-					</ImprovementYields>
-				</ImprovementYieldChange>
-				<ImprovementYieldChange>
-					<ImprovementType>IMPROVEMENT_ORCHARD</ImprovementType>
 					<ImprovementYields>
 						<iYield>0</iYield>
 						<iYield>0</iYield>
