@@ -43,8 +43,7 @@ def VandalPower(iOwner, iPlayer, city, bConquest):
 def MacedonianPower(iOwner, iPlayer, city, bConquest):
 	iEra = player(iPlayer).getCurrentEra()
 	if civ(iPlayer) == iMacedon and bConquest and iEra < iMedieval:
-		if city.getPopulation() >= 5:
-			makeUnits(iMacedon, iCompanion, city, 2, UnitAITypes.UNITAI_ATTACK_CITY)
+		makeUnits(iMacedon, iCompanion, city, 2, UnitAITypes.UNITAI_ATTACK_CITY)
 
 
 @handler("cityAcquired") # Next tech comes with a bonus tech after conquering a city until the medieval era
