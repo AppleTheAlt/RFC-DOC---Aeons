@@ -73,7 +73,6 @@ def secedeCities(iPlayer, secedingCities, bRazeMinorCities = False):
 		for city in minorCities:
 			secedeCity(city, iMinor, not bComplete, iArmyPercent)
 			
-		game.setUpdatePlotGroups(True)
 		for p in plots.owner(iMinor):
 			p.updatePlotGroup()
 		
