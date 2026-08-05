@@ -969,7 +969,7 @@ class Birth(object):
 		# And Carthage must not exist
 		if self.iCiv == iTunis:
 			if player(iMisr).isExisting():
-				if player(iMisr).getPeriod() == iPeriodMisrEgypt:
+				if player(iMisr).getPeriod() != iPeriodMisrEgypt:
 					return False
 			if player(iCarthage).isExisting():
 				if player(iCarthage).getPeriod() == iPeriodCarthage:

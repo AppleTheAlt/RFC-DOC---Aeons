@@ -859,7 +859,7 @@ def canRespawn(iCiv):
 	# Misr must've conquered an Egyptian city for Tunis and Carthage must not exist
 	if iCiv == iTunis:
 			if player(iMisr).isExisting():
-				if player(iMisr).getPeriod() == iPeriodMisrEgypt:
+				if player(iMisr).getPeriod() != iPeriodMisrEgypt:
 					return False
 			if player(iCarthage).isExisting():
 				if player(iCarthage).getPeriod() == iPeriodCarthage:
