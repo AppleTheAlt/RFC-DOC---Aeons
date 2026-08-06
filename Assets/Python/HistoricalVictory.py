@@ -800,7 +800,7 @@ dGoals = {
 			plots.region(rEgypt).named(EGYPT),
 			by=-650,
 		),
-		CitySpecialistCount(capital().named(CAPITAL), great_people(), 3, by=-630),
+		CitySpecialistCount(capital().named(CAPITAL), great_people(), 4, by=-630),
 	),
 	iChina: (
 		All(
