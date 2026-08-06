@@ -315,9 +315,6 @@ def doResurrection(iCiv, lCityList, bAskFlip=True, bDisplay=False):
 	clearPlague(iPlayer)
 	convertBackCulture(iPlayer)
 	
-	for p in plots.owner(iPlayer):
-		p.updatePlotGroup()
-	
 	# resurrection leaders
 	if iCiv in dResurrectionLeaders:
 		if pPlayer.getLeader() != dResurrectionLeaders[iCiv]:
