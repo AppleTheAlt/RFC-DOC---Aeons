@@ -1770,7 +1770,7 @@ DenialTypes CvTeamAI::AI_vassalTrade(TeamTypes eTeam) const
 	}
 
 	// Leoreth: do not become a peace vassal unless threatened
-	if (!bThreatened)
+	if (!bThreatened && !isVassal(eTeam)) // Aeons - ignore for integrating
 	{
 		return DENIAL_NO_GAIN;
 	}
