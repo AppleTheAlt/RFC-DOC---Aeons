@@ -891,8 +891,8 @@ class Birth(object):
 
 		# Aeons - Byzantium requires that the Mediterranean hegemon holds land in Italy/Greece
 		if self.iCiv == iByzantium:
-			validHegemons = players.major().existing().where(lambda p: plots.capital(p) in plots.region(rMediterraneanSea).expand(2))
-			if validHegemons == None or self.isHuman():
+			validHegemons = players.major().existing().where(lambda p: plots.capital(p) in plots.region(rMediterraneanSea).expand(1))
+			if validHegemons.count() < 1 or self.isHuman():
 				return False
 			else:
 				data.iMediterraneanHegemon = civ(validHegemons.maximum(lambda p: player(p).getNumMilitaryUnits()))
@@ -1406,7 +1406,7 @@ class Birth(object):
 		#Aeons - Dynamic Byzantium starting plot
 		if self.iCiv == iByzantium:
 			validHegemons = players.major().existing().where(lambda p: plots.capital(p) in plots.region(rMediterraneanSea).expand(2))
-			if validHegemons == None:
+			if validHegemons.count() < 1:
 				area = plots.birth(self.iPlayer)
 			else:
 				data.iMediterraneanHegemon = civ(validHegemons.maximum(lambda p: player(p).getNumMilitaryUnits()))
@@ -1466,7 +1466,7 @@ class Birth(object):
 		#Aeons - remove Byzantium from expanded flips, but make it flip all of Rome east of Italy
 		if self.iCiv == iByzantium:
 			validHegemons = players.major().existing().where(lambda p: plots.capital(p) in plots.region(rMediterraneanSea).expand(2))
-			if validHegemons == None or self.isHuman():
+			if validHegemons.count() < 1 or self.isHuman():
 				area = plots.birth(self.iPlayer)
 				return area.unique()
 			else:
