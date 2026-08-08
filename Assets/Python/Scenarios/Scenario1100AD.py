@@ -347,7 +347,7 @@ scenario1100AD = Scenario(
 		iHolyRome: 1,
 	},
 	
-	
+	lUnexpiredWonders = [iOxfordUniversity],
 	
 	lAllGoalsFailed = [iChina, iKorea, iCelts],
 	
