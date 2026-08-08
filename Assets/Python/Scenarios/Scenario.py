@@ -202,6 +202,7 @@ RELIGION_FOUNDING_DATES = {
 	iCatholicism: 500,
 	iProtestantism: 1521,
 	iIslam: 622,
+	iShia: 632,
 	iHinduism: -1500,
 	iBuddhism: 80,
 	iConfucianism: -500,
