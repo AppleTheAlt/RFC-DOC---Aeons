@@ -77,7 +77,7 @@ lCivilizations = [
 		iGold=400,
 		iStateReligion=iCatholicism,
 		lCivics=[iMonarchy, iVassalage, iManorialism, iRegulatedTrade, iClergy, iHegemony],
-		techs=techs.column(9).without(iPaper, iEducation, iDiscipline),
+		techs=techs.column(9).without(iPaper, iEducation, iDiscipline, iReligiousOrders, iPatronage, iCompass),
 		dAttitudes={iEngland: -3, iHolyRome: -1}
 	),
 	Civilization(
