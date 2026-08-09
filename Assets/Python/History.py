@@ -506,7 +506,7 @@ def arabiaConquerors(iTargetTeam):
 	iTargetCiv = civ(iTargetTeam)
 
 	#if iTargetCiv in lArabiaCivs:
-	if year() < year(900) and player(iArabia).getNumCities() > 0 and data.isFirstContactArabia(iTargetCiv):
+	if year() < year(700) and player(iArabia).getNumCities() > 0 and data.isFirstContactArabia(iTargetCiv):
 		data.setFirstContactArabia(iTargetCiv, False)
 		teamTarget = team(iTargetTeam)
 		
