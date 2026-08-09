@@ -285,7 +285,7 @@ def moveOutAttackers(bWar, iAttacker, iDefender):
 	if not player(iDefender).isBirthProtected():
 		return
 	
-	aroundCities = cities.owner(iDefender).plots().expand(2)
+	aroundCities = cities.owner(iDefender).plots().expand(1)
 	birthProtected = plots.all().where(lambda p: p.getBirthProtected() == iDefender and not p.isPlayerCore(iAttacker) and not p.getOwner() == iAttacker)
 	for plot in aroundCities.including(birthProtected):
 		attackers = units.at(plot).owner(iAttacker)
@@ -588,7 +588,7 @@ class Birth(object):
 			ownerCities = cities.all().area(self.location).where(lambda city: city.getOwner() in owners).where(lambda city: not plot(city).isPlayerCore(city.getOwner())).where(lambda city: plot(city).getSettlerValue(self.iCiv) > 0 or plot(city).getPlayerSettlerValue(city.getOwner()) == 0)
 			closerCities = ownerCities.where(lambda city: real_distance(city, self.location) <= real_distance(city, capital(city)))
 			
-			additionalPlots = closerCities.plots().expand(1) + closerCities.plots().expand(2).where(lambda p: p.getSettlerValue(self.iCiv) > 0)
+			additionalPlots = closerCities.plots().expand(1) + closerCities.plots().expand(1).where(lambda p: p.getSettlerValue(self.iCiv) > 0)
 			
 			self.area += additionalPlots.where(lambda p: p.getOwner() in owners and none(p.isPlayerCore(iPlayer) for iPlayer in players.major().existing().without(self.iPlayer)))
 			self.area = self.area.unique()
@@ -606,7 +606,7 @@ class Birth(object):
 			self.area = self.area.where(lambda p: p.isPlayerCore(self.iPlayer) or not owner(p, iAmerica))
 		
 		if self.iCiv == iCanada:
-			self.area += cities.regions(rOntario, rQuebec, rMaritimes).where(lambda city: city.getX() < plots.capital(iCanada).getX()).where(lambda city: civ(city) in [iFrance, iEngland, iAmerica]).plots().expand(2).regions(rOntario, rQuebec, rMaritimes).where(lambda p: not p.isCore(p.getOwner()))
+			self.area += cities.regions(rOntario, rQuebec, rMaritimes).where(lambda city: city.getX() < plots.capital(iCanada).getX()).where(lambda city: civ(city) in [iFrance, iEngland, iAmerica]).plots().expand(1).regions(rOntario, rQuebec, rMaritimes).where(lambda p: not p.isCore(p.getOwner()))
 			self.area = self.area.unique()
 		
 		self.excludeForeignCapitals()
@@ -1405,7 +1405,7 @@ class Birth(object):
 
 		#Aeons - Dynamic Byzantium starting plot
 		if self.iCiv == iByzantium:
-			validHegemons = players.major().existing().where(lambda p: plots.capital(p) in plots.region(rMediterraneanSea).expand(2))
+			validHegemons = players.major().existing().where(lambda p: plots.capital(p) in plots.region(rMediterraneanSea).expand(1))
 			if validHegemons.count() < 1:
 				area = plots.birth(self.iPlayer)
 			else:
@@ -1465,7 +1465,7 @@ class Birth(object):
 
 		#Aeons - remove Byzantium from expanded flips, but make it flip all of Rome east of Italy
 		if self.iCiv == iByzantium:
-			validHegemons = players.major().existing().where(lambda p: plots.capital(p) in plots.region(rMediterraneanSea).expand(2))
+			validHegemons = players.major().existing().where(lambda p: plots.capital(p) in plots.region(rMediterraneanSea).expand(1))
 			if validHegemons.count() < 1 or self.isHuman():
 				area = plots.birth(self.iPlayer)
 				return area.unique()
