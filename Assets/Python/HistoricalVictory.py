@@ -785,7 +785,7 @@ dGoals = {
 			PopulationInAreaPercent(plots.regions(*lEuropeProper).named(EUROPE), 60, at=-1300),
 			PopulationInAreaPercent(plots.regions(*lEuropeProper).named(EUROPE), 60, at=-540),
 		),
-		OpenBorderCount(5, by=-1000),
+		OpenBorderCount(4, by=-1000),
 		AreaPercent(plots.all().adjacent_region(rMediterraneanSea).named(MEDITERRANEAN), 20, by=-550),
 	),
 
