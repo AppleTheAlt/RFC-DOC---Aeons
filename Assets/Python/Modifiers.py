@@ -1367,23 +1367,23 @@ dInflationRateMods = CivDict({
 	iJudah: 125,
 	iElam: 130,
 	iMinoa: 130,
-	iEgypt: 130,
+	iEgypt: 150, # Aeons - Was 130
 	iSumeria: 140,
 	iBabylonia: 130,
 	iHarappa: 130,
-	iChina: 150,
+	iChina: 160, # Aeons - Was 150
 	iHittites: 130,
 	iNubia: 140,
 	iGreece: 160,
 	iMacedon: 130,
 	iAssyria: 125,
 	iIndia: 140,
-	iPhoenicia: 130,
+	iPhoenicia: 150, # Aeons - Was 130
 	iPolynesia: 130,
 	iPersia: 130,
 	iCelts: 140,
 	iMaya: 125,
-	iRome: 130,
+	iRome: 150, # Aeons - Was 130
 	iDravidia: 110,
 	iEthiopia: 130,
 	iToltecs: 125,
