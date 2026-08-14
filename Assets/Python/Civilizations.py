@@ -264,8 +264,8 @@ lCivilizations = [
 	),
 	Civilization(
 		iGreece,
-		iGold=150,
-		iAdvancedStartPoints=200,
+		iGold=100,
+		iAdvancedStartPoints=100,
 		lCivics=[iRepublic, iSlavery, iDeification, iRedistribution, iThalassocracy],
 		techs=techs.column(4).without(iRiding, iContract)
 	),
