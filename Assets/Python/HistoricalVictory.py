@@ -739,7 +739,7 @@ dGoals = {
 
 
 	iSumeria: (
-		CompleteEra(iAncient, by=-600),
+		CompleteEra(iAncient, by=-1000),
 		All(
 		CityCount(plots.region(rMesopotamia).named(MESOPOTAMIA), 3, at=-2100),
 		CityCount(plots.region(rMesopotamia).named(MESOPOTAMIA), 3, at=-1000),
