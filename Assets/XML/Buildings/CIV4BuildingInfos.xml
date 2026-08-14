@@ -1448,7 +1448,7 @@
 			<ArtDefineTag>ART_DEF_BUILDING_LIBRARY</ArtDefineTag>
 			<FreeStartEra>ERA_RENAISSANCE</FreeStartEra>
 			<PrereqTech>TECH_WRITING</PrereqTech>
-			<iCost>90</iCost>
+			<iCost>120</iCost>
 			<iConquestProb>70</iConquestProb>
 			<iAdvancedStartCost>100</iAdvancedStartCost>
 			<iMinAreaSize>-1</iMinAreaSize>
@@ -1492,7 +1492,7 @@
 			<ArtDefineTag>ART_DEF_BUILDING_BUYID_SUFI_SHRINE</ArtDefineTag>
 			<FreeStartEra>ERA_RENAISSANCE</FreeStartEra>
 			<PrereqTech>TECH_WRITING</PrereqTech>
-			<iCost>90</iCost>
+			<iCost>120</iCost>
 			<iConquestProb>70</iConquestProb>
 			<iAdvancedStartCost>100</iAdvancedStartCost>
 			<iMinAreaSize>-1</iMinAreaSize>
@@ -1554,7 +1554,7 @@
 			<ArtDefineTag>ART_DEF_BUILDING_GOTHIC_STONE_HERMITAGE</ArtDefineTag>
 			<FreeStartEra>ERA_RENAISSANCE</FreeStartEra>
 			<PrereqTech>TECH_WRITING</PrereqTech>
-			<iCost>90</iCost>
+			<iCost>120</iCost>
 			<iConquestProb>70</iConquestProb>
 			<iAdvancedStartCost>100</iAdvancedStartCost>
 			<iMinAreaSize>-1</iMinAreaSize>
@@ -1611,7 +1611,7 @@
 			<ArtDefineTag>ART_DEF_BUILDING_BABYLONIAN_EDUBBA</ArtDefineTag>
 			<FreeStartEra>ERA_RENAISSANCE</FreeStartEra>
 			<PrereqTech>TECH_WRITING</PrereqTech>
-			<iCost>45</iCost>
+			<iCost>60</iCost>
 			<iConquestProb>70</iConquestProb>
 			<iAdvancedStartCost>100</iAdvancedStartCost>
 			<iMinAreaSize>-1</iMinAreaSize>
@@ -1655,7 +1655,7 @@
 			<ArtDefineTag>ART_DEF_BUILDING_CHINESE_TAIXUE</ArtDefineTag>
 			<FreeStartEra>ERA_RENAISSANCE</FreeStartEra>
 			<PrereqTech>TECH_WRITING</PrereqTech>
-			<iCost>90</iCost>
+			<iCost>120</iCost>
 			<iConquestProb>70</iConquestProb>
 			<iAdvancedStartCost>100</iAdvancedStartCost>
 			<iMinAreaSize>-1</iMinAreaSize>
@@ -1703,7 +1703,7 @@
 			<ArtDefineTag>ART_DEF_BUILDING_BURMESE_KYAUNG</ArtDefineTag>
 			<FreeStartEra>ERA_RENAISSANCE</FreeStartEra>
 			<PrereqTech>TECH_WRITING</PrereqTech>
-			<iCost>90</iCost>
+			<iCost>120</iCost>
 			<iConquestProb>70</iConquestProb>
 			<iAdvancedStartCost>100</iAdvancedStartCost>
 			<iMinAreaSize>-1</iMinAreaSize>
@@ -1775,7 +1775,7 @@
 			<ArtDefineTag>ART_DEF_BUILDING_AZTEC_CALMECAC</ArtDefineTag>
 			<FreeStartEra>ERA_RENAISSANCE</FreeStartEra>
 			<PrereqTech>TECH_WRITING</PrereqTech>
-			<iCost>90</iCost>
+			<iCost>120</iCost>
 			<iConquestProb>70</iConquestProb>
 			<iAdvancedStartCost>100</iAdvancedStartCost>
 			<iMinAreaSize>-1</iMinAreaSize>
