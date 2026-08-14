@@ -2327,7 +2327,7 @@ void CvGame::updateTechRanks()
 	{
 		setTechRank(iIndex++, *it);
 
-		if (iIndex == countCivTeamsAlive() / 2)
+		if (iIndex == countCivTeamsAlive() / 3)
 		{
 			setMedianTechValue(GET_TEAM(*it).getTotalTechValue());
 		}
