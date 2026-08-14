@@ -702,7 +702,7 @@ dGoals = {
 			 All(
 			 CityCount(plots.regions(rGreece, rAnatolia).named(GREECE_AND_ANATOLIA), 4),
 			 CityCount(plots.region(rItaly), 1),
-			 at=-400,
+			 by=-400,
 			 ),
 			 UnitLevelCount(5, 10, by=-300),
 			 BuildingCount((iBarracks, 5), (iArena, 5), (iPaganTemple, 5), by=-300),
