@@ -696,7 +696,7 @@ dGoals = {
 				BuildingCount(wonders(), 4),
 				by=-700,
 			 ),
-			 CitySpecialistCount(capital().named(CAPITAL), great_people(), 4, by=-700),
+			 CityDifferentGreatPeopleCount(capital().named(CAPITAL), 4, by=-700),
 	),
 	iSparta: (
 			 All(
