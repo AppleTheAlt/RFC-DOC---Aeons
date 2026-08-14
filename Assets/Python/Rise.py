@@ -397,12 +397,13 @@ def createInvaderSettlers(city):
 		createSettlers(iPlayer, iNumSettlers, bGrantCapital=False)
 
 
-@handler("firstCity")
-def restorePreservedWonders(city):
-	while data.players[city.getOwner()].lPreservedWonders:
-		iWonder = data.players[city.getOwner()].lPreservedWonders.pop(0)
-		if city.isValidBuildingLocation(iWonder):
-			city.setHasRealBuilding(iWonder, True)
+# Aeons - No longer transfer wonders on rise-razing
+#@handler("firstCity")
+#def restorePreservedWonders(city):
+#	while data.players[city.getOwner()].lPreservedWonders:
+#		iWonder = data.players[city.getOwner()].lPreservedWonders.pop(0)
+#		if city.isValidBuildingLocation(iWonder):
+#			city.setHasRealBuilding(iWonder, True)
 
 
 @handler("playerDestroyed")
