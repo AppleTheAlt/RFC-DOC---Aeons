@@ -405,7 +405,7 @@
 			<PrereqTech>TECH_MYTHOLOGY</PrereqTech>
 			<bCenterInCity>1</bCenterInCity>
 			<bPagan>1</bPagan>
-			<iCost>30</iCost>
+			<iCost>50</iCost>
 			<iConquestProb>50</iConquestProb>
 			<iAdvancedStartCost>100</iAdvancedStartCost>
 			<iMinAreaSize>-1</iMinAreaSize>
@@ -21290,7 +21290,7 @@
 			<PrereqTech>TECH_MYTHOLOGY</PrereqTech>
 			<bCenterInCity>1</bCenterInCity>
 			<bPagan>1</bPagan>
-			<iCost>30</iCost>
+			<iCost>50</iCost>
 			<iConquestProb>50</iConquestProb>
 			<iAdvancedStartCost>100</iAdvancedStartCost>
 			<iMinAreaSize>-1</iMinAreaSize>
@@ -21330,7 +21330,7 @@
 			<PrereqTech>TECH_MYTHOLOGY</PrereqTech>
 			<bCenterInCity>1</bCenterInCity>
 			<bPagan>1</bPagan>
-			<iCost>30</iCost>
+			<iCost>50</iCost>
 			<iConquestProb>50</iConquestProb>
 			<iAdvancedStartCost>100</iAdvancedStartCost>
 			<iMinAreaSize>-1</iMinAreaSize>
@@ -21370,7 +21370,7 @@
 			<PrereqTech>TECH_MYTHOLOGY</PrereqTech>
 			<bCenterInCity>1</bCenterInCity>
 			<bPagan>1</bPagan>
-			<iCost>30</iCost>
+			<iCost>50</iCost>
 			<iConquestProb>50</iConquestProb>
 			<iAdvancedStartCost>100</iAdvancedStartCost>
 			<iMinAreaSize>-1</iMinAreaSize>
@@ -21410,7 +21410,7 @@
 			<PrereqTech>TECH_MYTHOLOGY</PrereqTech>
 			<bCenterInCity>1</bCenterInCity>
 			<bPagan>1</bPagan>
-			<iCost>30</iCost>
+			<iCost>50</iCost>
 			<iConquestProb>05</iConquestProb>
 			<iAdvancedStartCost>100</iAdvancedStartCost>
 			<iMinAreaSize>-1</iMinAreaSize>
@@ -21450,7 +21450,7 @@
 			<PrereqTech>TECH_MYTHOLOGY</PrereqTech>
 			<bCenterInCity>1</bCenterInCity>
 			<bPagan>1</bPagan>
-			<iCost>30</iCost>
+			<iCost>50</iCost>
 			<iConquestProb>50</iConquestProb>
 			<iAdvancedStartCost>100</iAdvancedStartCost>
 			<iMinAreaSize>-1</iMinAreaSize>
@@ -21490,7 +21490,7 @@
 			<PrereqTech>TECH_MYTHOLOGY</PrereqTech>
 			<bCenterInCity>1</bCenterInCity>
 			<bPagan>1</bPagan>
-			<iCost>30</iCost>
+			<iCost>50</iCost>
 			<iConquestProb>50</iConquestProb>
 			<iAdvancedStartCost>100</iAdvancedStartCost>
 			<iMinAreaSize>-1</iMinAreaSize>
@@ -21530,7 +21530,7 @@
 			<PrereqTech>TECH_MYTHOLOGY</PrereqTech>
 			<bCenterInCity>1</bCenterInCity>
 			<bPagan>1</bPagan>
-			<iCost>30</iCost>
+			<iCost>50</iCost>
 			<iConquestProb>50</iConquestProb>
 			<iAdvancedStartCost>100</iAdvancedStartCost>
 			<iMinAreaSize>-1</iMinAreaSize>
@@ -21570,7 +21570,7 @@
 			<PrereqTech>TECH_MYTHOLOGY</PrereqTech>
 			<bCenterInCity>1</bCenterInCity>
 			<bPagan>1</bPagan>
-			<iCost>30</iCost>
+			<iCost>50</iCost>
 			<iConquestProb>50</iConquestProb>
 			<iAdvancedStartCost>100</iAdvancedStartCost>
 			<iMinAreaSize>-1</iMinAreaSize>
@@ -21610,7 +21610,7 @@
 			<PrereqTech>TECH_MYTHOLOGY</PrereqTech>
 			<bCenterInCity>1</bCenterInCity>
 			<bPagan>1</bPagan>
-			<iCost>30</iCost>
+			<iCost>50</iCost>
 			<iConquestProb>50</iConquestProb>
 			<iAdvancedStartCost>100</iAdvancedStartCost>
 			<iMinAreaSize>-1</iMinAreaSize>
@@ -21650,7 +21650,7 @@
 			<PrereqTech>TECH_MYTHOLOGY</PrereqTech>
 			<bCenterInCity>1</bCenterInCity>
 			<bPagan>1</bPagan>
-			<iCost>30</iCost>
+			<iCost>50</iCost>
 			<iConquestProb>50</iConquestProb>
 			<iAdvancedStartCost>100</iAdvancedStartCost>
 			<iMinAreaSize>-1</iMinAreaSize>
@@ -21690,7 +21690,7 @@
 			<PrereqTech>TECH_MYTHOLOGY</PrereqTech>
 			<bCenterInCity>1</bCenterInCity>
 			<bPagan>1</bPagan>
-			<iCost>30</iCost>
+			<iCost>50</iCost>
 			<iConquestProb>50</iConquestProb>
 			<iAdvancedStartCost>100</iAdvancedStartCost>
 			<iMinAreaSize>-1</iMinAreaSize>
@@ -21729,7 +21729,7 @@
 			<ArtDefineTag>ART_DEF_BUILDING_DRUIDIC_NEMETON</ArtDefineTag>
 			<PrereqTech>TECH_MYTHOLOGY</PrereqTech>
 			<bPagan>1</bPagan>
-			<iCost>30</iCost>
+			<iCost>50</iCost>
 			<iConquestProb>50</iConquestProb>
 			<iAdvancedStartCost>100</iAdvancedStartCost>
 			<iMinAreaSize>-1</iMinAreaSize>
@@ -21768,7 +21768,7 @@
 			<ArtDefineTag>ART_DEF_BUILDING_PERUN_SHRINE</ArtDefineTag>
 			<PrereqTech>TECH_MYTHOLOGY</PrereqTech>
 			<bPagan>1</bPagan>
-			<iCost>30</iCost>
+			<iCost>50</iCost>
 			<iConquestProb>50</iConquestProb>
 			<iAdvancedStartCost>100</iAdvancedStartCost>
 			<iMinAreaSize>-1</iMinAreaSize>
@@ -21808,7 +21808,7 @@
 			<PrereqTech>TECH_MYTHOLOGY</PrereqTech>
 			<bCenterInCity>1</bCenterInCity>
 			<bPagan>1</bPagan>
-			<iCost>30</iCost>
+			<iCost>50</iCost>
 			<iConquestProb>50</iConquestProb>
 			<iAdvancedStartCost>100</iAdvancedStartCost>
 			<iMinAreaSize>-1</iMinAreaSize>
@@ -21848,7 +21848,7 @@
 			<PrereqTech>TECH_MYTHOLOGY</PrereqTech>
 			<bCenterInCity>1</bCenterInCity>
 			<bPagan>1</bPagan>
-			<iCost>30</iCost>
+			<iCost>50</iCost>
 			<iConquestProb>50</iConquestProb>
 			<iAdvancedStartCost>100</iAdvancedStartCost>
 			<iMinAreaSize>-1</iMinAreaSize>
@@ -21887,7 +21887,7 @@
 			<ArtDefineTag>ART_DEF_BUILDING_TENGRI_OBO</ArtDefineTag>
 			<PrereqTech>TECH_MYTHOLOGY</PrereqTech>
 			<bPagan>1</bPagan>
-			<iCost>30</iCost>
+			<iCost>50</iCost>
 			<iConquestProb>50</iConquestProb>
 			<iAdvancedStartCost>100</iAdvancedStartCost>
 			<iMinAreaSize>-1</iMinAreaSize>
@@ -21927,7 +21927,7 @@
 			<PrereqTech>TECH_MYTHOLOGY</PrereqTech>
 			<bCenterInCity>1</bCenterInCity>
 			<bPagan>1</bPagan>
-			<iCost>30</iCost>
+			<iCost>50</iCost>
 			<iConquestProb>50</iConquestProb>
 			<iAdvancedStartCost>100</iAdvancedStartCost>
 			<iMinAreaSize>-1</iMinAreaSize>
@@ -21967,7 +21967,7 @@
 			<PrereqTech>TECH_MYTHOLOGY</PrereqTech>
 			<bCenterInCity>1</bCenterInCity>
 			<bPagan>1</bPagan>
-			<iCost>30</iCost>
+			<iCost>50</iCost>
 			<iConquestProb>50</iConquestProb>
 			<iAdvancedStartCost>100</iAdvancedStartCost>
 			<iMinAreaSize>-1</iMinAreaSize>
@@ -22007,7 +22007,7 @@
 			<PrereqTech>TECH_MYTHOLOGY</PrereqTech>
 			<bCenterInCity>1</bCenterInCity>
 			<bPagan>1</bPagan>
-			<iCost>30</iCost>
+			<iCost>50</iCost>
 			<iConquestProb>50</iConquestProb>
 			<iAdvancedStartCost>100</iAdvancedStartCost>
 			<iMinAreaSize>-1</iMinAreaSize>
@@ -22047,7 +22047,7 @@
 			<PrereqTech>TECH_MYTHOLOGY</PrereqTech>
 			<bCenterInCity>1</bCenterInCity>
 			<bPagan>1</bPagan>
-			<iCost>30</iCost>
+			<iCost>50</iCost>
 			<iConquestProb>50</iConquestProb>
 			<iAdvancedStartCost>100</iAdvancedStartCost>
 			<iMinAreaSize>-1</iMinAreaSize>
@@ -22087,7 +22087,7 @@
 			<PrereqTech>TECH_MYTHOLOGY</PrereqTech>
 			<bCenterInCity>1</bCenterInCity>
 			<bPagan>1</bPagan>
-			<iCost>30</iCost>
+			<iCost>50</iCost>
 			<iConquestProb>50</iConquestProb>
 			<iAdvancedStartCost>100</iAdvancedStartCost>
 			<iMinAreaSize>-1</iMinAreaSize>
@@ -22127,7 +22127,7 @@
 			<PrereqTech>TECH_MYTHOLOGY</PrereqTech>
 			<bCenterInCity>1</bCenterInCity>
 			<bPagan>1</bPagan>
-			<iCost>30</iCost>
+			<iCost>50</iCost>
 			<iConquestProb>50</iConquestProb>
 			<iAdvancedStartCost>100</iAdvancedStartCost>
 			<iMinAreaSize>-1</iMinAreaSize>
@@ -22167,7 +22167,7 @@
 			<PrereqTech>TECH_MYTHOLOGY</PrereqTech>
 			<bCenterInCity>1</bCenterInCity>
 			<bPagan>1</bPagan>
-			<iCost>30</iCost>
+			<iCost>50</iCost>
 			<iConquestProb>50</iConquestProb>
 			<iAdvancedStartCost>100</iAdvancedStartCost>
 			<iMinAreaSize>-1</iMinAreaSize>
