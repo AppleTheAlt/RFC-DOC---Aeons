@@ -835,7 +835,7 @@ dGoals = {
 			(improvement_resources(iFishingBoats, iHarvestBoats), 6),
 			by=-400
 		),
-		CompleteEra(iClassical, by=200),
+		CompleteEra(iClassical, by=1),
 	),
 	iIndia: (
 		BuildingCount((iHinduShrine, 1), (iBuddhistShrine, 1), at=-250),
