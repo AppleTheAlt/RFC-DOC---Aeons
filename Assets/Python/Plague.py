@@ -8,7 +8,7 @@ import Logging as log
 
 iDuration = 6
 
-tPlagueDates = (-1350, -420, 170, 500, 1350, 1650, 1850)
+tPlagueDates = (-1350, -420, 170, 500, 1350, 1650, 1850, 1920)
 
 
 @handler("GameStart")
