@@ -8,7 +8,7 @@ import Logging as log
 
 iDuration = 6
 
-tPlagueDates = (170, 500, 1350, 1650, 1850)
+tPlagueDates = (-1350, -420, 170, 500, 1350, 1650, 1850)
 
 
 @handler("GameStart")
@@ -69,7 +69,7 @@ def startPlagues(iGameTurn):
 		if iGameTurn == iPlagueDate:
 			startPlague(iPlague)
 
-		if iPlague >= 2:
+		if iPlague >= 4:
 			#retry if the epidemic is dead too quickly
 			if iGameTurn == iPlagueDate + 4:
 				iInfectedCounter = 0
@@ -79,7 +79,7 @@ def startPlagues(iGameTurn):
 				if iInfectedCounter == 1:
 					startPlague(iPlague)
 
-		if iPlague == 3 or iPlague == 4:
+		if iPlague == 5 or iPlague == 6:
 			if iGameTurn == iPlagueDate + 8:
 				iInfectedCounter = 0
 				for iPlayer in players.all().barbarian():
@@ -171,10 +171,10 @@ def calculateTotalPlagueHealth(iPlayer, iPlague):
 	if player(iPlayer).calculateTotalCityHealthiness() > 0:
 		iHealth += rand(40)
 		
-		if iPlague == 1: # plague of Justinian
+		if iPlague == 3: # plague of Justinian
 			if civ(iPlayer) in dCivGroups[iCivGroupEurope] + dCivGroups[iCivGroupMiddleEast]:
 				iHealth -= 10
-		if iPlague == 2: # medieval Black Death
+		if iPlague == 4: # medieval Black Death
 			if civ(iPlayer) in dCivGroups[iCivGroupEurope]:
 				iHealth -= 5
 	
