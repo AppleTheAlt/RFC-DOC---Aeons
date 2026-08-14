@@ -3102,6 +3102,7 @@ class CvMainInterface:
 			screen.hide(szString)
 		
 		screen.hide("ExpansionText")
+		screen.hide("DecadenceText")
 
 		if ( CyInterface().getShowInterface() != InterfaceVisibility.INTERFACE_HIDE_ALL and CyInterface().getShowInterface() != InterfaceVisibility.INTERFACE_MINIMAP_ONLY  and CyInterface().getShowInterface() != InterfaceVisibility.INTERFACE_ADVANCED_START):
 
@@ -3140,6 +3141,11 @@ class CvMainInterface:
 						expansion = u"<color=255,0,0>%s</color>" % expansion
 					
 					screen.setLabel("ExpansionText", "Background", expansion, CvUtil.FONT_LEFT_JUSTIFY, 14, 50 + (iCount + 1) * 19, -0.1, FontTypes.SMALL_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1)
+
+					# Aeons - Decadence display
+					iDecadence = getDecadence(ePlayer)
+					decadence = "%s %s" % (localText.getText("INTERFACE_DECADENCE", ()), localText.getText("INTERFACE_DECADENCE_AMOUNT", (iDecadence,)))
+					screen.setLabel("DecadenceText", "Background", decadence, CvUtil.FONT_LEFT_JUSTIFY, 14, 50 + (iCount + 2) * 19, -0.2, FontTypes.SMALL_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1)
 
 			self.updateTimeText()
 			screen.setLabel( "TimeText", "Background", g_szTimeText, CvUtil.FONT_RIGHT_JUSTIFY, xResolution - 56, 6, -0.3, FontTypes.GAME_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1 )
