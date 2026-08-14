@@ -3313,6 +3313,22 @@
 		<Spanish>%d1 %F2</Spanish>
 	</TEXT>
 	<TEXT>
+		<Tag>INTERFACE_DECADENCE</Tag>
+		<English>Decadence :</English>
+		<French>Decadence :</French>
+		<German>Decadence :</German>
+		<Italian>Decadence :</Italian>
+		<Spanish>Decadence :</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>INTERFACE_DECADENCE_AMOUNT</Tag>
+		<English>%d1</English>
+		<French>%d1</French>
+		<German>%d1</German>
+		<Italian>%d1</Italian>
+		<Spanish>%d1</Spanish>
+	</TEXT>
+	<TEXT>
 		<Tag>INTERFACE_SEPARATISM</Tag>
 		<English>%d1 %F2</English>
 		<French>%d1 %F2</French>
