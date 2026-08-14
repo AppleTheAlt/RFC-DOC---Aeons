@@ -1575,7 +1575,8 @@ def specificName(iPlayer):
 			
 	if iCiv == iGreece:
 		if player(iGreece).getPeriod() == -1 and not controlsCity(iPlayer, location(plots.capital(iGreece))):
-			return "TXT_KEY_CIV_THESSALLONIKI"
+			if location(capital) == location(plots.capital(iMacedon)):
+				return "TXT_KEY_CIV_THESSALLONIKI"
 
 	elif iCiv == iJudah:
 		if iReligion == iIslam:
@@ -2269,7 +2270,8 @@ def specificAdjective(iPlayer):
 	
 	elif iCiv == iGreece:
 		if player(iGreece).getPeriod() == -1 and not controlsCity(iPlayer, location(plots.capital(iGreece))):
-			return "TXT_KEY_CIV_THESSALLONIKI_ADJECTIVE"
+			if location(capital) == location(plots.capital(iMacedon)):
+				return "TXT_KEY_CIV_THESSALLONIKI_ADJECTIVE"
 
 	elif iCiv == iNumidia:
 		if not tPlayer.isHasTech(iCurrency):
