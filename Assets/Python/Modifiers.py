@@ -347,13 +347,13 @@ dResearchCostMods = CivDict({
 	iSumeria: 130,
 	iBabylonia: 140,
 	iHarappa: 125,
-	iChina: 150, # Aeons - Advancing too much due to stability - was 120
+	iChina: 160, # Aeons - Advancing too much due to stability - was 120
 	iHittites: 125,
 	iNubia: 150,
 	iGreece: 130,
 	iMacedon: 115,
 	iAssyria: 120,
-	iIndia: 145, # Aeons - Advancing too much due to stability - was 130
+	iIndia: 160, # Aeons - Advancing too much due to stability - was 130
 	iPhoenicia: 140, # Aeons - Up from 125
 	iPolynesia: 300,
 	iPersia: 90,
