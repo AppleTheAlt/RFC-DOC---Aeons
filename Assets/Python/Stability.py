@@ -728,7 +728,7 @@ def calculateStability(iPlayer):
 	iDomesticStability += iHappinessStability
 
 	# Aeons - Decadence
-	iDecadenceStability = -data.players[iPlayer].iDecadence
+	iDecadenceStability = -data.players[iPlayer].iDecadence/2
 
 	# Ignore first three Decadence stab hits
 	if 	data.players[iPlayer].iDecadence < 4:
