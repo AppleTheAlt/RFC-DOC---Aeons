@@ -63,10 +63,10 @@ def raiseDecadenceFromFirstTech(iTech, iTeam, iPlayer):
         if rand(2) == 1:
             changeDecadence(iPlayer, 1)
 
-# 1/20 chance of decadence loss per turn
+# 1/15 chance of decadence loss per turn
 @handler("EndPlayerTurn")
 def lowerDecadenceTick(iGameTurn, iPlayer):
-     if(rand(scale(20)) == 1):
+     if(rand(scale(15)) == 1):
         changeDecadence(iPlayer, -1)
         civic = civics(iPlayer)
         

@@ -4141,7 +4141,7 @@
 [ICON_BULLET]-1 Stability per Decadence[PARAGRAPH:3]Decadence can be raised by the following:
 [ICON_BULLET]50% chance of +1 Decadence when a Civilization is first to discover a new technology
 [ICON_BULLET]+1 per Decadence whenever a wonder is constructed.[PARAGRAPH:3]Decadence can be reduced by the following:
-[ICON_BULLET]5% chance of -1 Decadence per turn
+[ICON_BULLET]1/15 chance of -1 Decadence per turn
 [ICON_BULLET]-1 Decadence per Council built
 [ICON_BULLET]-3 Decadence when a Great Statesman uses Purge Corruption</English>
 		<French>No Translation</French>
