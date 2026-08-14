@@ -687,11 +687,15 @@ dGoals = {
 	),
 	iMycenae: (
 			All(
-				CityCount(plots.regions(rGreece, rAnatolia).named(GREECE_AND_ANATOLIA), 4),
+				ConqueredCities(1, inside=plots.regions(rGreece, rAnatolia).named(GREECE_AND_ANATOLIA)),
 				NoCityLost(),
 				by=-800,
 		  	 ),
-			 BuildingCount(wonders(), 4, by=-700),
+			 All(
+				BuildingCount(iWalls, 4),
+				BuildingCount(wonders(), 4),
+				by=-700,
+			 ),
 			 CitySpecialistCount(capital().named(CAPITAL), great_people(), 4, by=-700),
 	),
 	iSparta: (
