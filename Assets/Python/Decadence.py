@@ -38,6 +38,9 @@ def changeDecadence(iPlayer, iAmount):
         for iModifier in (iModifierResearchCost, iModifierCitiesMaintenance, iModifierBuildingCost, iModifierUnitCost, iModifierWonderCost, iModifierCivicUpkeep):
             changeModifier(iPlayer, iModifier, 10*iModifierAdjustment)
 
+def getDecadence(iPlayer):
+    return data.players[iPlayer].iDecadence
+
 # Building a Wonder raises decadence - Building a Council reduces it
 # Deification negates this effect
 @handler("buildingBuilt")
