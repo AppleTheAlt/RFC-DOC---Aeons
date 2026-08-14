@@ -2750,8 +2750,8 @@ int CvTeam::getResearchCost(TechTypes eTech, bool bModifiers) const
 		int iModifier = 100;
 
 		iModifier += getPopulationResearchModifier();
-		iModifier += getTechLeaderModifier();
-		//iModifier += getTechDifferenceModifier();		// Aeons: Remove tech divergence in favour of modernisation.
+		//iModifier += getTechLeaderModifier();
+		iModifier += getTechDifferenceModifier();		// Aeons: Remove tech divergence in favour of modernisation.
 		iModifier += getSpreadResearchModifier(eTech);
 		iModifier += getTurnResearchModifier();
 		iModifier += getModernizationResearchModifier(eTech); // Leoreth: Japanese UP (Modernization) Aeons: Apply to whole world with Era-based strength
@@ -2937,15 +2937,16 @@ int CvTeam::getTechDifferenceModifier() const
 		iModifier += (iRelativeTechValue - 125) / 5;
 		iModifier *= 10;
 	}
-	else if (iRelativeTechValue < 80)
-	{
-		iModifier += (iRelativeTechValue - 80) / 5;
-		iModifier *= 10;
 
-		iModifier = std::max(iModifier, -50);
-	}
+	//else if (iRelativeTechValue < 80)
+	//{
+	//	iModifier += (iRelativeTechValue - 80) / 5;
+	//	iModifier *= 10;
+//
+	//	iModifier = std::max(iModifier, -50);
+	//}
 
-	return iModifier/3; // Aeons - Make tech divergence 3 times weaker to account for modernisation.
+	return iModifier;
 }
 
 int CvTeam::getSpreadResearchModifier(TechTypes eTech) const

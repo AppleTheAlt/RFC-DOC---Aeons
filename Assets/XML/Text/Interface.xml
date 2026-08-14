@@ -58,14 +58,6 @@
 		<Spanish> [ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Empire Size:[COLOR_REVERT]</Spanish>
 	</TEXT>
 	<TEXT>
- 		<Tag>TXT_KEY_TECH_DIFFERENCE</Tag>
- 		<English> [ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Tech Divergence:[COLOR_REVERT]</English>
- 		<French> [ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Tech Divergence:[COLOR_REVERT]</French>
- 		<German> [ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Tech Divergence:[COLOR_REVERT]</German>
- 		<Italian> [ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Tech Divergence:[COLOR_REVERT]</Italian>
- 		<Spanish> [ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Tech Divergence:[COLOR_REVERT]</Spanish>
- 	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_UNITS_CONTRACTED_OUT</Tag>
 		<English>Units Contracted Out</English>
 		<French>Unit&#233;s sous contrat</French>
@@ -128,6 +120,14 @@
 		<German> [ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Technologieverbreitung:[COLOR_REVERT]</German>
 		<Italian> [ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Tech Spread:[COLOR_REVERT]</Italian>
 		<Spanish> [ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Tech Spread:[COLOR_REVERT]</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TECH_DIFFERENCE</Tag>
+		<English> [ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Tech Divergence:[COLOR_REVERT]</English>
+		<French> [ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Tech Divergence:[COLOR_REVERT]</French>
+		<German> [ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Tech Divergence:[COLOR_REVERT]</German>
+		<Italian> [ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Tech Divergence:[COLOR_REVERT]</Italian>
+		<Spanish> [ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Tech Divergence:[COLOR_REVERT]</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_RELIGION_FOUND_BUDDHISM</Tag>

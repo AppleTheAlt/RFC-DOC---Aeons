@@ -8753,7 +8753,6 @@ void CvGameTextMgr::setTechTradeHelp(CvWStringBuffer &szBuffer, TechTypes eTech,
 					szBuffer.append(szTempBuffer);
 				}
 
-				/*
 				if (GET_TEAM(GC.getGameINLINE().getActiveTeam()).getTechDifferenceModifier() != 0)
 				{
 					iCostChange = iCost * GET_TEAM(GC.getGameINLINE().getActiveTeam()).getTechDifferenceModifier();
@@ -8765,7 +8764,6 @@ void CvGameTextMgr::setTechTradeHelp(CvWStringBuffer &szBuffer, TechTypes eTech,
 					szTempBuffer.Format(L" %s%d %c", (iCostChange > 0) ? "+" : "", iCostChange, GC.getCommerceInfo(COMMERCE_RESEARCH).getChar());
 					szBuffer.append(szTempBuffer);
 				}
-				*/
 
 				/*if (GET_TEAM(GC.getGameINLINE().getActiveTeam()).getTechLeaderModifier() != 0)
 				{
