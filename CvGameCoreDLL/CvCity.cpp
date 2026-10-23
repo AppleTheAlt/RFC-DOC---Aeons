@@ -1118,8 +1118,9 @@ void CvCity::kill(bool bUpdatePlotGroups)
 
 	CvEventReporter::getInstance().cityLost(this);
 
-	GET_PLAYER(getOwnerINLINE()).deleteCity(getID());
-	GET_PLAYER(getOwnerINLINE()).updateCultureRanks();
+	// Fresol: deleteCity() frees this city, so use the owner saved above
+	GET_PLAYER(eOwner).deleteCity(getID());
+	GET_PLAYER(eOwner).updateCultureRanks();
 
 	pPlot->updateCulture(true, false);
 
