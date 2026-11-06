@@ -24,7 +24,7 @@ public:
 	void addPlot(CvPlot* pPlot);
 	void removePlot(CvPlot* pPlot);
 	int countReachablePlots(PlayerTypes ePlayer, CvPlot* pBlockedPlot = NULL);	// Fresol
-	void recalculatePlots();														
+	void recalculatePlots(bool bSkipHealthCheck = false);														
 
 	int getID() const;
 	void setID(int iID);

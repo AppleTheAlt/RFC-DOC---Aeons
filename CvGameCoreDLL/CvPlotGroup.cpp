@@ -512,7 +512,7 @@ static void verifyAfterRebuild(PlayerTypes eOwner, const std::vector<int>& aiPlo
 }
 #endif
 
-void CvPlotGroup::recalculatePlots()
+void CvPlotGroup::recalculatePlots(bool bSkipHealthCheck)
 {
 	PROFILE_FUNC();
 
@@ -526,11 +526,14 @@ void CvPlotGroup::recalculatePlots()
 
 	pPlotNode = headPlotsNode();
 
-	if (pPlotNode != NULL)
+	if (!bSkipHealthCheck)
 	{
-		if (countReachablePlots(eOwner) == getLengthPlots())
+		if (pPlotNode != NULL)
 		{
-			return;
+			if (countReachablePlots(eOwner) == getLengthPlots())
+			{
+				return;
+			}
 		}
 	}
 

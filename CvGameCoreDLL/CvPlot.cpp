@@ -8175,14 +8175,54 @@ void CvPlot::updatePlotGroup(PlayerTypes ePlayer, bool bRecalculate)
 
 			if (!bConnected)
 			{
-				bEmpty = (pPlotGroup->getLengthPlots() == 1);
-				FAssertMsg(pPlotGroup->getLengthPlots() > 0, "pPlotGroup should have more than 0 plots");
+				// Fresol: the loop above only notices that a group mate lost its direct link
+				// to us, which does not by itself break the group - the mate usually still
+				// reaches us the other way around. The repair only leaves everything as it
+				// was when it can take its early return (nothing has to be rebuilt, so no
+				// member gets dropped by a repair nested inside the rebuild) and this plot
+				// links to one of its group mates in the repair's own direction, so that the
+				// merge puts it back into the very same group (isTradeNetworkConnected is not
+				// symmetric). The plot has to stay in the team's trade network either way.
+				bool bRepair = true;
+				bool bCountChecked = false;
+				bool bGroupHealthyWithoutPlot = false;
+				const TeamTypes eTeam = GET_PLAYER(ePlayer).getTeam();
 
-				pPlotGroup->removePlot(this);
-
-				if (!bEmpty)
+				if (isTradeNetwork(eTeam))
 				{
-					pPlotGroup->recalculatePlots();
+					bCountChecked = true;
+
+					if (pPlotGroup->countReachablePlots(ePlayer, this) == pPlotGroup->getLengthPlots() - 1)
+					{
+						bGroupHealthyWithoutPlot = true;
+
+						for (iI = 0; iI < NUM_DIRECTION_TYPES; ++iI)
+						{
+							pAdjacentPlot = plotDirection(getX_INLINE(), getY_INLINE(), ((DirectionTypes)iI));
+
+							if (pAdjacentPlot != NULL
+								&& pAdjacentPlot->getPlotGroup(ePlayer) == pPlotGroup
+								&& pAdjacentPlot->isTradeNetwork(eTeam)
+								&& isTradeNetworkConnected(pAdjacentPlot, eTeam))
+							{
+								bRepair = false;
+								break;
+							}
+						}
+					}
+				}
+
+				if (bRepair)
+				{
+					bEmpty = (pPlotGroup->getLengthPlots() == 1);
+					FAssertMsg(pPlotGroup->getLengthPlots() > 0, "pPlotGroup should have more than 0 plots");
+
+					pPlotGroup->removePlot(this);
+
+					if (!bEmpty && !bGroupHealthyWithoutPlot)
+					{
+						pPlotGroup->recalculatePlots(bCountChecked);
+					}
 				}
 			}
 		}
