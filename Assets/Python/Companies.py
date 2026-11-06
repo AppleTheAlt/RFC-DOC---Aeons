@@ -64,7 +64,19 @@ def canHaveCompany(iCompany, iPlayer):
 
 def checkCompany(iCompany, iGameTurn):
 	iMaxCompanies = getCompanyLimit(iCompany)
-		
+
+	# Fresol: the same city is asked for its value three or four times below
+	# (split, sort, filter, maximum/minimum).  getCityValue only reads city and
+	# owner state, and this function only ever adds or removes iCompany itself
+	# (the Central Planning test looks at the other corporations), so the value
+	# cannot change while we are running.
+	dCityValues = {}
+	def value(city):
+		key = (city.getOwner(), city.getID())
+		if key not in dCityValues:
+			dCityValues[key] = getCityValue(city, iCompany)
+		return dCityValues[key]
+
 	# count the number of companies
 	iCompanyCount = players.major().existing().sum(lambda p: player(p).countCorporations(iCompany))
 			
@@ -73,24 +85,24 @@ def checkCompany(iCompany, iGameTurn):
 		return
 	
 	# select all cities for players that can have the company
-	positiveCities, negativeCities = players.major().where(lambda p: canHaveCompany(iCompany, p)).cities().split(lambda city: getCityValue(city, iCompany) > player(city).countCorporations(iCompany) * 2)
+	positiveCities, negativeCities = players.major().where(lambda p: canHaveCompany(iCompany, p)).cities().split(lambda city: value(city) > player(city).countCorporations(iCompany) * 2)
 	
 	# remove from cities with negative value
-	for city in negativeCities.corporation(iCompany).sort(lambda city: getCityValue(city, iCompany), True):
-		if getCityValue(city, iCompany) <= player(city).countCorporations(iCompany) * 2:
+	for city in negativeCities.corporation(iCompany).sort(lambda city: value(city), True):
+		if value(city) <= player(city).countCorporations(iCompany) * 2:
 			city.setHasCorporation(iCompany, False, True, True)
 	
 	companyCities, availableCities = positiveCities.split(lambda city: city.isHasCorporation(iCompany))
 	
 	# if company can still spread, select the most attractive city without the company
 	if iCompanyCount < iMaxCompanies:
-		city = availableCities.maximum(lambda city: getCityValue(city, iCompany) * 10 + rand(10))
+		city = availableCities.maximum(lambda city: value(city) * 10 + rand(10))
 		if city:
 			city.setHasCorporation(iCompany, True, True, True)
 	
 	# if too many cities have the company, remove it from the least attractive city that has it
 	elif iCompanyCount > iMaxCompanies:
-		city = companyCities.minimum(lambda city: getCityValue(city, iCompany) * 10 + rand(10))
+		city = companyCities.minimum(lambda city: value(city) * 10 + rand(10))
 		if city:
 			city.setHasCorporation(iCompany, False, True, True)
 	

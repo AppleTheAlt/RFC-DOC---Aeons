@@ -49,6 +49,13 @@ CvCityAI::CvCityAI()
 	m_bForceEmphasizeCulture = false;
 	m_aiSpecialYieldMultiplier = new int[NUM_YIELD_TYPES];
 	m_aiPlayerCloseness = new int[MAX_PLAYERS];
+	m_bBVValueCacheValid = false;
+	m_iBVFoodDifference = 0;
+	m_iBVHappinessLevel = 0;
+	m_iBVHealthLevel = 0;
+	m_bBVFinancialTrouble = false;
+	m_iBVProductionRank = MAX_INT;
+	m_iBVCultureRank = MAX_INT;
 
 	m_pbEmphasize = NULL;
 
@@ -3041,6 +3048,9 @@ UnitTypes CvCityAI::AI_bestUnitAI(UnitAITypes eUnitAI, bool bAsync, AdvisorTypes
 	}
 	iBestOriginalValue = 0;
 
+	std::vector<int> aiUnitValue(GC.getNumUnitClassInfos(), 0); // phase1
+	std::vector<char> abUnitComputed(GC.getNumUnitClassInfos(), 0); // phase1
+
 	for (iI = 0; iI < GC.getNumUnitClassInfos(); iI++)
 	{
 		eLoopUnit = ((UnitTypes)(GC.getCivilizationInfo(getCivilizationType()).getCivilizationUnits(iI)));
@@ -3057,6 +3067,8 @@ UnitTypes CvCityAI::AI_bestUnitAI(UnitAITypes eUnitAI, bool bAsync, AdvisorTypes
 						if (canTrain(eLoopUnit))
 						{
 							iOriginalValue = GET_PLAYER(getOwnerINLINE()).AI_unitValue(eLoopUnit, eUnitAI, area());
+							aiUnitValue[iI] = iOriginalValue; // phase1
+							abUnitComputed[iI] = 1; // phase1
 
 							if (iOriginalValue > iBestOriginalValue)
 							{
@@ -3087,7 +3099,11 @@ UnitTypes CvCityAI::AI_bestUnitAI(UnitAITypes eUnitAI, bool bAsync, AdvisorTypes
 					{
 						if (canTrain(eLoopUnit))
 						{
-							iValue = GET_PLAYER(getOwnerINLINE()).AI_unitValue(eLoopUnit, eUnitAI, area());
+							if (!abUnitComputed[iI]) // phase1
+							{
+								continue;
+							}
+							iValue = aiUnitValue[iI]; // phase1
 
 							if ((iValue > ((iBestOriginalValue * 2) / 3)) && ((eUnitAI != UNITAI_EXPLORE) || (iValue >= iBestOriginalValue)))
 							{
@@ -3270,6 +3286,14 @@ BuildingTypes CvCityAI::AI_bestBuildingThreshold(int iFocusFlags, int iMaxTurns,
 		return eBestBuilding;
 	}
 
+	m_bBVValueCacheValid = true;
+	m_iBVHappinessLevel = happyLevel() - unhappyLevel(1);
+	m_iBVHealthLevel = goodHealth() - badHealth(/*bNoAngry*/ false, std::max(0, (m_iBVHappinessLevel + 1) / 2));
+	m_iBVFoodDifference = foodDifference(false);
+	m_bBVFinancialTrouble = GET_PLAYER(getOwnerINLINE()).AI_isFinancialTrouble();
+	m_iBVProductionRank = findBaseYieldRateRank(YIELD_PRODUCTION);
+	m_iBVCultureRank = findCommerceRateRank(COMMERCE_CULTURE);
+
 	for (iI = 0; iI < GC.getNumBuildingClassInfos(); iI++)
 	{
 		if (!(GET_PLAYER(getOwnerINLINE()).isBuildingClassMaxedOut(((BuildingClassTypes)iI), GC.getBuildingClassInfo((BuildingClassTypes)iI).getExtraPlayerInstances())))
@@ -3397,6 +3421,7 @@ BuildingTypes CvCityAI::AI_bestBuildingThreshold(int iFocusFlags, int iMaxTurns,
 		}
 	}
 
+	m_bBVValueCacheValid = false;
 	return eBestBuilding;
 }
 
@@ -3430,11 +3455,11 @@ int CvCityAI::AI_buildingValueThreshold(BuildingTypes eBuilding, int iFocusFlags
 	bool bProvidesPower = (kBuilding.isPower() || ((kBuilding.getPowerBonus() != NO_BONUS) && hasBonus((BonusTypes)(kBuilding.getPowerBonus()))));
 
 	int iHasMetCount = GET_TEAM(getTeam()).getHasMetCivCount(true);
-	int iFoodDifference = foodDifference(false);
+	int iFoodDifference = m_bBVValueCacheValid ? m_iBVFoodDifference : foodDifference(false); // phase3
 
-	int iHappinessLevel = happyLevel() - unhappyLevel(1);
+	int iHappinessLevel = m_bBVValueCacheValid ? m_iBVHappinessLevel : (happyLevel() - unhappyLevel(1)); // phase3
 	int iAngryPopulation = range(-iHappinessLevel, 0, (getPopulation() + 1));
-	int iHealthLevel = goodHealth() - badHealth(/*bNoAngry*/ false, std::max(0, (iHappinessLevel + 1) / 2));
+	int iHealthLevel = m_bBVValueCacheValid ? m_iBVHealthLevel : (goodHealth() - badHealth(/*bNoAngry*/ false, std::max(0, (iHappinessLevel + 1) / 2))); // phase3
 	int iBadHealth = std::max(0, -iHealthLevel);
 
 	int iHappyModifier = (iHappinessLevel >= iHealthLevel && iHappinessLevel <= 6) ? 6 : 3;
@@ -3480,13 +3505,13 @@ int CvCityAI::AI_buildingValueThreshold(BuildingTypes eBuilding, int iFocusFlags
 		aiCommerceRank[iI] = MAX_INT;
 	}
 
-	aiYieldRank[YIELD_PRODUCTION] = findBaseYieldRateRank(YIELD_PRODUCTION);
+	aiYieldRank[YIELD_PRODUCTION] = m_bBVValueCacheValid ? m_iBVProductionRank : findBaseYieldRateRank(YIELD_PRODUCTION); // phase3
 	bool bIsHighProductionCity = (aiYieldRank[YIELD_PRODUCTION] <= std::max(3, (iNumCities / 2)));
 
-	int iCultureRank = findCommerceRateRank(COMMERCE_CULTURE);
+	int iCultureRank = m_bBVValueCacheValid ? m_iBVCultureRank : findCommerceRateRank(COMMERCE_CULTURE); // phase3
 	int iCulturalVictoryNumCultureCities = GC.getGameINLINE().culturalVictoryNumCultureCities();
 
-	bool bFinancialTrouble = GET_PLAYER(getOwnerINLINE()).AI_isFinancialTrouble();
+	bool bFinancialTrouble = m_bBVValueCacheValid ? m_bBVFinancialTrouble : GET_PLAYER(getOwnerINLINE()).AI_isFinancialTrouble(); // phase3
 
 	bool bCulturalVictory1 = GET_PLAYER(getOwnerINLINE()).AI_isDoStrategy(AI_STRATEGY_CULTURE1);
 	bool bCulturalVictory2 = GET_PLAYER(getOwnerINLINE()).AI_isDoStrategy(AI_STRATEGY_CULTURE2);

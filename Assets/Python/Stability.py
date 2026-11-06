@@ -108,7 +108,11 @@ def checkSecedingCities(iGameTurn, iPlayer):
 	secedingCities = data.getSecedingCities(iPlayer)
 	
 	if secedingCities:
-		secedeCities(iPlayer, secedingCities.existing())
+		game.setSuspendPlotGroups(True)
+		try:
+			secedeCities(iPlayer, secedingCities.existing())
+		finally:
+			game.setSuspendPlotGroups(False)
 		data.setSecedingCities(iPlayer, cities.of([]))
 
 

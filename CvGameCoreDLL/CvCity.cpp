@@ -15986,7 +15986,7 @@ void CvCity::doPlotCulture(bool bUpdate, PlayerTypes ePlayer, int iCultureRate, 
 										iChange /= 2;
 									}
 
-									pLoopPlot->changeCulture(ePlayer, iChange, (bUpdate || !(pLoopPlot->isOwned())));
+									pLoopPlot->changeCulture(ePlayer, iChange, bUpdate); // Fresol: defer owner update to CvPlot::doTurn
 								}
 							}
 						}

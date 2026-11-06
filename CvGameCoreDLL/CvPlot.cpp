@@ -5537,7 +5537,10 @@ void CvPlot::setOwner(PlayerTypes eNewValue, bool bCheckUnits, bool bUpdatePlotG
 			updateIrrigated();
 			updateYield();
 
-			if (bUpdatePlotGroup)
+			// Fresol: during a mass flip the plot group update is suspended and replayed
+			// once for every player when the suspension is released, so the per-plot
+			// walk over all players here is pure repetition.
+			if (bUpdatePlotGroup && !GC.getGameINLINE().isSuspendPlotGroups())
 			{
 				updatePlotGroup();
 			}
@@ -10011,7 +10014,8 @@ void CvPlot::doCulture()
 		}
 	}
 
-	updateCulture(true, true);
+	// Fresol: the map turn replays the plot group update once at its end
+	updateCulture(true, false);
 }
 
 

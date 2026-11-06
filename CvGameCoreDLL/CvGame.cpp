@@ -2461,6 +2461,12 @@ void CvGame::setSuspendPlotGroups(bool bSuspend)
 	}
 }
 
+
+bool CvGame::isSuspendPlotGroups() const
+{
+	return s_bSuspendPlotGroups;
+}
+
 void CvGame::updatePlotGroups()
 {
 	PROFILE_FUNC();
