@@ -174,6 +174,7 @@ public:
 	int /*PlayerTypes*/ getOwner();
 	void setOwner(int /*PlayerTypes*/ eNewValue);
 	void setOwnerNoUnitCheck(int /*PlayerTypes*/ eNewValue);
+	void setOwnerFast(int /*PlayerTypes*/ eNewValue);		// Fresol: also skips the sight/fog work
 	PlotTypes getPlotType();
 	bool isWater();
 	bool isFlatlands();

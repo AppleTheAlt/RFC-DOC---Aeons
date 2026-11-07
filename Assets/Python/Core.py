@@ -32,6 +32,22 @@ game = gc.getGame()
 map = gc.getMap()
 
 
+# Fresol: when a whole batch of cities changes hands (a collapse or a secession),
+# recomputing a civ's display name after every single city is pure repetition.
+# DynamicCivs defers the work while this window is open and runs it once per player
+# when the batch ends.  The flags live on an object so every "from Core import *"
+# shares the same instance.
+class BatchNameWindow(object):
+	def __init__(self):
+		self.depth = 0
+		self.players = []
+
+	def active(self):
+		return self.depth > 0
+
+batchNameWindow = BatchNameWindow()
+
+
 def civ_name(iCiv):
 	if iCiv == iMisr:
 		return "Misr"

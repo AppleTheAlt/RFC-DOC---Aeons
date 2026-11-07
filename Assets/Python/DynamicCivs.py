@@ -1186,6 +1186,10 @@ def checkName(iPlayer):
 	if not player(iPlayer).isAlive(): return
 	if is_minor(iPlayer): return
 	if player(iPlayer).getNumCities() == 0: return
+	if batchNameWindow.active(): # Fresol: defer to the end of a mass city flip
+		if iPlayer not in batchNameWindow.players:
+			batchNameWindow.players.append(iPlayer)
+		return
 	setDesc(iPlayer, desc(iPlayer, title(iPlayer)))
 	
 def checkLeader(iPlayer):
@@ -1280,6 +1284,10 @@ def getColumn(iPlayer):
 	return max(lTechs)
 
 def checkReplacementName(iPlayer):
+	if batchNameWindow.active(): # Fresol: defer to the end of a mass city flip
+		if iPlayer not in batchNameWindow.players:
+			batchNameWindow.players.append(iPlayer)
+		return
 	iCiv = civ(iPlayer)
 	if iCiv in dReplacementCivs:
 		iReplacementCiv = dReplacementCivs[iCiv]

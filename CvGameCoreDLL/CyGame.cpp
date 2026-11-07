@@ -293,6 +293,14 @@ int CyGame::getGameTurn()
 	return m_pGame ? m_pGame->getGameTurn() : -1;
 }
 
+void CyGame::setSuspendPlotGroups(bool bSuspend)
+{
+	if (m_pGame)
+	{
+		m_pGame->setSuspendPlotGroups(bSuspend);
+	}
+}
+
 void CyGame::setGameTurn(int iNewValue)
 {
 	if (m_pGame)

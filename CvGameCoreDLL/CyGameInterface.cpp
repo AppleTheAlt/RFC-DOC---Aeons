@@ -79,6 +79,7 @@ void CyGamePythonInterface()
 		.def("reviveActivePlayer", &CyGame::reviveActivePlayer, "void ()")
 
 		.def("getGameTurn", &CyGame::getGameTurn, "int () - current game turn")
+		.def("setSuspendPlotGroups", &CyGame::setSuspendPlotGroups, "void (bool bSuspend) - defer full map plot group updates")
 		.def("setGameTurn", &CyGame::setGameTurn, "void (iNewValue) - set current game turn")
 		.def("getTurnYear", &CyGame::getTurnYear, "int (iGameTurn) - turn Time")
 		.def("getGameTurnYear", &CyGame::getGameTurnYear)

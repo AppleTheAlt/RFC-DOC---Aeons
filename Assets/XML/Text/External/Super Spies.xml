@@ -7,7 +7,7 @@
 		<French>Logistique I</French>
 		<German>Logistik I</German>
 		<Italian>Logistica I</Italian>
-		<Spanish>Logística I</Spanish>
+		<Spanish>Log&#237;stica I</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_LOGISTICS2</Tag>
@@ -15,7 +15,7 @@
 		<French>Logistique II</French>
 		<German>Logistik II</German>
 		<Italian>Logistica II</Italian>
-		<Spanish>Logística II</Spanish>
+		<Spanish>Log&#237;stica II</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_LOGISTICS3</Tag>
@@ -23,36 +23,36 @@
 		<French>Logistique III</French>
 		<German>Logistik III</German>
 		<Italian>Logistica III</Italian>
-		<Spanish>Logística III</Spanish>
+		<Spanish>Log&#237;stica III</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_DECEPTION1</Tag>
 		<English>Deception I</English>
-		<French>Déception I</French>
-		<German>Täuschung I</German>
+		<French>D&#233;ception I</French>
+		<German>T&#228;uschung I</German>
 		<Italian>Inganno I</Italian>
 		<Spanish>Engano I</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_DECEPTION2</Tag>
 		<English>Deception II</English>
-		<French>Déception II</French>
-		<German>Täuschung II</German>
+		<French>D&#233;ception II</French>
+		<German>T&#228;uschung II</German>
 		<Italian>Inganno II</Italian>
 		<Spanish>Engano II</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_DECEPTION3</Tag>
 		<English>Deception III</English>
-		<French>Déception III</French>
-		<German>Täuschung III</German>
+		<French>D&#233;ception III</French>
+		<German>T&#228;uschung III</German>
 		<Italian>Inganno III</Italian>
 		<Spanish>Engano III</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_SECURITY1</Tag>
 		<English>Informant I</English>
-		<French>Dénonciateur  I</French>
+		<French>D&#233;nonciateur  I</French>
 		<German>Informant I</German>
 		<Italian>Informatore I</Italian>
 		<Spanish>Denunciante I</Spanish>
@@ -60,7 +60,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_SECURITY2</Tag>
 		<English>Informant II</English>
-		<French>Dénonciateur  II</French>
+		<French>D&#233;nonciateur  II</French>
 		<German>Informant II</German>
 		<Italian>Informatore II</Italian>
 		<Spanish>Denunciante II</Spanish>
@@ -68,7 +68,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_SECURITY3</Tag>
 		<English>Informant III</English>
-		<French>Dénonciateur  III</French>
+		<French>D&#233;nonciateur  III</French>
 		<German>Informant III</German>
 		<Italian>Informatore III</Italian>
 		<Spanish>Denunciante III</Spanish>
@@ -79,7 +79,7 @@
 		<French>Improvisateur I</French>
 		<German>Improvisator  I</German>
 		<Italian>Improvvisazione I</Italian>
-		<Spanish>Improvisación I</Spanish>
+		<Spanish>Improvisaci&#243;n I</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_IMPROVISE2</Tag>
@@ -87,7 +87,7 @@
 		<French>Improvisateur II</French>
 		<German>Improvisator  II</German>
 		<Italian>Improvvisazione II</Italian>
-		<Spanish>Improvisación II</Spanish>
+		<Spanish>Improvisaci&#243;n II</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_IMPROVISE3</Tag>
@@ -95,7 +95,7 @@
 		<French>Improvisateur III</French>
 		<German>Improvisator  III</German>
 		<Italian>Improvvisazione III</Italian>
-		<Spanish>Improvisación III</Spanish>
+		<Spanish>Improvisaci&#243;n III</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_IMPROVISE4</Tag>
@@ -103,7 +103,7 @@
 		<French>Improvisateur IV</French>
 		<German>Improvisator  IV</German>
 		<Italian>Improvvisazione IV</Italian>
-		<Spanish>Improvisación IV</Spanish>
+		<Spanish>Improvisaci&#243;n IV</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_IMPROVISE5</Tag>
@@ -111,14 +111,14 @@
 		<French>Improvisateur V</French>
 		<German>Improvisator  V</German>
 		<Italian>Improvvisazione V</Italian>
-		<Spanish>Improvisación V</Spanish>
+		<Spanish>Improvisaci&#243;n V</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_LOYALTY</Tag>
 		<English>Loyalty</English>
-		<French>Fidélité </French>
-		<German>Loyalität</German>
-		<Italian>Lealtà</Italian>
+		<French>Fid&#233;lit&#233; </French>
+		<German>Loyalit&#228;t</German>
+		<Italian>Lealt&#224;</Italian>
 		<Spanish>Lealtad </Spanish>
 	</TEXT>
 	<TEXT>
@@ -172,7 +172,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_ESCAPE1</Tag>
 		<English>Escape Artist I</English>
-		<French>Artiste d'évasion I</French>
+		<French>Artiste d'&#233;vasion I</French>
 		<German>Fluchtexperte I</German>
 		<Italian>Artista di fuga I</Italian>
 		<Spanish>Artista de escape I</Spanish>
@@ -180,7 +180,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_ESCAPE2</Tag>
 		<English>Escape Artist II</English>
-		<French>Artiste d'évasion II</French>
+		<French>Artiste d'&#233;vasion II</French>
 		<German>Fluchtexperte II</German>
 		<Italian>Artista di fuga II</Italian>
 		<Spanish>Artista de escape II</Spanish>
@@ -188,63 +188,63 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_SPY</Tag>
 		<English>Espionage Units</English>
-		<French>Unités d'espionnage</French>
+		<French>Unit&#233;s d'espionnage</French>
 		<German>Spionage-Einheiten</German>
-		<Italian>Unità di spionaggio</Italian>
+		<Italian>Unit&#224; di spionaggio</Italian>
 		<Spanish>Unidades del espionaje</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_UPGRADE_DISCOUNT_TEXT_SPY</Tag>
 		<English>[ICON_BULLET]%d1_percent%% Free Preparation Bonus</English>
-		<French>[ICON_BULLET] bonification libre de préparation de %d1_percent%%</French>
+		<French>[ICON_BULLET] bonification libre de pr&#233;paration de %d1_percent%%</French>
 		<German>[ICON_BULLET]%d1_percent%% freier Vorbereitungsbonus</German>
-		<Italian>[ICON_BULLET] indennità libera della preparazione di %d1_percent%%</Italian>
-		<Spanish>[ICON_BULLET] prima libre de la preparación del %d1_percent%%</Spanish>
+		<Italian>[ICON_BULLET] indennit&#224; libera della preparazione di %d1_percent%%</Italian>
+		<Spanish>[ICON_BULLET] prima libre de la preparaci&#243;n del %d1_percent%%</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_EVASION_TEXT_SPY</Tag>
 		<English>[ICON_BULLET]%d1_percent%% Detection Evasion Bonus</English>
-		<French>[ICON_BULLET] bonification d'évasion de détection de %d1_percent%%</French>
+		<French>[ICON_BULLET] bonification d'&#233;vasion de d&#233;tection de %d1_percent%%</French>
 		<German>[ICON_BULLET]%d1_percent%% Bonus gegen Entdeckung</German>
-		<Italian>[ICON_BULLET] indennità di evasione di rilevazione di %d1_percent%%</Italian>
-		<Spanish>[ICON_BULLET] prima de la evasión de la detección del %d1_percent%%</Spanish>
+		<Italian>[ICON_BULLET] indennit&#224; di evasione di rilevazione di %d1_percent%%</Italian>
+		<Spanish>[ICON_BULLET] prima de la evasi&#243;n de la detecci&#243;n del %d1_percent%%</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_INTERCEPT_TEXT_SPY</Tag>
 		<English>[ICON_BULLET]%d1_percent%% Enemy Spy Detection Bonus</English>
-		<French>[ICON_BULLET] bonification ennemie de détection d'espion de %d1_percent%%</French>
+		<French>[ICON_BULLET] bonification ennemie de d&#233;tection d'espion de %d1_percent%%</French>
 		<German>[ICON_BULLET]%d1_percent%% Bonus zur Entdeckung feindlicher Agenten</German>
-		<Italian>[ICON_BULLET] indennità nemica di rilevazione della spia di %d1_percent%%</Italian>
-		<Spanish>[ICON_BULLET] prima enemiga de la detección del espía del %d1_percent%%</Spanish>
+		<Italian>[ICON_BULLET] indennit&#224; nemica di rilevazione della spia di %d1_percent%%</Italian>
+		<Spanish>[ICON_BULLET] prima enemiga de la detecci&#243;n del esp&#237;a del %d1_percent%%</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_INTERCEPT_TEXT_SPY_COUNTER</Tag>
 		<English>[ICON_BULLET]%d1_percent%% Bonus To Counter Espionage Missions</English>
 		<French>[ICON_BULLET] bonification de %d1_percent%% aux missions de contre- espionnage</French>
 		<German>[ICON_BULLET]%d1_percent%% Bonus auf Spionageabwehr</German>
-		<Italian>[ICON_BULLET] indennità di %d1_percent%% alle missioni di contro spionaggio</Italian>
+		<Italian>[ICON_BULLET] indennit&#224; di %d1_percent%% alle missioni di contro spionaggio</Italian>
 		<Spanish>[ICON_BULLET] prima del %d1_percent%% a las misiones del espionaje contrario</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_EVADE_INTERCEPTION_SPY</Tag>
 		<English>[ICON_BULLET]Can Evade Enemy Detection (%d1_Amount%% Chance)</English>
-		<French>[ICON_BULLET] Peut éluder la détection ennemie (la chance de %d1_Amount%%)</French>
+		<French>[ICON_BULLET] Peut &#233;luder la d&#233;tection ennemie (la chance de %d1_Amount%%)</French>
 		<German>[ICON_BULLET]Kann Entdeckung vermeiden (%d1_Amount%% Chance)</German>
-		<Italian>[ICON_BULLET] Può eludere la rilevazione nemica (probabilità di %d1_Amount%%)</Italian>
-		<Spanish>[ICON_BULLET] Puede evadir la detección enemiga (la ocasión del %d1_Amount%%)</Spanish>
+		<Italian>[ICON_BULLET] Pu&#242; eludere la rilevazione nemica (probabilit&#224; di %d1_Amount%%)</Italian>
+		<Spanish>[ICON_BULLET] Puede evadir la detecci&#243;n enemiga (la ocasi&#243;n del %d1_Amount%%)</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_INTERCEPT_AIRCRAFT_SPY</Tag>
 		<English>[ICON_BULLET]Can Intercept Enemy Spies (%d1_Amount%% Chance)</English>
-		<French>[ICON_BULLET] Peut arrêter les espions ennemis (la chance de %d1_Amount%%)</French>
+		<French>[ICON_BULLET] Peut arr&#234;ter les espions ennemis (la chance de %d1_Amount%%)</French>
 		<German>[ICON_BULLET]Kann feindliche Agenten abfangen (%d1_Amount%% Chance)</German>
-		<Italian>[ICON_BULLET] Può intercettare le spie nemiche (probabilità di %d1_Amount%%)</Italian>
-		<Spanish>[ICON_BULLET] Puede interceptar a los espías enemigos (la ocasión del %d1_Amount%%)</Spanish>
+		<Italian>[ICON_BULLET] Pu&#242; intercettare le spie nemiche (probabilit&#224; di %d1_Amount%%)</Italian>
+		<Spanish>[ICON_BULLET] Puede interceptar a los esp&#237;as enemigos (la ocasi&#243;n del %d1_Amount%%)</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_INTERCEPT_AIRCRAFT_SPY_COUNTER</Tag>
 		<English>[ICON_BULLET]Improved Counter Espionage Missions (%d1_Amount%%)</English>
-		<French>[ICON_BULLET] Missions améliorées de contre- espionnage (%d1_Amount%%)</French>
+		<French>[ICON_BULLET] Missions am&#233;lior&#233;es de contre- espionnage (%d1_Amount%%)</French>
 		<German>[ICON_BULLET]Verbesserte Spionageabwehr (%d1_Amount%%)</German>
 		<Italian>[ICON_BULLET] Missioni migliori di contro spionaggio (%d1_Amount%%)</Italian>
 		<Spanish>[ICON_BULLET] Misiones mejoradas del espionaje contrario (los %d1_Amount%%)</Spanish>
@@ -252,55 +252,55 @@
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_LOYALTY_TEXT_SPY</Tag>
 		<English>[ICON_BULLET]Never Reveals Nationality</English>
-		<French>[ICON_BULLET] N'indique jamais la nationalité </French>
-		<German>[ICON_BULLET]Enthüllt niemals Heimatnation</German>
-		<Italian>[ICON_BULLET] Non rivela mai la nazionalità </Italian>
+		<French>[ICON_BULLET] N'indique jamais la nationalit&#233; </French>
+		<German>[ICON_BULLET]Enth&#252;llt niemals Heimatnation</German>
+		<Italian>[ICON_BULLET] Non rivela mai la nazionalit&#224; </Italian>
 		<Spanish>[ICON_BULLET] Nunca revela nacionalidad </Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_INSTIGATE_TEXT_SPY</Tag>
 		<English>[ICON_BULLET]%d1_percent%% Bonus Unrest From Missions</English>
 		<French>[ICON_BULLET] malaise de bonification de %d1_percent%% des missions</French>
-		<German>[ICON_BULLET]%d1_percent%% mehr Unruhe durch Einsätze</German>
-		<Italian>[ICON_BULLET] agitazione di indennità di %d1_percent%% dalle missioni</Italian>
+		<German>[ICON_BULLET]%d1_percent%% mehr Unruhe durch Eins&#228;tze</German>
+		<Italian>[ICON_BULLET] agitazione di indennit&#224; di %d1_percent%% dalle missioni</Italian>
 		<Spanish>[ICON_BULLET] malestar de la prima del %d1_percent%% de misiones</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_INSTIGATE2_TEXT_SPY</Tag>
 		<English>[ICON_BULLET]%d1_percent%% Bonus City Revolt From Missions</English>
-		<French>[ICON_BULLET] révolte de ville de bonification de %d1_percent%% des missions</French>
-		<German>[ICON_BULLET]%d1_percent%% effektivere Revolte durch Einsätze</German>
-		<Italian>[ICON_BULLET] sommossa della città di indennità di %d1_percent%% dalle missioni</Italian>
-		<Spanish>[ICON_BULLET] rebelión de la ciudad de la prima del %d1_percent%% de misiones</Spanish>
+		<French>[ICON_BULLET] r&#233;volte de ville de bonification de %d1_percent%% des missions</French>
+		<German>[ICON_BULLET]%d1_percent%% effektivere Revolte durch Eins&#228;tze</German>
+		<Italian>[ICON_BULLET] sommossa della citt&#224; di indennit&#224; di %d1_percent%% dalle missioni</Italian>
+		<Spanish>[ICON_BULLET] rebeli&#243;n de la ciudad de la prima del %d1_percent%% de misiones</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_POISON_TEXT_SPY</Tag>
 		<English>[ICON_BULLET]%d1_percent%% Bonus Unhealthiness From Missions</English>
 		<French>[ICON_BULLET] maladie de bonification de %d1_percent%% des missions</French>
-		<German>[ICON_BULLET]%d1_percent%% zusätzliche Krankheit durch Einsätze</German>
-		<Italian>[ICON_BULLET] malattia di indennità di %d1_percent%% dalle missioni</Italian>
+		<German>[ICON_BULLET]%d1_percent%% zus&#228;tzliche Krankheit durch Eins&#228;tze</German>
+		<Italian>[ICON_BULLET] malattia di indennit&#224; di %d1_percent%% dalle missioni</Italian>
 		<Spanish>[ICON_BULLET] enfermedad de la prima del %d1_percent%% de misiones</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_ESCAPE_SPY</Tag>
 		<English>[ICON_BULLET]Can Escape Capture (%d1_Amount%% Chance)</English>
-		<French>[ICON_BULLET] Peut échapper à la capture (la chance de %d1_Amount%%)</French>
+		<French>[ICON_BULLET] Peut &#233;chapper &#224; la capture (la chance de %d1_Amount%%)</French>
 		<German>[ICON_BULLET]Kann Gefangennahme entkommen (%d1_Amount%% Chance)</German>
-		<Italian>[ICON_BULLET] Può fuoriuscire il bloccaggio (probabilità di %d1_Amount%%)</Italian>
-		<Spanish>[ICON_BULLET] Puede escapar la captura (la ocasión del %d1_Amount%%)</Spanish>
+		<Italian>[ICON_BULLET] Pu&#242; fuoriuscire il bloccaggio (probabilit&#224; di %d1_Amount%%)</Italian>
+		<Spanish>[ICON_BULLET] Puede escapar la captura (la ocasi&#243;n del %d1_Amount%%)</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_ESCAPE_TEXT_SPY</Tag>
 		<English>[ICON_BULLET]%d1_percent%% Bonus Escape Chance</English>
-		<French>[ICON_BULLET] chance d'évasion de bonification de %d1_percent%%</French>
+		<French>[ICON_BULLET] chance d'&#233;vasion de bonification de %d1_percent%%</French>
 		<German>[ICON_BULLET]%d1_percent%% Chance einer Gefangennahme zu entkommen</German>
-		<Italian>[ICON_BULLET] probabilità di fuga di indennità di %d1_percent%%</Italian>
-		<Spanish>[ICON_BULLET] ocasión del escape de la prima del %d1_percent%%</Spanish>
+		<Italian>[ICON_BULLET] probabilit&#224; di fuga di indennit&#224; di %d1_percent%%</Italian>
+		<Spanish>[ICON_BULLET] ocasi&#243;n del escape de la prima del %d1_percent%%</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_RADIATION_TEXT_SPY</Tag>
 		<English>[ICON_BULLET]Creates fallout on sabotaged improvements.</English>
-		<French>[ICON_BULLET] Crée des retombées radioactives sur des améliorations sabotées.</French>
+		<French>[ICON_BULLET] Cr&#233;e des retomb&#233;es radioactives sur des am&#233;liorations sabot&#233;es.</French>
 		<German>[ICON_BULLET]Erzeugt Kontamination auf sabotierten Verbesserungen</German>
 		<Italian>[ICON_BULLET] Genera la precipitazione radioattiva sui miglioramenti sabotati.</Italian>
 		<Spanish>[ICON_BULLET] Crea el polvillo radiactivo en mejoras saboteadas.</Spanish>
@@ -308,39 +308,39 @@
 	<TEXT>
 		<Tag>TXT_KEY_SPY_ESCAPED_REVEAL</Tag>
 		<English>A %s1_civ_adjective %s2_unit managed to escape from the %s3_civ_adjective city of %s4_city!</English>
-		<French>Un %s1_civ_adjective %s2_unit est parvenu à s'échapper de la ville de %s3_civ_adjective de %s4_city!</French>
+		<French>Un %s1_civ_adjective %s2_unit est parvenu &#224; s'&#233;chapper de la ville de %s3_civ_adjective de %s4_city!</French>
 		<German>Ein %[s1_civ_adjective]er %s2_unit konnte aus der %[s3_civ_adjective]en Stadt %s4_city entkommen!</German>
-		<Italian>Un %s1_civ_adjective %s2_unit è riuscito a fuoriuscire dalla città di %s3_civ_adjective di %s4_city!</Italian>
-		<Spanish>Un %s1_civ_adjective %s2_unit manejó escaparse de la ciudad de %s3_civ_adjective de %s4_city!</Spanish>
+		<Italian>Un %s1_civ_adjective %s2_unit &#232; riuscito a fuoriuscire dalla citt&#224; di %s3_civ_adjective di %s4_city!</Italian>
+		<Spanish>Un %s1_civ_adjective %s2_unit manej&#243; escaparse de la ciudad de %s3_civ_adjective de %s4_city!</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_SPY_ESCAPED</Tag>
 		<English>A %s1_unit managed to escape from the %s2_civ_adjective city of %s3_city!</English>
-		<French>Un %s1_unit est parvenu à s'échapper de la ville de %s2_civ_adjective de %s3_city!</French>
+		<French>Un %s1_unit est parvenu &#224; s'&#233;chapper de la ville de %s2_civ_adjective de %s3_city!</French>
 		<German>Einem %[s1_unit]en gelang die Flucht aus der %s2_civ_adjective Stadt %s3_city!</German>
-		<Italian>Un %s1_unit è riuscito a fuoriuscire dalla città di %s2_civ_adjective di %s3_city!</Italian>
-		<Spanish>Un %s1_unit manejó escaparse de la ciudad de %s2_civ_adjective de %s3_city!</Spanish>
+		<Italian>Un %s1_unit &#232; riuscito a fuoriuscire dalla citt&#224; di %s2_civ_adjective di %s3_city!</Italian>
+		<Spanish>Un %s1_unit manej&#243; escaparse de la ciudad de %s2_civ_adjective de %s3_city!</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_ESPIONAGE_TARGET_SOMETHING_DESTROYED</Tag>
 		<English>A %s1_ThingName was destroyed by enemy infiltrators!</English>
-		<French>Un %s1_ThingName a été détruit par les envahisseurs ennemis!</French>
-		<German>Eine %s1_ThingName wurde durch einen feindlichen Geheimdienst zerstört!</German>
-		<Italian>Un %s1_ThingName si è distrutto dagli infiltrati nemici!</Italian>
+		<French>Un %s1_ThingName a &#233;t&#233; d&#233;truit par les envahisseurs ennemis!</French>
+		<German>Eine %s1_ThingName wurde durch einen feindlichen Geheimdienst zerst&#246;rt!</German>
+		<Italian>Un %s1_ThingName si &#232; distrutto dagli infiltrati nemici!</Italian>
 		<Spanish>Un %s1_ThingName fue destruido por los infiltrados enemigos!</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_ESPIONAGE_TARGET_SOMETHING_DESTROYED_NEAR_CITY</Tag>
 		<English>A %s1_ThingName was destroyed by enemy infiltrators near %s2_CityName!</English>
 		<French>A %s1_ThingName was destroyed by enemy infiltrators near %s2_CityName!</French>
-		<German>Eine %s1_ThingName nahe %s2_CityName wurde durch einen feindlichen Geheimdienst zerstört!</German>
+		<German>Eine %s1_ThingName nahe %s2_CityName wurde durch einen feindlichen Geheimdienst zerst&#246;rt!</German>
 		<Italian>A %s1_ThingName was destroyed by enemy infiltrators near %s2_CityName!</Italian>
 		<Spanish>A %s1_ThingName was destroyed by enemy infiltrators near %s2_CityName!</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_ESPIONAGE_TARGET_SOMETHING_ASSASSINATED</Tag>
 		<English>A %s1_ThingName was assassinated by enemy infiltrators at %s2_CityName!</English>
-		<French>Un %s1_ThingName a été assassiné par les envahisseurs ennemis à %s2_CityName!</French>
+		<French>Un %s1_ThingName a &#233;t&#233; assassin&#233; par les envahisseurs ennemis &#224; %s2_CityName!</French>
 		<German>Ein %s1_ThingName wurde durch einen feindlichen Geheimdienst in %s2_CityName ermordet!</German>
 		<Italian>A %s1_ThingName was assassinated by enemy infiltrators at %s2_CityName!</Italian>
 		<Spanish>Un %s1_ThingName fue asesinado por los infiltrados enemigos en %s2_CityName!</Spanish>
@@ -348,58 +348,58 @@
 	<TEXT>
 		<Tag>TXT_KEY_ESPIONAGE_TARGET_SOMETHING_BRIBED</Tag>
 		<English>A %s1_ThingName was bribed by enemy infiltrators!</English>
-		<French>Un %s1_ThingName a été suborné par les envahisseurs ennemis!</French>
+		<French>Un %s1_ThingName a &#233;t&#233; suborn&#233; par les envahisseurs ennemis!</French>
 		<German>Ein %s1_ThingName wurde durch einen feindlichen Geheimdienst bestochen!</German>
-		<Italian>Un %s1_ThingName è stato corrotto dagli infiltrati nemici!</Italian>
+		<Italian>Un %s1_ThingName &#232; stato corrotto dagli infiltrati nemici!</Italian>
 		<Spanish>Un %s1_ThingName fue sobornado por los infiltrados enemigos!</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_ESPIONAGE_TARGET_SOMETHING_BRIBED_NEAR_CITY</Tag>
 		<English>A %s1_ThingName was bribed by enemy infiltrators near %s2_CityName!</English>
-		<French>Un %s1_ThingName a été suborné par les envahisseurs ennemis près de %s2_CityName!</French>
+		<French>Un %s1_ThingName a &#233;t&#233; suborn&#233; par les envahisseurs ennemis pr&#232;s de %s2_CityName!</French>
 		<German>Ein %s1_ThingName wurde einen feindlichen Geheimdienst nahe %s2_CityName bestochen!</German>
-		<Italian>Un %s1_ThingName è stato corrotto dagli infiltrati nemici vicino a %s2_CityName!</Italian>
+		<Italian>Un %s1_ThingName &#232; stato corrotto dagli infiltrati nemici vicino a %s2_CityName!</Italian>
 		<Spanish>Un %s1_ThingName fue sobornado por los infiltrados enemigos cerca de %s2_CityName!</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_ESPIONAGE_HELP_DESTROY_IMPROVEMENT_RADIATION</Tag>
 		<English>Will create fallout on the tile.</English>
-		<French>Créera des retombées radioactives sur la tuile.</French>
+		<French>Cr&#233;era des retomb&#233;es radioactives sur la tuile.</French>
 		<German>Erzeugt Kontamination auf dem Feld.</German>
-		<Italian>Genererà la precipitazione radioattiva sulle mattonelle.</Italian>
-		<Spanish>Creará el polvillo radiactivo en el azulejo.</Spanish>
+		<Italian>Generer&#224; la precipitazione radioattiva sulle mattonelle.</Italian>
+		<Spanish>Crear&#225; el polvillo radiactivo en el azulejo.</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_ESPIONAGE_USED_RADIATION</Tag>
 		<English>A dirty bomb was used! Radioactive fallout has covered the area!</English>
-		<French>Une bombe sale a été employée! Les retombées radioactives radioactives ont couvert le domaine!</French>
+		<French>Une bombe sale a &#233;t&#233; employ&#233;e! Les retomb&#233;es radioactives radioactives ont couvert le domaine!</French>
 		<German>Eine schmutzige Bombe wurde benutzt! Die betroffenen Gebiete wurden radioaktiv kontaminiert</German>
-		<Italian>Una bomba sporca è stata usata! La precipitazione radioattiva radioattiva ha riguardato la zona!</Italian>
-		<Spanish>Una bomba sucia fue utilizada! El polvillo radiactivo radiactivo ha cubierto el área!</Spanish>
+		<Italian>Una bomba sporca &#232; stata usata! La precipitazione radioattiva radioattiva ha riguardato la zona!</Italian>
+		<Spanish>Una bomba sucia fue utilizada! El polvillo radiactivo radiactivo ha cubierto el &#225;rea!</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_ACTION_ASSASSIN_MISSION</Tag>
 		<English>Eliminate %s1_unit for %d2[ICON_ESPIONAGE] %d3_percent%% chance of success.</English>
-		<French>Éliminez %s1_unit pour la chance de %d2[ICON_ESPIONAGE] %d3_percent%% de succès.</French>
+		<French>&#201;liminez %s1_unit pour la chance de %d2[ICON_ESPIONAGE] %d3_percent%% de succ&#232;s.</French>
 		<German>Eliminiert %s1_unit gegen %d2[ICON_ESPIONAGE] mit einer %d3_percent%% Erfolgschance.</German>
-		<Italian>Elimini %s1_unit per la possibilità di successo di %d2[ICON_ESPIONAGE] %d3_percent%%.</Italian>
-		<Spanish>Elimine %s1_unit para la oportunidad de éxito de %d2[ICON_ESPIONAGE] el %d3_percent%%.</Spanish>
+		<Italian>Elimini %s1_unit per la possibilit&#224; di successo di %d2[ICON_ESPIONAGE] %d3_percent%%.</Italian>
+		<Spanish>Elimine %s1_unit para la oportunidad de &#233;xito de %d2[ICON_ESPIONAGE] el %d3_percent%%.</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISSION_ASSASSIN</Tag>
 		<English>Assassinate</English>
 		<French>Assassinez</French>
-		<German>Attentat verüben</German>
+		<German>Attentat ver&#252;ben</German>
 		<Italian>Assassini</Italian>
 		<Spanish>Asesine</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISSION_ASSASSIN_HELP</Tag>
 		<English>The spy attempts to kill a great specialist inside a rival city.</English>
-		<French>L'espion essaye de tuer un grand spécialiste à l'intérieur d'une ville rivale.</French>
-		<German>Versucht eine großen Spezialisten in einer feindlichen Stadt zu ermorden.</German>
-		<Italian>La spia tenta di uccidere un grande specialista all'interno di una città rivale.</Italian>
-		<Spanish>El espía intenta matar a un gran especialista dentro de una ciudad rival.</Spanish>
+		<French>L'espion essaye de tuer un grand sp&#233;cialiste &#224; l'int&#233;rieur d'une ville rivale.</French>
+		<German>Versucht eine gro&#223;en Spezialisten in einer feindlichen Stadt zu ermorden.</German>
+		<Italian>La spia tenta di uccidere un grande specialista all'interno di una citt&#224; rivale.</Italian>
+		<Spanish>El esp&#237;a intenta matar a un gran especialista dentro de una ciudad rival.</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISSION_BRIBE</Tag>
@@ -412,10 +412,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_MISSION_BRIBE_HELP</Tag>
 		<English>The spy attempts to win the allegiance of a foreign worker.</English>
-		<French>L'espion essaye de gagner l'allégeance d'un travailleur étranger.</French>
+		<French>L'espion essaye de gagner l'all&#233;geance d'un travailleur &#233;tranger.</French>
 		<German>Versucht einen fremden Arbeitstrupp abzuwerben.</German>
-		<Italian>La spia tenta di vincere la fedeltà dei lavoratori stranieri.</Italian>
-		<Spanish>El espía intenta ganar la lealtad de un trabajador extranjero.</Spanish>
+		<Italian>La spia tenta di vincere la fedelt&#224; dei lavoratori stranieri.</Italian>
+		<Spanish>El esp&#237;a intenta ganar la lealtad de un trabajador extranjero.</Spanish>
 	</TEXT>
 		<TEXT>
 		<Tag>TXT_KEY_PROCESS_ESPIONAGE</Tag>
@@ -444,7 +444,7 @@
 		<Tag>TXT_KEY_PROCESS_ESPIONAGE_STRATEGY</Tag>
 		<English>Focusing on espionage converts production into espionage within that particular city.</English>
 		<French>Si vous favorisez le espionnage, la production est transform&#233;e en espionnage dans cette ville.</French>
-		<German>Schwerpunkt auf Kultur wandelt in dieser Stadt Produktionserträge [ICON_PRODUCTION] in Spionageerträge [ICON_ESPIONAGE] um.</German>
+		<German>Schwerpunkt auf Kultur wandelt in dieser Stadt Produktionsertr&#228;ge [ICON_PRODUCTION] in Spionageertr&#228;ge [ICON_ESPIONAGE] um.</German>
 		<Italian>Concentrandoti su spionaggio, trasformerai la produzione in spionaggio in una determinata citt&#224;.</Italian>
 		<Spanish>Al centrarse en el espionaje, la producci&#243;n se convierte en cultura en esa ciudad en concreto.</Spanish>
 	</TEXT>

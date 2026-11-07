@@ -453,50 +453,123 @@ bool isCorporationTech(TechTypes eTech)
 
 bool isTechRequiredForUnit(TechTypes eTech, UnitTypes eUnit)
 {
-	int iI;
-	CvUnitInfo& info = GC.getUnitInfo(eUnit);
+	// openciv4: same pure-function pattern as isTechRequiredForBuilding below -- the
+	// XML unit info never changes at runtime, but this costs several un-inlined calls
+	// and the tech-trade AI asks it for every (tech, unit) pair.
+	static std::vector<char> sc_results; // 0 = not cached, 1 = false, 2 = true
+	static int s_iTechs = -1;
+	static int s_iUnits = -1;
 
-	if (info.getPrereqAndTech() == eTech)
+	if (sc_results.empty())
 	{
-		return true;
+		s_iTechs = GC.getNumTechInfos();
+		s_iUnits = GC.getNumUnitInfos();
+		sc_results.assign((size_t)s_iTechs * (size_t)s_iUnits, 0);
 	}
 
-	for (iI = 0; iI < GC.getNUM_UNIT_AND_TECH_PREREQS(); iI++)
+	char* pSlot = NULL;
+	if (eTech >= 0 && eTech < s_iTechs && eUnit >= 0 && eUnit < s_iUnits)
 	{
-		if (info.getPrereqAndTechs(iI) == eTech)
+		pSlot = &sc_results[(size_t)eUnit * (size_t)s_iTechs + (size_t)eTech];
+		if (*pSlot != 0)
 		{
-			return true;
+			return (*pSlot == 2);
 		}
 	}
 
-	return false;
+	int iI;
+	CvUnitInfo& info = GC.getUnitInfo(eUnit);
+	bool bResult = false;
+
+	if (info.getPrereqAndTech() == eTech)
+	{
+		bResult = true;
+	}
+	else
+	{
+		for (iI = 0; iI < GC.getNUM_UNIT_AND_TECH_PREREQS(); iI++)
+		{
+			if (info.getPrereqAndTechs(iI) == eTech)
+			{
+				bResult = true;
+				break;
+			}
+		}
+	}
+
+	if (pSlot != NULL)
+	{
+		*pSlot = bResult ? 2 : 1;
+	}
+
+	return bResult;
 }
 
 bool isTechRequiredForBuilding(TechTypes eTech, BuildingTypes eBuilding)
 {
-	int iI;
-	CvBuildingInfo& info = GC.getBuildingInfo(eBuilding);
+	// openciv4: this reads nothing but the XML building info -- no runtime caller ever
+	// sets PrereqAndTech / PrereqAndTechs / SpecialBuildingType -- but it costs about ten
+	// un-inlined calls per evaluation and the tech-trade AI asks for every
+	// (tech, building) pair, which made it 5.2% of a late Aeons turn.  Memoise it.
+	static std::vector<char> sc_results; // 0 = not cached, 1 = false, 2 = true
+	static int s_iTechs = -1;
+	static int s_iBuildings = -1;
 
-	if (info.getPrereqAndTech() == eTech)
+	if (sc_results.empty())
 	{
-		return true;
+		s_iTechs = GC.getNumTechInfos();
+		s_iBuildings = GC.getNumBuildingInfos();
+		sc_results.assign((size_t)s_iTechs * (size_t)s_iBuildings, 0);
 	}
 
-	for (iI = 0; iI < GC.getNUM_BUILDING_AND_TECH_PREREQS(); iI++)
+	const int iTechs = s_iTechs;
+	const int iBuildings = s_iBuildings;
+
+	char* pSlot = NULL;
+	if (eTech >= 0 && eTech < iTechs && eBuilding >= 0 && eBuilding < iBuildings)
 	{
-		if (info.getPrereqAndTechs(iI) == eTech)
+		pSlot = &sc_results[(size_t)eBuilding * (size_t)iTechs + (size_t)eTech];
+		if (*pSlot != 0)
 		{
-			return true;
+			return (*pSlot == 2);
 		}
 	}
 
-	SpecialBuildingTypes eSpecial = (SpecialBuildingTypes)info.getSpecialBuildingType();
-	if (NO_SPECIALBUILDING != eSpecial && GC.getSpecialBuildingInfo(eSpecial).getTechPrereq() == eTech)
+	int iI;
+	CvBuildingInfo& info = GC.getBuildingInfo(eBuilding);
+	bool bResult = false;
+
+	if (info.getPrereqAndTech() == eTech)
 	{
-		return true;
+		bResult = true;
+	}
+	else
+	{
+		for (iI = 0; iI < GC.getNUM_BUILDING_AND_TECH_PREREQS(); iI++)
+		{
+			if (info.getPrereqAndTechs(iI) == eTech)
+			{
+				bResult = true;
+				break;
+			}
+		}
 	}
 
-	return false;
+	if (!bResult)
+	{
+		SpecialBuildingTypes eSpecial = (SpecialBuildingTypes)info.getSpecialBuildingType();
+		if (NO_SPECIALBUILDING != eSpecial && GC.getSpecialBuildingInfo(eSpecial).getTechPrereq() == eTech)
+		{
+			bResult = true;
+		}
+	}
+
+	if (pSlot != NULL)
+	{
+		*pSlot = bResult ? 2 : 1;
+	}
+
+	return bResult;
 }
 
 bool isTechRequiredForProject(TechTypes eTech, ProjectTypes eProject)
@@ -2770,15 +2843,44 @@ bool canEverRespawn(CivilizationTypes eCivilization)
 
 bool isCivAlive(CivilizationTypes eCivilization)
 {
-	for (int iI = 0; iI < MAX_PLAYERS; iI++)
+	// Fresol: cache the alive set per game turn.  CvCity::doCulture asks this for
+	// every civilization in every city every turn, which used to mean a full
+	// MAX_PLAYERS scan each time.  Civilizations only come back to life between
+	// turns, so a per-turn cache is sufficient.
+	static int s_iCachedTurn = -1;
+	static bool s_abCivAlive[NUM_TOTAL_CIVILIZATIONS];
+
+	if (eCivilization < 0 || eCivilization >= NUM_TOTAL_CIVILIZATIONS)
 	{
-		if (GET_PLAYER((PlayerTypes)iI).isAlive() && GET_PLAYER((PlayerTypes)iI).getCivilizationType() == eCivilization)
-		{
-			return true;
-		}
+		return false;
 	}
 
-	return false;
+	const int iTurn = GC.getGameINLINE().getGameTurn();
+
+	if (iTurn != s_iCachedTurn)
+	{
+		for (int i = 0; i < NUM_TOTAL_CIVILIZATIONS; i++)
+		{
+			s_abCivAlive[i] = false;
+		}
+
+		for (int iI = 0; iI < MAX_PLAYERS; iI++)
+		{
+			if (GET_PLAYER((PlayerTypes)iI).isAlive())
+			{
+				const CivilizationTypes eCiv = (CivilizationTypes)GET_PLAYER((PlayerTypes)iI).getCivilizationType();
+
+				if (eCiv >= 0 && eCiv < NUM_TOTAL_CIVILIZATIONS)
+				{
+					s_abCivAlive[eCiv] = true;
+				}
+			}
+		}
+
+		s_iCachedTurn = iTurn;
+	}
+
+	return s_abCivAlive[eCivilization];
 }
 
 bool validatePeriodConstant(PeriodTypes ePeriod)

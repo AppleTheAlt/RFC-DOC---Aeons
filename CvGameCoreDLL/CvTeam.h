@@ -99,6 +99,8 @@ public:
 	int getSpreadResearchModifier(TechTypes eTech) const;
 	int getTurnResearchModifier() const;
 	int getModernizationResearchModifier(TechTypes eTech) const;
+	int getModernizationResearchModifierUncached(TechTypes eTech) const; // openciv4: cache
+	static void flushModernizationCache(); // openciv4: cache
 	int getShrineResearchModifier() const;
 	int getSubjectsResearchModifier(TechTypes eTech) const; // Aeons
 	int getOverlordResearchModifier(TechTypes eTech) const; // Aeons

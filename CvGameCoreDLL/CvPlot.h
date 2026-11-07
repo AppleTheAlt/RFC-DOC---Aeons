@@ -297,7 +297,10 @@ public:
 		return (PlayerTypes)m_eOwner;
 	}
 #endif
-	void setOwner(PlayerTypes eNewValue, bool bCheckUnits, bool bUpdatePlotGroup);
+	// Fresol: bUpdateVisibility skips the per plot sight and revealed owner recalculation,
+	// which is the expensive part of this function. Callers that move a whole batch of
+	// plots at once can pass false and let the engine's own global fog update catch up.
+	void setOwner(PlayerTypes eNewValue, bool bCheckUnits, bool bUpdatePlotGroup, bool bUpdateVisibility = true);
 
 	PlotTypes getPlotType() const;																																			// Exposed to Python
 	DllExport bool isWater() const;																																								// Exposed to Python
@@ -530,6 +533,7 @@ public:
 	int getPlayerDangerCache(PlayerTypes ePlayer, int iRange);
 	void setPlayerDangerCache(PlayerTypes ePlayer, int iRange, int iNewValue);
 	void invalidatePlayerDangerCache(PlayerTypes ePlayer, int iRange);
+	void invalidatePlayerDangerCache(PlayerTypes ePlayer); // openciv4: all ranges at once
 	// Sanguo Mod Performance, end
 
 	void read(FDataStreamBase* pStream);

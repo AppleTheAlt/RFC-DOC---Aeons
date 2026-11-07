@@ -81,7 +81,14 @@ def completeCollapse(iPlayer):
 	
 	# secede all cities, destroy close and less important ones
 	bRazeMinorCities = (player(iPlayer).getCurrentEra() <= iMedieval)
-	secedeCities(iPlayer, cities.owner(iPlayer), bRazeMinorCities)
+
+	# Fresol: every acquireCity runs a full map plot group update.  For a collapse of
+	# a dozen cities that is most of the time, so hold it back and run it once at the end.
+	game.setSuspendPlotGroups(True)
+	try:
+		secedeCities(iPlayer, cities.owner(iPlayer), bRazeMinorCities)
+	finally:
+		game.setSuspendPlotGroups(False)
 		
 	# take care of the remnants of the civ
 	player(iPlayer).killUnits()

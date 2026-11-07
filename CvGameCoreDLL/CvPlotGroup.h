@@ -23,7 +23,8 @@ public:
 
 	void addPlot(CvPlot* pPlot);
 	void removePlot(CvPlot* pPlot);
-	void recalculatePlots();														
+	int countReachablePlots(PlayerTypes ePlayer, CvPlot* pBlockedPlot = NULL);	// Fresol
+	void recalculatePlots(bool bSkipHealthCheck = false);														
 
 	int getID() const;
 	void setID(int iID);
@@ -59,5 +60,10 @@ protected:
 
 	CLinkList<XYCoords> m_plots;
 };
+
+// Fresol - start: city bonus upkeep is suspended while a group is rebuilt
+void setSuspendCityBonusSync(bool bSuspend);
+bool isCityBonusSyncSuspended();
+// Fresol - end
 
 #endif

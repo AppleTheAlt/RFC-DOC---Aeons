@@ -1863,6 +1863,15 @@ bool CvTeam::canContact(TeamTypes eTeam) const
 {
 	int iI, iJ;
 
+	// openciv4: CvPlayer::canContact() refuses every cross-team pair whose teams have
+	// not met, so this double loop can only ever return true once they have.  Checking
+	// that up front turns the ~70% of unmet calls from the tech-trade AI into one array
+	// read.  eTeam == getID() is exempt: same-team pairs skip the met test entirely.
+	if (eTeam != getID() && eTeam >= 0 && eTeam < MAX_TEAMS && !isHasMet(eTeam))
+	{
+		return false;
+	}
+
 	for (iI = 0; iI < MAX_PLAYERS; iI++)
 	{
 		if (GET_PLAYER((PlayerTypes)iI).isAlive())
@@ -2999,7 +3008,63 @@ int CvTeam::getSpreadResearchModifier(TechTypes eTech) const
 	return iModifier;
 }
 
+// openciv4: getModernizationResearchModifier walks every civ and evaluates AI_techTrade
+// for each one that knows the tech; AI_doDiplo asks for it once per (opponent, tech) pair,
+// which made it ~13% of a late turn.  Memoise per (team, tech); every input that can
+// change it (techs, wars, eras, deals, the turn) flushes the whole cache.
+static std::vector< std::vector<int> > s_aaiModernization; // (MAX_TEAMS x numTechs)
+static bool s_abModernizationValid[MAX_TEAMS];
+static int s_iModernizationTurn = -1;
+static int s_iModernizationTechs = -1;
+
+void CvTeam::flushModernizationCache()
+{
+	for (int i = 0; i < MAX_TEAMS; ++i)
+	{
+		s_abModernizationValid[i] = false;
+	}
+}
+
 int CvTeam::getModernizationResearchModifier(TechTypes eTech) const
+{
+	const int iTurn = GC.getGameINLINE().getGameTurn();
+	if (iTurn != s_iModernizationTurn)
+	{
+		s_iModernizationTurn = iTurn;
+		flushModernizationCache();
+	}
+
+	const int iNumTechs = GC.getNumTechInfos();
+	if (iNumTechs != s_iModernizationTechs)
+	{
+		s_iModernizationTechs = iNumTechs;
+		s_aaiModernization.assign(MAX_TEAMS, std::vector<int>(iNumTechs, -12345));
+		flushModernizationCache();
+	}
+
+	const int iTeam = getID();
+	if (eTech < 0 || eTech >= iNumTechs || iTeam < 0 || iTeam >= MAX_TEAMS)
+	{
+		return getModernizationResearchModifierUncached(eTech);
+	}
+
+	if (!s_abModernizationValid[iTeam])
+	{
+		for (int i = 0; i < iNumTechs; ++i)
+		{
+			s_aaiModernization[iTeam][i] = -12345;
+		}
+		s_abModernizationValid[iTeam] = true;
+	}
+
+	if (s_aaiModernization[iTeam][eTech] == -12345)
+	{
+		s_aaiModernization[iTeam][eTech] = getModernizationResearchModifierUncached(eTech);
+	}
+	return s_aaiModernization[iTeam][eTech];
+}
+
+int CvTeam::getModernizationResearchModifierUncached(TechTypes eTech) const
 {
 	// AEONS - Modernisation available for all civs, but Japan gets stronger modernisation...
 	//if (GET_PLAYER(getLeaderID()).getCivilizationType() != JAPAN) return 0;
@@ -4354,6 +4419,7 @@ bool CvTeam::isAtWar(TeamTypes eIndex) const
 
 void CvTeam::setAtWar(TeamTypes eIndex, bool bNewValue)
 {
+	flushModernizationCache(); // openciv4: cache
 	FAssertMsg(eIndex >= 0, "eIndex is expected to be non-negative (invalid Index)");
 	FAssertMsg(eIndex < MAX_TEAMS, "eIndex is expected to be within maximum bounds (invalid Index)");
 	m_abAtWar[eIndex] = bNewValue;
@@ -5901,6 +5967,7 @@ void CvTeam::announceTechToPlayers(TechTypes eIndex, bool bPartial)
 
 void CvTeam::setHasTech(TechTypes eIndex, bool bNewValue, PlayerTypes ePlayer, bool bFirst, bool bAnnounce)
 {
+	flushModernizationCache(); // openciv4: cache
 	PROFILE_FUNC();
 
 	CvCity* pCapitalCity;

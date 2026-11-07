@@ -102,9 +102,19 @@ class TileDict:
 		return self.entries.values()
 
 
+# Fresol: extract_stack() reads a source line for every frame of the call stack and
+# cost about 50 ms per periodic() call.  Its result is constant for a given function
+# (trace[-1] is always this very frame), so compute it once and reuse it.
+_calling_module = []
+
 def get_calling_module():
-	trace = [call[0] for call in extract_stack() if call[0] != 'DataStructures']
-	return trace[-1]
+	if not _calling_module:
+		trace = [call[0] for call in extract_stack() if call[0] != 'DataStructures']
+		if trace:
+			_calling_module.append(trace[-1])
+		else:
+			_calling_module.append('DataStructures')
+	return _calling_module[0]
 
 
 class PeriodOffsets(object):

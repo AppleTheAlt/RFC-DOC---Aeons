@@ -177,6 +177,16 @@ def canResurrectFromCities(iCiv, resurrectionCities):
 	return True
 	
 def doResurrection(iCiv, lCityList, bAskFlip=True, bDisplay=False):
+	# Fresol: the whole resurrection hands over many cities; hold the plot
+	# group updates back and replay them once when it is done.
+	game.setSuspendPlotGroups(True)
+	try:
+		return _doResurrection(iCiv, lCityList, bAskFlip, bDisplay)
+	finally:
+		game.setSuspendPlotGroups(False)
+
+
+def _doResurrection(iCiv, lCityList, bAskFlip=True, bDisplay=False):
 	iPlayer = findSlot(iCiv)
 	if iPlayer == -1:
 		log.rise("RESURRECTION ABORTED: NO FREE SLOT FOR: %s", infos.civ(iCiv).getText())

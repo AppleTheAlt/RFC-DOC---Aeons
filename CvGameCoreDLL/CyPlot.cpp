@@ -645,6 +645,15 @@ void CyPlot::setOwnerNoUnitCheck(int /*PlayerTypes*/ eNewValue)
 		m_pPlot->setOwner((PlayerTypes) eNewValue, false, true);
 }
 
+// Fresol: same as setOwnerNoUnitCheck but also skips the sight and revealed owner
+// recalculation, for callers that move a whole batch of plots at once and can let the
+// engine's own global fog update do the work.
+void CyPlot::setOwnerFast(int /*PlayerTypes*/ eNewValue)
+{
+	if (m_pPlot)
+		m_pPlot->setOwner((PlayerTypes) eNewValue, false, false, false);
+}
+
 PlotTypes CyPlot::getPlotType()
 {
 	return m_pPlot ? m_pPlot->getPlotType() : NO_PLOT;

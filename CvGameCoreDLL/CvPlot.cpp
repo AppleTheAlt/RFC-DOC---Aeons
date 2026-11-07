@@ -5282,7 +5282,7 @@ PlayerTypes CvPlot::getOwner() const
 }
 
 
-void CvPlot::setOwner(PlayerTypes eNewValue, bool bCheckUnits, bool bUpdatePlotGroup)
+void CvPlot::setOwner(PlayerTypes eNewValue, bool bCheckUnits, bool bUpdatePlotGroup, bool bUpdateVisibility)
 {
 	PROFILE_FUNC();
 
@@ -5395,7 +5395,10 @@ void CvPlot::setOwner(PlayerTypes eNewValue, bool bCheckUnits, bool bUpdatePlotG
 
 			if (isOwned())
 			{
-				changeAdjacentSight(getTeam(), GC.getDefineINT("PLOT_VISIBILITY_RANGE"), false, NULL, bUpdatePlotGroup);
+				if (bUpdateVisibility)
+				{
+					changeAdjacentSight(getTeam(), GC.getDefineINT("PLOT_VISIBILITY_RANGE"), false, NULL, bUpdatePlotGroup);
+				}
 
 				if (area())
 				{
@@ -5471,7 +5474,10 @@ void CvPlot::setOwner(PlayerTypes eNewValue, bool bCheckUnits, bool bUpdatePlotG
 
 			if (isOwned())
 			{
-				changeAdjacentSight(getTeam(), GC.getDefineINT("PLOT_VISIBILITY_RANGE"), true, NULL, bUpdatePlotGroup);
+				if (bUpdateVisibility)
+				{
+					changeAdjacentSight(getTeam(), GC.getDefineINT("PLOT_VISIBILITY_RANGE"), true, NULL, bUpdatePlotGroup);
+				}
 
 				if (area())
 				{
@@ -5517,18 +5523,24 @@ void CvPlot::setOwner(PlayerTypes eNewValue, bool bCheckUnits, bool bUpdatePlotG
 				}
 			}
 
-			for (iI = 0; iI < MAX_TEAMS; ++iI)
+			if (bUpdateVisibility)
 			{
-				if (GET_TEAM((TeamTypes)iI).isAlive())
+				for (iI = 0; iI < MAX_TEAMS; ++iI)
 				{
-					updateRevealedOwner((TeamTypes)iI);
+					if (GET_TEAM((TeamTypes)iI).isAlive())
+					{
+						updateRevealedOwner((TeamTypes)iI);
+					}
 				}
 			}
 
 			updateIrrigated();
 			updateYield();
 
-			if (bUpdatePlotGroup)
+			// Fresol: during a mass flip the plot group update is suspended and replayed
+			// once for every player when the suspension is released, so the per-plot
+			// walk over all players here is pure repetition.
+			if (bUpdatePlotGroup && !GC.getGameINLINE().isSuspendPlotGroups())
 			{
 				updatePlotGroup();
 			}
@@ -8163,14 +8175,54 @@ void CvPlot::updatePlotGroup(PlayerTypes ePlayer, bool bRecalculate)
 
 			if (!bConnected)
 			{
-				bEmpty = (pPlotGroup->getLengthPlots() == 1);
-				FAssertMsg(pPlotGroup->getLengthPlots() > 0, "pPlotGroup should have more than 0 plots");
+				// Fresol: the loop above only notices that a group mate lost its direct link
+				// to us, which does not by itself break the group - the mate usually still
+				// reaches us the other way around. The repair only leaves everything as it
+				// was when it can take its early return (nothing has to be rebuilt, so no
+				// member gets dropped by a repair nested inside the rebuild) and this plot
+				// links to one of its group mates in the repair's own direction, so that the
+				// merge puts it back into the very same group (isTradeNetworkConnected is not
+				// symmetric). The plot has to stay in the team's trade network either way.
+				bool bRepair = true;
+				bool bCountChecked = false;
+				bool bGroupHealthyWithoutPlot = false;
+				const TeamTypes eTeam = GET_PLAYER(ePlayer).getTeam();
 
-				pPlotGroup->removePlot(this);
-
-				if (!bEmpty)
+				if (isTradeNetwork(eTeam))
 				{
-					pPlotGroup->recalculatePlots();
+					bCountChecked = true;
+
+					if (pPlotGroup->countReachablePlots(ePlayer, this) == pPlotGroup->getLengthPlots() - 1)
+					{
+						bGroupHealthyWithoutPlot = true;
+
+						for (iI = 0; iI < NUM_DIRECTION_TYPES; ++iI)
+						{
+							pAdjacentPlot = plotDirection(getX_INLINE(), getY_INLINE(), ((DirectionTypes)iI));
+
+							if (pAdjacentPlot != NULL
+								&& pAdjacentPlot->getPlotGroup(ePlayer) == pPlotGroup
+								&& pAdjacentPlot->isTradeNetwork(eTeam)
+								&& isTradeNetworkConnected(pAdjacentPlot, eTeam))
+							{
+								bRepair = false;
+								break;
+							}
+						}
+					}
+				}
+
+				if (bRepair)
+				{
+					bEmpty = (pPlotGroup->getLengthPlots() == 1);
+					FAssertMsg(pPlotGroup->getLengthPlots() > 0, "pPlotGroup should have more than 0 plots");
+
+					pPlotGroup->removePlot(this);
+
+					if (!bEmpty && !bGroupHealthyWithoutPlot)
+					{
+						pPlotGroup->recalculatePlots(bCountChecked);
+					}
 				}
 			}
 		}
@@ -10002,7 +10054,8 @@ void CvPlot::doCulture()
 		}
 	}
 
-	updateCulture(true, true);
+	// Fresol: the map turn replays the plot group update once at its end
+	updateCulture(true, false);
 }
 
 
@@ -11852,6 +11905,30 @@ void CvPlot::invalidatePlayerDangerCache(PlayerTypes ePlayer, int iRange)
 	}
 
 	m_apaiPlayerDangerCache[ePlayer][iRange] = MAX_SHORT;
+}
+
+// openciv4: same as invalidating every range one by one, with the two allocation
+// checks done once.  Called for every plot at the start of each player's turn.
+void CvPlot::invalidatePlayerDangerCache(PlayerTypes ePlayer)
+{
+	if (NULL == m_apaiPlayerDangerCache)
+	{
+		m_apaiPlayerDangerCache = new short*[MAX_PLAYERS];
+		for (int iI = 0; iI < MAX_PLAYERS; ++iI)
+		{
+			m_apaiPlayerDangerCache[iI] = NULL;
+		}
+	}
+
+	if (NULL == m_apaiPlayerDangerCache[ePlayer])
+	{
+		m_apaiPlayerDangerCache[ePlayer] = new short[DANGER_RANGE + 1];
+	}
+
+	for (int iI = 0; iI < DANGER_RANGE + 1; ++iI)
+	{
+		m_apaiPlayerDangerCache[ePlayer][iI] = MAX_SHORT;
+	}
 }
 // Sanguo Mod Performance, end
 

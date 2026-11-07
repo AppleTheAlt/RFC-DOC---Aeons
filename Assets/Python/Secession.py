@@ -10,6 +10,27 @@ def secession(iPlayer, secedingCities):
 	data.setSecedingCities(iPlayer, secedingCities)
 
 def secedeCities(iPlayer, secedingCities, bRazeMinorCities = False):
+	# Fresol: a mass flip hands over dozens of cities in a row; recomputing the
+	# affected civs' display names after each one is pure repetition.
+	batchNameWindow.depth += 1
+	try:
+		return _secedeCities(iPlayer, secedingCities, bRazeMinorCities)
+	finally:
+		batchNameWindow.depth -= 1
+		if batchNameWindow.depth == 0:
+			flushBatchedNames()
+
+
+def flushBatchedNames():
+	import DynamicCivs
+	lPlayers = list(batchNameWindow.players)
+	del batchNameWindow.players[:]
+	for iPlayer in lPlayers:
+		DynamicCivs.checkName(iPlayer)
+		DynamicCivs.checkReplacementName(iPlayer)
+
+
+def _secedeCities(iPlayer, secedingCities, bRazeMinorCities = False):
 	iNumCities = player(iPlayer).getNumCities()
 	if iNumCities <= 0:
 		return

@@ -106,6 +106,7 @@ CvGlobals gGlobals;
 //
 CvGlobals::CvGlobals() :
 m_bGraphicsInitialized(false),
+m_bBuildCachesInitialized(false), // Fresol
 m_bLogging(false),
 m_bRandLogging(false),
 m_bOverwriteLogs(false),
@@ -1845,6 +1846,47 @@ CvBuildInfo& CvGlobals::getBuildInfo(BuildTypes eBuildNum)
 	FAssert(eBuildNum > -1);
 	FAssert(eBuildNum < GC.getNumBuildInfos());
 	return *(m_paBuildInfo[eBuildNum]);
+}
+
+// Fresol: index the builds by the improvement they construct, once, lazily.
+void CvGlobals::initBuildCaches()
+{
+	if (m_bBuildCachesInitialized)
+	{
+		return;
+	}
+	m_bBuildCachesInitialized = true;
+
+	m_aBuildsForImprovement.resize(getNumImprovementInfos());
+
+	for (int i = 0; i < getNumBuildInfos(); i++)
+	{
+		BuildTypes eBuild = (BuildTypes)i;
+		ImprovementTypes eImprovement = (ImprovementTypes)getBuildInfo(eBuild).getImprovement();
+
+		if (eImprovement != NO_IMPROVEMENT)
+		{
+			m_aBuildsForImprovement[(int)eImprovement].push_back(eBuild);
+		}
+		else
+		{
+			m_aNonImprovementBuilds.push_back(eBuild);
+		}
+	}
+}
+
+const std::vector<BuildTypes>& CvGlobals::getBuildsForImprovement(ImprovementTypes eImprovement)
+{
+	initBuildCaches();
+	FAssert(eImprovement > -1);
+	FAssert(eImprovement < (int)m_aBuildsForImprovement.size());
+	return m_aBuildsForImprovement[eImprovement];
+}
+
+const std::vector<BuildTypes>& CvGlobals::getNonImprovementBuilds()
+{
+	initBuildCaches();
+	return m_aNonImprovementBuilds;
 }
 
 int CvGlobals::getNumHandicapInfos()

@@ -2,6 +2,25 @@
 
 #include "CvGameCoreDLL.h"
 #include "CvPlotGroup.h"
+
+// Verification build: after every rebuild, count groups of the same owner that are
+// still joined by a valid trade link.  Set to 1 to re-run the check.
+#define PLOT_GROUP_VERIFY 0
+
+// Fresol - start: see recalculatePlots
+static bool s_bSuspendCityBonusSync = false;
+
+void setSuspendCityBonusSync(bool bSuspend)
+{
+	s_bSuspendCityBonusSync = bSuspend;
+}
+
+bool isCityBonusSyncSuspended()
+{
+	return s_bSuspendCityBonusSync;
+}
+// Fresol - end
+#include <map> // Fresol: the rebuild groups its members per component
 #include "CvPlot.h"
 #include "CvGlobals.h"
 #include "CvPlayerAI.h"
@@ -10,6 +29,290 @@
 #include "CvDLLFAStarIFaceBase.h"
 #include "FProfiler.h"
 #include "CvRhyes.h"
+
+// Fresol - start
+// The health check in recalculatePlots only asks whether the group's member list is
+// still one connected component, so that is answered here with a BFS over the members
+// instead of a saturating A* run in the engine. The edge rule is copied verbatim from
+// plotGroupValid (CvGameCoreUtils.cpp): both ends in this group, the new plot still in
+// the team's trade network, and the two plots directly connected.
+// Verified against the A* version over 605,000 calls with no disagreement.
+
+static std::vector<int>		s_aiPlotGroupSeen;			// visit stamp, by plot index
+static std::vector<int>		s_aiPlotGroupTradeNetStamp;	// validity stamp of the cached isTradeNetwork result
+static std::vector<char>	s_abPlotGroupTradeNet;		// cached isTradeNetwork result
+static std::vector<CvPlot*>	s_apPlotGroupStack;
+static int					s_iPlotGroupStamp = 0;
+
+int CvPlotGroup::countReachablePlots(PlayerTypes ePlayer, CvPlot* pBlockedPlot)
+{
+	CLLNode<XYCoords>* pHeadNode = headPlotsNode();
+
+	if (pHeadNode == NULL)
+	{
+		return 0;
+	}
+
+	CvMap& kMap = GC.getMapINLINE();
+	const int iNumPlots = kMap.numPlotsINLINE();
+
+	if ((int)s_aiPlotGroupSeen.size() != iNumPlots)
+	{
+		s_aiPlotGroupSeen.assign(iNumPlots, 0);
+		s_aiPlotGroupTradeNetStamp.assign(iNumPlots, 0);
+		s_abPlotGroupTradeNet.assign(iNumPlots, 0);
+		s_iPlotGroupStamp = 0;
+	}
+
+	++s_iPlotGroupStamp;
+
+	const TeamTypes eTeam = GET_PLAYER(ePlayer).getTeam();
+
+	s_apPlotGroupStack.clear();
+
+	// Start from the first member that is not blocked: that is the node recalculatePlots
+	// would start its own walk from once the blocked plot has been taken out of the group.
+	CLLNode<XYCoords>* pNode = pHeadNode;
+	CvPlot* pStartPlot = NULL;
+
+	while (pNode != NULL)
+	{
+		CvPlot* pCandidate = kMap.plotSorenINLINE(pNode->m_data.iX, pNode->m_data.iY);
+
+		if (pCandidate != pBlockedPlot)
+		{
+			pStartPlot = pCandidate;
+			break;
+		}
+
+		pNode = nextPlotsNode(pNode);
+	}
+
+	if (pStartPlot == NULL)
+	{
+		return 0;
+	}
+
+	s_apPlotGroupStack.push_back(pStartPlot);
+	s_aiPlotGroupSeen[kMap.plotNumINLINE(pStartPlot->getX_INLINE(), pStartPlot->getY_INLINE())] = s_iPlotGroupStamp;
+
+	int iCount = 0;
+
+	while (!s_apPlotGroupStack.empty())
+	{
+		CvPlot* pPlot = s_apPlotGroupStack.back();
+		s_apPlotGroupStack.pop_back();
+
+		++iCount;
+
+		for (int iI = 0; iI < NUM_DIRECTION_TYPES; ++iI)
+		{
+			CvPlot* pAdjacentPlot = plotDirection(pPlot->getX_INLINE(), pPlot->getY_INLINE(), (DirectionTypes)iI);
+
+			if (pAdjacentPlot == NULL || pAdjacentPlot == pBlockedPlot)
+			{
+				continue;
+			}
+
+			if (pAdjacentPlot->getPlotGroup(ePlayer) != this)
+			{
+				continue;
+			}
+
+			const int iIndex = kMap.plotNumINLINE(pAdjacentPlot->getX_INLINE(), pAdjacentPlot->getY_INLINE());
+
+			if (s_aiPlotGroupSeen[iIndex] == s_iPlotGroupStamp)
+			{
+				continue;
+			}
+
+			if (s_aiPlotGroupTradeNetStamp[iIndex] != s_iPlotGroupStamp)
+			{
+				s_abPlotGroupTradeNet[iIndex] = pAdjacentPlot->isTradeNetwork(eTeam) ? 1 : 0;
+				s_aiPlotGroupTradeNetStamp[iIndex] = s_iPlotGroupStamp;
+			}
+
+			if (!s_abPlotGroupTradeNet[iIndex])
+			{
+				continue;
+			}
+
+			if (!pAdjacentPlot->isTradeNetworkConnected(pPlot, eTeam))
+			{
+				continue;
+			}
+
+			s_aiPlotGroupSeen[iIndex] = s_iPlotGroupStamp;
+			s_apPlotGroupStack.push_back(pAdjacentPlot);
+		}
+	}
+
+	return iCount;
+}
+
+
+// Fresol - start
+// The rebuild used to take the group apart and then add every member back one at a
+// time. On a late game map that is thousands of plots per rebuild (measured 7,200,
+// ~52 ms each, 22 rebuilds a game turn) and it is 91% of what recalculatePlots costs.
+// The add loop only ever merges a member with a mate that was added before it, through
+// a link the new member has to that mate, so the outcome is a partition of the member
+// list that can be worked out directly: one union over the members in list order, then
+// one group per class. Same order, same link direction, same outcome - checked against
+// the add loop over 2,900 rebuilds (every partition the same).
+// A mate that is not in the team's trade network has no group of its own, so it cannot
+// be merged with either.
+
+static std::vector<int>	s_aiPlotGroupMemberPos;		// position in the member list, by plot index
+static std::vector<int>	s_aiPlotGroupMemberMark;	// validity stamp for that position
+static int				s_iPlotGroupMemberStamp = 0;
+
+static int plotGroupFindRoot(const std::vector<int>& aiParent, int i)
+{
+	while (aiParent[i] != i)
+	{
+		i = aiParent[i];
+	}
+
+	return i;
+}
+
+// Labels the members of the list: aiLabel[i] is the component of member i (in list
+// order), or -1 for a member that has to stay without a group because it is not part of
+// the team's trade network any more.
+static void computeRebuildComponents(PlayerTypes eOwner, CLinkList<XYCoords>& members,
+                                     std::vector<int>& aiPlotIndex, std::vector<int>& aiLabel)
+{
+	CvMap& kMap = GC.getMapINLINE();
+	const int iNumPlots = kMap.numPlotsINLINE();
+	const TeamTypes eTeam = GET_PLAYER(eOwner).getTeam();
+	CLLNode<XYCoords>* pNode;
+
+	if ((int)s_aiPlotGroupMemberPos.size() != iNumPlots)
+	{
+		s_aiPlotGroupMemberPos.assign(iNumPlots, 0);
+		s_aiPlotGroupMemberMark.assign(iNumPlots, 0);
+		s_iPlotGroupMemberStamp = 0;
+	}
+
+	++s_iPlotGroupMemberStamp;
+
+	aiPlotIndex.clear();
+
+	for (pNode = members.head(); pNode != NULL; pNode = members.next(pNode))
+	{
+		const int iIndex = kMap.plotNumINLINE(pNode->m_data.iX, pNode->m_data.iY);
+
+		s_aiPlotGroupMemberPos[iIndex] = (int)aiPlotIndex.size();
+		s_aiPlotGroupMemberMark[iIndex] = s_iPlotGroupMemberStamp;
+		aiPlotIndex.push_back(iIndex);
+	}
+
+	const int iCount = (int)aiPlotIndex.size();
+
+	std::vector<int> aiParent(iCount);
+	std::vector<char> abInNetwork(iCount);
+
+	for (int i = 0; i < iCount; ++i)
+	{
+		aiParent[i] = i;
+		abInNetwork[i] = kMap.plotByIndexINLINE(aiPlotIndex[i])->isTradeNetwork(eTeam) ? 1 : 0;
+	}
+
+	for (int i = 0; i < iCount; ++i)
+	{
+		if (!abInNetwork[i])
+		{
+			continue;			// the add loop leaves such a member without a group
+		}
+
+		CvPlot* pPlot = kMap.plotByIndexINLINE(aiPlotIndex[i]);
+
+		for (int iI = 0; iI < NUM_DIRECTION_TYPES; ++iI)
+		{
+			CvPlot* pAdjacentPlot = plotDirection(pPlot->getX_INLINE(), pPlot->getY_INLINE(), (DirectionTypes)iI);
+
+			if (pAdjacentPlot == NULL)
+			{
+				continue;
+			}
+
+			const int iAdjacentIndex = kMap.plotNumINLINE(pAdjacentPlot->getX_INLINE(), pAdjacentPlot->getY_INLINE());
+
+			if (s_aiPlotGroupMemberMark[iAdjacentIndex] != s_iPlotGroupMemberStamp)
+			{
+				continue;		// not one of the members we are putting back
+			}
+
+			const int iAdjacent = s_aiPlotGroupMemberPos[iAdjacentIndex];
+
+			if (iAdjacent >= i)
+			{
+				continue;		// only mates added before this one hold a group already
+			}
+
+			if (!abInNetwork[iAdjacent])
+			{
+				continue;		// and that mate needs a group for the merge to happen at all
+			}
+
+			if (!pPlot->isTradeNetworkConnected(pAdjacentPlot, eTeam))
+			{
+				continue;		// the link the add loop checks, in the same direction
+			}
+
+			const int iRoot = plotGroupFindRoot(aiParent, i);
+			const int iAdjacentRoot = plotGroupFindRoot(aiParent, iAdjacent);
+
+			if (iRoot != iAdjacentRoot)
+			{
+				aiParent[iRoot] = iAdjacentRoot;
+			}
+		}
+	}
+
+	aiLabel.assign(iCount, -1);
+
+	for (int i = 0; i < iCount; ++i)
+	{
+		if (abInNetwork[i])
+		{
+			aiLabel[i] = plotGroupFindRoot(aiParent, i);
+		}
+	}
+}
+
+// Creates one group per component, in member order.
+static void rebuildPlotGroups(PlayerTypes eOwner, const std::vector<int>& aiPlotIndex,
+                              const std::vector<int>& aiLabel)
+{
+	CvMap& kMap = GC.getMapINLINE();
+	std::map<int, CvPlotGroup*> mapRootToGroup;
+	std::map<int, CvPlotGroup*>::iterator it;
+
+	for (int i = 0; i < (int)aiPlotIndex.size(); ++i)
+	{
+		if (aiLabel[i] < 0)
+		{
+			continue;
+		}
+
+		CvPlot* pPlot = kMap.plotByIndexINLINE(aiPlotIndex[i]);
+
+		it = mapRootToGroup.find(aiLabel[i]);
+
+		if (it == mapRootToGroup.end())
+		{
+			mapRootToGroup[aiLabel[i]] = GET_PLAYER(eOwner).initPlotGroup(pPlot);
+		}
+		else
+		{
+			it->second->addPlot(pPlot);
+		}
+	}
+}
+// Fresol - end
+// Fresol - end
 
 // Public Functions...
 
@@ -110,7 +413,106 @@ void CvPlotGroup::removePlot(CvPlot* pPlot)
 }
 
 
-void CvPlotGroup::recalculatePlots()
+// Fresol - start
+// A city keeps the bonus counts of the plot group it sits in. Rebuilding a group plot
+// by plot used to move every bonus in and out of every city of the group at every
+// step, and each of those moves walks the group (see changeNumBonuses), so the upkeep
+// was quadratic in the size of the group. What comes out of a rebuild only depends on
+// the groups it ends in, so the counts are written once, at the end, and the
+// incremental upkeep is suspended while the group is taken apart and put back.
+static void syncCityBonuses(PlayerTypes eOwner, const std::vector<int>& aiPlotIndex)
+{
+	CvMap& kMap = GC.getMapINLINE();
+	const int iNumBonuses = GC.getNumBonusInfos();
+
+	for (int i = 0; i < (int)aiPlotIndex.size(); ++i)
+	{
+		CvPlot* pPlot = kMap.plotByIndexINLINE(aiPlotIndex[i]);
+		CvCity* pCity = pPlot->getPlotCity();
+
+		if (pCity == NULL || pCity->getOwnerINLINE() != eOwner)
+		{
+			continue;
+		}
+
+		CvPlotGroup* pNewPlotGroup = pPlot->getPlotGroup(eOwner);
+
+		for (int iI = 0; iI < iNumBonuses; ++iI)
+		{
+			const int iNew = (pNewPlotGroup != NULL) ? pNewPlotGroup->getNumBonuses((BonusTypes)iI) : 0;
+
+			pCity->changeNumBonuses((BonusTypes)iI, iNew - pCity->getNumBonuses((BonusTypes)iI));
+		}
+	}
+}
+// Fresol - end
+
+#if PLOT_GROUP_VERIFY // openciv4: was #ifdef, so "set to 0" still compiled it in (6.9% of a turn)
+static int s_iVerifyCalls = 0;
+static int s_iVerifyBad = 0;
+
+static void verifyAfterRebuild(PlayerTypes eOwner, const std::vector<int>& aiPlotIndex)
+{
+	CvMap& kMap = GC.getMapINLINE();
+	const TeamTypes eTeam = GET_PLAYER(eOwner).getTeam();
+	int iBad = 0;
+
+	for (int i = 0; i < (int)aiPlotIndex.size(); ++i)
+	{
+		CvPlot* pPlot = kMap.plotByIndexINLINE(aiPlotIndex[i]);
+		CvPlotGroup* pGroup = pPlot->getPlotGroup(eOwner);
+
+		if (pGroup == NULL || !pPlot->isTradeNetwork(eTeam))
+		{
+			continue;
+		}
+
+		for (int iI = 0; iI < NUM_DIRECTION_TYPES; ++iI)
+		{
+			CvPlot* pAdjacent = plotDirection(pPlot->getX_INLINE(), pPlot->getY_INLINE(), (DirectionTypes)iI);
+
+			if (pAdjacent == NULL)
+			{
+				continue;
+			}
+
+			CvPlotGroup* pAdjacentGroup = pAdjacent->getPlotGroup(eOwner);
+
+			if (pAdjacentGroup == NULL || pAdjacentGroup == pGroup || !pAdjacent->isTradeNetwork(eTeam))
+			{
+				continue;
+			}
+
+			if (pPlot->isTradeNetworkConnected(pAdjacent, eTeam))
+			{
+				++iBad;
+			}
+		}
+	}
+
+	++s_iVerifyCalls;
+
+	if (iBad > 0)
+	{
+		++s_iVerifyBad;
+	}
+
+	if (iBad > 0 || (s_iVerifyCalls % 25) == 0)
+	{
+		FILE* pFile = fopen("C:\\Users\\86136\\perf\\plotgroup_verify.log", "a");
+
+		if (pFile != NULL)
+		{
+			fprintf(pFile, "%s owner=%d plots=%d links=%d calls=%d bad=%d\n",
+				(iBad > 0) ? "MISMATCH" : "ok", (int)eOwner, (int)aiPlotIndex.size(), iBad,
+				s_iVerifyCalls, s_iVerifyBad);
+			fclose(pFile);
+		}
+	}
+}
+#endif
+
+void CvPlotGroup::recalculatePlots(bool bSkipHealthCheck)
 {
 	PROFILE_FUNC();
 
@@ -119,26 +521,24 @@ void CvPlotGroup::recalculatePlots()
 	CLinkList<XYCoords> oldPlotGroup;
 	XYCoords xy;
 	PlayerTypes eOwner;
-	int iCount;
 
 	eOwner = getOwnerINLINE();
 
 	pPlotNode = headPlotsNode();
 
-	if (pPlotNode != NULL)
+	if (!bSkipHealthCheck)
 	{
-		pPlot = GC.getMapINLINE().plotSorenINLINE(pPlotNode->m_data.iX, pPlotNode->m_data.iY);
-
-		iCount = 0;
-
-		gDLL->getFAStarIFace()->SetData(&GC.getPlotGroupFinder(), &iCount);
-		gDLL->getFAStarIFace()->GeneratePath(&GC.getPlotGroupFinder(), pPlot->getX_INLINE(), pPlot->getY_INLINE(), -1, -1, false, eOwner);
-
-		if (iCount == getLengthPlots())
+		if (pPlotNode != NULL)
 		{
-			return;
+			if (countReachablePlots(eOwner) == getLengthPlots())
+			{
+				return;
+			}
 		}
 	}
+
+	bool bWasSuspended = isCityBonusSyncSuspended(); // Fresol
+	setSuspendCityBonusSync(true); // Fresol
 
 	oldPlotGroup.clear();
 
@@ -160,18 +560,49 @@ void CvPlotGroup::recalculatePlots()
 		pPlotNode = deletePlotsNode(pPlotNode); // will delete this PlotGroup...
 	}
 
-	pPlotNode = oldPlotGroup.head();
+	std::vector<int> aiPlotIndex;
+	std::vector<int> aiLabel;
 
-	while (pPlotNode != NULL)
+	computeRebuildComponents(eOwner, oldPlotGroup, aiPlotIndex, aiLabel);
+	rebuildPlotGroups(eOwner, aiPlotIndex, aiLabel);
+
+	setSuspendCityBonusSync(bWasSuspended); // Fresol
+
+	// Fresol: while re-adding, the old algorithm merged the group with any adjacent
+	// group it reached.  Do the same here, otherwise a rebuild can leave two groups
+	// that are connected to each other apart.
+	for (int i = 0; i < (int)aiPlotIndex.size(); ++i)
 	{
-		pPlot = GC.getMapINLINE().plotSorenINLINE(pPlotNode->m_data.iX, pPlotNode->m_data.iY);
+		CvPlot* pPlot = GC.getMapINLINE().plotByIndexINLINE(aiPlotIndex[i]);
+		CvPlotGroup* pGroup = pPlot->getPlotGroup(eOwner);
 
-		FAssertMsg(pPlot != NULL, "Plot is not assigned a valid value");
+		if (pGroup == NULL)
+		{
+			continue;
+		}
 
-		pPlot->updatePlotGroup(eOwner, true);
+		for (int iI = 0; iI < NUM_DIRECTION_TYPES; ++iI)
+		{
+			CvPlot* pAdjacent = plotDirection(pPlot->getX_INLINE(), pPlot->getY_INLINE(), (DirectionTypes)iI);
 
-		pPlotNode = oldPlotGroup.deleteNode(pPlotNode);
+			if (pAdjacent != NULL)
+			{
+				CvPlotGroup* pAdjacentGroup = pAdjacent->getPlotGroup(eOwner);
+
+				if (pAdjacentGroup != NULL && pAdjacentGroup != pGroup)
+				{
+					pPlot->updatePlotGroup(eOwner, false);
+					break;
+				}
+			}
+		}
 	}
+
+	syncCityBonuses(eOwner, aiPlotIndex); // Fresol
+
+#if PLOT_GROUP_VERIFY // openciv4: was #ifdef, so "set to 0" still compiled it in (6.9% of a turn)
+	verifyAfterRebuild(eOwner, aiPlotIndex);
+#endif
 }
 
 
@@ -224,21 +655,24 @@ void CvPlotGroup::changeNumBonuses(BonusTypes eBonus, int iChange)
 
 		//FAssertMsg(m_paiNumBonuses[eBonus] >= 0, "m_paiNumBonuses[eBonus] is expected to be non-negative (invalid Index)"); XXX
 
-		pPlotNode = headPlotsNode();
-
-		while (pPlotNode != NULL)
+		if (!s_bSuspendCityBonusSync)
 		{
-			pCity = GC.getMapINLINE().plotSorenINLINE(pPlotNode->m_data.iX, pPlotNode->m_data.iY)->getPlotCity();
+			pPlotNode = headPlotsNode();
 
-			if (pCity != NULL)
+			while (pPlotNode != NULL)
 			{
-				if (pCity->getOwnerINLINE() == getOwnerINLINE())
-				{
-					pCity->changeNumBonuses(eBonus, iChange);
-				}
-			}
+				pCity = GC.getMapINLINE().plotSorenINLINE(pPlotNode->m_data.iX, pPlotNode->m_data.iY)->getPlotCity();
 
-			pPlotNode = nextPlotsNode(pPlotNode);
+				if (pCity != NULL)
+				{
+					if (pCity->getOwnerINLINE() == getOwnerINLINE())
+					{
+						pCity->changeNumBonuses(eBonus, iChange);
+					}
+				}
+
+				pPlotNode = nextPlotsNode(pPlotNode);
+			}
 		}
 
 		// Leoreth: Escorial

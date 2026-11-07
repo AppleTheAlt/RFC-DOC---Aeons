@@ -479,6 +479,9 @@ public:
 	DllExport int getNumBuildInfos();
 	std::vector<CvBuildInfo*>& getBuildInfo();
 	DllExport CvBuildInfo& getBuildInfo(BuildTypes eBuildNum);
+	const std::vector<BuildTypes>& getBuildsForImprovement(ImprovementTypes eImprovement); // Fresol
+	const std::vector<BuildTypes>& getNonImprovementBuilds(); // Fresol
+	void initBuildCaches(); // Fresol
 
 	DllExport int getNumHandicapInfos();
 	std::vector<CvHandicapInfo*>& getHandicapInfo();
@@ -1014,6 +1017,9 @@ protected:
 	std::vector<CvImprovementInfo*> m_paImprovementInfo;
 	std::vector<CvGoodyInfo*> m_paGoodyInfo;
 	std::vector<CvBuildInfo*> m_paBuildInfo;
+	std::vector< std::vector<BuildTypes> > m_aBuildsForImprovement; // Fresol
+	std::vector<BuildTypes> m_aNonImprovementBuilds; // Fresol
+	bool m_bBuildCachesInitialized; // Fresol
 	std::vector<CvHandicapInfo*> m_paHandicapInfo;
 	std::vector<CvGameSpeedInfo*> m_paGameSpeedInfo;
 	std::vector<CvTurnTimerInfo*> m_paTurnTimerInfo;

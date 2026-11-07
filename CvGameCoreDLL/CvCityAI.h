@@ -135,6 +135,15 @@ protected:
 	int* m_aiEmphasizeCommerceCount;
 	bool m_bForceEmphasizeCulture;
 
+	// phase3: building-value prelude cache
+	bool m_bBVValueCacheValid;
+	int m_iBVFoodDifference;
+	int m_iBVHappinessLevel;
+	int m_iBVHealthLevel;
+	bool m_bBVFinancialTrouble;
+	int m_iBVProductionRank;
+	int m_iBVCultureRank;
+
 	int m_aiBestBuildValue[NUM_CITY_PLOTS];
 
 	BuildTypes m_aeBestBuild[NUM_CITY_PLOTS];

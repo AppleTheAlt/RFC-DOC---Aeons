@@ -360,6 +360,9 @@ void CvMap::doTurn()
 			}
 		}
 	}
+
+	// Fresol: doCulture skipped the per-plot plot group update, replay it once
+	GC.getGameINLINE().updatePlotGroups();
 }
 
 

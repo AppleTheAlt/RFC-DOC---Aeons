@@ -1245,20 +1245,20 @@ class Congress:
 		return lPlots[:10]
 		
 	def filterSettledPlots(self, iPlayer, lPlots):
+		# Fresol: the check only asks whether this name already appeared among the earlier
+		# candidates.  Remember the names seen so far instead of rebuilding the whole list
+		# for every candidate, which made this quadratic.
 		lFiltered = []
-		for index, (x, y, value) in enumerate(lPlots):
-			if city_(x, y):
+		lNames = set()
+
+		for x, y, value in lPlots:
+			sName = cn.getDisplayName(iPlayer, (x, y))
+
+			if city_(x, y) or sName not in lNames:
 				lFiltered.append((x, y, value))
-				continue
-				
-			lOtherNames =  []
-			for ix, iy, ivalue in lPlots[:index]:
-				lOtherNames.append(cn.getDisplayName(iPlayer, (ix, iy)))
-			
-			if cn.getDisplayName(iPlayer, (x, y)) not in lOtherNames:
-				lFiltered.append((x, y, value))
-				continue
-		
+
+			lNames.add(sName)
+
 		return lFiltered
 
 	def getHighestRankedPlayers(self, lPlayers, iNumPlayers):

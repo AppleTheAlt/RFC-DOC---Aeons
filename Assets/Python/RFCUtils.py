@@ -197,7 +197,12 @@ def cultureManager(tCityPlot, iCulturePercent, iNewOwner, iOldOwner, bBarbarian2
 			plot.changeCulture(iOldOwner, -iConvertedCulture / 3, True)
 			
 			if bAlwaysOwnPlots:
-				plot.setOwner(iNewOwner)
+				# Fresol: setOwner recomputes this plot's sight and the revealed owner for
+				# every team, which is what made a secession of a dozen cities take most of
+				# a minute. secedeCity moves the garrison itself, and the engine refreshes
+				# fog and visibility globally when the active player changes, so a batch of
+				# plots can be moved without those per plot updates.
+				plot.setOwnerFast(iNewOwner)
 
 # used: Rules
 def spreadMajorCulture(iMajorCiv, tPlot):

@@ -65,6 +65,9 @@ public:
 	DllExport void updateBlockadedPlots();
 
 	DllExport void updatePlotGroups();
+	void updatePlotGroups(const bool* pabTeams); // openciv4: only the listed teams
+	DllExport void setSuspendPlotGroups(bool bSuspend);
+	DllExport bool isSuspendPlotGroups() const;
 	DllExport void updateBuildingCommerce();
 	DllExport void updateCitySight(bool bIncrement);
 	DllExport void updateTradeRoutes();
