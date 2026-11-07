@@ -447,7 +447,7 @@ static void syncCityBonuses(PlayerTypes eOwner, const std::vector<int>& aiPlotIn
 }
 // Fresol - end
 
-#ifdef PLOT_GROUP_VERIFY
+#if PLOT_GROUP_VERIFY // openciv4: was #ifdef, so "set to 0" still compiled it in (6.9% of a turn)
 static int s_iVerifyCalls = 0;
 static int s_iVerifyBad = 0;
 
@@ -600,7 +600,7 @@ void CvPlotGroup::recalculatePlots(bool bSkipHealthCheck)
 
 	syncCityBonuses(eOwner, aiPlotIndex); // Fresol
 
-#ifdef PLOT_GROUP_VERIFY
+#if PLOT_GROUP_VERIFY // openciv4: was #ifdef, so "set to 0" still compiled it in (6.9% of a turn)
 	verifyAfterRebuild(eOwner, aiPlotIndex);
 #endif
 }

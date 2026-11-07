@@ -781,7 +781,9 @@ public:
 	PlayerTypes getParent() const;
 	void setParent(PlayerTypes eParent);
 
-	DllExport TeamTypes getTeam() const;																												// Exposed to Python
+	// openciv4: defined in the class body so callers inline it; it was 4.24% of a late
+	// turn as a cross-TU call to a two-load accessor.  dllexport still emits the symbol.
+	DllExport inline TeamTypes getTeam() const { return (m_eID == NO_PLAYER) ? NO_TEAM : m_eTeamType; }	// Exposed to Python
 	void setTeam(TeamTypes eTeam);
 	void updateTeamType();
 
@@ -1009,7 +1011,9 @@ public:
 	CvPlotGroup* firstPlotGroup(int *pIterIdx, bool bRev=false) const;
 	CvPlotGroup* nextPlotGroup(int *pIterIdx, bool bRev=false) const;
 	int getNumPlotGroups() const;
-	CvPlotGroup* getPlotGroup(int iID) const;
+	// openciv4: inlined into the class body; CvPlot::getPlotGroup() cannot be, because
+	// CvPlot.h is included before the GET_PLAYER macro exists.
+	CvPlotGroup* getPlotGroup(int iID) const { return (CvPlotGroup*)m_plotGroups.getAt(iID); }
 	CvPlotGroup* addPlotGroup();
 	void deletePlotGroup(int iID);
 

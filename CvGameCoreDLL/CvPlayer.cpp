@@ -44,6 +44,10 @@
 // Public Functions...
 CvPlayer::CvPlayer()
 {
+	// openciv4: getTeam() now reads m_eTeamType; never let it be read while uninitialised.
+	m_eID = NO_PLAYER;
+	m_eTeamType = NO_TEAM;
+
 	m_aiSeaPlotYield = new int[NUM_YIELD_TYPES];
 	m_aiYieldRateModifier = new int[NUM_YIELD_TYPES];
 	m_aiCapitalYieldRateModifier = new int[NUM_YIELD_TYPES];
@@ -6338,7 +6342,11 @@ bool CvPlayer::canConstruct(BuildingTypes eBuilding, bool bContinue, bool bTestV
 		}
 	}
 
-	if (GC.getGameINLINE().countCivTeamsEverAlive() < GC.getBuildingInfo(eBuilding).getNumTeamsPrereq())
+	// openciv4: test the prereq first.  countCivTeamsEverAlive() builds a std::set and
+	// walks every player; with NumTeamsPrereq unset (0 everywhere in Aeons) the test is
+	// `count < 0`, which can never hold.  Same result, without the scan.
+	if (GC.getBuildingInfo(eBuilding).getNumTeamsPrereq() > 0
+		&& GC.getGameINLINE().countCivTeamsEverAlive() < GC.getBuildingInfo(eBuilding).getNumTeamsPrereq())
 	{
 		return false;
 	}
@@ -12565,6 +12573,7 @@ EraTypes CvPlayer::getCurrentEra() const
 
 void CvPlayer::setCurrentEra(EraTypes eNewValue)
 {
+	CvTeam::flushModernizationCache(); // openciv4: cache
 	CvCity* pLoopCity;
 	CvUnit* pLoopUnit;
 	CvPlot* pLoopPlot;
@@ -12745,12 +12754,6 @@ void CvPlayer::setParent(PlayerTypes eParent)
 	}
 	// Sanguo Mod Performance, end
 	m_eParent = eParent;
-}
-
-TeamTypes CvPlayer::getTeam() const
-{
-	//return m_eTeamType; //Rhye - breaks python globals initialization
-	return getID() == NO_PLAYER ? NO_TEAM : GC.getInitCore().getTeam(getID()); //Rhye
 }
 
 void CvPlayer::updateTeamType()
@@ -14929,11 +14932,6 @@ int CvPlayer::getNumPlotGroups() const
 	return m_plotGroups.getCount();
 }
 
-
-CvPlotGroup* CvPlayer::getPlotGroup(int iID) const
-{
-	return((CvPlotGroup *)(m_plotGroups.getAt(iID)));
-}
 
 
 CvPlotGroup* CvPlayer::addPlotGroup()

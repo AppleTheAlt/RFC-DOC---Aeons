@@ -4499,6 +4499,7 @@ int CvCity::getBonusPower(BonusTypes eBonus, bool bDirty) const
 
 	for (iI = 0; iI < GC.getNumBuildingInfos(); iI++)
 	{
+		if (m_paiNumRealBuilding[iI] == 0 && m_paiNumFreeBuilding[iI] == 0) { continue; } // openciv4: 95% of the buildings are absent; a zero count contributes nothing
 		if (getNumActiveBuilding((BuildingTypes)iI) > 0)
 		{
 			if (GC.getBuildingInfo((BuildingTypes) iI).getPowerBonus() == eBonus)
@@ -4524,6 +4525,7 @@ int CvCity::getBonusYieldRateModifier(YieldTypes eIndex, BonusTypes eBonus) cons
 
 	for (iI = 0; iI < GC.getNumBuildingInfos(); iI++)
 	{
+		if (m_paiNumRealBuilding[iI] == 0 && m_paiNumFreeBuilding[iI] == 0) { continue; } // openciv4: 95% of the buildings are absent; a zero count contributes nothing
 		iModifier += getNumActiveBuilding((BuildingTypes)iI) * GC.getBuildingInfo((BuildingTypes) iI).getBonusYieldModifier(eBonus, eIndex);
 	}
 
@@ -4540,6 +4542,7 @@ int CvCity::getBonusCommerceRateModifier(CommerceTypes eIndex, BonusTypes eBonus
 
 	for (iI = 0; iI < GC.getNumBuildingInfos(); iI++)
 	{
+		if (m_paiNumRealBuilding[iI] == 0 && m_paiNumFreeBuilding[iI] == 0) { continue; } // openciv4: 95% of the buildings are absent; a zero count contributes nothing
 		iModifier += getNumActiveBuilding((BuildingTypes)iI) * GC.getBuildingInfo((BuildingTypes)iI).getBonusCommerceModifier(eBonus, eIndex);
 	}
 
@@ -4573,6 +4576,7 @@ void CvCity::processBonus(BonusTypes eBonus, int iChange)
 	
 	for (iI = 0; iI < GC.getNumBuildingInfos(); iI++)
 	{
+		if (m_paiNumRealBuilding[iI] == 0 && m_paiNumFreeBuilding[iI] == 0) { continue; } // openciv4: 95% of the buildings are absent; a zero count contributes nothing
 		iValue = GC.getBuildingInfo((BuildingTypes) iI).getBonusHealthChanges(eBonus) * getNumActiveBuilding((BuildingTypes)iI);
 
 		if (iValue >= 0)
@@ -4594,6 +4598,7 @@ void CvCity::processBonus(BonusTypes eBonus, int iChange)
 
 	for (iI = 0; iI < GC.getNumBuildingInfos(); iI++)
 	{
+		if (m_paiNumRealBuilding[iI] == 0 && m_paiNumFreeBuilding[iI] == 0) { continue; } // openciv4: 95% of the buildings are absent; a zero count contributes nothing
 		iValue = getNumActiveBuilding((BuildingTypes)iI) * GC.getBuildingInfo((BuildingTypes) iI).getBonusHappinessChanges(eBonus);
 
 		if (iValue >= 0)

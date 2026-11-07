@@ -42,6 +42,12 @@ void CvPlayerAI::initStatics()
 	for (int iI = 0; iI < MAX_PLAYERS; iI++)
 	{
 		m_aPlayers[iI].m_eID = ((PlayerTypes)iI);
+		// openciv4: m_eTeamType is what CvPlayer::getTeam() returns, and the constructor
+		// never initialises it.  Leaving it unset here is why Rhye had to route getTeam()
+		// through CvInitCore (4 un-inlined calls, 18.5% of a late Aeons turn).
+		// At this point CvInitCore::getTeam() is the same read getTeam() used to do, so
+		// priming the member here is behaviour-preserving.
+		m_aPlayers[iI].updateTeamType();
 	}
 }
 
@@ -19628,10 +19634,7 @@ void CvPlayerAI::AI_invalidatePlotDangerCache(int iIndex)
 	CvPlot* pPlot = GC.getMapINLINE().plotByIndex(iIndex);
 	FAssert (pPlot != NULL);
 
-	for (int iI = 0; iI < DANGER_RANGE + 1; iI++)
-	{
-		pPlot->invalidatePlayerDangerCache(getID(), iI);
-	}
+	pPlot->invalidatePlayerDangerCache(getID()); // openciv4: one pass instead of one call per range
 }
 // Sanguo Mod Performance, end
 int CvPlayerAI::AI_slaveTradeVal(CvUnit* pUnit) const

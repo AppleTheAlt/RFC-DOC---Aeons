@@ -11906,6 +11906,30 @@ void CvPlot::invalidatePlayerDangerCache(PlayerTypes ePlayer, int iRange)
 
 	m_apaiPlayerDangerCache[ePlayer][iRange] = MAX_SHORT;
 }
+
+// openciv4: same as invalidating every range one by one, with the two allocation
+// checks done once.  Called for every plot at the start of each player's turn.
+void CvPlot::invalidatePlayerDangerCache(PlayerTypes ePlayer)
+{
+	if (NULL == m_apaiPlayerDangerCache)
+	{
+		m_apaiPlayerDangerCache = new short*[MAX_PLAYERS];
+		for (int iI = 0; iI < MAX_PLAYERS; ++iI)
+		{
+			m_apaiPlayerDangerCache[iI] = NULL;
+		}
+	}
+
+	if (NULL == m_apaiPlayerDangerCache[ePlayer])
+	{
+		m_apaiPlayerDangerCache[ePlayer] = new short[DANGER_RANGE + 1];
+	}
+
+	for (int iI = 0; iI < DANGER_RANGE + 1; ++iI)
+	{
+		m_apaiPlayerDangerCache[ePlayer][iI] = MAX_SHORT;
+	}
+}
 // Sanguo Mod Performance, end
 
 int CvPlot::getRegionID() const

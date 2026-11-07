@@ -533,6 +533,7 @@ public:
 	int getPlayerDangerCache(PlayerTypes ePlayer, int iRange);
 	void setPlayerDangerCache(PlayerTypes ePlayer, int iRange, int iNewValue);
 	void invalidatePlayerDangerCache(PlayerTypes ePlayer, int iRange);
+	void invalidatePlayerDangerCache(PlayerTypes ePlayer); // openciv4: all ranges at once
 	// Sanguo Mod Performance, end
 
 	void read(FDataStreamBase* pStream);

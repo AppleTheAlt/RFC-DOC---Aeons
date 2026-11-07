@@ -8778,12 +8778,13 @@ void CvCityAI::AI_bestPlotBuild(CvPlot* pPlot, int* piBestValue, BuildTypes* peB
 				}
 				else
 				{
-					for (iJ = 0; iJ < GC.getNumBuildInfos(); iJ++)
+					const std::vector<BuildTypes>& aBuildsForImprovement = GC.getBuildsForImprovement(eImprovement); // Fresol
+					for (size_t iBuildIndex = 0; iBuildIndex < aBuildsForImprovement.size(); iBuildIndex++)
 					{
-						eBuild = ((BuildTypes)iJ);
+						eBuild = aBuildsForImprovement[iBuildIndex];
 
 						// Leoreth: exclude graphical only as shortcut to prevent focus on slave improvements that cannot be built
-						if (GC.getBuildInfo(eBuild).getImprovement() == eImprovement && !GC.getBuildInfo(eBuild).isGraphicalOnly())
+						if (!GC.getBuildInfo(eBuild).isGraphicalOnly())
 						{
 							if (GET_PLAYER(getOwnerINLINE()).canBuild(pPlot, eBuild, false))
 							{
@@ -9136,11 +9137,10 @@ void CvCityAI::AI_bestPlotBuild(CvPlot* pPlot, int* piBestValue, BuildTypes* peB
 			if ((GC.getFeatureInfo(pPlot->getFeatureType()).getHealthPercent() < 0) ||
 				((GC.getFeatureInfo(pPlot->getFeatureType()).getYieldChange(YIELD_FOOD) + GC.getFeatureInfo(pPlot->getFeatureType()).getYieldChange(YIELD_PRODUCTION) + GC.getFeatureInfo(pPlot->getFeatureType()).getYieldChange(YIELD_COMMERCE)) < 0))
 			{
-				for (iI = 0; iI < GC.getNumBuildInfos(); iI++)
+				for (size_t iBuildIndex = 0; iBuildIndex < GC.getNonImprovementBuilds().size(); iBuildIndex++) // Fresol
 				{
-					eBuild = ((BuildTypes)iI);
+					eBuild = GC.getNonImprovementBuilds()[iBuildIndex];
 
-					if (GC.getBuildInfo(eBuild).getImprovement() == NO_IMPROVEMENT)
 					{
 						if (GC.getBuildInfo(eBuild).isFeatureRemove(pPlot->getFeatureType()))
 						{
@@ -9170,10 +9170,9 @@ void CvCityAI::AI_bestPlotBuild(CvPlot* pPlot, int* piBestValue, BuildTypes* peB
     if (bChop && (eBonus == NO_BONUS) && (pPlot->getFeatureType() != NO_FEATURE) &&
         (pPlot->getImprovementType() == NO_IMPROVEMENT) && !(GET_PLAYER(getOwnerINLINE()).isOption(PLAYEROPTION_LEAVE_FORESTS)))
     {
-        for (iI = 0; iI < GC.getNumBuildInfos(); iI++)
+        for (size_t iBuildIndex = 0; iBuildIndex < GC.getNonImprovementBuilds().size(); iBuildIndex++) // Fresol
         {
-            eBuild = ((BuildTypes)iI);
-            if (GC.getBuildInfo(eBuild).getImprovement() == NO_IMPROVEMENT)
+            eBuild = GC.getNonImprovementBuilds()[iBuildIndex];
             {
                 if (GC.getBuildInfo(eBuild).isFeatureRemove(pPlot->getFeatureType()))
                 {
